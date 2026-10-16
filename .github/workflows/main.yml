@@ -91,10 +91,15 @@ jobs:
           GH_REPO: ${{ github.repository }}
           VERSION: ${{ steps.version.outputs.VERSION }}
         run: |
-          # The checkout is shallow and tagless: fetch the full commit graph (commits only,
-          # no trees or blobs) and upstream's, to list everything since the previous release
-          git fetch -q --unshallow --tags --filter=tree:0 origin
+          # The build checkout is shallow and tagless. The notes need the full commit graph, the tags
+          # and upstream's history, so they read a separate commits-only (treeless) clone; converting
+          # the shallow checkout with `fetch --unshallow --filter=tree:0` crashes git's pack-objects.
+          git clone -q --bare --filter=tree:0 "$GITHUB_SERVER_URL/$GH_REPO.git" "$RUNNER_TEMP/history.git"
+          export GIT_DIR="$RUNNER_TEMP/history.git"
+          git update-ref --no-deref HEAD "$GITHUB_SHA"
           git remote add upstream https://github.com/ArduPilot/MissionPlanner.git
+          git config remote.upstream.promisor true
+          git config remote.upstream.partialclonefilter tree:0
           git fetch -q --no-tags --filter=tree:0 upstream master
           mkdir notes
           if [ "$IS_DEV" = true ]; then
