@@ -9,6 +9,11 @@ on:
 permissions:
   contents: write
 
+# One run per branch at a time, so each release's notes start where the previous release's ended
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     name: Build Release
@@ -16,7 +21,7 @@ jobs:
     env:
       IS_DEV: ${{ github.ref == 'refs/heads/development' }}
       IS_MASTER: ${{ github.ref == 'refs/heads/master' }}
-      MSI_NAME: TitanPlanner.msi
+      MSI_NAME: TitanPlanner-Installer.msi
       ZIP_NAME: TitanPlanner.zip
 
     steps:
@@ -71,7 +76,6 @@ jobs:
 
       - name: Get version from version.txt
         id: version
-        if: ${{ env.IS_MASTER == 'true' }}
         shell: pwsh
         run: |
           $version = Get-Content "version.txt" -Raw
@@ -79,33 +83,62 @@ jobs:
           echo "VERSION=$version" >> $env:GITHUB_OUTPUT
           echo "Found version: $version"
 
-      - uses: "marvinpinto/action-automatic-releases@v1.2.1"
-        if: ${{ env.IS_DEV == 'true' }}
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "development-build"
-          prerelease: true
-          title: "Development Build"
-          files: |
-            ${{ env.ZIP_NAME }}
-            ${{ env.MSI_NAME }}
-            checksums.txt
-            version.txt
-            ChangeLog.txt
+      - name: Release notes
+        if: ${{ env.IS_DEV == 'true' || env.IS_MASTER == 'true' }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ steps.version.outputs.VERSION }}
+        run: |
+          # The checkout is shallow and tagless: fetch the full commit graph (commits only,
+          # no trees or blobs) and upstream's, to list everything since the previous release
+          git fetch -q --unshallow --tags --filter=tree:0 origin
+          git remote add upstream https://github.com/ArduPilot/MissionPlanner.git
+          git fetch -q --no-tags --filter=tree:0 upstream master
+          mkdir notes
+          if [ "$IS_DEV" = true ]; then
+            channel=development
+            export RELEASE_TITLE="TitanPlanner $VERSION (development build)"
+          else
+            channel=master
+            export RELEASE_TITLE="TitanPlanner $VERSION"
+          fi
+          # A re-run of the commit that is already the development build keeps that build's notes
+          if [ "$IS_DEV" = true ] && [ "$(git rev-parse -q --verify 'refs/tags/development-build^{commit}')" = "$GITHUB_SHA" ] &&
+             gh release download development-build -p ChangeLog.txt -D notes &&
+             gh release view development-build --json body -q .body > notes/release-notes.md; then
+            echo "Re-run of the current development build, keeping its notes"
+          else
+            bash .github/scripts/release-notes.sh "$channel" notes/release-notes.md notes/ChangeLog.txt
+          fi
+          cat notes/release-notes.md >> "$GITHUB_STEP_SUMMARY"
 
-      - uses: "marvinpinto/action-automatic-releases@v1.2.1"
+      - name: Publish development build
+        if: ${{ env.IS_DEV == 'true' }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          # Replace the rolling release, and its tag so the new one is created on this commit
+          gh release delete development-build --yes --cleanup-tag || true
+          gh api -X DELETE "repos/$GH_REPO/git/refs/tags/development-build" > /dev/null 2>&1 || true
+          gh release create development-build --target "$GITHUB_SHA" --prerelease --title "Development Build" \
+            --notes-file notes/release-notes.md \
+            "$ZIP_NAME" "$MSI_NAME" checksums.txt version.txt notes/ChangeLog.txt
+
+      - name: Publish release
         if: ${{ env.IS_MASTER == 'true' }}
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "TitanPlanner-${{ steps.version.outputs.VERSION }}"
-          prerelease: false
-          title: "TitanPlanner ${{ steps.version.outputs.VERSION }}"
-          files: |
-            ${{ env.ZIP_NAME }}
-            ${{ env.MSI_NAME }}
-            checksums.txt
-            version.txt
-            ChangeLog.txt
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ steps.version.outputs.VERSION }}
+        run: |
+          gh release create "TitanPlanner-$VERSION" --target "$GITHUB_SHA" --latest --title "TitanPlanner $VERSION" \
+            --notes-file notes/release-notes.md \
+            "$ZIP_NAME" "$MSI_NAME" checksums.txt version.txt notes/ChangeLog.txt
 
   buildDebug:
     name: Build Debug

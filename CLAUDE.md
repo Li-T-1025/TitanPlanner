@@ -41,7 +41,9 @@ GitHub Actions (`.github/workflows/main.yml` = "DotNet Build", plus `android.yml
 `mac.yml`). `main.yml` builds the solution on Windows, runs the `Sysid32Tests`, packages an MSI
 and `TitanPlanner.zip` with `checksums.txt` / `version.txt`, and publishes a `development-build`
 prerelease on pushes to `development` and a `TitanPlanner-<version>` release on pushes to
-`master`; the in-app updater reads those. The Linux/macOS workflows build but only publish
+`master`; the in-app updater reads those. Release notes (body and the `ChangeLog.txt` asset) come
+from `.github/scripts/release-notes.sh`: every commit since the channel's previous release, fork
+commits separated from upstream's. The Linux/macOS workflows build but only publish
 releases when running in the upstream ArduPilot repository.
 
 ## Tests

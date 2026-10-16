@@ -268,13 +268,14 @@ Behaviour that differs from upstream because the fork fixed it:
 # Auto-Update Pipeline
 
 ## CI Workflow
-GitHub Actions builds Release and Debug, packages an MSI and zip, computes `checksums.txt` and `version.txt`, and publishes:
+GitHub Actions builds Release and Debug, packages an MSI (`TitanPlanner-Installer.msi`) and zip, computes `checksums.txt` and `version.txt`, and publishes:
 - A **`development-build`** prerelease on every push to `development`
 - A **`TitanPlanner-<version>`** stable release on every push to `master`
+- Each release's notes list every commit since the previous release on its channel (the previous `development-build`, or the previous `TitanPlanner-*` tag), with the fork's commits first and the commits brought in from upstream in a collapsed section. The same notes are published as the release's `ChangeLog.txt`. `.github/scripts/release-notes.sh <development|master>` previews them locally
 - Upstream's Linux and macOS workflows build here too, but their `linux-latest` / `osxlatest` prereleases are only published from the ArduPilot repository, so this fork's Releases page stays limited to the two channels above
 
 ## In-App Updater
-Reads `version.txt` from the channel URL (stable or beta) and compares as `System.Version`. When a newer build exists it streams only the files that differ straight out of the release zip (`TitanPlanner.zip`) with HTTP range requests, checks each file's MD5 against `checksums.txt`, then hands off to `Updater.exe` for the in-place swap. Both channels use the same path. The splash screen and title bar show the single build-stamped version (e.g. `1.3.9615.29424`) that the updater compares against.
+Reads `version.txt` from the channel URL (stable or beta) and compares as `System.Version`. When a newer build exists it streams only the files that differ straight out of the release zip (`TitanPlanner.zip`) with HTTP range requests, checks each file's MD5 against `checksums.txt`, then hands off to `Updater.exe` for the in-place swap. Both channels use the same path. The "update found" prompt's ChangeLog link opens that release's notes. The splash screen and title bar show the single build-stamped version (e.g. `1.3.9615.29424`) that the updater compares against.
 
 ---
 
