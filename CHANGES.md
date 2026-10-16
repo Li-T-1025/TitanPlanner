@@ -279,6 +279,18 @@ Reads `version.txt` from the channel URL (stable or beta) and compares as `Syste
 
 ---
 
+# Installation & Data Folders
+
+## Its Own Product
+The MSI installs **TitanPlanner** as a product of its own: `Program Files\TitanPlanner`, a TitanPlanner Start-menu folder and uninstall entry, and its own Windows upgrade code. Log file associations use `TitanPlanner.*` ProgIds, and the window title reads "TitanPlanner".
+
+Older TitanPlanner installers used the identity of stock ArduPilot Mission Planner. The TitanPlanner MSI removes such an install only when it is TitanPlanner, recognised by `TitanDynamics.mpsystheme` in `Program Files (x86)\Mission Planner`, so upgrading from an older TitanPlanner needs no manual uninstall while a stock Mission Planner install is left alone. An older TitanPlanner installed to a custom folder is not detected and stays installed alongside. Nothing removes TitanPlanner except its own uninstaller: stock Mission Planner's installer and the NextVision edition install alongside it.
+
+## Its Own Data Folders
+Settings, logs, map tiles, offline maps, elevation data and caches live in `ProgramData\TitanPlanner` and `Documents\TitanPlanner` instead of the `Mission Planner` folders shared with stock Mission Planner. On first launch TitanPlanner copies everything over from the `Mission Planner` folders: settings and configuration profiles before startup continues, and the rest (which can be gigabytes of map tiles) on a low-priority background thread that resumes on the next launch if interrupted. Nothing is moved or deleted, files already in the new folders are never overwritten, and if the disk lacks space for the copy it says so and retries on a later launch.
+
+---
+
 # Misc UX
 
 - **Reboot Vehicle** button in the Actions tab; global **`Ctrl+R`** shortcut to reboot autopilot

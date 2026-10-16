@@ -175,6 +175,8 @@ namespace MissionPlanner
         [MethodImpl(MethodImplOptions.NoInlining)]
         public static void Start(string[] args)
         {
+            // before anything reads Settings: bring settings over from the previous data folder
+            DataFolderMigration.CopySettings();
             HandleTDEditionUpgrade();
             Program.args = args;
             Console.WriteLine(
@@ -217,6 +219,7 @@ namespace MissionPlanner
 
             System.Windows.Forms.Application.EnableVisualStyles();
             XmlConfigurator.Configure(LogManager.GetRepository(Assembly.GetCallingAssembly()));
+            DataFolderMigration.StartBackgroundCopy();
             if (Environment.OSVersion.Platform == PlatformID.Unix)
             {
                 var repository = LogManager.GetRepository() as Hierarchy;
@@ -258,7 +261,7 @@ namespace MissionPlanner
                 return;
             }
 
-            name = "Mission Planner - Titan Dynamics Edition";
+            name = "TitanPlanner";
 
             try
             {

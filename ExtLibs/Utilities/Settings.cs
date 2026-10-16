@@ -17,7 +17,13 @@ namespace MissionPlanner.Utilities
     {
         static Settings _instance;
 
-        public static string AppConfigName { get; set; } = "Mission Planner";
+        public static string AppConfigName { get; set; } = "TitanPlanner";
+
+        /// <summary>
+        /// Folder name this app used before <see cref="AppConfigName"/>. On first launch its settings and data
+        /// are copied into the new folders (see <see cref="DataFolderMigration"/>). null = nothing to migrate.
+        /// </summary>
+        public static string PreviousAppConfigName { get; set; } = "Mission Planner";
 
         public static Settings Instance
         {

@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to coding agents (Claude Code, Codex, Copilot and others) working with code in this repository.
 
 ## What this is
 
@@ -145,4 +145,9 @@ whenever a change lands. `ChangeLog.txt` is upstream's and is not maintained her
   keep its `obj\` / `obj2\` excludes or the Xamarin-generated `FirmwareSelection.xaml.g.cs` is
   compiled twice. Keep `GenerateResourceUsePreserializedResources` on, or `dotnet build`/`dotnet test`
   fail. Both `plugins\` and `Plugins\` exist on disk; the csproj excludes both.
+- **Product identity and data folders.** The app is "TitanPlanner": its own MSI upgrade code and install
+  folder (`wix/Program.cs`) and its own data folders via `Settings.AppConfigName`. On first launch
+  `DataFolderMigration` copies the previous folders (`Settings.PreviousAppConfigName`, "Mission
+  Planner") into the new ones. The NextVision edition sets these to "TitanPlanner-NextVision" and
+  `null` (no migration), so those lines differ between the two repos by design.
 - **Commits.** Messages carry no AI attribution trailers. Do not commit or push unless asked.
