@@ -422,7 +422,7 @@ namespace MissionPlanner.Controls
                 {
                     sb.AppendLine(Encoding.ASCII.GetString(((MAVLink.mavlink_statustext_t)message.data).text).TrimEnd('\0'));
                     return true;
-                }, (byte)MainV2.comPort.sysidcurrent, (byte)MainV2.comPort.compidcurrent);
+                }, MainV2.comPort.sysidcurrent, (byte)MainV2.comPort.compidcurrent);
 
                 bool result = MainV2.comPort.doARM(!isArmed);
                 MainV2.comPort.UnSubscribeToPacketType(sub);

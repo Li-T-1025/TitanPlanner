@@ -48,6 +48,8 @@ sudo apt install mono-complete mono-runtime libmono-system-windows-forms4.0-cil 
 mono MissionPlanner.exe
 ```
 
+See [Linux/README.md](Linux/README.md) for the upstream build (`./Linux/build.sh`) and launch (`./Linux/run.sh`) scripts.
+
 ---
 
 ## Platform Support
