@@ -5118,46 +5118,84 @@ namespace MissionPlanner.GCSViews
 
             if (!area.IsEmpty)
             {
-                int maxzoom = MainMap.MaxZoom;
-                int minzoom = MainMap.MinZoom;
-                TilePrefetcherMenu tilePrefetcherMenu = new TilePrefetcherMenu(MainMap.MinZoom, MainMap.MaxZoom, area, MainMap.MapProvider);
-
-                if (tilePrefetcherMenu.ShowDialog(this) != DialogResult.OK)
-                {
-                    tilePrefetcherMenu.Dispose();
-                    return;
-                }
-                minzoom = tilePrefetcherMenu.Minimum;
-                maxzoom = tilePrefetcherMenu.Maximum;
-                tilePrefetcherMenu.Dispose();
-
-                for (int i = minzoom; i <= maxzoom; i++)
-                {
-                    try
-                {
-                    TilePrefetcher obj = new TilePrefetcher();
-                    ThemeManager.ApplyThemeTo(obj);
-                    obj.ShowCompleteMessage = false;
-                    obj.Start(area, i, MainMap.MapProvider, 0, 0);
-
-                    if (obj.UserAborted)
-                    {
-                        obj.Dispose();
-                        break;
-                    }
-
-                    obj.Dispose();
-                }
-                    catch
-                    {
-                    }
-                }
+                var mid = area.LocationMiddle;
+                PrefetchAreaForOfflineMaps(area,
+                    string.Format(CultureInfo.InvariantCulture, "Area {0:F4}, {1:F4}", mid.Lat, mid.Lng));
             }
             else
             {
                 CustomMessageBox.Show("Select map area holding ALT", "GMap.NET", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
             }
+        }
+
+        /// <summary>
+        /// Asks for a zoom range, downloads every tile of the current map source inside area, and records
+        /// the result as an offline map area (listed by <see cref="OfflineMapsForm"/>).
+        /// Returns false if the user cancelled before any zoom level completed.
+        /// </summary>
+        public bool PrefetchAreaForOfflineMaps(RectLatLng area, string name)
+        {
+            int minzoom, maxzoom;
+            using (var menu = new TilePrefetcherMenu(MainMap.MinZoom, MainMap.MaxZoom, area, MainMap.MapProvider))
+            {
+                if (menu.ShowDialog(this) != DialogResult.OK)
+                    return false;
+                minzoom = menu.Minimum;
+                maxzoom = menu.Maximum;
+            }
+
+            // zoom levels are fetched one at a time; an aborted download is still recorded
+            // for the levels that did complete
+            int lastDone = minzoom - 1;
+            for (int i = minzoom; i <= maxzoom; i++)
+            {
+                try
+                {
+                    using (var obj = new TilePrefetcher())
+                    {
+                        ThemeManager.ApplyThemeTo(obj);
+                        obj.ShowCompleteMessage = false;
+                        obj.Start(area, i, MainMap.MapProvider, 0, 0);
+
+                        if (obj.UserAborted)
+                            break;
+                    }
+
+                    lastDone = i;
+                }
+                catch (Exception ex)
+                {
+                    log.Error(ex);
+                }
+            }
+
+            if (lastDone < minzoom)
+                return false;
+
+            OfflineMapRegistry.Add(new OfflineMapRegion
+            {
+                Name = name,
+                Provider = MainMap.MapProvider.Name,
+                Bounds = area,
+                MinZoom = minzoom,
+                MaxZoom = lastDone,
+                Source = "Downloaded"
+            });
+            return true;
+        }
+
+        /// <summary>Outlines area with the map's selection rectangle and zooms the map to fit it.</summary>
+        public void ShowAreaOnMap(RectLatLng area)
+        {
+            MainMap.SelectedArea = area;
+            MainMap.SetZoomToFitRect(area);
+            MainMap.Invalidate();
+        }
+
+        private void BUT_offlinemaps_Click(object sender, EventArgs e)
+        {
+            OfflineMapsForm.ShowFor(this);
         }
 
         public void prefetchWPPathToolStripMenuItem_Click(object sender, EventArgs e)

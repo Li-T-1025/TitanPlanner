@@ -207,6 +207,7 @@ WPOverlay2 + new mission rendering pipeline, MissionStyleEditor, `MissionSegment
 - **Tools button** on map for the former "temp" / `Ctrl+F` window
 - **Propagation Settings** accessible from the map (`Ctrl+W`)
 - **Find Location** added to the PLAN tab
+- **Offline Maps** window on the PLAN tab: lists every downloaded map area with its zoom range, tile count and size on disk; downloads the current view or an ALT-selected area; jumps to an area on the map; and exports/imports areas as `.mappack` files so air-gapped machines can be loaded from a USB stick. Right-click → Prefetch downloads are recorded there too
 - Custom SITL locations; Woodley default
 - Larger fonts on Sats/HDOP labels with new VDOP readout
 - Zoom buttons and scale bar on map
