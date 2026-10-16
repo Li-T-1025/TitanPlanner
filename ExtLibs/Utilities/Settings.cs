@@ -20,10 +20,11 @@ namespace MissionPlanner.Utilities
         public static string AppConfigName { get; set; } = "TitanPlanner";
 
         /// <summary>
-        /// Folder name this app used before <see cref="AppConfigName"/>. On first launch its settings and data
-        /// are copied into the new folders (see <see cref="DataFolderMigration"/>). null = nothing to migrate.
+        /// Folder names this app's data may still be in, highest priority first. On first launch their settings
+        /// and data are copied into the <see cref="AppConfigName"/> folders (see <see cref="DataFolderMigration"/>);
+        /// a file from an earlier name wins over the same file from a later one. Empty = nothing to migrate.
         /// </summary>
-        public static string PreviousAppConfigName { get; set; } = "Mission Planner";
+        public static string[] PreviousAppConfigNames { get; set; } = { "Mission Planner" };
 
         public static Settings Instance
         {

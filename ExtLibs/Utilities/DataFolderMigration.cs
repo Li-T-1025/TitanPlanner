@@ -9,15 +9,16 @@ using log4net;
 namespace MissionPlanner.Utilities
 {
     /// <summary>
-    /// First-run copy of settings and data from the folders a previous build used
-    /// (<see cref="Settings.PreviousAppConfigName"/>, e.g. "Mission Planner") into this build's folders
+    /// First-run copy of settings and data from the folders this app's data may still be in
+    /// (<see cref="Settings.PreviousAppConfigNames"/>, e.g. "Mission Planner") into this build's folders
     /// (<see cref="Settings.AppConfigName"/>).
     ///
-    /// Files are copied, never moved or deleted, so another program still using the old folders keeps
-    /// working, and a file that already exists in the new folders is never overwritten. Settings are
-    /// copied before startup continues; everything else (logs, map tiles, offline maps, elevation data,
-    /// caches) copies on a background thread. A marker file in each new folder records that the copy
-    /// finished; until it exists, every launch resumes where the last one stopped.
+    /// Sources are copied in order and a file that already exists in the new folders is never overwritten,
+    /// so when several sources have the same file the earliest one wins and later ones only fill in what is
+    /// missing. Nothing is moved or deleted, so another program still using an old folder keeps working.
+    /// Settings are copied before startup continues; everything else (logs, map tiles, offline maps,
+    /// elevation data, caches) copies on a background thread. A marker file in each new folder records that
+    /// the copy finished; until it exists, every launch resumes where the last one stopped.
     /// </summary>
     public static class DataFolderMigration
     {
@@ -29,13 +30,14 @@ namespace MissionPlanner.Utilities
 
         private class FolderPair
         {
-            public string From;
+            /// <summary>Existing source folders, highest priority first.</summary>
+            public List<string> From = new List<string>();
             public string To;
             public bool IsUserFolder;
         }
 
         /// <summary>
-        /// Copies the old user folder's top-level files (config.xml, configuration profiles) and the
+        /// Copies the old user folders' top-level files (config.xml, configuration profiles) and the
         /// offline-maps list. Call before anything reads <see cref="Settings.Instance"/>.
         /// </summary>
         public static void CopySettings()
@@ -46,16 +48,19 @@ namespace MissionPlanner.Utilities
                 {
                     Directory.CreateDirectory(pair.To);
 
-                    if (pair.IsUserFolder)
+                    foreach (var from in pair.From)
                     {
-                        foreach (var file in Directory.GetFiles(pair.From))
-                            CopyIfMissing(file, Path.Combine(pair.To, Path.GetFileName(file)));
-                    }
+                        if (pair.IsUserFolder)
+                        {
+                            foreach (var file in Directory.GetFiles(from))
+                                CopyIfMissing(file, Path.Combine(pair.To, Path.GetFileName(file)));
+                        }
 
-                    // tiny, and has to arrive before the map writes a new one
-                    var offlineMaps = Path.Combine(pair.From, "gmapcache", "offlinemaps.json");
-                    if (File.Exists(offlineMaps))
-                        CopyIfMissing(offlineMaps, Path.Combine(pair.To, "gmapcache", "offlinemaps.json"));
+                        // tiny, and has to arrive before the map writes a new one
+                        var offlineMaps = Path.Combine(from, "gmapcache", "offlinemaps.json");
+                        if (File.Exists(offlineMaps))
+                            CopyIfMissing(offlineMaps, Path.Combine(pair.To, "gmapcache", "offlinemaps.json"));
+                    }
                 }
             }
             catch (Exception ex)
@@ -89,72 +94,80 @@ namespace MissionPlanner.Utilities
             }.Start();
         }
 
-        /// <summary>Old/new folder pairs whose copy has not finished yet.</summary>
+        /// <summary>New folders whose copy has not finished yet, each with its existing sources.</summary>
         private static List<FolderPair> PendingPairs()
         {
-            var result = new List<FolderPair>();
-            var previous = Settings.PreviousAppConfigName;
             var current = Settings.AppConfigName;
-            if (string.IsNullOrEmpty(previous) || previous == current)
-                return result;
+            var previous = (Settings.PreviousAppConfigNames ?? new string[0])
+                .Where(n => !string.IsNullOrEmpty(n) && n != current)
+                .Distinct()
+                .ToList();
+            if (previous.Count == 0)
+                return new List<FolderPair>();
 
-            string newUser = Trim(Settings.GetUserDataDirectory());
-            string newData = Trim(Settings.GetDataDirectory());
-            string oldUser, oldData;
+            var user = new FolderPair { To = Trim(Settings.GetUserDataDirectory()), IsUserFolder = true };
+            var data = new FolderPair { To = Trim(Settings.GetDataDirectory()) };
+            // on Mono the user and data folders are the same
+            bool sameFolder = string.Equals(user.To, data.To, StringComparison.OrdinalIgnoreCase);
+
             try
             {
-                Settings.AppConfigName = previous;
-                oldUser = Trim(Settings.GetUserDataDirectory());
-                oldData = Trim(Settings.GetDataDirectory());
+                foreach (var name in previous)
+                {
+                    Settings.AppConfigName = name;
+                    var oldUser = Trim(Settings.GetUserDataDirectory());
+                    var oldData = Trim(Settings.GetDataDirectory());
+                    if (Directory.Exists(oldUser))
+                        user.From.Add(oldUser);
+                    if (!sameFolder && Directory.Exists(oldData))
+                        data.From.Add(oldData);
+                }
             }
             finally
             {
                 Settings.AppConfigName = current;
             }
 
-            // on Mono both point at the same folder
-            var pairs = new List<FolderPair> { new FolderPair { From = oldUser, To = newUser, IsUserFolder = true } };
-            if (!string.Equals(oldData, oldUser, StringComparison.OrdinalIgnoreCase))
-                pairs.Add(new FolderPair { From = oldData, To = newData });
-
-            foreach (var pair in pairs)
-            {
-                if (Directory.Exists(pair.From) && !File.Exists(Path.Combine(pair.To, MarkerName)))
-                    result.Add(pair);
-            }
-
-            return result;
+            var pairs = sameFolder ? new List<FolderPair> { user } : new List<FolderPair> { user, data };
+            return pairs.Where(p => p.From.Count > 0 && !File.Exists(Path.Combine(p.To, MarkerName))).ToList();
         }
 
         private static void CopyAll(List<FolderPair> pairs)
         {
+            var sources = string.Join("\n", pairs.SelectMany(p => p.From));
             try
             {
                 var todo = new List<KeyValuePair<string, string>>();
+                var queued = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
                 var bytesByRoot = new Dictionary<string, long>(StringComparer.OrdinalIgnoreCase);
 
                 foreach (var pair in pairs)
                 {
-                    foreach (var src in Directory.EnumerateFiles(pair.From, "*", SearchOption.AllDirectories))
+                    foreach (var from in pair.From)
                     {
-                        if (src.EndsWith(TempSuffix, StringComparison.OrdinalIgnoreCase))
-                            continue;
-                        var dst = Path.Combine(pair.To, src.Substring(pair.From.Length).TrimStart('\\', '/'));
-                        if (File.Exists(dst))
-                            continue;
-
-                        long size = 0;
-                        try
+                        foreach (var src in Directory.EnumerateFiles(from, "*", SearchOption.AllDirectories))
                         {
-                            size = new FileInfo(src).Length;
-                        }
-                        catch
-                        {
-                        }
+                            if (src.EndsWith(TempSuffix, StringComparison.OrdinalIgnoreCase) ||
+                                Path.GetFileName(src) == MarkerName)
+                                continue;
+                            var dst = Path.Combine(pair.To, src.Substring(from.Length).TrimStart('\\', '/'));
+                            // an earlier source already provides this file
+                            if (File.Exists(dst) || !queued.Add(dst))
+                                continue;
 
-                        todo.Add(new KeyValuePair<string, string>(src, dst));
-                        var root = Path.GetPathRoot(pair.To) ?? "";
-                        bytesByRoot[root] = (bytesByRoot.TryGetValue(root, out var b) ? b : 0) + size;
+                            long size = 0;
+                            try
+                            {
+                                size = new FileInfo(src).Length;
+                            }
+                            catch
+                            {
+                            }
+
+                            todo.Add(new KeyValuePair<string, string>(src, dst));
+                            var root = Path.GetPathRoot(pair.To) ?? "";
+                            bytesByRoot[root] = (bytesByRoot.TryGetValue(root, out var b) ? b : 0) + size;
+                        }
                     }
                 }
 
@@ -173,10 +186,9 @@ namespace MissionPlanner.Utilities
                     if (free < kv.Value + FreeSpaceMarginBytes)
                     {
                         var msg = string.Format(
-                            "Not enough free disk space to copy your data from the previous \"{0}\" folders into \"{1}\" ({2:0.0} GB needed, {3:0.0} GB free).\n\n" +
-                            "Free up space and restart to finish the copy. Your old data is untouched in:\n{4}",
-                            Settings.PreviousAppConfigName, Settings.AppConfigName, kv.Value / 1073741824.0, free / 1073741824.0,
-                            string.Join("\n", pairs.Select(p => p.From)));
+                            "Not enough free disk space to copy your data into the \"{0}\" folders ({1:0.0} GB needed, {2:0.0} GB free).\n\n" +
+                            "Free up space and restart to finish the copy. Your old data is untouched in:\n{3}",
+                            Settings.AppConfigName, kv.Value / 1073741824.0, free / 1073741824.0, sources);
                         log.Warn(msg);
                         CustomMessageBox.Show(msg, "Data migration");
                         return; // no marker: retried on the next launch
@@ -211,7 +223,7 @@ namespace MissionPlanner.Utilities
 
                 foreach (var pair in pairs)
                     File.WriteAllText(Path.Combine(pair.To, MarkerName),
-                        "Copied from " + pair.From + " on " + DateTime.Now.ToString("u") + Environment.NewLine);
+                        "Copied from " + string.Join(", ", pair.From) + " on " + DateTime.Now.ToString("u") + Environment.NewLine);
                 log.Info("Data folder migration complete");
             }
             catch (Exception ex)

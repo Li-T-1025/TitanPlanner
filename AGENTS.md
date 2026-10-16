@@ -147,7 +147,7 @@ whenever a change lands. `ChangeLog.txt` is upstream's and is not maintained her
   fail. Both `plugins\` and `Plugins\` exist on disk; the csproj excludes both.
 - **Product identity and data folders.** The app is "TitanPlanner": its own MSI upgrade code and install
   folder (`wix/Program.cs`) and its own data folders via `Settings.AppConfigName`. On first launch
-  `DataFolderMigration` copies the previous folders (`Settings.PreviousAppConfigName`, "Mission
+  `DataFolderMigration` copies the previous folders (`Settings.PreviousAppConfigNames`, "Mission
   Planner") into the new ones. The NextVision edition sets these to "TitanPlanner-NextVision" and
-  `null` (no migration), so those lines differ between the two repos by design.
+  `{ "TitanPlanner", "Mission Planner" }`, so those lines differ between the two repos by design.
 - **Commits.** Messages carry no AI attribution trailers. Do not commit or push unless asked.
