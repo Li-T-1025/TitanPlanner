@@ -1,15 +1,13 @@
-# Mission Planner - Titan Dynamics Edition - Change Summary
+# Mission Planner - Titan Dynamics Edition - Features
 
-A high-level summary of changes in this fork compared to upstream [ArduPilot/MissionPlanner](https://github.com/ArduPilot/MissionPlanner). For a chronological list of every individual change, see `ChangeLog.txt` (which still tracks upstream changes) and the project's git history.
-
-This document covers the **385 commits** unique to the TitanPlanner fork.
+What this fork adds on top of upstream [ArduPilot/MissionPlanner](https://github.com/ArduPilot/MissionPlanner), by area. It describes how the fork behaves today, not the history of how it got there; for that, use the git log. (`ChangeLog.txt` is upstream's own log.)
 
 ---
 
 # Branding & Theming
 
 ## Titan Dynamics System Theme
-A new bundled theme (`titandynamics.mpsystheme`) is set as the default for new installs. Theme application has been extended to controls upstream did not theme — `ListBox`, `PropertyGrid`, `MessagesList`, status tab, menu-bar icons, the Splash form, and toast notifications.
+A new bundled theme (`titandynamics.mpsystheme`) is set as the default for new installs. Theming also covers controls upstream leaves unthemed — `ListBox`, `PropertyGrid`, `MessagesList`, status tab, menu-bar icons, the Splash form, and toast notifications.
 
 ## Dark Windows Title Bars
 Native Windows title bars now follow the application theme rather than always being light.
@@ -25,7 +23,7 @@ Tornado and Proton aircraft are the default rendered icons for plane and copter 
 # HUD Overhaul
 
 ## Layout & Typography
-Major reflow of the HUD. Larger, optimized fonts; centering uses cached per-character metrics for stability; left/right scroller arrows scale with font size; mode display has a redrawn trapezoid background; heading scroller now shows an `H` indicator for home heading; degree symbol (`°`) replaces the literal `deg` string; `Yaw` is now labelled `Heading`.
+Major reflow of the HUD. Larger, optimized fonts; centering uses cached per-character metrics for stability; left/right scroller arrows scale with font size; mode display has a redrawn trapezoid background; heading scroller shows an `H` indicator for home heading; a degree symbol (`°`) instead of the literal `deg`; `Yaw` is labelled `Heading`.
 
 ## New Telemetry Readouts
 - **AOA / SSA / critical AOA gauge** for fixed-wing
@@ -37,23 +35,23 @@ Major reflow of the HUD. Larger, optimized fonts; centering uses cached per-char
 - **Dual battery** display in the bottom-left
 
 ## Plugin-Overridable Icon Slots
-Icon slots on the HUD can now be overridden by plugins, opening up custom telemetry/iconography integrations.
+Plugins can override the HUD's icon slots for custom telemetry and iconography.
 
 ## Pre-Arm & Flight Mode Rendering
 Cleaner, more reliable display of pre-arm status and the active flight mode on the HUD.
 
-## Removals & Cleanups
-The Russian-localized HUD has been removed entirely; CPU message relocated; time readout removed; link-stats moved.
+## Leaner HUD
+No Russian-localized HUD variant and no time readout; the CPU message and link stats sit out of the way of the flight instruments.
 
 ---
 
 # 3D Map (Map3D)
 
 ## Real-Time Vehicle Rendering
-The connected vehicle now renders in 3D with default STL models per MAV type (plane, quadplane, copter, rover, boat, sub, tricopter, etc.). Plane color rendering is corrected; terrain render distance increased to 50 km.
+The connected vehicle renders in 3D with default STL models per MAV type (plane, quadplane, copter, rover, boat, sub, tricopter, etc.) in correct colours, over terrain rendered out to 50 km.
 
 ## Tile Loading Pipeline
-A weighted distance/zoom-level scoring algorithm prioritizes which tiles to load. At 500 m+ altitude, zoom level is dropped to keep the view fluid. Tiles fully covered by higher-zoom tiles are skipped. Disk caching has been added to avoid re-fetching across sessions, with the caching layer extracted into its own class. A latent thread race in `tileArea` was fixed by lock-token redesign.
+A weighted distance/zoom-level scoring algorithm prioritizes which tiles to load. At 500 m+ altitude, zoom level is dropped to keep the view fluid. Tiles fully covered by higher-zoom tiles are skipped. Tiles are cached on disk so they are not re-fetched across sessions, and tile-area updates are guarded by a dedicated lock token.
 
 ## Camera & Visual Effects
 - **FPV mode** with smooth camera movement and pitch-matched heading lines
@@ -92,7 +90,7 @@ Replaced the dated FlightData tab bar with a modern themed strip and refreshed i
 - **Video tab** with USB camera and GStreamer support, plus immediate HUD-overlay toggle
 - **Inspector tab** (MAVLink Inspector exposed without `Ctrl+F`)
 - **Logs tab** unifying former Dataflash and Telemetry tabs
-- **Status tab** in FlightData fixed
+- Working **Status tab** in FlightData
 - **Help tab** hidden by default; Gauges tab hidden by default
 
 ## Splits, Sizing & Defaults
@@ -112,17 +110,17 @@ Themed search bar with suggest-only autocomplete; search resets when navigating 
 - Removed confirmation dialogs after param writes (kept reboot-required and save-failed)
 - Toast notification on successful param write
 - Tree collapsed by default in tab embeddings to save space
-- User params can now be set on the Flight Modes page
+- User params can be set on the Flight Modes page
 
 ---
 
 # Setup & Configuration Pages
 
 ## Betaflight-Style Motor Setup
-The former "Motor Test" page has been renamed to **Motor Setup**, redesigned in a Betaflight-inspired layout, promoted to the Mandatory Hardware section, and only displayed for copter/quadplane vehicles. Frame and class type images are shown live.
+**Motor Setup** (upstream's "Motor Test") is a Betaflight-style page in the Mandatory Hardware section, shown only for copter/quadplane vehicles, with live frame and class type images.
 
 ## Servo Output Tab
-A revamped Servo Output panel with click-or-drag sliders for trim, an "Equidistant" min/max helper, and proper min/max-from-trim handling. Servo trim slider now syncs with the combobox.
+A revamped Servo Output panel with click-or-drag sliders for trim, an "Equidistant" min/max helper, and proper min/max-from-trim handling. The trim slider stays in sync with the combobox.
 
 ## Radio & Calibration
 Visual-stick-controls Radio Calibration UI; proper reversing logic restored to match upstream behavior; accel calibration polished.
@@ -148,7 +146,7 @@ ELRS airport support added.
 # Mode Selector & Vehicle State Toolbar
 
 ## Top-Bar Mode Selector
-A compact mode selector lives in the top menu bar with a pin/favorite system that auto-populates from the vehicle's `FLTMODE1`–`FLTMODE6` parameters. The selector auto-sizes based on available space and hides when not connected.
+A compact mode selector lives in the top menu bar. Users pin the modes they want as toolbar buttons (persisted in `ModeSelectorPinned`). The dropdown shows the vehicle's configured `FLTMODE1`–`FLTMODE6` (`MODE1`–`MODE6` on Rover) in a "Configured modes" section on top, then the full "Flight modes" list with favorite stars; it refreshes on connect and whenever a flight-mode parameter is written rather than polling. The selector auto-sizes based on available space and hides when not connected.
 
 ## Vehicle State Toolbar
 Arm/disarm indicator and a clickable GPS status popup with detailed real-time telemetry, with values that update live.
@@ -174,7 +172,7 @@ Arm/disarm indicator and a clickable GPS status popup with detailed real-time te
 - Drag-and-drop reordering of items
 - Right-click → Edit option for individual items
 - Overhauled edit dialog with categorization and search
-- Quick tab now pops out instead of undocking awkwardly
+- The Quick tab pops out into its own window
 
 ## Display Modes
 - **Gauge display mode** for any dashboard item
@@ -189,15 +187,16 @@ Sensible default Quick tab options on first run; reset and reset-all per-item; l
 
 # Mission Planning
 
-## Upstream Improvements (Pulled In)
-WPOverlay2 + new mission rendering pipeline, MissionStyleEditor, `MissionSegmentizer` Arc support, `GMapRoute` arrow modes, `GMapMarkerWP` marker types and text centering, plane return path mavcmd, `DO_LAND_START` Z unit fix.
+## Upstream Mission Features Included
+The WPOverlay2 rendering pipeline with its MissionStyleEditor, `MissionSegmentizer` arcs, `GMapRoute` arrow modes, `GMapMarkerWP` marker types with centred text, the plane return-path command, and correct `DO_LAND_START` Z units.
 
 ## Fork Additions
 - **Center to Vehicle** button
 - **Clear all** in PLAN tab; clear-path from FlightData
 - 2D ↔ 3D map waypoint sync
 - Improved mission table UI
-- Removed forced switch to PLAN tab when "load waypoints on connect" is enabled
+- "Load waypoints on connect" loads them without forcing a switch to the PLAN tab
+- No "New Mission Overlay" announcement when the PLAN tab opens; Edit Style and Use Legacy Overlay live in the map menu
 
 ---
 
@@ -207,12 +206,35 @@ WPOverlay2 + new mission rendering pipeline, MissionStyleEditor, `MissionSegment
 - **Tools button** on map for the former "temp" / `Ctrl+F` window
 - **Propagation Settings** accessible from the map (`Ctrl+W`)
 - **Find Location** added to the PLAN tab
-- **Offline Maps** window on the PLAN tab: lists every downloaded map area with its zoom range, tile count and size on disk; downloads the current view or an ALT-selected area; jumps to an area on the map; and exports/imports areas as `.mappack` files so air-gapped machines can be loaded from a USB stick. Right-click → Prefetch downloads are recorded there too
+- **Offline Maps** button on the PLAN tab (see [Offline Maps](#offline-maps) below)
 - Custom SITL locations; Woodley default
 - Larger fonts on Sats/HDOP labels with new VDOP readout
 - Zoom buttons and scale bar on map
 - Clean pixel-perfect bottom-bar layout
 - Auto-pan on parameter button swap
+
+---
+
+# Offline Maps
+
+Built for air-gapped use. Opened from the **Offline Maps** button next to Find Location on the PLAN tab.
+
+## The Window
+- Lists every map area that has been downloaded into the tile cache: name, map source, zoom range, tiles on disk against tiles expected (with coverage %), and size on disk. Counting runs in the background.
+- Selecting an area shows a **preview composited from its own cached tiles** at the highest zoom that fits a 4×4 tile grid, cropped to the area. Tiles missing from disk appear hatched, so coverage gaps are visible at a glance. Below the preview: size in km, tile counts, a coverage bar, size on disk, date added and where the area came from.
+- Modeless, so the map stays usable: pan, or hold ALT and drag to select an exact area, then click **Download…**.
+- All actions on one row: Download…, Show on Map, Rename, Export…, Import…, Delete (optionally deleting the tiles too), Refresh, Open Folder.
+
+## Downloads
+- **Download…** fetches the current map view, or the ALT-selected area if there is one, through the existing zoom-range prompt and tile prefetcher, then records the area.
+- Right-click → **Prefetch** downloads are recorded as areas as well, so the existing workflow shows up in the list.
+- Areas are kept in `gmapcache\offlinemaps.json` next to the tiles.
+
+## `.mappack` Files
+- A `.mappack` is a zip holding `manifest.json` (the area entries) plus `tiles/{provider}/{zoom}/{y}/{x}.jpg`, the same layout the tile cache uses on disk. Importing copies tiles into the cache and keeps any already present. The file can also be unpacked by hand into `gmapcache\TileDBv3\en\` if the app is unavailable.
+- Tiles are stored uncompressed (JPEGs don't shrink), so export is fast; overlapping areas share tiles within one pack.
+- Packs without a manifest import too; their areas are derived from the tile extents.
+- Entry paths are validated on import, so a crafted pack cannot write outside the cache folder. Tiles for a map source that isn't installed are copied with a warning.
 
 ---
 
@@ -224,26 +246,22 @@ WPOverlay2 + new mission rendering pipeline, MissionStyleEditor, `MissionSegment
 - Increased debouncing on 2D→3D map sync
 - Robust GStreamer start/stop handling
 - Resilient QuickView state under churn
-- Application Insights / log4net wiring kept up to date with the upstream layout
 
 ---
 
-# Notable Bug Fixes
+# Reliability Fixes Over Upstream
 
-- **Map3D paint race**: dedicated lock token replaces locking on a list reference that gets reassigned, fixing intermittent `Destination array was not long enough` paint crashes
-- **Duplicate HUD `lowairspeed` binding** post-merge causing `ControlBindingsCollection.CheckDuplicates` on FlightData init
-- `ConfigRawParams` crash
-- `ConfigFlightModes` not populating `RCX_*` options on load
-- Crash when starting a busy camera
-- Upstream prefetch bug on the latest Mission Planner
-- DotNet zip issues affecting installer and release builds
-- Firmware flashing bug tied to DotNet version
-- Dashboard items not updating after context-menu edits, panel exceeding tab width
-- Dashboard defaults containing duplicate "distance to home"
-- 3D-map nav-bearing line now points at the actual waypoint position
-- Map sync between PLAN and DATA tabs
-- Aborting scripts with no script no longer crashes
-- Splash-screen and title-bar version display unified to a single build-stamped version
+Behaviour that differs from upstream because the fork fixed it:
+
+- The 3D map's paint path locks on a dedicated token, so the intermittent `Destination array was not long enough` crash does not occur
+- The Full Parameter List opens without crashing, and Flight Modes populates its `RCx_OPTION` lists on load
+- Starting a camera that another program holds open fails gracefully instead of crashing
+- Dashboard items repaint after context-menu edits, the panel never outgrows its tab, and the default layout has no duplicate "distance to home"
+- The 3D map's nav-bearing line points at the actual waypoint, and the PLAN and DATA maps stay in sync
+- Aborting a script when none is running is a no-op rather than a crash
+- Servo Output's function dropdown shows the real value for REAL32-stored integer params such as `SERVOn_FUNCTION`; upstream truncates and can show the option below (Gripper for LandingGear)
+- Firmware flashing and the installer/release zip work on current .NET builds
+- Builds cleanly in Visual Studio 2022 and with `dotnet build` / `dotnet test`
 
 ---
 
@@ -253,13 +271,10 @@ WPOverlay2 + new mission rendering pipeline, MissionStyleEditor, `MissionSegment
 GitHub Actions builds Release and Debug, packages an MSI and zip, computes `checksums.txt` and `version.txt`, and publishes:
 - A **`development-build`** prerelease on every push to `development`
 - A **`TitanPlanner-<version>`** stable release on every push to `master`
+- Upstream's Linux and macOS workflows build here too, but their `linux-latest` / `osxlatest` prereleases are only published from the ArduPilot repository, so this fork's Releases page stays limited to the two channels above
 
 ## In-App Updater
-Reads `version.txt` from the channel URL (stable or beta) and compares as `System.Version`. On a positive match, streams the differing files directly out of the release zip (`TitanPlanner.zip`) using HTTP range requests, validates each file's MD5 against `checksums.txt`, then hands off to `Updater.exe` for the in-place swap.
-
-## Recent Fixes
-- Production channel was passing the directory base URL into `CheckMD5`, causing per-file 404s; it now correctly streams from the release zip exactly as the dev channel does.
-- Splash and title bar now show one consistent, build-stamped version (e.g. `1.3.9615.29424`) rather than the stale upstream `1.3.83` next to a different auto-stamped value.
+Reads `version.txt` from the channel URL (stable or beta) and compares as `System.Version`. When a newer build exists it streams only the files that differ straight out of the release zip (`TitanPlanner.zip`) with HTTP range requests, checks each file's MD5 against `checksums.txt`, then hands off to `Updater.exe` for the in-place swap. Both channels use the same path. The splash screen and title bar show the single build-stamped version (e.g. `1.3.9615.29424`) that the updater compares against.
 
 ---
 
@@ -268,14 +283,23 @@ Reads `version.txt` from the channel URL (stable or beta) and compares as `Syste
 - **Reboot Vehicle** button in the Actions tab; global **`Ctrl+R`** shortcut to reboot autopilot
 - "Don't show again" option on the param-missing dialog, info dialogs, the failsafe-mode-change warning, and the ground-station-log dialog
 - Param write toast notifications
-- Reorganized Actions tab as a flow layout with payload controls merged in
+- Actions tab laid out as a flow layout with the payload controls alongside
 - Revamped Telemetry Log tab
 - Logs tab combining Dataflash + Telemetry views
 - Custom upgrade-path logic so existing original Mission Planner users transition cleanly to the Titan Dynamics edition (theme, default tab visibility, settings migration)
-- Windows console terminal removed from the main exe
+- No console window behind the main exe
 
 ---
 
-# Upstream Sync
+# Upstream Base
 
-This fork periodically merges from `upstream/master`. The most recent merge brought in 27+ days of upstream work including the WPOverlay2 mission pipeline, `ThemeManager` ListBox/PropertyGrid theming, auto-pinning of flight modes from `FLTMODE1-6`, `MissionSegmentizer` Arc support, and various GMapMarkerWP / GMapRoute / mavcmd improvements.
+The fork tracks `upstream/master` and currently includes upstream as of 2026-10-16. Where the two conflict, the fork keeps its own UI (HUD layout, Actions tab, Motor Setup, Battery Monitor, Radio Calibration, themed tabs) and takes upstream's fixes. Upstream capabilities in this build that users may notice:
+
+- 32-bit MAVLink system IDs everywhere (GCS id, vehicle lists, map markers)
+- Plugins can add actions to the Actions tab dropdown and draw on the HUD (`OnCustomPaint`)
+- MAVFtp: recursive folder delete, file modification dates, and a Dokan driver check before mounting
+- A hardened built-in HTTP server: connection limits, no path traversal, guided-mode endpoint limited to localhost; `[link;...]` markup only opens http(s) targets
+- NTRIP GGA sent from the live vehicle position
+- Packaged Linux builds (`Linux/build.sh`, `run.sh`) and a touch-friendly main menu on Linux
+- The WPOverlay2 mission pipeline, `MissionSegmentizer` arcs, and `ThemeManager` theming of ListBox/PropertyGrid
+- Correct behaviour on Turkish-locale systems for `.BIN` log detection, KMZ export and mode changes by name; MSI requires .NET Framework 4.7.2

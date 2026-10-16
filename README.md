@@ -14,7 +14,7 @@
 
 ## Enhancements
 
-This fork implements every feature we've always yearned for with considerable UI/UX upgrades, a reworked HUD, a real-time 3D map with vehicle rendering (and ADSB), an overhauled parameter editor and tab layout, a Betaflight-style motor setup, USB auto-connect, and dozens of large improvements throughout the app.
+This fork implements every feature we've always yearned for with considerable UI/UX upgrades, a reworked HUD, a real-time 3D map with vehicle rendering (and ADSB), an overhauled parameter editor and tab layout, a Betaflight-style motor setup, USB auto-connect, offline map packs for air-gapped planning, and dozens of large improvements throughout the app.
 
 **See [CHANGES.md](CHANGES.md) for the full list of features and fixes added in this fork.**
 
@@ -48,7 +48,7 @@ sudo apt install mono-complete mono-runtime libmono-system-windows-forms4.0-cil 
 mono MissionPlanner.exe
 ```
 
-See [Linux/README.md](Linux/README.md) for the upstream build (`./Linux/build.sh`) and launch (`./Linux/run.sh`) scripts.
+See [Linux/README.md](Linux/README.md) for the upstream build (`./Linux/build.sh`) and launch (`./Linux/run.sh`) scripts. The prebuilt Linux and macOS downloads that document links to are published by upstream only; this fork ships Windows releases.
 
 ---
 

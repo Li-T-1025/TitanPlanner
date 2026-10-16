@@ -21,7 +21,7 @@ git submodule update --init          :: required once; pulls ExtLibs/mono and ot
 msbuild -v:m -restore -t:Build -p:Configuration=Release MissionPlanner.sln
 ```
 
-- The main app is built from **`MissionPlanner.sln`** → `MissionPlanner.csproj` (`net472`, `Exe`).
+- The main app is built from **`MissionPlanner.sln`** → `MissionPlanner.csproj` (`net472`, `WinExe`).
 - Output goes to **`bin\Release\net461\`** (or `bin\Debug\net461\`) — the `net461` folder name is
   intentional (`AppendTargetFrameworkToOutputPath=false`), it is *not* a separate target.
 - `build.bat`, `build - debug.bat`, `build - Clean.bat` are the maintainer's local build scripts
@@ -37,9 +37,12 @@ single most important thing to understand before touching shared code.
 
 ### CI
 
-GitHub Actions (`.github/workflows/main.yml` = "DotNet Build", plus `android.yml`, `mac.yml`)
-build on Windows with MSBuild. CI builds the solution and zips `bin/Release/net461`; tagging
-`beta` publishes a release.
+GitHub Actions (`.github/workflows/main.yml` = "DotNet Build", plus `android.yml`, `linux.yml`,
+`mac.yml`). `main.yml` builds the solution on Windows, runs the `Sysid32Tests`, packages an MSI
+and `TitanPlanner.zip` with `checksums.txt` / `version.txt`, and publishes a `development-build`
+prerelease on pushes to `development` and a `TitanPlanner-<version>` release on pushes to
+`master`; the in-app updater reads those. The Linux/macOS workflows build but only publish
+releases when running in the upstream ArduPilot repository.
 
 ## Tests
 
@@ -54,7 +57,7 @@ vstest.console.exe MissionPlannerTests.dll /Tests:DetectBoardTest
 ```
 
 Coverage is light and focused on pure logic (board detection, firmware parsing, downloads). CI
-build pipelines do not run the test suite (`test: off`). When adding tests, mirror the existing
+runs only the MAVLink `Sysid32Tests`; run the rest locally. When adding tests, mirror the existing
 folder layout (`MissionPlannerTests/Utilities`, `/GCSViews`, ...).
 
 ## Architecture (the big picture)
@@ -121,3 +124,23 @@ The solution has ~93 projects; treat `ExtLibs/` as the bulk of the real function
 - **`.editorconfig`** intentionally downgrades many `CAxxxx` analyzer rules to suggestion/silent —
   don't treat those as actionable warnings.
 - **`Resources/`** holds icons/images; themes are `*.mpsystheme` files driven by `ThemeManager.cs`.
+
+## TitanPlanner fork notes
+
+This repository is the Titan Dynamics fork of Mission Planner. `CHANGES.md` is the feature-level
+summary of everything the fork adds over upstream; update it (and `README.md` if user-facing)
+whenever a change lands. `ChangeLog.txt` is upstream's and is not maintained here.
+
+- **Upstream sync.** `upstream` = `ArduPilot/MissionPlanner`. Merge `upstream/master` into
+  `development`, resolve conflicts in favour of the fork's UI (HUD layout, `FlightDataActions`,
+  Motor Setup, Battery Monitor, Radio Calibration, themed tabs) while taking upstream's fixes,
+  then summarise the merge in the "Upstream Sync" section of `CHANGES.md`. Expect upstream's
+  mechanical changes (e.g. the `byte` → `uint` sysid widening) to also apply to fork-only code.
+- **Line endings.** The repo stores a mix of CRLF and LF blobs and `core.autocrlf=true` is in use.
+  Before staging, compare `git diff --stat` with `--ignore-cr-at-eol`; a whole-file rewrite means
+  the line endings changed, not the code. Files whose HEAD blob is CRLF must be staged as CRLF.
+- **Build gotchas.** `MissionPlannerLib.csproj` builds into `obj2\`; `MissionPlanner.csproj` must
+  keep its `obj\` / `obj2\` excludes or the Xamarin-generated `FirmwareSelection.xaml.g.cs` is
+  compiled twice. Keep `GenerateResourceUsePreserializedResources` on, or `dotnet build`/`dotnet test`
+  fail. Both `plugins\` and `Plugins\` exist on disk; the csproj excludes both.
+- **Commits.** Messages carry no AI attribution trailers. Do not commit or push unless asked.
