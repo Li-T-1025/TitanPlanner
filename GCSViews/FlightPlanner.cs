@@ -3539,13 +3539,6 @@ namespace MissionPlanner.GCSViews
 
             writeKML();
 
-            BeginInvoke((Action)(() =>
-                Common.MessageShowAgain("New Mission Overlay",
-                    "Mission Planner now uses an improved mission overlay with styled lines and markers.\n\n" +
-                    "You can customize colors, line styles, and markers via Map Tool > Edit Style.\n\n" +
-                    "If you experience any issues, you can switch back via Map Tool > Use Legacy Overlay.")
-            ));
-
             // switch the action and wp table
             if (Settings.Instance["FP_docking"] == "Bottom")
             {
