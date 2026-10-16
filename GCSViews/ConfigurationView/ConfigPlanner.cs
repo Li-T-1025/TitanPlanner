@@ -530,6 +530,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             CMB_theme.Text = ThemeManager.thmColor.strThemeName;
 
+            num_gcsid.Maximum = uint.MaxValue;
             num_gcsid.Value = MAVLinkInterface.gcssysid;
 
             // setup severity selection
@@ -1545,7 +1546,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void num_gcsid_ValueChanged(object sender, EventArgs e)
         {
-            MAVLinkInterface.gcssysid = (byte)num_gcsid.Value;
+            MAVLinkInterface.gcssysid = (uint)num_gcsid.Value;
             Settings.Instance["gcsid"] = num_gcsid.Value.ToString();
         }
 
