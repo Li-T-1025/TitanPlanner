@@ -124,5 +124,11 @@ namespace MissionPlanner.Controls.Scene3D
         public TileMesh Mesh;
         public bool HeightsAreFallback;
         public string Error;
+
+        /// <summary>Imagery fetch and decode time (0 for a remesh).</summary>
+        public double FetchMs;
+
+        /// <summary>Elevation sampling and mesh building time.</summary>
+        public double BuildMs;
     }
 }

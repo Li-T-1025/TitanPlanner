@@ -36,33 +36,22 @@ namespace MissionPlanner.Controls.Scene3D
         readonly List<TerrainTile> _evictionCandidates = new List<TerrainTile>();
         readonly List<TileId> _pruned = new List<TileId>();
         readonly Stopwatch _uploadTimer = new Stopwatch();
+        readonly Stopwatch _rateTimer = Stopwatch.StartNew();
         GLProgram _program;
         long _gpuBytes;
         int _zoneVersion = -1;
+        long _loadedAtRateStart;
 
         public TerrainEngine(WorldFrame frame, ITileImagerySource imagery)
         {
             _frame = frame;
             _quadtree = new TerrainQuadtree(frame);
             _loader = new TileLoader(imagery);
+            Stats.GpuBudgetBytes = GpuBudgetBytes;
         }
 
-        public int DrawnTiles
-        {
-            get { return _quadtree.DrawList.Count; }
-        }
-
-        public int ResidentTiles { get; private set; }
-
-        /// <summary>Tiles whose last load failed (network or decode errors), waiting to retry.</summary>
-        public int FailedTiles { get; private set; }
-
-        public string LastError { get; private set; }
-
-        public int LoadingTiles
-        {
-            get { return _loader.PendingCount + _loader.InFlightCount; }
-        }
+        /// <summary>Counters for the "Stats for nerds" panel, refreshed by <see cref="Update"/>.</summary>
+        public TerrainStats Stats { get; } = new TerrainStats();
 
         /// <summary>
         /// Uploads finished tiles, then chooses what to draw and what to load next for this view.
@@ -85,6 +74,40 @@ namespace MissionPlanner.Controls.Scene3D
             EvictOverBudget();
             if (_quadtree.Frame % 120 == 0)
                 _quadtree.PruneStale(PruneAfterFrames, now, _pruned);
+
+            UpdateStats();
+        }
+
+        void UpdateStats()
+        {
+            var stats = Stats;
+            stats.Drawn = _quadtree.DrawList.Count;
+            stats.Nodes = _quadtree.Count;
+            stats.Queued = _loader.PendingCount;
+            stats.InFlight = _loader.InFlightCount;
+            stats.Workers = _loader.WorkerCount;
+            stats.GpuBytes = _gpuBytes;
+
+            Array.Clear(stats.ZoomCounts, 0, stats.ZoomCounts.Length);
+            stats.MinZoom = int.MaxValue;
+            stats.MaxZoom = 0;
+            foreach (var tile in _quadtree.DrawList)
+            {
+                int z = Math.Min(tile.Id.Z, TerrainStats.ZoomLevels - 1);
+                stats.ZoomCounts[z]++;
+                stats.MinZoom = Math.Min(stats.MinZoom, z);
+                stats.MaxZoom = Math.Max(stats.MaxZoom, z);
+            }
+
+            if (stats.Drawn == 0)
+                stats.MinZoom = 0;
+
+            if (_rateTimer.ElapsedMilliseconds >= 1000)
+            {
+                stats.LoadedPerSecond = (stats.LoadedTotal - _loadedAtRateStart) / _rateTimer.Elapsed.TotalSeconds;
+                _loadedAtRateStart = stats.LoadedTotal;
+                _rateTimer.Restart();
+            }
         }
 
         /// <summary>Stops loading without dropping the GPU cache, e.g. while the view is hidden.</summary>
@@ -107,6 +130,10 @@ namespace MissionPlanner.Controls.Scene3D
                 {
                     case TileLoadOutcome.Loaded:
                         Upload(tile, result);
+                        Stats.LoadedTotal++;
+                        if (result.Kind == TileJobKind.Full)
+                            Stats.FetchMs = Smooth(Stats.FetchMs, result.FetchMs);
+                        Stats.BuildMs = Smooth(Stats.BuildMs, result.BuildMs);
                         break;
 
                     case TileLoadOutcome.StillPending:
@@ -132,7 +159,7 @@ namespace MissionPlanner.Controls.Scene3D
 
                     default:
                         Log(result);
-                        LastError = result.Error;
+                        Stats.LastError = result.Error;
                         if (tile.State == TileState.Ready)
                         {
                             // A remesh failed; keep the tile and try again later.
@@ -149,6 +176,13 @@ namespace MissionPlanner.Controls.Scene3D
                         break;
                 }
             }
+
+            Stats.UploadMs = _uploadTimer.Elapsed.TotalMilliseconds;
+        }
+
+        static double Smooth(double average, double sample)
+        {
+            return average <= 0 ? sample : average * 0.9 + sample * 0.1;
         }
 
         void Log(TileLoadResult result)
@@ -211,18 +245,26 @@ namespace MissionPlanner.Controls.Scene3D
             return (int)Math.Max(0, tile.GpuBytes - TileMeshBuilder.VertexCount(tile.GridN) * TileMeshBuilder.FloatsPerVertex * sizeof(float));
         }
 
+        /// <summary>Counts tile states for the stats panel and frees the least recently used tiles when over budget.</summary>
         void EvictOverBudget()
         {
-            ResidentTiles = 0;
-            FailedTiles = 0;
+            var stats = Stats;
+            stats.Resident = stats.Failed = stats.NoData = stats.Offline = stats.WaitingForElevation = 0;
             _evictionCandidates.Clear();
             foreach (var tile in _quadtree.Tiles)
             {
-                if (tile.State == TileState.Failed)
-                    FailedTiles++;
+                switch (tile.State)
+                {
+                    case TileState.Failed: stats.Failed++; break;
+                    case TileState.NoData: stats.NoData++; break;
+                    case TileState.Unavailable: stats.Offline++; break;
+                }
+
                 if (tile.State != TileState.Ready)
                     continue;
-                ResidentTiles++;
+                stats.Resident++;
+                if (tile.HeightsAreFallback)
+                    stats.WaitingForElevation++;
                 if (tile.LastVisitedFrame != _quadtree.Frame)
                     _evictionCandidates.Add(tile);
             }
@@ -236,8 +278,10 @@ namespace MissionPlanner.Controls.Scene3D
             {
                 if (_gpuBytes <= target)
                     break;
+                if (tile.HeightsAreFallback)
+                    stats.WaitingForElevation--;
                 ReleaseGpu(tile);
-                ResidentTiles--;
+                stats.Resident--;
             }
         }
 
@@ -280,13 +324,13 @@ namespace MissionPlanner.Controls.Scene3D
         }
 
         /// <summary>
-        /// Haze starts a third of the way out and is opaque just inside the view radius. Terrain is selected
-        /// all the way to the radius, so its edge is always hidden in the fog.
+        /// Haze starts 30% of the way out and is opaque at 90% of the view radius. Terrain is selected all the
+        /// way to the radius, so its edge is always hidden in the fog.
         /// </summary>
         public static void FogRange(double viewRadius, out float start, out float end)
         {
-            start = (float)(viewRadius * 0.35);
-            end = (float)(viewRadius * 0.95);
+            start = (float)(viewRadius * 0.30);
+            end = (float)(viewRadius * 0.90);
         }
 
         /// <summary>

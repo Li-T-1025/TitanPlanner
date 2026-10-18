@@ -84,6 +84,11 @@ namespace MissionPlanner.Controls.Scene3D
             }
         }
 
+        public int WorkerCount
+        {
+            get { return _workers.Count; }
+        }
+
         /// <summary>Replaces everything not yet started with these requests.</summary>
         public void SetRequests(IList<TileRequest> requests)
         {
@@ -162,10 +167,13 @@ namespace MissionPlanner.Controls.Scene3D
         TileLoadResult Process(TileRequest job)
         {
             var result = new TileLoadResult { Id = job.Id, Kind = job.Kind, ZoneVersion = job.ZoneVersion };
+            var timer = Stopwatch.StartNew();
 
             if (job.Kind == TileJobKind.Full)
             {
                 var image = _imagery.Fetch(job.Id);
+                result.FetchMs = timer.Elapsed.TotalMilliseconds;
+                timer.Restart();
                 if (image.Outcome != TileLoadOutcome.Loaded)
                 {
                     result.Outcome = image.Outcome;
@@ -206,6 +214,7 @@ namespace MissionPlanner.Controls.Scene3D
             result.Mesh = TileMeshBuilder.Build(job.Id, job.GridN, rowLats, colLngs, heights, job.Zone);
             result.HeightsAreFallback = fallback;
             result.Outcome = TileLoadOutcome.Loaded;
+            result.BuildMs = timer.Elapsed.TotalMilliseconds;
             return result;
         }
 

@@ -35,7 +35,9 @@ namespace MissionPlanner.Controls
         public bool ShowTurnRadius = true;
         public bool ShowTrail;
         public bool FpvMode;
-        public bool ShowStats = true;
+
+        /// <summary>The top-right diagnostics panel: frame timing graph, terrain streaming, view and GPU.</summary>
+        public bool StatsForNerds;
         public double WaypointMarkerSize = 60;
         public double AdsbCircleSize = 500;
 
@@ -57,7 +59,7 @@ namespace MissionPlanner.Controls
                 ShowTurnRadius = s.GetBoolean("map3d_show_turn_radius", true),
                 ShowTrail = s.GetBoolean("map3d_show_trail", false),
                 FpvMode = s.GetBoolean("map3d_fpv_mode", false),
-                ShowStats = s.GetBoolean("map3d_show_stats", true),
+                StatsForNerds = s.GetBoolean("map3d_stats_for_nerds", false),
                 WaypointMarkerSize = s.GetDouble("map3d_waypoint_marker_size", 60),
                 AdsbCircleSize = s.GetDouble("map3d_adsb_size", 500)
             };
@@ -91,7 +93,7 @@ namespace MissionPlanner.Controls
             s["map3d_show_turn_radius"] = ShowTurnRadius.ToString();
             s["map3d_show_trail"] = ShowTrail.ToString();
             s["map3d_fpv_mode"] = FpvMode.ToString();
-            s["map3d_show_stats"] = ShowStats.ToString();
+            s["map3d_stats_for_nerds"] = StatsForNerds.ToString();
             SaveCamera();
         }
 

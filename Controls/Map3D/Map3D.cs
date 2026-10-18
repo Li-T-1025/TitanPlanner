@@ -49,8 +49,14 @@ namespace MissionPlanner.Controls
         private LineRenderer _lines;
         private MissionOverlay _mission;
         private VehicleOverlay _vehicleOverlay;
-        private StatsOverlay _stats;
+        private NerdStatsOverlay _nerdStats;
         private bool _glFailed;
+
+        // Frame timing and a per-frame snapshot for "Stats for nerds".
+        private readonly FrameStats _frameStats = new FrameStats(NerdStatsOverlay.GraphSamples);
+        private readonly SceneStats _sceneStats = new SceneStats();
+        private readonly Stopwatch _frameClock = new Stopwatch();
+        private readonly Stopwatch _cpuClock = new Stopwatch();
         private int _paintErrors;
 
         // Telemetry written by FlightData's update thread, read once per frame.
@@ -273,7 +279,15 @@ namespace MissionPlanner.Controls
                     MakeCurrent();
 
                 EnsureRenderers();
+
+                double interval = _frameClock.IsRunning ? _frameClock.Elapsed.TotalMilliseconds : 0;
+                _frameClock.Restart();
+                _cpuClock.Restart();
                 RenderFrame();
+                _sceneStats.CpuMs = _cpuClock.Elapsed.TotalMilliseconds;
+                if (interval > 0)
+                    _frameStats.Add(interval, _sceneStats.CpuMs);
+
                 SwapBuffers();
             }
             catch (GraphicsContextException)
@@ -300,7 +314,16 @@ namespace MissionPlanner.Controls
             _lines = new LineRenderer();
             _mission = new MissionOverlay();
             _vehicleOverlay = new VehicleOverlay(_stlLoader);
-            _stats = new StatsOverlay();
+            _nerdStats = new NerdStatsOverlay();
+
+            try
+            {
+                _sceneStats.Renderer = GL.GetString(StringName.Renderer) ?? "";
+                _sceneStats.GLVersion = GL.GetString(StringName.Version) ?? "";
+            }
+            catch
+            {
+            }
         }
 
         private void RenderFrame()
@@ -408,8 +431,32 @@ namespace MissionPlanner.Controls
                         ref overlayProjection, ref _view);
             }
 
-            if (_settings.ShowStats)
-                _stats.Draw(Width, Height, _terrain);
+            if (_settings.StatsForNerds)
+            {
+                UpdateSceneStats(connected, viewRadius);
+                _nerdStats.Draw(_lines, Width, Height, _frameStats, _terrain.Stats, _sceneStats);
+            }
+        }
+
+        private void UpdateSceneStats(bool connected, double viewRadius)
+        {
+            var s = _sceneStats;
+            double fx, fy, fz;
+            _camera.Forward(out fx, out fy, out fz);
+            float fogStart, fogEnd;
+            TerrainEngine.FogRange(viewRadius, out fogStart, out fogEnd);
+
+            s.Connected = connected;
+            s.Mode = !connected ? "Free look" : _settings.FpvMode ? "FPV" : "Chase";
+            s.Heading =(Math.Atan2(fx, fy) * 180 / Math.PI + 360) % 360;
+            s.Pitch = Math.Asin(Math.Max(-1, Math.Min(1, fz))) * 180 / Math.PI;
+            s.ViewRadius = viewRadius;
+            s.FogStart = fogStart;
+            s.FogEnd = fogEnd;
+            s.FovDegrees = _settings.FieldOfView;
+            s.MaxZoom = _settings.MaxZoom;
+            s.UtmZone = _frame.Zone;
+            s.OriginMoves = Math.Max(0, _frame.Version - 1);
         }
 
         private void UpdateTerrain(Matrix4 terrainProjection, double viewRadius, float fov)
@@ -432,7 +479,10 @@ namespace MissionPlanner.Controls
             _selection.FovY = fov;
             _selection.MaxZoom = _settings.MaxZoom;
             _selection.ReferenceHeight = _groundHeight;
+
+            var timer = Stopwatch.StartNew();
             _terrain.Update(_selection);
+            _sceneStats.TerrainMs = timer.Elapsed.TotalMilliseconds;
         }
 
         /// <summary>
@@ -559,7 +609,7 @@ namespace MissionPlanner.Controls
                 _lines.Dispose();
                 _mission.Dispose();
                 _vehicleOverlay.Dispose();
-                _stats.Dispose();
+                _nerdStats.Dispose();
             }
             catch (Exception ex)
             {

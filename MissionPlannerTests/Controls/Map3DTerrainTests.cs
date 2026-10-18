@@ -608,6 +608,29 @@ namespace MissionPlanner.Controls.Scene3D.Tests
     }
 
     [TestClass]
+    public class FrameStatsTests
+    {
+        [TestMethod]
+        public void KeepsTheLatestFramesOldestFirst()
+        {
+            var stats = new FrameStats(4);
+            Assert.AreEqual(0, stats.Count);
+
+            for (int i = 1; i <= 6; i++)
+                stats.Add(10 * i, i);
+
+            Assert.AreEqual(4, stats.Count);
+            CollectionAssert.AreEqual(new[] { 30f, 40f, 50f, 60f }, Enumerable.Range(0, 4).Select(stats.Interval).ToArray());
+            CollectionAssert.AreEqual(new[] { 3f, 4f, 5f, 6f }, Enumerable.Range(0, 4).Select(stats.Cpu).ToArray());
+
+            Assert.AreEqual(1000 / 45.0, stats.AverageFps(), 1e-6);
+            Assert.AreEqual(1000 / 60.0, stats.LowFps(), 1e-6);
+            Assert.AreEqual(1000 / 55.0, stats.CurrentFps(2), 1e-6);
+            Assert.AreEqual(5.5, stats.MeanCpu(2), 1e-6);
+        }
+    }
+
+    [TestClass]
     public class TileLoaderTests
     {
         sealed class FakeImagery : ITileImagerySource
