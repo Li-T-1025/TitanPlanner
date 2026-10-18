@@ -150,4 +150,10 @@ whenever a change lands. `ChangeLog.txt` is upstream's and is not maintained her
   `DataFolderMigration` copies the previous folders (`Settings.PreviousAppConfigNames`, "Mission
   Planner") into the new ones. The NextVision edition sets these to "TitanPlanner-NextVision" and
   `{ "TitanPlanner", "Mission Planner" }`, so those lines differ between the two repos by design.
+- **3D map.** `Controls/Map3D/` is the 3D view (excluded from the LIB build). `Terrain/` streams satellite
+  terrain: `TerrainQuadtree` picks tiles by screen-space error, `TileLoader` fetches imagery (through the
+  shared GMap cache), samples SRTM (`srtm.GetCell`) and builds meshes on worker threads, and `TerrainEngine`
+  uploads and draws them on the render thread. `Rendering/` holds the GL helpers and GLSL 1.10/ES 2.0
+  shaders, `Overlays/` the mission, vehicle and ADS-B drawing, `Scene/` the UTM frame, camera and pose
+  smoothing. Selection and loading are pure logic with tests in `MissionPlannerTests/Controls/`.
 - **Commits.** Messages carry no AI attribution trailers. Do not commit or push unless asked.

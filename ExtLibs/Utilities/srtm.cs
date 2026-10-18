@@ -62,6 +62,8 @@ namespace MissionPlanner.Utilities
 
         static List<string> oceantile = new List<string>();
 
+        static HashSet<string> badcells = new HashSet<string>();
+
         static Dictionary<string, short[,]> cache = new Dictionary<string, short[,]>();
 
 
@@ -84,11 +86,11 @@ namespace MissionPlanner.Utilities
 
             var sx = Math.Abs(x).ToString("000");
 
+            var name = string.Format("{0}{1}{2}{3}{4}", y >= 0 ? "N" : "S", sy, x >= 0 ? "E" : "W", sx, ".hgt");
             lock (_filenameDictionary)
-                _filenameDictionary[id] = string.Format("{0}{1}{2}{3}{4}", y >= 0 ? "N" : "S", sy,
-                    x >= 0 ? "E" : "W", sx, ".hgt");
+                _filenameDictionary[id] = name;
 
-            return _filenameDictionary[id];
+            return name;
         };
 
         static srtm()
@@ -502,6 +504,162 @@ namespace MissionPlanner.Utilities
             };
         }
 
+        public enum CellStatus
+        {
+            Loaded,
+            Ocean,
+            Pending,
+            Missing
+        }
+
+        /// <summary>
+        /// Gets the SRTM grid for the 1x1 degree cell containing lat/lng, loading it from disk or queueing a
+        /// download as needed. Never waits on the network and is safe to call from worker threads; sample the
+        /// returned grid with <see cref="SampleCell"/>.
+        /// </summary>
+        public static CellStatus GetCell(double lat, double lng, out short[,] data)
+        {
+            data = null;
+            var filename = GetFilename(lat, lng);
+            if (String.IsNullOrEmpty(filename))
+                return CellStatus.Missing;
+
+            lock (oceantile)
+            {
+                if (oceantile.Contains(filename))
+                    return CellStatus.Ocean;
+            }
+
+            lock (cache)
+            {
+                if (cache.TryGetValue(filename, out data))
+                    return CellStatus.Loaded;
+            }
+
+            lock (objlock)
+            {
+                if (queue.Contains(filename))
+                    return CellStatus.Pending;
+            }
+
+            lock (badcells)
+            {
+                // Unreadable (e.g. truncated) files: don't re-read 26 MB on every call.
+                if (badcells.Contains(filename))
+                    return CellStatus.Missing;
+            }
+
+            try
+            {
+                var filePath = datadirectory + Path.DirectorySeparatorChar + filename;
+                if (File.Exists(filePath))
+                {
+                    data = LoadCell(filename, filePath);
+                    return data != null ? CellStatus.Loaded : CellStatus.Missing;
+                }
+
+                if (GMaps.Instance.Mode == AccessMode.CacheOnly)
+                    return CellStatus.Missing;
+
+                if (!Directory.Exists(datadirectory))
+                    Directory.CreateDirectory(datadirectory);
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex);
+                return CellStatus.Missing;
+            }
+
+            lock (objlock)
+            {
+                if (!queue.Contains(filename))
+                {
+                    log.Info("Getting " + filename);
+                    queue.Add(filename);
+                    requestSemaphore.Release();
+                }
+            }
+
+            return CellStatus.Pending;
+        }
+
+        static short[,] LoadCell(string filename, string filePath)
+        {
+            lock (extract)
+            {
+                short[,] existing;
+                lock (cache)
+                {
+                    if (cache.TryGetValue(filename, out existing))
+                        return existing;
+                }
+
+                byte[] fileData = File.ReadAllBytes(filePath);
+                int size;
+                if (fileData.Length == (1201 * 1201 * 2))
+                    size = 1201;
+                else if (fileData.Length == (3601 * 3601 * 2))
+                    size = 3601;
+                else
+                {
+                    log.Warn("Unexpected size " + fileData.Length + " for " + filePath);
+                    lock (badcells)
+                        badcells.Add(filename);
+                    return null;
+                }
+
+                short[,] altdata = new short[size, size];
+                int idx = 0;
+                for (int altlng = 0; altlng < size; altlng++)
+                {
+                    for (int altlat = 0; altlat < size; altlat++)
+                    {
+                        altdata[altlat, altlng] = (short)((fileData[idx] << 8) | fileData[idx + 1]);
+                        idx += 2;
+                    }
+                }
+
+                lock (cache)
+                    cache[filename] = altdata;
+
+                return altdata;
+            }
+        }
+
+        /// <summary>
+        /// Bilinear altitude from a grid returned by <see cref="GetCell"/>, using the same interpolation as
+        /// getAltitude. Returns NaN where the data has a void.
+        /// </summary>
+        public static double SampleCell(short[,] data, double lat, double lng)
+        {
+            int size = data.GetLength(0);
+
+            double xf = (lng - Math.Floor(lng)) * (size - 1);
+            double yf = (lat - Math.Floor(lat)) * (size - 1);
+
+            int x_int = Math.Min((int)xf, size - 2);
+            double x_frac = xf - x_int;
+
+            int y_int = Math.Min((int)yf, size - 2);
+            double y_frac = yf - y_int;
+
+            y_int = (size - 2) - y_int;
+
+            double alt00 = data[x_int, y_int];
+            double alt10 = data[x_int + 1, y_int];
+            double alt01 = data[x_int, y_int + 1];
+            double alt11 = data[x_int + 1, y_int + 1];
+
+            double v1 = avg(alt00, alt10, x_frac);
+            double v2 = avg(alt01, alt11, x_frac);
+            double v = avg(v1, v2, 1 - y_frac);
+
+            if (v < -1000)
+                return double.NaN;
+
+            return v;
+        }
+
         /// <summary>
         /// Batch pre-fetch altitudes for a rectangular region. Returns a 2D array of altitudes.
         /// Much more efficient than individual lookups for terrain generation.
@@ -792,10 +950,13 @@ namespace MissionPlanner.Utilities
 
             // if there are no http exceptions, and the list is >= 9, then everything above is valid
             // 38581 is all srtm3 and srtm1
-            if (list.Count >= 9 && checkednames > 38000 && !oceantile.Contains((string) name))
+            lock (oceantile)
             {
-                // we must be an ocean tile - no matchs
-                oceantile.Add((string) name);
+                if (list.Count >= 9 && checkednames > 38000 && !oceantile.Contains((string) name))
+                {
+                    // we must be an ocean tile - no matchs
+                    oceantile.Add((string) name);
+                }
             }
         }
 

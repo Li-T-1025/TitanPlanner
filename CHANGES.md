@@ -48,15 +48,26 @@ No Russian-localized HUD variant and no time readout; the CPU message and link s
 # 3D Map (Map3D)
 
 ## Real-Time Vehicle Rendering
-The connected vehicle renders in 3D with default STL models per MAV type (plane, quadplane, copter, rover, boat, sub, tricopter, etc.) in correct colours, over terrain rendered out to 50 km.
+The connected vehicle renders in 3D with default STL models per MAV type (plane, quadplane, copter, rover, boat, sub, tricopter, etc.) in correct colours, over terrain drawn out to just past the horizon (30–150 km depending on altitude). The model is uploaded to the GPU once and lit in a shader.
 
-## Tile Loading Pipeline
-A weighted distance/zoom-level scoring algorithm prioritizes which tiles to load. At 500 m+ altitude, zoom level is dropped to keep the view fluid. Tiles fully covered by higher-zoom tiles are skipped. Tiles are cached on disk so they are not re-fetched across sessions, and tile-area updates are guarded by a dedicated lock token.
+## Terrain Streaming Engine
+Terrain streams Google Earth style:
+- **Screen-space level of detail.** A tile quadtree is refined until each imagery texel is about a pixel on screen, so detail follows what the camera actually sees and the Max Zoom setting only caps the finest level.
+- **Coarse first, centre outwards.** Load requests are ranked by distance relative to tile size and by angle from the view centre, re-ranked every frame, and dropped when no longer wanted. Tiles out of view are prefetched coarser so turning never shows holes.
+- **No holes or overlaps.** A tile is replaced by its children only once all of them are loaded; skirts hide cracks between levels.
+- **Off the UI thread.** Eight workers fetch imagery, sample elevation once per tile and build meshes; the render thread only uploads finished tiles within a per-frame time budget, with BGRA uploads, mipmaps and anisotropic filtering. A bounded GPU cache keeps recently seen terrain.
+- **Shared imagery cache.** Imagery goes through the 2D map's tile cache, so tiles seen on the 2D map and imported `.mappack` files load instantly and offline mode works. The old separate 3D tile cache is removed.
+- **Elevation that always arrives.** Missing SRTM cells are downloaded instead of leaving gaps; tiles start from their parent's heights and are re-meshed when the data lands.
+- **No reloads while flying.** Tiles keep their own UTM origins, so moving the scene origin never discards loaded terrain.
+- The FPS readout also shows drawn, loading and failed tile counts.
+
+The code lives in `Controls/Map3D/` (Terrain, Rendering, Overlays, Scene) and is excluded from the Android/Mac library build.
 
 ## Camera & Visual Effects
 - **FPV mode** with smooth camera movement and pitch-matched heading lines
 - **Orbital camera** mode
-- **Fog effect** (50–100 km) using theme HUD sky colors
+- **Distance haze** that fades terrain into the sky's horizon colour before the edge of the loaded terrain, at every altitude
+- **Sky gradient** that follows the true horizon through pitch and roll
 - **Heading indicators** and dynamic render distance
 - **Trailing flight path** with Kalman-smoothed lines on all axes; render gated on stable telemetry
 - **High-altitude rendering** improvements
@@ -70,7 +81,7 @@ ADS-B traffic is rendered with proper depth testing and pass ordering so it corr
 - Configurable marker size
 - Reset button defaults aligned with settings defaults
 - 2D ↔ 3D map waypoint and position synchronization
-- FPS readout
+- FPS and terrain streaming readout (can be hidden in Settings)
 - Required-valid-GPS gate before vehicle tracking begins
 - 3D Map cleanly stops on disconnect and tears down before app close
 
