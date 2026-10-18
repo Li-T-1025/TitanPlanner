@@ -60,9 +60,6 @@ namespace MissionPlanner.Controls
 
                 Func<double, double, double, decimal> clamp = (value, min, max) => (decimal)Math.Max(min, Math.Min(max, value));
 
-                var numZoom = new NumericUpDown { Minimum = Map3DSettings.MinMaxZoom, Maximum = Map3DSettings.MaxMaxZoom, Value = clamp(settings.MaxZoom, Map3DSettings.MinMaxZoom, Map3DSettings.MaxMaxZoom) };
-                addRow("Max Zoom:", numZoom);
-
                 var numDist = new NumericUpDown { Minimum = 0.1m, Maximum = 100, DecimalPlaces = 2, Increment = 0.05m, Value = clamp(settings.CameraDistance, 0.1, 100) };
                 addRow("Camera Dist:", numDist);
 
@@ -150,7 +147,6 @@ namespace MissionPlanner.Controls
                 resetButton.Click += (s, e) =>
                 {
                     var defaults = new Map3DSettings();
-                    numZoom.Value = defaults.MaxZoom;
                     numDist.Value = (decimal)defaults.CameraDistance;
                     numHeight.Value = (decimal)defaults.CameraHeight;
                     numFov.Value = (decimal)defaults.FieldOfView;
@@ -182,7 +178,6 @@ namespace MissionPlanner.Controls
 
                 dialog.FormClosing += (s, e) =>
                 {
-                    settings.MaxZoom = (int)numZoom.Value;
                     settings.CameraDistance = (double)numDist.Value;
                     settings.CameraHeight = (double)numHeight.Value;
                     settings.VehicleScale = (float)numScale.Value;

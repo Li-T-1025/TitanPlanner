@@ -9,11 +9,13 @@ using Vector3 = OpenTK.Vector3;
 
 namespace MissionPlanner.Controls
 {
-    // Mouse control of the camera, picking and ADS-B tooltips.
+    // Mouse control of the camera, the settings button, picking and ADS-B tooltips.
     public partial class Map3D
     {
         private ToolTip _adsbToolTip;
+        private ToolTip _settingsToolTip;
         private adsb.PointLatLngAltHdg _hoveredAdsb;
+        private bool _pressingSettings;
         private bool _isDragging;
         private int _dragStartX;
         private int _dragStartY;
@@ -29,6 +31,7 @@ namespace MissionPlanner.Controls
                 ReshowDelay = 0,
                 ShowAlways = true
             };
+            _settingsToolTip = new ToolTip { ShowAlways = true };
         }
 
         /// <summary>The terrain point under the mouse.</summary>
@@ -39,18 +42,56 @@ namespace MissionPlanner.Controls
 
         private void OnMouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            MarkActive();
+            if (e.Button != MouseButtons.Left)
+                return;
+
+            // A press on the settings button opens it on release and never drags the camera.
+            if (_settingsButton.HitTest(e.X, e.Y))
             {
-                _isDragging = true;
-                _dragStartX = e.X;
-                _dragStartY = e.Y;
+                _pressingSettings = true;
+                return;
             }
+
+            _isDragging = true;
+            _dragStartX = e.X;
+            _dragStartY = e.Y;
         }
 
         private void OnMouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-                _isDragging = false;
+            if (e.Button != MouseButtons.Left)
+                return;
+
+            _isDragging = false;
+            if (_pressingSettings)
+            {
+                _pressingSettings = false;
+                if (_settingsButton.HitTest(e.X, e.Y))
+                {
+                    SetSettingsHover(false);
+                    OpenSettings();
+                }
+            }
+        }
+
+        private void OnMouseLeave(object sender, EventArgs e)
+        {
+            SetSettingsHover(false);
+        }
+
+        private void SetSettingsHover(bool hovered)
+        {
+            if (!_settingsButton.SetHovered(hovered))
+                return;
+
+            Cursor = hovered ? Cursors.Hand : Cursors.Default;
+            if (hovered)
+                _settingsToolTip.Show("3D map settings", this, 8, 8 + SettingsButton.Size + 4);
+            else
+                _settingsToolTip.Hide(this);
+            MarkActive();
+            Invalidate();
         }
 
         private void OnMouseMove(object sender, MouseEventArgs e)
@@ -58,8 +99,12 @@ namespace MissionPlanner.Controls
             _mouseX = e.X;
             _mouseY = e.Y;
 
+            if (!_isDragging)
+                SetSettingsHover(_settingsButton.HitTest(e.X, e.Y));
+
             if (_isDragging)
             {
+                MarkActive();
                 int dx = e.X - _dragStartX;
                 int dy = e.Y - _dragStartY;
 
@@ -86,7 +131,8 @@ namespace MissionPlanner.Controls
 
         private void OnMouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            MarkActive();
+            if (e.Button == MouseButtons.Left && !_settingsButton.HitTest(e.X, e.Y))
                 _settings.CameraAngle = 0.0;
         }
 

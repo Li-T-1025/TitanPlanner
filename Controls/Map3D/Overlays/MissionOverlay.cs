@@ -35,6 +35,9 @@ namespace MissionPlanner.Controls.Scene3D
         int _markerTexture;
         int _markerAltTexture;
 
+        /// <summary>Markers drawn last frame; they spin, so the view keeps animating while any are visible.</summary>
+        public int MarkersDrawn { get; private set; }
+
         /// <summary>
         /// Home plus the navigable mission items, in mission order. Entries are null for items without a
         /// position so indices match waypoint numbers.
@@ -251,6 +254,7 @@ namespace MissionPlanner.Controls.Scene3D
 
             _markers.Begin();
             _homeMarker.Begin();
+            MarkersDrawn = 0;
 
             // Far to near so nearer markers blend over farther ones.
             foreach (var point in points.OrderByDescending(a => a.GetDistance(mav.cs.Location)))
@@ -291,6 +295,7 @@ namespace MissionPlanner.Controls.Scene3D
                 };
                 batch.Add(special ? _markerAltTexture : _markerTexture,
                     spun(-1, 1), spun(1, 1), spun(-1, -1), spun(1, -1));
+                MarkersDrawn++;
 
                 if (label == null)
                     continue;

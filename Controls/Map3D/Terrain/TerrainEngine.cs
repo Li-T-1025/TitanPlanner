@@ -53,6 +53,12 @@ namespace MissionPlanner.Controls.Scene3D
         /// <summary>Counters for the "Stats for nerds" panel, refreshed by <see cref="Update"/>.</summary>
         public TerrainStats Stats { get; } = new TerrainStats();
 
+        /// <summary>True while tiles are loading or finished tiles are waiting to be uploaded.</summary>
+        public bool IsBusy
+        {
+            get { return Stats.Queued + Stats.InFlight > 0 || _loader.HasResults; }
+        }
+
         /// <summary>
         /// Uploads finished tiles, then chooses what to draw and what to load next for this view.
         /// </summary>

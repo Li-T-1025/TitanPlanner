@@ -9,13 +9,6 @@ namespace MissionPlanner.Controls
     /// </summary>
     public sealed class Map3DSettings
     {
-        public const int DefaultMaxZoom = 18;
-        public const int MinMaxZoom = 12;
-        public const int MaxMaxZoom = 20;
-
-        /// <summary>Highest imagery zoom level the terrain refines to near the camera.</summary>
-        public int MaxZoom = DefaultMaxZoom;
-
         public double CameraDistance = 0.8;
         public double CameraHeight = 0.2;
 
@@ -46,7 +39,6 @@ namespace MissionPlanner.Controls
             var s = Settings.Instance;
             var settings = new Map3DSettings
             {
-                MaxZoom = Math.Max(MinMaxZoom, Math.Min(MaxMaxZoom, s.GetInt32("map3d_zoom_level", DefaultMaxZoom))),
                 CameraDistance = s.GetDouble("map3d_camera_dist", 0.8),
                 CameraHeight = s.GetDouble("map3d_camera_height", 0.2),
                 CameraAngle = s.GetDouble("map3d_camera_angle", 0.0),
@@ -80,7 +72,6 @@ namespace MissionPlanner.Controls
         public void Save()
         {
             var s = Settings.Instance;
-            s["map3d_zoom_level"] = MaxZoom.ToString();
             s["map3d_mav_scale"] = VehicleScale.ToString();
             s["map3d_fov"] = FieldOfView.ToString();
             s["map3d_waypoint_marker_size"] = WaypointMarkerSize.ToString();

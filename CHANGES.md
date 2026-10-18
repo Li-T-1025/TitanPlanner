@@ -52,13 +52,14 @@ The connected vehicle renders in 3D with default STL models per MAV type (plane,
 
 ## Terrain Streaming Engine
 Terrain streams Google Earth style:
-- **Screen-space level of detail.** A tile quadtree is refined until each imagery texel is about a pixel on screen, so detail follows what the camera actually sees and the Max Zoom setting only caps the finest level.
+- **Screen-space level of detail.** A tile quadtree is refined until each imagery texel is about a pixel on screen, up to zoom 20, so detail follows what the camera actually sees (the old Map Zoom setting is gone).
 - **Coarse first, centre outwards.** Load requests are ranked by distance relative to tile size and by angle from the view centre, re-ranked every frame, and dropped when no longer wanted. Tiles out of view are prefetched coarser so turning never shows holes.
 - **No holes or overlaps.** A tile is replaced by its children only once all of them are loaded; skirts hide cracks between levels.
 - **Off the UI thread.** Eight workers fetch imagery, sample elevation once per tile and build meshes; the render thread only uploads finished tiles within a per-frame time budget, with BGRA uploads, mipmaps and anisotropic filtering. A bounded GPU cache keeps recently seen terrain.
 - **Shared imagery cache.** Imagery goes through the 2D map's tile cache, so tiles seen on the 2D map and imported `.mappack` files load instantly and offline mode works. The old separate 3D tile cache is removed.
 - **Elevation that always arrives.** Missing SRTM cells are downloaded instead of leaving gaps; tiles start from their parent's heights and are re-meshed when the data lands.
 - **No reloads while flying.** Tiles keep their own UTM origins, so moving the scene origin never discards loaded terrain.
+- **Idle rendering.** Full frame rate only while something changes (connected vehicle, terrain streaming, markers, ADS-B, input, the 2D map moving, or the stats panel open); otherwise one frame a second.
 - **Stats for nerds** (3D map Settings): a colour-coded panel in the top-right with FPS (current/avg/low), a scrolling frame-time graph with CPU time and 60/30 fps guides, terrain streaming internals (tiles drawn/on GPU, per-zoom histogram, GPU memory, queue, load rate, fetch/mesh times, failures, elevation status), the camera view and fog range, and GPU/memory info. FPS is only shown here.
 
 The code lives in `Controls/Map3D/` (Terrain, Rendering, Overlays, Scene) and is excluded from the Android/Mac library build.
@@ -77,7 +78,7 @@ ADS-B traffic is rendered with proper depth testing and pass ordering so it corr
 
 ## Persistence & UX
 - Camera distance, height, and angle saved on close
-- Settings dialog overhaul with persistence and out-of-range guards
+- Settings dialog overhaul with persistence and out-of-range guards, opened from a translucent gear icon in the top-left corner
 - Configurable marker size
 - Reset button defaults aligned with settings defaults
 - 2D ↔ 3D map waypoint and position synchronization

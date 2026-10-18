@@ -49,7 +49,10 @@ namespace MissionPlanner.Controls.Scene3D
         public const int GraphSamples = (PanelWidth - 2 * Pad) / 2;
 
         static readonly Color Background = Color.FromArgb(214, 13, 15, 19);
-        static readonly Color Accent = Color.FromArgb(255, 145, 27);
+        static Color Accent
+        {
+            get { return ThemeColors.Accent; }
+        }
         static readonly Color Label = Color.FromArgb(138, 148, 160);
         static readonly Color Value = Color.FromArgb(232, 236, 241);
         static readonly Color Dim = Color.FromArgb(105, 112, 122);

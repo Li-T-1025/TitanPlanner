@@ -80,11 +80,18 @@ namespace MissionPlanner.Controls
         private Matrix4 _view = Matrix4.Identity;
         private Matrix4 _projection = Matrix4.Identity;
 
-        private MyButton btn_configure;
+        private readonly SettingsButton _settingsButton = new SettingsButton();
         private Timer timer1;
         private System.ComponentModel.IContainer components;
         private bool started;
         private bool onpaintrun;
+
+        // Idle rendering: see NeedsFrame.
+        private static readonly TimeSpan ActiveLinger = TimeSpan.FromSeconds(2);
+        private static readonly TimeSpan IdleInterval = TimeSpan.FromSeconds(1);
+        private DateTime _lastActivity = DateTime.UtcNow;
+        private DateTime _lastFrame;
+        private PointLatLng _lastSeenMap2D;
 
         public Map3D() : base(GetGraphicsMode())
         {
@@ -98,6 +105,7 @@ namespace MissionPlanner.Controls
             MouseUp += OnMouseUp;
             MouseWheel += OnMouseWheel;
             MouseDoubleClick += OnMouseDoubleClick;
+            MouseLeave += OnMouseLeave;
             InitializeToolTip();
 
             try
@@ -157,13 +165,6 @@ namespace MissionPlanner.Controls
                     log.Info("Could not remove the old 3D map cache: " + ex.Message);
                 }
             });
-        }
-
-        /// <summary>Highest imagery zoom level used near the camera.</summary>
-        public int zoom
-        {
-            get { return _settings.MaxZoom; }
-            set { _settings.MaxZoom = value; }
         }
 
         public List<Locationwp> WPs { get; set; }
@@ -246,6 +247,7 @@ namespace MissionPlanner.Controls
 
             // Jump to the current pose instead of easing in from stale filter state.
             _vehicle.Reset();
+            MarkActive();
             Invalidate();
         }
 
@@ -283,11 +285,15 @@ namespace MissionPlanner.Controls
                 double interval = _frameClock.IsRunning ? _frameClock.Elapsed.TotalMilliseconds : 0;
                 _frameClock.Restart();
                 _cpuClock.Restart();
+                _lastFrame = DateTime.UtcNow;
                 RenderFrame();
                 _sceneStats.CpuMs = _cpuClock.Elapsed.TotalMilliseconds;
-                if (interval > 0)
+                // Only while the panel is open (it keeps the frame rate up); idle one-second frames aren't stutter.
+                if (interval > 0 && _settings.StatsForNerds)
                     _frameStats.Add(interval, _sceneStats.CpuMs);
 
+                // Outside RenderFrame so it's there even before the view has a position.
+                _settingsButton.Draw(Width, Height);
                 SwapBuffers();
             }
             catch (GraphicsContextException)
@@ -454,7 +460,7 @@ namespace MissionPlanner.Controls
             s.FogStart = fogStart;
             s.FogEnd = fogEnd;
             s.FovDegrees = _settings.FieldOfView;
-            s.MaxZoom = _settings.MaxZoom;
+            s.MaxZoom = _selection.MaxZoom;
             s.UtmZone = _frame.Zone;
             s.OriginMoves = Math.Max(0, _frame.Version - 1);
         }
@@ -477,7 +483,6 @@ namespace MissionPlanner.Controls
             _selection.ViewRadius = viewRadius;
             _selection.ViewportHeight = Height;
             _selection.FovY = fov;
-            _selection.MaxZoom = _settings.MaxZoom;
             _selection.ReferenceHeight = _groundHeight;
 
             var timer = Stopwatch.StartNew();
@@ -578,6 +583,7 @@ namespace MissionPlanner.Controls
                 timer1?.Stop();
                 timer1?.Dispose();
                 _adsbToolTip?.Dispose();
+                _settingsToolTip?.Dispose();
                 DisposeRenderers();
 
                 if (instance == this)
@@ -610,6 +616,7 @@ namespace MissionPlanner.Controls
                 _mission.Dispose();
                 _vehicleOverlay.Dispose();
                 _nerdStats.Dispose();
+                _settingsButton.Dispose();
             }
             catch (Exception ex)
             {
@@ -622,21 +629,8 @@ namespace MissionPlanner.Controls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn_configure = new MissionPlanner.Controls.MyButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
-            //
-            // btn_configure
-            //
-            this.btn_configure.Location = new System.Drawing.Point(4, 4);
-            this.btn_configure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_configure.Name = "btn_configure";
-            this.btn_configure.Size = new System.Drawing.Size(70, 28);
-            this.btn_configure.TabIndex = 0;
-            this.btn_configure.Text = "Settings";
-            this.btn_configure.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
-            this.btn_configure.UseVisualStyleBackColor = true;
-            this.btn_configure.Click += new System.EventHandler(this.btn_configure_Click);
             //
             // timer1
             //
@@ -646,7 +640,6 @@ namespace MissionPlanner.Controls
             // Map3D
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.Controls.Add(this.btn_configure);
             this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Map3D";
             this.Size = new System.Drawing.Size(853, 591);
@@ -654,16 +647,17 @@ namespace MissionPlanner.Controls
             this.ResumeLayout(false);
         }
 
-        private void btn_configure_Click(object sender, EventArgs e)
+        private void OpenSettings()
         {
             Map3DSettingsDialog.Show(this, _settings);
             _stlLoader.CustomSTLPath = _settings.StlPath;
+            MarkActive();
             Invalidate();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (onpaintrun && IsHandleCreated && !IsDisposed && !Disposing)
+            if (onpaintrun && IsHandleCreated && !IsDisposed && !Disposing && NeedsFrame())
             {
                 Invalidate();
                 onpaintrun = false;
@@ -672,7 +666,46 @@ namespace MissionPlanner.Controls
 
         private void test_Resize(object sender, EventArgs e)
         {
+            MarkActive();
             Invalidate();
+        }
+
+        /// <summary>Keeps the full frame rate for a moment, e.g. after input.</summary>
+        private void MarkActive()
+        {
+            _lastActivity = DateTime.UtcNow;
+        }
+
+        /// <summary>
+        /// Full frame rate while anything changes: a connected vehicle, terrain streaming, spinning markers,
+        /// ADS-B, the stats panel, recent input or the 2D map moving. Otherwise one frame a second, which still
+        /// picks up anything missed (such as elevation data arriving).
+        /// </summary>
+        private bool NeedsFrame()
+        {
+            var now = DateTime.UtcNow;
+            if (Map2DMoved())
+                _lastActivity = now;
+
+            bool animating = IsVehicleConnected || _settings.StatsForNerds || _terrain == null || _terrain.IsBusy ||
+                             (_mission != null && _mission.MarkersDrawn > 0) || _adsb.ScreenPositions.Count > 0;
+            return animating || now - _lastActivity < ActiveLinger || now - _lastFrame >= IdleInterval;
+        }
+
+        private bool Map2DMoved()
+        {
+            try
+            {
+                var position = GCSViews.FlightData.instance?.gMapControl1?.Position;
+                if (position == null || position.Value == _lastSeenMap2D)
+                    return false;
+                _lastSeenMap2D = position.Value;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

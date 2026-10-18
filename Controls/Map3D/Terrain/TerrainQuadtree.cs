@@ -21,7 +21,12 @@ namespace MissionPlanner.Controls.Scene3D
 
         public int ViewportHeight = 600;
         public double FovY = Math.PI / 3;
-        public int MaxZoom = 18;
+
+        /// <summary>
+        /// Finest imagery level. Screen-space error decides how much of it is used, so this only matters close to
+        /// the ground; where a provider has nothing this deep, tiles report no data and the parent stays.
+        /// </summary>
+        public int MaxZoom = 20;
 
         /// <summary>Refine until one imagery texel covers at most this many screen pixels.</summary>
         public double MaxTexelPixels = 1.25;

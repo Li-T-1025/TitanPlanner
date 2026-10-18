@@ -89,6 +89,12 @@ namespace MissionPlanner.Controls.Scene3D
             get { return _workers.Count; }
         }
 
+        /// <summary>Finished tiles waiting for <see cref="TryGetResult"/>.</summary>
+        public bool HasResults
+        {
+            get { return !_results.IsEmpty; }
+        }
+
         /// <summary>Replaces everything not yet started with these requests.</summary>
         public void SetRequests(IList<TileRequest> requests)
         {
