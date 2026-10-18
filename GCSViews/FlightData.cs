@@ -730,6 +730,7 @@ namespace MissionPlanner.GCSViews
             myhud.skyColor1 = ThemeManager.HudSkyTop;
             myhud.skyColor2 = ThemeManager.HudSkyBot;
             myhud.hudcolor = ThemeManager.HudText;
+            myhud.targetHeadingColor = ThemeManager.ButBG;
 
             hud1.SixteenXNine = Settings.Instance.GetBoolean("HUD_SixteenXNine", hud1.SixteenXNine);
             hud1.displayicons = Settings.Instance.GetBoolean("HUD_showicons", false);

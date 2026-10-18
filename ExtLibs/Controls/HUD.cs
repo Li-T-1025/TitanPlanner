@@ -1048,6 +1048,14 @@ namespace MissionPlanner.Controls
             set { _groundColor2 = value; }
         }
 
+        /// <summary>The target heading marker on the heading tape, set from the theme.</summary>
+        [System.ComponentModel.Browsable(true), System.ComponentModel.Category("Values"), DefaultValue(typeof(Color), "Orange")]
+        public Color targetHeadingColor
+        {
+            get { return _targetHeadingPen.Color; }
+            set { _targetHeadingPen.Color = value; }
+        }
+
         private Color _skyColor1 = Color.Blue;
         private Color _skyColor2 = Color.LightBlue;
         private Color _groundColor1 = Color.FromArgb(0x9b, 0xb8, 0x24);
@@ -2011,7 +2019,7 @@ namespace MissionPlanner.Controls
 
         private readonly Pen _blackPen = new Pen(Color.Black, 2);
         private readonly Pen _greenPen = new Pen(Color.Green, 2);
-        private readonly Pen _orangePen = new Pen(Color.Orange, 2);
+        private readonly Pen _targetHeadingPen = new Pen(Color.Orange, 2);
         private readonly Pen _redPen = new Pen(Color.Red, 2);
 
         internal void doPaint()
@@ -2105,7 +2113,7 @@ namespace MissionPlanner.Controls
                 // Reset pens
                 this._blackPen.Width = 2;
                 this._greenPen.Width = 2;
-                this._orangePen.Width = 2;
+                this._targetHeadingPen.Width = 2;
                 this._redPen.Width = 2;
 
                 if (!connected)
@@ -2351,7 +2359,7 @@ namespace MissionPlanner.Controls
 
                     FillRectangle(SlightlyTransparentBrush, rect);
 
-                    this._orangePen.Width = 6;
+                    this._targetHeadingPen.Width = 6;
 
                     // target heading beyond bounds - calculate angular difference normalized to [-180, 180]
                     float headingDiff = _targetheading - _heading;
@@ -2360,16 +2368,16 @@ namespace MissionPlanner.Controls
 
                     if (headingDiff < -60)
                     {
-                        graphicsObject.DrawLine(this._orangePen, headbg.Left + 3, headbg.Bottom, headbg.Left + 3, headbg.Top);
+                        graphicsObject.DrawLine(this._targetHeadingPen, headbg.Left + 3, headbg.Bottom, headbg.Left + 3, headbg.Top);
                     }
                     else if (headingDiff > 60)
                     {
-                        graphicsObject.DrawLine(this._orangePen, headbg.Right - 3, headbg.Bottom, headbg.Right - 3, headbg.Top);
+                        graphicsObject.DrawLine(this._targetHeadingPen, headbg.Right - 3, headbg.Bottom, headbg.Right - 3, headbg.Top);
                     }
                     else
                     {
                         var targetHeadingPos = headbg.Left + 5 + space * (headingDiff + 60);
-                        graphicsObject.DrawLine(this._orangePen, targetHeadingPos - 3, headbg.Bottom, targetHeadingPos - 3, headbg.Top);
+                        graphicsObject.DrawLine(this._targetHeadingPen, targetHeadingPos - 3, headbg.Bottom, targetHeadingPos - 3, headbg.Top);
                     }
 
                     // Draw "H" for home direction if within ±60 degrees and distToHome > 0
