@@ -2314,7 +2314,7 @@ namespace RFD.RFD900
         {
             while (!TryFirmwareProgrammingOnce(FilePath, Progress))
             {
-                switch (System.Windows.Forms.MessageBox.Show("Programming firmware failed.  Try again?", "Programming firmware failed.  Try again?", System.Windows.Forms.MessageBoxButtons.YesNoCancel))
+                switch (System.Windows.Forms.MessageBox.Show(MissionPlanner.Strings.ProgrammingFirmwareFailedTryAgain, MissionPlanner.Strings.ProgrammingFirmwareFailedTryAgainTitle, System.Windows.Forms.MessageBoxButtons.YesNoCancel))
                 {
                     case System.Windows.Forms.DialogResult.Yes:
                         break;
@@ -2490,7 +2490,7 @@ namespace RFD.RFD900
                         }
                         else
                         {
-                            System.Windows.Forms.MessageBox.Show("The selected firmware is not certified to run on this modem.  Aborting.");
+                            System.Windows.Forms.MessageBox.Show(MissionPlanner.Strings.SelectedFirmwareCertifiedRunModemAborting);
                             return false;
                         }
                     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using MissionPlanner;
 
 
 namespace Core.FileHandling
@@ -91,7 +92,7 @@ namespace Core.FileHandling
 
         public void Save() {
             if (Data == null) {
-                throw new Exception("No data to save");
+                throw new Exception(Strings.NoDataToSave);
             }
             if (HasSavePath) {
                 SaveData();

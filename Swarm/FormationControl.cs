@@ -46,7 +46,7 @@ namespace MissionPlanner.Swarm
 
             this.MouseWheel += new MouseEventHandler(FollowLeaderControl_MouseWheel);
 
-            MessageBox.Show("this is beta, use at own risk");
+            MessageBox.Show(Strings.BetaUseOwnRisk);
 
             MissionPlanner.Utilities.Tracking.AddPage(this.GetType().ToString(), this.Text);
         }
@@ -210,7 +210,7 @@ namespace MissionPlanner.Swarm
 
                 if (DateTime.Now > deadline)
                 {
-                    CustomMessageBox.Show("Timeout waiting for autoscan/no mavlink device connected");
+                    CustomMessageBox.Show(Strings.Timeout);
                     return;
                 }
             }
@@ -256,7 +256,7 @@ namespace MissionPlanner.Swarm
         {
             if (mav == SwarmInterface.Leader)
             {
-                CustomMessageBox.Show("Can not move Leader");
+                CustomMessageBox.Show(Strings.CanMoveLeader);
                 ico.z = 0;
             }
             else

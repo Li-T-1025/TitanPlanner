@@ -338,7 +338,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Control.ModifierKeys == Keys.Control)
                 {
                     Utilities.Update.domaster = true;
-                    CustomMessageBox.Show("This will update to MASTER release");
+                    CustomMessageBox.Show(Strings.UpdateMASTERRelease);
                 }
 
                 Utilities.Update.DoUpdate();
@@ -762,7 +762,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Camera Fail: " + ex.Message);
+                CustomMessageBox.Show(Strings.CameraFail + " " + ex.Message);
             }
         }
 
@@ -808,7 +808,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Can not add video source\n" + ex);
+                CustomMessageBox.Show(Strings.CanAddVideoSource + "\n" + ex);
                 return;
             }
 
@@ -820,7 +820,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             var videoStreamConfig = o as IAMStreamConfig;
             if (videoStreamConfig == null)
             {
-                CustomMessageBox.Show("Failed to get IAMStreamConfig");
+                CustomMessageBox.Show(Strings.FailedGetIAMStreamConfig);
                 return;
             }
 
@@ -904,7 +904,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 return;
             MainV2.instance.changelanguage((CultureInfo)CMB_language.SelectedItem);
 
-            MessageBox.Show("Please Restart the Planner");
+            MessageBox.Show(Strings.PleaseRestartPlanner);
 
             MainV2.instance.Close();
             //Application.Exit();
@@ -989,7 +989,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Error: getting param list");
+                CustomMessageBox.Show(Strings.ErrorGettingParamList);
             }
 
 
@@ -1184,7 +1184,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             if (startup)
                 return;
-            CustomMessageBox.Show("You need to restart the planner for this to take effect");
+            CustomMessageBox.Show(Strings.NeedRestartPlannerTakeEffect);
             Settings.Instance["CHK_GDIPlus"] = CHK_GDIPlus.Checked.ToString();
         }
 
@@ -1285,7 +1285,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             ThemeManager.LoadTheme(CMB_theme.Text);
             ThemeManager.ApplyThemeTo(MainV2.instance);
-            CustomMessageBox.Show("You may need to select another tab or restart to see the full effect.");
+            CustomMessageBox.Show(Strings.MayNeedSelectAnotherTabRestart);
         }
 
         private void BUT_themecustom_Click(object sender, EventArgs e)
@@ -1673,7 +1673,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("{0} Directory does not exist!", folderPath));
+                    MessageBox.Show(string.Format(Strings.DirectoryExist, folderPath));
                 }
             }
             catch (Exception)
@@ -1713,7 +1713,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 // Set - open file dialog
                 var ofd = new OpenFileDialog();
                 ofd.Filter = "Image Files (*.png;*.jpg;*.jpeg;*.bmp)|*.png;*.jpg;*.jpeg;*.bmp";
-                ofd.Title = "Select Custom Aircraft Icon";
+                ofd.Title = Strings.SelectCustomAircraftIcon;
 
                 if (ofd.ShowDialog(MainV2.instance) == DialogResult.OK)
                 {
@@ -1741,12 +1741,12 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 }
                 else
                 {
-                    BUT_customicon.Text = "Set";
+                    BUT_customicon.Text = Strings.Set;
                 }
             }
             catch
             {
-                BUT_customicon.Text = "Set";
+                BUT_customicon.Text = Strings.Set;
             }
         }
 
@@ -1821,13 +1821,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (string.IsNullOrEmpty(newName))
             {
-                CustomMessageBox.Show("Please enter a configuration name.", "Save Configuration");
+                CustomMessageBox.Show(Strings.PleaseEnterConfigurationName, Strings.PleaseEnterConfigurationNameTitle);
                 return;
             }
 
             if (!Settings.IsValidConfigName(newName))
             {
-                CustomMessageBox.Show("Configuration name can only contain letters (A-Z), numbers (0-9), and underscores.", "Save Configuration");
+                CustomMessageBox.Show(Strings.ConfigurationNameCanOnlyContainLetters, Strings.PleaseEnterConfigurationNameTitle);
                 return;
             }
 
@@ -1835,11 +1835,11 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 TXT_newconfigname.Text = "";
                 LoadConfigProfiles();
-                CustomMessageBox.Show($"Configuration saved as '{newName}'.", "Save Configuration");
+                CustomMessageBox.Show(string.Format(Strings.ConfigurationSavedAs, newName), Strings.PleaseEnterConfigurationNameTitle);
             }
             else
             {
-                CustomMessageBox.Show("Failed to save configuration.", "Save Configuration");
+                CustomMessageBox.Show(Strings.FailedSaveConfiguration, Strings.PleaseEnterConfigurationNameTitle);
             }
         }
     }

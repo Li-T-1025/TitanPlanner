@@ -346,7 +346,7 @@ namespace MissionPlanner.Utilities
                 return (value[0] != 0);
             }
 
-            throw new Exception("unhandled type");
+            throw new Exception(Strings.UnhandledType);
         }
 
         [StructLayout(LayoutKind.Sequential, Pack = 1)]

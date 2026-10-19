@@ -31,6 +31,7 @@ namespace AltitudeAngelWings.Plugin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AASettings));
             this.tabPages = new System.Windows.Forms.TabControl();
             this.tabPageAccount = new System.Windows.Forms.TabPage();
             this.lst_FlightTelemetry = new System.Windows.Forms.ComboBox();
@@ -126,10 +127,7 @@ namespace AltitudeAngelWings.Plugin
             // 
             this.lst_FlightTelemetry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lst_FlightTelemetry.FormattingEnabled = true;
-            this.lst_FlightTelemetry.Items.AddRange(new object[] {
-            "Do not send flight telemetry",
-            "Use Telemetry (UDP)",
-            "Use Surveillance (HTTPS)"});
+            this.lst_FlightTelemetry.Items.AddRange(new object[] { resources.GetString("lst_FlightTelemetry.Items"), resources.GetString("lst_FlightTelemetry.Items1"), resources.GetString("lst_FlightTelemetry.Items2") });
             this.lst_FlightTelemetry.Location = new System.Drawing.Point(101, 59);
             this.lst_FlightTelemetry.MaxDropDownItems = 3;
             this.lst_FlightTelemetry.Name = "lst_FlightTelemetry";
@@ -144,7 +142,7 @@ namespace AltitudeAngelWings.Plugin
             this.chk_FlightsEnable.Name = "chk_FlightsEnable";
             this.chk_FlightsEnable.Size = new System.Drawing.Size(92, 17);
             this.chk_FlightsEnable.TabIndex = 47;
-            this.chk_FlightsEnable.Text = "Enable Flights";
+            resources.ApplyResources(this.chk_FlightsEnable, "chk_FlightsEnable");
             this.chk_FlightsEnable.UseVisualStyleBackColor = true;
             this.chk_FlightsEnable.CheckedChanged += new System.EventHandler(this.chk_FlightsEnable_CheckedChanged);
             // 
@@ -184,7 +182,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_OverrideClientSuffix.Name = "lbl_OverrideClientSuffix";
             this.lbl_OverrideClientSuffix.Size = new System.Drawing.Size(97, 13);
             this.lbl_OverrideClientSuffix.TabIndex = 38;
-            this.lbl_OverrideClientSuffix.Text = "URL Domain Suffix";
+            resources.ApplyResources(this.lbl_OverrideClientSuffix, "lbl_OverrideClientSuffix");
             // 
             // txt_OverrideClientSuffix
             // 
@@ -201,7 +199,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_OverrideClientSecret.Name = "lbl_OverrideClientSecret";
             this.lbl_OverrideClientSecret.Size = new System.Drawing.Size(67, 13);
             this.lbl_OverrideClientSecret.TabIndex = 36;
-            this.lbl_OverrideClientSecret.Text = "Client Secret";
+            resources.ApplyResources(this.lbl_OverrideClientSecret, "lbl_OverrideClientSecret");
             // 
             // txt_OverrideClientSecret
             // 
@@ -219,7 +217,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_OverrideClientId.Name = "lbl_OverrideClientId";
             this.lbl_OverrideClientId.Size = new System.Drawing.Size(47, 13);
             this.lbl_OverrideClientId.TabIndex = 34;
-            this.lbl_OverrideClientId.Text = "Client ID";
+            resources.ApplyResources(this.lbl_OverrideClientId, "lbl_OverrideClientId");
             // 
             // txt_OverrideClientId
             // 
@@ -247,7 +245,7 @@ namespace AltitudeAngelWings.Plugin
             this.chk_FlightPlansEnable.Name = "chk_FlightPlansEnable";
             this.chk_FlightPlansEnable.Size = new System.Drawing.Size(116, 17);
             this.chk_FlightPlansEnable.TabIndex = 30;
-            this.chk_FlightPlansEnable.Text = "Enable Flight Plans";
+            resources.ApplyResources(this.chk_FlightPlansEnable, "chk_FlightPlansEnable");
             this.chk_FlightPlansEnable.UseVisualStyleBackColor = true;
             this.chk_FlightPlansEnable.CheckedChanged += new System.EventHandler(this.chk_FlightPlansEnable_CheckedChanged);
             // 
@@ -298,7 +296,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_AltitudeDisplay.Name = "lbl_AltitudeDisplay";
             this.lbl_AltitudeDisplay.Size = new System.Drawing.Size(118, 20);
             this.lbl_AltitudeDisplay.TabIndex = 49;
-            this.lbl_AltitudeDisplay.Text = "altitude";
+            resources.ApplyResources(this.lbl_AltitudeDisplay, "lbl_AltitudeDisplay");
             this.lbl_AltitudeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_AltitudeFilter
@@ -308,7 +306,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_AltitudeFilter.Name = "lbl_AltitudeFilter";
             this.lbl_AltitudeFilter.Size = new System.Drawing.Size(66, 13);
             this.lbl_AltitudeFilter.TabIndex = 48;
-            this.lbl_AltitudeFilter.Text = "Show Below";
+            resources.ApplyResources(this.lbl_AltitudeFilter, "lbl_AltitudeFilter");
             // 
             // trk_AltitudeFilter
             // 
@@ -374,7 +372,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_OpacityAdjust.Name = "lbl_OpacityAdjust";
             this.lbl_OpacityAdjust.Size = new System.Drawing.Size(75, 13);
             this.lbl_OpacityAdjust.TabIndex = 17;
-            this.lbl_OpacityAdjust.Text = "Opacity Adjust";
+            resources.ApplyResources(this.lbl_OpacityAdjust, "lbl_OpacityAdjust");
             // 
             // trk_OpacityAdjust
             // 
@@ -413,7 +411,7 @@ namespace AltitudeAngelWings.Plugin
             this.tabPageFlight.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageFlight.Size = new System.Drawing.Size(444, 258);
             this.tabPageFlight.TabIndex = 1;
-            this.tabPageFlight.Text = "Flight Plans";
+            resources.ApplyResources(this.tabPageFlight, "tabPageFlight");
             this.tabPageFlight.UseVisualStyleBackColor = true;
             // 
             // lbl_FlightPlanDescription
@@ -423,7 +421,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_FlightPlanDescription.Name = "lbl_FlightPlanDescription";
             this.lbl_FlightPlanDescription.Size = new System.Drawing.Size(112, 13);
             this.lbl_FlightPlanDescription.TabIndex = 34;
-            this.lbl_FlightPlanDescription.Text = "Flight Plan Description";
+            resources.ApplyResources(this.lbl_FlightPlanDescription, "lbl_FlightPlanDescription");
             // 
             // txt_FlightPlanDescription
             // 
@@ -524,7 +522,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_FlightPlanDuration.Name = "lbl_FlightPlanDuration";
             this.lbl_FlightPlanDuration.Size = new System.Drawing.Size(144, 13);
             this.lbl_FlightPlanDuration.TabIndex = 28;
-            this.lbl_FlightPlanDuration.Text = "Flight Plan Duration (minutes)";
+            resources.ApplyResources(this.lbl_FlightPlanDuration, "lbl_FlightPlanDuration");
             // 
             // txt_FlightPlanDuration
             // 
@@ -541,7 +539,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_ContactPhoneNumber.Name = "lbl_ContactPhoneNumber";
             this.lbl_ContactPhoneNumber.Size = new System.Drawing.Size(118, 13);
             this.lbl_ContactPhoneNumber.TabIndex = 27;
-            this.lbl_ContactPhoneNumber.Text = "Contact Phone Number";
+            resources.ApplyResources(this.lbl_ContactPhoneNumber, "lbl_ContactPhoneNumber");
             // 
             // lbl_FlightPlanName
             // 
@@ -550,7 +548,7 @@ namespace AltitudeAngelWings.Plugin
             this.lbl_FlightPlanName.Name = "lbl_FlightPlanName";
             this.lbl_FlightPlanName.Size = new System.Drawing.Size(87, 13);
             this.lbl_FlightPlanName.TabIndex = 27;
-            this.lbl_FlightPlanName.Text = "Flight Plan Name";
+            resources.ApplyResources(this.lbl_FlightPlanName, "lbl_FlightPlanName");
             // 
             // txt_FlightPlanName
             // 
@@ -593,7 +591,7 @@ namespace AltitudeAngelWings.Plugin
             this.MinimizeBox = false;
             this.Name = "AASettings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Altitude Angel Settings";
+            resources.ApplyResources(this, "$this");
             this.tabPages.ResumeLayout(false);
             this.tabPageAccount.ResumeLayout(false);
             this.tabPageAccount.PerformLayout();

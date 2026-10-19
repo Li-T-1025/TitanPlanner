@@ -127,7 +127,7 @@ namespace MissionPlanner.Radio
             if (!cmdSync())
             {
                 log("FAIL: could not synchronise with the bootloader");
-                throw new Exception("SYNC FAIL");
+                throw new Exception(Strings.SYNCFAIL);
             }
 
             checkDevice();
@@ -140,7 +140,7 @@ namespace MissionPlanner.Radio
             if (image_data.bankingDetected && ((byte)id & 0x80) != 0x80)
             {
                 log("This Firmware requires banking support");
-                throw new Exception("This Firmware requires banking support");
+                throw new Exception(Strings.ThisFirmwareRequiresBankingSupport);
             }
 
             if (((byte)id & 0x80) == 0x80)
@@ -351,7 +351,7 @@ namespace MissionPlanner.Radio
             send(Code.EOC);
 
             if (recv() != data)
-                throw new Exception("flash verification failed");
+                throw new Exception(Strings.FlashVerificationFailed);
 
             getSync();
         }
@@ -367,7 +367,7 @@ namespace MissionPlanner.Radio
                 if (recv() != data[offset + i])
                 {
                     log("flash verification failed\n");
-                    throw new Exception("VERIFY FAIL");
+                    throw new Exception(Strings.VERIFYFAIL);
                 }
             }
 
@@ -391,7 +391,7 @@ namespace MissionPlanner.Radio
 
             // XXX should be getting valid board/frequency data from firmware file
             if (!Enum.IsDefined(typeof(Board), id))
-                throw new Exception("bootloader device ID mismatch - device:" + id);
+                throw new Exception(string.Format(Strings.BootloaderDeviceIDMismatchDevice, id));
 
             getSync();
         }
@@ -429,19 +429,19 @@ namespace MissionPlanner.Radio
                 if (c != Code.INSYNC)
                 {
                     log(string.Format("got {0:X} when expecting {1:X}\n", (int)c, (int)Code.INSYNC), 2);
-                    throw new Exception("BAD SYNC");
+                    throw new Exception(Strings.BADSYNC);
                 }
                 c = (Code)recv();
                 if (c != Code.OK)
                 {
                     log(string.Format("got {0:X} when expecting {1:X}\n", (int)c, (int)Code.EOC), 2);
-                    throw new Exception("BAD STATUS");
+                    throw new Exception(Strings.BADSTATUS);
                 }
             }
             catch
             {
                 log("FAIL: lost synchronisation with the bootloader\n");
-                throw new Exception("SYNC LOST");
+                throw new Exception(Strings.SYNCLOST);
             }
             log("in sync\n", 5);
         }
@@ -536,7 +536,7 @@ namespace MissionPlanner.Radio
             {
             }
             if (port.BytesToRead == 0)
-                throw new Exception("Timeout");
+                throw new Exception(Strings.Timeout2);
 
             b = (byte)port.ReadByte();
 

@@ -31,7 +31,7 @@ namespace tracemp
 
         public override bool Init()
         {
-            var but = new ToolStripMenuItem("tracemp");
+            var but = new ToolStripMenuItem(Strings.Tracemp);
             but.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuMap.Items;
             

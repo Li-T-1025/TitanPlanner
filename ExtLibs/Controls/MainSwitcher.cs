@@ -99,7 +99,7 @@ namespace MissionPlanner.Controls
                     }
                     catch (Exception ex)
                     {
-                        throw new Exception("Unable to create control " + current.Name + " of type " + current.Type,
+                        throw new Exception(string.Format(Strings.UnableToCreateControl, current.Name, current.Type),
                             ex);
                     }
                 }

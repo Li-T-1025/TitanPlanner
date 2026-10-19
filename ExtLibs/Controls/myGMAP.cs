@@ -26,7 +26,7 @@ namespace MissionPlanner.Controls
         public myGMAP()
             : base()
         {
-            this.Text = "Map";
+            this.Text = Strings.Map;
             IgnoreMarkerOnMouseWheel = true;
             GestureHappened += MyGMAP_GestureHappened;
         }
@@ -245,7 +245,7 @@ namespace MissionPlanner.Controls
                         gc.dwBlock = 0;
                         bool bResult = SetGestureConfig(Handle, 0, 1, ref gc, _gestureConfigSize);
                         if (!bResult)
-                            throw new Exception("Error in execution of SetGestureConfig");
+                            throw new Exception(Strings.ErrorInExecutionOfSetGestureConfig);
                         handled = true;
                         break;
                     }

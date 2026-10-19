@@ -118,7 +118,7 @@ namespace MissionPlanner
             {
                 if (OutputWriter != null)
                     OutputWriter.Write(engine.GetService<ExceptionOperations>().FormatException(e));
-                CustomMessageBox.Show("Error running script " + engine.GetService<ExceptionOperations>().FormatException(e));
+                CustomMessageBox.Show(Strings.ErrorRunningScript + " " + engine.GetService<ExceptionOperations>().FormatException(e));
             }
         }
 

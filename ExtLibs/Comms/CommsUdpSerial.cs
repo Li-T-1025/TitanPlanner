@@ -167,8 +167,8 @@ namespace MissionPlanner.Comms
             {
                 if (client != null && client.Client.Connected) client.Close();
                 log.Info(ex.ToString());
-                //CustomMessageBox.Show("Please check your Firewall settings\nPlease try running this command\n1.    Run the following command in an elevated command prompt to disable Windows Firewall temporarily:\n    \nNetsh advfirewall set allprofiles state off\n    \nNote: This is just for test; please turn it back on with the command 'Netsh advfirewall set allprofiles state on'.\n", "Error");
-                throw new Exception("The socket/UDPSerial is closed " + ex);
+                //CustomMessageBox.Show(Strings.PleaseCheckFirewallSettingsPleaseTry, Strings.ERROR);
+                throw new Exception(string.Format(Strings.TheSocketUDPSerialIsClosed, ex));
             }
         }
 
@@ -221,7 +221,7 @@ namespace MissionPlanner.Comms
             {
                 Thread.Sleep(1);
                 if (count > ReadTimeout)
-                    throw new Exception("NetSerial Timeout on read");
+                    throw new Exception(Strings.NetSerialTimeoutOnRead);
                 count++;
             }
 
@@ -272,7 +272,7 @@ namespace MissionPlanner.Comms
                 }
                 catch
                 {
-                } //throw new Exception("Comport / Socket Closed"); }
+                } //throw new Exception(Strings.ComportSocketClosed);
         }
 
         public void DiscardInBuffer()
@@ -338,7 +338,7 @@ namespace MissionPlanner.Comms
             if (client == null || !IsOpen)
             {
                 Close();
-                throw new Exception("The socket/serialproxy is closed");
+                throw new Exception(Strings.TheSocketSerialproxyIsClosed);
             }
         }
 

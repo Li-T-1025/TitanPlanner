@@ -84,9 +84,9 @@ namespace MissionPlanner.Radio
                     {
                         DestID.ComboBox.Name = Prefix + "NODEDESTINATION";
                         TXENCAP.ComboBox.Name = Prefix + "SYNCANY";
-                        TXENCAP.Label.Text = "Sync Any";
+                        TXENCAP.Label.Text = Strings.SyncAny;
                         RXENCAP.ComboBox.Name = Prefix + "NODECOUNT";
-                        RXENCAP.Label.Text = "Node Count";
+                        RXENCAP.Label.Text = Strings.NodeCount;
                         NodeID.ComboBox.DataSource = Sikradio.Range(0, 1, 29);
                         var Temp = new List<int>(Sikradio.Range(0, 1, 29));
                         Temp.Add(65535);
@@ -103,11 +103,11 @@ namespace MissionPlanner.Radio
                 case Model.ASYNC:
                     DestID.ComboBox.Name = Prefix + "DESTID";
                     TXENCAP.ComboBox.Name = Prefix + "TX_ENCAP_METHOD";
-                    TXENCAP.Label.Text = "TXENCAP";
+                    TXENCAP.Label.Text = Strings.TXENCAP;
                     RXENCAP.ComboBox.Name = Prefix + "RX_ENCAP_METHOD";
-                    RXENCAP.Label.Text = "RXENCAP";
+                    RXENCAP.Label.Text = Strings.RXENCAP;
                     MAX_DATA.ComboBox.Name = Prefix + "MAX_DATA";
-                    MAX_DATA.Label.Text = "Max Data";
+                    MAX_DATA.Label.Text = Strings.MaxData;
                     NodeID.ComboBox.DataSource = Sikradio.Range(1, 1, 32767);
                     DestID.ComboBox.DataSource = Sikradio.Range(1, 1, 65535);
                     TXENCAP.ComboBox.DataSource = Sikradio.Range(0, 1, 2);
@@ -121,22 +121,22 @@ namespace MissionPlanner.Radio
                         if (Settings.ContainsKey("NETCOUNT"))
                         {
                             TXENCAP.ComboBox.Name = Prefix + "NETCOUNT";
-                            TXENCAP.Label.Text = "Net Count";
+                            TXENCAP.Label.Text = Strings.NetCount;
                         }
                         else
                         {
                             TXENCAP.ComboBox.Name = Prefix + "NODECOUNT";
-                            TXENCAP.Label.Text = "Node Count";
+                            TXENCAP.Label.Text = Strings.NodeCount;
                         }
                         RXENCAP.ComboBox.Name = Prefix + "SERBREAKMS10";
-                        RXENCAP.Label.Text = "Ser. brk. x10ms";
+                        RXENCAP.Label.Text = Strings.SerBrkX10ms;
                         if (Settings.ContainsKey("MASTERBACKUP"))
                         {
                             MAX_DATA.ComboBox.Name = Prefix + "MASTERBACKUP";
-                            MAX_DATA.Label.Text = "Master Bckp";
+                            MAX_DATA.Label.Text = Strings.MasterBckp;
                         }
                         MAX_RETRIES.ComboBox.Name = Prefix + "RXFRAME";
-                        MAX_RETRIES.Label.Text = "Rx Frame";
+                        MAX_RETRIES.Label.Text = Strings.RxFrame;
                         NodeID.ComboBox.DataSource = Sikradio.Range(0, 1, 29);
                         var Temp = new List<int>(Sikradio.Range(0, 1, 29));
                         Temp.Add(65535);

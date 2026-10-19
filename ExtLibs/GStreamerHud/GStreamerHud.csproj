@@ -46,7 +46,8 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
+</ItemGroup>
   <ItemGroup>
     <Compile Include="Plugin.cs" />
     <Compile Include="MainForm.cs">

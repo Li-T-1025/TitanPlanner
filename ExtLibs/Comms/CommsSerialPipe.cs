@@ -31,7 +31,7 @@ namespace MissionPlanner.Comms
 
             if (PortName.StartsWith("/"))
                 if (!File.Exists(PortName))
-                    throw new Exception("No such device");
+                    throw new Exception(Strings.NoSuchDevice);
 
             try
             {
@@ -42,7 +42,7 @@ namespace MissionPlanner.Comms
                 safeFileHandle = CreateFile("\\\\.\\" + PortName,
                     -1073741824, 0, IntPtr.Zero, 3, dwFlagsAndAttributes, IntPtr.Zero);
 
-                if (safeFileHandle.IsInvalid) throw new Exception("Invalid Port");
+                if (safeFileHandle.IsInvalid) throw new Exception(Strings.InvalidPort);
 
                 var num1 = 0;
                 var commProp = default(COMMPROP);
@@ -169,7 +169,7 @@ namespace MissionPlanner.Comms
             {
                 Thread.Sleep(1);
                 if (count > ReadTimeout)
-                    throw new Exception("CommsSerialPipe Timeout on read");
+                    throw new Exception(Strings.CommsSerialPipeTimeoutOnRead);
                 count++;
             }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Exception = System.Exception;
+using MissionPlanner;
 
 namespace AltitudeAngelWings.Plugin
 {
@@ -38,7 +39,7 @@ namespace AltitudeAngelWings.Plugin
             if (_exception == null)
             {
                 _btnCancel.Enabled = false;
-                _btnCancel.Text = "Cancelling...";
+                _btnCancel.Text = Strings.Cancelling;
                 CancelClick?.Invoke(sender, e);
             }
             else
@@ -64,7 +65,7 @@ namespace AltitudeAngelWings.Plugin
             _lblOperation.Height = _btnCancel.Top;
             _lblOperation.Text = _exception.ToDisplayedException();
             _btnCancel.Enabled = true;
-            _btnCancel.Text = "OK";
+            _btnCancel.Text = Strings.OK;
         }
     }
 }

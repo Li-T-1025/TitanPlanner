@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetupDialog));
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pContent = new System.Windows.Forms.Panel();
@@ -42,7 +43,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Done && Refresh";
+            resources.ApplyResources(this.button1, "button1");
             this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -75,7 +76,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SetupDialog";
-            this.Text = "OSD/Telemetry Parameters Setup";
+            resources.ApplyResources(this, "$this");
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

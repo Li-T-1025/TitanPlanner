@@ -1,4 +1,5 @@
 ﻿using MissionPlanner.Utilities;
+using MissionPlanner;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -243,7 +244,7 @@ namespace resedit
                 {
                     try
                     {
-                        CustomMessageBox.Show("Failed to save " + row.Cells[colOtherLang.Index].Value.ToString() + " " +
+                        CustomMessageBox.Show(Strings.FailedSave + " " + row.Cells[colOtherLang.Index].Value.ToString() + " " +
                                               ex.ToString());
                     }
                     catch
@@ -256,14 +257,14 @@ namespace resedit
             sw.Write("</table></html>");
             sw.Close();
 
-            CustomMessageBox.Show("Saved");
+            CustomMessageBox.Show(Strings.Saved);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             if (!File.Exists("translation/output.html"))
             {
-                CustomMessageBox.Show("No existing translation has been done");
+                CustomMessageBox.Show(Strings.NoExistingTranslationBeenDone);
                 return;
             }
 
@@ -297,7 +298,7 @@ namespace resedit
 
             sr1.Close();
 
-            CustomMessageBox.Show("Modified " + a + " entries");
+            CustomMessageBox.Show(Strings.Modified + " " + a + " entries");
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -376,7 +377,7 @@ namespace resedit
                 }
             }
 
-            CustomMessageBox.Show("Loaded Existing");
+            CustomMessageBox.Show(Strings.LoadedExisting);
         }
 
 

@@ -99,7 +99,7 @@ namespace MissionPlanner.Joystick
             {
                 _context.Send(delegate
                 {
-                    CustomMessageBox.Show("Lost Joystick", "Lost Joystick");
+                    CustomMessageBox.Show(Strings.LostJoystick, Strings.LostJoystickTitle);
                 }, null);
             });
         }
@@ -198,8 +198,7 @@ namespace MissionPlanner.Joystick
 
             var buttonsbefore = obj.GetButtons();
 
-            CustomMessageBox.Show(
-                "Please press the joystick button you want assigned to this function after clicking ok");
+            CustomMessageBox.Show(Strings.PleasePressJoystickButtonWantAssigned);
 
             DateTime start = DateTime.Now;
 
@@ -216,7 +215,7 @@ namespace MissionPlanner.Joystick
                 }
             }
 
-            CustomMessageBox.Show("No valid option was detected");
+            CustomMessageBox.Show(Strings.NoValidOptionDetected);
 
             return -1;
         }
@@ -403,7 +402,7 @@ namespace MissionPlanner.Joystick
                                 }
                                 catch
                                 {
-                                    CustomMessageBox.Show("Failed to change Modes");
+                                    CustomMessageBox.Show(Strings.FailedChangeModes);
                                 }
                             }, null);
                         }
@@ -417,7 +416,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to change mount mode");
+                                CustomMessageBox.Show(Strings.FailedChangeMountMode);
                             }
                         }, null);
 
@@ -432,7 +431,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to Arm");
+                                CustomMessageBox.Show(Strings.FailedArm);
                             }
                         }, null);
                         break;
@@ -453,7 +452,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to takeoff");
+                                CustomMessageBox.Show(Strings.FailedTakeoff);
                             }
                         }, null);
                         break;
@@ -466,7 +465,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to Disarm");
+                                CustomMessageBox.Show(Strings.FailedDisarm);
                             }
                         }, null);
                         break;
@@ -481,7 +480,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to DO_SET_RELAY");
+                                CustomMessageBox.Show(Strings.FailedSETRELAY);
                             }
                         }, null);
                         break;
@@ -501,7 +500,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to DO_REPEAT_RELAY");
+                                CustomMessageBox.Show(Strings.FailedREPEATRELAY);
                             }
                         }, null);
                         break;
@@ -516,7 +515,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to DO_SET_SERVO");
+                                CustomMessageBox.Show(Strings.FailedSETSERVO);
                             }
                         }, null);
                         break;
@@ -534,7 +533,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to DO_REPEAT_SERVO");
+                                CustomMessageBox.Show(Strings.FailedREPEATSERVO);
                             }
                         }, null);
                         break;
@@ -549,7 +548,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to Toggle_Pan_Stab");
+                                CustomMessageBox.Show(Strings.FailedTogglePanStab);
                             }
                         }, null);
                         break;
@@ -564,7 +563,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to Gimbal_pnt_track");
+                                CustomMessageBox.Show(Strings.FailedGimbalPntTrack);
                             }
                         }, null);
                         break;
@@ -577,7 +576,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to Mount_Control_0");
+                                CustomMessageBox.Show(Strings.FailedMountControl0);
                             }
                         }, null);
                         break;
@@ -596,7 +595,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to Button_axis0");
+                                CustomMessageBox.Show(Strings.FailedButtonAxis0);
                             }
                         }, null);
                         break;
@@ -615,7 +614,7 @@ namespace MissionPlanner.Joystick
                             }
                             catch
                             {
-                                CustomMessageBox.Show("Failed to Button_axis1");
+                                CustomMessageBox.Show(Strings.FailedButtonAxis1);
                             }
                         }, null);
                         break;
@@ -1199,7 +1198,7 @@ namespace MissionPlanner.Joystick
             values["Custom1"] = 0;
             values["Custom2"] = 0;
 
-            CustomMessageBox.Show("Please move the joystick axis you want assigned to this function after clicking ok");
+            CustomMessageBox.Show(Strings.PleaseMoveJoystickAxisWantAssigned);
 
             DateTime start = DateTime.Now;
 
@@ -1264,7 +1263,7 @@ namespace MissionPlanner.Joystick
                 }
             }
 
-            CustomMessageBox.Show("No valid option was detected");
+            CustomMessageBox.Show(Strings.NoValidOptionDetected);
 
             return joystickaxis.None;
         }
@@ -1318,7 +1317,7 @@ namespace MissionPlanner.Joystick
 
             if (allFiles.Count == 0)
             {
-                throw new FileNotFoundException("No joystick configuration files found in " + userDataDir);
+                throw new FileNotFoundException(string.Format(Strings.NoJoystickConfigurationFilesFoundIn, userDataDir));
             }
 
             if (File.Exists(fileName))
@@ -1341,7 +1340,7 @@ namespace MissionPlanner.Joystick
 
             if (!File.Exists(fileName))
             {
-                throw new FileNotFoundException("Archive file not found: " + fileName);
+                throw new FileNotFoundException(string.Format(Strings.ArchiveFileNotFound, fileName));
             }
 
             // extract all files from archive to user data directory

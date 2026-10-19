@@ -32,7 +32,7 @@ namespace MissionPlanner.Utilities
             var offset = ReadOneSrch(fw_binary, magic_str.Select(a => (byte) a).ToArray());
             if (offset == -1)
             {
-                throw new Exception("No param area found");
+                throw new Exception(Strings.NoParamAreaFound);
             }
 
             var magicoffset = ReadOneSrch(fw_binary, param_magic);
@@ -75,7 +75,7 @@ namespace MissionPlanner.Utilities
                 return;
             }
 
-            throw new Exception("Error: Param defaults support not found in firmware");
+            throw new Exception(Strings.ErrorParamDefaultsSupportNotFoundInFirmware);
         }
 
         public static long ReadOneSrch(Stream haystack, byte[] needle)

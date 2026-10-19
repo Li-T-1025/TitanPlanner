@@ -91,7 +91,7 @@ namespace MissionPlanner.Comms
 
                     if (adapter == null)
                     {
-                        throw new Exception("No adapter was found.\n");
+                        throw new Exception(Strings.NoAdapterWasFound);
                         return;
                     }
 
@@ -160,7 +160,7 @@ namespace MissionPlanner.Comms
 
                     if (useindex == -1)
                     {
-                        throw new Exception("Could not find device");
+                        throw new Exception(Strings.CouldNotFindDevice);
                     }
 
                     {
@@ -178,7 +178,7 @@ namespace MissionPlanner.Comms
                         var err_code = simpleble_peripheral_connect(peripheral);
                         if (err_code != simpleble_err_t.SIMPLEBLE_SUCCESS)
                         {
-                            throw new Exception("Failed to connect.\n");
+                            throw new Exception(Strings.FailedToConnect);
                             return;
                         }
 
@@ -192,7 +192,7 @@ namespace MissionPlanner.Comms
 
                             if (err_code != simpleble_err_t.SIMPLEBLE_SUCCESS)
                             {
-                                throw new Exception("Failed to get service.\n");
+                                throw new Exception(Strings.FailedToGetService);
                                 return;
                             }
 
@@ -347,7 +347,7 @@ namespace MissionPlanner.Comms
 
             if (ReadTimeout > 0 && BytesToRead == 0)
             {
-                throw new TimeoutException("No data in serial buffer");
+                throw new TimeoutException(Strings.NoDataInSerialBuffer);
             }
 
             var read = Math.Min(count, BytesToRead);

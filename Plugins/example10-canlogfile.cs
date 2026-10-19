@@ -33,7 +33,7 @@ namespace CANLogExtract
 
         public override bool Init()
         {
-            var but = new ToolStripMenuItem("CAN Log Extract");
+            var but = new ToolStripMenuItem(Strings.CANLogExtract);
             but.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuMap.Items;
             

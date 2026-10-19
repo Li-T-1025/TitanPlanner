@@ -34,9 +34,9 @@ namespace MissionPlanner.Controls
             this.SuspendLayout();
 
             // Context menu for copy
-            var copyItem = new ToolStripMenuItem("Copy Message");
+            var copyItem = new ToolStripMenuItem(Strings.CopyMessage);
             copyItem.Click += CopyItem_Click;
-            var copyAllItem = new ToolStripMenuItem("Copy All Messages");
+            var copyAllItem = new ToolStripMenuItem(Strings.CopyAllMessages);
             copyAllItem.Click += CopyAllItem_Click;
             this.contextMenu.Items.Add(copyItem);
             this.contextMenu.Items.Add(copyAllItem);

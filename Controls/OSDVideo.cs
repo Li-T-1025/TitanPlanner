@@ -268,7 +268,7 @@ namespace MissionPlanner.Controls
             }
             else
             {
-                MessageBox.Show("File does not exist");
+                MessageBox.Show(Strings.FileExist);
             }
         }
 
@@ -285,7 +285,7 @@ namespace MissionPlanner.Controls
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                    CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                     return;
                 }
                 mine.logreadmode = true;
@@ -541,7 +541,7 @@ namespace MissionPlanner.Controls
 
             if ((media.formatType != FormatType.VideoInfo) || (media.formatPtr == IntPtr.Zero))
             {
-                throw new NotSupportedException("Unknown Grabber Media Format");
+                throw new NotSupportedException(Strings.UnknownGrabberMediaFormat);
             }
 
             // Grab the size info
@@ -683,7 +683,7 @@ namespace MissionPlanner.Controls
 
                 if (pSample.GetSize() > m_stride * m_videoHeight)
                 {
-                    throw new Exception("Buffer is wrong size");
+                    throw new Exception(Strings.BufferIsWrongSize);
                 }
 
                 NativeMethods.CopyMemory(m_handle, pBuffer, m_stride * m_videoHeight);
@@ -715,7 +715,7 @@ namespace MissionPlanner.Controls
             }
             else
             {
-                throw new Exception("Buffer is wrong size");
+                throw new Exception(Strings.BufferIsWrongSize);
             }
 
             try
@@ -772,7 +772,7 @@ namespace MissionPlanner.Controls
 
                 Console.WriteLine("3 " + DateTime.Now.Millisecond);
             }
-            //System.Windows.Forms.CustomMessageBox.Show("Problem with capture device, grabbing frame took longer than 5 sec");
+            //System.Windows.Forms.CustomMessageBox.Show(Strings.ProblemCaptureDeviceGrabbingFrameTook);
             catch (Exception ex)
             {
                 Console.WriteLine("Grab bmp failed " + ex.ToString());
@@ -807,7 +807,7 @@ namespace MissionPlanner.Controls
         {
             hud1.Invalidate();
 
-            label1.Text = "time offset in seconds " + trackBar1.Value;
+            label1.Text = Strings.TimeOffsetSeconds + " " + trackBar1.Value;
 
             saveconfig();
         }

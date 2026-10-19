@@ -157,6 +157,7 @@
     <ProjectReference Include="..\ExtLibs\Interfaces\Interfaces.csproj" />
     <ProjectReference Include="..\ExtLibs\Mavlink\MAVLink.csproj" />
     <ProjectReference Include="..\ExtLibs\ZedGraph\ZedGraph.csproj" />
+    <ProjectReference Include="..\ExtLibs\Strings\MissionPlanner.Strings.csproj" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Config.ko-KR.resx" />

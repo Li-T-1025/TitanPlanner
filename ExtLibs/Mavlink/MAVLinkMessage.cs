@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using MissionPlanner;
 
 public partial class MAVLink
 {
@@ -193,27 +194,27 @@ public partial class MAVLink
             target_system = null;
             incompat_flags = compat_flags = 0;
             if (buffer == null || buffer.Length < 2)
-                throw new InvalidDataException("Truncated MAVLink frame");
+                throw new InvalidDataException(Strings.TruncatedMAVLinkFrame);
             header = buffer[0];
             payloadlength = buffer[1];
             if (header == MAVLINK_STX)
             {
                 if (buffer.Length < MAVLINK_NUM_HEADER_BYTES)
-                    throw new InvalidDataException("Truncated MAVLink header");
+                    throw new InvalidDataException(Strings.TruncatedMAVLinkHeader);
                 incompat_flags = buffer[2];
                 compat_flags = buffer[3];
                 if ((incompat_flags & ~MAVLINK_SUPPORTED_IFLAGS) != 0)
-                    throw new InvalidDataException("Unsupported MAVLink incompatible flags");
+                    throw new InvalidDataException(Strings.UnsupportedMAVLinkIncompatibleFlags);
                 headerlength = GetHeaderLength(incompat_flags);
             }
             else if (header == MAVLINK_STX_MAVLINK1)
                 headerlength = 6;
             else
-                throw new InvalidDataException("Invalid MAVLink magic");
+                throw new InvalidDataException(Strings.InvalidMAVLinkMagic);
 
             int signatureLength = (incompat_flags & MAVLINK_IFLAG_SIGNED) != 0 ? MAVLINK_SIGNATURE_BLOCK_LEN : 0;
             if (buffer.Length != headerlength + payloadlength + 2 + signatureLength)
-                throw new InvalidDataException("Invalid MAVLink frame length");
+                throw new InvalidDataException(Strings.InvalidMAVLinkFrameLength);
             if (header == MAVLINK_STX)
             {
                 seq = buffer[4];

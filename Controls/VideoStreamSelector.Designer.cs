@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VideoStreamSelector));
             this.cmb_detectedstreams = new System.Windows.Forms.ComboBox();
             this.but_launch = new MissionPlanner.Controls.MyButton();
             this.txt_gstreamraw = new System.Windows.Forms.TextBox();
@@ -53,7 +54,7 @@
             this.but_launch.Name = "but_launch";
             this.but_launch.Size = new System.Drawing.Size(75, 21);
             this.but_launch.TabIndex = 1;
-            this.but_launch.Text = "Connect";
+            resources.ApplyResources(this.but_launch, "but_launch");
             this.but_launch.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.but_launch.UseVisualStyleBackColor = true;
             this.but_launch.Click += new System.EventHandler(this.but_launch_Click);
@@ -74,7 +75,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Detected Streams";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -83,7 +84,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "GStreamer Pipeline";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // VideoStreamSelector
             // 
@@ -96,7 +97,7 @@
             this.Controls.Add(this.but_launch);
             this.Controls.Add(this.cmb_detectedstreams);
             this.Name = "VideoStreamSelector";
-            this.Text = "VideoStreamSelector";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

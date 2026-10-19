@@ -79,7 +79,7 @@ namespace MissionPlanner.Utilities
                 }
                 else
                 {
-                    throw new ArgumentException("Image file format not recognized.");
+                    throw new ArgumentException(Strings.ImageFileFormatNotRecognized);
                 }
 
                 // find the DFU device

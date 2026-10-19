@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MissionStyleEditor));
             this.mainPanel = new System.Windows.Forms.TableLayoutPanel();
             this.stylePresetPanel = new System.Windows.Forms.TableLayoutPanel();
             this.previewButton = new MissionPlanner.Controls.MyButton();
@@ -111,7 +112,7 @@
             this.previewButton.Name = "previewButton";
             this.previewButton.Size = new System.Drawing.Size(65, 23);
             this.previewButton.TabIndex = 2;
-            this.previewButton.Text = "Preview";
+            resources.ApplyResources(this.previewButton, "previewButton");
             this.previewButton.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.previewButton.UseVisualStyleBackColor = true;
             this.previewButton.Click += new System.EventHandler(this.previewButton_Click);
@@ -124,7 +125,7 @@
             this.styleLabel.Name = "styleLabel";
             this.styleLabel.Size = new System.Drawing.Size(36, 13);
             this.styleLabel.TabIndex = 0;
-            this.styleLabel.Text = "Style: ";
+            resources.ApplyResources(this.styleLabel, "styleLabel");
             // 
             // saveAsButton
             // 
@@ -132,7 +133,7 @@
             this.saveAsButton.Name = "saveAsButton";
             this.saveAsButton.Size = new System.Drawing.Size(65, 23);
             this.saveAsButton.TabIndex = 1;
-            this.saveAsButton.Text = "Save As";
+            resources.ApplyResources(this.saveAsButton, "saveAsButton");
             this.saveAsButton.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.saveAsButton.UseVisualStyleBackColor = true;
             this.saveAsButton.Click += new System.EventHandler(this.saveAsButton_Click);
@@ -152,7 +153,7 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(65, 23);
             this.saveButton.TabIndex = 0;
-            this.saveButton.Text = "Save";
+            resources.ApplyResources(this.saveButton, "saveButton");
             this.saveButton.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
@@ -218,7 +219,7 @@
             this.markerRuleTab.Padding = new System.Windows.Forms.Padding(3);
             this.markerRuleTab.Size = new System.Drawing.Size(212, 313);
             this.markerRuleTab.TabIndex = 0;
-            this.markerRuleTab.Text = "Markers";
+            resources.ApplyResources(this.markerRuleTab, "markerRuleTab");
             this.markerRuleTab.UseVisualStyleBackColor = true;
             // 
             // markerRuleListBox
@@ -239,7 +240,7 @@
             this.segmentRuleTab.Padding = new System.Windows.Forms.Padding(3);
             this.segmentRuleTab.Size = new System.Drawing.Size(212, 313);
             this.segmentRuleTab.TabIndex = 1;
-            this.segmentRuleTab.Text = "Segments";
+            resources.ApplyResources(this.segmentRuleTab, "segmentRuleTab");
             this.segmentRuleTab.UseVisualStyleBackColor = true;
             // 
             // segmentRuleListBox
@@ -259,7 +260,7 @@
             this.ruleAddButton.Name = "ruleAddButton";
             this.ruleAddButton.Size = new System.Drawing.Size(65, 23);
             this.ruleAddButton.TabIndex = 1;
-            this.ruleAddButton.Text = "Add";
+            resources.ApplyResources(this.ruleAddButton, "ruleAddButton");
             this.ruleAddButton.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.ruleAddButton.UseVisualStyleBackColor = true;
             this.ruleAddButton.Click += new System.EventHandler(this.ruleAddButton_Click);
@@ -271,7 +272,7 @@
             this.ruleDuplicateButton.Name = "ruleDuplicateButton";
             this.ruleDuplicateButton.Size = new System.Drawing.Size(65, 23);
             this.ruleDuplicateButton.TabIndex = 2;
-            this.ruleDuplicateButton.Text = "Duplicate";
+            resources.ApplyResources(this.ruleDuplicateButton, "ruleDuplicateButton");
             this.ruleDuplicateButton.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.ruleDuplicateButton.UseVisualStyleBackColor = true;
             this.ruleDuplicateButton.Click += new System.EventHandler(this.ruleDuplicateButton_Click);
@@ -283,7 +284,7 @@
             this.ruleDeleteButton.Name = "ruleDeleteButton";
             this.ruleDeleteButton.Size = new System.Drawing.Size(65, 23);
             this.ruleDeleteButton.TabIndex = 3;
-            this.ruleDeleteButton.Text = "Delete";
+            resources.ApplyResources(this.ruleDeleteButton, "ruleDeleteButton");
             this.ruleDeleteButton.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.ruleDeleteButton.UseVisualStyleBackColor = true;
             this.ruleDeleteButton.Click += new System.EventHandler(this.ruleDeleteButton_Click);
@@ -346,7 +347,7 @@
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(65, 23);
             this.okButton.TabIndex = 1;
-            this.okButton.Text = "OK";
+            resources.ApplyResources(this.okButton, "okButton");
             this.okButton.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
@@ -357,7 +358,7 @@
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(65, 23);
             this.cancelButton.TabIndex = 2;
-            this.cancelButton.Text = "Cancel";
+            resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -369,7 +370,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPanel);
             this.Name = "MissionStyleEditor";
-            this.Text = "Mission Style Editor";
+            resources.ApplyResources(this, "$this");
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.stylePresetPanel.ResumeLayout(false);

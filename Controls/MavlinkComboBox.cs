@@ -189,7 +189,7 @@ namespace MissionPlanner.Controls
 
                     if (!MainV2.comPort.setParam(MainV2.comPort.sysidcurrent, (byte)MainV2.comPort.compidcurrent, ParamName, (float)(int)((MavlinkComboBox)sender).SelectedValue))
                     {
-                        CustomMessageBox.Show("Set " + ParamName + " Failed!", Strings.ERROR);
+                        CustomMessageBox.Show(Strings.Set + " " + ParamName + " Failed!", Strings.ERROR);
                     }
 
                     if (paramname2 != "")
@@ -198,13 +198,13 @@ namespace MissionPlanner.Controls
                             !MainV2.comPort.setParam(MainV2.comPort.sysidcurrent, (byte)MainV2.comPort.compidcurrent, paramname2,
                                 (float)(int)((MavlinkComboBox)sender).SelectedValue > 0 ? 1 : 0))
                         {
-                            CustomMessageBox.Show("Set " + paramname2 + " Failed!", Strings.ERROR);
+                            CustomMessageBox.Show(Strings.Set + " " + paramname2 + " Failed!", Strings.ERROR);
                         }
                     }
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Set " + ParamName + " Failed!", Strings.ERROR);
+                    CustomMessageBox.Show(Strings.Set + " " + ParamName + " Failed!", Strings.ERROR);
                 }
             }
         }

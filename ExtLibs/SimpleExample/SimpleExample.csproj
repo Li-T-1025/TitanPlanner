@@ -86,6 +86,7 @@
       <Project>{20296734-5f3c-4593-a0d5-dd20b440b13a}</Project>
       <Name>MAVLink</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

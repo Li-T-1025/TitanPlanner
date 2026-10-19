@@ -322,15 +322,12 @@ namespace MissionPlanner.Log
                     try
                     {
                         Description desc = new Description();
-                        desc.Text = @"<![CDATA[
-              <table>
-                <tr><td>Roll: " + model.Orientation.Roll.Value.ToString("0.00") + @" </td></tr>
+                        desc.Text = Strings.CDATATableTrTdRoll + " " + model.Orientation.Roll.Value.ToString("0.00") + @" </td></tr>
                 <tr><td>Pitch: " + model.Orientation.Tilt.Value.ToString("0.00") + @" </td></tr>
                 <tr><td>Yaw: " + model.Orientation.Heading.Value.ToString("0.00") + @" </td></tr>
                 <tr><td>Time: " + cs.datetime.ToString("HH:mm:sszzzzzz") + @" </td></tr>
               </table> ]]>";
-                        //            ]]>";
-
+                        //            end of cdata
                         pmplane.Description = desc;
                     }
                     catch

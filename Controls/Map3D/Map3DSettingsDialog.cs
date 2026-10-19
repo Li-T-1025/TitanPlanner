@@ -15,7 +15,7 @@ namespace MissionPlanner.Controls
         {
             using (var dialog = new Form())
             {
-                dialog.Text = "3D Map Settings";
+                dialog.Text = Strings.Map3DSettingsTitle;
                 dialog.FormBorderStyle = FormBorderStyle.FixedDialog;
                 dialog.StartPosition = FormStartPosition.CenterParent;
                 dialog.MaximizeBox = false;
@@ -94,7 +94,7 @@ namespace MissionPlanner.Controls
                 addRow("MAV Color:", colorPanel);
 
                 string selectedStl = settings.StlPath;
-                var stlButton = new MyButton { Text = string.IsNullOrEmpty(selectedStl) ? "Default" : Path.GetFileName(selectedStl), Height = 23 };
+                var stlButton = new MyButton { Text = string.IsNullOrEmpty(selectedStl) ? Strings.Default : Path.GetFileName(selectedStl), Height = 23 };
                 stlButton.Click += (s, e) =>
                 {
                     using (var open = new OpenFileDialog { Filter = "STL Files (*.stl)|*.stl|All Files (*.*)|*.*", Title = "Select Plane STL File" })
@@ -156,7 +156,7 @@ namespace MissionPlanner.Controls
                     selectedColor = defaults.VehicleColor;
                     colorPanel.BackColor = selectedColor;
                     selectedStl = "";
-                    stlButton.Text = "Default";
+                    stlButton.Text = Strings.Default;
                     chkHeading.Checked = defaults.ShowHeadingLine;
                     chkNavBearing.Checked = defaults.ShowNavBearingLine;
                     chkGpsHeading.Checked = defaults.ShowGpsHeadingLine;

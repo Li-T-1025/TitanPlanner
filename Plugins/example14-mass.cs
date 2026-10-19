@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,12 +43,12 @@ namespace mass
 
         public override bool Loaded()
         {
-            var rootbut = new ToolStripMenuItem("Mass");
+            var rootbut = new ToolStripMenuItem(Strings.Mass);
             //rootbut.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuMap.Items;
             col.Add(rootbut);
 
-            var but = new ToolStripMenuItem("Arm");
+            var but = new ToolStripMenuItem(Strings.Arm);
             but.Click += (s, e) => {
                 Parallel.ForEach(MainV2.Comports, mav =>
                 {
@@ -61,7 +61,7 @@ namespace mass
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Arm(Force)");
+            but = new ToolStripMenuItem(Strings.ArmForce);
             but.Click += (s, e) => {
                 Parallel.ForEach(MainV2.Comports, mav => {
                     try
@@ -72,7 +72,7 @@ namespace mass
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("GUIDED");
+            but = new ToolStripMenuItem(Strings.GUIDED);
             but.Click += (s, e) => {
                 Parallel.ForEach(MainV2.Comports, mav => {
                     try
@@ -84,7 +84,7 @@ namespace mass
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("AUTO");
+            but = new ToolStripMenuItem(Strings.Auto);
             but.Click += (s, e) => {
                 Parallel.ForEach(MainV2.Comports, mav => {
                     try
@@ -96,7 +96,7 @@ namespace mass
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("TAKEOFF");
+            but = new ToolStripMenuItem(Strings.Takeoff);
             but.Click += (s, e) => {
                 Parallel.ForEach(MainV2.Comports, mav => {
                     try
@@ -108,7 +108,7 @@ namespace mass
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("TakeOff (2m)");
+            but = new ToolStripMenuItem(Strings.TakeOff2m);
             but.Click += (s, e) => {
                 Parallel.ForEach(MainV2.Comports, mav => {
                     try
@@ -121,7 +121,7 @@ namespace mass
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Fly To");
+            but = new ToolStripMenuItem(Strings.FlyTo);
             but.Click += (s, e) => {
                 Parallel.ForEach(MainV2.Comports, mav => {
                     try

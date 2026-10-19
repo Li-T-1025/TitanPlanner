@@ -124,9 +124,9 @@ namespace MissionPlanner.Comms
                     {
                         if (inputboxreturn.Cancel == OnInputBoxShow("remote host",
                             "Enter host name/ip (ensure remote end is already started)", ref host))
-                            throw new Exception("Canceled by request");
+                            throw new Exception(Strings.CanceledByRequest);
                         if (inputboxreturn.Cancel == OnInputBoxShow("remote Port", "Enter remote port", ref dest))
-                            throw new Exception("Canceled by request");
+                            throw new Exception(Strings.CanceledByRequest);
                     }
                     Host = host;
                 }
@@ -186,7 +186,7 @@ namespace MissionPlanner.Comms
             }
             catch
             {
-                throw new Exception("Socket Closed");
+                throw new Exception(Strings.SocketClosed);
             }
         }
 
@@ -198,7 +198,7 @@ namespace MissionPlanner.Comms
             {
                 Thread.Sleep(1);
                 if (count > ReadTimeout)
-                    throw new Exception("NetSerial Timeout on read");
+                    throw new Exception(Strings.NetSerialTimeoutOnRead);
                 count++;
             }
 
@@ -247,7 +247,7 @@ namespace MissionPlanner.Comms
             }
             catch
             {
-            } //throw new Exception("Comport / Socket Closed"); }
+            } //throw new Exception(Strings.ComportSocketClosed); }
         }
 
         public void DiscardInBuffer()
@@ -381,7 +381,7 @@ namespace MissionPlanner.Comms
                     retrys--;
                 }
 
-                throw new Exception("The socket/serialproxy is closed");
+                throw new Exception(Strings.TheSocketSerialproxyIsClosed);
             }
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PluginUI));
             this.labelWarning = new System.Windows.Forms.Label();
             this.but_errors = new MissionPlanner.Controls.MyButton();
             this.bSave = new MissionPlanner.Controls.MyButton();
@@ -48,8 +49,7 @@
             this.labelWarning.Name = "labelWarning";
             this.labelWarning.Size = new System.Drawing.Size(224, 26);
             this.labelWarning.TabIndex = 4;
-            this.labelWarning.Text = "Enable/Disable settings changed, till restart \rnot loaded but enabled plugins wil" +
-    "l not shown!";
+            resources.ApplyResources(this.labelWarning, "labelWarning");
             // 
             // but_errors
             // 
@@ -58,7 +58,7 @@
             this.but_errors.Name = "but_errors";
             this.but_errors.Size = new System.Drawing.Size(73, 31);
             this.but_errors.TabIndex = 5;
-            this.but_errors.Text = "Show Errors";
+            resources.ApplyResources(this.but_errors, "but_errors");
             this.but_errors.UseVisualStyleBackColor = true;
             this.but_errors.Click += new System.EventHandler(this.but_errors_Click);
             // 
@@ -69,7 +69,7 @@
             this.bSave.Name = "bSave";
             this.bSave.Size = new System.Drawing.Size(73, 31);
             this.bSave.TabIndex = 1;
-            this.bSave.Text = "Save && Close";
+            resources.ApplyResources(this.bSave, "bSave");
             this.bSave.UseVisualStyleBackColor = true;
             this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
@@ -102,7 +102,7 @@
             // pluginName
             // 
             this.pluginName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.pluginName.HeaderText = "Plugin Name";
+            resources.ApplyResources(this.pluginName, "pluginName");
             this.pluginName.MinimumWidth = 6;
             this.pluginName.Name = "pluginName";
             this.pluginName.ReadOnly = true;
@@ -111,7 +111,7 @@
             // pluginAuthor
             // 
             this.pluginAuthor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.pluginAuthor.HeaderText = "Author";
+            resources.ApplyResources(this.pluginAuthor, "pluginAuthor");
             this.pluginAuthor.MinimumWidth = 6;
             this.pluginAuthor.Name = "pluginAuthor";
             this.pluginAuthor.ReadOnly = true;
@@ -120,7 +120,7 @@
             // pluginVersion
             // 
             this.pluginVersion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.pluginVersion.HeaderText = "Version";
+            resources.ApplyResources(this.pluginVersion, "pluginVersion");
             this.pluginVersion.MinimumWidth = 6;
             this.pluginVersion.Name = "pluginVersion";
             this.pluginVersion.ReadOnly = true;
@@ -129,7 +129,7 @@
             // pluginDll
             // 
             this.pluginDll.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.pluginDll.HeaderText = "FileName";
+            resources.ApplyResources(this.pluginDll, "pluginDll");
             this.pluginDll.MinimumWidth = 6;
             this.pluginDll.Name = "pluginDll";
             this.pluginDll.ReadOnly = true;
@@ -138,7 +138,7 @@
             // pluginEnabled
             // 
             this.pluginEnabled.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.pluginEnabled.HeaderText = "Enabled";
+            resources.ApplyResources(this.pluginEnabled, "pluginEnabled");
             this.pluginEnabled.MinimumWidth = 6;
             this.pluginEnabled.Name = "pluginEnabled";
             this.pluginEnabled.Width = 52;
@@ -155,7 +155,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PluginUI";
-            this.Text = "PluginManager";
+            resources.ApplyResources(this, "$this");
             this.Shown += new System.EventHandler(this.PluginUI_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlugins)).EndInit();
             this.ResumeLayout(false);

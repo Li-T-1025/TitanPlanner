@@ -43,7 +43,7 @@ namespace MissionPlanner.Controls.Scene3D
             {
                 string log = GL.GetProgramInfoLog(program);
                 GL.DeleteProgram(program);
-                throw new Exception("Map3D shader link failed: " + log);
+                throw new Exception(string.Format(Strings.Map3DShaderLinkFailed, log));
             }
 
             return new GLProgram(program);
@@ -60,7 +60,7 @@ namespace MissionPlanner.Controls.Scene3D
             {
                 string log = GL.GetShaderInfoLog(shader);
                 GL.DeleteShader(shader);
-                throw new Exception("Map3D " + type + " compile failed: " + log);
+                throw new Exception(string.Format(Strings.Map3D, type, log));
             }
 
             return shader;

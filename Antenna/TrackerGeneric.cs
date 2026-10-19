@@ -103,7 +103,7 @@ namespace MissionPlanner.Antenna
                 }
 
                 _tracker.BUT_find.Enabled = true;
-                //CustomMessageBox.Show("Disconnected!");
+                //CustomMessageBox.Show(Strings.Disconnected1);
                 return;
             }
 
@@ -177,7 +177,7 @@ namespace MissionPlanner.Antenna
                     }
                     catch (Exception ex)
                     {
-                        CustomMessageBox.Show("Failed to set initial pan and tilt\n" + ex.Message, Strings.ERROR);
+                        CustomMessageBox.Show(Strings.FailedSetInitialPanTilt + "\n" + ex.Message, Strings.ERROR);
                         tracker.Close();
                         return;
                     }

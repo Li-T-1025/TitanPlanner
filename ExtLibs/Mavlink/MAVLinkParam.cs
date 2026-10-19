@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
+using MissionPlanner;
 
 public partial class MAVLink
 {
@@ -132,7 +133,7 @@ item.float_value
                     return RoundToSignificantDigits(float_value, 7);
             }
 
-            throw new FormatException("invalid type");
+            throw new FormatException(Strings.InvalidType);
         }
 
         private double RoundToSignificantDigits(double d, int digits)

@@ -596,9 +596,12 @@ namespace MissionPlanner.ArduPilot.Mavlink
         /// directory: ArduPilot hands both to FatFs, which refuses a directory that still holds
         /// anything with EACCES. So the files and sub-directories go first, then the directory.
         /// </summary>
-        /// <returns>False when cancelled or when a request times out.</returns>
-        /// <exception cref="Exception">Thrown when the vehicle reports a remove failure with an errno.</exception>
-        /// <exception cref="FileNotFoundException">Thrown when a path is not found.</exception>
+        /// <returns>False when cancelled or when a request times out.</returns>
+
+        /// <exception cref="Exception">Thrown when the vehicle reports a remove failure with an errno.</exception>
+
+        /// <exception cref="FileNotFoundException">Thrown when a path is not found.</exception>
+
         public bool RemoveDirectoryRecursive(string dir, CancellationTokenSource cancel)
         {
             dir = dir.Replace("//", "/");
@@ -668,8 +671,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -680,14 +682,14 @@ namespace MissionPlanner.ArduPilot.Mavlink
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - Err Fail");
+                        ex = new Exception(Strings.MavftpRespondedErrFail);
                     }
 
                     if (errorcode == FTPErrorCode.kErrFileNotFound)
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new FileNotFoundException("File Not Found", file);
+                        ex = new FileNotFoundException(Strings.FileNotFound, file);
                     }
 
                     if (errorcode == FTPErrorCode.kErrNoSessionsAvailable)
@@ -774,8 +776,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno)ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -988,8 +989,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Failed to OpenFile - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.FailedToOpenFile, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -1000,7 +1000,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new FileNotFoundException("File Not Found", file);
+                        ex = new FileNotFoundException(Strings.FileNotFound, file);
                     }
 
                     if (errorcode == FTPErrorCode.kErrNoSessionsAvailable)
@@ -1122,8 +1122,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                             timeout.Complete = true;
 
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -1139,7 +1138,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - Err Fail");
+                        ex = new Exception(Strings.MavftpRespondedErrFail);
                     }
 
                     if (errorcode == FTPErrorCode.kErrNoSessionsAvailable)
@@ -1213,8 +1212,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Failed to OpenFile - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.FailedToOpenFile, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -1225,14 +1223,14 @@ namespace MissionPlanner.ArduPilot.Mavlink
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - Err Fail");
+                        ex = new Exception(Strings.MavftpRespondedErrFail);
                     }
 
                     if (errorcode == FTPErrorCode.kErrFileNotFound)
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new FileNotFoundException("File Not Found", file);
+                        ex = new FileNotFoundException(Strings.FileNotFound, file);
                     }
 
                     if (errorcode == FTPErrorCode.kErrNoSessionsAvailable)
@@ -1360,8 +1358,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                             var _ftp_errno = (errno) ftphead.data[1];
                             log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                             timeout.Retries = 0;
-                            ex = new Exception("Failed to OpenFile - " + ftphead.req_opcode + " " + errorcode + " " +
-                                               _ftp_errno);
+                            ex = new Exception(string.Format(Strings.FailedToOpenFile, ftphead.req_opcode, errorcode, _ftp_errno));
                         }
                         else
                         {
@@ -1372,7 +1369,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         {
                             //stop trying
                             timeout.Retries = 0;
-                            ex = new FileNotFoundException("File Not Found", dir);
+                            ex = new FileNotFoundException(Strings.FileNotFound, dir);
                         }
 
                         if (errorcode == FTPErrorCode.kErrEOF)
@@ -1522,8 +1519,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Failed to OpenFile - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.FailedToOpenFile, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -1534,14 +1530,14 @@ namespace MissionPlanner.ArduPilot.Mavlink
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - Err Fail");
+                        ex = new Exception(Strings.MavftpRespondedErrFail);
                     }
 
                     if (errorcode == FTPErrorCode.kErrFileNotFound)
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new FileNotFoundException("File Not Found", file);
+                        ex = new FileNotFoundException(Strings.FileNotFound, file);
                     }
 
                     if (errorcode == FTPErrorCode.kErrNoSessionsAvailable)
@@ -1620,8 +1616,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -1632,7 +1627,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - Err Fail");
+                        ex = new Exception(Strings.MavftpRespondedErrFail);
                     }
 
                     if (errorcode == FTPErrorCode.kErrEOF)
@@ -1734,8 +1729,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Failed to remove " + file + " - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.FailedToRemove, file, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -1746,7 +1740,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new FileNotFoundException("File Not Found", file);
+                        ex = new FileNotFoundException(Strings.FileNotFound, file);
                     }
 
                     if (errorcode == FTPErrorCode.kErrNoSessionsAvailable)
@@ -1819,8 +1813,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Failed to remove " + file + " - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.FailedToRemove, file, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -1831,7 +1824,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                     {
                         //stop trying
                         timeout.Retries = 0;
-                        ex = new FileNotFoundException("File Not Found", file);
+                        ex = new FileNotFoundException(Strings.FileNotFound, file);
                     }
 
                     if (errorcode == FTPErrorCode.kErrNoSessionsAvailable)
@@ -1903,8 +1896,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -1970,8 +1962,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -2025,8 +2016,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -2090,8 +2080,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         var _ftp_errno = (errno) ftphead.data[1];
                         log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                         timeout.Retries = 0;
-                        ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                           _ftp_errno);
+                        ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                     }
                     else
                     {
@@ -2172,8 +2161,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                             var _ftp_errno = (errno) ftphead.data[1];
                             log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                             timeout.Retries = 0;
-                            ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                               _ftp_errno);
+                            ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                         }
                         else
                         {
@@ -2184,7 +2172,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         {
                             //stop trying
                             timeout.Retries = 0;
-                            ex = new Exception("Mavftp responded - Err Fail");
+                            ex = new Exception(Strings.MavftpRespondedErrFail);
                         }
 
                         return true;
@@ -2304,8 +2292,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                             var _ftp_errno = (errno)ftphead.data[1];
                             log.Error(ftphead.req_opcode + " " + errorcode + " " + _ftp_errno);
                             timeout.Retries = 0;
-                            ex = new Exception("Mavftp responded - " + ftphead.req_opcode + " " + errorcode + " " +
-                                               _ftp_errno);
+                            ex = new Exception(string.Format(Strings.MavftpResponded, ftphead.req_opcode, errorcode, _ftp_errno));
                         }
                         else
                         {
@@ -2316,7 +2303,7 @@ namespace MissionPlanner.ArduPilot.Mavlink
                         {
                             //stop trying
                             timeout.Retries = 0;
-                            ex = new Exception("Mavftp responded - Err Fail");
+                            ex = new Exception(Strings.MavftpRespondedErrFail);
                         }
 
                         return true;

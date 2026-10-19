@@ -1766,7 +1766,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                             continue;
                         }
 
-                        throw new TimeoutException("Timeout on read - setParam " + paramname);
+                        throw new TimeoutException(string.Format(Strings.TimeoutOnReadSetParam, paramname));
                     }
 
                     await readPacketAsync().ConfigureAwait(false);
@@ -2240,7 +2240,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
 
                 if (!logreadmode && !BaseStream.IsOpen)
                 {
-                    var exp = new Exception("Not Connected");
+                    var exp = new Exception(Strings.NotConnected);
                     frmProgressReporter.doWorkArgs.ErrorMessage = exp.Message;
                     UnSubscribeToPacketType(sub1);
                     UnSubscribeToPacketType(sub2);
@@ -2250,7 +2250,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
 
             if (indexsreceived.Count != param_total)
             {
-                var exp = new Exception("Missing Params " + indexsreceived.Count + " vs " + param_total);
+                var exp = new Exception(string.Format(Strings.MissingParams, indexsreceived.Count, param_total));
                 frmProgressReporter.doWorkArgs.ErrorMessage = exp.Message;
                 UnSubscribeToPacketType(sub1);
                 UnSubscribeToPacketType(sub2);
@@ -2365,7 +2365,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - GetParam");
+                    throw new TimeoutException(Strings.TimeoutOnReadGetParam);
                 }
 
                 buffer = await readPacketAsync().ConfigureAwait(false);
@@ -2508,7 +2508,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - setWPCurrent");
+                    throw new TimeoutException(Strings.TimeoutOnReadSetWPCurrent);
                 }
 
                 buffer = await readPacketAsync().ConfigureAwait(false);
@@ -2817,7 +2817,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - doCommand");
+                    throw new TimeoutException(Strings.TimeoutOnReadDoCommand);
                 }
 
                 buffer = await readPacketAsync().ConfigureAwait(false);
@@ -2939,7 +2939,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - doCommand");
+                    throw new TimeoutException(Strings.TimeoutOnReadDoCommand);
                 }
 
                 buffer = await readPacketAsync().ConfigureAwait(false);
@@ -3333,7 +3333,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
 
                     giveComport = false;
                     //return (byte)int.Parse(param["WP_TOTAL"].ToString());
-                    throw new TimeoutException("Timeout on read - getWPCount");
+                    throw new TimeoutException(Strings.TimeoutOnReadGetWPCount);
                 }
 
                 buffer = await readPacketAsync().ConfigureAwait(false);
@@ -3402,7 +3402,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                             continue;
                         }
 
-                        throw new TimeoutException("Timeout on read - getHomePosition");
+                        throw new TimeoutException(Strings.TimeoutOnReadGetHomePosition);
                     }
 
                     await readPacketAsync().ConfigureAwait(false);
@@ -3496,7 +3496,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - getWP");
+                    throw new TimeoutException(Strings.TimeoutOnReadGetWP);
                 }
 
                 //Console.WriteLine("getwp read " + DateTime.Now.Millisecond);
@@ -3811,7 +3811,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - setWPTotal");
+                    throw new TimeoutException(Strings.TimeoutOnReadSetWPTotal);
                 }
 
                 MAVLinkMessage buffer = await readPacketAsync().ConfigureAwait(false);
@@ -4107,7 +4107,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - setWP");
+                    throw new TimeoutException(Strings.TimeoutOnReadSetWP);
                 }
 
                 MAVLinkMessage buffer = await readPacketAsync().ConfigureAwait(false);
@@ -4281,7 +4281,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - setWP");
+                    throw new TimeoutException(Strings.TimeoutOnReadSetWP);
                 }
 
                 MAVLinkMessage buffer = await readPacketAsync().ConfigureAwait(false);
@@ -4395,7 +4395,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                 if (!(start.AddMilliseconds(1500) > DateTime.Now))
                 {
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - getRequestedWPNo");
+                    throw new TimeoutException(Strings.TimeoutOnReadGetRequestedWPNo);
                 }
 
                 MAVLinkMessage buffer = await readPacketAsync().ConfigureAwait(false);
@@ -4460,7 +4460,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
 
                     if (ans != MAV_MISSION_RESULT.MAV_MISSION_ACCEPTED)
                     {
-                        throw new Exception("Guided Mode Failed");
+                        throw new Exception(Strings.GuidedModeFailed);
                     }
                 }
                 else
@@ -4495,7 +4495,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
 
                 if (ans != MAV_MISSION_RESULT.MAV_MISSION_ACCEPTED)
                 {
-                    throw new Exception("Alt Change Failed");
+                    throw new Exception(Strings.AltChangeFailed);
                 }
 
                 /*
@@ -4749,7 +4749,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                                         log.InfoFormat("MAVLINK: 1 wait time out btr {0} len {1}",
                                             BaseStream?.BytesToRead,
                                             length);
-                                        throw new TimeoutException("Timeout");
+                                        throw new TimeoutException(Strings.Timeout2);
                                     }
 
                                     await PollDelay.Wait().ConfigureAwait(false);
@@ -4842,7 +4842,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                                 {
                                     log.InfoFormat("MAVLINK: 2 wait time out btr {0} len {1}", BaseStream.BytesToRead,
                                         length);
-                                    throw new TimeoutException("Timeout");
+                                    throw new TimeoutException(Strings.Timeout2);
                                 }
 
                                 await PollDelay.Wait().ConfigureAwait(false);
@@ -4894,7 +4894,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                                     while (offset < length)
                                     {
                                         if (!BaseStream.IsOpen || DateTime.UtcNow > to)
-                                            throw new TimeoutException("Incomplete MAVLink frame");
+                                            throw new TimeoutException(Strings.IncompleteMAVLinkFrame);
                                         if (BaseStream.BytesToRead == 0)
                                         {
                                             await PollDelay.Wait().ConfigureAwait(false);
@@ -5929,7 +5929,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - getFencePoint");
+                    throw new TimeoutException(Strings.TimeoutOnReadGetFencePoint);
                 }
 
                 buffer = await readPacketAsync().ConfigureAwait(false);
@@ -6024,7 +6024,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
 
                         giveComport = false;
                         OnPacketReceived -= handler;
-                        throw new TimeoutException("Timeout on read - GetLog");
+                        throw new TimeoutException(Strings.TimeoutOnReadGetLog);
                     }
 
                     var start1 = DateTime.Now;
@@ -6184,7 +6184,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                 }
 
                 OnPacketReceived -= handler;
-                throw new Exception("Failed to get log");
+                throw new Exception(Strings.FailedToGetLog);
             }
         }
 
@@ -6247,7 +6247,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - GetLogEntry");
+                    throw new TimeoutException(Strings.TimeoutOnReadGetLogEntry);
                 }
 
                 buffer = await readPacketAsync().ConfigureAwait(false);
@@ -6286,7 +6286,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                         buffer.compid == req.target_component)
                     {
                         giveComport = false;
-                        throw new Exception("Existing log download already in progress.");
+                        throw new Exception(Strings.ExistingLogDownloadAlreadyInProgress);
                     }
                 }
             }
@@ -6365,7 +6365,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                     }
 
                     giveComport = false;
-                    throw new TimeoutException("Timeout on read - getRallyPoint");
+                    throw new TimeoutException(Strings.TimeoutOnReadGetRallyPoint);
                 }
 
                 buffer = await readPacketAsync().ConfigureAwait(false);
@@ -6423,7 +6423,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                 retry--;
             }
 
-            throw new Exception("Could not verify GeoFence Point");
+            throw new Exception(Strings.CouldNotVerifyGeoFencePoint);
         }
 
         [Obsolete]
@@ -6611,7 +6611,7 @@ Mission Planner waits for 2 valid heartbeat packets before connecting
                         if (byte0 == MAVLINK_STX)
                         {
                             if ((byte2 & ~MAVLINK_SUPPORTED_IFLAGS) != 0)
-                                throw new InvalidDataException("Unsupported MAVLink incompatibility flags");
+                                throw new InvalidDataException(Strings.UnsupportedMAVLinkIncompatibilityFlags);
                             length += GetHeaderLength(byte2) - MAVLINK_NUM_HEADER_BYTES;
                             if ((byte2 & MAVLINK_IFLAG_SIGNED) > 0)
                                 length += MAVLINK_SIGNATURE_BLOCK_LEN;

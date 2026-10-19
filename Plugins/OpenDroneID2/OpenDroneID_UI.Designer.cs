@@ -29,6 +29,7 @@ namespace MissionPlanner.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpenDroneID_UI));
             this.txt_UserID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,7 +90,7 @@ namespace MissionPlanner.Controls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Operator ID";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -99,7 +100,7 @@ namespace MissionPlanner.Controls
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "UAS ID";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // TXT_UAS_ID
             // 
@@ -119,7 +120,7 @@ namespace MissionPlanner.Controls
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "UAS ID Type";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // label4
             // 
@@ -129,7 +130,7 @@ namespace MissionPlanner.Controls
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 11;
-            this.label4.Text = "UA Type";
+            resources.ApplyResources(this.label4, "label4");
 
             // 
             // label4 info
@@ -140,7 +141,7 @@ namespace MissionPlanner.Controls
             this.label4_info.Name = "label4_info";
             this.label4_info.Size = new System.Drawing.Size(49, 13);
             this.label4_info.TabIndex = 12;
-            this.label4_info.Text = "Optional settings. Typically these are set in the ArduRemoteID\r\ndevice instead.";
+            resources.ApplyResources(this.label4_info, "label4_info");
 
             // 
             // label12
@@ -151,7 +152,7 @@ namespace MissionPlanner.Controls
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 13);
             this.label12.TabIndex = 31;
-            this.label12.Text = "ARM Status";
+            resources.ApplyResources(this.label12, "label12");
             // 
             // LED_ArmedError
             // 
@@ -161,7 +162,7 @@ namespace MissionPlanner.Controls
             this.LED_ArmedError.On = true;
             this.LED_ArmedError.Size = new System.Drawing.Size(16, 16);
             this.LED_ArmedError.TabIndex = 32;
-            this.LED_ArmedError.Text = "ledBulb1";
+            resources.ApplyResources(this.LED_ArmedError, "LED_ArmedError");
             // 
             // label13
             // 
@@ -171,7 +172,7 @@ namespace MissionPlanner.Controls
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(63, 13);
             this.label13.TabIndex = 33;
-            this.label13.Text = "RID Comms";
+            resources.ApplyResources(this.label13, "label13");
             // 
             // LED_RemoteID_Messages
             // 
@@ -181,7 +182,7 @@ namespace MissionPlanner.Controls
             this.LED_RemoteID_Messages.On = true;
             this.LED_RemoteID_Messages.Size = new System.Drawing.Size(16, 16);
             this.LED_RemoteID_Messages.TabIndex = 34;
-            this.LED_RemoteID_Messages.Text = "ledBulb1";
+            resources.ApplyResources(this.LED_RemoteID_Messages, "LED_RemoteID_Messages");
             // 
             // LED_gps_valid
             // 
@@ -191,7 +192,7 @@ namespace MissionPlanner.Controls
             this.LED_gps_valid.On = true;
             this.LED_gps_valid.Size = new System.Drawing.Size(16, 16);
             this.LED_gps_valid.TabIndex = 36;
-            this.LED_gps_valid.Text = "LED_gps_sbas";
+            resources.ApplyResources(this.LED_gps_valid, "LED_gps_valid");
             // 
             // label14
             // 
@@ -201,7 +202,7 @@ namespace MissionPlanner.Controls
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 13);
             this.label14.TabIndex = 35;
-            this.label14.Text = "GCS GPS";
+            resources.ApplyResources(this.label14, "label14");
 
             // 
             // CMB_uas_id_type
@@ -230,7 +231,7 @@ namespace MissionPlanner.Controls
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(66, 13);
             this.label17.TabIndex = 44;
-            this.label17.Text = "Self ID Type";
+            resources.ApplyResources(this.label17, "label17");
             // 
             // CMB_self_id_type
             // 
@@ -249,7 +250,7 @@ namespace MissionPlanner.Controls
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(67, 13);
             this.label18.TabIndex = 47;
-            this.label18.Text = "Self ID Desc";
+            resources.ApplyResources(this.label18, "label18");
             // 
             // TXT_self_id_TXT
             // 
@@ -269,7 +270,7 @@ namespace MissionPlanner.Controls
             this.label18_info.Name = "label18_info";
             this.label18_info.Size = new System.Drawing.Size(273, 26);
             this.label18_info.TabIndex = 47;
-            this.label18_info.Text = "These fields are optional in the USA.\r\nThey can also be set in the ArduRemoteID device.";
+            resources.ApplyResources(this.label18_info, "label18_info");
 
             // 
             // groupBox2
@@ -287,7 +288,7 @@ namespace MissionPlanner.Controls
             this.groupBox2.Size = new System.Drawing.Size(197, 69);
             this.groupBox2.TabIndex = 53;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Remote ID Status";
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             // 
             // ODOD_tabs
             // 
@@ -312,7 +313,7 @@ namespace MissionPlanner.Controls
             this.tabStatus.Name = "tabStatus";
             this.tabStatus.Size = new System.Drawing.Size(354, 183);
             this.tabStatus.TabIndex = 2;
-            this.tabStatus.Text = "Status";
+            resources.ApplyResources(this.tabStatus, "tabStatus");
             this.tabStatus.UseVisualStyleBackColor = true;
             // 
             // LBL_version
@@ -335,8 +336,7 @@ namespace MissionPlanner.Controls
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(273, 26);
             this.label8.TabIndex = 12;
-            this.label8.Text = "This version of Open Drone ID Plugin is for Testing Only.\r\nDouble Click GPS Data " +
-    "for RAW NMEA Viewer. ";
+            resources.ApplyResources(this.label8, "label8");
             // 
             // TXT_RID_Status_Msg
             // 
@@ -354,7 +354,7 @@ namespace MissionPlanner.Controls
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "RID Armed Status";
+            resources.ApplyResources(this.label5, "label5");
             // 
             // TXT_ODID_Status
             // 
@@ -378,7 +378,7 @@ namespace MissionPlanner.Controls
             this.tab_uid.Padding = new System.Windows.Forms.Padding(3);
             this.tab_uid.Size = new System.Drawing.Size(354, 183);
             this.tab_uid.TabIndex = 0;
-            this.tab_uid.Text = "UAS ID";
+            resources.ApplyResources(this.tab_uid, "tab_uid");
             this.tab_uid.UseVisualStyleBackColor = true;
             // 
             // tab_ops
@@ -398,7 +398,7 @@ namespace MissionPlanner.Controls
             this.tab_ops.Padding = new System.Windows.Forms.Padding(3);
             this.tab_ops.Size = new System.Drawing.Size(354, 183);
             this.tab_ops.TabIndex = 1;
-            this.tab_ops.Text = "Operations";
+            resources.ApplyResources(this.tab_ops, "tab_ops");
             this.tab_ops.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -409,7 +409,7 @@ namespace MissionPlanner.Controls
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 50;
-            this.label7.Text = "Self ID: ";
+            resources.ApplyResources(this.label7, "label7");
             // 
             // label6
             // 
@@ -419,7 +419,7 @@ namespace MissionPlanner.Controls
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 13);
             this.label6.TabIndex = 48;
-            this.label6.Text = "Oper. ID Type";
+            resources.ApplyResources(this.label6, "label6");
             // 
             // CMB_op_id_type
             // 

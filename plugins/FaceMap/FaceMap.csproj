@@ -74,7 +74,8 @@
     <ProjectReference Include="..\..\MissionPlanner.csproj">
       <Private>false</Private>
     </ProjectReference>
-  </ItemGroup>
+    <ProjectReference Include="..\..\ExtLibs\Strings\MissionPlanner.Strings.csproj" />
+</ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.Windows.Forms">

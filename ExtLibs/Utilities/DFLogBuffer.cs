@@ -456,14 +456,14 @@ namespace MissionPlanner.Utilities
         {
             var count = br.ReadInt32();
             if (count < 0 || count > maxCount)
-                throw new InvalidDataException("bad DFLogBuffer cache");
+                throw new InvalidDataException(Strings.BadDFLogBufferCache);
 
             var list = new List<long>(count);
             for (int i = 0; i < count; i++)
             {
                 var item = br.ReadInt64();
                 if (item < 0 || item > maxValue)
-                    throw new InvalidDataException("bad DFLogBuffer cache");
+                    throw new InvalidDataException(Strings.BadDFLogBufferCache);
                 list.Add(item);
             }
             return list;
@@ -551,7 +551,7 @@ namespace MissionPlanner.Utilities
             }
             else
             {
-                throw new Exception("Invalid pieces parameters");
+                throw new Exception(Strings.InvalidPiecesParameters);
             }
         }
 
@@ -619,7 +619,7 @@ namespace MissionPlanner.Utilities
             get
             {
                 if (indexin > int.MaxValue)
-                    throw new Exception("index too large");
+                    throw new Exception(Strings.IndexTooLarge);
 
                 var index = (int)indexin;
 

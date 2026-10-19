@@ -24,6 +24,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WaitPanel));
             this._panel = new System.Windows.Forms.Panel();
             this._btnCancel = new MissionPlanner.Controls.MyButton();
             this._lblOperation = new System.Windows.Forms.Label();
@@ -55,7 +56,7 @@
             this._btnCancel.Name = "_btnCancel";
             this._btnCancel.Size = new System.Drawing.Size(143, 23);
             this._btnCancel.TabIndex = 8;
-            this._btnCancel.Text = "Cancel";
+            resources.ApplyResources(this._btnCancel, "_btnCancel");
             this._btnCancel.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this._btnCancel.UseVisualStyleBackColor = true;
             this._btnCancel.Click += new System.EventHandler(this._btnCancel_Click);
@@ -68,7 +69,7 @@
             this._lblOperation.Name = "_lblOperation";
             this._lblOperation.Size = new System.Drawing.Size(146, 27);
             this._lblOperation.TabIndex = 7;
-            this._lblOperation.Text = "operation";
+            resources.ApplyResources(this._lblOperation, "_lblOperation");
             // 
             // _picLogo
             // 

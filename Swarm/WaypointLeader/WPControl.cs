@@ -16,8 +16,8 @@ namespace MissionPlanner.Swarm.WaypointLeader
 
             zedGraphControl1.GraphPane.AddCurve("Path", DG.path_to_fly, Color.Red, SymbolType.None);
 
-            zedGraphControl1.GraphPane.XAxis.Title.Text = "Distance";
-            zedGraphControl1.GraphPane.YAxis.Title.Text = "Altitude";
+            zedGraphControl1.GraphPane.XAxis.Title.Text = Strings.Distance;
+            zedGraphControl1.GraphPane.YAxis.Title.Text = Strings.Altitude;
 
             DG.Drones.Clear();
         }
@@ -87,7 +87,7 @@ namespace MissionPlanner.Swarm.WaypointLeader
                 {
                     if (MAV.cs.armed && MAV.cs.alt > 1)
                     {
-                        var result = CustomMessageBox.Show("There appears to be a drone in the air at the moment. Are you sure you want to continue?", "continue", MessageBoxButtons.YesNo);
+                        var result = CustomMessageBox.Show(Strings.ThereAppearsDroneAirMomentSure, Strings.ThereAppearsDroneAirMomentSureTitle, MessageBoxButtons.YesNo);
                         if (result == (int)DialogResult.Yes)
                             break;
                         return;
@@ -199,11 +199,11 @@ namespace MissionPlanner.Swarm.WaypointLeader
                             exists = true;
                             if (MAV.cs.gpsstatus < 3)
                             {
-                                ((Status)ctl).GPS.Text = "Bad";
+                                ((Status)ctl).GPS.Text = Strings.Bad;
                             }
                             else if (MAV.cs.gpsstatus >= 3)
                             {
-                                ((Status)ctl).GPS.Text = "OK " + Math.Max(MAV.cs.gpsstatus, MAV.cs.gpsstatus2);
+                                ((Status)ctl).GPS.Text = string.Format(Strings.OK2, Math.Max(MAV.cs.gpsstatus, MAV.cs.gpsstatus2));
                             }
                             ((Status)ctl).Armed.Text = MAV.cs.armed.ToString();
                             ((Status)ctl).Mode.Text = MAV.cs.mode;
@@ -299,7 +299,7 @@ namespace MissionPlanner.Swarm.WaypointLeader
                 {
                     if (MAV.cs.armed && MAV.cs.alt > 1)
                     {
-                        var result = CustomMessageBox.Show("There appears to be a drone in the air at the moment. Are you sure you want to continue?", "continue", MessageBoxButtons.YesNo);
+                        var result = CustomMessageBox.Show(Strings.ThereAppearsDroneAirMomentSure, Strings.ThereAppearsDroneAirMomentSureTitle, MessageBoxButtons.YesNo);
                         if (result == (int)DialogResult.Yes)
                             break;
                         return;

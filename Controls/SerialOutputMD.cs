@@ -60,7 +60,7 @@ namespace MissionPlanner.Controls
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Error Connecting\nif using com0com please rename the ports to COM??");
+                    CustomMessageBox.Show(Strings.ErrorConnectingCom0comRenamePorts);
                     return;
                 }
 

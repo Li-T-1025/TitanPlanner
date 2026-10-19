@@ -141,7 +141,7 @@ namespace MissionPlanner.Log
                     catch (Exception ex)
                     {
                         log.Debug(ex.ToString());
-                        CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                        CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                         return;
                     }
                     mine.logreadmode = true;
@@ -371,7 +371,7 @@ namespace MissionPlanner.Log
 
         private void btnDeleteLog_Click(object sender, EventArgs e)
         {
-            if (CustomMessageBox.Show(string.Format("Do you really want to delete {0} logs?", objectListView1.SelectedIndices.Count), MessageBoxButtons: CustomMessageBox.MessageBoxButtons.YesNo) == CustomMessageBox.DialogResult.Yes)
+            if (CustomMessageBox.Show(string.Format(Strings.ReallyWantDeleteLogs, objectListView1.SelectedIndices.Count), MessageBoxButtons: CustomMessageBox.MessageBoxButtons.YesNo) == CustomMessageBox.DialogResult.Yes)
             {
                 foreach (int i in objectListView1.SelectedIndices)
                 {
@@ -394,7 +394,7 @@ namespace MissionPlanner.Log
                         }
                         catch (Exception ex)
                         {
-                            CustomMessageBox.Show(string.Format("Error has been occured when trying to delete {0}\r\n{1}", log.fullname, ex.Message));
+                            CustomMessageBox.Show(string.Format(Strings.ErrorBeenOccuredWhenTryingDelete, log.fullname, ex.Message));
                         }
                     }
 

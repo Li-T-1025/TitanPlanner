@@ -67,19 +67,19 @@ namespace Dowding
 
             CMB_serialport.Items.Clear();
             CMB_serialport.Items.AddRange(SerialPort.GetPortNames());
-            CMB_serialport.Items.Add("TCP Host - 14551");
-            CMB_serialport.Items.Add("TCP Client");
-            CMB_serialport.Items.Add("UDP Host - 14551");
-            CMB_serialport.Items.Add("UDP Client");
+            CMB_serialport.Items.Add(Strings.TCPHost14551);
+            CMB_serialport.Items.Add(Strings.TCPClient);
+            CMB_serialport.Items.Add(Strings.UDPHost14551);
+            CMB_serialport.Items.Add(Strings.UDPClient);
 
 
             
             cmb_cotport.Items.Clear();
             cmb_cotport.Items.AddRange(SerialPort.GetPortNames());
-            cmb_cotport.Items.Add("TCP Host");
-            cmb_cotport.Items.Add("TCP Client");
-            cmb_cotport.Items.Add("UDP Host");
-            cmb_cotport.Items.Add("UDP Client");
+            cmb_cotport.Items.Add(Strings.TCPHost);
+            cmb_cotport.Items.Add(Strings.TCPClient);
+            cmb_cotport.Items.Add(Strings.UDPHost);
+            cmb_cotport.Items.Add(Strings.UDPClient);
 
 
             if (ATthreadrun)
@@ -111,11 +111,11 @@ namespace Dowding
                 Settings.Instance["Dowding_server"] = cmb_server.Text;
                 Settings.Instance.Save();
 
-                CustomMessageBox.Show("Verified!");
+                CustomMessageBox.Show(Strings.Verified);
             }
             catch
             {
-                CustomMessageBox.Show("Username or password invalid");
+                CustomMessageBox.Show(Strings.UsernamePasswordInvalid);
             }
         }
 
@@ -178,33 +178,34 @@ namespace Dowding
             {
                 try
                 {
-                    switch (CMB_serialport.Text)
+                    if (CMB_serialport.Text == Strings.TCPHost14551 || CMB_serialport.Text == Strings.TCPHost)
                     {
-                        case "TCP Host - 14551":
-                        case "TCP Host":
-                            ATStream = new TcpSerial();
-                            CMB_baudrate.SelectedIndex = 0;
-                            listener = new TcpListener(System.Net.IPAddress.Any, 14551);
-                            listener.Start(0);
-                            listener.BeginAcceptTcpClient(new AsyncCallback(DoAcceptTcpClientCallback), listener);
-                            BUT_connect.Text = Strings.Stop;
-                            break;
-                        case "TCP Client":
-                            ATStream = new TcpSerial() {retrys = 999999, autoReconnect = true, ConfigRef = "DowdingATTCP" };
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        case "UDP Host - 14551":
-                            ATStream = new UdpSerial();
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        case "UDP Client":
-                            ATStream = new UdpSerialConnect();
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        default:
-                            ATStream = new SerialPort();
-                            ATStream.PortName = CMB_serialport.Text;
-                            break;
+                        ATStream = new TcpSerial();
+                        CMB_baudrate.SelectedIndex = 0;
+                        listener = new TcpListener(System.Net.IPAddress.Any, 14551);
+                        listener.Start(0);
+                        listener.BeginAcceptTcpClient(new AsyncCallback(DoAcceptTcpClientCallback), listener);
+                        BUT_connect.Text = Strings.Stop;
+                    }
+                    else if (CMB_serialport.Text == Strings.TCPClient)
+                    {
+                        ATStream = new TcpSerial() {retrys = 999999, autoReconnect = true, ConfigRef = "DowdingATTCP" };
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else if (CMB_serialport.Text == Strings.UDPHost14551)
+                    {
+                        ATStream = new UdpSerial();
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else if (CMB_serialport.Text == Strings.UDPClient)
+                    {
+                        ATStream = new UdpSerialConnect();
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        ATStream = new SerialPort();
+                        ATStream.PortName = CMB_serialport.Text;
                     }
                 }
                 catch
@@ -230,7 +231,7 @@ namespace Dowding
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Error Connecting\nif using com0com please rename the ports to COM??");
+                    CustomMessageBox.Show(Strings.ErrorConnecting + "if using com0com please rename the ports to COM??");
                     return;
                 }
 
@@ -260,7 +261,7 @@ namespace Dowding
             catch
             {
                 ATthreadrun = false;
-                CustomMessageBox.Show("Failed to detect antenna tracker");
+                CustomMessageBox.Show(Strings.FailedDetectAntennaTracker);
             }
 
             starttime = DateTime.Now;
@@ -381,7 +382,7 @@ namespace Dowding
                 }
                 catch (Exception ex)
                 {
-                    CustomMessageBox.Show("Failed to connect/send to tracker " + ex.Message, Strings.ERROR);
+                    CustomMessageBox.Show(Strings.FailedConnectSendTracker + " " + ex.Message, Strings.ERROR);
                     return;
                 }
                 finally
@@ -436,7 +437,7 @@ namespace Dowding
             }
             catch
             {
-                CustomMessageBox.Show("Failed to send home location", Strings.ERROR);
+                CustomMessageBox.Show(Strings.FailedSendHomeLocation, Strings.ERROR);
             }
         }
 
@@ -458,41 +459,41 @@ namespace Dowding
             {
                 try
                 {
-                    switch (cmb_cotport.Text)
+                    if (cmb_cotport.Text == Strings.TCPHost14551 || cmb_cotport.Text == Strings.TCPHost)
                     {
-                        case "TCP Host - 14551":
-                        case "TCP Host":
-                            CoTStream = new TcpSerial();
-                            int portt = int.Parse(Settings.Instance["cot_tcphostport", "14551"]);
-                            InputBox.Show("Enter Port", "Please enter a listen port", ref portt);
-                            cmb_cotbaud.SelectedIndex = 0;
-                            listenerCoT = new TcpListener(System.Net.IPAddress.Any, portt);
-                            listenerCoT.Start(0);
-                            listenerCoT.BeginAcceptTcpClient(new AsyncCallback(DoAcceptCoTTcpClientCallback), listenerCoT);
-                            break;
-                        case "TCP Client":
-                            CoTStream = new TcpSerial() {retrys = 999999, autoReconnect = true, ConfigRef = "DowdingCoTTCP" };
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        case "UDP Host - 14551":
-                        case "UDP Host":
-                            int portu = int.Parse(Settings.Instance["cot_udphostport", "10011"]);
-                            InputBox.Show("Enter Port", "Please enter a listen port", ref portu);
-                            Settings.Instance["cot_udphostport"] = portu.ToString();
-                            CoTStream = new UdpSerial()
-                            {
-                                ConfigRef = "cot", Port = portu.ToString(), client = new UdpClient(portu), IsOpen = true
-                            };
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        case "UDP Client":
-                            CoTStream = new UdpSerialConnect();
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        default:
-                            CoTStream = new SerialPort();
-                            CoTStream.PortName = CMB_serialport.Text;
-                            break;
+                        CoTStream = new TcpSerial();
+                        int portt = int.Parse(Settings.Instance["cot_tcphostport", "14551"]);
+                        InputBox.Show("Enter Port", "Please enter a listen port", ref portt);
+                        cmb_cotbaud.SelectedIndex = 0;
+                        listenerCoT = new TcpListener(System.Net.IPAddress.Any, portt);
+                        listenerCoT.Start(0);
+                        listenerCoT.BeginAcceptTcpClient(new AsyncCallback(DoAcceptCoTTcpClientCallback), listenerCoT);
+                    }
+                    else if (cmb_cotport.Text == Strings.TCPClient)
+                    {
+                        CoTStream = new TcpSerial() {retrys = 999999, autoReconnect = true, ConfigRef = "DowdingCoTTCP" };
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else if (cmb_cotport.Text == Strings.UDPHost14551 || cmb_cotport.Text == Strings.UDPHost)
+                    {
+                        int portu = int.Parse(Settings.Instance["cot_udphostport", "10011"]);
+                        InputBox.Show("Enter Port", "Please enter a listen port", ref portu);
+                        Settings.Instance["cot_udphostport"] = portu.ToString();
+                        CoTStream = new UdpSerial()
+                        {
+                            ConfigRef = "cot", Port = portu.ToString(), client = new UdpClient(portu), IsOpen = true
+                        };
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else if (cmb_cotport.Text == Strings.UDPClient)
+                    {
+                        CoTStream = new UdpSerialConnect();
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        CoTStream = new SerialPort();
+                        CoTStream.PortName = CMB_serialport.Text;
                     }
                 }
                 catch
@@ -518,7 +519,7 @@ namespace Dowding
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Error Connecting\nif using com0com please rename the ports to COM??");
+                    CustomMessageBox.Show(Strings.ErrorConnecting + "if using com0com please rename the ports to COM??");
                     return;
                 }
 

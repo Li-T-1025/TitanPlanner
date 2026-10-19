@@ -281,7 +281,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // Disable button and show writing status
             string originalText = BUT_writePIDS.Text;
             BUT_writePIDS.Enabled = false;
-            BUT_writePIDS.Text = "Writing...";
+            BUT_writePIDS.Text = Strings.Writing;
             BUT_writePIDS.Refresh();
 
             try
@@ -292,7 +292,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 {
                     if (MainV2.comPort.BaseStream == null || !MainV2.comPort.BaseStream.IsOpen)
                     {
-                        CustomMessageBox.Show("Your are not connected", Strings.ERROR);
+                        CustomMessageBox.Show(Strings.Connected2, Strings.ERROR);
                         return;
                     }
 
@@ -342,20 +342,20 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             //Check if reboot is required
             if (reboot)
             {
-               CustomMessageBox.Show("Reboot is required for some parameters to take effect.", "Reboot Required");
+               CustomMessageBox.Show(Strings.RebootRequiredSomeParametersTakeEffect, Strings.RebootRequiredSomeParametersTakeEffectTitle);
             }
 
             if (MainV2.comPort.MAV.param.TotalReceived != MainV2.comPort.MAV.param.TotalReported )
             {
                 if (MainV2.comPort.MAV.cs.armed)
                 {
-                    CustomMessageBox.Show("The number of available parameters changed, until full param refresh is done, some parameters will not be available.", "Params");
+                    CustomMessageBox.Show(Strings.NumberAvailableParametersChangedUntilFull, Strings.NumberAvailableParametersChangedUntilFullTitle);
                     //Hack the number of reported params to keep params list available
                     MainV2.comPort.MAV.param.TotalReported = MainV2.comPort.MAV.param.TotalReceived;
                 }
                 else
                 {
-                    CustomMessageBox.Show("The number of available parameters changed. A full param refresh will be done to show all params.", "Params");
+                    CustomMessageBox.Show(Strings.NumberAvailableParametersChangedFullParam, Strings.NumberAvailableParametersChangedUntilFullTitle);
                     //Click on refresh button
                     BUT_rerequestparams_Click(BUT_rerequestparams, null);
                 }
@@ -987,7 +987,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private void BUT_reset_params_Click(object sender, EventArgs e)
         {
             if (
-                CustomMessageBox.Show("This will reset all params to their default value\nAre you sure?", "Reset",
+                CustomMessageBox.Show(Strings.ResetAllParamsTheirDefaultValue, Strings.ResetAllParamsTheirDefaultValueTitle,
                     MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
             {
                 try
@@ -999,7 +999,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
 
                     CustomMessageBox.Show(
-                        "Your board is now rebooting, You will be required to reconnect to the autopilot.");
+                        Strings.BoardNowRebootingRequiredReconnectAutopilot);
                 }
                 catch (Exception ex)
                 {
@@ -1106,11 +1106,11 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Invalid command");
+                CustomMessageBox.Show(Strings.InvalidCommand);
                 return;
             }
 
-            CustomMessageBox.Show("Parameters committed to non-volatile memory");
+            CustomMessageBox.Show(Strings.ParametersCommittedNonVolatileMemory);
             return;
         }
 
@@ -1143,13 +1143,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             if (splitContainer1.Panel1Collapsed)
             {
-                but_collapse.Text = "◀";
+                but_collapse.Text = Strings.Str8;
                 splitContainer1.Panel1Collapsed = false;
                 BuildTree();
             }
             else
             {
-                but_collapse.Text = "▶";
+                but_collapse.Text = Strings.Str7;
                 splitContainer1.Panel1Collapsed = true;
                 filterPrefix = "";
                 FilterTimerOnElapsed(null, null);
@@ -1158,7 +1158,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void BUT_reboot_Click(object sender, EventArgs e)
         {
-            if (CustomMessageBox.Show("Are you sure you want to reboot the autopilot?", "Reboot", MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
+            if (CustomMessageBox.Show(Strings.SureWantRebootAutopilot, Strings.SureWantRebootAutopilotTitle, MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
             {
                 try
                 {

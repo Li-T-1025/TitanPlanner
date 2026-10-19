@@ -261,7 +261,7 @@ namespace MissionPlanner.Log
             }
             catch (Exception err)
             {
-                throw new Exception("There was an error when creating the MAT-file: \n" + err.ToString(), err);
+                throw new Exception(string.Format(Strings.ThereWasAnErrorWhenCreatingTheMATFile, err.ToString()), err);
             }
         }
 
@@ -387,7 +387,7 @@ namespace MissionPlanner.Log
             }
             catch (Exception err)
             {
-                throw new Exception("There was an error when creating the MAT-file: \n" + err.ToString(), err);
+                throw new Exception(string.Format(Strings.ThereWasAnErrorWhenCreatingTheMATFile, err.ToString()), err);
             }
         }
 

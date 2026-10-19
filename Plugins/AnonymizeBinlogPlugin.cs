@@ -1,4 +1,4 @@
-using MissionPlanner;
+ï»¿using MissionPlanner;
 using MissionPlanner.Plugin;
 using System;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace AnonymizeBinlog
 
         public override bool Loaded()
         {
-            Host.FDMenuMap.Items.Add(new ToolStripMenuItem("Anonymize Bin Log...", null, OnAnonymizeBinlog));
+            Host.FDMenuMap.Items.Add(new ToolStripMenuItem(Strings.AnonymizeBinLog, null, OnAnonymizeBinlog));
             return true;
         }
 
@@ -46,7 +46,7 @@ namespace AnonymizeBinlog
             string inputPath;
             using (var ofd = new OpenFileDialog())
             {
-                ofd.Title = "Select ArduPilot .bin log to anonymize";
+                ofd.Title = Strings.SelectArduPilotBinLogToAnonymize;
                 ofd.Filter = "BIN logs (*.bin)|*.bin|All files (*.*)|*.*";
                 ofd.RestoreDirectory = true;
                 if (ofd.ShowDialog() != DialogResult.OK)
@@ -61,7 +61,7 @@ namespace AnonymizeBinlog
             string outputPath;
             using (var sfd = new SaveFileDialog())
             {
-                sfd.Title = "Save anonymized log";
+                sfd.Title = Strings.SaveAnonymizedLog;
                 sfd.Filter = "BIN logs (*.bin)|*.bin|All files (*.*)|*.*";
                 sfd.FileName = Path.GetFileName(defaultOutput);
                 sfd.InitialDirectory = Path.GetDirectoryName(inputPath);
@@ -87,14 +87,14 @@ namespace AnonymizeBinlog
             {
                 Anonymizer.Anonymize(inputPath, outputPath, offsetLat, offsetLon);
                 MessageBox.Show(
-                    $"Anonymization complete.\n\nOutput: {outputPath}\n\nLat offset: {offsetLat:+0.000000;-0.000000}°\nLon offset: {offsetLon:+0.000000;-0.000000}°",
-                    "Anonymize Bin Log",
+                    string.Format(Strings.AnonymizationCompleteOutputLatOffsetLon, outputPath, offsetLat, offsetLon),
+                    Strings.AnonymizationCompleteOutputLatOffsetLonTitle,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Anonymize Bin Log", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Strings.ERROR + " " + ex.Message, Strings.AnonymizationCompleteOutputLatOffsetLonTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -107,7 +107,7 @@ namespace AnonymizeBinlog
 
         private static DialogResult InputBox(string prompt, ref string value)
         {
-            var form = new Form { Text = "Anonymize Bin Log", Width = 360, Height = 140, FormBorderStyle = FormBorderStyle.FixedDialog, StartPosition = FormStartPosition.CenterParent, MaximizeBox = false, MinimizeBox = false };
+            var form = new Form { Text = Strings.AnonymizationCompleteOutputLatOffsetLonTitle, Width = 360, Height = 140, FormBorderStyle = FormBorderStyle.FixedDialog, StartPosition = FormStartPosition.CenterParent, MaximizeBox = false, MinimizeBox = false };
             var label = new Label { Left = 10, Top = 10, Width = 330, Text = prompt };
             var textBox = new TextBox { Left = 10, Top = 35, Width = 330, Text = value };
             var ok = new Button { Text = "OK", Left = 170, Top = 65, Width = 80, DialogResult = DialogResult.OK };
@@ -423,7 +423,7 @@ namespace AnonymizeBinlog
             var coordFields = IdentifyCoordFields(fmtDefs, fmtuMap);
 
             if (coordFields.Count == 0)
-                throw new InvalidOperationException("No coordinate fields found in log file.");
+                throw new InvalidOperationException(Strings.NoCoordinateFieldsFoundInLogFile);
 
             byte[] outData = (byte[])data.Clone();
             int pos = 0;

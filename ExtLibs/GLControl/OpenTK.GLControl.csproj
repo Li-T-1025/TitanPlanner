@@ -103,7 +103,8 @@
     <Reference Include="OpenTK">
       <Name>System.Xml</Name>
     </Reference>
-  </ItemGroup>
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
+</ItemGroup>
   <ItemGroup>
     <Compile Include="GLControlFactory.cs">
       <SubType>Code</SubType>

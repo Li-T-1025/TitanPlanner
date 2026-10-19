@@ -1,4 +1,4 @@
-namespace MissionPlanner.Controls
+﻿namespace MissionPlanner.Controls
 {
     partial class FlightDataActions
     {
@@ -17,6 +17,7 @@ namespace MissionPlanner.Controls
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FlightDataActions));
             this.scrollPanel = new System.Windows.Forms.Panel();
             this.mainFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.grpCommand = new System.Windows.Forms.GroupBox();
@@ -116,7 +117,7 @@ namespace MissionPlanner.Controls
             this.grpCommand.Size = new System.Drawing.Size(350, 180);
             this.grpCommand.TabIndex = 0;
             this.grpCommand.TabStop = false;
-            this.grpCommand.Text = "Control";
+            resources.ApplyResources(this.grpCommand, "grpCommand");
             // 
             // tableCommand
             // 
@@ -165,7 +166,7 @@ namespace MissionPlanner.Controls
             this.btnDoAction.Name = "btnDoAction";
             this.btnDoAction.Size = new System.Drawing.Size(163, 34);
             this.btnDoAction.TabIndex = 1;
-            this.btnDoAction.Text = "Do Action";
+            resources.ApplyResources(this.btnDoAction, "btnDoAction");
             this.btnDoAction.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnDoAction.UseVisualStyleBackColor = true;
             // 
@@ -189,7 +190,7 @@ namespace MissionPlanner.Controls
             this.btnSetWP.Name = "btnSetWP";
             this.btnSetWP.Size = new System.Drawing.Size(163, 34);
             this.btnSetWP.TabIndex = 3;
-            this.btnSetWP.Text = "Set WP";
+            resources.ApplyResources(this.btnSetWP, "btnSetWP");
             this.btnSetWP.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnSetWP.UseVisualStyleBackColor = true;
             // 
@@ -214,7 +215,7 @@ namespace MissionPlanner.Controls
             this.btnSetMode.Name = "btnSetMode";
             this.btnSetMode.Size = new System.Drawing.Size(163, 1);
             this.btnSetMode.TabIndex = 5;
-            this.btnSetMode.Text = "Apply";
+            resources.ApplyResources(this.btnSetMode, "btnSetMode");
             this.btnSetMode.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnSetMode.UseVisualStyleBackColor = true;
             this.btnSetMode.Visible = false;
@@ -239,7 +240,7 @@ namespace MissionPlanner.Controls
             this.btnSetMount.Name = "btnSetMount";
             this.btnSetMount.Size = new System.Drawing.Size(163, 34);
             this.btnSetMount.TabIndex = 7;
-            this.btnSetMount.Text = "Set Mount";
+            resources.ApplyResources(this.btnSetMount, "btnSetMount");
             this.btnSetMount.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnSetMount.UseVisualStyleBackColor = true;
             // 
@@ -250,7 +251,7 @@ namespace MissionPlanner.Controls
             this.btnRestartMission.Name = "btnRestartMission";
             this.btnRestartMission.Size = new System.Drawing.Size(163, 34);
             this.btnRestartMission.TabIndex = 8;
-            this.btnRestartMission.Text = "Restart Mission";
+            resources.ApplyResources(this.btnRestartMission, "btnRestartMission");
             this.btnRestartMission.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnRestartMission.UseVisualStyleBackColor = true;
             // 
@@ -261,7 +262,7 @@ namespace MissionPlanner.Controls
             this.btnResumeMission.Name = "btnResumeMission";
             this.btnResumeMission.Size = new System.Drawing.Size(163, 34);
             this.btnResumeMission.TabIndex = 9;
-            this.btnResumeMission.Text = "Resume Mission";
+            resources.ApplyResources(this.btnResumeMission, "btnResumeMission");
             this.btnResumeMission.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnResumeMission.UseVisualStyleBackColor = true;
             // 
@@ -276,7 +277,7 @@ namespace MissionPlanner.Controls
             this.grpSetpoints.Size = new System.Drawing.Size(350, 180);
             this.grpSetpoints.TabIndex = 1;
             this.grpSetpoints.TabStop = false;
-            this.grpSetpoints.Text = "Setpoints";
+            resources.ApplyResources(this.grpSetpoints, "grpSetpoints");
             // 
             // tableSetpoints
             // 
@@ -310,7 +311,7 @@ namespace MissionPlanner.Controls
             this.lblHomeAlt.Name = "lblHomeAlt";
             this.lblHomeAlt.Size = new System.Drawing.Size(65, 32);
             this.lblHomeAlt.TabIndex = 0;
-            this.lblHomeAlt.Text = "Home Alt (m):";
+            resources.ApplyResources(this.lblHomeAlt, "lblHomeAlt");
             // 
             // btnHomeAlt
             // 
@@ -320,7 +321,7 @@ namespace MissionPlanner.Controls
             this.btnHomeAlt.Name = "btnHomeAlt";
             this.btnHomeAlt.Size = new System.Drawing.Size(252, 34);
             this.btnHomeAlt.TabIndex = 1;
-            this.btnHomeAlt.Text = "Set Home Alt";
+            resources.ApplyResources(this.btnHomeAlt, "btnHomeAlt");
             this.btnHomeAlt.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnHomeAlt.UseVisualStyleBackColor = true;
             // 
@@ -332,7 +333,7 @@ namespace MissionPlanner.Controls
             this.lblSpeed.Name = "lblSpeed";
             this.lblSpeed.Size = new System.Drawing.Size(51, 32);
             this.lblSpeed.TabIndex = 2;
-            this.lblSpeed.Text = "Speed (m/s):";
+            resources.ApplyResources(this.lblSpeed, "lblSpeed");
             // 
             // modSetSpeed
             // 
@@ -374,7 +375,7 @@ namespace MissionPlanner.Controls
             this.lblAlt.Name = "lblAlt";
             this.lblAlt.Size = new System.Drawing.Size(54, 32);
             this.lblAlt.TabIndex = 4;
-            this.lblAlt.Text = "Altitude (m):";
+            resources.ApplyResources(this.lblAlt, "lblAlt");
             // 
             // modSetAlt
             // 
@@ -416,7 +417,7 @@ namespace MissionPlanner.Controls
             this.lblLoiterRad.Name = "lblLoiterRad";
             this.lblLoiterRad.Size = new System.Drawing.Size(72, 32);
             this.lblLoiterRad.TabIndex = 6;
-            this.lblLoiterRad.Text = "Loiter Rad (m):";
+            resources.ApplyResources(this.lblLoiterRad, "lblLoiterRad");
             // 
             // modSetLoiterRad
             // 
@@ -461,7 +462,7 @@ namespace MissionPlanner.Controls
             this.grpTools.Size = new System.Drawing.Size(350, 180);
             this.grpTools.TabIndex = 2;
             this.grpTools.TabStop = false;
-            this.grpTools.Text = "Tools";
+            resources.ApplyResources(this.grpTools, "grpTools");
             // 
             // tableTools
             // 
@@ -491,7 +492,7 @@ namespace MissionPlanner.Controls
             this.btnRawSensor.Name = "btnRawSensor";
             this.btnRawSensor.Size = new System.Drawing.Size(163, 34);
             this.btnRawSensor.TabIndex = 0;
-            this.btnRawSensor.Text = "Raw Sensor";
+            resources.ApplyResources(this.btnRawSensor, "btnRawSensor");
             this.btnRawSensor.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnRawSensor.UseVisualStyleBackColor = true;
             // 
@@ -502,7 +503,7 @@ namespace MissionPlanner.Controls
             this.btnJoystick.Name = "btnJoystick";
             this.btnJoystick.Size = new System.Drawing.Size(163, 34);
             this.btnJoystick.TabIndex = 1;
-            this.btnJoystick.Text = "Joystick";
+            resources.ApplyResources(this.btnJoystick, "btnJoystick");
             this.btnJoystick.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnJoystick.UseVisualStyleBackColor = true;
             // 
@@ -513,7 +514,7 @@ namespace MissionPlanner.Controls
             this.btnMessage.Name = "btnMessage";
             this.btnMessage.Size = new System.Drawing.Size(163, 34);
             this.btnMessage.TabIndex = 2;
-            this.btnMessage.Text = "Message";
+            resources.ApplyResources(this.btnMessage, "btnMessage");
             this.btnMessage.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnMessage.UseVisualStyleBackColor = true;
             // 
@@ -524,7 +525,7 @@ namespace MissionPlanner.Controls
             this.btnClearTrack.Name = "btnClearTrack";
             this.btnClearTrack.Size = new System.Drawing.Size(163, 34);
             this.btnClearTrack.TabIndex = 3;
-            this.btnClearTrack.Text = "Clear Track";
+            resources.ApplyResources(this.btnClearTrack, "btnClearTrack");
             this.btnClearTrack.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnClearTrack.UseVisualStyleBackColor = true;
             // 
@@ -535,7 +536,7 @@ namespace MissionPlanner.Controls
             this.btnReboot.Name = "btnReboot";
             this.btnReboot.Size = new System.Drawing.Size(163, 34);
             this.btnReboot.TabIndex = 4;
-            this.btnReboot.Text = "Reboot";
+            resources.ApplyResources(this.btnReboot, "btnReboot");
             this.btnReboot.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnReboot.UseVisualStyleBackColor = true;
             // 
@@ -546,7 +547,7 @@ namespace MissionPlanner.Controls
             this.btnAbortLanding.Name = "btnAbortLanding";
             this.btnAbortLanding.Size = new System.Drawing.Size(163, 34);
             this.btnAbortLanding.TabIndex = 5;
-            this.btnAbortLanding.Text = "Abort Land";
+            resources.ApplyResources(this.btnAbortLanding, "btnAbortLanding");
             this.btnAbortLanding.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnAbortLanding.UseVisualStyleBackColor = true;
             // 
@@ -561,7 +562,7 @@ namespace MissionPlanner.Controls
             this.grpPayload.Size = new System.Drawing.Size(350, 180);
             this.grpPayload.TabIndex = 3;
             this.grpPayload.TabStop = false;
-            this.grpPayload.Text = "Payload";
+            resources.ApplyResources(this.grpPayload, "grpPayload");
             this.grpPayload.Visible = false;
             // 
             // tablePayload
@@ -595,7 +596,7 @@ namespace MissionPlanner.Controls
             this.groupBoxPitch.Size = new System.Drawing.Size(124, 154);
             this.groupBoxPitch.TabIndex = 0;
             this.groupBoxPitch.TabStop = false;
-            this.groupBoxPitch.Text = "Tilt";
+            resources.ApplyResources(this.groupBoxPitch, "groupBoxPitch");
             // 
             // trackBarPitch
             // 
@@ -627,7 +628,7 @@ namespace MissionPlanner.Controls
             this.groupBoxYaw.Size = new System.Drawing.Size(202, 74);
             this.groupBoxYaw.TabIndex = 1;
             this.groupBoxYaw.TabStop = false;
-            this.groupBoxYaw.Text = "Pan";
+            resources.ApplyResources(this.groupBoxYaw, "groupBoxYaw");
             // 
             // txtYawPos
             // 
@@ -658,7 +659,7 @@ namespace MissionPlanner.Controls
             this.groupBoxRoll.Size = new System.Drawing.Size(202, 74);
             this.groupBoxRoll.TabIndex = 2;
             this.groupBoxRoll.TabStop = false;
-            this.groupBoxRoll.Text = "Roll";
+            resources.ApplyResources(this.groupBoxRoll, "groupBoxRoll");
             // 
             // txtRollPos
             // 
@@ -688,7 +689,7 @@ namespace MissionPlanner.Controls
             this.btnResetGimbal.Name = "btnResetGimbal";
             this.btnResetGimbal.Size = new System.Drawing.Size(124, 34);
             this.btnResetGimbal.TabIndex = 3;
-            this.btnResetGimbal.Text = "Reset Position";
+            resources.ApplyResources(this.btnResetGimbal, "btnResetGimbal");
             this.btnResetGimbal.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnResetGimbal.UseVisualStyleBackColor = true;
             // 
@@ -699,7 +700,7 @@ namespace MissionPlanner.Controls
             this.btnGimbalVideo.Name = "btnGimbalVideo";
             this.btnGimbalVideo.Size = new System.Drawing.Size(202, 34);
             this.btnGimbalVideo.TabIndex = 4;
-            this.btnGimbalVideo.Text = "Video Control";
+            resources.ApplyResources(this.btnGimbalVideo, "btnGimbalVideo");
             this.btnGimbalVideo.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnGimbalVideo.UseVisualStyleBackColor = true;
             // 

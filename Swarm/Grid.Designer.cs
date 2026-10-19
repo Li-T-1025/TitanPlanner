@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Grid));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.changeAltToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CHK_vertical = new System.Windows.Forms.CheckBox();
@@ -46,7 +47,7 @@
             // 
             this.changeAltToolStripMenuItem.Name = "changeAltToolStripMenuItem";
             this.changeAltToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.changeAltToolStripMenuItem.Text = "Change Alt";
+            resources.ApplyResources(this.changeAltToolStripMenuItem, "changeAltToolStripMenuItem");
             this.changeAltToolStripMenuItem.Click += new System.EventHandler(this.changeAltToolStripMenuItem_Click);
             // 
             // CHK_vertical
@@ -57,7 +58,7 @@
             this.CHK_vertical.Name = "CHK_vertical";
             this.CHK_vertical.Size = new System.Drawing.Size(61, 17);
             this.CHK_vertical.TabIndex = 1;
-            this.CHK_vertical.Text = "Vertical";
+            resources.ApplyResources(this.CHK_vertical, "CHK_vertical");
             this.CHK_vertical.UseVisualStyleBackColor = true;
             this.CHK_vertical.CheckedChanged += new System.EventHandler(this.CHK_vertical_CheckedChanged);
             // 

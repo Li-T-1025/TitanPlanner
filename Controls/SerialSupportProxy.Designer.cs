@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SerialSupportProxy));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TXT_host = new System.Windows.Forms.TextBox();
@@ -49,7 +50,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Server";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -59,7 +60,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Support ID";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // TXT_host
             // 
@@ -131,7 +132,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.BUT_connect, 2);
             this.BUT_connect.Size = new System.Drawing.Size(75, 23);
             this.BUT_connect.TabIndex = 4;
-            this.BUT_connect.Text = "Connect";
+            resources.ApplyResources(this.BUT_connect, "BUT_connect");
             this.BUT_connect.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_connect.UseVisualStyleBackColor = true;
             this.BUT_connect.Click += new System.EventHandler(this.BUT_connect_Click);
@@ -144,7 +145,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Protocol";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // rad_udp
             // 
@@ -155,7 +156,7 @@
             this.rad_udp.Size = new System.Drawing.Size(48, 17);
             this.rad_udp.TabIndex = 6;
             this.rad_udp.TabStop = true;
-            this.rad_udp.Text = "UDP";
+            resources.ApplyResources(this.rad_udp, "rad_udp");
             this.rad_udp.UseVisualStyleBackColor = true;
             // 
             // rad_tcp
@@ -165,7 +166,7 @@
             this.rad_tcp.Name = "rad_tcp";
             this.rad_tcp.Size = new System.Drawing.Size(46, 17);
             this.rad_tcp.TabIndex = 7;
-            this.rad_tcp.Text = "TCP";
+            resources.ApplyResources(this.rad_tcp, "rad_tcp");
             this.rad_tcp.UseVisualStyleBackColor = true;
             // 
             // SerialSupportProxy
@@ -177,7 +178,7 @@
             this.MaximizeBox = false;
             this.Name = "SerialSupportProxy";
             this.ShowIcon = false;
-            this.Text = "Support Proxy Connection";
+            resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.NUM_port)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

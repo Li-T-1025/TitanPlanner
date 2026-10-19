@@ -611,9 +611,9 @@ namespace MissionPlanner.Utilities
             }
 
             if (input == null)
-                throw new Exception("Bad Type Null");
+                throw new Exception(Strings.BadTypeNull);
             else
-                throw new Exception("Bad Type " + input.GetType().ToString());
+                throw new Exception(string.Format(Strings.BadType, input.GetType().ToString()));
         }
 
         // On timeout the worker is left to finish on its own: Thread.Abort is unsafe mid-call

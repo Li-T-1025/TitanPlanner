@@ -14,7 +14,7 @@ namespace MissionPlanner.Utilities
                 GStreamer.DownloadGStreamer(((i, s) =>
                 {
                     prd.UpdateProgressAndStatus(i, s);
-                    if (prd.doWorkArgs.CancelRequested) throw new Exception("User Request");
+                    if (prd.doWorkArgs.CancelRequested) throw new Exception(Strings.UserRequest);
                 }));
             };
             prd.RunBackgroundOperationAsync();

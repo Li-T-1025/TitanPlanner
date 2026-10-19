@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigTradHeli4));
             this.groupBoxservo = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.mavlinkCheckBoxrev8 = new MissionPlanner.Controls.MavlinkCheckBox();
@@ -138,7 +139,7 @@
             this.groupBoxservo.Size = new System.Drawing.Size(444, 256);
             this.groupBoxservo.TabIndex = 0;
             this.groupBoxservo.TabStop = false;
-            this.groupBoxservo.Text = "Servo Setup";
+            resources.ApplyResources(this.groupBoxservo, "groupBoxservo");
             // 
             // tableLayoutPanel4
             // 
@@ -481,7 +482,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Reversed";
+            resources.ApplyResources(this.label6, "label6");
             // 
             // label5
             // 
@@ -491,7 +492,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Trim";
+            resources.ApplyResources(this.label5, "label5");
             // 
             // label4
             // 
@@ -501,7 +502,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Max";
+            resources.ApplyResources(this.label4, "label4");
             // 
             // label3
             // 
@@ -511,7 +512,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Min";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // label1
             // 
@@ -521,7 +522,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Servo";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -531,7 +532,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Function";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // label8
             // 
@@ -833,7 +834,7 @@
             this.groupBoxswash.Size = new System.Drawing.Size(200, 100);
             this.groupBoxswash.TabIndex = 1;
             this.groupBoxswash.TabStop = false;
-            this.groupBoxswash.Text = "Swashplate Setup";
+            resources.ApplyResources(this.groupBoxswash, "groupBoxswash");
             // 
             // tableLayoutPanel5
             // 
@@ -860,7 +861,7 @@
             this.groupBoxthrot.Size = new System.Drawing.Size(200, 100);
             this.groupBoxthrot.TabIndex = 1;
             this.groupBoxthrot.TabStop = false;
-            this.groupBoxthrot.Text = "Throttle Settings";
+            resources.ApplyResources(this.groupBoxthrot, "groupBoxthrot");
             // 
             // tableLayoutPanel3
             // 
@@ -887,7 +888,7 @@
             this.groupBoxgover.Size = new System.Drawing.Size(200, 100);
             this.groupBoxgover.TabIndex = 1;
             this.groupBoxgover.TabStop = false;
-            this.groupBoxgover.Text = "Governor Settings";
+            resources.ApplyResources(this.groupBoxgover, "groupBoxgover");
             // 
             // tableLayoutPanel2
             // 
@@ -914,7 +915,7 @@
             this.groupBoxmisc.Size = new System.Drawing.Size(200, 100);
             this.groupBoxmisc.TabIndex = 1;
             this.groupBoxmisc.TabStop = false;
-            this.groupBoxmisc.Text = "Misc Settings";
+            resources.ApplyResources(this.groupBoxmisc, "groupBoxmisc");
             // 
             // tableLayoutPanel1
             // 

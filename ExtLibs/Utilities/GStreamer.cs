@@ -1205,13 +1205,13 @@ namespace MissionPlanner.Utilities
             }
             catch (DllNotFoundException ex)
             {
-                CustomMessageBox.Show("The file was not found at " + GstLaunch +
+                CustomMessageBox.Show(Strings.TheFileWasNotFoundAt + GstLaunch +
                                       "\nPlease verify permissions " + ex.ToString());
                 return;
             }
             catch (BadImageFormatException)
             {
-                CustomMessageBox.Show("The incorrect exe architecture has been detected at " + GstLaunch +
+                CustomMessageBox.Show(Strings.IncorrectExeArchitectureDetectedAt + GstLaunch +
                                       "\nPlease install gstreamer for the correct architecture");
                 return;
             }

@@ -1,4 +1,4 @@
-#if !LIB
+﻿#if !LIB
 extern alias Drawing;
 #endif
 
@@ -935,7 +935,7 @@ namespace MissionPlanner
                 //System.ArgumentException: Font 'Arial' does not support style 'Regular'.
 
                 log.Fatal(e);
-                CustomMessageBox.Show($"{e}\n\n Font Issues? Please install this http://www.microsoft.com/en-us/download/details.aspx?id=16083");
+                CustomMessageBox.Show(string.Format(Strings.FontIssuesPleaseInstallHttpWww, e));
                 //splash.Close();
                 //this.Close();
                 Application.Exit();
@@ -943,7 +943,7 @@ namespace MissionPlanner
             catch (Exception e)
             {
                 log.Fatal(e);
-                CustomMessageBox.Show($"A Major error has occured : {e}");
+                CustomMessageBox.Show(string.Format(Strings.MajorErrorOccured, e));
                 Application.Exit();
             }
 
@@ -1106,7 +1106,7 @@ namespace MissionPlanner
 
             if (CurrentState.rateattitudebackup == 0) // initilised to 10, configured above from save
             {
-                CustomMessageBox.Show("NOTE: your attitude rate is 0, the hud will not work\nChange in Configuration > Planner > Telemetry Rates");
+                CustomMessageBox.Show(Strings.NOTEAttitudeRate0HudWork);
             }
 
             // create log dir if it doesnt exist
@@ -1140,7 +1140,7 @@ namespace MissionPlanner
 
                     if (Framework < 4.0)
                     {
-                        CustomMessageBox.Show("This program requires .NET Framework 4.0. You currently have " + Framework);
+                        CustomMessageBox.Show(Strings.ProgramRequiresNETFramework40 + " " + Framework);
                     }
                 }
                 catch (Exception ex)
@@ -1364,13 +1364,13 @@ namespace MissionPlanner
         {
             _connectionControl.CMB_serialport.Items.Clear();
 
-            _connectionControl.CMB_serialport.Items.Add("AUTO");
+            _connectionControl.CMB_serialport.Items.Add(Strings.Auto);
             _connectionControl.CMB_serialport.Items.AddRange(SerialPort.GetPortNames());
 
-            _connectionControl.CMB_serialport.Items.Add("TCP");
-            _connectionControl.CMB_serialport.Items.Add("UDP");
-            _connectionControl.CMB_serialport.Items.Add("UDPCl");
-            _connectionControl.CMB_serialport.Items.Add("WS");
+            _connectionControl.CMB_serialport.Items.Add(Strings.TCP);
+            _connectionControl.CMB_serialport.Items.Add(Strings.UDP);
+            _connectionControl.CMB_serialport.Items.Add(Strings.UDPCl);
+            _connectionControl.CMB_serialport.Items.Add(Strings.WS);
 
             foreach (var item in ExtraConnectionList)
             {
@@ -1410,7 +1410,7 @@ namespace MissionPlanner
 
                     if (ans == false)
                     {
-                        CustomMessageBox.Show("Bad Password", "Bad Password");
+                        CustomMessageBox.Show(Strings.BadPassword, Strings.BadPasswordTitle);
                     }
                 }
 
@@ -1442,7 +1442,7 @@ namespace MissionPlanner
 
                     if (ans == false)
                     {
-                        CustomMessageBox.Show("Bad Password", "Bad Password");
+                        CustomMessageBox.Show(Strings.BadPassword, Strings.BadPasswordTitle);
                     }
                 }
 
@@ -1532,11 +1532,11 @@ namespace MissionPlanner
                     this.BeginInvokeIfRequired(() =>
                     {
                         if (comPort.BaseStream is TcpSerial)
-                            _connectionControl.CMB_serialport.Text = "TCP";
+                            _connectionControl.CMB_serialport.Text = Strings.TCP;
                         if (comPort.BaseStream is UdpSerial)
-                            _connectionControl.CMB_serialport.Text = "UDP";
+                            _connectionControl.CMB_serialport.Text = Strings.UDP;
                         if (comPort.BaseStream is UdpSerialConnect)
-                            _connectionControl.CMB_serialport.Text = "UDPCl";
+                            _connectionControl.CMB_serialport.Text = Strings.UDPCl;
                         if (comPort.BaseStream is SerialPort)
                         {
                             _connectionControl.CMB_serialport.Text = comPort.BaseStream.PortName;
@@ -1548,19 +1548,19 @@ namespace MissionPlanner
                     break;
                 case "TCP":
                     comPort.BaseStream = new TcpSerial();
-                    _connectionControl.CMB_serialport.Text = "TCP";
+                    _connectionControl.CMB_serialport.Text = Strings.TCP;
                     break;
                 case "UDP":
                     comPort.BaseStream = new UdpSerial();
-                    _connectionControl.CMB_serialport.Text = "UDP";
+                    _connectionControl.CMB_serialport.Text = Strings.UDP;
                     break;
                 case "WS":
                     comPort.BaseStream = new WebSocket();
-                    _connectionControl.CMB_serialport.Text = "WS";
+                    _connectionControl.CMB_serialport.Text = Strings.WS;
                     break;
                 case "UDPCl":
                     comPort.BaseStream = new UdpSerialConnect();
-                    _connectionControl.CMB_serialport.Text = "UDPCl";
+                    _connectionControl.CMB_serialport.Text = Strings.UDPCl;
                     break;
                 case "AUTO":
                     // do autoscan
@@ -1912,7 +1912,7 @@ namespace MissionPlanner
                     log.Warn(ex2);
                 }
 
-                CustomMessageBox.Show($"Can not establish a connection\n\n{ex.Message}");
+                CustomMessageBox.Show(string.Format(Strings.CanEstablishConnection, ex.Message));
                 return;
             }
         }
@@ -2980,7 +2980,7 @@ namespace MissionPlanner
                                         (Action)
                                         delegate
                                         {
-                                            CustomMessageBox.Show("Failed to update home location (" +
+                                            CustomMessageBox.Show(Strings.FailedUpdateHomeLocation +
                                                                   MainV2.comPort.MAV.sysid + ")");
                                         });
                                 }
@@ -3575,8 +3575,8 @@ namespace MissionPlanner
                         if (!GStreamer.GstLaunchExists)
                         {
                             if (CustomMessageBox.Show(
-                                    "A video stream has been detected, but gstreamer has not been configured/installed.\nDo you want to install/config it now?",
-                                    "GStreamer", System.Windows.Forms.MessageBoxButtons.YesNo) ==
+                                    Strings.VideoStreamBeenDetectedButGstreamer,
+                                    Strings.VideoStreamBeenDetectedButGstreamerTitle, System.Windows.Forms.MessageBoxButtons.YesNo) ==
                                 (int) System.Windows.Forms.DialogResult.Yes)
                             {
                                 GStreamerUI.DownloadGStreamer();
@@ -3730,7 +3730,7 @@ namespace MissionPlanner
                                 ExtraConnectionList.Add(new AutoConnect.ConnectionInfo("ZeroConf " + zeroconfHost.DisplayName, false, port, AutoConnect.ProtocolType.Udp, AutoConnect.ConnectionFormat.MAVLink, AutoConnect.Direction.Outbound, ip));
 
                             if (CustomMessageBox.Show(
-                                    "A Mavlink stream has been detected, " + zeroconfHost.DisplayName + "(" +
+                                    Strings.MavlinkStreamBeenDetected + " " + zeroconfHost.DisplayName + "(" +
                                     zeroconfHost.Id + "). Would you like to connect to it?",
                                     "Mavlink", System.Windows.Forms.MessageBoxButtons.YesNo) ==
                                 (int) System.Windows.Forms.DialogResult.Yes)
@@ -3919,7 +3919,7 @@ namespace MissionPlanner
                         }
                         catch (Exception ex)
                         {
-                            CustomMessageBox.Show("Start script failed: " + ex.ToString(), Strings.ERROR);
+                            CustomMessageBox.Show(Strings.StartScriptFailed + " " + ex.ToString(), Strings.ERROR);
                         }
                     });
                 }
@@ -3952,7 +3952,7 @@ namespace MissionPlanner
                     }
                     else
                     {
-                        CustomMessageBox.Show("Failed to start joystick");
+                        CustomMessageBox.Show(Strings.FailedStartJoystick);
                     }
                 }
 
@@ -3961,7 +3961,7 @@ namespace MissionPlanner
                     var inject = new ConfigSerialInjectGPS();
                     if (cmds["rtk"].ToLower().Contains("http"))
                     {
-                        inject.CMB_serialport.Text = "NTRIP";
+                        inject.CMB_serialport.Text = Strings.NTRIP;
                         var nt = new CommsNTRIP();
                         ConfigSerialInjectGPS.comPort = nt;
                         Task.Run(() =>
@@ -4003,8 +4003,8 @@ namespace MissionPlanner
                     if (!GStreamer.GstLaunchExists)
                     {
                         if (CustomMessageBox.Show(
-                                "A video stream has been detected, but gstreamer has not been configured/installed.\nDo you want to install/config it now?",
-                                "GStreamer", System.Windows.Forms.MessageBoxButtons.YesNo) ==
+                                Strings.VideoStreamBeenDetectedButGstreamer,
+                                Strings.VideoStreamBeenDetectedButGstreamerTitle, System.Windows.Forms.MessageBoxButtons.YesNo) ==
                             (int) System.Windows.Forms.DialogResult.Yes)
                         {
                             GStreamerUI.DownloadGStreamer();
@@ -4434,7 +4434,7 @@ namespace MissionPlanner
             {
                 if (comPort.BaseStream.IsOpen)
                 {
-                    if (CustomMessageBox.Show("Are you sure you want to reboot the autopilot?", "Reboot",
+                    if (CustomMessageBox.Show(Strings.SureWantRebootAutopilot, Strings.SureWantRebootAutopilotTitle,
                             MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
                     {
                         try
@@ -4489,13 +4489,13 @@ namespace MissionPlanner
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Invalid command");
+                    CustomMessageBox.Show(Strings.InvalidCommand);
                     return true;
                 }
 
                 //read
                 ///////MainV2.comPort.doCommand(MAVLink09.MAV_CMD.PREFLIGHT_STORAGE, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-                CustomMessageBox.Show("Done MAV_ACTION_STORAGE_WRITE");
+                CustomMessageBox.Show(Strings.DoneMAVACTIONSTORAGEWRITE);
                 return true;
             }
 
@@ -4744,7 +4744,7 @@ namespace MissionPlanner
             }
             catch
             {
-                CustomMessageBox.Show("Link open failed. check your default webpage association");
+                CustomMessageBox.Show(Strings.LinkOpenFailedCheckDefaultWebpage);
             }
         }
 
@@ -4990,7 +4990,7 @@ namespace MissionPlanner
             }
             catch
             {
-                CustomMessageBox.Show("Failed to open url");
+                CustomMessageBox.Show(Strings.FailedOpenUrl);
             }
         }
 

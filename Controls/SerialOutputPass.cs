@@ -63,9 +63,9 @@ namespace MissionPlanner.Controls
                 case "Serial":
                     lblDirection.Visible = false;
                     cmbDirection.Visible = false;
-                    lblPort.Text = "COM Port:";
+                    lblPort.Text = Strings.COMPort;
                     txtPort.Text = "";
-                    lblExtra.Text = "Baud Rate:";
+                    lblExtra.Text = Strings.BaudRate;
                     txtExtra.Text = "115200";
                     break;
 
@@ -76,7 +76,7 @@ namespace MissionPlanner.Controls
 
                     if (direction == "Inbound")
                     {
-                        lblPort.Text = "Listen Port:";
+                        lblPort.Text = Strings.ListenPort;
                         txtPort.Text = "14550";
                         lblExtra.Text = "";
                         txtExtra.Text = "";
@@ -85,9 +85,9 @@ namespace MissionPlanner.Controls
                     }
                     else // Outbound
                     {
-                        lblPort.Text = "Port:";
+                        lblPort.Text = Strings.Port1;
                         txtPort.Text = "14550";
-                        lblExtra.Text = "Host:";
+                        lblExtra.Text = Strings.Host;
                         txtExtra.Text = "127.0.0.1";
                         txtExtra.Visible = true;
                         lblExtra.Visible = true;
@@ -106,7 +106,7 @@ namespace MissionPlanner.Controls
 
                 if (string.IsNullOrEmpty(type))
                 {
-                    CustomMessageBox.Show("Please select a connection type.");
+                    CustomMessageBox.Show(Strings.PleaseSelectConnectionType);
                     return;
                 }
 
@@ -123,7 +123,7 @@ namespace MissionPlanner.Controls
                             int port;
                             if (!int.TryParse(txtPort.Text, out port))
                             {
-                                CustomMessageBox.Show("Invalid port number.");
+                                CustomMessageBox.Show(Strings.InvalidPortNumber);
                                 return;
                             }
 
@@ -142,7 +142,7 @@ namespace MissionPlanner.Controls
 
                             if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(port))
                             {
-                                CustomMessageBox.Show("Please enter host and port.");
+                                CustomMessageBox.Show(Strings.PleaseEnterHostPort);
                                 return;
                             }
 
@@ -167,7 +167,7 @@ namespace MissionPlanner.Controls
                             int port;
                             if (!int.TryParse(txtPort.Text, out port))
                             {
-                                CustomMessageBox.Show("Invalid port number.");
+                                CustomMessageBox.Show(Strings.InvalidPortNumber);
                                 return;
                             }
 
@@ -189,7 +189,7 @@ namespace MissionPlanner.Controls
                             int port;
                             if (!int.TryParse(txtPort.Text, out port) || string.IsNullOrEmpty(host))
                             {
-                                CustomMessageBox.Show("Please enter valid host and port.");
+                                CustomMessageBox.Show(Strings.PleaseEnterValidHostPort);
                                 return;
                             }
 
@@ -212,13 +212,13 @@ namespace MissionPlanner.Controls
                         int baudRate;
                         if (!int.TryParse(txtExtra.Text, out baudRate))
                         {
-                            CustomMessageBox.Show("Invalid baud rate.");
+                            CustomMessageBox.Show(Strings.InvalidBaudRate1);
                             return;
                         }
 
                         if (string.IsNullOrEmpty(comPort))
                         {
-                            CustomMessageBox.Show("Please enter a COM port name.");
+                            CustomMessageBox.Show(Strings.PleaseEnterCOMPortName);
                             return;
                         }
 
@@ -233,7 +233,7 @@ namespace MissionPlanner.Controls
                         break;
 
                     default:
-                        CustomMessageBox.Show("Unknown connection type.");
+                        CustomMessageBox.Show(Strings.UnknownConnectionType);
                         return;
                 }
 
@@ -267,7 +267,7 @@ namespace MissionPlanner.Controls
             catch (Exception ex)
             {
                 Log($"Error: {ex.Message}");
-                CustomMessageBox.Show($"Failed to create connection: {ex.Message}");
+                CustomMessageBox.Show(string.Format(Strings.FailedCreateConnection, ex.Message));
             }
         }
 

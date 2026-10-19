@@ -239,13 +239,13 @@ namespace MissionPlanner.Comms
                 if (string.IsNullOrEmpty(vidStr))
                 {
                     if (OnInputBoxShow("USB Vendor ID", "Enter VID in hex (e.g., 2341)", ref vidStr) == inputboxreturn.Cancel)
-                        throw new Exception("Canceled by user");
+                        throw new Exception(Strings.CanceledByUser);
                 }
 
                 if (string.IsNullOrEmpty(pidStr))
                 {
                     if (OnInputBoxShow("USB Product ID", "Enter PID in hex (e.g., 0043)", ref pidStr) == inputboxreturn.Cancel)
-                        throw new Exception("Canceled by user");
+                        throw new Exception(Strings.CanceledByUser);
                 }
 
                 vendorId = ushort.Parse(vidStr, System.Globalization.NumberStyles.HexNumber);
@@ -266,7 +266,7 @@ namespace MissionPlanner.Comms
                 usbDevice = USBDevice.GetSingleDeviceByPath(devicePath);
 
                 if (usbDevice == null)
-                    throw new Exception("Failed to open WinUSB device");
+                    throw new Exception(Strings.FailedToOpenWinUSBDevice);
 
                 // Scan interfaces for CDC ACM and configure endpoints
                 ConfigureCdcAcm();
@@ -657,7 +657,7 @@ namespace MissionPlanner.Comms
             if (buffer == null) throw new ArgumentNullException(nameof(buffer));
             if (offset < 0) throw new ArgumentOutOfRangeException(nameof(offset));
             if (count < 0) throw new ArgumentOutOfRangeException(nameof(count));
-            if (!isOpen) throw new InvalidOperationException("Device not open");
+            if (!isOpen) throw new InvalidOperationException(Strings.DeviceNotOpen);
 
             var deadline = DateTime.Now.AddMilliseconds(ReadTimeout);
 
@@ -669,7 +669,7 @@ namespace MissionPlanner.Comms
 
             if (ReadTimeout > 0 && BytesToRead == 0)
             {
-                throw new TimeoutException("No data available");
+                throw new TimeoutException(Strings.NoDataAvailable);
             }
 
             var read = Math.Min(count, BytesToRead);
@@ -752,7 +752,7 @@ namespace MissionPlanner.Comms
         public void Write(byte[] buffer, int offset, int count)
         {
             if (!isOpen)
-                throw new InvalidOperationException("Device not open");
+                throw new InvalidOperationException(Strings.DeviceNotOpen);
 
             if (buffer == null)
                 throw new ArgumentNullException(nameof(buffer));
@@ -760,7 +760,7 @@ namespace MissionPlanner.Comms
             try
             {
                 if (outPipe == null)
-                    throw new InvalidOperationException("Output pipe not available");
+                    throw new InvalidOperationException(Strings.OutputPipeNotAvailable);
 
                 byte[] writeData = buffer;
 

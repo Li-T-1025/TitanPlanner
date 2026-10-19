@@ -54,7 +54,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     }
                     catch(Exception ex)
                     {
-                        CustomMessageBox.Show("Error reading SerialOptionRules.json file: " + ex.Message);
+                        CustomMessageBox.Show(Strings.ErrorReadingSerialOptionRulesJsonFile + " " + ex.Message);
                     }
                 }
                 var baudOptions = ParameterMetaDataRepository.GetParameterOptionsInt("SERIAL1_BAUD", MainV2.comPort.MAV.cs.firmware.ToString());
@@ -209,7 +209,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 }
                 //Port Name Label
                 Label label = new Label();
-                label.Text = "SERIAL PORT " + i.ToString() + "\n" + uartName;
+                label.Text = Strings.SERIALPORT + " " + i.ToString() + "\n" + uartName;
                 label.Location = new Point(0, 0);
                 label.Size = new Size(100, 40);
                 label.Anchor = AnchorStyles.None;
@@ -486,7 +486,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 bool ans = MainV2.comPort.setParam(MainV2.comPort.sysidcurrent, (byte)MainV2.comPort.compidcurrent, param_name, val);
                 if (!ans)
                 {
-                    CustomMessageBox.Show("Unable to set parameter " + param_name);
+                    CustomMessageBox.Show(Strings.UnableSetParameter + " " + param_name);
                     return false;
                 }
                 else

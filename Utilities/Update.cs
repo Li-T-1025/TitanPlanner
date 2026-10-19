@@ -103,12 +103,12 @@ namespace MissionPlanner.Utilities
             catch (AggregateException ex)
             {
                 log.Error("Update Failed", ex.InnerException);
-                CustomMessageBox.Show("Update Failed " + ex.InnerException?.Message);
+                CustomMessageBox.Show(Strings.UpdateFailed + ex.InnerException?.Message);
             }
             catch (Exception ex)
             {
                 log.Error("Update Failed", ex);
-                CustomMessageBox.Show("Update Failed " + ex.Message);
+                CustomMessageBox.Show(Strings.UpdateFailed + ex.Message);
             }
         }
 
@@ -169,7 +169,7 @@ namespace MissionPlanner.Utilities
                         {
                             log.Warn("Invalid version string from server: " + (versionString ?? "(null)"));
                             if (NotifyNoUpdate)
-                                CustomMessageBox.Show("Unable to check for updates: Invalid version information from server.");
+                                CustomMessageBox.Show(Strings.UnableToCheckUpdatesInvalidVersion);
                             return;
                         }
                     }
@@ -397,7 +397,7 @@ namespace MissionPlanner.Utilities
                         if (frmProgressReporter != null && frmProgressReporter.doWorkArgs.CancelRequested)
                         {
                             frmProgressReporter.doWorkArgs.CancelAcknowledged = true;
-                            throw new Exception("User Request");
+                            throw new Exception(Strings.UserRequest);
                         }
 
                         // check is we have already downloaded and matchs hash
@@ -427,7 +427,7 @@ namespace MissionPlanner.Utilities
                             // check the new downloaded file matchs hash
                             if (!MD5File(file + ".new", hash))
                             {
-                                throw new Exception("File downloaded does not match hash: " + file);
+                                throw new Exception(string.Format(Strings.FileDownloadedDoesNotMatchHash, file));
                             }
                         }
                         else
@@ -600,7 +600,7 @@ namespace MissionPlanner.Utilities
                 if (frmProgressReporter.doWorkArgs.CancelRequested)
                 {
                     frmProgressReporter.doWorkArgs.CancelAcknowledged = true;
-                    throw new Exception("Cancel");
+                    throw new Exception(Strings.Cancel);
                 }
 
                 try
@@ -712,7 +712,7 @@ namespace MissionPlanner.Utilities
             catch (Exception ex)
             {
                 log.Error(ex.ToString());
-                CustomMessageBox.Show("Error getting Parameter Information");
+                CustomMessageBox.Show(Strings.ErrorGettingParameterInformation);
             }
             */
             #endregion Fetch Parameter Meta Data
@@ -728,7 +728,7 @@ namespace MissionPlanner.Utilities
             catch (Exception ex)
             {
                 log.Info("Write test failed");
-                throw new Exception("Unable to write to the install directory", ex);
+                throw new Exception(Strings.UnableToWriteToTheInstallDirectory, ex);
             }
             finally
             {

@@ -153,7 +153,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 _incalibrate = false;
                 Log.Error("Exception on level", ex);
-                CustomMessageBox.Show("Failed to level", Strings.ERROR);
+                CustomMessageBox.Show(Strings.FailedLevel, Strings.ERROR);
             }
         }
 
@@ -234,7 +234,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             catch (Exception ex)
             {
                 Log.Error("Exception on level", ex);
-                CustomMessageBox.Show("Failed to level", Strings.ERROR);
+                CustomMessageBox.Show(Strings.FailedLevel, Strings.ERROR);
             }
         }
 
@@ -256,7 +256,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             catch (Exception ex)
             {
                 Log.Error("Exception on simple accelerometer calibration", ex);
-                CustomMessageBox.Show("Failed to simple accelerometer calibration", Strings.ERROR);
+                CustomMessageBox.Show(Strings.FailedSimpleAccelerometerCalibration, Strings.ERROR);
             }
         }
     }

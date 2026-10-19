@@ -258,7 +258,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
                     if (MainV2.comPort.BaseStream == null || !MainV2.comPort.BaseStream.IsOpen)
                     {
-                        CustomMessageBox.Show("Your are not connected", Strings.ERROR);
+                        CustomMessageBox.Show(Strings.Connected2, Strings.ERROR);
                         return;
                     }
 
@@ -304,7 +304,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Error: getting param list " + ex, Strings.ERROR);
+                CustomMessageBox.Show(Strings.ErrorGettingParamList + " " + ex, Strings.ERROR);
             }
 
 

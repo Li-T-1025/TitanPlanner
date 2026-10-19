@@ -126,7 +126,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             MainV2.instance.DeviceChanged += Instance_DeviceChanged;
 
-            CustomMessageBox.Show("Please re-power to autopilot");
+            CustomMessageBox.Show(Strings.PleaseRePowerAutopilot);
             UpdateStatus("Please re-power to autopilot", 100);
         }
 
@@ -264,7 +264,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 else
                 {
                     UpdateStatus("Firmware Uploading FAILED", (int)0);
-                    CustomMessageBox.Show("Web request failed: " + fwresp.ReasonPhrase);
+                    CustomMessageBox.Show(Strings.WebRequestFailed + " " + fwresp.ReasonPhrase);
                     Console.WriteLine(await fwresp.Content.ReadAsStringAsync());
                 }
             }

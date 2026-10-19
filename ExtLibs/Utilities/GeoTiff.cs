@@ -741,7 +741,7 @@ namespace MissionPlanner.Utilities
             }
             if (geotiffdata.bits == 8)
             {
-                throw new Exception("ProcessScanLine: 8bit alt is invalid");
+                throw new Exception(Strings.ProcessScanLine8bitAltIsInvalid);
             } 
             else if (geotiffdata.bits == 16)
             {
@@ -768,7 +768,7 @@ namespace MissionPlanner.Utilities
                 return BitConverter.ToDouble(scanline, y * 8);
             }
 
-            throw new Exception("ProcessScanLine: Invalid geotiff coord");
+            throw new Exception(Strings.ProcessScanLineInvalidGeotiffCoord);
         }
 
         private static double GetAlt(geotiffdata geotiffdata, int x, int y)

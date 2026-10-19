@@ -47,7 +47,7 @@ namespace MissionPlanner.Utilities
         {
             if (wpStart == null || wpEnd == null)
             {
-                throw new ArgumentNullException("Origin and destination points must be non-null.");
+                throw new ArgumentNullException(Strings.OriginAndDestinationPointsMustBeNonNull);
             }
 
             // The math works in cartesian coordinates, so we turn these all into

@@ -360,7 +360,7 @@ namespace MissionPlanner.MsgBox
                     break;
 
                 default:
-                    throw new NotImplementedException("Only MessageBoxButtons.OK and YesNo supported at this time");
+                    throw new NotImplementedException(Strings.OnlyMessageBoxButtonsOKAndYesNoSupportedAtThisTime);
             }
         }
 

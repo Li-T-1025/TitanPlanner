@@ -245,7 +245,7 @@ namespace MissionPlanner.Warnings
                 }
             }
 
-            throw new MissingFieldException("No such name");
+            throw new MissingFieldException(Strings.NoSuchName);
         }
     }
 }

@@ -309,7 +309,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             // Combined dialog - merge the two calibration setup messages
             CustomMessageBox.Show(
-                "Radio Calibration Setup:\n\n" +
+                Strings.RadioCalibrationSetup + "\n\n" +
                 "1. Ensure your transmitter is on and receiver is powered and connected\n" +
                 "2. Ensure your motor does not have power/no props!!!\n\n" +
                 "After clicking OK, move all RC sticks and switches to their\nextreme positions so the red bars hit the limits.\n\n" +
@@ -361,11 +361,11 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             else
             {
-                CustomMessageBox.Show("Bad channel 1 input, canceling");
+                CustomMessageBox.Show(Strings.BadChannel1InputCanceling);
                 return;
             }
 
-            CustomMessageBox.Show("Ensure all your sticks are centered and throttle is down, and click ok to continue");
+            CustomMessageBox.Show(Strings.EnsureAllSticksCenteredThrottleDown);
 
             MainV2.comPort.MAV.cs.UpdateCurrentSettings(currentStateBindingSource.UpdateDataSource(MainV2.comPort.MAV.cs), true, MainV2.comPort);
 
@@ -400,7 +400,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 catch
                 {
                     if (MainV2.comPort.MAV.param.ContainsKey("RC" + (a + 1).ToString("0") + "_MIN"))
-                        CustomMessageBox.Show("Failed to set Channel " + (a + 1));
+                        CustomMessageBox.Show(Strings.FailedSetChannel + " " + (a + 1));
                 }
 
                 data = data + "CH" + (a + 1) + " " + rcmin[a] + " | " + rcmax[a] + "\n";
@@ -420,7 +420,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
 
             CustomMessageBox.Show(
-                "Here are the detected radio options\nNOTE Channels not connected are displayed as 1500 +-2\nNormal values are around 1100 | 1900\nChannel:Min | Max \n" +
+                Strings.HereDetectedRadioOptionsNOTEChannels + " \n" +
                 data, "Radio");
 
             BUT_Calibrateradio.Text = Strings.Completed;

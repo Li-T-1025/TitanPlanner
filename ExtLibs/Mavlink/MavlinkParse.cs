@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using MissionPlanner;
 
 public partial class MAVLink
 {
@@ -85,7 +86,7 @@ public partial class MAVLink
                 timeout = 0;
 
                 if((BaseStream.Position + count) > BaseStream.Length)
-                    throw new EndOfStreamException("End of data");
+                    throw new EndOfStreamException(Strings.EndOfData);
             }
 
             if (BaseStream.CanTimeout)
@@ -119,11 +120,11 @@ public partial class MAVLink
                 if (read > 0)
                     continue;
                 if (BaseStream.CanSeek)
-                    throw new EndOfStreamException("End of data");
+                    throw new EndOfStreamException(Strings.EndOfData);
 
                 if (DateTime.UtcNow > to)
                 {
-                    throw new TimeoutException("Timeout waiting for data");
+                    throw new TimeoutException(Strings.TimeoutWaitingForData);
                 }
                 System.Threading.Thread.Sleep(1);
             }
@@ -171,7 +172,7 @@ public partial class MAVLink
             if (readcount >= MAVLink.MAVLINK_MAX_PACKET_LEN)
             {
                 return null;
-                throw new InvalidDataException("No header found in data");
+                throw new InvalidDataException(Strings.NoHeaderFoundInData);
             }
 
             var headerlength = buffer[0] == MAVLINK_STX ? MAVLINK_CORE_HEADER_LEN : MAVLINK_CORE_HEADER_MAVLINK1_LEN;
@@ -292,7 +293,7 @@ public partial class MAVLink
 
             if (indata.GetType().GetField("target_component") == null) targetComponent = 0;
             if (targetSystem.HasValue && !SetPayloadTarget(indata, data, targetSystem.Value, targetComponent))
-                throw new ArgumentException("Message has no target system field", nameof(targetSystem));
+                throw new ArgumentException(Strings.MessageHasNoTargetSystemField, nameof(targetSystem));
             MavlinkUtil.trim_payload(ref data);
 
             int extra = 0;

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MissionPlanner;
 
 namespace TerrainMakerPlugin
 {
@@ -184,14 +185,14 @@ namespace TerrainMakerPlugin
 
             public void setBit(byte bitnumber)
             {
-                if (bitnumber > 55) throw new Exception("Bit number out of range");
+                if (bitnumber > 55) throw new Exception(Strings.BitNumberOutOfRange);
                 UInt64 mask = ((UInt64)1 << bitnumber);
                 Bitmap |= mask;
 
                 if (Bitmap > 0xffffffffffffff00)
                 {
                     Console.WriteLine("Bitmap Overflow {0}", bitnumber);
-                    throw new Exception("Bitmap overflow");
+                    throw new Exception(Strings.BitmapOverflow);
                 }
             }
 

@@ -50,7 +50,7 @@ namespace donate
             MenuCustom.Name = "MenuCustom";
             MenuCustom.Margin = new System.Windows.Forms.Padding(0);
             MenuCustom.Size = new Size(56, 47);
-            MenuCustom.Text = "DONATE";
+            MenuCustom.Text = Strings.DONATE;
             MenuCustom.TextAlign = ContentAlignment.BottomCenter;
             MenuCustom.TextImageRelation = TextImageRelation.ImageAboveText;
             var idx = MainV2.instance.MainMenu.Items.IndexOfKey("MenuHelp");

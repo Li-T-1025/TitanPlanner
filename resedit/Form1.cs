@@ -14,6 +14,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Reflection;
 using System.Xml;
+using MissionPlanner;
 
 namespace resedit
 {
@@ -46,7 +47,7 @@ namespace resedit
 
             Assembly thisAssembly = Assembly.GetExecutingAssembly();
 
-            string[] test = Assembly.get .GetExecutingAssembly().GetManifestResourceNames();
+            string[] test = Assembly.GetExecutingAssembly().GetManifestResourceNames();
 
             foreach (string file in test)
             {
@@ -170,7 +171,7 @@ namespace resedit
                 {
                     sw.Write("<tr><td>" + row.Cells[colFile.Index].Value.ToString() + "</td><td>" + row.Cells[colInternal.Index].Value.ToString() + "</td><td>" + row.Cells[colOtherLang.Index].Value.ToString() + "</td></tr>");
                 }
-                catch (Exception ex) { try { MessageBox.Show("Failed to save " + row.Cells[colOtherLang.Index].Value.ToString() + " " + ex.ToString()); } catch { } }
+                catch (Exception ex) { try { MessageBox.Show(Strings.FailedSave + " " + row.Cells[colOtherLang.Index].Value.ToString() + " " + ex.ToString()); } catch { } }
             }
             if (writer != null)
                 writer.Close();

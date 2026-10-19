@@ -137,7 +137,7 @@ namespace MissionPlanner.Radio
                 //Thread.Sleep(1000);
             }
 
-            /*MsgBox.CustomMessageBox.Show("Corrupted packet. Please power cycle and try again.\r\n", "Warning",
+            /*MsgBox.CustomMessageBox.Show(Strings.CorruptedPacketPleasePowerCycleTry, Strings.Warning,
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);*/
             return false;
         }
@@ -169,7 +169,7 @@ namespace MissionPlanner.Radio
                     }
                     else
                     {
-                        /*MsgBox.CustomMessageBox.Show("Corrupted packet. Please power cycle and try again.\r\n", "Warning",
+                        /*MsgBox.CustomMessageBox.Show(Strings.CorruptedPacketPleasePowerCycleTry, Strings.Warning,
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);*/
                         len = 0;
 

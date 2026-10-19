@@ -56,7 +56,7 @@ namespace MissionPlanner.Utilities
             var offset = bl.Search(descriptor, 0);
 
             if (offset == -1)
-                throw new Exception("Invalid bin, descriptor not found");
+                throw new Exception(Strings.InvalidBinDescriptorNotFound);
 
             offset += 8;
 
@@ -99,7 +99,7 @@ namespace MissionPlanner.Utilities
             var offset = img.Search(descriptor, 0);
 
             if (offset == -1)
-                throw new Exception("Invalid APJ, descriptor not found");
+                throw new Exception(Strings.InvalidAPJDescriptorNotFound);
 
             offset += 8;
             var desc_len = 92;

@@ -130,7 +130,7 @@ namespace Installer
             }
             else
             {
-                MessageBox.Show("Failed to get checksum file");
+                MessageBox.Show(MissionPlanner.Strings.FailedGetChecksumFile);
             }
         }
 

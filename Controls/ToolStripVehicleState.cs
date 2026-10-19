@@ -450,7 +450,7 @@ namespace MissionPlanner.Controls
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show($"Failed to arm/disarm: {ex.Message}", Strings.ERROR);
+                CustomMessageBox.Show(string.Format(Strings.FailedArmDisarm, ex.Message), Strings.ERROR);
             }
         }
 
@@ -837,7 +837,7 @@ namespace MissionPlanner.Controls
                 {
                     if (MainV2.comPort.MAV.cs.failsafe)
                     {
-                        if (CustomMessageBox.Show("You are in failsafe, are you sure?", "Failsafe",
+                        if (CustomMessageBox.Show(Strings.FailsafeSure, Strings.FailsafeSureTitle,
                             MessageBoxButtons.YesNo) != (int)DialogResult.Yes)
                         {
                             return;
@@ -848,7 +848,7 @@ namespace MissionPlanner.Controls
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show($"Failed to set mode: {ex.Message}", Strings.ERROR);
+                CustomMessageBox.Show(string.Format(Strings.FailedSetMode, ex.Message), Strings.ERROR);
             }
         }
 
@@ -1027,8 +1027,8 @@ namespace MissionPlanner.Controls
                 _modeDropdown.CurrentMode = "";
                 UpdateArmButtonAppearance(false);
                 // Reset GPS display
-                _gpsSatsLabel.Text = "Sats: --: ---";
-                _gpsDopLabel.Text = "H: -- | V: --";
+                _gpsSatsLabel.Text = Strings.Sats;
+                _gpsDopLabel.Text = Strings.HV;
                 try { _gpsSatsLabel.ForeColor = ThemeManager.TextColor; } catch { _gpsSatsLabel.ForeColor = Color.White; }
                 // Clear the vehicle FLTMODE list (pinned modes are user settings and persist)
                 _fltModes.Clear();

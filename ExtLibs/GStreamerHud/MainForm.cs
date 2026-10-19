@@ -1,4 +1,5 @@
 ﻿using Gst;
+using MissionPlanner;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -222,7 +223,7 @@ namespace GStreamerHud
 
             this.btnStart.TabIndex = 0;
 
-            this.btnStart.Text = "Start";
+            this.btnStart.Text = Strings.Start;
 
             this.btnStart.UseVisualStyleBackColor = true;
 
@@ -242,7 +243,7 @@ namespace GStreamerHud
 
             this.btnStop.TabIndex = 1;
 
-            this.btnStop.Text = "Stop";
+            this.btnStop.Text = Strings.Stop;
 
             this.btnStop.UseVisualStyleBackColor = true;
 
@@ -288,7 +289,7 @@ namespace GStreamerHud
 
             this.Name = "MainForm";
 
-            this.Text = "MainForm";
+            this.Text = Strings.MainForm;
 
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 

@@ -81,6 +81,7 @@
     <ProjectReference Include="..\ProjNet\ProjNET.csproj" />
     <ProjectReference Include="..\SharpKml\SharpKml.csproj" />
     <ProjectReference Include="..\Zeroconf\Zeroconf\Zeroconf.csproj" />
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
   </ItemGroup>
 
   <ItemGroup>

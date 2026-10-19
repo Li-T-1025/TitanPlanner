@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using MissionPlanner;
 
 namespace CircularBuffer
 {
@@ -24,7 +25,7 @@ namespace CircularBuffer
         public CircularBuffer(int capacity, bool allowOverflow)
         {
             if (capacity < 0)
-                throw new ArgumentException("Capacity set to " + capacity, "capacity");
+                throw new ArgumentException(string.Format(Strings.CapacitySetTo, capacity), "capacity");
 
             this.capacity = capacity;
             size = 0;
@@ -101,7 +102,7 @@ namespace CircularBuffer
             lock (_syncRoot)
             {
                 if (!AllowOverflow &&  count > capacity - size)
-                    throw new InvalidOperationException("Buffer Overflow");
+                    throw new InvalidOperationException(Strings.BufferOverflow);
 
                 int srcIndex = offset;
                 for (int i = 0; i < count; i++, tail++, srcIndex++)
@@ -120,7 +121,7 @@ namespace CircularBuffer
             lock (_syncRoot)
             {
                 if (!AllowOverflow && size == capacity)
-                    throw new InvalidOperationException("Buffer Overflow");
+                    throw new InvalidOperationException(Strings.BufferOverflow);
 
                 buffer[tail] = item;
                 if (++tail == capacity)
@@ -173,7 +174,7 @@ namespace CircularBuffer
             lock (_syncRoot)
             {
                 if (size == 0)
-                    throw new InvalidOperationException("Buffer Empty");
+                    throw new InvalidOperationException(Strings.BufferEmpty);
                 
                 var item = buffer[head];
                 if (++head == capacity)

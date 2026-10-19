@@ -60,7 +60,7 @@ namespace TerrainMakerPlugin
         public override bool Loaded()
         {
 
-            Host.FPMenuMap.Items.Add(new ToolStripMenuItem("Make Terrain DAT", null, MakeTerrainDAT));
+            Host.FPMenuMap.Items.Add(new ToolStripMenuItem(Strings.MakeTerrainDAT, null, MakeTerrainDAT));
 
             return true;     //If it is false plugin will not start (loop will not called)
         }
@@ -77,7 +77,7 @@ namespace TerrainMakerPlugin
             RectLatLng area = Host.FPGMapControl.SelectedArea;
             if (area.IsEmpty)
             {
-                var res = CustomMessageBox.Show("No area defined, use area displayed on screen?", "Terrain DAT",
+                var res = CustomMessageBox.Show(Strings.NoAreaDefinedUseAreaDisplayed, Strings.NoAreaDefinedUseAreaDisplayedTitle,
                     MessageBoxButtons.YesNo);
                 if (res == (int)DialogResult.Yes)
                 {
@@ -96,13 +96,13 @@ namespace TerrainMakerPlugin
                 int spacing = 30;
                 if (!int.TryParse(spacingstring, out spacing))
                 {
-                    CustomMessageBox.Show("Invalid Number", "ERROR");
+                    CustomMessageBox.Show(Strings.InvalidNumber, Strings.ERROR);
                     return;
                 }
 
                 if (spacing < 5 || spacing > 100)
                 {
-                    CustomMessageBox.Show("Spacing must be between 5 and 100 meters", "ERROR");
+                    CustomMessageBox.Show(Strings.SpacingMustBetween5100Meters, Strings.ERROR);
                     return;
                 }
 
@@ -144,7 +144,7 @@ namespace TerrainMakerPlugin
 
                         frmProgressReporter.Dispose();
 
-                        CustomMessageBox.Show("Terrain DAT created in Documents/Mission Planner/TerrainDat folder", "Terrain DAT");
+                        CustomMessageBox.Show(Strings.TerrainDATCreatedDocumentsMissionPlanner, Strings.NoAreaDefinedUseAreaDisplayedTitle);
 
 
                     }
@@ -186,7 +186,7 @@ namespace TerrainMakerPlugin
                 }
                 catch
                 {
-                    MessageBox.Show("Can't create directory: " + path);
+                    MessageBox.Show(Strings.CanTCreateDirectory + " " + path);
                     return;
                 }
             }

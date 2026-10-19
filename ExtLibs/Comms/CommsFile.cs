@@ -48,7 +48,7 @@ namespace MissionPlanner.Comms
         public int Read(byte[] buffer, int offset, int count)
         {
             if (!IsOpen)
-                throw new EndOfStreamException("File not open");
+                throw new EndOfStreamException(Strings.FileNotOpen);
 
             while (true)
             {

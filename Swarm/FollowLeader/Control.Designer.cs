@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Control));
             this.but_arm = new MissionPlanner.Controls.MyButton();
             this.but_takeoff = new MissionPlanner.Controls.MyButton();
             this.but_auto = new MissionPlanner.Controls.MyButton();
@@ -53,7 +54,7 @@
             this.but_arm.Name = "but_arm";
             this.but_arm.Size = new System.Drawing.Size(75, 23);
             this.but_arm.TabIndex = 0;
-            this.but_arm.Text = "Arm";
+            resources.ApplyResources(this.but_arm, "but_arm");
             this.but_arm.UseVisualStyleBackColor = true;
             this.but_arm.Click += new System.EventHandler(this.but_arm_Click);
             // 
@@ -63,7 +64,7 @@
             this.but_takeoff.Name = "but_takeoff";
             this.but_takeoff.Size = new System.Drawing.Size(75, 23);
             this.but_takeoff.TabIndex = 1;
-            this.but_takeoff.Text = "TakeOff";
+            resources.ApplyResources(this.but_takeoff, "but_takeoff");
             this.but_takeoff.UseVisualStyleBackColor = true;
             this.but_takeoff.Click += new System.EventHandler(this.but_takeoff_Click);
             // 
@@ -73,7 +74,7 @@
             this.but_auto.Name = "but_auto";
             this.but_auto.Size = new System.Drawing.Size(75, 23);
             this.but_auto.TabIndex = 2;
-            this.but_auto.Text = "Auto";
+            resources.ApplyResources(this.but_auto, "but_auto");
             this.but_auto.UseVisualStyleBackColor = true;
             this.but_auto.Click += new System.EventHandler(this.but_auto_Click);
             // 
@@ -83,7 +84,7 @@
             this.but_master.Name = "but_master";
             this.but_master.Size = new System.Drawing.Size(75, 37);
             this.but_master.TabIndex = 3;
-            this.but_master.Text = "Set Ground Master";
+            resources.ApplyResources(this.but_master, "but_master");
             this.but_master.UseVisualStyleBackColor = true;
             this.but_master.Click += new System.EventHandler(this.but_master_Click);
             // 
@@ -108,7 +109,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Seperation";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -117,7 +118,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Lead";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // numericUpDown2
             // 
@@ -144,7 +145,7 @@
             this.but_start.Name = "but_start";
             this.but_start.Size = new System.Drawing.Size(75, 23);
             this.but_start.TabIndex = 8;
-            this.but_start.Text = "Start";
+            resources.ApplyResources(this.but_start, "but_start");
             this.but_start.UseVisualStyleBackColor = true;
             this.but_start.Click += new System.EventHandler(this.but_start_Click);
             // 
@@ -154,7 +155,7 @@
             this.but_guided.Name = "but_guided";
             this.but_guided.Size = new System.Drawing.Size(75, 23);
             this.but_guided.TabIndex = 9;
-            this.but_guided.Text = "Guided";
+            resources.ApplyResources(this.but_guided, "but_guided");
             this.but_guided.UseVisualStyleBackColor = true;
             this.but_guided.Click += new System.EventHandler(this.but_guided_Click);
             // 
@@ -165,7 +166,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Altitude";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // numericUpDown3
             // 
@@ -187,7 +188,7 @@
             this.but_navguided.Name = "but_navguided";
             this.but_navguided.Size = new System.Drawing.Size(75, 23);
             this.but_navguided.TabIndex = 12;
-            this.but_navguided.Text = "NAV Guided";
+            resources.ApplyResources(this.but_navguided, "but_navguided");
             this.but_navguided.UseVisualStyleBackColor = true;
             this.but_navguided.Click += new System.EventHandler(this.but_navguided_Click);
             // 
@@ -197,7 +198,7 @@
             this.but_airmaster.Name = "but_airmaster";
             this.but_airmaster.Size = new System.Drawing.Size(75, 37);
             this.but_airmaster.TabIndex = 13;
-            this.but_airmaster.Text = "Set Air Master";
+            resources.ApplyResources(this.but_airmaster, "but_airmaster");
             this.but_airmaster.UseVisualStyleBackColor = true;
             this.but_airmaster.Click += new System.EventHandler(this.but_airmaster_Click);
             // 
@@ -221,7 +222,7 @@
             this.Controls.Add(this.but_takeoff);
             this.Controls.Add(this.but_arm);
             this.Name = "Control";
-            this.Text = "Control";
+            resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();

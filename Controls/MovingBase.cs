@@ -28,10 +28,10 @@ namespace MissionPlanner.Controls
             InitializeComponent();
 
             CMB_serialport.Items.AddRange(SerialPort.GetPortNames());
-            CMB_serialport.Items.Add("TCP Host - 14551");
-            CMB_serialport.Items.Add("TCP Client");
-            CMB_serialport.Items.Add("UDP Host - 14551");
-            CMB_serialport.Items.Add("UDP Client");
+            CMB_serialport.Items.Add(Strings.TCPHost14551);
+            CMB_serialport.Items.Add(Strings.TCPClient);
+            CMB_serialport.Items.Add(Strings.UDPHost14551);
+            CMB_serialport.Items.Add(Strings.UDPClient);
 
             CMB_updaterate.SelectedItem = updaterate;
 
@@ -62,33 +62,34 @@ namespace MissionPlanner.Controls
             {
                 try
                 {
-                    switch (CMB_serialport.Text)
+                    if (CMB_serialport.Text == Strings.TCPHost14551 || CMB_serialport.Text == Strings.TCPHost)
                     {
-                        case "TCP Host - 14551":
-                        case "TCP Host":
-                            comPort = new TcpSerial();
-                            CMB_baudrate.SelectedIndex = 0;
-                            listener = new TcpListener(System.Net.IPAddress.Any, 14551);
-                            listener.Start(0);
-                            listener.BeginAcceptTcpClient(new AsyncCallback(DoAcceptTcpClientCallback), listener);
-                            BUT_connect.Text = Strings.Stop;
-                            break;
-                        case "TCP Client":
-                            comPort = new TcpSerial() { retrys = 999999, autoReconnect = true, ConfigRef = "MovingBaseTCP" };
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        case "UDP Host - 14551":
-                            comPort = new UdpSerial();
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        case "UDP Client":
-                            comPort = new UdpSerialConnect();
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        default:
-                            comPort = new SerialPort();
-                            comPort.PortName = CMB_serialport.Text;
-                            break;
+                        comPort = new TcpSerial();
+                        CMB_baudrate.SelectedIndex = 0;
+                        listener = new TcpListener(System.Net.IPAddress.Any, 14551);
+                        listener.Start(0);
+                        listener.BeginAcceptTcpClient(new AsyncCallback(DoAcceptTcpClientCallback), listener);
+                        BUT_connect.Text = Strings.Stop;
+                    }
+                    else if (CMB_serialport.Text == Strings.TCPClient)
+                    {
+                        comPort = new TcpSerial() { retrys = 999999, autoReconnect = true, ConfigRef = "MovingBaseTCP" };
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else if (CMB_serialport.Text == Strings.UDPHost14551)
+                    {
+                        comPort = new UdpSerial();
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else if (CMB_serialport.Text == Strings.UDPClient)
+                    {
+                        comPort = new UdpSerialConnect();
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        comPort = new SerialPort();
+                        comPort.PortName = CMB_serialport.Text;
                     }
                 }
                 catch

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OSDUserControl));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
@@ -55,7 +56,7 @@
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Size = new System.Drawing.Size(904, 662);
             this.tabSettings.TabIndex = 0;
-            this.tabSettings.Text = "   Settings   ";
+            resources.ApplyResources(this.tabSettings, "tabSettings");
             this.tabSettings.UseVisualStyleBackColor = true;
             // 
             // OSDUserControl

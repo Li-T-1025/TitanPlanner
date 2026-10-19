@@ -47,7 +47,7 @@ namespace MissionPlanner.Grid
                 else
                 {
                     if (
-                        CustomMessageBox.Show("No polygon defined. Load a file?", "Load File", MessageBoxButtons.YesNo) ==
+                        CustomMessageBox.Show(Strings.NoPolygonDefinedLoadFile, Strings.NoPolygonDefinedLoadFileTitle, MessageBoxButtons.YesNo) ==
                         (int)DialogResult.Yes)
                     {
                         gridui.LoadGrid();
@@ -55,7 +55,7 @@ namespace MissionPlanner.Grid
                     }
                     else
                     {
-                        CustomMessageBox.Show("Please define a polygon.", "Error");
+                        CustomMessageBox.Show(Strings.PleaseDefinePolygon1, Strings.ERROR);
                     }
                 }
             }

@@ -141,9 +141,9 @@ namespace MissionPlanner.Comms
             {
                 if (inputboxreturn.Cancel == OnInputBoxShow("remote host",
                         "Enter host name/ip (ensure remote end is already started)", ref host))
-                    throw new Exception("Canceled by request");
+                    throw new Exception(Strings.CanceledByRequest);
                 if (inputboxreturn.Cancel == OnInputBoxShow("remote Port", "Enter remote port", ref dest))
-                    throw new Exception("Canceled by request");
+                    throw new Exception(Strings.CanceledByRequest);
             }
 
             Open(host, dest);
@@ -208,7 +208,7 @@ namespace MissionPlanner.Comms
             {
                 Thread.Sleep(1);
                 if (count > ReadTimeout)
-                    throw new Exception("UdpSerialConnect Timeout on read");
+                    throw new Exception(Strings.UdpSerialConnectTimeoutOnRead);
                 count++;
             }
 
@@ -257,7 +257,7 @@ namespace MissionPlanner.Comms
             }
             catch
             {
-            } //throw new Exception("Comport / Socket Closed"); }
+            } //throw new Exception(Strings.ComportSocketClosed); }
         }
 
         public void DiscardInBuffer()

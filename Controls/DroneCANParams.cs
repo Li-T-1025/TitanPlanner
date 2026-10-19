@@ -44,7 +44,7 @@ namespace MissionPlanner.Controls
 
             InitializeComponent();
 
-            this.Text = "UAVCAN Params - " + node;
+            this.Text = Strings.UAVCANParams + " " + node;
 
             Params.CellValidating += CellValidatingEvtHdlr;
         }
@@ -244,7 +244,7 @@ namespace MissionPlanner.Controls
                 //If it's the value column, but the new value isn't in min-to-max range...
                 if (GetIsValue(e) && !GetIsInRange(e))
                 {
-                    CustomMessageBox.Show("Invalid value \"" + Params.EditingControl.Text + "\"");
+                    CustomMessageBox.Show(Strings.InvalidValue + Params.EditingControl.Text + "\"");
                     //Replace the editor's text with the existing cell text.
                     Params.EditingControl.Text = Params[e.ColumnIndex, e.RowIndex].Value.ToString();
                 }
@@ -259,15 +259,15 @@ namespace MissionPlanner.Controls
             try
             {
                 if (!_can.SaveConfig(_node))
-                    CustomMessageBox.Show("Failed to save");
+                    CustomMessageBox.Show(Strings.FailedSave);
             }
             catch
             {
-                CustomMessageBox.Show("Invalid command");
+                CustomMessageBox.Show(Strings.InvalidCommand);
                 return;
             }
 
-            CustomMessageBox.Show("Parameters committed to non-volatile memory");
+            CustomMessageBox.Show(Strings.ParametersCommittedNonVolatileMemory);
             return;
         }
 
@@ -348,7 +348,7 @@ namespace MissionPlanner.Controls
         private void BUT_reset_params_Click(object sender, EventArgs e)
         {
             if (
-                CustomMessageBox.Show("This will reset all params to their default value\nAre you sure?", "Reset",
+                CustomMessageBox.Show(Strings.ResetAllParamsTheirDefaultValue, Strings.ResetAllParamsTheirDefaultValueTitle,
                     MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
             {
                 try
@@ -360,7 +360,7 @@ namespace MissionPlanner.Controls
 
 
                     CustomMessageBox.Show(
-                        "Your board is now rebooting, You will be required to reconnect to the autopilot.");
+                        Strings.BoardNowRebootingRequiredReconnectAutopilot);
                 }
                 catch (Exception ex)
                 {
@@ -459,16 +459,16 @@ namespace MissionPlanner.Controls
                 {
                     log.Error(ex);
                     failed++;
-                    CustomMessageBox.Show("Set " + value + " Failed " + ex.ToString());
+                    CustomMessageBox.Show(Strings.Set + " " + value + " Failed " + ex.ToString());
                 }
             }
 
             _can.SaveConfig(_node);
 
             if (failed > 0)
-                CustomMessageBox.Show("Some Parameters Failed to be saved.", "Saved");
+                CustomMessageBox.Show(Strings.SomeParametersFailedSaved, Strings.SomeParametersFailedSavedTitle);
             else
-                CustomMessageBox.Show("Parameters successfully saved.", "Saved");
+                CustomMessageBox.Show(Strings.ParametersSuccessfullySaved, Strings.SomeParametersFailedSavedTitle);
         }
 
         private void chk_modified_CheckedChanged(object sender, EventArgs e)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Video));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             this.ClientSize = new System.Drawing.Size(714, 439);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Video";
-            this.Text = "Video";
+            resources.ApplyResources(this, "$this");
             this.Load += new System.EventHandler(this.Video_Load);
             this.ResumeLayout(false);
 

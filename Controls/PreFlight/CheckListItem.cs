@@ -215,7 +215,7 @@ namespace MissionPlanner.Controls.PreFlight
                 return;
             }
 
-            throw new MissingFieldException("No such name");
+            throw new MissingFieldException(Strings.NoSuchName);
         }
 
         /// <summary>

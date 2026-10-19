@@ -83,14 +83,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 // Assign Volt Pin label at Sensor label position
                 if (label1 != null)
                 {
-                    label1.Text = "Volt Pin:";
+                    label1.Text = Strings.VoltPin;
                     label1.Location = sensorLabelLoc;
                     label1.Visible = true;
                 }
                 // Assign Curr Pin label at HW Ver label position
                 if (label2 != null)
                 {
-                    label2.Text = "Curr Pin:";
+                    label2.Text = Strings.CurrPin;
                     label2.Location = hwVerLabelLoc;
                     label2.Visible = true;
                 }
@@ -263,7 +263,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set " + P("CAPACITY") + " Failed", Strings.ERROR);
+                CustomMessageBox.Show(_prefix == "BATT2" ? Strings.SetBATT2CAPACITYFailed : Strings.SetBATTCAPACITYFailed, Strings.ERROR);
             }
         }
 
@@ -333,7 +333,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set " + P("MONITOR") + "," + P("VOLT_PIN") + "," + P("CURR_PIN") + " Failed", Strings.ERROR);
+                CustomMessageBox.Show(Strings.SetBATTMONITORBATTVOLTPIN, Strings.ERROR);
             }
         }
 
@@ -375,7 +375,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     (MainV2.comPort.MAV.param[P("MONITOR")].Value == 3 ||
                      MainV2.comPort.MAV.param[P("MONITOR")].Value == 4))
                 {
-                    CustomMessageBox.Show("Set " + P("VOLT_MULT") + " Failed", Strings.ERROR);
+                    CustomMessageBox.Show(_prefix == "BATT2" ? Strings.SetBATT2VOLTMULTFailed : Strings.SetBATTVOLTMULTFailed, Strings.ERROR);
                 }
             }
         }
@@ -402,7 +402,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     (MainV2.comPort.MAV.param[P("MONITOR")].Value == 3 ||
                      MainV2.comPort.MAV.param[P("MONITOR")].Value == 4))
                 {
-                    CustomMessageBox.Show("Set " + P("VOLT_MULT") + " Failed", Strings.ERROR);
+                    CustomMessageBox.Show(_prefix == "BATT2" ? Strings.SetBATT2VOLTMULTFailed : Strings.SetBATTVOLTMULTFailed, Strings.ERROR);
                 }
             }
         }
@@ -429,7 +429,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     (MainV2.comPort.MAV.param[P("MONITOR")].Value == 3 ||
                      MainV2.comPort.MAV.param[P("MONITOR")].Value == 4))
                 {
-                    CustomMessageBox.Show("Set " + (_prefix == "BATT" ? P("AMP_PERVOLT") : P("AMP_PERVOL")) + " Failed", Strings.ERROR);
+                    CustomMessageBox.Show(_prefix == "BATT2" ? Strings.SetBATT2AMPPERVOLFailed : Strings.SetBATTAMPPERVOLTFailed, Strings.ERROR);
                 }
             }
         }
@@ -618,7 +618,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set " + P("????_PIN") + " Failed", Strings.ERROR);
+                CustomMessageBox.Show(Strings.SetBATTPINFailed, Strings.ERROR);
             }
         }
 
@@ -715,7 +715,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set " + (_prefix == "BATT" ? P("AMP_PERVOLT") : P("AMP_PERVOL")) + " Failed", Strings.ERROR);
+                CustomMessageBox.Show(_prefix == "BATT2" ? Strings.SetBATT2AMPPERVOLFailed : Strings.SetBATTAMPPERVOLTFailed, Strings.ERROR);
             }
         }
     }

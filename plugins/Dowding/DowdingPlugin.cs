@@ -87,14 +87,14 @@ namespace Dowding
                     }
                     else
                     {
-                        CustomMessageBox.Show("Dowding invalid settings");
+                        CustomMessageBox.Show(Strings.DowdingInvalidSettings);
                     }
 
                     ws = await dowd.Start(Settings.Instance["Dowding_server"]);
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Failed to start Dowding");
+                    CustomMessageBox.Show(Strings.FailedStartDowding);
                 }
             });
         }
@@ -157,7 +157,7 @@ namespace Dowding
                         target = item;
                         target.ToolTipMode = MarkerTooltipMode.Always;
                         var vt = (VehicleTick) item.Tag;
-                        target.ToolTipText = "Tracking\r\nVendor: " + vt.Vendor + "\r\nModel: " + vt.Model + "\r\nSerial: " + vt.Serial;
+                        target.ToolTipText = string.Format(Strings.TrackingVendor, vt.Vendor, vt.Model, vt.Serial);
                         UpdateOutput?.Invoke(this,
                             new PointLatLngAlt((double)vt.Lat, (double)vt.Lon, (double)vt.Hae));
                     }

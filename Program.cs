@@ -138,7 +138,7 @@ namespace MissionPlanner
                 config.SaveToDir("C:\\Temp\\Snapshot");
                 DotTrace.Attach(config);
                 DotTrace.StartCollectingData();
-                CustomMessageBox.Show("Trace started");
+                CustomMessageBox.Show(Strings.TraceStarted);
             }
             else
             {
@@ -527,7 +527,7 @@ namespace MissionPlanner
                             Console.WriteLine(
                                 "Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/");
                             CustomMessageBox.Show(
-                                "Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/");
+                                Strings.PleaseUpgradeMonoVersion6Https);
                         }
                     }
                 }
@@ -801,26 +801,26 @@ namespace MissionPlanner
 
             if (ex.Message.Contains("The port is closed"))
             {
-                CustomMessageBox.Show("Serial connection has been lost");
+                CustomMessageBox.Show(Strings.SerialConnectionBeenLost);
                 return;
             }
 
             if (ex.Message.Contains("Array.Empty"))
             {
-                CustomMessageBox.Show("Please install Microsoft Dot Net 4.6.2");
+                CustomMessageBox.Show(Strings.PleaseInstallMicrosoftDotNet4);
                 Application.Exit();
                 return;
             }
 
             if (ex.Message.Contains("A device attached to the system is not functioning"))
             {
-                CustomMessageBox.Show("Serial connection has been lost");
+                CustomMessageBox.Show(Strings.SerialConnectionBeenLost);
                 return;
             }
 
             if (ex.GetType() == typeof(MissingMethodException) || ex.GetType() == typeof(TypeLoadException))
             {
-                CustomMessageBox.Show("Please Update - Some older library dlls are causing problems\n" + ex.Message);
+                CustomMessageBox.Show(Strings.PleaseUpdateSomeOlderLibraryDlls + "\n" + ex.Message);
                 return;
             }
 
@@ -835,7 +835,7 @@ namespace MissionPlanner
                 // i get alot of error from people who click the exe from inside a zip file.
             {
                 CustomMessageBox.Show(
-                    "You are missing some DLL's. Please extract the zip file somewhere. OR Use the update feature from the menu " +
+                    Strings.MissingSomeDLLSPleaseExtract + " " +
                     ex.ToString());
                 // return;
             }
@@ -851,7 +851,7 @@ namespace MissionPlanner
             log.Info("Th Name " + Thread?.Name);
 
             var dr =
-                CustomMessageBox.Show("An error has occurred\n" + ex.ToString() + "\n\nReport this Error???",
+                CustomMessageBox.Show(Strings.ErrorOccurred + "\n" + ex.ToString() + "\n\nReport this Error???",
                     "Send Error", MessageBoxButtons.YesNo);
             if ((int) DialogResult.Yes == dr)
             {
@@ -925,7 +925,7 @@ namespace MissionPlanner
                 {
                     Console.WriteLine(exp.ToString());
                     log.Error(exp);
-                    CustomMessageBox.Show("Could not send report! Typically due to lack of internet connection.");
+                    CustomMessageBox.Show(Strings.CouldSendReportTypicallyDueLack);
                 }
             }
         }

@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
+using MissionPlanner;
 
 /// <summary>
 /// Static methods and helpers for creation and manipulation of Mavlink packets
@@ -186,7 +187,7 @@ public static class MavlinkUtil
 
         semaphore.Release();
 
-        throw new InvalidOperationException("Failed to get free buffer");
+        throw new InvalidOperationException(Strings.FailedToGetFreeBuffer);
     }
 
     public static object ByteArrayToStructureGCArray(byte[] bytearray, Type typeinfoType, byte startoffset, byte payloadlength)

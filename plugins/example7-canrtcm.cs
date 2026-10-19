@@ -31,7 +31,7 @@ namespace CANRTCMExtract
 
         public override bool Init()
         {
-            var but = new ToolStripMenuItem("CAN RTCM Extract");
+            var but = new ToolStripMenuItem(Strings.CANRTCMExtract);
             but.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuMap.Items;
             

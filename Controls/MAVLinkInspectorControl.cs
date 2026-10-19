@@ -263,7 +263,7 @@ namespace MissionPlanner.Controls
             this.but_graphit.Name = "but_graphit";
             this.but_graphit.Size = new System.Drawing.Size(75, 23);
             this.but_graphit.TabIndex = 4;
-            this.but_graphit.Text = "Graph It";
+            this.but_graphit.Text = Strings.Graph;
             this.but_graphit.UseVisualStyleBackColor = true;
             this.but_graphit.Click += new System.EventHandler(this.but_graphit_Click);
             //
@@ -274,7 +274,7 @@ namespace MissionPlanner.Controls
             this.chk_gcstraffic.Name = "chk_gcstraffic";
             this.chk_gcstraffic.Size = new System.Drawing.Size(111, 17);
             this.chk_gcstraffic.TabIndex = 5;
-            this.chk_gcstraffic.Text = "Show GCS Traffic";
+            this.chk_gcstraffic.Text = Strings.ShowGCSTraffic;
             this.chk_gcstraffic.UseVisualStyleBackColor = true;
             this.chk_gcstraffic.CheckedChanged += new System.EventHandler(this.chk_gcstraffic_CheckedChanged);
             //

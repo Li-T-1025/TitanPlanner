@@ -125,7 +125,7 @@ namespace MissionPlanner.Comms
 
             if (OnInputBoxShow("remote host", "Enter url (eg http://user:pass@host:port/mount)", ref url) ==
                 inputboxreturn.Cancel)
-                throw new Exception("Canceled by request");
+                throw new Exception(Strings.CanceledByRequest);
 
             OnSettings("NTRIP_url", url, true);
 
@@ -186,7 +186,7 @@ namespace MissionPlanner.Comms
             }
             catch
             {
-                throw new Exception("ntrip Socket Closed");
+                throw new Exception(Strings.NtripSocketClosed);
             }
         }
 
@@ -198,7 +198,7 @@ namespace MissionPlanner.Comms
             {
                 Thread.Sleep(1);
                 if (count > ReadTimeout)
-                    throw new Exception("ntrip Timeout on read");
+                    throw new Exception(Strings.NtripTimeoutOnRead);
                 count++;
             }
 
@@ -247,7 +247,7 @@ namespace MissionPlanner.Comms
             }
             catch
             {
-            } //throw new Exception("Comport / Socket Closed"); }
+            } //throw new Exception(Strings.ComportSocketClosed); }
         }
 
         public void DiscardInBuffer()
@@ -403,7 +403,7 @@ namespace MissionPlanner.Comms
 
                 client = new TcpClient();
 
-                throw new Exception("Bad ntrip Response\n\n" + line);
+                throw new Exception(string.Format(Strings.BadNtripResponse, line));
             }
 
             if (line.Contains("SOURCETABLE"))
@@ -414,7 +414,7 @@ namespace MissionPlanner.Comms
 
                 client = new TcpClient();
 
-                throw new Exception("Got SOURCETABLE - Bad ntrip mount point\n\n" + line);
+                throw new Exception(string.Format(Strings.GotSOURCETABLEBadNtripMountPoint, line));
             }
 
             // vrs may take up to 60+ seconds to respond
@@ -523,7 +523,7 @@ namespace MissionPlanner.Comms
                     retrys--;
                 }
 
-                throw new Exception("The ntrip is closed");
+                throw new Exception(Strings.TheNtripIsClosed);
             }
         }
 

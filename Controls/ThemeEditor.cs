@@ -63,7 +63,7 @@ namespace MissionPlanner.Controls
             var match = ThemeManager.ThemeNames.FirstOrDefault(stringToCheck => stringToCheck.Equals(name,StringComparison.OrdinalIgnoreCase));
             if (match != null)
             {
-                CustomMessageBox.Show("User theme named " + Path.GetFileNameWithoutExtension(name) + " exists.");
+                CustomMessageBox.Show(Strings.UserThemeNamed + " " + Path.GetFileNameWithoutExtension(name) + " exists.");
                 return;
             }
 
@@ -121,7 +121,7 @@ namespace MissionPlanner.Controls
 
             ThemeManager.LoadTheme(ThemeManager.thmColor.strThemeName);
             ThemeManager.ApplyThemeTo(MainV2.instance);
-            CustomMessageBox.Show("You may need to select another tab or restart to see the full effect.");
+            CustomMessageBox.Show(Strings.MayNeedSelectAnotherTabRestart);
             this.Close();
         }
 

@@ -199,11 +199,11 @@ namespace MissionPlanner.Controls
                         cmb_drones.ValueMember = "Key";
                         cmb_drones.DataSource = displaylist.ToList();
 
-                        CustomMessageBox.Show("Login Successful");
+                        CustomMessageBox.Show(Strings.LoginSuccessful);
                     }
                     else
                     {
-                        CustomMessageBox.Show("Login Failed");
+                        CustomMessageBox.Show(Strings.LoginFailed);
                     }
                 }
             }

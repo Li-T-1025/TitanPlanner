@@ -27,7 +27,7 @@ namespace MissionPlanner.plugins
 
         public override bool Init()
         {
-            var rootbut = new ToolStripMenuItem("Forward between links");
+            var rootbut = new ToolStripMenuItem(Strings.ForwardBetweenLinks);
             rootbut.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuMap.Items;
             col.Add(rootbut);

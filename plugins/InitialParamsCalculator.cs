@@ -117,7 +117,7 @@ namespace MissionPlanner.InitialParamCalc
 
 
             //Add intro and some warnings
-            CustomMessageBox.Show("This plugin will calculate some initial parameters based on battery and prop size for a new copter setup.\r\n\r\n" +
+            CustomMessageBox.Show(Strings.PluginCalculateSomeInitialParametersBased + "\r\n\r\n" +
                                   "Please make sure that before running this plugin and updating calculated parameters:\r\n" +
                                   "ALL INITIAL SETUPS ARE DONE (Calibrations, frame settings, motor tests)\r\n" +
                                   "BATTERY VOLTAGE MONITORING IS SET AND WORKING\r\n\r\n" +
@@ -128,12 +128,12 @@ namespace MissionPlanner.InitialParamCalc
 
             if (!Host.cs.connected)
             {
-                CustomMessageBox.Show("Please connect first!", "Initial paremeter calculator", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CustomMessageBox.Show(Strings.PleaseConnectFirst1, Strings.PleaseConnectFirst1Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (Host.cs.firmware != ArduPilot.Firmwares.ArduCopter2)
             {
-                CustomMessageBox.Show("Initial parameter calculation works with Arducopter only!", "Initial paremeter calculator", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CustomMessageBox.Show(Strings.InitialParameterCalculationWorksArducopterOnly, Strings.PleaseConnectFirst1Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -157,7 +157,7 @@ namespace MissionPlanner.InitialParamCalc
 
             if (prop_size <= 0 || batt_cells < 1)
             {
-                CustomMessageBox.Show("Invalid input data!", "Initial paremeter calculator", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CustomMessageBox.Show(Strings.InvalidInputData, Strings.PleaseConnectFirst1Title, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -208,10 +208,10 @@ namespace MissionPlanner.InitialParamCalc
             Form paramCompareForm = new ParamCompare(null, MainV2.comPort.MAV.param, new_params);
             ThemeManager.ApplyThemeTo(paramCompareForm);
             button = paramCompareForm.Controls.Find("BUT_save", true).FirstOrDefault() as MissionPlanner.Controls.MyButton;
-            button.Text = "Write to FC";
+            button.Text = Strings.WriteFC;
 
             paramCompareForm.ShowDialog();
-            CustomMessageBox.Show("Initial Parameters succesfully updated.\r\nCheck parameters before flight!\r\n\r\nAfter test flight :\r\n\tSet ATC_THR_MIX_MAN to 0.5\r\n\tSet PSC_ACCZ_P to MOT_THST_HOVER\r\n\tSet PSC_ACCZ_I to 2*MOT_THST_HOVER\r\n\r\nHappy flying!", "Initial parameter calculator");
+            CustomMessageBox.Show(Strings.InitialParametersSuccesfullyUpdatedCheckParameters, "Initial parameter calculator");
 
         }
 

@@ -167,7 +167,7 @@ namespace MissionPlanner.Utilities
                 if (index == 2)
                     return z;
 
-                throw new Exception("Bad index");
+                throw new Exception(Strings.BadIndex);
             }
             set
             {
@@ -189,7 +189,7 @@ namespace MissionPlanner.Utilities
                     return;
                 }
 
-                throw new Exception("Bad index");
+                throw new Exception(Strings.BadIndex);
             }
         }
 
@@ -505,7 +505,7 @@ namespace MissionPlanner.Utilities
                 }
             }
 
-            throw new Exception("Invalid Rotation");
+            throw new Exception(Strings.InvalidRotation);
             //return this;
         }
 

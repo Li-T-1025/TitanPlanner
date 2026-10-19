@@ -30,6 +30,7 @@ namespace MissionPlanner.Controls
       /// </summary>
       private void InitializeComponent()
       {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ValuesControl));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.myLabel1 = new System.Windows.Forms.Label();
@@ -55,8 +56,7 @@ namespace MissionPlanner.Controls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 43);
             this.label1.TabIndex = 0;
-            this.label1.Text = "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY\r\nYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY" +
-    "Y";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // myLabel1
             // 
@@ -67,7 +67,7 @@ namespace MissionPlanner.Controls
             this.myLabel1.Name = "myLabel1";
             this.myLabel1.Size = new System.Drawing.Size(206, 16);
             this.myLabel1.TabIndex = 0;
-            this.myLabel1.Text = "myLabel1";
+            resources.ApplyResources(this.myLabel1, "myLabel1");
             // 
             // ValuesControl
             // 

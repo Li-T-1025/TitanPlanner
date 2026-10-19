@@ -15,7 +15,7 @@ namespace MissionPlanner.Attributes
         {
             if (String.IsNullOrEmpty(translationKey))
             {
-                throw new ArgumentException("\"translationKey\" is required.");
+                throw new ArgumentException(Strings.TranslationKeyIsRequired);
             }
             _translationKey = translationKey;
         }

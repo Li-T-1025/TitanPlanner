@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommonItemControl));
             this.checkBox = new System.Windows.Forms.CheckBox();
             this.label = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(27, 13);
             this.label.TabIndex = 3;
-            this.label.Text = "Item";
+            resources.ApplyResources(this.label, "label");
             // 
             // CommonItemControl
             // 

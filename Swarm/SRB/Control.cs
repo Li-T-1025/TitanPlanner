@@ -43,12 +43,12 @@ namespace MissionPlanner.Swarm.SRB
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label4.Text = "BasePos: " + ctl.DG.GetBasePosition()?.ToString();
-            label5.Text = "BaseVel: " + ctl.DG.GetBaseVelocity()?.ToString();
+            label4.Text = Strings.BasePos + " " + ctl.DG.GetBasePosition()?.ToString();
+            label5.Text = Strings.BaseVel + " " + ctl.DG.GetBaseVelocity()?.ToString();
 
-            label6.Text = "Mode: " + ctl.DG.CurrentMode.ToString();
+            label6.Text = Strings.Mode + " " + ctl.DG.CurrentMode.ToString();
 
-            label7.Text = "BaseHeading: " + ctl.DG.GetBasePosition()?.Heading.ToString();
+            label7.Text = Strings.BaseHeading + " " + ctl.DG.GetBasePosition()?.Heading.ToString();
         }
 
         private void num_TakeOffAlt_ValueChanged(object sender, EventArgs e)

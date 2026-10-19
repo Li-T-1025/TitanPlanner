@@ -471,7 +471,7 @@ namespace MissionPlanner.Comms
 
             if (PortName.StartsWith("/"))
                 if (!File.Exists(PortName))
-                    throw new Exception("No such device");
+                    throw new Exception(Strings.NoSuchDevice);
 
 
             if (espFix)
@@ -576,14 +576,14 @@ namespace MissionPlanner.Comms
             const int dwFlagsAndAttributes = 0x40000000;
             const int dwAccess = unchecked((int) 0xC0000000);
             if (portName == null || !portName.StartsWith("COM", StringComparison.OrdinalIgnoreCase))
-                throw new ArgumentException("Invalid Serial Port", "portName");
+                throw new ArgumentException(Strings.InvalidSerialPort, "portName");
             var hFile = NativeMethods.CreateFile(@"\\.\" + portName, dwAccess, 0, IntPtr.Zero, 3, dwFlagsAndAttributes,
                 IntPtr.Zero);
             if (hFile.IsInvalid) WinIoError();
             try
             {
                 var fileType = NativeMethods.GetFileType(hFile);
-                if (fileType != 2 && fileType != 0) throw new ArgumentException("Invalid Serial Port", "portName");
+                if (fileType != 2 && fileType != 0) throw new ArgumentException(Strings.InvalidSerialPort, "portName");
                 m_Handle = hFile;
                 InitializeDcb();
             }

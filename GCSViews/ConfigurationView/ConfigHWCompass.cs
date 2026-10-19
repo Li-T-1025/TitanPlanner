@@ -114,13 +114,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 LBL_compass1_offset.ForeColor = Color.Green;
 
 
-            LBL_compass1_offset.Text = "OFFSETS  X: " +
+            LBL_compass1_offset.Text = Strings.OFFSETSX + " " +
                                        offset1_x.ToString() +
                                        ",   Y: " + offset1_y.ToString() +
                                        ",   Z: " + offset1_z.ToString();
             if (MainV2.comPort.MAV.param.ContainsKey("COMPASS_MOT_X"))
             {
-                LBL_compass1_mot.Text = "MOT          X: " +
+                LBL_compass1_mot.Text = Strings.MOTX + " " +
                                         ((int)MainV2.comPort.MAV.param["COMPASS_MOT_X"]).ToString() +
                                         ",   Y: " + ((int)MainV2.comPort.MAV.param["COMPASS_MOT_Y"]).ToString() +
                                         ",   Z: " + ((int)MainV2.comPort.MAV.param["COMPASS_MOT_Z"]).ToString();
@@ -157,13 +157,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     LBL_compass2_offset.ForeColor = Color.Green;
 
 
-                LBL_compass2_offset.Text = "OFFSETS  X: " +
+                LBL_compass2_offset.Text = Strings.OFFSETSX + " " +
                                            offset2_x.ToString() +
                                            ",   Y: " + offset2_y.ToString() +
                                            ",   Z: " + offset2_z.ToString();
                 if (MainV2.comPort.MAV.param.ContainsKey("COMPASS_MOT2_X"))
                 {
-                    LBL_compass2_mot.Text = "MOT          X: " +
+                    LBL_compass2_mot.Text = Strings.MOTX + " " +
                                             ((int)MainV2.comPort.MAV.param["COMPASS_MOT2_X"]).ToString() +
                                             ",   Y: " + ((int)MainV2.comPort.MAV.param["COMPASS_MOT2_Y"]).ToString() +
                                             ",   Z: " + ((int)MainV2.comPort.MAV.param["COMPASS_MOT2_Z"]).ToString();
@@ -203,13 +203,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     LBL_compass3_offset.ForeColor = Color.Green;
 
 
-                LBL_compass3_offset.Text = "OFFSETS  X: " +
+                LBL_compass3_offset.Text = Strings.OFFSETSX + " " +
                                            offset3_x.ToString() +
                                            ",   Y: " + offset3_y.ToString() +
                                            ",   Z: " + offset3_z.ToString();
                 if (MainV2.comPort.MAV.param.ContainsKey("COMPASS_MOT3_X"))
                 {
-                    LBL_compass3_mot.Text = "MOT          X: " +
+                    LBL_compass3_mot.Text = Strings.MOTX + " " +
                                             ((int)MainV2.comPort.MAV.param["COMPASS_MOT3_X"]).ToString() +
                                             ",   Y: " + ((int)MainV2.comPort.MAV.param["COMPASS_MOT3_Y"]).ToString() +
                                             ",   Z: " + ((int)MainV2.comPort.MAV.param["COMPASS_MOT3_Z"]).ToString();
@@ -270,7 +270,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             catch
             {
                 CustomMessageBox.Show(
-                    "Webpage open failed... do you have a virus?\nhttp://www.magnetic-declination.com/", "Mag");
+                    Strings.WebpageOpenFailedVirusHttpWww, Strings.WebpageOpenFailedVirusHttpWwwTitle);
             }
         }
 
@@ -392,7 +392,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["COMPASS_AUTODEC"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -401,7 +401,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set COMPASS_AUTODEC Failed");
+                CustomMessageBox.Show(Strings.SetCOMPASSAUTODECFailed);
             }
         }
 
@@ -459,7 +459,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             catch (Exception ex)
             {
                 this.LogError(ex);
-                CustomMessageBox.Show("Failed to start MAG CAL, check the autopilot is still responding.\n" + ex.ToString(), Strings.ERROR);
+                CustomMessageBox.Show(Strings.FailedStartMAGCALCheckAutopilot + "\n" + ex.ToString(), Strings.ERROR);
                 return;
             }
 
@@ -604,7 +604,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 BUT_OBmagcalcancel.Enabled = false;
                 BUT_OBmagcalaccept.Enabled = false;
                 timer1.Stop();
-                CustomMessageBox.Show("Please reboot the autopilot");
+                CustomMessageBox.Show(Strings.PleaseRebootAutopilot);
             }
 
         }
@@ -633,7 +633,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 MainV2.comPort.setParam(MainV2.comPort.sysidcurrent, (byte)MainV2.comPort.compidcurrent, "COMPASS_LEARN", 1);
 
                 if (
-                    CustomMessageBox.Show("is the FW version greater than APM:copter 3.01 or APM:Plane 2.74?", "",
+                    CustomMessageBox.Show(Strings.FWVersionGreaterThanAPMCopter, "",
                         MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
                 {
                     CMB_compass1_orient.SelectedIndex = (int)Rotation.ROTATION_NONE;
@@ -713,7 +713,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["COMPASS_LEARN"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -722,7 +722,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set COMPASS_LEARN Failed");
+                CustomMessageBox.Show(Strings.SetCOMPASSLEARNFailed);
             }
         }
 

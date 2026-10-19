@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Control));
             this.but_start = new MissionPlanner.Controls.MyButton();
             this.but_z = new MissionPlanner.Controls.MyButton();
             this.but_land = new MissionPlanner.Controls.MyButton();
@@ -58,7 +59,7 @@
             this.but_start.Name = "but_start";
             this.but_start.Size = new System.Drawing.Size(75, 23);
             this.but_start.TabIndex = 0;
-            this.but_start.Text = "Start";
+            resources.ApplyResources(this.but_start, "but_start");
             this.but_start.UseVisualStyleBackColor = true;
             this.but_start.Click += new System.EventHandler(this.but_start_Click);
             // 
@@ -68,7 +69,7 @@
             this.but_z.Name = "but_z";
             this.but_z.Size = new System.Drawing.Size(75, 23);
             this.but_z.TabIndex = 1;
-            this.but_z.Text = "Start Z";
+            resources.ApplyResources(this.but_z, "but_z");
             this.but_z.UseVisualStyleBackColor = true;
             this.but_z.Click += new System.EventHandler(this.but_z_Click);
             // 
@@ -78,7 +79,7 @@
             this.but_land.Name = "but_land";
             this.but_land.Size = new System.Drawing.Size(75, 23);
             this.but_land.TabIndex = 2;
-            this.but_land.Text = "Start Land";
+            resources.ApplyResources(this.but_land, "but_land");
             this.but_land.UseVisualStyleBackColor = true;
             this.but_land.Click += new System.EventHandler(this.but_land_Click);
             // 
@@ -88,7 +89,7 @@
             this.but_stop.Name = "but_stop";
             this.but_stop.Size = new System.Drawing.Size(75, 23);
             this.but_stop.TabIndex = 3;
-            this.but_stop.Text = "Stop";
+            resources.ApplyResources(this.but_stop, "but_stop");
             this.but_stop.UseVisualStyleBackColor = true;
             this.but_stop.Click += new System.EventHandler(this.but_stop_Click);
             // 
@@ -112,7 +113,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "TakeOffAlt";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -121,7 +122,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "MinOffset";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // num_minoffset
             // 
@@ -143,7 +144,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 9;
-            this.label3.Text = "MaxOffset";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // num_maxoffset
             // 
@@ -165,7 +166,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
+            resources.ApplyResources(this.label4, "label4");
             // 
             // label5
             // 
@@ -174,7 +175,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            resources.ApplyResources(this.label5, "label5");
             // 
             // timer1
             // 
@@ -188,7 +189,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
+            resources.ApplyResources(this.label6, "label6");
             // 
             // label7
             // 
@@ -197,7 +198,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 13;
-            this.label7.Text = "label7";
+            resources.ApplyResources(this.label7, "label7");
             // 
             // label8
             // 
@@ -206,7 +207,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 13);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Z speed";
+            resources.ApplyResources(this.label8, "label8");
             // 
             // num_zspeed
             // 
@@ -243,7 +244,7 @@
             this.Controls.Add(this.but_z);
             this.Controls.Add(this.but_start);
             this.Name = "Control";
-            this.Text = "Control";
+            resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.num_TakeOffAlt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_minoffset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_maxoffset)).EndInit();

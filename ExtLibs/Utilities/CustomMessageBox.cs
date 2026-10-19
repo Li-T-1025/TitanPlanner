@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using MissionPlanner;
 
 namespace System
 {
@@ -40,7 +41,7 @@ namespace System
             if (ShowEvent != null)
                 return ShowEvent.Invoke(text, caption, MessageBoxButtons, MessageBoxIcon, YesText, NoText);
 
-            throw new Exception("ShowEvent Not Set");
+            throw new Exception(Strings.ShowEventNotSet);
         }
 
         public enum DialogResult

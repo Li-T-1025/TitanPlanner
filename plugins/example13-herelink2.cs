@@ -48,16 +48,16 @@ namespace CameraControl
 
         public override bool Loaded()
         {
-            var rootbut = new ToolStripMenuItem("Herelink info");
+            var rootbut = new ToolStripMenuItem(Strings.HerelinkInfo);
             //rootbut.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuHud.Items;
             col.Add(rootbut);
 
-            var but = new ToolStripMenuItem("HL Get Info");
+            var but = new ToolStripMenuItem(Strings.HLGetInfo);
             but.Click += but3_Click;
             rootbut.DropDownItems.Add(but);
 
-             but = new ToolStripMenuItem("HL connect");
+             but = new ToolStripMenuItem(Strings.HLConnect);
             but.Click += but4_Click;
             rootbut.DropDownItems.Add(but);
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemControl));
             this.cbParamName = new System.Windows.Forms.ComboBox();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.tbMin = new System.Windows.Forms.TextBox();
@@ -72,7 +73,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Min:";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -81,7 +82,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Max:";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // tbMax
             // 
@@ -98,7 +99,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Increment:";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // tbIncrement
             // 

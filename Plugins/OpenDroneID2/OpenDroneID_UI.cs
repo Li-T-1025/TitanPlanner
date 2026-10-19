@@ -207,7 +207,7 @@ namespace MissionPlanner.Controls
 
 
             if (_odid_arm_msg == false)
-                TXT_RID_Status_Msg.Text = "Timeout.";
+                TXT_RID_Status_Msg.Text = Strings.Timeout1;
             else
                 TXT_RID_Status_Msg.Text = ((odid_arm_status.status == 0) ? "Ready" : System.Text.Encoding.UTF8.GetString(odid_arm_status.error));
                         
@@ -216,7 +216,7 @@ namespace MissionPlanner.Controls
         public void setEmergencyFromMap()
         {
             Console.WriteLine("ODID - Pilot Declared an ODID Emergency");
-            TXT_self_id_TXT.Text = "Pilot Emergency Status Declared";
+            TXT_self_id_TXT.Text = Strings.PilotEmergencyStatusDeclared;
             CMB_self_id_type.SelectedIndex = (int)MAVLink.MAV_ODID_DESC_TYPE.EMERGENCY;
             addStatusMessage("Pilot Emergency Status");
         }
@@ -344,7 +344,7 @@ namespace MissionPlanner.Controls
         {
             // Note: this function is for development only and should be removed for production enviroments. 
 
-            if (CustomMessageBox.Show("Are you sure you want to disable outgoing Remote ID?", "RID Developer Mode?", CustomMessageBox.MessageBoxButtons.YesNo) == CustomMessageBox.DialogResult.No)
+            if (CustomMessageBox.Show(Strings.SureWantDisableOutgoingRemoteID, Strings.SureWantDisableOutgoingRemoteIDTitle, CustomMessageBox.MessageBoxButtons.YesNo) == CustomMessageBox.DialogResult.No)
             {
                 return;
             }

@@ -140,7 +140,8 @@
     <Reference Include="System.Xml">
       <Private>false</Private>
     </Reference>
-  </ItemGroup>
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
+</ItemGroup>
   <ItemGroup>
     <Compile Update="GarminInterface.cs" />
     <Compile Update="GarminUSBDevice.cs" />

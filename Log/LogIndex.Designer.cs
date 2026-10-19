@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIndex));
             this.objectListView1 = new BrightIdeasSoftware.FastObjectListView();
             this.olvColumnImage = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -105,72 +106,72 @@
             this.olvColumnDate.AspectName = "Date";
             this.olvColumnDate.AspectToStringFormat = "{0:yyyy/MM/dd hh\\:mm}";
             this.olvColumnDate.CellPadding = null;
-            this.olvColumnDate.Text = "Date";
+            resources.ApplyResources(this.olvColumnDate, "olvColumnDate");
             this.olvColumnDate.Width = 100;
             // 
             // olvColumndir
             // 
             this.olvColumndir.AspectName = "Directory";
             this.olvColumndir.CellPadding = null;
-            this.olvColumndir.Text = "Directory";
+            resources.ApplyResources(this.olvColumndir, "olvColumndir");
             this.olvColumndir.Width = 258;
             // 
             // olvColumnFrame
             // 
             this.olvColumnFrame.AspectName = "Frame";
             this.olvColumnFrame.CellPadding = null;
-            this.olvColumnFrame.Text = "Frame";
+            resources.ApplyResources(this.olvColumnFrame, "olvColumnFrame");
             // 
             // olvColumnSysid
             // 
             this.olvColumnSysid.AspectName = "Aircraft";
             this.olvColumnSysid.CellPadding = null;
-            this.olvColumnSysid.Text = "Aircraft";
+            resources.ApplyResources(this.olvColumnSysid, "olvColumnSysid");
             // 
             // olvColumnduration
             // 
             this.olvColumnduration.AspectName = "Duration";
             this.olvColumnduration.AspectToStringFormat = "{0:hh\\:mm\\:ss}";
             this.olvColumnduration.CellPadding = null;
-            this.olvColumnduration.Text = "Duration";
+            resources.ApplyResources(this.olvColumnduration, "olvColumnduration");
             this.olvColumnduration.Width = 100;
             // 
             // olvColumnName
             // 
             this.olvColumnName.AspectName = "Name";
             this.olvColumnName.CellPadding = null;
-            this.olvColumnName.Text = "FileName";
+            resources.ApplyResources(this.olvColumnName, "olvColumnName");
             this.olvColumnName.Width = 178;
             // 
             // olvColumnSize
             // 
             this.olvColumnSize.AspectName = "Size";
             this.olvColumnSize.CellPadding = null;
-            this.olvColumnSize.Text = "Size";
+            resources.ApplyResources(this.olvColumnSize, "olvColumnSize");
             // 
             // olvColumnHome
             // 
             this.olvColumnHome.AspectName = "Home";
             this.olvColumnHome.CellPadding = null;
-            this.olvColumnHome.Text = "Home";
+            resources.ApplyResources(this.olvColumnHome, "olvColumnHome");
             // 
             // olvColumnTimeInAir
             // 
             this.olvColumnTimeInAir.AspectName = "TimeInAir";
             this.olvColumnTimeInAir.CellPadding = null;
-            this.olvColumnTimeInAir.Text = "TimeInAir, sec";
+            resources.ApplyResources(this.olvColumnTimeInAir, "olvColumnTimeInAir");
             // 
             // olvColumnDistTraveled
             // 
             this.olvColumnDistTraveled.AspectName = "DistTraveled";
             this.olvColumnDistTraveled.CellPadding = null;
-            this.olvColumnDistTraveled.Text = "DistTraveled, m";
+            resources.ApplyResources(this.olvColumnDistTraveled, "olvColumnDistTraveled");
             // 
             // olvColumnCamMSG
             // 
             this.olvColumnCamMSG.AspectName = "CamMSG";
             this.olvColumnCamMSG.CellPadding = null;
-            this.olvColumnCamMSG.Text = "CamMSG";
+            resources.ApplyResources(this.olvColumnCamMSG, "olvColumnCamMSG");
             // 
             // BUT_changedir
             // 
@@ -179,7 +180,7 @@
             this.BUT_changedir.Name = "BUT_changedir";
             this.BUT_changedir.Size = new System.Drawing.Size(99, 23);
             this.BUT_changedir.TabIndex = 1;
-            this.BUT_changedir.Text = "Custom Directory";
+            resources.ApplyResources(this.BUT_changedir, "BUT_changedir");
             this.BUT_changedir.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_changedir.UseVisualStyleBackColor = true;
             this.BUT_changedir.Click += new System.EventHandler(this.BUT_changedir_Click);
@@ -191,7 +192,7 @@
             this.btnDeleteLog.Name = "btnDeleteLog";
             this.btnDeleteLog.Size = new System.Drawing.Size(104, 23);
             this.btnDeleteLog.TabIndex = 2;
-            this.btnDeleteLog.Text = "Delete selected";
+            resources.ApplyResources(this.btnDeleteLog, "btnDeleteLog");
             this.btnDeleteLog.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnDeleteLog.UseVisualStyleBackColor = true;
             this.btnDeleteLog.Click += new System.EventHandler(this.btnDeleteLog_Click);
@@ -203,7 +204,7 @@
             this.lbStats.resize = false;
             this.lbStats.Size = new System.Drawing.Size(372, 23);
             this.lbStats.TabIndex = 3;
-            this.lbStats.Text = "Selected: 0";
+            resources.ApplyResources(this.lbStats, "lbStats");
             // 
             // but_defaultlogdir
             // 
@@ -212,7 +213,7 @@
             this.but_defaultlogdir.Name = "but_defaultlogdir";
             this.but_defaultlogdir.Size = new System.Drawing.Size(99, 23);
             this.but_defaultlogdir.TabIndex = 4;
-            this.but_defaultlogdir.Text = "Default Log Dir";
+            resources.ApplyResources(this.but_defaultlogdir, "but_defaultlogdir");
             this.but_defaultlogdir.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.but_defaultlogdir.UseVisualStyleBackColor = true;
             this.but_defaultlogdir.Click += new System.EventHandler(this.but_defaultlogdir_Click);
@@ -226,7 +227,7 @@
             this.Controls.Add(this.BUT_changedir);
             this.Controls.Add(this.objectListView1);
             this.Name = "LogIndex";
-            this.Text = "LogIndex";
+            resources.ApplyResources(this, "$this");
             this.Load += new System.EventHandler(this.LogIndex_Load);
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.ResumeLayout(false);

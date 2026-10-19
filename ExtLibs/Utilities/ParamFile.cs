@@ -41,7 +41,7 @@ namespace MissionPlanner.Utilities
                     catch (Exception ex)
                     {
                         log.Error(ex);
-                        throw new FormatException("Invalid number on param " + name + " : " + items[1].ToString());
+                        throw new FormatException(string.Format(Strings.InvalidNumberOnParam, name, items[1].ToString()));
                     }
 
                     if (name == "SYSID_SW_MREV")

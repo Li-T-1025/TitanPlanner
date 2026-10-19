@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradientBG));
             this._Image = new System.Windows.Forms.PictureBox();
             this._Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this._Image)).BeginInit();
@@ -50,7 +51,7 @@
             this._Label.Name = "_Label";
             this._Label.Size = new System.Drawing.Size(35, 13);
             this._Label.TabIndex = 1;
-            this._Label.Text = "label1";
+            resources.ApplyResources(this._Label, "_Label");
             // 
             // GradientBG
             // 

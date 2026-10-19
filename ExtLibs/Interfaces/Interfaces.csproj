@@ -6,4 +6,8 @@
     <AssemblyOriginatorKeyFile>mykey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
+  </ItemGroup>
+
 </Project>

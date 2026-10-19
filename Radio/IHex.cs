@@ -42,7 +42,7 @@ namespace MissionPlanner.Radio
 
                 // every line must start with a :
                 if (!line.StartsWith(":"))
-                    throw new Exception("invalid IntelHex file");
+                    throw new Exception(Strings.InvalidIntelHexFile);
 
                 if (ProgressEvent != null)
                     ProgressEvent(sr.BaseStream.Position / (double)sr.BaseStream.Length);
@@ -81,7 +81,7 @@ namespace MissionPlanner.Radio
                 }
             }
             if (Count < 1)
-                throw new Exception("no data in IntelHex file");
+                throw new Exception(Strings.NoDataInIntelHexFile);
             log(string.Format("read {0} bytes from {1}\n", loadedSize, fromPath));
 
             sr.Close();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormationControl));
             this.CMB_mavs = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.grid1 = new MissionPlanner.Swarm.Grid();
@@ -77,7 +78,7 @@
             this.BUT_Start.Name = "BUT_Start";
             this.BUT_Start.Size = new System.Drawing.Size(75, 23);
             this.BUT_Start.TabIndex = 6;
-            this.BUT_Start.Text = "Start";
+            resources.ApplyResources(this.BUT_Start, "BUT_Start");
             this.BUT_Start.UseVisualStyleBackColor = true;
             this.BUT_Start.Click += new System.EventHandler(this.BUT_Start_Click);
             // 
@@ -87,7 +88,7 @@
             this.BUT_leader.Name = "BUT_leader";
             this.BUT_leader.Size = new System.Drawing.Size(75, 23);
             this.BUT_leader.TabIndex = 5;
-            this.BUT_leader.Text = "Set Leader";
+            resources.ApplyResources(this.BUT_leader, "BUT_leader");
             this.BUT_leader.UseVisualStyleBackColor = true;
             this.BUT_leader.Click += new System.EventHandler(this.BUT_leader_Click);
             // 
@@ -97,7 +98,7 @@
             this.BUT_Land.Name = "BUT_Land";
             this.BUT_Land.Size = new System.Drawing.Size(75, 23);
             this.BUT_Land.TabIndex = 3;
-            this.BUT_Land.Text = "Land (all)";
+            resources.ApplyResources(this.BUT_Land, "BUT_Land");
             this.BUT_Land.UseVisualStyleBackColor = true;
             this.BUT_Land.Click += new System.EventHandler(this.BUT_Land_Click);
             // 
@@ -107,7 +108,7 @@
             this.BUT_Takeoff.Name = "BUT_Takeoff";
             this.BUT_Takeoff.Size = new System.Drawing.Size(75, 23);
             this.BUT_Takeoff.TabIndex = 2;
-            this.BUT_Takeoff.Text = "Takeoff";
+            resources.ApplyResources(this.BUT_Takeoff, "BUT_Takeoff");
             this.BUT_Takeoff.UseVisualStyleBackColor = true;
             this.BUT_Takeoff.Click += new System.EventHandler(this.BUT_Takeoff_Click);
             // 
@@ -117,7 +118,7 @@
             this.BUT_Disarm.Name = "BUT_Disarm";
             this.BUT_Disarm.Size = new System.Drawing.Size(75, 23);
             this.BUT_Disarm.TabIndex = 1;
-            this.BUT_Disarm.Text = "Disarm (exl leader)";
+            resources.ApplyResources(this.BUT_Disarm, "BUT_Disarm");
             this.BUT_Disarm.UseVisualStyleBackColor = true;
             this.BUT_Disarm.Click += new System.EventHandler(this.BUT_Disarm_Click);
             // 
@@ -127,7 +128,7 @@
             this.BUT_Arm.Name = "BUT_Arm";
             this.BUT_Arm.Size = new System.Drawing.Size(75, 23);
             this.BUT_Arm.TabIndex = 0;
-            this.BUT_Arm.Text = "Arm (exl leader)";
+            resources.ApplyResources(this.BUT_Arm, "BUT_Arm");
             this.BUT_Arm.UseVisualStyleBackColor = true;
             this.BUT_Arm.Click += new System.EventHandler(this.BUT_Arm_Click);
             // 
@@ -151,7 +152,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(761, 394);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Stage 1";
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // BUT_Updatepos
@@ -161,7 +162,7 @@
             this.BUT_Updatepos.Name = "BUT_Updatepos";
             this.BUT_Updatepos.Size = new System.Drawing.Size(75, 23);
             this.BUT_Updatepos.TabIndex = 10;
-            this.BUT_Updatepos.Text = "Update Pos";
+            resources.ApplyResources(this.BUT_Updatepos, "BUT_Updatepos");
             this.BUT_Updatepos.UseVisualStyleBackColor = true;
             this.BUT_Updatepos.Click += new System.EventHandler(this.BUT_Updatepos_Click);
             // 
@@ -187,7 +188,7 @@
             this.but_guided.Name = "but_guided";
             this.but_guided.Size = new System.Drawing.Size(75, 23);
             this.but_guided.TabIndex = 12;
-            this.but_guided.Text = "Guided Mode (exl leader)";
+            resources.ApplyResources(this.but_guided, "but_guided");
             this.but_guided.UseVisualStyleBackColor = true;
             this.but_guided.Click += new System.EventHandler(this.but_guided_Click);
             // 
@@ -197,7 +198,7 @@
             this.but_auto.Name = "but_auto";
             this.but_auto.Size = new System.Drawing.Size(75, 23);
             this.but_auto.TabIndex = 13;
-            this.but_auto.Text = "Auto Mode  (exl leader)";
+            resources.ApplyResources(this.but_auto, "but_auto");
             this.but_auto.UseVisualStyleBackColor = true;
             this.but_auto.Click += new System.EventHandler(this.but_auto_Click);
             // 
@@ -217,7 +218,7 @@
             this.Controls.Add(this.BUT_Disarm);
             this.Controls.Add(this.BUT_Arm);
             this.Name = "FormationControl";
-            this.Text = "Control";
+            resources.ApplyResources(this, "$this");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Control_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.tabControl1.ResumeLayout(false);

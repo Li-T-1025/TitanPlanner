@@ -49,50 +49,50 @@ namespace CameraControl
         public override bool Loaded()
         {
             stream = new GStreamer();
-            var rootbut = new ToolStripMenuItem("Herelink Video");
+            var rootbut = new ToolStripMenuItem(Strings.HerelinkVideo);
             //rootbut.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuHud.Items;
             col.Add(rootbut);
 
-            var but = new ToolStripMenuItem("Connect v1");
+            var but = new ToolStripMenuItem(Strings.ConnectV1);
             but.Click += but3_Click;
             rootbut.DropDownItems.Add(but);
 
 
-            but = new ToolStripMenuItem("Set Video stream 1 v1");
+            but = new ToolStripMenuItem(Strings.SetVideoStream1V1);
             but.Click += but1_Click;
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Set Video stream 2 v1");
+            but = new ToolStripMenuItem(Strings.SetVideoStream2V1);
             but.Click += but2_Click;
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Connect stream 1 v2");
+            but = new ToolStripMenuItem(Strings.ConnectStream1V2);
             but.Click += but7_Click;
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Connect stream 2 v2");
+            but = new ToolStripMenuItem(Strings.ConnectStream2V2);
             but.Click += but8_Click;
             rootbut.DropDownItems.Add(but);
 
 
-            but = new ToolStripMenuItem("Connect air 1 v2");
+            but = new ToolStripMenuItem(Strings.ConnectAir1V2);
             but.Click += but5_Click;
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Connect air 2 v2");
+            but = new ToolStripMenuItem(Strings.ConnectAir2V2);
             but.Click += but6_Click;
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Reset Baud");
+            but = new ToolStripMenuItem(Strings.ResetBaud);
             but.Click += but9_Click;
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Dump Info");
+            but = new ToolStripMenuItem(Strings.DumpInfo);
             but.Click += but_Click;
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Capture Start");
+            but = new ToolStripMenuItem(Strings.CaptureStart);
             but.Click += (s, e) =>
             {
                 var mav = Host.comPort.MAVlist.FirstOrDefault(a =>
@@ -105,7 +105,7 @@ namespace CameraControl
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Capture Stop");
+            but = new ToolStripMenuItem(Strings.CaptureStop);
             but.Click += (s, e) =>
             {
                 var mav = Host.comPort.MAVlist.FirstOrDefault(a =>

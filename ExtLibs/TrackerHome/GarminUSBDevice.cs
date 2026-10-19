@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using System.Runtime.InteropServices;
 using Microsoft.Win32.SafeHandles;
+using MissionPlanner;
 
 namespace TrackerHomeGPS
 {
@@ -42,12 +43,12 @@ namespace TrackerHomeGPS
 
         public void Initialize()
         {
-            if (!DevicePresent()) throw new DeviceNotReadyException("Device could not be detected in the system.");
+            if (!DevicePresent()) throw new DeviceNotReadyException(Strings.DeviceCouldNotBeDetectedInTheSystem);
 
             if ((gHandle != null) && (!gHandle.IsInvalid)) gHandle.Close();
 
-            if (!(_obtainDeviceHandle())) throw new DeviceNotReadyException("The device could not be initialized, it may not be connected to the system.");
-            if (!_startSession()) throw new DeviceNotReadyException("There was an unexpected error when starting the session with the device.");
+            if (!(_obtainDeviceHandle())) throw new DeviceNotReadyException(Strings.TheDeviceCouldNotBeInitializedItMayNotBeConnectedToTheSystem);
+            if (!_startSession()) throw new DeviceNotReadyException(Strings.ThereWasAnUnexpectedErrorWhenStartingTheSessionWithTheDevice);
 
             _getProductData();
         }

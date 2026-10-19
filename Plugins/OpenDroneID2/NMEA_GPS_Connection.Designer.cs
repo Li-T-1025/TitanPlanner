@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NMEA_GPS_Connection));
             this.CB_auto_connect = new System.Windows.Forms.CheckBox();
             this.CMB_baudrate = new System.Windows.Forms.ComboBox();
             this.CMB_serialport = new System.Windows.Forms.ComboBox();
@@ -44,7 +45,7 @@
             this.CB_auto_connect.Name = "CB_auto_connect";
             this.CB_auto_connect.Size = new System.Drawing.Size(48, 17);
             this.CB_auto_connect.TabIndex = 46;
-            this.CB_auto_connect.Text = "Auto";
+            resources.ApplyResources(this.CB_auto_connect, "CB_auto_connect");
             this.CB_auto_connect.UseVisualStyleBackColor = true;
             this.CB_auto_connect.CheckedChanged += new System.EventHandler(this.CB_auto_connect_CheckedChanged);
             // 
@@ -52,15 +53,7 @@
             // 
             this.CMB_baudrate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CMB_baudrate.FormattingEnabled = true;
-            this.CMB_baudrate.Items.AddRange(new object[] {
-            "4800",
-            "9600",
-            "14400",
-            "19200",
-            "28800",
-            "38400",
-            "57600",
-            "115200"});
+            this.CMB_baudrate.Items.AddRange(new object[] { "4800", "9600", "14400", "19200", "28800", "38400", "57600", "115200" });
             this.CMB_baudrate.Location = new System.Drawing.Point(133, 18);
             this.CMB_baudrate.Name = "CMB_baudrate";
             this.CMB_baudrate.Size = new System.Drawing.Size(97, 21);
@@ -82,7 +75,7 @@
             this.BUT_connect.Name = "BUT_connect";
             this.BUT_connect.Size = new System.Drawing.Size(115, 20);
             this.BUT_connect.TabIndex = 43;
-            this.BUT_connect.Text = "Connect Base GPS";
+            resources.ApplyResources(this.BUT_connect, "BUT_connect");
             this.BUT_connect.UseVisualStyleBackColor = true;
             this.BUT_connect.Click += new System.EventHandler(this.BUT_connect_Click);
             // 
@@ -94,8 +87,7 @@
             this.LBL_gpsStatus.Name = "LBL_gpsStatus";
             this.LBL_gpsStatus.Size = new System.Drawing.Size(368, 13);
             this.LBL_gpsStatus.TabIndex = 42;
-            this.LBL_gpsStatus.Text = "Not Yet Started                                                                  " +
-    "                              ";
+            resources.ApplyResources(this.LBL_gpsStatus, "LBL_gpsStatus");
             this.LBL_gpsStatus.DoubleClick += new System.EventHandler(this.LBL_gpsStatus_DoubleClick);
             // 
             // groupBox1
@@ -110,7 +102,7 @@
             this.groupBox1.Size = new System.Drawing.Size(360, 80);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "GCS GPS ";
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             // 
             // NMEA_GPS_Connection
             // 

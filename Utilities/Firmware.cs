@@ -126,7 +126,7 @@ namespace MissionPlanner.Utilities
 
             if (!File.Exists(file))
             {
-                //CustomMessageBox.Show("Missing FirmwareHistory.txt file");
+                //CustomMessageBox.Show(Strings.MissingFirmwareHistoryFile);
                 return;
             }
 
@@ -197,7 +197,7 @@ namespace MissionPlanner.Utilities
                     var dnsinfo = Dns.GetHostAddresses(new Uri(url).DnsSafeHost);
 
                     if (dnsinfo.Length == 0)
-                        throw new Exception("Failed to resolve dns");
+                        throw new Exception(Strings.FailedToResolveDns);
 
                     XmlSerializer xms = new XmlSerializer(typeof(optionsObject), new Type[] { typeof(software) });
 
@@ -230,7 +230,7 @@ namespace MissionPlanner.Utilities
                 catch (Exception ex)
                 {
                     log.Error(ex);
-                    //CustomMessageBox.Show("Failed to get Firmware List : " + ex.Message);
+                    //CustomMessageBox.Show(Strings.FailedGetFirmwareList + ex.Message);
                     invalidex = ex;
                 }
             }
@@ -385,7 +385,7 @@ namespace MissionPlanner.Utilities
                 {
                     //
                     if ((int)DialogResult.Yes ==
-                        CustomMessageBox.Show("Is this a CubeBlack?", "CubeBlack", MessageBoxButtons.YesNo))
+                        CustomMessageBox.Show(Strings.IsThisCubeBlack, Strings.IsThisCubeBlackTitle, MessageBoxButtons.YesNo))
                     {
                         BoardDetect.chbootloader = "CubeBlack";
                         board = BoardDetect.boards.chbootloader;
@@ -544,7 +544,7 @@ namespace MissionPlanner.Utilities
             catch (Exception ex)
             {
                 updateProgress(50, Strings.FailedDownload);
-                CustomMessageBox.Show("Failed to download new firmware : " + ex.ToString());
+                CustomMessageBox.Show(Strings.FailedDownloadNewFirmware + ex.ToString());
                 return false;
             }
 
@@ -576,7 +576,7 @@ namespace MissionPlanner.Utilities
 
             }
 
-            if (CustomMessageBox.Show("Upload ChibiOS", "ChibiOS", MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
+            if (CustomMessageBox.Show(Strings.UploadChibiOS, Strings.UploadChibiOSTitle, MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
             {
                 return chibiosurl;
             }
@@ -699,7 +699,7 @@ namespace MissionPlanner.Utilities
                     catch (IOException ex)
                     {
                         log.Error(ex);
-                        CustomMessageBox.Show("lost communication with the board.", "lost comms");
+                        CustomMessageBox.Show(Strings.LostCommunicationWithTheBoard, Strings.CaptionLostComms);
                         uploader.close();
                         result = false;
                         return false;
@@ -707,7 +707,7 @@ namespace MissionPlanner.Utilities
                     catch (TimeoutException ex)
                     {
                         log.Error(ex);
-                        CustomMessageBox.Show("lost communication with the board.", "comms timeout");
+                        CustomMessageBox.Show(Strings.LostCommunicationWithTheBoard, Strings.CaptionCommsTimeout);
                         uploader.close();
                         result = false;
                         return false;
@@ -815,7 +815,7 @@ namespace MissionPlanner.Utilities
                         else
                         {
                             MainV2.comPort.BaseStream.Close();
-                            throw new Exception("No HeartBeat found");
+                            throw new Exception(Strings.NoHeartBeatFound);
                         }
                     });
                     if (task.Wait(TimeSpan.FromSeconds(3)))
@@ -868,8 +868,7 @@ namespace MissionPlanner.Utilities
                     //specific action for VRBRAIN4 board that needs to be manually disconnected before uploading
                     if (board == BoardDetect.boards.vrbrainv40)
                     {
-                        CustomMessageBox.Show(
-                            "VRBRAIN 4 detected. Please unplug the board, and then press OK and plug back in.\n");
+                        CustomMessageBox.Show(Strings.Vrbrain4DetectedUnplugBoard);
                     }
                 }
                 else
@@ -965,9 +964,9 @@ namespace MissionPlanner.Utilities
                     {
                         //VR boards have no tone alarm
                         if (up.board_type == 1140)
-                            CustomMessageBox.Show("Upload complete! Please unplug and reconnect board.");
+                            CustomMessageBox.Show(Strings.UploadCompleteUnplugReconnect);
                         else
-                            CustomMessageBox.Show("Upload complete!");
+                            CustomMessageBox.Show(Strings.UploadCompleteExclaim);
                     }
                     else
                     {
@@ -1000,7 +999,7 @@ namespace MissionPlanner.Utilities
 
                 if (!ssidFound)
                 {
-                    CustomMessageBox.Show("Please connect to " + vehicleName + " Wifi now and after that press OK", vehicleName, MessageBoxButtons.OK);
+                    CustomMessageBox.Show(Strings.PleaseConnectTo + vehicleName + Strings.WifiNowAndAfterThatPressOk, vehicleName, MessageBoxButtons.OK);
                     ssidFound = isParrotWifiConnected(vehicleName);
                     pingReply = pingParrotVehicle(ping);
                 }
@@ -1009,12 +1008,12 @@ namespace MissionPlanner.Utilities
                 {
                     if (!ssidFound)
                     {
-                        if (CustomMessageBox.Show("You don't seem connected to " + vehicleName + " Wifi. Please connect to it and press OK to try again", vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
+                        if (CustomMessageBox.Show(Strings.YouDontSeemConnectedTo + vehicleName + Strings.WifiPleaseConnectPressOkToTryAgain, vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
                         {
                             return false;
                         }
                     }
-                    else if (CustomMessageBox.Show("You seem connected to " + vehicleName + " Wifi but it didn't answer our request. Do you want to try again?", vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
+                    else if (CustomMessageBox.Show(Strings.YouSeemConnectedTo + vehicleName + Strings.WifiButNoAnswerTryAgain, vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
                     {
                         return false;
                     }
@@ -1040,12 +1039,12 @@ namespace MissionPlanner.Utilities
                         ntimes = "two";
                     }
 
-                    CustomMessageBox.Show("Please press " + vehicleName + " Power button " + ntimes + " times", vehicleName, MessageBoxButtons.OK);
+                    CustomMessageBox.Show(Strings.PleasePress + vehicleName + Strings.PowerButton + ntimes + Strings.RepeatTimes, vehicleName, MessageBoxButtons.OK);
                     response = adbClient.Connect(new DnsEndPoint("192.168.42.1", 9050));
 
                     while (!response.Contains("connected to 192.168.42.1:9050"))
                     {
-                        if (CustomMessageBox.Show("Couldn't contact " + vehicleName + ". Press the Power button " + ntimes + " times. Do you want to try to connect again?", vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
+                        if (CustomMessageBox.Show(Strings.CouldntContact + vehicleName + Strings.PressPowerButton + ntimes + Strings.RepeatTimesTryAgain, vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
                         {
                             return false;
                         }
@@ -1222,7 +1221,7 @@ namespace MissionPlanner.Utilities
                     adbClient.ExecuteRemoteCommand("reboot.sh", device, consoleOut);
                 }
 
-                CustomMessageBox.Show("Firmware installed!");
+                CustomMessageBox.Show(Strings.FirmwareInstalled);
                 updateProgress(-1, "Firmware installed");
             }
             catch (Exception e)
@@ -1306,7 +1305,7 @@ namespace MissionPlanner.Utilities
                 }
                 catch (MissingFieldException)
                 {
-                    CustomMessageBox.Show("Please update, your install is currupt", Strings.ERROR);
+                    CustomMessageBox.Show(Strings.PleaseUpdateYourInstallIsCorrupt, Strings.ERROR);
                     return false;
                 }
             }
@@ -1372,7 +1371,7 @@ namespace MissionPlanner.Utilities
             {
                 if (FLASH.Length > 126976)
                 {
-                    CustomMessageBox.Show("Firmware is to big for a 1280, Please upgrade your hardware!!");
+                    CustomMessageBox.Show(Strings.FirmwareToBigFor1280);
                     return false;
                 }
                 //port = new ArduinoSTK();
@@ -1407,7 +1406,7 @@ namespace MissionPlanner.Utilities
                     {
                         if (port.IsOpen)
                             port.Close();
-                        throw new Exception("Upload failed. Lost sync. Try Arduino!!");
+                        throw new Exception(Strings.UploadFailedLostSyncTryArduino);
                     }
 
                     port.Progress -= updateProgress;
@@ -1461,7 +1460,7 @@ namespace MissionPlanner.Utilities
                 {
                 }
 
-                //CustomMessageBox.Show("1. If you are updating your firmware from a previous version, please verify your parameters are appropriate for the new version.\n2. Please ensure your accelerometer is calibrated after installing or re-calibrated after updating the firmware.");
+                //CustomMessageBox.Show(Strings.FirmwareUpdateNoteVerifyParameters);
 
                 try
                 {
@@ -1548,8 +1547,8 @@ namespace MissionPlanner.Utilities
 
                     if (checksumact != checksum)
                     {
-                        CustomMessageBox.Show("The hex file loaded is invalid, please try again.");
-                        throw new Exception("Checksum Failed - Invalid Hex");
+                        CustomMessageBox.Show(Strings.HexFileLoadedInvalid);
+                        throw new Exception(Strings.ChecksumFailedInvalidHex);
                     }
                 }
                 //Regex regex = new Regex(@"^:(..)(....)(..)(.*)(..)$"); // length - address - option - data - checksum
@@ -1557,8 +1556,8 @@ namespace MissionPlanner.Utilities
 
             if (!hitend)
             {
-                CustomMessageBox.Show("The hex file did no contain an end flag. aborting");
-                throw new Exception("No end flag in file");
+                CustomMessageBox.Show(Strings.HexFileNoEndFlag);
+                throw new Exception(Strings.NoEndFlagInFile);
             }
 
             Array.Resize<byte>(ref FLASH, total);

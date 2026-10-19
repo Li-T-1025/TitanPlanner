@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FollowPathControl));
             this.CMB_mavs = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.BUT_connect = new Controls.MyButton();
@@ -60,7 +61,7 @@
             this.BUT_connect.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
             this.BUT_connect.Size = new System.Drawing.Size(75, 23);
             this.BUT_connect.TabIndex = 7;
-            this.BUT_connect.Text = "Connect MAVs";
+            resources.ApplyResources(this.BUT_connect, "BUT_connect");
             this.BUT_connect.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_connect.UseVisualStyleBackColor = true;
             this.BUT_connect.Click += new System.EventHandler(this.BUT_connect_Click);
@@ -89,7 +90,7 @@
             this.BUT_leader.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
             this.BUT_leader.Size = new System.Drawing.Size(75, 23);
             this.BUT_leader.TabIndex = 5;
-            this.BUT_leader.Text = "Set Leader";
+            resources.ApplyResources(this.BUT_leader, "BUT_leader");
             this.BUT_leader.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_leader.UseVisualStyleBackColor = true;
             this.BUT_leader.Click += new System.EventHandler(this.BUT_leader_Click);
@@ -103,7 +104,7 @@
             this.BUT_Disarm.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
             this.BUT_Disarm.Size = new System.Drawing.Size(75, 23);
             this.BUT_Disarm.TabIndex = 1;
-            this.BUT_Disarm.Text = "Disarm (exl leader)";
+            resources.ApplyResources(this.BUT_Disarm, "BUT_Disarm");
             this.BUT_Disarm.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_Disarm.UseVisualStyleBackColor = true;
             this.BUT_Disarm.Click += new System.EventHandler(this.BUT_Disarm_Click);
@@ -117,7 +118,7 @@
             this.BUT_Arm.Outline = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(148)))), ((int)(((byte)(41)))));
             this.BUT_Arm.Size = new System.Drawing.Size(75, 23);
             this.BUT_Arm.TabIndex = 0;
-            this.BUT_Arm.Text = "Arm (exl leader)";
+            resources.ApplyResources(this.BUT_Arm, "BUT_Arm");
             this.BUT_Arm.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_Arm.UseVisualStyleBackColor = true;
             this.BUT_Arm.Click += new System.EventHandler(this.BUT_Arm_Click);
@@ -149,7 +150,7 @@
             this.Controls.Add(this.BUT_Disarm);
             this.Controls.Add(this.BUT_Arm);
             this.Name = "FollowPathControl";
-            this.Text = "Control";
+            resources.ApplyResources(this, "$this");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Control_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);

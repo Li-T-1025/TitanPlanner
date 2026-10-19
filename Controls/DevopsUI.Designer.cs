@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DevopsUI));
             this.but_doit = new MissionPlanner.Controls.MyButton();
             this.num_sysid = new System.Windows.Forms.NumericUpDown();
             this.num_compid = new System.Windows.Forms.NumericUpDown();
@@ -62,7 +63,7 @@
             this.but_doit.Name = "but_doit";
             this.but_doit.Size = new System.Drawing.Size(75, 23);
             this.but_doit.TabIndex = 0;
-            this.but_doit.Text = "Do It";
+            resources.ApplyResources(this.but_doit, "but_doit");
             this.but_doit.UseVisualStyleBackColor = true;
             this.but_doit.Click += new System.EventHandler(this.but_doit_Click);
             // 
@@ -119,7 +120,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "sysid";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -128,7 +129,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "compid";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // label3
             // 
@@ -137,7 +138,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 10;
-            this.label3.Text = "bus type";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // dom_bustype
             // 
@@ -147,7 +148,7 @@
             this.dom_bustype.Name = "dom_bustype";
             this.dom_bustype.Size = new System.Drawing.Size(62, 20);
             this.dom_bustype.TabIndex = 3;
-            this.dom_bustype.Text = "SPI";
+            resources.ApplyResources(this.dom_bustype, "dom_bustype");
             this.dom_bustype.SelectedItemChanged += new System.EventHandler(this.dom_bustype_SelectedItemChanged);
             // 
             // txt_spiname
@@ -165,7 +166,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 11;
-            this.label4.Text = "bus";
+            resources.ApplyResources(this.label4, "label4");
             // 
             // num_busno
             // 
@@ -181,7 +182,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 12;
-            this.label5.Text = "address";
+            resources.ApplyResources(this.label5, "label5");
             // 
             // num_address
             // 
@@ -197,7 +198,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 13;
-            this.label6.Text = "regstart";
+            resources.ApplyResources(this.label6, "label6");
             // 
             // num_regstart
             // 
@@ -223,7 +224,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 14;
-            this.label7.Text = "count";
+            resources.ApplyResources(this.label7, "label7");
             // 
             // num_count
             // 
@@ -246,7 +247,7 @@
             this.but_test.Name = "but_test";
             this.but_test.Size = new System.Drawing.Size(75, 23);
             this.but_test.TabIndex = 5;
-            this.but_test.Text = "test";
+            resources.ApplyResources(this.but_test, "but_test");
             this.but_test.UseVisualStyleBackColor = true;
             this.but_test.Click += new System.EventHandler(this.but_test_Click);
             // 

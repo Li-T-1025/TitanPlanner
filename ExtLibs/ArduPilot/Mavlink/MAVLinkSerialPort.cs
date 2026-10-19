@@ -161,7 +161,7 @@ namespace MissionPlanner.Comms
                 GetData();
                 System.Threading.Thread.Sleep(1);
                 if (DateTime.Now > deadline)
-                    throw new Exception("MAVLinkSerialPort Timeout on read");
+                    throw new Exception(Strings.MAVLinkSerialPortTimeoutOnRead);
                 count += 1;
             }
             lock (buffer)

@@ -100,11 +100,11 @@ namespace MissionPlanner.Controls
                         score += len == n ? -len : 0;
 
                         if(score <= 40)
-                            CustomMessageBox.Show("Password Strength: " + score + " WEAK - it will be added, but please pick a better password");
+                            CustomMessageBox.Show(Strings.PasswordStrength + " " + score + " WEAK - it will be added, but please pick a better password");
                         else if (score <= 60)
-                            CustomMessageBox.Show("Password Strength: " + score + " Good");
+                            CustomMessageBox.Show(Strings.PasswordStrength + " " + score + " Good");
                         else if (score > 60)
-                            CustomMessageBox.Show("Password Strength: " + score + " Strong");
+                            CustomMessageBox.Show(Strings.PasswordStrength + " " + score + " Strong");
                     }
                     MAVAuthKeys.AddKey(dataGridView1[FName.Index, row].Value.ToString(), input);
                 }
@@ -148,7 +148,7 @@ namespace MissionPlanner.Controls
                 }
             }
             
-            lbl_sgnpkts.Text = "Using Key: " + name + ", Signed Packets: " + MainV2.comPort.Mavlink2Signed.ToString();
+            lbl_sgnpkts.Text = Strings.UsingKey + " " + name + ", Signed Packets: " + MainV2.comPort.Mavlink2Signed.ToString();
         }
     }
 }

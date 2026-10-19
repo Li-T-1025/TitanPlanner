@@ -244,7 +244,7 @@ namespace MissionPlanner.GCSViews
             // Check if marker is off screen
             if (!IsPointOnScreen(currentPos))
             {
-                if (CustomMessageBox.Show("Place home at map center?", "Home Off Screen", MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
+                if (CustomMessageBox.Show(Strings.PlaceHomeMapCenter, Strings.PlaceHomeMapCenterTitle, MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
                 {
                     currentPos = myGMAP1.Position;
                     homemarker.Position = currentPos;
@@ -257,7 +257,7 @@ namespace MissionPlanner.GCSViews
 
             if (currentPos.Lat == 0 && currentPos.Lng == 0)
             {
-                CustomMessageBox.Show("Please set a valid home location on the map first.", "Invalid Location");
+                CustomMessageBox.Show(Strings.PleaseSetValidHomeLocationMap, Strings.Invalid_Location);
                 return;
             }
 
@@ -268,14 +268,14 @@ namespace MissionPlanner.GCSViews
 
             if (string.IsNullOrWhiteSpace(locationName))
             {
-                CustomMessageBox.Show("Location name cannot be empty.", "Invalid Name");
+                CustomMessageBox.Show(Strings.LocationNameCannotEmpty, Strings.LocationNameCannotEmptyTitle);
                 return;
             }
 
             // Don't allow overwriting Woodley
             if (locationName.Equals("Woodley", StringComparison.OrdinalIgnoreCase))
             {
-                CustomMessageBox.Show("Cannot overwrite the default Woodley location.", "Invalid Name");
+                CustomMessageBox.Show(Strings.CannotOverwriteDefaultWoodleyLocation, Strings.LocationNameCannotEmptyTitle);
                 return;
             }
 
@@ -307,7 +307,7 @@ namespace MissionPlanner.GCSViews
                 }
             }
 
-            CustomMessageBox.Show($"Location '{locationName}' saved successfully.", "Location Saved");
+            CustomMessageBox.Show(string.Format(Strings.LocationSavedSuccessfully, locationName), Strings.LocationSavedSuccessfullyTitle);
 
             // Update remove button state
             UpdateRemoveButtonState();
@@ -325,14 +325,14 @@ namespace MissionPlanner.GCSViews
             // Don't allow removing Woodley (index 0)
             if (cmb_location.SelectedIndex == 0)
             {
-                CustomMessageBox.Show("Cannot remove the default Woodley location.", "Cannot Remove");
+                CustomMessageBox.Show(Strings.CannotRemoveDefaultWoodleyLocation, Strings.CannotRemoveDefaultWoodleyLocationTitle);
                 return;
             }
 
             if (cmb_location.SelectedItem is SITLLocation location)
             {
                 // Confirm removal
-                if (CustomMessageBox.Show($"Remove location '{location.Name}'?", "Confirm Remove", MessageBoxButtons.YesNo) != (int)DialogResult.Yes)
+                if (CustomMessageBox.Show(string.Format(Strings.RemoveLocation, location.Name), Strings.RemoveLocationTitle, MessageBoxButtons.YesNo) != (int)DialogResult.Yes)
                     return;
 
                 // Remove from saved locations
@@ -379,7 +379,7 @@ namespace MissionPlanner.GCSViews
 
                 if (status != GMap.NET.GeoCoderStatusCode.G_GEO_SUCCESS)
                 {
-                    CustomMessageBox.Show($"Could not find location: '{place}'\nReason: {status}", "Location Not Found");
+                    CustomMessageBox.Show(string.Format(Strings.CouldFindLocationReason, place, status), Strings.CouldFindLocationReasonTitle);
                 }
                 else
                 {
@@ -458,7 +458,7 @@ namespace MissionPlanner.GCSViews
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to download and start sitl\n" + ex.ToString());
+                CustomMessageBox.Show(Strings.FailedDownloadStartSitl + "\n" + ex.ToString());
             }
         }
 
@@ -479,7 +479,7 @@ namespace MissionPlanner.GCSViews
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to download and start sitl\n" + ex.ToString());
+                CustomMessageBox.Show(Strings.FailedDownloadStartSitl + "\n" + ex.ToString());
             }
         }
 
@@ -500,7 +500,7 @@ namespace MissionPlanner.GCSViews
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to download and start sitl\n" + ex.ToString());
+                CustomMessageBox.Show(Strings.FailedDownloadStartSitl + "\n" + ex.ToString());
             }
         }
 
@@ -521,7 +521,7 @@ namespace MissionPlanner.GCSViews
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to download and start sitl\n" + ex.ToString());
+                CustomMessageBox.Show(Strings.FailedDownloadStartSitl + "\n" + ex.ToString());
             }
         }
 
@@ -965,7 +965,7 @@ namespace MissionPlanner.GCSViews
                 }
                 catch (Exception ex)
                 {
-                    CustomMessageBox.Show("Failed to start the simulator\n" + ex.ToString(), Strings.ERROR);
+                    CustomMessageBox.Show(Strings.FailedStartSimulator + "\n" + ex.ToString(), Strings.ERROR);
                     return;
                 }
             }
@@ -993,7 +993,7 @@ namespace MissionPlanner.GCSViews
                 }
                 catch (Exception ex)
                 {
-                    CustomMessageBox.Show("Failed to start the simulator\n" + ex.ToString(), Strings.ERROR);
+                    CustomMessageBox.Show(Strings.FailedStartSimulator + "\n" + ex.ToString(), Strings.ERROR);
                     return;
                 }
             }

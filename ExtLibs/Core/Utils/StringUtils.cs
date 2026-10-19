@@ -4,6 +4,7 @@ using System.Text;
 using System.IO;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using MissionPlanner;
 
 namespace Core.Utils
 {
@@ -117,7 +118,7 @@ namespace Core.Utils
 
         public static string RemoveFromFront(string str, string frontStr) {
             if (!str.StartsWith(frontStr)) {
-                throw new ArgumentException("Error in RemoveFromFront: " + str + " does not start with " + frontStr);
+                throw new ArgumentException(string.Format(Strings.ErrorInRemoveFromFront, str, frontStr));
             }
             return str.Substring(frontStr.Length);
         }

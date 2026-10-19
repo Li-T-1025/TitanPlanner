@@ -40,7 +40,7 @@ namespace MissionPlanner
 
         public void setLabel(string port)
         {
-            LBL_port_txt.Text = "Showing Data from: " + port;
+            LBL_port_txt.Text = Strings.ShowingData + " " + port;
         }
 
     }

@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
+using MissionPlanner;
 
 namespace OpenDroneID_Plugin
 {
@@ -46,7 +47,7 @@ namespace OpenDroneID_Plugin
 
             tabctrl = Host.MainForm.FlightData.tabControlactions;
             // set the display name
-            tab.Text = "Drone ID";
+            tab.Text = Strings.DroneID;
             // set the internal id
             tab.Name = "tabDroneID";
             // add the usercontrol to the tabpage
@@ -73,7 +74,7 @@ namespace OpenDroneID_Plugin
             // setup default if doesnt exist
             if (tabs == null)
             {
-                CustomMessageBox.Show("Restart Mission Planner to enable Drone ID Tab. Disable Plugin if Not Required CTRL-P");
+                CustomMessageBox.Show(Strings.RestartMissionPlannerEnableDroneID);
                 Host.MainForm.FlightData.saveTabControlActions();
                 tabs = Settings.Instance["tabcontrolactions"];
                 Settings.Instance.Save();

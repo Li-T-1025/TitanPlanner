@@ -46,6 +46,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
     <ProjectReference Include="..\WinUSBNet\Nefarius.Drivers.WinUSB.csproj" Condition="'$(OS)' == 'Windows_NT' or '$(MissionPlannerLinuxBuild)' == 'true'" />
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
   </ItemGroup>
 
   <ItemGroup>

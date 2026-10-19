@@ -255,7 +255,7 @@ namespace generator
             this.runStatusTxt.Name = "runStatusTxt";
             this.runStatusTxt.Size = new System.Drawing.Size(130, 55);
             this.runStatusTxt.TabIndex = 8;
-            this.runStatusTxt.Text = "OK";
+            this.runStatusTxt.Text = Strings.OK;
             // 
             // powerLabel
             // 
@@ -266,7 +266,7 @@ namespace generator
             this.powerLabel.Name = "powerLabel";
             this.powerLabel.Size = new System.Drawing.Size(42, 15);
             this.powerLabel.TabIndex = 4;
-            this.powerLabel.Text = "Power";
+            this.powerLabel.Text = Strings.Power;
             // 
             // voltageLabel
             // 
@@ -277,7 +277,7 @@ namespace generator
             this.voltageLabel.Name = "voltageLabel";
             this.voltageLabel.Size = new System.Drawing.Size(48, 15);
             this.voltageLabel.TabIndex = 3;
-            this.voltageLabel.Text = "Voltage";
+            this.voltageLabel.Text = Strings.Voltage;
             // 
             // runstatusLabel
             // 
@@ -288,7 +288,7 @@ namespace generator
             this.runstatusLabel.Name = "runstatusLabel";
             this.runstatusLabel.Size = new System.Drawing.Size(67, 15);
             this.runstatusLabel.TabIndex = 2;
-            this.runstatusLabel.Text = "Run Status";
+            this.runstatusLabel.Text = Strings.RunStatus;
             // 
             // runTimeTxt
             // 
@@ -318,7 +318,7 @@ namespace generator
             this.runTimeLabel.Name = "runTimeLabel";
             this.runTimeLabel.Size = new System.Drawing.Size(101, 15);
             this.runTimeLabel.TabIndex = 0;
-            this.runTimeLabel.Text = "Run Time(h:mm)";
+            this.runTimeLabel.Text = Strings.RunTimeHMm;
             // 
             // nextMainTimeLabel
             // 
@@ -328,7 +328,7 @@ namespace generator
             this.nextMainTimeLabel.Name = "nextMainTimeLabel";
             this.nextMainTimeLabel.Size = new System.Drawing.Size(84, 15);
             this.nextMainTimeLabel.TabIndex = 0;
-            this.nextMainTimeLabel.Text = "Next Maint (h)";
+            this.nextMainTimeLabel.Text = Strings.NextMaintH;
             // 
             // generator
             // 

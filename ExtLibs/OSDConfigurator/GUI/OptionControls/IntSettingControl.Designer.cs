@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IntSettingControl));
             this.labelName = new System.Windows.Forms.Label();
             this.tbValue = new System.Windows.Forms.TextBox();
             this.labelDescription = new System.Windows.Forms.Label();
@@ -40,7 +41,7 @@
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(88, 13);
             this.labelName.TabIndex = 0;
-            this.labelName.Text = "SETTING NAME";
+            resources.ApplyResources(this.labelName, "labelName");
             // 
             // tbValue
             // 

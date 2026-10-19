@@ -29,6 +29,7 @@ namespace Dowding
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DowdingUI));
             this.chk_enable = new System.Windows.Forms.CheckBox();
             this.myLabel1 = new System.Windows.Forms.Label();
             this.txt_username = new System.Windows.Forms.TextBox();
@@ -88,7 +89,7 @@ namespace Dowding
             this.chk_enable.Name = "chk_enable";
             this.chk_enable.Size = new System.Drawing.Size(96, 17);
             this.chk_enable.TabIndex = 8;
-            this.chk_enable.Text = "Enable at Start";
+            resources.ApplyResources(this.chk_enable, "chk_enable");
             this.chk_enable.UseVisualStyleBackColor = true;
             this.chk_enable.CheckedChanged += new System.EventHandler(this.chk_enable_CheckedChanged);
             // 
@@ -98,7 +99,7 @@ namespace Dowding
             this.myLabel1.Name = "myLabel1";
             this.myLabel1.Size = new System.Drawing.Size(75, 23);
             this.myLabel1.TabIndex = 0;
-            this.myLabel1.Text = "Username";
+            resources.ApplyResources(this.myLabel1, "myLabel1");
             // 
             // txt_username
             // 
@@ -113,7 +114,7 @@ namespace Dowding
             this.myLabel3.Name = "myLabel3";
             this.myLabel3.Size = new System.Drawing.Size(75, 23);
             this.myLabel3.TabIndex = 2;
-            this.myLabel3.Text = "Password";
+            resources.ApplyResources(this.myLabel3, "myLabel3");
             // 
             // txt_password
             // 
@@ -130,7 +131,7 @@ namespace Dowding
             this.myLabel2.Name = "myLabel2";
             this.myLabel2.Size = new System.Drawing.Size(75, 23);
             this.myLabel2.TabIndex = 1;
-            this.myLabel2.Text = "Server";
+            resources.ApplyResources(this.myLabel2, "myLabel2");
             // 
             // cmb_server
             // 
@@ -146,7 +147,7 @@ namespace Dowding
             this.but_verify.Name = "but_verify";
             this.but_verify.Size = new System.Drawing.Size(181, 23);
             this.but_verify.TabIndex = 6;
-            this.but_verify.Text = "Verify";
+            resources.ApplyResources(this.but_verify, "but_verify");
             this.but_verify.UseVisualStyleBackColor = true;
             this.but_verify.Click += new System.EventHandler(this.but_verify_Click);
             // 
@@ -156,7 +157,7 @@ namespace Dowding
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 23);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Or";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // but_token
             // 
@@ -164,7 +165,7 @@ namespace Dowding
             this.but_token.Name = "but_token";
             this.but_token.Size = new System.Drawing.Size(181, 23);
             this.but_token.TabIndex = 9;
-            this.but_token.Text = "Enter Token";
+            resources.ApplyResources(this.but_token, "but_token");
             this.but_token.UseVisualStyleBackColor = true;
             this.but_token.Click += new System.EventHandler(this.but_token_Click);
             // 
@@ -174,7 +175,7 @@ namespace Dowding
             this.but_start.Name = "but_start";
             this.but_start.Size = new System.Drawing.Size(407, 23);
             this.but_start.TabIndex = 11;
-            this.but_start.Text = "Start";
+            resources.ApplyResources(this.but_start, "but_start");
             this.but_start.UseVisualStyleBackColor = true;
             this.but_start.Click += new System.EventHandler(this.but_start_Click);
             // 
@@ -220,7 +221,7 @@ namespace Dowding
             this.lbl_header.Name = "lbl_header";
             this.lbl_header.Size = new System.Drawing.Size(95, 23);
             this.lbl_header.TabIndex = 7;
-            this.lbl_header.Text = "Dowding";
+            resources.ApplyResources(this.lbl_header, "lbl_header");
             // 
             // panel2
             // 
@@ -247,7 +248,7 @@ namespace Dowding
             this.but_setathome.Name = "but_setathome";
             this.but_setathome.Size = new System.Drawing.Size(100, 23);
             this.but_setathome.TabIndex = 19;
-            this.but_setathome.Text = "Set Tracker Home";
+            resources.ApplyResources(this.but_setathome, "but_setathome");
             this.but_setathome.UseVisualStyleBackColor = true;
             this.but_setathome.Click += new System.EventHandler(this.but_setathome_Click);
             // 
@@ -257,7 +258,7 @@ namespace Dowding
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 23);
             this.label9.TabIndex = 18;
-            this.label9.Text = "Tracker Long";
+            resources.ApplyResources(this.label9, "label9");
             // 
             // txt_trackerlong
             // 
@@ -272,7 +273,7 @@ namespace Dowding
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 23);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Tracker HAE";
+            resources.ApplyResources(this.label8, "label8");
             // 
             // txt_trackerhae
             // 
@@ -287,7 +288,7 @@ namespace Dowding
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 23);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Tracker Lat";
+            resources.ApplyResources(this.label7, "label7");
             // 
             // txt_trackerlat
             // 
@@ -303,21 +304,13 @@ namespace Dowding
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 23);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Antenna Tracker";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // CMB_baudrate
             // 
             this.CMB_baudrate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CMB_baudrate.FormattingEnabled = true;
-            this.CMB_baudrate.Items.AddRange(new object[] {
-            "4800",
-            "9600",
-            "14400",
-            "19200",
-            "28800",
-            "38400",
-            "57600",
-            "115200"});
+            this.CMB_baudrate.Items.AddRange(new object[] { "4800", "9600", "14400", "19200", "28800", "38400", "57600", "115200" });
             this.CMB_baudrate.Location = new System.Drawing.Point(7, 53);
             this.CMB_baudrate.Name = "CMB_baudrate";
             this.CMB_baudrate.Size = new System.Drawing.Size(121, 21);
@@ -330,7 +323,7 @@ namespace Dowding
             this.BUT_connect.Name = "BUT_connect";
             this.BUT_connect.Size = new System.Drawing.Size(75, 23);
             this.BUT_connect.TabIndex = 4;
-            this.BUT_connect.Text = "Connect";
+            resources.ApplyResources(this.BUT_connect, "BUT_connect");
             this.BUT_connect.UseVisualStyleBackColor = true;
             this.BUT_connect.Click += new System.EventHandler(this.BUT_connect_Click);
             // 
@@ -366,7 +359,7 @@ namespace Dowding
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 23);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Password";
+            resources.ApplyResources(this.label6, "label6");
             // 
             // txt_onvifpassword
             // 
@@ -382,7 +375,7 @@ namespace Dowding
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 23);
             this.label5.TabIndex = 12;
-            this.label5.Text = "User";
+            resources.ApplyResources(this.label5, "label5");
             // 
             // txt_onvifuser
             // 
@@ -397,7 +390,7 @@ namespace Dowding
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 23);
             this.label4.TabIndex = 10;
-            this.label4.Text = "IP:Port";
+            resources.ApplyResources(this.label4, "label4");
             // 
             // txt_onvifip
             // 
@@ -413,7 +406,7 @@ namespace Dowding
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 23);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Onvif";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // but_onvif
             // 
@@ -422,7 +415,7 @@ namespace Dowding
             this.but_onvif.Name = "but_onvif";
             this.but_onvif.Size = new System.Drawing.Size(75, 23);
             this.but_onvif.TabIndex = 4;
-            this.but_onvif.Text = "Start";
+            resources.ApplyResources(this.but_onvif, "but_onvif");
             this.but_onvif.UseVisualStyleBackColor = true;
             this.but_onvif.Click += new System.EventHandler(this.but_onvif_Click);
             // 
@@ -444,21 +437,13 @@ namespace Dowding
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(160, 23);
             this.label10.TabIndex = 12;
-            this.label10.Text = "CoT";
+            resources.ApplyResources(this.label10, "label10");
             // 
             // cmb_cotbaud
             // 
             this.cmb_cotbaud.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_cotbaud.FormattingEnabled = true;
-            this.cmb_cotbaud.Items.AddRange(new object[] {
-            "4800",
-            "9600",
-            "14400",
-            "19200",
-            "28800",
-            "38400",
-            "57600",
-            "115200"});
+            this.cmb_cotbaud.Items.AddRange(new object[] { "4800", "9600", "14400", "19200", "28800", "38400", "57600", "115200" });
             this.cmb_cotbaud.Location = new System.Drawing.Point(7, 53);
             this.cmb_cotbaud.Name = "cmb_cotbaud";
             this.cmb_cotbaud.Size = new System.Drawing.Size(121, 21);
@@ -471,7 +456,7 @@ namespace Dowding
             this.but_cotstart.Name = "but_cotstart";
             this.but_cotstart.Size = new System.Drawing.Size(75, 23);
             this.but_cotstart.TabIndex = 10;
-            this.but_cotstart.Text = "Connect";
+            resources.ApplyResources(this.but_cotstart, "but_cotstart");
             this.but_cotstart.UseVisualStyleBackColor = true;
             this.but_cotstart.Click += new System.EventHandler(this.but_cotstart_Click);
             // 
@@ -498,7 +483,7 @@ namespace Dowding
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(75, 23);
             this.label11.TabIndex = 16;
-            this.label11.Text = "Yaw";
+            resources.ApplyResources(this.label11, "label11");
             // 
             // DowdingUI
             // 

@@ -28,11 +28,11 @@ namespace MissionPlanner.Controls
         {
             InitializeComponent();
 
-            CMB_serialport.Items.Add("TAK Multicast");
-            CMB_serialport.Items.Add("TCP Host - 14551");
-            CMB_serialport.Items.Add("TCP Client");
-            CMB_serialport.Items.Add("UDP Host - 14551");
-            CMB_serialport.Items.Add("UDP Client");
+            CMB_serialport.Items.Add(Strings.TAKMulticast);
+            CMB_serialport.Items.Add(Strings.TCPHost14551);
+            CMB_serialport.Items.Add(Strings.TCPClient);
+            CMB_serialport.Items.Add(Strings.UDPHost14551);
+            CMB_serialport.Items.Add(Strings.UDPClient);
             CMB_serialport.Items.AddRange(SerialPort.GetPortNames());
             MissionPlanner.Utilities.Tracking.AddPage(this.GetType().ToString(), this.Text);
         }
@@ -59,38 +59,40 @@ namespace MissionPlanner.Controls
 
             try
             {
-                switch (CMB_serialport.Text)
+                if (CMB_serialport.Text == Strings.TCPHost14551 || CMB_serialport.Text == Strings.TCPHost)
                 {
-                    case "TCP Host - 14551":
-                    case "TCP Host":
-                        CoTStream = new TcpSerial();
-                        CMB_baudrate.SelectedIndex = 0;
-                        listener = new TcpListener(System.Net.IPAddress.Any, 14551);
-                        listener.Start(0);
-                        listener.BeginAcceptTcpClient(new AsyncCallback(DoAcceptTcpClientCallback), listener);
-                        BUT_connect.Text = Strings.Stop;
-                        break;
-                    case "TCP Client":
-                        CoTStream = new TcpSerial() { retrys = 999999, autoReconnect = true, ConfigRef = "SerialOutputCoTTCP" };
-                        CMB_baudrate.SelectedIndex = 0;
-                        break;
-                    case "UDP Host - 14551":
-                        CoTStream = new UdpSerial();
-                        CMB_baudrate.SelectedIndex = 0;
-                        break;
-                    case "UDP Client":
-                        CoTStream = new UdpSerialConnect();
-                        CMB_baudrate.SelectedIndex = 0;
-                        break;
-                    case "TAK Multicast":
-                        CoTStream = new UdpSerialConnect() { ConfigRef = "TAK_Multicast" };
-                        ((UdpSerialConnect)CoTStream).Open("239.2.3.1", "6969");
-                        CMB_baudrate.SelectedIndex = 0;
-                        break;
-                    default:
-                        CoTStream = new SerialPort();
-                        CoTStream.PortName = CMB_serialport.Text;
-                        break;
+                    CoTStream = new TcpSerial();
+                    CMB_baudrate.SelectedIndex = 0;
+                    listener = new TcpListener(System.Net.IPAddress.Any, 14551);
+                    listener.Start(0);
+                    listener.BeginAcceptTcpClient(new AsyncCallback(DoAcceptTcpClientCallback), listener);
+                    BUT_connect.Text = Strings.Stop;
+                }
+                else if (CMB_serialport.Text == Strings.TCPClient)
+                {
+                    CoTStream = new TcpSerial() { retrys = 999999, autoReconnect = true, ConfigRef = "SerialOutputCoTTCP" };
+                    CMB_baudrate.SelectedIndex = 0;
+                }
+                else if (CMB_serialport.Text == Strings.UDPHost14551)
+                {
+                    CoTStream = new UdpSerial();
+                    CMB_baudrate.SelectedIndex = 0;
+                }
+                else if (CMB_serialport.Text == Strings.UDPClient)
+                {
+                    CoTStream = new UdpSerialConnect();
+                    CMB_baudrate.SelectedIndex = 0;
+                }
+                else if (CMB_serialport.Text == Strings.TAKMulticast)
+                {
+                    CoTStream = new UdpSerialConnect() { ConfigRef = "TAK_Multicast" };
+                    ((UdpSerialConnect)CoTStream).Open("239.2.3.1", "6969");
+                    CMB_baudrate.SelectedIndex = 0;
+                }
+                else
+                {
+                    CoTStream = new SerialPort();
+                    CoTStream.PortName = CMB_serialport.Text;
                 }
             }
             catch (System.Net.Sockets.SocketException ex)
@@ -98,7 +100,7 @@ namespace MissionPlanner.Controls
                 // if we're trying to open a port but another app, like WinTAK, is already running and using the port then our open-port attempt will fail.
                 // expected error string: "Only one usage of each socket address (protocol/network address/port) is normally permitted"
                 if (ex.Message.StartsWith("Only one usage"))
-                    CustomMessageBox.Show("TAK IP Port in use. Is another app on this system already using it?");
+                    CustomMessageBox.Show(Strings.TAKIPPortUseAnotherApp);
                 else
                     CustomMessageBox.Show(Strings.InvalidPortName);
                 return;
@@ -125,7 +127,7 @@ namespace MissionPlanner.Controls
             }
             catch
             {
-                CustomMessageBox.Show("Error Connecting\nif using com0com please rename the ports to COM??");
+                CustomMessageBox.Show(Strings.ErrorConnectingIfUsingCom0comPlease);
                 return;
             }
 

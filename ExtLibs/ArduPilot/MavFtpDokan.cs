@@ -97,7 +97,7 @@ namespace MissionPlanner.ArduPilot
             lock (_mountLock)
             {
                 if (_dokanInstance != null && !_dokanInstance.IsDisposed)
-                    throw new InvalidOperationException("Already mounted.");
+                    throw new InvalidOperationException(Strings.AlreadyMounted);
 
                 if (!IsDriverInstalled())
                     throw new DllNotFoundException(

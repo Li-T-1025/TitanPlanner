@@ -135,8 +135,8 @@ namespace MissionPlanner.Controls
             if (!GStreamer.GstLaunchExists)
             {
                 var result = CustomMessageBox.Show(
-                    "This feature requires GStreamer. Would you like to download and install it now?",
-                    "GStreamer not found",
+                    Strings.FeatureRequiresGStreamerWouldLikeDownload,
+                    Strings.FeatureRequiresGStreamerWouldLikeDownloadTitle,
                     MessageBoxButtons.YesNo,
                     CustomMessageBox.MessageBoxIcon.Question
                 );

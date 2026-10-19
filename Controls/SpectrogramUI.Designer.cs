@@ -30,6 +30,7 @@ namespace MissionPlanner.Controls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpectrogramUI));
             this.but_loadlog = new MissionPlanner.Controls.MyButton();
             this.cmb_sensor = new System.Windows.Forms.ComboBox();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
@@ -48,24 +49,14 @@ namespace MissionPlanner.Controls
             this.but_loadlog.Name = "but_loadlog";
             this.but_loadlog.Size = new System.Drawing.Size(75, 23);
             this.but_loadlog.TabIndex = 5;
-            this.but_loadlog.Text = "Load Log";
+            resources.ApplyResources(this.but_loadlog, "but_loadlog");
             this.but_loadlog.UseVisualStyleBackColor = true;
             this.but_loadlog.Click += new System.EventHandler(this.but_loadlog_Click);
             // 
             // cmb_sensor
             // 
             this.cmb_sensor.FormattingEnabled = true;
-            this.cmb_sensor.Items.AddRange(new object[] {
-            "ACC1",
-            "ACC2",
-            "ACC3",
-            "ACC4",
-            "ACC5",
-            "GYR1",
-            "GYR2",
-            "GYR3",
-            "GYR4",
-            "GYR5"});
+            this.cmb_sensor.Items.AddRange(new object[] { resources.GetString("cmb_sensor.Items"), resources.GetString("cmb_sensor.Items1"), resources.GetString("cmb_sensor.Items2"), resources.GetString("cmb_sensor.Items3"), resources.GetString("cmb_sensor.Items4"), resources.GetString("cmb_sensor.Items5"), resources.GetString("cmb_sensor.Items6"), resources.GetString("cmb_sensor.Items7"), resources.GetString("cmb_sensor.Items8"), resources.GetString("cmb_sensor.Items9") });
             this.cmb_sensor.Location = new System.Drawing.Point(96, 6);
             this.cmb_sensor.Name = "cmb_sensor";
             this.cmb_sensor.Size = new System.Drawing.Size(93, 21);
@@ -143,7 +134,7 @@ namespace MissionPlanner.Controls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 13);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Min";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -152,7 +143,7 @@ namespace MissionPlanner.Controls
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Max";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // but_redraw
             // 
@@ -160,7 +151,7 @@ namespace MissionPlanner.Controls
             this.but_redraw.Name = "but_redraw";
             this.but_redraw.Size = new System.Drawing.Size(75, 23);
             this.but_redraw.TabIndex = 11;
-            this.but_redraw.Text = "Update";
+            resources.ApplyResources(this.but_redraw, "but_redraw");
             this.but_redraw.UseVisualStyleBackColor = true;
             this.but_redraw.Click += new System.EventHandler(this.but_redraw_Click);
             // 
@@ -178,7 +169,7 @@ namespace MissionPlanner.Controls
             this.Controls.Add(this.cmb_sensor);
             this.Controls.Add(this.but_loadlog);
             this.Name = "SpectrogramUI";
-            this.Text = "SpectrogramUI";
+            resources.ApplyResources(this, "$this");
             this.Resize += new System.EventHandler(this.SpectrogramUI_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.num_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_max)).EndInit();

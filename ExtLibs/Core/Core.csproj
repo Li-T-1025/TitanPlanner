@@ -21,4 +21,7 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
+  </ItemGroup>
 </Project>

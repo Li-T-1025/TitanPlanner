@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Coords));
             this.CMB_coordsystem = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -35,10 +36,7 @@
             // 
 
             this.CMB_coordsystem.FormattingEnabled = true;
-            this.CMB_coordsystem.Items.AddRange(new object[] {
-            "GEO",
-            "UTM",
-            "MGRS"});
+            this.CMB_coordsystem.Items.AddRange(new object[] { resources.GetString("CMB_coordsystem.Items"), resources.GetString("CMB_coordsystem.Items1"), resources.GetString("CMB_coordsystem.Items2") });
             this.CMB_coordsystem.Location = new System.Drawing.Point(0, 0);
             this.CMB_coordsystem.Name = "CMB_coordsystem";
             this.CMB_coordsystem.Size = new System.Drawing.Size(64, 24);

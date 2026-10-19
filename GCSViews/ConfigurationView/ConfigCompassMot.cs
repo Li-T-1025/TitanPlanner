@@ -67,7 +67,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Compassmot requires AC 3.2+", Strings.ERROR);
+                    CustomMessageBox.Show(Strings.CompassmotRequiresAC32, Strings.ERROR);
                 }
                 incompassmot = true;
             }
@@ -121,13 +121,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private void setupgraph()
         {
             zedGraphControl1.GraphPane.YAxis.Title.IsVisible = true;
-            zedGraphControl1.GraphPane.YAxis.Title.Text = "Interference %";
+            zedGraphControl1.GraphPane.YAxis.Title.Text = Strings.Interference;
             zedGraphControl1.GraphPane.Title.IsVisible = true;
-            zedGraphControl1.GraphPane.Title.Text = "Compass Motor Calibration";
-            zedGraphControl1.GraphPane.XAxis.Title.Text = "Throttle %";
+            zedGraphControl1.GraphPane.Title.Text = Strings.CompassMotorCalibration;
+            zedGraphControl1.GraphPane.XAxis.Title.Text = Strings.Throttle;
 
             zedGraphControl1.GraphPane.Y2Axis.Title.IsVisible = true;
-            zedGraphControl1.GraphPane.Y2Axis.Title.Text = "Amps";
+            zedGraphControl1.GraphPane.Y2Axis.Title.Text = Strings.Amps;
             zedGraphControl1.GraphPane.Y2Axis.IsVisible = true;
 
 

@@ -21,7 +21,7 @@ namespace SikRadio
 
 
             CMB_SerialPort.Items.AddRange(SerialPort.GetPortNames());
-            CMB_SerialPort.Items.Add("TCP");
+            CMB_SerialPort.Items.Add(Strings.TCP);
 
             if (CMB_SerialPort.Items.Count > 0)
                 CMB_SerialPort.SelectedIndex = 0;
@@ -138,7 +138,7 @@ namespace SikRadio
         {
             CMB_SerialPort.Items.Clear();
             CMB_SerialPort.Items.AddRange(SerialPort.GetPortNames());
-            CMB_SerialPort.Items.Add("TCP");
+            CMB_SerialPort.Items.Add(Strings.TCP);
        
         }
 
@@ -206,7 +206,7 @@ namespace SikRadio
                 }
                 Disconnect();
                 _Connected = false;
-                btnConnect.Text = "Connect";
+                btnConnect.Text = Strings.Connect;
                 if (_CurrentForm != null)
                 {
                     _CurrentForm.Enabled = false;
@@ -223,7 +223,7 @@ namespace SikRadio
                         _CurrentForm.Connect();
                     }
                     _Connected = true;
-                    btnConnect.Text = "Disconnect";
+                    btnConnect.Text = Strings.Disconnect;
                     if (_CurrentForm != null)
                     {
                         _CurrentForm.Enabled = true;

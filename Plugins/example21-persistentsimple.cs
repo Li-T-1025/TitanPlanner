@@ -27,9 +27,9 @@ namespace PersistentSimpleActions
             ToolTip toolTip1 = new ToolTip();
 
             // Rename these .Text fields to any valid mode and the code will automatically work
-            button1.Text = "Auto";
-            button2.Text = "Loiter";
-            button3.Text = "RTL";
+            button1.Text = Strings.Auto;
+            button2.Text = Strings.Loiter;
+            button3.Text = Strings.RTL;
 
             // 
             // button1

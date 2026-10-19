@@ -196,7 +196,7 @@ namespace MissionPlanner.Log
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Line Doesn't Exist");
+                    CustomMessageBox.Show(Strings.LineDoesnTExist);
                 }
 
                 return true;
@@ -324,7 +324,7 @@ namespace MissionPlanner.Log
         private void Zg1_ContextMenuBuilder(ZedGraphControl sender, ContextMenuStrip menuStrip, Point mousePt, ZedGraphControl.ContextMenuObjectState objState)
         {
             /*
-            menuStrip.Items.Add(new ToolStripMenuItem("Properties MasterPane", null, (c, e) =>
+            menuStrip.Items.Add(new ToolStripMenuItem(Strings.PropertiesMasterPane, null, (c, e) =>
             {               
                     var propertyGrid1 = new PropertyGrid();
                     propertyGrid1.Width = 500;
@@ -334,7 +334,7 @@ namespace MissionPlanner.Log
                     propertyGrid1.ShowUserControl();                
             }));
 
-            menuStrip.Items.Add(new ToolStripMenuItem("Properties YAxis", null, (c, e) =>
+            menuStrip.Items.Add(new ToolStripMenuItem(Strings.PropertiesYAxis, null, (c, e) =>
             {
                 var propertyGrid1 = new PropertyGrid();
                 propertyGrid1.Width = 500;
@@ -344,7 +344,7 @@ namespace MissionPlanner.Log
                 propertyGrid1.ShowUserControl();
             }));
 
-            menuStrip.Items.Add(new ToolStripMenuItem("Properties YAxis2", null, (c, e) =>
+            menuStrip.Items.Add(new ToolStripMenuItem(Strings.PropertiesYAxis2, null, (c, e) =>
             {
                 var propertyGrid1 = new PropertyGrid();
                 propertyGrid1.Width = 500;
@@ -393,7 +393,7 @@ namespace MissionPlanner.Log
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to read File: " + ex.ToString());
+                CustomMessageBox.Show(Strings.FailedReadFile + " " + ex.ToString());
                 return;
             }
 
@@ -402,7 +402,7 @@ namespace MissionPlanner.Log
 
         void LoadLog2(String FileName, DFLogBuffer logdata, int colcount)
         {
-            this.Text = "Log Browser - " + Path.GetFileName(FileName);
+            this.Text = Strings.LogBrowser + " " + Path.GetFileName(FileName);
 
             CreateChart(zg1);
             chk_time_CheckedChanged(null, null);
@@ -1020,8 +1020,8 @@ namespace MissionPlanner.Log
             GraphPane myPane = zgc.GraphPane;
 
             // Set the titles and axis labels
-            myPane.Title.Text = "Value Graph";
-            myPane.XAxis.Title.Text = "Line Number";
+            myPane.Title.Text = Strings.ValueGraph;
+            myPane.XAxis.Title.Text = Strings.LineNumber;
             myPane.YAxis.Title.Text = "";
             myPane.YAxis.Title.FontSpec.Size += 2;
             myPane.Y2Axis.Title.FontSpec.Size += 2;
@@ -1085,7 +1085,7 @@ namespace MissionPlanner.Log
 
             if (col == 0)
             {
-                CustomMessageBox.Show("Please pick another column, Highlight the cell you wish to graph",
+                CustomMessageBox.Show(Strings.PleasePickAnotherColumnHighlightCell,
                     Strings.ERROR);
                 return;
             }
@@ -1271,7 +1271,7 @@ namespace MissionPlanner.Log
                     }
                     catch (Exception ex)
                     {
-                        CustomMessageBox.Show("Failed to graph item: " + ex.Message, Strings.ERROR);
+                        CustomMessageBox.Show(Strings.FailedGraphItem + " " + ex.Message, Strings.ERROR);
                     }
                 });
             }
@@ -1565,7 +1565,7 @@ main()
                         log.Info("Bad Data : " + type + " " + col + " " + a);
                         if (error >= 500)
                         {
-                            CustomMessageBox.Show("There is to much bad data - failing");
+                            CustomMessageBox.Show(Strings.ThereMuchBadDataFailing);
                             break;
                         }
                     }
@@ -2842,9 +2842,9 @@ main()
             opt.Location = mp;
 
             opt.Combobox.DataSource = options;
-            opt.Button1.Text = "Filter";
+            opt.Button1.Text = Strings.Filter;
             opt.Button1.DialogResult = DialogResult.OK;
-            opt.Button2.Text = "Cancel";
+            opt.Button2.Text = Strings.Cancel;
             opt.Button2.DialogResult = DialogResult.Cancel;
 
             var dr = opt.ShowDialog(this);
@@ -3010,9 +3010,9 @@ main()
 
             opt.Combobox.DataSource = list.ToArray();
             opt.Button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            opt.Button1.Text = "Remove";
+            opt.Button1.Text = Strings.Remove;
             opt.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            opt.Button2.Text = "Cancel";
+            opt.Button2.Text = Strings.Cancel;
 
             if (opt.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {
@@ -3545,7 +3545,7 @@ main()
             {
                 zg1.GraphPane.XAxis.Type = AxisType.Date;
                 zg1.GraphPane.XAxis.Scale.Format = "HH:mm:ss.fff";
-                zg1.GraphPane.XAxis.Title.Text = "Time (sec)";
+                zg1.GraphPane.XAxis.Title.Text = Strings.TimeSec;
                 zg1.GraphPane.XAxis.Scale.MajorUnit = DateUnit.Minute;
                 zg1.GraphPane.XAxis.Scale.MinorUnit = DateUnit.Second;
                 zg1.GraphPane.YAxis.Title.Text = "";
@@ -3557,8 +3557,8 @@ main()
                 zg1.GraphPane.XAxis.Type = AxisType.Linear;
                 zg1.GraphPane.XAxis.Scale.Format = "f0";
                 zg1.GraphPane.XAxis.Scale.MagAuto = false;
-                zg1.GraphPane.Title.Text = "Value Graph";
-                zg1.GraphPane.XAxis.Title.Text = "Line Number";
+                zg1.GraphPane.Title.Text = Strings.ValueGraph;
+                zg1.GraphPane.XAxis.Title.Text = Strings.LineNumber;
                 zg1.GraphPane.YAxis.Title.Text = "";
             }
 
@@ -3710,7 +3710,7 @@ main()
                 }
                 catch (Exception ex)
                 {
-                    CustomMessageBox.Show("Failed to read File: " + ex.ToString());
+                    CustomMessageBox.Show(Strings.FailedReadFile + " " + ex.ToString());
                     return;
                 }
 

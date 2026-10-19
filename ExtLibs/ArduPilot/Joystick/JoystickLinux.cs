@@ -144,7 +144,7 @@ namespace MissionPlanner.Joystick
             if (!run.Wait(1000))
             {
                 log.Error("Failed to Start joystick task");
-                throw new Exception("Fail to start joystick task");
+                throw new Exception(Strings.FailToStartJoystickTask);
             }
 
             Thread.Sleep(200);

@@ -111,7 +111,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.but_fft.Name = "but_fft";
             this.but_fft.Size = new System.Drawing.Size(75, 23);
             this.but_fft.TabIndex = 5;
-            this.but_fft.Text = "FFT";
+            this.but_fft.Text = Strings.FFT;
             this.but_fft.UseVisualStyleBackColor = true;
             this.but_fft.Click += new System.EventHandler(this.but_fft_Click);
             // 
@@ -134,7 +134,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.groupBox1.Size = new System.Drawing.Size(616, 264);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "FFT Setup";
+            this.groupBox1.Text = Strings.FFTSetup;
             // 
             // groupBox2
             // 
@@ -144,7 +144,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.groupBox2.Size = new System.Drawing.Size(616, 179);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Please ensure IMU_RAW and IMU_FAST are turned off to use FFT";
+            this.groupBox2.Text = Strings.PleaseEnsureIMURAWIMUFAST;
             // 
             // ConfigFFT
             // 

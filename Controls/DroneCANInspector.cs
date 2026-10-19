@@ -67,7 +67,7 @@ namespace MissionPlanner.Controls
                 var sysidnodes = treeView1.Nodes.Find(dronecanMessage.frame.SourceNode.ToString(), false);
                 if (sysidnodes.Length == 0)
                 {
-                    sysidnode = new TreeNode("ID " + dronecanMessage.frame.SourceNode)
+                    sysidnode = new TreeNode(Strings.ID + " " + dronecanMessage.frame.SourceNode)
                     {
                         Name = dronecanMessage.frame.SourceNode.ToString()
                     };
@@ -77,7 +77,7 @@ namespace MissionPlanner.Controls
                 else
                 {
                     sysidnode = sysidnodes.First();
-                    sysidnode.Text = "ID " + dronecanMessage.frame.SourceNode + " - " + can.GetNodeName(dronecanMessage.frame.SourceNode) + " " + pktinspect
+                    sysidnode.Text = Strings.ID + " " + dronecanMessage.frame.SourceNode + " - " + can.GetNodeName(dronecanMessage.frame.SourceNode) + " " + pktinspect
                         .SeenBps(dronecanMessage.frame.SourceNode, 0)
                         .ToString("~0Bps");
                 }
@@ -244,7 +244,7 @@ namespace MissionPlanner.Controls
             this.but_graphit.Name = "but_graphit";
             this.but_graphit.Size = new System.Drawing.Size(75, 23);
             this.but_graphit.TabIndex = 4;
-            this.but_graphit.Text = "Graph It";
+            this.but_graphit.Text = Strings.Graph;
             this.but_graphit.UseVisualStyleBackColor = true;
             this.but_graphit.Click += new System.EventHandler(this.but_graphit_Click);
             // 
@@ -254,7 +254,7 @@ namespace MissionPlanner.Controls
             this.but_subscribe.Name = "but_subscribe";
             this.but_subscribe.Size = new System.Drawing.Size(75, 23);
             this.but_subscribe.TabIndex = 5;
-            this.but_subscribe.Text = "Subscribe";
+            this.but_subscribe.Text = Strings.Subscribe;
             this.but_subscribe.UseVisualStyleBackColor = true;
             this.but_subscribe.Click += new System.EventHandler(this.but_subscribe_Click);
             // 
@@ -265,7 +265,7 @@ namespace MissionPlanner.Controls
             this.Controls.Add(this.but_graphit);
             this.Controls.Add(this.groupBox1);
             this.Name = "UAVCANInspector";
-            this.Text = "UAVCAN Inspector";
+            this.Text = Strings.UAVCANInspector;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MAVLinkInspector_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

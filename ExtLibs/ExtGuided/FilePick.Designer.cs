@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilePick));
             this.txt_File = new System.Windows.Forms.TextBox();
             this.but_browse = new MissionPlanner.Controls.MyButton();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             this.but_browse.Name = "but_browse";
             this.but_browse.Size = new System.Drawing.Size(75, 23);
             this.but_browse.TabIndex = 1;
-            this.but_browse.Text = "Browse";
+            resources.ApplyResources(this.but_browse, "but_browse");
             this.but_browse.UseVisualStyleBackColor = true;
             this.but_browse.Click += new System.EventHandler(this.but_browse_Click);
             // 
@@ -55,7 +56,7 @@
             this.Controls.Add(this.but_browse);
             this.Controls.Add(this.txt_File);
             this.Name = "TestForm";
-            this.Text = "TestForm";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

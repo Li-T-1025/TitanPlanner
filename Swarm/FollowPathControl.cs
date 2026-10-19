@@ -34,7 +34,7 @@ namespace MissionPlanner.Swarm
             CMB_mavs.ValueMember = "Value";
             CMB_mavs.DisplayMember = "Key";
 
-            MessageBox.Show("this is beta, use at own risk");
+            MessageBox.Show(Strings.BetaUseOwnRisk);
 
             MissionPlanner.Utilities.Tracking.AddPage(this.GetType().ToString(), this.Text);
         }
@@ -136,7 +136,7 @@ namespace MissionPlanner.Swarm
 
                 if (DateTime.Now > deadline)
                 {
-                    CustomMessageBox.Show("Timeout waiting for autoscan/no mavlink device connected");
+                    CustomMessageBox.Show(Strings.Timeout);
                     return;
                 }
             }

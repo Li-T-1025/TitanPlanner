@@ -62,7 +62,7 @@ namespace MissionPlanner.Utilities
                 {
                     if (!File.Exists(runner))
                     {
-                        CustomMessageBox.Show("Failed to download LogAnalyzer");
+                        CustomMessageBox.Show(Strings.FailedToDownloadLogAnalyzer);
                         return "";
                     }
                 }
@@ -71,7 +71,7 @@ namespace MissionPlanner.Utilities
 
             if (!File.Exists(runner))
             {
-                CustomMessageBox.Show("Failed to download LogAnalyzer");
+                CustomMessageBox.Show(Strings.FailedToDownloadLogAnalyzer);
                 return "";
             }
 
@@ -106,7 +106,7 @@ namespace MissionPlanner.Utilities
             }
             catch
             {
-                CustomMessageBox.Show("Failed to start LogAnalyzer");
+                CustomMessageBox.Show(Strings.FailedToStartLogAnalyzer);
             }
 
             Loading.Close();

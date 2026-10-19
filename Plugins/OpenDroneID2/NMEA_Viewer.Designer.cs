@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NMEA_Viewer));
             this.TXT_Data = new System.Windows.Forms.RichTextBox();
             this.LBL_port_txt = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -47,7 +48,7 @@
             this.LBL_port_txt.Name = "LBL_port_txt";
             this.LBL_port_txt.Size = new System.Drawing.Size(103, 13);
             this.LBL_port_txt.TabIndex = 1;
-            this.LBL_port_txt.Text = "NMEA String Viewer";
+            resources.ApplyResources(this.LBL_port_txt, "LBL_port_txt");
             // 
             // NMEA_Viewer
             // 
@@ -57,7 +58,7 @@
             this.Controls.Add(this.LBL_port_txt);
             this.Controls.Add(this.TXT_Data);
             this.Name = "NMEA_Viewer";
-            this.Text = "NMEA_Viewer";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

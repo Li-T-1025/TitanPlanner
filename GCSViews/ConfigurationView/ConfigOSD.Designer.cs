@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigOSD));
             this.osdUserControl = new OSDConfigurator.GUI.OSDUserControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnOsd56ItemsSetup = new System.Windows.Forms.Button();
@@ -66,7 +67,7 @@
             this.btnOsd56ItemsSetup.Name = "btnOsd56ItemsSetup";
             this.btnOsd56ItemsSetup.Size = new System.Drawing.Size(145, 42);
             this.btnOsd56ItemsSetup.TabIndex = 4;
-            this.btnOsd56ItemsSetup.Text = "OSD / Telmetry Slots Config";
+            resources.ApplyResources(this.btnOsd56ItemsSetup, "btnOsd56ItemsSetup");
             this.btnOsd56ItemsSetup.UseVisualStyleBackColor = true;
             // 
             // btnRefreshParameters
@@ -75,7 +76,7 @@
             this.btnRefreshParameters.Name = "btnRefreshParameters";
             this.btnRefreshParameters.Size = new System.Drawing.Size(145, 32);
             this.btnRefreshParameters.TabIndex = 3;
-            this.btnRefreshParameters.Text = "Refresh";
+            resources.ApplyResources(this.btnRefreshParameters, "btnRefreshParameters");
             this.btnRefreshParameters.UseVisualStyleBackColor = true;
             // 
             // btnDiscardChanges
@@ -84,7 +85,7 @@
             this.btnDiscardChanges.Name = "btnDiscardChanges";
             this.btnDiscardChanges.Size = new System.Drawing.Size(145, 32);
             this.btnDiscardChanges.TabIndex = 2;
-            this.btnDiscardChanges.Text = "Discard all changes";
+            resources.ApplyResources(this.btnDiscardChanges, "btnDiscardChanges");
             this.btnDiscardChanges.UseVisualStyleBackColor = true;
             // 
             // cbAutoWriteOnLeave
@@ -96,7 +97,7 @@
             this.cbAutoWriteOnLeave.Name = "cbAutoWriteOnLeave";
             this.cbAutoWriteOnLeave.Size = new System.Drawing.Size(125, 17);
             this.cbAutoWriteOnLeave.TabIndex = 1;
-            this.cbAutoWriteOnLeave.Text = "Auto write on leaving";
+            resources.ApplyResources(this.cbAutoWriteOnLeave, "cbAutoWriteOnLeave");
             this.cbAutoWriteOnLeave.UseVisualStyleBackColor = true;
             // 
             // btnWrite
@@ -105,7 +106,7 @@
             this.btnWrite.Name = "btnWrite";
             this.btnWrite.Size = new System.Drawing.Size(145, 32);
             this.btnWrite.TabIndex = 0;
-            this.btnWrite.Text = "Write customization";
+            resources.ApplyResources(this.btnWrite, "btnWrite");
             this.btnWrite.UseVisualStyleBackColor = true;
             // 
             // ConfigOSD

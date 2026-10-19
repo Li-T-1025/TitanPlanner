@@ -50,7 +50,7 @@ namespace MissionPlanner.ArduPilot
             dataPointer += 2;
 
             if (header.magic != mission_magic)
-                throw new Exception("Invalid Magic " + header.magic);
+                throw new Exception(string.Format(Strings.InvalidMagic, header.magic));
 
             MAVLink.message_info msginfo = MAVLink.MAVLINK_MESSAGE_INFOS.GetMessageInfo((int)MAVLink.MAVLINK_MSG_ID.MISSION_ITEM_INT);
 
@@ -60,7 +60,7 @@ namespace MissionPlanner.ArduPilot
             ushort msgcount = (ushort)(msgs.Length / item_size);
 
             if (msgcount != header.num_items)
-                throw new Exception("Bad Item count " + header.num_items + " vs " + msgcount);
+                throw new Exception(string.Format(Strings.BadItemCount, header.num_items, msgcount));
 
             List<MAVLink.mavlink_mission_item_int_t> list = new List<MAVLink.mavlink_mission_item_int_t>(header.num_items);
 

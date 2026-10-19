@@ -35,7 +35,7 @@ namespace MissionPlanner.Attributes
       {
          if (String.IsNullOrEmpty(text))
          {
-            throw new ArgumentException("\"text\" is required.");
+            throw new ArgumentException(Strings.TextIsRequired);
          }
          _text = text;
       }

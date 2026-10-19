@@ -47,7 +47,7 @@ namespace MissionPlanner.Utilities
                     return c[v2];
                 }
 
-                throw new Exception("Invalid Matrix item");
+                throw new Exception(Strings.InvalidMatrixItem);
             }
             set
             {
@@ -67,7 +67,7 @@ namespace MissionPlanner.Utilities
                     return;
                 }
 
-                throw new Exception("Invalid Matrix item");
+                throw new Exception(Strings.InvalidMatrixItem);
             }
         }
 

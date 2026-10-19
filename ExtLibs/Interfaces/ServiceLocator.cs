@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MissionPlanner;
 
 namespace Interfaces
 {
@@ -15,7 +16,7 @@ namespace Interfaces
             {
                 if (_list.ContainsKey(typeof(T)))
                 {
-                    throw new Exception("Type already exists");
+                    throw new Exception(Strings.TypeAlreadyExists);
                 }
 
                 _list.Add(typeof(T), start());

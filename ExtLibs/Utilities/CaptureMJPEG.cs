@@ -178,7 +178,7 @@ namespace MissionPlanner.Utilities
                         }
                         else
                         {
-                            throw new Exception("No mjpeg length header");
+                            throw new Exception(Strings.NoMjpegLengthHeader);
                         }
 
                         // blank line at end of data

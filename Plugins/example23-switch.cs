@@ -122,7 +122,7 @@ namespace MissionPlanner.plugins
             for (int a = 0; a <= 7; a++)
             {
                 CheckBox cbcos = new CheckBox();
-                cbcos.Text = "Port " + a + " COS Enable";
+                cbcos.Text = Strings.Port + " " + a + " COS Enable";
 
                 cbcos.Tag = (21, a, 10);
 
@@ -139,7 +139,7 @@ namespace MissionPlanner.plugins
             for (int a = 0; a <= 7; a++)
             {
                 CheckBox cbcoshp = new CheckBox();
-                cbcoshp.Text = "Port " + a + " COS High Priority";
+                cbcoshp.Text = Strings.Port + " " + a + " COS High Priority";
                 cbcoshp.Tag = (21, a, 11);
 
                 tableLayoutPanel1.Controls.Add(cbcoshp);
@@ -156,7 +156,7 @@ namespace MissionPlanner.plugins
             {
                 CheckBox cbeee = new CheckBox();
 
-                cbeee.Text = "Port " + a + " EEE Enable";
+                cbeee.Text = Strings.Port + " " + a + " EEE Enable";
                 cbeee.Tag = (22, 0, a);
 
                 tableLayoutPanel1.Controls.Add(cbeee);
@@ -174,7 +174,7 @@ namespace MissionPlanner.plugins
                 CheckBox cbtagged = new CheckBox();
                 cbtagged.Checked = false;
 
-                cbtagged.Text = "Port " + a + " VLAN Tagged";
+                cbtagged.Text = Strings.Port + " " + a + " VLAN Tagged";
 
                 cbtagged.Tag = (23, 13, a);
 
@@ -194,7 +194,7 @@ namespace MissionPlanner.plugins
                 {
                     CheckBox cbvlanportmembers = new CheckBox();
 
-                    cbvlanportmembers.Text = "Port " + port + " to Port " + a + " ";
+                    cbvlanportmembers.Text = Strings.Port + " " + port + " to " + Strings.Port + " " + a + " ";
 
                     var high = (int)(port / 2);
                     var align = port % 2;
@@ -214,7 +214,7 @@ namespace MissionPlanner.plugins
             }
 
             MyButton btn = new MyButton();
-            btn.Text = "Apply";
+            btn.Text = Strings.Apply;
             btn.Click += (s, e) =>
             {
                 Apply();
@@ -222,7 +222,7 @@ namespace MissionPlanner.plugins
             tableLayoutPanel1.Controls.Add(btn);
 
             MyButton btn2 = new MyButton();
-            btn2.Text = "Reset";
+            btn2.Text = Strings.Reset;
             btn2.Click += (s, e) =>
             {
                 CommandList.Clear();
@@ -439,7 +439,7 @@ namespace MissionPlanner.plugins
                 return ans;
             }
 
-            throw new Exception("no prior config - setdefault should have created this");
+            throw new Exception(Strings.NoPriorConfigSetdefaultShouldHaveCreatedThis);
         }
 
         public class example23_switch : Plugin.Plugin

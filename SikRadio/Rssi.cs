@@ -30,7 +30,7 @@ namespace SikRadio
             zedGraphControl1.GraphPane.AddCurve("Noise Local", plotdatanoicel, Color.Blue, SymbolType.None);
             zedGraphControl1.GraphPane.AddCurve("Noise Remote", plotdatanoicer, Color.Orange, SymbolType.None);
 
-            zedGraphControl1.GraphPane.Title.Text = "RSSI";
+            zedGraphControl1.GraphPane.Title.Text = Strings.RSSI;
 
             Terminal.SetupStreamWriter();
         }
@@ -63,17 +63,17 @@ namespace SikRadio
                         var ATIReply = Session.ATCClient.DoQuery("ATI", true);
                         if (RFDLib.Text.Contains(ATIReply, "async"))
                         {
-                            MissionPlanner.MsgBox.CustomMessageBox.Show("Firmware doesn't support RSSI reporting");
+                            MissionPlanner.MsgBox.CustomMessageBox.Show(Strings.FirmwareDoesnTSupportRSSIReporting);
                         }
                         else
                         {
-                            MissionPlanner.MsgBox.CustomMessageBox.Show("Failed to enter RSSI reporting mode.");
+                            MissionPlanner.MsgBox.CustomMessageBox.Show(Strings.FailedEnterRSSIReportingMode);
                         }
                     }
                 }
                 else
                 {
-                    MissionPlanner.MsgBox.CustomMessageBox.Show("Failed to put modem into AT command mode.");
+                    MissionPlanner.MsgBox.CustomMessageBox.Show(Strings.FailedPutModemIntoCommandMode);
                 }
             }
         }

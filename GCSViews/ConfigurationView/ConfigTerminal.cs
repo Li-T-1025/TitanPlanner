@@ -274,7 +274,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 {
                     comPort.Write(new byte[] { (byte)e.KeyChar }, 0, 1);
                 }
-                catch { MessageBox.Show("Error writing to com port"); }
+                catch { MessageBox.Show(Strings.ErrorWritingComPort); }
             }
             e.Handled = true;*/
         }
@@ -359,7 +359,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 {
                     Console.WriteLine("Terminal Start - Close Port");
                     threadrun = false;
-                    //  if (DialogResult.Cancel == CustomMessageBox.Show("The port is open\n Continue?", "Continue", MessageBoxButtons.YesNo))
+                    //  if (DialogResult.Cancel == CustomMessageBox.Show(Strings.PortOpenContinue, Strings.Continue, MessageBoxButtons.YesNo))
                     {
                         //  return;
                     }

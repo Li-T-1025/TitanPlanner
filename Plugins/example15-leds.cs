@@ -44,47 +44,47 @@ namespace leds
 
         public override bool Loaded()
         {
-            var rootbut = new ToolStripMenuItem("LED");
+            var rootbut = new ToolStripMenuItem(Strings.LED);
             //rootbut.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuMap.Items;
             col.Add(rootbut);
 
-            var but = new ToolStripMenuItem("Red");
+            var but = new ToolStripMenuItem(Strings.Red);
             but.Click += (s, e) => {
                 var led = new MAVLink.mavlink_led_control_t(1, 1, 255, 0, 3, new byte[] { 255, 0, 0 });
                 MainV2.comPort.sendPacket(led, 1, 1);
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Green");
+            but = new ToolStripMenuItem(Strings.Green);
             but.Click += (s, e) => {
                 var led = new MAVLink.mavlink_led_control_t(1, 1, 255, 0, 3, new byte[] { 0, 255, 0 });
                 MainV2.comPort.sendPacket(led, 1, 1);
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Blue");
+            but = new ToolStripMenuItem(Strings.Blue);
             but.Click += (s, e) => {
                 var led = new MAVLink.mavlink_led_control_t(1, 1, 255, 0, 3, new byte[] { 0, 0, 255 });
                 MainV2.comPort.sendPacket(led, 1, 1);
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("White");
+            but = new ToolStripMenuItem(Strings.White);
             but.Click += (s, e) => {
                 var led = new MAVLink.mavlink_led_control_t(1, 1, 255, 0, 3, new byte[] { 255, 255, 255 });
                 MainV2.comPort.sendPacket(led, 1, 1);
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Black");
+            but = new ToolStripMenuItem(Strings.Black);
             but.Click += (s, e) => {
                 var led = new MAVLink.mavlink_led_control_t(1, 1, 255, 0, 3, new byte[] { 0, 0, 0 });
                 MainV2.comPort.sendPacket(led, 1, 1);
             };
             rootbut.DropDownItems.Add(but);
 
-            but = new ToolStripMenuItem("Rainbow");
+            but = new ToolStripMenuItem(Strings.Rainbow);
             but.Click += (s, e) => {
                 for (float a = 0; a <= 1; a += 0.005f) {
                     var color = Rainbow(a);

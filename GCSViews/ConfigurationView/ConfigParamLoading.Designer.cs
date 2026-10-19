@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigParamLoading));
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.but_forceparams = new MissionPlanner.Controls.MyButton();
@@ -41,8 +42,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 60);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Paramaters are still loading. Many screens will not work untill all Parameters ar" +
-    "e loaded. ";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // timer1
             // 
@@ -54,7 +54,7 @@
             this.but_forceparams.Name = "but_forceparams";
             this.but_forceparams.Size = new System.Drawing.Size(75, 23);
             this.but_forceparams.TabIndex = 2;
-            this.but_forceparams.Text = "Retry Now";
+            resources.ApplyResources(this.but_forceparams, "but_forceparams");
             this.but_forceparams.UseVisualStyleBackColor = true;
             this.but_forceparams.Click += new System.EventHandler(this.but_forceparams_Click);
             // 

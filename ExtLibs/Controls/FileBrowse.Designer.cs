@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileBrowse));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.myButton1 = new Controls.MyButton();
@@ -57,7 +58,7 @@
             this.myButton1.Name = "myButton1";
             this.myButton1.Size = new System.Drawing.Size(75, 20);
             this.myButton1.TabIndex = 1;
-            this.myButton1.Text = "Browse";
+            resources.ApplyResources(this.myButton1, "myButton1");
             this.myButton1.UseVisualStyleBackColor = true;
             this.myButton1.Click += new System.EventHandler(this.myButton1_Click);
             // 

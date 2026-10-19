@@ -43,7 +43,7 @@ namespace hudonoff
 
         public override bool Loaded()
         {
-            var rootbut = new ToolStripMenuItem("HUD Items");
+            var rootbut = new ToolStripMenuItem(Strings.HUDItems);
             ToolStripItemCollection col = Host.FDMenuHud.Items;
             col.Add(rootbut);
 

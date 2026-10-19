@@ -165,7 +165,7 @@ namespace MissionPlanner.Utilities
             lock (locker)
             {
                 if (newsysid > maximum)
-                    throw new InvalidOperationException("No representable system IDs remain");
+                    throw new InvalidOperationException(Strings.NoRepresentableSystemIDsRemain);
                 return newsysid++;
             }
         }
@@ -183,7 +183,7 @@ namespace MissionPlanner.Utilities
                 {
                     var heartbeat = mav.getHeartBeat();
                     if (heartbeat == MAVLink.MAVLinkMessage.Invalid)
-                        throw new TimeoutException("No vehicle heartbeat");
+                        throw new TimeoutException(Strings.NoVehicleHeartbeat);
                     mav.sysidcurrent = heartbeat.sysid;
                     mav.compidcurrent = heartbeat.compid;
                     string parameter = "MAV_SYSID";
@@ -210,7 +210,7 @@ namespace MissionPlanner.Utilities
                     // the new address instead of waiting for an ACK at the old one.
                     mav.sysidcurrent = localsysid;
                     if (mav.GetParam(parameter) != localsysid)
-                        throw new InvalidOperationException("Vehicle rejected its allocated system ID");
+                        throw new InvalidOperationException(Strings.VehicleRejectedItsAllocatedSystemID);
                 }
                 catch (Exception ex)
                 {

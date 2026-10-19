@@ -117,7 +117,7 @@ namespace MissionPlanner.Controls
 
                     if (checkIDandName(i, a))
                     {
-                        CustomMessageBox.Show("Name or ID exists");
+                        CustomMessageBox.Show(Strings.NameIDExists);
                         return;
                     }
 
@@ -129,7 +129,7 @@ namespace MissionPlanner.Controls
                         {
                             if (checkIDandName(i, cmdName))
                             {
-                                MessageBox.Show("Name or ID exists");
+                                MessageBox.Show(Strings.NameIDExists);
                                 return;
                             }
                             var selectedrow = myDataGridView1.Rows.Add();

@@ -35,14 +35,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             GraphPane myPane = zedGraphControl1.GraphPane;
 
             // Set the titles and axis labels
-            myPane.Title.Text = "Collective Control";
-            myPane.XAxis.Title.Text = "Collective Input (%)";
+            myPane.Title.Text = Strings.CollectiveControl;
+            myPane.XAxis.Title.Text = Strings.CollectiveInput;
             myPane.XAxis.Scale.Min = 0;
             myPane.XAxis.Scale.Max = 100;
             myPane.XAxis.Scale.BaseTic = 0;
             myPane.XAxis.Scale.MinorStep = 10;
             myPane.XAxis.Scale.MajorStep = 20;
-            myPane.YAxis.Title.Text = "Collective Output";
+            myPane.YAxis.Title.Text = Strings.CollectiveOutput;
             myPane.YAxis.Scale.Min = 0;
             myPane.YAxis.Scale.Max = 1000;
             myPane.YAxis.Scale.BaseTic = 0;
@@ -268,7 +268,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["H_SWASH_TYPE"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -277,7 +277,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set H_SWASH_TYPE Failed");
+                CustomMessageBox.Show(Strings.SetHSWASHTYPEFailed);
             }
         }
 
@@ -327,7 +327,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             else
             {
-                CustomMessageBox.Show("Bad Min PWM");
+                CustomMessageBox.Show(Strings.BadMinPWM);
                 return;
             }
 
@@ -338,7 +338,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             else
             {
-                CustomMessageBox.Show("Bad Max PWM");
+                CustomMessageBox.Show(Strings.BadMaxPWM);
                 return;
             }
 
@@ -437,7 +437,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Failed to set Gyro Gain");
+                CustomMessageBox.Show(Strings.FailedSetGyroGain);
             }
         }
 
@@ -495,7 +495,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["H_SV_MAN"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -504,7 +504,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set H_SV_MAN Failed");
+                CustomMessageBox.Show(Strings.SetHSVMANFailed);
             }
         }
 
@@ -514,7 +514,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["H_SV_MAN"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -523,7 +523,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set H_SV_MAN Failed");
+                CustomMessageBox.Show(Strings.SetHSVMANFailed);
             }
         }
 
@@ -533,7 +533,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["H_SV_MAN"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -542,7 +542,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set H_SV_MAN Failed");
+                CustomMessageBox.Show(Strings.SetHSVMANFailed);
             }
         }
 
@@ -552,7 +552,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["H_SV_MAN"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -561,7 +561,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set H_SV_MAN Failed");
+                CustomMessageBox.Show(Strings.SetHSVMANFailed);
             }
         }
 
@@ -571,7 +571,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["H_SV_MAN"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -580,7 +580,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set H_SV_MAN Failed");
+                CustomMessageBox.Show(Strings.SetHSVMANFailed);
             }
         }
 
@@ -590,7 +590,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 if (MainV2.comPort.MAV.param["H_SV_MAN"] == null)
                 {
-                    CustomMessageBox.Show("Not Available on " + MainV2.comPort.MAV.cs.firmware);
+                    CustomMessageBox.Show(Strings.Available1 + " " + MainV2.comPort.MAV.cs.firmware);
                 }
                 else
                 {
@@ -599,7 +599,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Set H_SV_MAN Failed");
+                CustomMessageBox.Show(Strings.SetHSVMANFailed);
             }
         }
     }

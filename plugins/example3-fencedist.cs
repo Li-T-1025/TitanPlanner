@@ -45,7 +45,7 @@ namespace FenceDist
 
         public override bool Loaded()
         {
-            but = new ToolStripMenuItem("Draw Fence Dist");
+            but = new ToolStripMenuItem(Strings.DrawFenceDist);
             but.Click += but_Click;
             ToolStripItemCollection col = Host.FDMenuMap.Items;
             col.Add(but);

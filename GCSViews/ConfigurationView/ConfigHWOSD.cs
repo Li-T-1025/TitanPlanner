@@ -64,7 +64,7 @@ SR0_RC_CHAN,0
             }
             catch
             {
-                CustomMessageBox.Show("Failed to set OSD rates.");
+                CustomMessageBox.Show(Strings.FailedSetOSDRates);
             }
         }
     }

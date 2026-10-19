@@ -127,7 +127,7 @@ namespace MissionPlanner.Utilities
             // Special-case windowed 3D map: set title/icon to match main app
             if (ctl is MissionPlanner.Controls.Map3D)
             {
-                frm.Text = "3D Map";
+                frm.Text = Strings.N3DMap;
                 frm.TopMost = true;
                 try
                 {

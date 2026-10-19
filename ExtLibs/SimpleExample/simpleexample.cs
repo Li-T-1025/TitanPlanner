@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MissionPlanner;
 
 namespace SimpleExample
 {
@@ -144,7 +145,7 @@ namespace SimpleExample
                 }
             }
 
-            throw new Exception("No packet match found");
+            throw new Exception(Strings.NoPacketMatchFound);
         }
 
         private void but_armdisarm_Click(object sender, EventArgs e)

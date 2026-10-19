@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Installer));
             this.but_Start = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -43,7 +44,7 @@
             this.but_Start.Name = "but_Start";
             this.but_Start.Size = new System.Drawing.Size(75, 23);
             this.but_Start.TabIndex = 0;
-            this.but_Start.Text = "Start";
+            resources.ApplyResources(this.but_Start, "but_Start");
             this.but_Start.UseVisualStyleBackColor = true;
             this.but_Start.Click += new System.EventHandler(this.but_Start_Click);
             // 
@@ -53,7 +54,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(281, 96);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Status";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // textBox1
             // 
@@ -69,7 +70,7 @@
             this.but_folder.Name = "but_folder";
             this.but_folder.Size = new System.Drawing.Size(75, 23);
             this.but_folder.TabIndex = 3;
-            this.but_folder.Text = "Browse";
+            resources.ApplyResources(this.but_folder, "but_folder");
             this.but_folder.UseVisualStyleBackColor = true;
             this.but_folder.Click += new System.EventHandler(this.but_folder_Click);
             // 
@@ -81,7 +82,7 @@
             this.radioButton1.Size = new System.Drawing.Size(55, 17);
             this.radioButton1.TabIndex = 4;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Stable";
+            resources.ApplyResources(this.radioButton1, "radioButton1");
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -93,7 +94,7 @@
             this.radioButton2.Size = new System.Drawing.Size(47, 17);
             this.radioButton2.TabIndex = 5;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Beta";
+            resources.ApplyResources(this.radioButton2, "radioButton2");
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -105,7 +106,7 @@
             this.radioButton3.Size = new System.Drawing.Size(57, 17);
             this.radioButton3.TabIndex = 6;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Master";
+            resources.ApplyResources(this.radioButton3, "radioButton3");
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -121,7 +122,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.but_Start);
             this.Name = "Installer";
-            this.Text = "Install";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -51,6 +51,7 @@
 
 using System;
 using System.Collections.Generic;
+using MissionPlanner;
 //using System.Text;          //for Int128.AsString() & StringBuilder
 //using System.IO;            //debugging with streamReader & StreamWriter
 //using System.Windows.Forms; //debugging to clipboard
@@ -711,7 +712,7 @@ namespace ClipperLib
             if (useFullRange)
             {
                 if (Pt.X > hiRange || Pt.Y > hiRange || -Pt.X > hiRange || -Pt.Y > hiRange)
-                    throw new ClipperException("Coordinate outside allowed range");
+                    throw new ClipperException(Strings.CoordinateOutsideAllowedRange);
             }
             else if (Pt.X > loRange || Pt.Y > loRange || -Pt.X > loRange || -Pt.Y > loRange)
             {
@@ -883,10 +884,10 @@ namespace ClipperLib
         {
 #if use_lines
             if (!Closed && polyType == PolyType.ptClip)
-                throw new ClipperException("AddPath: Open paths must be subject.");
+                throw new ClipperException(Strings.AddPathOpenPathsMustBeSubject);
 #else
       if (!Closed)
-        throw new ClipperException("AddPath: Open paths have been disabled.");
+        throw new ClipperException(Strings.AddPathOpenPathsHaveBeenDisabled);
 #endif
 
             int highI = (int)pg.Count - 1;
@@ -1261,7 +1262,7 @@ namespace ClipperLib
         internal void UpdateEdgeIntoAEL(ref TEdge e)
         {
             if (e.NextInLML == null)
-                throw new ClipperException("UpdateEdgeIntoAEL: invalid call");
+                throw new ClipperException(Strings.UpdateEdgeIntoAELInvalidCall);
             TEdge AelPrev = e.PrevInAEL;
             TEdge AelNext = e.NextInAEL;
             e.NextInLML.OutIdx = e.OutIdx;
@@ -1466,7 +1467,7 @@ namespace ClipperLib
         {
             if (m_ExecuteLocked) return false;
             if (m_HasOpenPaths) throw
-              new ClipperException("Error: PolyTree struct is needed for open path clipping.");
+              new ClipperException(Strings.ErrorPolyTreeStructIsNeededForOpenPathClipping);
 
             m_ExecuteLocked = true;
             solution.Clear();
@@ -2971,7 +2972,7 @@ namespace ClipperLib
             {
                 m_SortedEdges = null;
                 m_IntersectList.Clear();
-                throw new ClipperException("ProcessIntersections error");
+                throw new ClipperException(Strings.ProcessIntersectionsError);
             }
             m_SortedEdges = null;
             return true;
@@ -3329,7 +3330,7 @@ namespace ClipperLib
                 DeleteFromAEL(eMaxPair);
             }
 #endif
-            else throw new ClipperException("DoMaxima error");
+            else throw new ClipperException(Strings.DoMaximaError);
         }
         //------------------------------------------------------------------------------
 

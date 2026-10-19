@@ -16,10 +16,10 @@ namespace MissionPlanner.Controls
             InitializeComponent();
 
             CMB_serialport.Items.AddRange(SerialPort.GetPortNames());
-            CMB_serialport.Items.Add("TCP");
-            CMB_serialport.Items.Add("UDP");
-            CMB_serialport.Items.Add("UDPCl");
-            CMB_serialport.Items.Add("WS");
+            CMB_serialport.Items.Add(Strings.TCP);
+            CMB_serialport.Items.Add(Strings.UDP);
+            CMB_serialport.Items.Add(Strings.UDPCl);
+            CMB_serialport.Items.Add(Strings.WS);
 
             ThemeManager.ApplyThemeTo(this);
 

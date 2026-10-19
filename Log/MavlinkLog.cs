@@ -38,8 +38,8 @@ namespace MissionPlanner.Log
             zg1.GraphPane.YAxis.Title.IsVisible = false;
             zg1.GraphPane.Y2Axis.Title.Text = "";
             zg1.GraphPane.Title.IsVisible = true;
-            zg1.GraphPane.Title.Text = "Mavlink Log Graph";
-            zg1.GraphPane.XAxis.Title.Text = "Time (sec)";
+            zg1.GraphPane.Title.Text = Strings.MavlinkLogGraph;
+            zg1.GraphPane.XAxis.Title.Text = Strings.TimeSec;
 
             zg1.GraphPane.XAxis.Type = AxisType.Date;
             zg1.GraphPane.XAxis.Scale.Format = "HH:mm:ss";
@@ -72,7 +72,7 @@ namespace MissionPlanner.Log
                         float temp = 0;
                         if (!float.TryParse(offsetalt, out temp))
                         {
-                            CustomMessageBox.Show("Bad Offset", "Error");
+                            CustomMessageBox.Show(Strings.BadOffset, Strings.ERROR);
                             return;
                         }
                     }
@@ -90,7 +90,7 @@ namespace MissionPlanner.Log
                             catch (Exception ex)
                             {
                                 log.Debug(ex.ToString());
-                                CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                                CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                                 return;
                             }
 
@@ -228,7 +228,7 @@ namespace MissionPlanner.Log
                             catch (Exception ex)
                             {
                                 log.Debug(ex.ToString());
-                                CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                                CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                                 return;
                             }
 
@@ -297,7 +297,7 @@ namespace MissionPlanner.Log
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    this.Text = "Log - " + Path.GetFileName(openFileDialog1.FileName);
+                    this.Text = Strings.Log + " " + Path.GetFileName(openFileDialog1.FileName);
 
                     List<string> fields = await GetLogFileValidFields(openFileDialog1.FileName).ConfigureAwait(true);
 
@@ -421,7 +421,7 @@ namespace MissionPlanner.Log
                 catch (Exception ex)
                 {
                     log.Debug(ex.ToString());
-                    CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                    CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                     return options;
                 }
 
@@ -615,7 +615,7 @@ namespace MissionPlanner.Log
             }
             catch
             {
-                CustomMessageBox.Show("Bad PacketName");
+                CustomMessageBox.Show(Strings.BadPacketName);
                 return;
             }
 
@@ -675,7 +675,7 @@ namespace MissionPlanner.Log
             }
             else
             {
-                CustomMessageBox.Show("Compile Failed");
+                CustomMessageBox.Show(Strings.CompileFailed);
                 return;
             }
 
@@ -1057,7 +1057,7 @@ namespace MissionPlanner.Log
                             catch (Exception ex)
                             {
                                 log.Debug(ex.ToString());
-                                CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                                CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                                 return;
                             }
 
@@ -1140,7 +1140,7 @@ namespace MissionPlanner.Log
                                 catch (Exception ex)
                                 {
                                     log.Debug(ex.ToString());
-                                    CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                                    CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                                     return;
                                 }
 
@@ -1178,11 +1178,11 @@ namespace MissionPlanner.Log
                                 mine.logplaybackfile = null;
                             }
 
-                            CustomMessageBox.Show("File Saved with log file");
+                            CustomMessageBox.Show(Strings.FileSavedLogFile);
                         }
                         catch
                         {
-                            CustomMessageBox.Show("Error Extracting params");
+                            CustomMessageBox.Show(Strings.ErrorExtractingParams);
                         }
                     }
                 }
@@ -1222,7 +1222,7 @@ namespace MissionPlanner.Log
                             catch (Exception ex)
                             {
                                 log.Debug(ex.ToString());
-                                CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                                CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                                 return;
                             }
 
@@ -1320,11 +1320,11 @@ namespace MissionPlanner.Log
                             {
                                 if (wplists == 0)
                                 {
-                                    CustomMessageBox.Show("No Waypoint found in file!");
+                                    CustomMessageBox.Show(Strings.NoWaypointFoundFile);
                                 }
                                 else
                                 {
-                                    CustomMessageBox.Show("File Saved with log file!");
+                                    CustomMessageBox.Show(Strings.FileSavedLogFile1);
                                 }
                             }
                         }
@@ -1469,7 +1469,7 @@ namespace MissionPlanner.Log
                             catch (Exception ex)
                             {
                                 log.Debug(ex.ToString());
-                                CustomMessageBox.Show("Log Can not be opened. Are you still connected?");
+                                CustomMessageBox.Show(Strings.LogCanOpenedStillConnected);
                                 return;
                             }
 

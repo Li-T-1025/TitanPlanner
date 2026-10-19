@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenControl));
             this.panelItemList = new System.Windows.Forms.FlowLayoutPanel();
             this.groupScreenOptions = new System.Windows.Forms.GroupBox();
             this.tableRoot = new System.Windows.Forms.TableLayoutPanel();
@@ -66,7 +67,7 @@
             this.groupScreenOptions.Size = new System.Drawing.Size(344, 124);
             this.groupScreenOptions.TabIndex = 1;
             this.groupScreenOptions.TabStop = false;
-            this.groupScreenOptions.Text = "Screen Options";
+            resources.ApplyResources(this.groupScreenOptions, "groupScreenOptions");
             // 
             // tableRoot
             // 
@@ -109,7 +110,7 @@
             this.groupOptions.Size = new System.Drawing.Size(344, 125);
             this.groupOptions.TabIndex = 0;
             this.groupOptions.TabStop = false;
-            this.groupOptions.Text = "Item Options";
+            resources.ApplyResources(this.groupOptions, "groupOptions");
             // 
             // grEditorOptions
             // 
@@ -125,7 +126,7 @@
             this.grEditorOptions.Size = new System.Drawing.Size(344, 114);
             this.grEditorOptions.TabIndex = 2;
             this.grEditorOptions.TabStop = false;
-            this.grEditorOptions.Text = "Editor Options";
+            resources.ApplyResources(this.grEditorOptions, "grEditorOptions");
             // 
             // cbUseNameCaptions
             // 
@@ -134,7 +135,7 @@
             this.cbUseNameCaptions.Name = "cbUseNameCaptions";
             this.cbUseNameCaptions.Size = new System.Drawing.Size(103, 19);
             this.cbUseNameCaptions.TabIndex = 4;
-            this.cbUseNameCaptions.Text = "Show Names";
+            resources.ApplyResources(this.cbUseNameCaptions, "cbUseNameCaptions");
             this.cbUseNameCaptions.UseVisualStyleBackColor = true;
             // 
             // btnClearAll
@@ -143,7 +144,7 @@
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(93, 33);
             this.btnClearAll.TabIndex = 3;
-            this.btnClearAll.Text = "Clear All";
+            resources.ApplyResources(this.btnClearAll, "btnClearAll");
             this.btnClearAll.UseVisualStyleBackColor = true;
             // 
             // btnPaste
@@ -152,7 +153,7 @@
             this.btnPaste.Name = "btnPaste";
             this.btnPaste.Size = new System.Drawing.Size(93, 33);
             this.btnPaste.TabIndex = 2;
-            this.btnPaste.Text = "Paste Layout";
+            resources.ApplyResources(this.btnPaste, "btnPaste");
             this.btnPaste.UseVisualStyleBackColor = true;
             // 
             // btnCopy
@@ -161,7 +162,7 @@
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(93, 33);
             this.btnCopy.TabIndex = 1;
-            this.btnCopy.Text = "Copy Layout";
+            resources.ApplyResources(this.btnCopy, "btnCopy");
             this.btnCopy.UseVisualStyleBackColor = true;
             // 
             // cbReducedView
@@ -171,7 +172,7 @@
             this.cbReducedView.Name = "cbReducedView";
             this.cbReducedView.Size = new System.Drawing.Size(82, 19);
             this.cbReducedView.TabIndex = 0;
-            this.cbReducedView.Text = "Decrease";
+            resources.ApplyResources(this.cbReducedView, "cbReducedView");
             this.cbReducedView.UseVisualStyleBackColor = true;
             // 
             // tableLeft
@@ -212,7 +213,7 @@
             this.cbHighDefView.Name = "cbHighDefView";
             this.cbHighDefView.Size = new System.Drawing.Size(108, 24);
             this.cbHighDefView.TabIndex = 5;
-            this.cbHighDefView.Text = "HD Layout";
+            resources.ApplyResources(this.cbHighDefView, "cbHighDefView");
             this.cbHighDefView.UseVisualStyleBackColor = true;
             // 
             // ScreenControl

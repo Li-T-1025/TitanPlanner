@@ -5,6 +5,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.ComponentModel;
 using System.Drawing;
+using MissionPlanner;
 using Core.Utils;
 
 namespace Core.Geometry
@@ -258,7 +259,7 @@ namespace Core.Geometry
                     }
                 }
                 catch {
-                    throw new ArgumentException("Please enter a width and height seperated by a comma.");
+                                        throw new ArgumentException(Strings.PleaseEnterAWidthAndHeightSeperatedByAComma);
                 }
             }
             return base.ConvertFrom(context, culture, value);

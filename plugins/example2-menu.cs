@@ -42,7 +42,7 @@ namespace Shortcuts
 
         public override bool Loaded()
         {
-            but = new ToolStripMenuItem("Fix mission top/bottom");
+            but = new ToolStripMenuItem(Strings.FixMissionTopBottom);
             but.Click += but_Click;
             ToolStripItemCollection col = Host.FPMenuMap.Items;
             col.Add(but);
@@ -64,7 +64,7 @@ namespace Shortcuts
 
         void but_Click(object sender, EventArgs e)
         {
-            CustomMessageBox.Show("This is a sample plugin\nSee the source in the plugins folder");
+            CustomMessageBox.Show(Strings.SamplePluginSeeSourcePluginsFolder);
 
 			string angle = "0";
             InputBox.Show("Enter Angle", "This will be the heading", ref angle);

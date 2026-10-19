@@ -44,6 +44,7 @@
 		  <Private>False</Private>
 	  </ProjectReference>
 	  <ProjectReference Include="..\AltitudeAngelWings\AltitudeAngelWings.csproj" />
+	  <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
     <ProjectReference Include="..\MissionPlanner.Drawing\MissionPlanner.Drawing.csproj">
 	    <Aliases>Drawing</Aliases>
 	    <Private>false</Private>

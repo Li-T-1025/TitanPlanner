@@ -102,10 +102,10 @@ namespace MissionPlanner
         {
             CMB_serialport.Items.Clear();
             CMB_serialport.Items.AddRange(SerialPort.GetPortNames());
-            CMB_serialport.Items.Add("TCP Host - 14551");
-            CMB_serialport.Items.Add("TCP Client");
-            CMB_serialport.Items.Add("UDP Host - 14551");
-            CMB_serialport.Items.Add("UDP Client");
+            CMB_serialport.Items.Add(Strings.TCPHost14551);
+            CMB_serialport.Items.Add(Strings.TCPClient);
+            CMB_serialport.Items.Add(Strings.UDPHost14551);
+            CMB_serialport.Items.Add(Strings.UDPClient);
             portsAreLoaded = true;
 
         }
@@ -176,42 +176,43 @@ namespace MissionPlanner
                 comPort.Close();
                 BUT_connect.Text = Strings.Connect;
                 threadrun = false;
-                LBL_gpsStatus.Text = "Disconnected";
+                LBL_gpsStatus.Text = Strings.Disconnected;
                 _thisData = new PointNMEA();
                 _thread.Abort();
             }
             else
             {
-                LBL_gpsStatus.Text = "Connecting to " + CMB_serialport.Text;
+                LBL_gpsStatus.Text = Strings.Connecting1 + " " + CMB_serialport.Text;
                 try
                 {
-                    switch (CMB_serialport.Text)
+                    if (CMB_serialport.Text == Strings.TCPHost14551 || CMB_serialport.Text == Strings.TCPHost)
                     {
-                        case "TCP Host - 14551":
-                        case "TCP Host":
-                            comPort = new TcpSerial();
-                            CMB_baudrate.SelectedIndex = 0;
-                            listener = new TcpListener(System.Net.IPAddress.Any, 14551);
-                            listener.Start(0);
-                            listener.BeginAcceptTcpClient(new AsyncCallback(DoAcceptTcpClientCallback), listener);
-                            BUT_connect.Text = Strings.Stop;
-                            break;
-                        case "TCP Client":
-                            comPort = new TcpSerial() { retrys = 999999, autoReconnect = true, ConfigRef = "OpenDroneIDTCP" };
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        case "UDP Host - 14551":
-                            comPort = new UdpSerial();
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        case "UDP Client":
-                            comPort = new UdpSerialConnect();
-                            CMB_baudrate.SelectedIndex = 0;
-                            break;
-                        default:
-                            comPort = new SerialPort();
-                            comPort.PortName = CMB_serialport.Text;
-                            break;
+                        comPort = new TcpSerial();
+                        CMB_baudrate.SelectedIndex = 0;
+                        listener = new TcpListener(System.Net.IPAddress.Any, 14551);
+                        listener.Start(0);
+                        listener.BeginAcceptTcpClient(new AsyncCallback(DoAcceptTcpClientCallback), listener);
+                        BUT_connect.Text = Strings.Stop;
+                    }
+                    else if (CMB_serialport.Text == Strings.TCPClient)
+                    {
+                        comPort = new TcpSerial() { retrys = 999999, autoReconnect = true, ConfigRef = "OpenDroneIDTCP" };
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else if (CMB_serialport.Text == Strings.UDPHost14551)
+                    {
+                        comPort = new UdpSerial();
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else if (CMB_serialport.Text == Strings.UDPClient)
+                    {
+                        comPort = new UdpSerialConnect();
+                        CMB_baudrate.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        comPort = new SerialPort();
+                        comPort.PortName = CMB_serialport.Text;
                     }
                 }
                 catch
@@ -236,14 +237,14 @@ namespace MissionPlanner
                 catch (Exception ex)
                 {
                     //CustomMessageBox.Show(Strings.ErrorConnecting + "\n" + ex.ToString(), Strings.ERROR);
-                    LBL_gpsStatus.Text = "Error Connecting to " + CMB_serialport.Text + ". Try again.";
+                    LBL_gpsStatus.Text = Strings.ErrorConnecting1 + " " + CMB_serialport.Text + ". Try again.";
                     return;
                 }
 
                 if (comPort != null && comPort.IsOpen)
                 {
                     Console.WriteLine("Moving Base COM Port Opened at port " + comPort.PortName);
-                    LBL_gpsStatus.Text = "Connected to " + comPort.PortName + ". Waiting for fix";
+                    LBL_gpsStatus.Text = Strings.Connected + " " + comPort.PortName + ". Waiting for fix";
 
                     start();
 
@@ -303,7 +304,7 @@ namespace MissionPlanner
 
                             if (items[6] == "0")
                             {
-                                LBL_gpsStatus.Text = "Connected, No Fix";
+                                LBL_gpsStatus.Text = Strings.ConnectedNoFix;
                                 continue;
                             }
 

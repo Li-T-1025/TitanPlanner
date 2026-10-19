@@ -521,7 +521,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     }
                     catch (Exception ex)
                     {
-                        CustomMessageBox.Show($"Failed to clear {paramName}: " + ex.Message, Strings.ERROR);
+                        CustomMessageBox.Show(string.Format(Strings.FailedClear, paramName) + " " + ex.Message, Strings.ERROR);
                     }
                 }
                 return;
@@ -593,7 +593,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             catch (Exception ex)
             {
                 _updatingServoSelectors = false;
-                CustomMessageBox.Show($"Failed to set {newParamName}: " + ex.Message, Strings.ERROR);
+                CustomMessageBox.Show(string.Format(Strings.FailedSet, newParamName) + " " + ex.Message, Strings.ERROR);
             }
         }
 
@@ -628,7 +628,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (servoChannel <= 0)
             {
-                CustomMessageBox.Show($"Motor {(char)('A' + tag.MotorIndex - 1)} is not assigned to a servo channel.", Strings.ERROR);
+                CustomMessageBox.Show(string.Format(Strings.MotorAssignedServoChannel, (char)('A' + tag.MotorIndex - 1)), Strings.ERROR);
                 return;
             }
 
@@ -644,7 +644,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show($"Failed to set {paramName}: " + ex.Message, Strings.ERROR);
+                CustomMessageBox.Show(string.Format(Strings.FailedSet1, paramName) + " " + ex.Message, Strings.ERROR);
             }
         }
 
@@ -663,7 +663,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to test motor\n" + ex);
+                CustomMessageBox.Show(Strings.FailedTestMotor + "\n" + ex);
             }
         }
 
@@ -684,7 +684,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (currentServoChannel == 0)
             {
-                CustomMessageBox.Show("Please assign a servo output first before using Smart Assign.", "No Servo Assigned");
+                CustomMessageBox.Show(Strings.PleaseAssignServoOutputFirstBefore, Strings.PleaseAssignServoOutputFirstBeforeTitle);
                 return;
             }
 
@@ -698,14 +698,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to test motor\n" + ex);
+                CustomMessageBox.Show(Strings.FailedTestMotor + "\n" + ex);
                 return;
             }
 
             // Show dialog asking which motor actually spun
             using (var dialog = new Form())
             {
-                dialog.Text = "Smart Assign";
+                dialog.Text = Strings.SmartAssign;
                 dialog.Size = new Size(350, 180);
                 dialog.FormBorderStyle = FormBorderStyle.FixedDialog;
                 dialog.StartPosition = FormStartPosition.CenterParent;
@@ -833,7 +833,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                                 }
                                 catch (Exception ex)
                                 {
-                                    CustomMessageBox.Show($"Failed to set {paramName}: " + ex.Message, Strings.ERROR);
+                                    CustomMessageBox.Show(string.Format(Strings.FailedSet1, paramName) + " " + ex.Message, Strings.ERROR);
                                 }
                                 finally
                                 {
@@ -1103,7 +1103,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                         0,
                         0))
                 {
-                    CustomMessageBox.Show("Command was denied by the autopilot");
+                    CustomMessageBox.Show(Strings.CommandDeniedAutopilot);
                 }
             }
             catch
@@ -1120,7 +1120,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show("Bad default system association", Strings.ERROR);
+                CustomMessageBox.Show(Strings.BadDefaultSystemAssociation, Strings.ERROR);
             }
         }
 
@@ -1139,7 +1139,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to set MOT_SPIN_ARM: " + ex.Message, Strings.ERROR);
+                CustomMessageBox.Show(Strings.FailedSetMOTSPINARM + " " + ex.Message, Strings.ERROR);
             }
         }
 
@@ -1158,7 +1158,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch (Exception ex)
             {
-                CustomMessageBox.Show("Failed to set MOT_SPIN_MIN: " + ex.Message, Strings.ERROR);
+                CustomMessageBox.Show(Strings.FailedSetMOTSPINMIN + " " + ex.Message, Strings.ERROR);
             }
         }
     }

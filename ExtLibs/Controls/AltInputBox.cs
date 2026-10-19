@@ -90,12 +90,12 @@ namespace MissionPlanner.Controls
 
             // OK Button
             buttonOk.Size = new Size(75, 23);
-            buttonOk.Text = "OK";
+            buttonOk.Text = Strings.OK;
             buttonOk.DialogResult = DialogResult.OK;
 
             // Cancel Button
             buttonCancel.Size = new Size(75, 23);
-            buttonCancel.Text = "Cancel";
+            buttonCancel.Text = Strings.Cancel;
             buttonCancel.DialogResult = DialogResult.Cancel;
 
             // Add controls to the form

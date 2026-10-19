@@ -409,7 +409,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
                     if (MainV2.comPort.BaseStream == null || !MainV2.comPort.BaseStream.IsOpen)
                     {
-                        CustomMessageBox.Show("You are not connected", Strings.ERROR);
+                        CustomMessageBox.Show(Strings.Connected1, Strings.ERROR);
                         return;
                     }
 
@@ -517,7 +517,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 var warning = ParamChanges47.changedByNewParamWarning(mnud.ParamName);
                 if (warning != null)
                 {
-                    lblUnitWarning.Text = "Change in 4.7: " + warning;
+                    lblUnitWarning.Text = Strings.Change47 + " " + warning;
                     lblUnitWarning.Visible = true;
                     lblUnitWarning.ForeColor = Color.Red;
                     return;

@@ -89,7 +89,7 @@ namespace MissionPlanner.Controls
             {
                 // never leave a half-built instance behind, or later clicks would just activate it
                 log.Error("Offline Maps window failed to open", ex);
-                CustomMessageBox.Show("The Offline Maps window could not be opened.\n\n" + ex.Message, "Offline Maps");
+                CustomMessageBox.Show(Strings.OfflineMapsWindowCouldOpened + "\n\n" + ex.Message, Strings.MapNoAreaDownloadYetTitle);
                 return;
             }
 
@@ -481,7 +481,7 @@ namespace MissionPlanner.Controls
                 if (OfflineMapPack.FindProvider(region.Provider) == null)
                 {
                     item.ForeColor = Color.Gray;
-                    item.ToolTipText = "No map source with this name exists on this computer, so these tiles cannot be shown.";
+                    item.ToolTipText = Strings.NoMapSourceWithThisNameExistsOnThisComputerSoTheseTilesCanno;
                 }
 
                 _list.Items.Add(item);
@@ -528,7 +528,7 @@ namespace MissionPlanner.Controls
                 _lblName.Text = selectedCount > 1 ? selectedCount + " areas selected" : "No area selected";
                 _lblSubtitle.Text = selectedCount > 1 ? "Export and Delete act on all selected areas" : "";
                 foreach (var value in new[] { _valSize, _valTiles, _valCoverage, _valDisk, _valAdded, _valSource })
-                    value.Text = "—";
+                    value.Text = Strings.Str5;
                 _coverage = -1;
                 _coverageBar.Invalidate();
                 return;
@@ -549,9 +549,9 @@ namespace MissionPlanner.Controls
                 ApplyStats(stats);
             else
             {
-                _valTiles.Text = "counting…";
+                _valTiles.Text = Strings.Counting;
                 _valCoverage.Text = "";
-                _valDisk.Text = "…";
+                _valDisk.Text = Strings.Str6;
                 _coverage = -1;
                 _coverageBar.Invalidate();
             }
@@ -732,7 +732,7 @@ namespace MissionPlanner.Controls
 
             if (area.IsEmpty)
             {
-                CustomMessageBox.Show("The map has no area to download yet.", "Offline Maps");
+                CustomMessageBox.Show(Strings.MapNoAreaDownloadYet, Strings.MapNoAreaDownloadYetTitle);
                 return;
             }
 
@@ -779,7 +779,7 @@ namespace MissionPlanner.Controls
             var regions = SelectedRegions();
             if (regions.Count == 0)
             {
-                CustomMessageBox.Show("Select one or more areas to export.", "Offline Maps");
+                CustomMessageBox.Show(Strings.SelectOneMoreAreasExport, Strings.MapNoAreaDownloadYetTitle);
                 return;
             }
 
@@ -820,8 +820,8 @@ namespace MissionPlanner.Controls
                 {
                 }
 
-                CustomMessageBox.Show(string.Format("Exported {0} area(s) to\n{1}\n({2})", regions.Count, dlg.FileName,
-                    OfflineMapPack.FormatSize(size)), "Offline Maps");
+                CustomMessageBox.Show(string.Format(Strings.ExportedAreaS, regions.Count, dlg.FileName,
+                    OfflineMapPack.FormatSize(size)), Strings.MapNoAreaDownloadYetTitle);
             }
         }
 
@@ -847,13 +847,13 @@ namespace MissionPlanner.Controls
                 catch (Exception ex)
                 {
                     log.Error(ex);
-                    CustomMessageBox.Show("This file is not a readable offline map pack.\n" + ex.Message, "Offline Maps");
+                    CustomMessageBox.Show(Strings.FileReadableOfflineMapPack + "\n" + ex.Message, Strings.MapNoAreaDownloadYetTitle);
                     return;
                 }
 
                 if (info.TileEntries == 0)
                 {
-                    CustomMessageBox.Show("No map tiles were found in this file.", "Offline Maps");
+                    CustomMessageBox.Show(Strings.NoMapTilesWereFoundFile, Strings.MapNoAreaDownloadYetTitle);
                     return;
                 }
 
@@ -912,8 +912,8 @@ namespace MissionPlanner.Controls
                 }
 
                 RefreshList();
-                CustomMessageBox.Show(string.Format("{0}{1:N0} tiles copied, {2:N0} were already present.\n{3} area(s) added to the list.",
-                    result.Cancelled ? "Import cancelled. " : "", result.Added, result.Skipped, added), "Offline Maps");
+                CustomMessageBox.Show(string.Format(Strings.TilesCopiedWereAlreadyPresentArea,
+                    result.Cancelled ? "Import cancelled. " : "", result.Added, result.Skipped, added), Strings.MapNoAreaDownloadYetTitle);
             }
         }
 
@@ -924,7 +924,7 @@ namespace MissionPlanner.Controls
                 return;
 
             string what = regions.Count == 1 ? "'" + regions[0].Name + "'" : regions.Count + " areas";
-            if (CustomMessageBox.Show("Remove " + what + " from the offline maps list?", "Offline Maps",
+            if (CustomMessageBox.Show(Strings.Remove + " " + what + " from the offline maps list?", Strings.MapNoAreaDownloadYetTitle,
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) != (int)DialogResult.Yes)
                 return;
 
@@ -943,11 +943,11 @@ namespace MissionPlanner.Controls
             if (tiles > 0)
             {
                 deleteTiles = CustomMessageBox.Show(
-                    string.Format("Also delete the {0:N0} cached tiles ({1}) from disk?\n\n" +
+                    string.Format(Strings.AlsoDeleteCachedTilesDisk + "\n\n" +
                                   "No keeps the tiles: the map still uses them, they are just no longer listed here.\n" +
                                   "Yes frees the space; tiles shared with an overlapping area are deleted too.",
                         tiles, OfflineMapPack.FormatSize(bytes)),
-                    "Offline Maps", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == (int)DialogResult.Yes;
+                    Strings.MapNoAreaDownloadYetTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == (int)DialogResult.Yes;
             }
 
             if (deleteTiles)
@@ -999,7 +999,7 @@ namespace MissionPlanner.Controls
             catch (Exception ex)
             {
                 log.Error(ex);
-                CustomMessageBox.Show("Could not open the folder.\n" + ex.Message, "Offline Maps");
+                CustomMessageBox.Show(Strings.CouldOpenFolder + "\n" + ex.Message, Strings.MapNoAreaDownloadYetTitle);
             }
         }
 

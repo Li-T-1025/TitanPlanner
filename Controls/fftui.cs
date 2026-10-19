@@ -82,9 +82,9 @@ namespace MissionPlanner.Controls
 
                         curve.GetRange(out xMin, out xMax, out yMin, out yMax, true, false, zedGraphControl1.GraphPane);
 
-                        zedGraphControl1.GraphPane.XAxis.Title.Text = "Freq Hz";
-                        zedGraphControl1.GraphPane.YAxis.Title.Text = "Amplitude";
-                        zedGraphControl1.GraphPane.Title.Text = "FFT - " + hz;
+                        zedGraphControl1.GraphPane.XAxis.Title.Text = Strings.FreqHz;
+                        zedGraphControl1.GraphPane.YAxis.Title.Text = Strings.Amplitude;
+                        zedGraphControl1.GraphPane.Title.Text = Strings.FFT1 + " " + hz;
                         zedGraphControl1.GraphPane.Y2Axis.IsVisible = true;
                         zedGraphControl1.GraphPane.CurveList.Clear();
                         zedGraphControl1.GraphPane.CurveList.Add(curve);
@@ -330,9 +330,9 @@ namespace MissionPlanner.Controls
 
                     ctls[controlindex].GraphPane.Legend.IsVisible = false;
 
-                    ctls[controlindex].GraphPane.XAxis.Title.Text = "Freq Hz";
-                    ctls[controlindex].GraphPane.YAxis.Title.Text = "Amplitude";
-                    ctls[controlindex].GraphPane.Title.Text = "FFT " + datashead[controlindex] + " - " +
+                    ctls[controlindex].GraphPane.XAxis.Title.Text = Strings.FreqHz;
+                    ctls[controlindex].GraphPane.YAxis.Title.Text = Strings.Amplitude;
+                    ctls[controlindex].GraphPane.Title.Text = Strings.FFT + " " + datashead[controlindex] + " - " +
                                                               Path.GetFileName(ofd.FileName) + " - " + samplerate +
                                                               "hz input";
 
@@ -525,9 +525,9 @@ namespace MissionPlanner.Controls
 
                     ctls[controlindex].GraphPane.Legend.IsVisible = true;
 
-                    ctls[controlindex].GraphPane.XAxis.Title.Text = "Freq Hz";
-                    ctls[controlindex].GraphPane.YAxis.Title.Text = "Amplitude";
-                    ctls[controlindex].GraphPane.Title.Text = "FFT " + sensordata.type + " - " +
+                    ctls[controlindex].GraphPane.XAxis.Title.Text = Strings.FreqHz;
+                    ctls[controlindex].GraphPane.YAxis.Title.Text = Strings.Amplitude;
+                    ctls[controlindex].GraphPane.Title.Text = Strings.FFT + " " + sensordata.type + " - " +
                                                               Path.GetFileName(ofd.FileName) + " - " + samplerate +
                                                               "hz input";
 
@@ -742,9 +742,9 @@ namespace MissionPlanner.Controls
 
                     ctls[controlindex].GraphPane.Legend.IsVisible = true;
 
-                    ctls[controlindex].GraphPane.XAxis.Title.Text = "Freq Hz";
-                    ctls[controlindex].GraphPane.YAxis.Title.Text = "Amplitude";
-                    ctls[controlindex].GraphPane.Title.Text = "FFT " + sensordata.type + " - " +
+                    ctls[controlindex].GraphPane.XAxis.Title.Text = Strings.FreqHz;
+                    ctls[controlindex].GraphPane.YAxis.Title.Text = Strings.Amplitude;
+                    ctls[controlindex].GraphPane.Title.Text = Strings.FFT + " " + sensordata.type + " - " +
                                                               Path.GetFileName(ofd.FileName) + " - " + samplerate +
                                                               "hz input";
 
@@ -946,9 +946,9 @@ namespace MissionPlanner.Controls
 
                     ctl.GraphPane.Legend.IsVisible = true;
 
-                    ctl.GraphPane.XAxis.Title.Text = "Freq Hz";
-                    ctl.GraphPane.YAxis.Title.Text = "Amplitude";
-                    ctl.GraphPane.Title.Text = "FFT " + sensordata.type + " - " +
+                    ctl.GraphPane.XAxis.Title.Text = Strings.FreqHz;
+                    ctl.GraphPane.YAxis.Title.Text = Strings.Amplitude;
+                    ctl.GraphPane.Title.Text = Strings.FFT + " " + sensordata.type + " - " +
                                                Path.GetFileName(ofd.FileName) + " - " + samplerate +
                                                "hz input";
 

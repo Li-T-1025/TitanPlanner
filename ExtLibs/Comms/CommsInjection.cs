@@ -59,14 +59,14 @@ namespace MissionPlanner.Comms
         public int Read(byte[] buffer, int offset, int count)
         {
             if (!IsOpen)
-                throw new IOException("CommsInjection not open");
+                throw new IOException(Strings.CommsInjectionNotOpen);
 
             var counttimeout = 0;
             while (BytesToRead == 0)
             {
                 Thread.Sleep(1);
                 if (counttimeout > ReadTimeout)
-                    throw new TimeoutException("CommsInjection Timeout on read");
+                    throw new TimeoutException(Strings.CommsInjectionTimeoutOnRead);
                 counttimeout++;
             }
 

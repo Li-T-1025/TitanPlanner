@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigSecureAP));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.but_bootloader = new MissionPlanner.Controls.MyButton();
             this.but_firmware = new MissionPlanner.Controls.MyButton();
@@ -53,7 +54,7 @@
             this.but_bootloader.Name = "but_bootloader";
             this.but_bootloader.Size = new System.Drawing.Size(75, 23);
             this.but_bootloader.TabIndex = 0;
-            this.but_bootloader.Text = "BootLoader";
+            resources.ApplyResources(this.but_bootloader, "but_bootloader");
             this.but_bootloader.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.but_bootloader.UseVisualStyleBackColor = true;
             this.but_bootloader.Click += new System.EventHandler(this.but_bootloader_Click);
@@ -64,7 +65,7 @@
             this.but_firmware.Name = "but_firmware";
             this.but_firmware.Size = new System.Drawing.Size(75, 23);
             this.but_firmware.TabIndex = 1;
-            this.but_firmware.Text = "Firmware";
+            resources.ApplyResources(this.but_firmware, "but_firmware");
             this.but_firmware.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.but_firmware.UseVisualStyleBackColor = true;
             this.but_firmware.Click += new System.EventHandler(this.but_firmware_Click);
@@ -75,7 +76,7 @@
             this.but_privkey.Name = "but_privkey";
             this.but_privkey.Size = new System.Drawing.Size(75, 23);
             this.but_privkey.TabIndex = 2;
-            this.but_privkey.Text = "Private Key";
+            resources.ApplyResources(this.but_privkey, "but_privkey");
             this.but_privkey.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.but_privkey.UseVisualStyleBackColor = true;
             this.but_privkey.Click += new System.EventHandler(this.but_privkey_Click);
@@ -93,7 +94,7 @@
             this.groupBox4.Size = new System.Drawing.Size(335, 120);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Files";
+            resources.ApplyResources(this.groupBox4, "groupBox4");
             // 
             // txt_fwapj
             // 
@@ -122,7 +123,7 @@
             this.but_generatekey.Name = "but_generatekey";
             this.but_generatekey.Size = new System.Drawing.Size(75, 23);
             this.but_generatekey.TabIndex = 6;
-            this.but_generatekey.Text = "Generate Key";
+            resources.ApplyResources(this.but_generatekey, "but_generatekey");
             this.but_generatekey.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.but_generatekey.UseVisualStyleBackColor = true;
             this.but_generatekey.Click += new System.EventHandler(this.but_generatekey_Click);
@@ -135,7 +136,7 @@
             this.groupBox5.Size = new System.Drawing.Size(335, 55);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Do Only Once";
+            resources.ApplyResources(this.groupBox5, "groupBox5");
             // 
             // ConfigSecureAP
             // 

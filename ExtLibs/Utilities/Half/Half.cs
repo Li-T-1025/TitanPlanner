@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
+using MissionPlanner;
 
 namespace System
 {
@@ -437,7 +438,7 @@ namespace System
                 }
                 else
                 {
-                    throw new ArgumentException("Object must be of type Half.");
+                    throw new ArgumentException(Strings.ObjectMustBeOfTypeHalf);
                 }
             }
 
@@ -558,7 +559,7 @@ namespace System
             {
                 if (value != 0)
                 {
-                    throw new ArithmeticException("Function does not accept floating point Not-a-Number values.");
+                    throw new ArithmeticException(Strings.FunctionDoesNotAcceptFloatingPointNotANumberValues);
                 }
             }
 

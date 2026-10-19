@@ -72,7 +72,7 @@ namespace MissionPlanner.Controls
 
         private async void PopulateTreeView()
         {
-            toolStripStatusLabel1.Text = "Updating Folders";
+            toolStripStatusLabel1.Text = Strings.UpdatingFolders;
             toolStripProgressBar1.ProgressBar.Style = ProgressBarStyle.Marquee;
 
             treeView1.BeginUpdate();
@@ -114,7 +114,7 @@ namespace MissionPlanner.Controls
             }
             
 
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = Strings.Ready;
 
             treeView1.Enabled = true;
             
@@ -326,13 +326,13 @@ namespace MissionPlanner.Controls
 
         private async void DownloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Download ";
+            toolStripStatusLabel1.Text = string.Format(Strings.Download2, "");
             var sfd = new FolderBrowserDialog();
             sfd.SelectedPath = Settings.GetUserDataDirectory();
             var dr = sfd.ShowDialog();
             foreach (ListViewItem listView1SelectedItem in listView1.SelectedItems)
             {
-                toolStripStatusLabel1.Text = "Download " + listView1SelectedItem.Text;
+                toolStripStatusLabel1.Text = string.Format(Strings.Download2, listView1SelectedItem.Text);
                 if (dr == DialogResult.OK)
                 {
                     var path = treeView1.SelectedNode.FullPath + "/" + listView1SelectedItem.Text;
@@ -378,7 +378,7 @@ namespace MissionPlanner.Controls
                 }
             }
 
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = Strings.Ready;
         }
 
         private async void UploadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -408,7 +408,7 @@ namespace MissionPlanner.Controls
 
         private async Task UploadFile(string ofdFileName)
         {
-            toolStripStatusLabel1.Text = "Upload " + Path.GetFileName(ofdFileName);
+            toolStripStatusLabel1.Text = string.Format(Strings.Upload2, Path.GetFileName(ofdFileName));
             var fn = treeView1.SelectedNode.FullPath + "/" + Path.GetFileName(ofdFileName);
             ProgressReporterDialogue prd = new ProgressReporterDialogue();
             CancellationTokenSource cancel = new CancellationTokenSource();
@@ -447,7 +447,7 @@ namespace MissionPlanner.Controls
             };
             prd.RunBackgroundOperationAsync();
             _mavftp.Progress -= progress;
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = Strings.Ready;
         }
 
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -463,7 +463,7 @@ namespace MissionPlanner.Controls
 
             foreach (ListViewItem listView1SelectedItem in listView1.SelectedItems)
             {
-                toolStripStatusLabel1.Text = "Delete " + listView1SelectedItem.Text;
+                toolStripStatusLabel1.Text = string.Format(Strings.Delete2, listView1SelectedItem.Text);
                 ProgressReporterDialogue prd = new ProgressReporterDialogue();
                 CancellationTokenSource cancel = new CancellationTokenSource();
                 prd.doWorkArgs.CancelRequestChanged += (o, args) =>
@@ -503,7 +503,7 @@ namespace MissionPlanner.Controls
 
             TreeView1_NodeMouseClick(null,
                 new TreeNodeMouseClickEventArgs(treeView1.SelectedNode, MouseButtons.Left, 1, 1, 1));
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = Strings.Ready;
         }
 
         private static bool IsDirectory(ListViewItem item)
@@ -541,7 +541,7 @@ namespace MissionPlanner.Controls
             prd.RunBackgroundOperationAsync();
             TreeView1_NodeMouseClick(null,
                 new TreeNodeMouseClickEventArgs(treeView1.SelectedNode, MouseButtons.Left, 1, 1, 1));
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = Strings.Ready;
         }
 
         private void NewFolderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -565,7 +565,7 @@ namespace MissionPlanner.Controls
                     if (!_mavftp.kCmdCreateDirectory(fullPath + "/" + folder,
                         cancel))
                     {
-                        CustomMessageBox.Show("Failed to create directory", Strings.ERROR);
+                        CustomMessageBox.Show(Strings.FailedCreateDirectory, Strings.ERROR);
                     }
                 };
 
@@ -574,7 +574,7 @@ namespace MissionPlanner.Controls
 
             TreeView1_NodeMouseClick(null,
                 new TreeNodeMouseClickEventArgs(treeView1.SelectedNode, MouseButtons.Left, 1, 1, 1));
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = Strings.Ready;
         }
 
         private void GetCRC32ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -638,7 +638,7 @@ namespace MissionPlanner.Controls
 
         private void DownloadBurstToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Download ";
+            toolStripStatusLabel1.Text = string.Format(Strings.Download2, "");
             var sfd = new FolderBrowserDialog();
             sfd.SelectedPath = Settings.GetUserDataDirectory();
             var dr = sfd.ShowDialog();
@@ -646,7 +646,7 @@ namespace MissionPlanner.Controls
             {
                 if (dr == DialogResult.OK)
                 {
-                    toolStripStatusLabel1.Text = "Download " + listView1SelectedItem.Text;
+                    toolStripStatusLabel1.Text = string.Format(Strings.Download2, listView1SelectedItem.Text);
                     var path = treeView1.SelectedNode.FullPath + "/" + listView1SelectedItem.Text;
                     ProgressReporterDialogue prd = new ProgressReporterDialogue();
                     CancellationTokenSource cancel = new CancellationTokenSource();
@@ -691,7 +691,7 @@ namespace MissionPlanner.Controls
                 }
             }
 
-            toolStripStatusLabel1.Text = "Ready";
+            toolStripStatusLabel1.Text = Strings.Ready;
         }
 
         private void MavFTPUI_Load(object sender, EventArgs e)
@@ -710,13 +710,13 @@ namespace MissionPlanner.Controls
                 try
                 {
                     MavFtpDokan.Unmount(DefaultMountPoint);
-                    btnMountFuse.Text = "Mount as Drive";
-                    toolStripStatusLabel1.Text = "FUSE drive unmounted";
+                    btnMountFuse.Text = Strings.MountAsDrive;
+                    toolStripStatusLabel1.Text = Strings.FUSEDriveUnmounted;
                 }
                 catch (Exception ex)
                 {
                     log.Error("Unmount error", ex);
-                    CustomMessageBox.Show("Failed to unmount: " + ex.Message);
+                    CustomMessageBox.Show(Strings.FailedUnmount + " " + ex.Message);
                 }
             }
             else
@@ -730,13 +730,13 @@ namespace MissionPlanner.Controls
                 try
                 {
                     MavFtpDokan.Mount(_mavftp, mountPoint);
-                    btnMountFuse.Text = "Unmount Drive";
-                    toolStripStatusLabel1.Text = "FUSE drive mounted at " + mountPoint;
+                    btnMountFuse.Text = Strings.UnmountDrive;
+                    toolStripStatusLabel1.Text = Strings.FUSEDriveMounted + " " + mountPoint;
                 }
                 catch (Exception ex)
                 {
                     log.Error("Mount error", ex);
-                    CustomMessageBox.Show("Failed to mount: " + ex.Message + "\n\nMake sure Dokan driver is installed.");
+                    CustomMessageBox.Show(Strings.FailedMount + " " + ex.Message + "\n\nMake sure Dokan driver is installed.");
                 }
             }
         }

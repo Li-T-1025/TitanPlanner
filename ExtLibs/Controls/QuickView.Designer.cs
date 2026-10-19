@@ -30,13 +30,14 @@ namespace MissionPlanner.Controls
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuickView));
 
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
           
             this.SuspendLayout();
 
      
-            this.toolTip1.SetToolTip(this, "Double click to change");
+            this.toolTip1.SetToolTip(this, resources.GetString("QuickView.ToolTip"));
             // 
             // QuickView
             // 

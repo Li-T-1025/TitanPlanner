@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
 using System.Xml;
+using MissionPlanner;
 
 namespace Core.Xml
 {
@@ -57,7 +58,7 @@ namespace Core.Xml
         private static Type FindType(string value)
         {
             if (!namedTypes.ContainsKey(value)) {                
-                throw new Exception("Could not find a Type for this value: " + value + ". Use XmlList<T>.AddType to include the appropriate type.");
+                throw new Exception(string.Format(Strings.CouldNotFindATypeForThisValue, value));
             }
             return namedTypes[value];
         }

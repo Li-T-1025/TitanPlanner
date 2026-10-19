@@ -42,6 +42,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SerialOutputCoT));
             this.CMB_baudrate = new System.Windows.Forms.ComboBox();
             this.CMB_serialport = new System.Windows.Forms.ComboBox();
             this.TB_output = new System.Windows.Forms.TextBox();
@@ -70,15 +71,7 @@
             // 
             this.CMB_baudrate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CMB_baudrate.FormattingEnabled = true;
-            this.CMB_baudrate.Items.AddRange(new object[] {
-            "4800",
-            "9600",
-            "14400",
-            "19200",
-            "28800",
-            "38400",
-            "57600",
-            "115200"});
+            this.CMB_baudrate.Items.AddRange(new object[] { "4800", "9600", "14400", "19200", "28800", "38400", "57600", "115200" });
             this.CMB_baudrate.Location = new System.Drawing.Point(8, 46);
             this.CMB_baudrate.Name = "CMB_baudrate";
             this.CMB_baudrate.Size = new System.Drawing.Size(121, 21);
@@ -114,7 +107,7 @@
             this.BTN_clear_TB.Name = "BTN_clear_TB";
             this.BTN_clear_TB.Size = new System.Drawing.Size(88, 23);
             this.BTN_clear_TB.TabIndex = 16;
-            this.BTN_clear_TB.Text = "Clear Window";
+            resources.ApplyResources(this.BTN_clear_TB, "BTN_clear_TB");
             this.BTN_clear_TB.UseVisualStyleBackColor = true;
             this.BTN_clear_TB.Click += new System.EventHandler(this.BTN_clear_TB_Click);
             // 
@@ -128,7 +121,7 @@
             this.GB_connection.Size = new System.Drawing.Size(217, 81);
             this.GB_connection.TabIndex = 18;
             this.GB_connection.TabStop = false;
-            this.GB_connection.Text = "Connection";
+            resources.ApplyResources(this.GB_connection, "GB_connection");
             // 
             // BUT_connect
             // 
@@ -137,7 +130,7 @@
             this.BUT_connect.Name = "BUT_connect";
             this.BUT_connect.Size = new System.Drawing.Size(75, 23);
             this.BUT_connect.TabIndex = 9;
-            this.BUT_connect.Text = "Connect";
+            resources.ApplyResources(this.BUT_connect, "BUT_connect");
             this.BUT_connect.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_connect.UseVisualStyleBackColor = true;
             this.BUT_connect.Click += new System.EventHandler(this.BUT_connect_Click);
@@ -149,7 +142,7 @@
             this.label_type.Name = "label_type";
             this.label_type.Size = new System.Drawing.Size(31, 13);
             this.label_type.TabIndex = 21;
-            this.label_type.Text = "Type";
+            resources.ApplyResources(this.label_type, "label_type");
             // 
             // TB_xml_type
             // 
@@ -169,7 +162,7 @@
             this.CB_advancedMode.Name = "CB_advancedMode";
             this.CB_advancedMode.Size = new System.Drawing.Size(107, 17);
             this.CB_advancedMode.TabIndex = 23;
-            this.CB_advancedMode.Text = "Additional Details";
+            resources.ApplyResources(this.CB_advancedMode, "CB_advancedMode");
             this.CB_advancedMode.UseVisualStyleBackColor = true;
             this.CB_advancedMode.CheckedChanged += new System.EventHandler(this.CB_advancedMode_CheckedChanged);
             // 
@@ -183,7 +176,7 @@
             this.chk_indent.Name = "chk_indent";
             this.chk_indent.Size = new System.Drawing.Size(100, 17);
             this.chk_indent.TabIndex = 24;
-            this.chk_indent.Text = "Nice Formatting";
+            resources.ApplyResources(this.chk_indent, "chk_indent");
             this.chk_indent.UseVisualStyleBackColor = true;
             this.chk_indent.CheckedChanged += new System.EventHandler(this.chk_indent_CheckedChanged);
             // 
@@ -217,7 +210,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 26;
-            this.label2.Text = "Interval (sec)";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // myDataGridView1
             // 
@@ -243,44 +236,41 @@
             // sysid
             // 
             this.sysid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.sysid.HeaderText = "sysid";
+            resources.ApplyResources(this.sysid, "sysid");
             this.sysid.MinimumWidth = 8;
             this.sysid.Name = "sysid";
             this.sysid.Width = 55;
             // 
             // UID
             // 
-            this.UID.HeaderText = "UID";
+            resources.ApplyResources(this.UID, "UID");
             this.UID.MinimumWidth = 8;
             this.UID.Name = "UID";
             // 
             // takv
             // 
             this.takv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.takv.HeaderText = "takv";
+            resources.ApplyResources(this.takv, "takv");
             this.takv.Name = "takv";
             this.takv.Width = 34;
             // 
             // ContactCallsign
             // 
-            this.ContactCallsign.HeaderText = "ContactCallsign";
+            resources.ApplyResources(this.ContactCallsign, "ContactCallsign");
             this.ContactCallsign.MinimumWidth = 8;
             this.ContactCallsign.Name = "ContactCallsign";
-            this.ContactCallsign.ToolTipText = "If you don\'t know what this is then leave it blank or use the UID";
             // 
             // ContactEndPointIP
             // 
-            this.ContactEndPointIP.HeaderText = "ContactEndPointIP";
+            resources.ApplyResources(this.ContactEndPointIP, "ContactEndPointIP");
             this.ContactEndPointIP.MinimumWidth = 8;
             this.ContactEndPointIP.Name = "ContactEndPointIP";
-            this.ContactEndPointIP.ToolTipText = "If you don\'t know what this is then leave it blank";
             // 
             // VMF
             // 
-            this.VMF.HeaderText = "VMF";
+            resources.ApplyResources(this.VMF, "VMF");
             this.VMF.MinimumWidth = 8;
             this.VMF.Name = "VMF";
-            this.VMF.ToolTipText = "If you don\'t know what this is then leave it blank";
             // 
             // SerialOutputCoT
             // 
@@ -298,7 +288,7 @@
             this.Controls.Add(this.BTN_clear_TB);
             this.Controls.Add(this.TB_output);
             this.Name = "SerialOutputCoT";
-            this.Text = "Output Cursor on Target";
+            resources.ApplyResources(this, "$this");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SerialOutputCoT_FormClosing);
             this.Load += new System.EventHandler(this.SerialOutputCoT_Load);
             this.GB_connection.ResumeLayout(false);

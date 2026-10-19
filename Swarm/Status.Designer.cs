@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Status));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "GPS";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -59,7 +60,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Armed";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // label3
             // 
@@ -68,7 +69,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Mode";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // lbl_gps
             // 
@@ -77,7 +78,7 @@
             this.lbl_gps.Name = "lbl_gps";
             this.lbl_gps.Size = new System.Drawing.Size(29, 13);
             this.lbl_gps.TabIndex = 3;
-            this.lbl_gps.Text = "GPS";
+            resources.ApplyResources(this.lbl_gps, "lbl_gps");
             // 
             // lbl_armed
             // 
@@ -86,7 +87,7 @@
             this.lbl_armed.Name = "lbl_armed";
             this.lbl_armed.Size = new System.Drawing.Size(37, 13);
             this.lbl_armed.TabIndex = 4;
-            this.lbl_armed.Text = "Armed";
+            resources.ApplyResources(this.lbl_armed, "lbl_armed");
             // 
             // lbl_mode
             // 
@@ -95,7 +96,7 @@
             this.lbl_mode.Name = "lbl_mode";
             this.lbl_mode.Size = new System.Drawing.Size(34, 13);
             this.lbl_mode.TabIndex = 5;
-            this.lbl_mode.Text = "Mode";
+            resources.ApplyResources(this.lbl_mode, "lbl_mode");
             // 
             // lbl_mav
             // 
@@ -104,7 +105,7 @@
             this.lbl_mav.Name = "lbl_mav";
             this.lbl_mav.Size = new System.Drawing.Size(29, 13);
             this.lbl_mav.TabIndex = 7;
-            this.lbl_mav.Text = "GPS";
+            resources.ApplyResources(this.lbl_mav, "lbl_mav");
             // 
             // label4
             // 
@@ -113,7 +114,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Guided";
+            resources.ApplyResources(this.label4, "label4");
             // 
             // lbl_guided
             // 
@@ -138,7 +139,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Location";
+            resources.ApplyResources(this.label6, "label6");
             // 
             // lbl_spd
             // 
@@ -156,7 +157,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Speed";
+            resources.ApplyResources(this.label8, "label8");
             // 
             // Status
             // 

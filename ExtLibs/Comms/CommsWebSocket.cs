@@ -104,7 +104,7 @@ namespace MissionPlanner.Comms
 
             if (OnInputBoxShow("remote host", "Enter url (eg http://user:pass@host:port/wspath)", ref url) ==
                 inputboxreturn.Cancel)
-                throw new Exception("Canceled by request");
+                throw new Exception(Strings.CanceledByRequest);
 
             OnSettings("WS_url", url, true);
 
@@ -226,7 +226,7 @@ namespace MissionPlanner.Comms
             }
             catch
             {
-                throw new Exception("Socket Closed");
+                throw new Exception(Strings.SocketClosed);
             }
         }
 
@@ -238,7 +238,7 @@ namespace MissionPlanner.Comms
             {
                 Thread.Sleep(1);
                 if (count > ReadTimeout)
-                    throw new Exception("NetSerial Timeout on read");
+                    throw new Exception(Strings.NetSerialTimeoutOnRead);
                 count++;
             }
 
@@ -299,7 +299,7 @@ namespace MissionPlanner.Comms
             catch (Exception ex)
             {
                 log.Error(ex);
-            } //throw new Exception("Comport / Socket Closed"); }
+            } //throw new Exception(Strings.ComportSocketClosed); }
         }
 
         public void DiscardInBuffer()

@@ -45,7 +45,7 @@ namespace MissionPlanner.Warnings
 
                 NUM_repeattime.Value = custwarning.RepeatTime;
                 TXT_warningtext.Text = custwarning.Text;
-                CMB_color.Text = "NoColor";
+                CMB_color.Text = Strings.NoColor;
                              
             }
             else
@@ -101,7 +101,7 @@ namespace MissionPlanner.Warnings
             this.CMB_Source.Name = "CMB_Source";
             this.CMB_Source.Size = new System.Drawing.Size(116, 21);
             this.CMB_Source.TabIndex = 0;
-            this.CMB_Source.Text = "gpsstat";
+            this.CMB_Source.Text = Strings.Gpsstat;
             this.CMB_Source.SelectedIndexChanged += new System.EventHandler(this.CMB_Source_SelectedIndexChanged);
             //
             // CMB_condition
@@ -111,7 +111,7 @@ namespace MissionPlanner.Warnings
             this.CMB_condition.Name = "CMB_condition";
             this.CMB_condition.Size = new System.Drawing.Size(54, 21);
             this.CMB_condition.TabIndex = 1;
-            this.CMB_condition.Text = "EQ";
+            this.CMB_condition.Text = Strings.EQ;
             this.CMB_condition.SelectedIndexChanged += new System.EventHandler(this.CMB_condition_SelectedIndexChanged);
             //
             // NUM_warning
@@ -152,7 +152,7 @@ namespace MissionPlanner.Warnings
             this.TXT_warningtext.Name = "TXT_warningtext";
             this.TXT_warningtext.Size = new System.Drawing.Size(236, 20);
             this.TXT_warningtext.TabIndex = 4;
-            this.TXT_warningtext.Text = "WARNING: {name} is {value}";
+            this.TXT_warningtext.Text = Strings.WarningWARNING;
             this.TXT_warningtext.TextChanged += new System.EventHandler(this.TXT_warningtext_TextChanged);
             //
             // but_addchild
@@ -182,7 +182,7 @@ namespace MissionPlanner.Warnings
             this.CB_type.Name = "cbType";
             this.CB_type.Size = new System.Drawing.Size(122, 17);
             this.CB_type.TabIndex = 7;
-            this.CB_type.Text = "QuickPanel Coloring";
+            this.CB_type.Text = Strings.QuickPanelColoring;
             this.CB_type.UseVisualStyleBackColor = true;
             this.CB_type.CheckedChanged += new System.EventHandler(this.CB_type_CheckedChanged);
             //
@@ -193,7 +193,7 @@ namespace MissionPlanner.Warnings
             this.CMB_color.Name = "cmbColor";
             this.CMB_color.Size = new System.Drawing.Size(104, 21);
             this.CMB_color.TabIndex = 8;
-            this.CMB_color.Text = "NoColor";
+            this.CMB_color.Text = Strings.NoColor;
             this.CMB_color.SelectedIndexChanged += new System.EventHandler(this.cmbColor_SelectedIndexChanged);
             //
             // WarningControl
@@ -318,7 +318,7 @@ namespace MissionPlanner.Warnings
             {
                 //It is regular SpeakAndText item
                 but_addchild.Enabled = true;
-                TXT_warningtext.Text = "WARNING: {name} is {value}";
+                TXT_warningtext.Text = Strings.WarningWARNING;
                 TXT_warningtext.Enabled = true;
                 NUM_repeattime.Value = 10;
                 NUM_repeattime.Enabled = true;

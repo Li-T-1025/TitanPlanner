@@ -52,6 +52,7 @@
     <ProjectReference Include="..\..\ExtLibs\Utilities\MissionPlanner.Utilities.csproj" />
     <ProjectReference Include="..\..\ExtLibs\WebAPIs\MissionPlanner.WebAPIs.csproj" />
     <ProjectReference Include="..\..\MissionPlanner.csproj" />
+    <ProjectReference Include="..\..\ExtLibs\Strings\MissionPlanner.Strings.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="DowdingUI.cs" />

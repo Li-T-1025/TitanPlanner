@@ -37,7 +37,8 @@
     <EmbeddedResource Remove="pymavlink\**" />
     <None Remove="mavlink\**" />
     <None Remove="pymavlink\**" />
-  </ItemGroup>
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
+</ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe">

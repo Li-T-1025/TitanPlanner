@@ -29,6 +29,7 @@ namespace MissionPlanner.Controls
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpenDroneID_Map_Status));
             this.LBL_ODID_reason = new System.Windows.Forms.Label();
             this.LED_ODID_Status = new Bulb.LedBulb();
             this.LBL_ODID_OK = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@ namespace MissionPlanner.Controls
             this.LBL_ODID_reason.Name = "LBL_ODID_reason";
             this.LBL_ODID_reason.Size = new System.Drawing.Size(65, 13);
             this.LBL_ODID_reason.TabIndex = 1;
-            this.LBL_ODID_reason.Text = "{Loading....}";
+            resources.ApplyResources(this.LBL_ODID_reason, "LBL_ODID_reason");
             this.LBL_ODID_reason.DoubleClick += new System.EventHandler(this.OpenDroneID_Map_Status_DoubleClick);
             // 
             // LED_ODID_Status
@@ -52,7 +53,7 @@ namespace MissionPlanner.Controls
             this.LED_ODID_Status.On = true;
             this.LED_ODID_Status.Size = new System.Drawing.Size(16, 16);
             this.LED_ODID_Status.TabIndex = 2;
-            this.LED_ODID_Status.Text = "ledBulb1";
+            resources.ApplyResources(this.LED_ODID_Status, "LED_ODID_Status");
             this.LED_ODID_Status.DoubleClick += new System.EventHandler(this.OpenDroneID_Map_Status_DoubleClick);
             // 
             // LBL_ODID_OK
@@ -63,7 +64,7 @@ namespace MissionPlanner.Controls
             this.LBL_ODID_OK.Name = "LBL_ODID_OK";
             this.LBL_ODID_OK.Size = new System.Drawing.Size(71, 16);
             this.LBL_ODID_OK.TabIndex = 3;
-            this.LBL_ODID_OK.Text = "Remote ID";
+            resources.ApplyResources(this.LBL_ODID_OK, "LBL_ODID_OK");
             this.LBL_ODID_OK.DoubleClick += new System.EventHandler(this.OpenDroneID_Map_Status_DoubleClick);
             // 
             // OpenDroneID_Map_Status

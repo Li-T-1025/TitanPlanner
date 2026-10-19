@@ -933,7 +933,7 @@ namespace MissionPlanner
             marker = new GMap.NET.WindowsForms.GMapMarkerRect(point);
             marker.ToolTip = new GMapToolTip(marker);
             marker.ToolTipMode = MarkerTooltipMode.Always;
-            marker.ToolTipText = "Line: " + dist;
+            marker.ToolTipText = string.Format(Strings.Line, dist);
             routesOverlay.Markers.Add(marker);
         }
 
@@ -1252,7 +1252,7 @@ namespace MissionPlanner
                 camera.sensorheight = float.Parse(TXT_sensheight.Text);
                 camera.sensorwidth = float.Parse(TXT_senswidth.Text);
             }
-            catch { CustomMessageBox.Show("One of your entries is not a valid number"); return; }
+            catch { CustomMessageBox.Show(Strings.OneEntriesValidNumber); return; }
 
             cameras[CMB_camera.Text] = camera;
 
@@ -1270,7 +1270,7 @@ namespace MissionPlanner
 
                 if (NUM_split.Value > 1 && CHK_toandland.Checked != true)
                 {
-                    CustomMessageBox.Show("You must use Land/RTL to split a mission", Strings.ERROR);
+                    CustomMessageBox.Show(Strings.MustUseLandRTLSplitMission, Strings.ERROR);
                     return;
                 }
 
@@ -1655,7 +1655,7 @@ namespace MissionPlanner
             }
             else
             {
-                CustomMessageBox.Show("Bad Grid", "Error");
+                CustomMessageBox.Show(Strings.BadGrid, Strings.ERROR);
             }
         }
 

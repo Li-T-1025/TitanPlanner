@@ -19,7 +19,7 @@ namespace MissionPlanner.ArduPilot
             {
                 if (!port.BaseStream.IsOpen)
                 {
-                    throw new Exception("Please Connect First!");
+                    throw new Exception(Strings.PleaseConnectFirst2);
                 }
 
                 bool use_supportfence = (port.MAVlist[sysid, compid].cs.capabilities & (uint)MAVLink.MAV_PROTOCOL_CAPABILITY.MISSION_FENCE) > 0;
@@ -27,11 +27,11 @@ namespace MissionPlanner.ArduPilot
                 bool use_int = (port.MAVlist[sysid, compid].cs.capabilities & (uint)MAVLink.MAV_PROTOCOL_CAPABILITY.MISSION_INT) > 0;
 
                 if (!use_supportfence && type == MAVLink.MAV_MISSION_TYPE.FENCE)
-                    throw new Exception("Fence mission items not supported, please use legacy geofence");
+                    throw new Exception(Strings.FenceMissionItemsNotSupportedPleaseUseLegacyGeofence);
 
                 if (!use_supportfence && !port.MAVlist[sysid, compid].mavlinkv2 && type != MAVLink.MAV_MISSION_TYPE.MISSION)
                 {
-                    throw new Exception("Mission type only supported under mavlink2");
+                    throw new Exception(Strings.MissionTypeOnlySupportedUnderMavlink2);
                 }
 
                 progress?.Invoke(0, "Getting WP count");
@@ -68,7 +68,7 @@ namespace MissionPlanner.ArduPilot
             {
                 if (!port.BaseStream.IsOpen)
                 {
-                    throw new Exception("Please connect first!");
+                    throw new Exception(Strings.PleaseConnectFirst1);
                 }
 
                 bool use_supportfence = (port.MAVlist[sysid, compid].cs.capabilities & (uint)MAVLink.MAV_PROTOCOL_CAPABILITY.MISSION_FENCE) > 0;
@@ -76,11 +76,11 @@ namespace MissionPlanner.ArduPilot
                 bool use_int = (port.MAVlist[sysid, compid].cs.capabilities & (uint)MAVLink.MAV_PROTOCOL_CAPABILITY.MISSION_INT) > 0;
 
                 if (!use_supportfence && type == MAVLink.MAV_MISSION_TYPE.FENCE)
-                    throw new Exception("Fence mission items not supported, please use legacy geofence");
+                    throw new Exception(Strings.FenceMissionItemsNotSupportedPleaseUseLegacyGeofence);
 
                 if (!use_supportfence && !port.MAVlist[sysid, compid].mavlinkv2 && type != MAVLink.MAV_MISSION_TYPE.MISSION)
                 {
-                    throw new Exception("Mission type only supported under mavlink2");
+                    throw new Exception(Strings.MissionTypeOnlySupportedUnderMavlink2);
                 }
 
                 int a;
@@ -112,7 +112,7 @@ namespace MissionPlanner.ArduPilot
 
                     if (ans == MAVLink.MAV_MISSION_RESULT.MAV_MISSION_NO_SPACE)
                     {
-                        throw new Exception("Upload failed, please reduce the number of wp's");
+                        throw new Exception(Strings.UploadFailedPleaseReduceTheNumberOfWpS);
                     }
                     if (ans == MAVLink.MAV_MISSION_RESULT.MAV_MISSION_INVALID)
                     {
@@ -143,7 +143,7 @@ namespace MissionPlanner.ArduPilot
                     }
                     if (ans != MAVLink.MAV_MISSION_RESULT.MAV_MISSION_ACCEPTED)
                     {
-                        throw new Exception("Upload "+ type.ToString() + " failed " + Enum.Parse(typeof(MAVLink.MAV_CMD), temp.id.ToString()) +
+                        throw new Exception(string.Format(Strings.Upload2, type.ToString()) + " failed " + Enum.Parse(typeof(MAVLink.MAV_CMD), temp.id.ToString()) +
                                             " " + Enum.Parse(typeof(MAVLink.MAV_MISSION_RESULT), ans.ToString()));
                     }
                 }
@@ -164,7 +164,7 @@ namespace MissionPlanner.ArduPilot
             {
                 if (!port.BaseStream.IsOpen)
                 {
-                    throw new Exception("Please connect first!");
+                    throw new Exception(Strings.PleaseConnectFirst1);
                 }
 
                 bool use_supportfence = (port.MAVlist[sysid, compid].cs.capabilities & (uint)MAVLink.MAV_PROTOCOL_CAPABILITY.MISSION_FENCE) > 0;
@@ -172,11 +172,11 @@ namespace MissionPlanner.ArduPilot
                 bool use_int = (port.MAVlist[sysid, compid].cs.capabilities & (uint)MAVLink.MAV_PROTOCOL_CAPABILITY.MISSION_INT) > 0;
 
                 if (!use_supportfence && type == MAVLink.MAV_MISSION_TYPE.FENCE)
-                    throw new Exception("Fence mission items not supported, please use legacy geofence");
+                    throw new Exception(Strings.FenceMissionItemsNotSupportedPleaseUseLegacyGeofence);
 
                 if (!use_supportfence && !port.MAVlist[sysid, compid].mavlinkv2 && type != MAVLink.MAV_MISSION_TYPE.MISSION)
                 {
-                    throw new Exception("Mission type only supported under mavlink2");
+                    throw new Exception(Strings.MissionTypeOnlySupportedUnderMavlink2);
                 }
 
                 int a;
@@ -209,7 +209,7 @@ namespace MissionPlanner.ArduPilot
 
                     if (ans == MAVLink.MAV_MISSION_RESULT.MAV_MISSION_NO_SPACE)
                     {
-                        throw new Exception("Upload failed, please reduce the number of wp's");
+                        throw new Exception(Strings.UploadFailedPleaseReduceTheNumberOfWpS);
                     }
                     if (ans == MAVLink.MAV_MISSION_RESULT.MAV_MISSION_INVALID)
                     {
@@ -240,7 +240,7 @@ namespace MissionPlanner.ArduPilot
                     }
                     if (ans != MAVLink.MAV_MISSION_RESULT.MAV_MISSION_ACCEPTED)
                     {
-                        throw new Exception("Upload "+ type.ToString() + " failed " + Enum.Parse(typeof(MAVLink.MAV_CMD), temp.id.ToString()) +
+                        throw new Exception(string.Format(Strings.Upload2, type.ToString()) + " failed " + Enum.Parse(typeof(MAVLink.MAV_CMD), temp.id.ToString()) +
                                             " " + Enum.Parse(typeof(MAVLink.MAV_MISSION_RESULT), ans.ToString()));
                     }
                 }

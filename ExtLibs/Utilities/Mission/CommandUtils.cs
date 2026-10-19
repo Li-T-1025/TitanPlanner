@@ -49,7 +49,7 @@ namespace MissionPlanner.Utilities.Mission
             case (ushort)MAVLink.MAV_CMD.LOITER_TO_ALT:
                 return cmd.p2 != 0 ? cmd.p2 : defaultRadius;
             default:
-                throw new ArgumentException("Command is not a loiter command");
+                throw new ArgumentException(Strings.CommandIsNotALoiterCommand);
             }
         }
 
@@ -219,7 +219,7 @@ namespace MissionPlanner.Utilities.Mission
             case (ushort)MAVLink.MAV_CMD.DO_JUMP_TAG:
                 return jumpTags.TryGetValue((int)cmd.p1, out jumpTarget);
             default:
-                throw new ArgumentException("Command is not a jump");
+                throw new ArgumentException(Strings.CommandIsNotAJump);
             }
         }
 
@@ -242,7 +242,7 @@ namespace MissionPlanner.Utilities.Mission
             }
             else
             {
-                throw new ArgumentException("Command is not a jump");
+                throw new ArgumentException(Strings.CommandIsNotAJump);
             }
         }
 
@@ -282,7 +282,7 @@ namespace MissionPlanner.Utilities.Mission
         {
             if (!IsTakeoff(node.Command.id))
             {
-                throw new ArgumentException("Command is not a takeoff");
+                throw new ArgumentException(Strings.CommandIsNotATakeoff);
             }
             var prev_node = node.IncomingEdges?.FirstOrDefault()?.FromNode;
             if (prev_node == null)

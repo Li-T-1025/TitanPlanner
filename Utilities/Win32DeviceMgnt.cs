@@ -1,4 +1,5 @@
 ﻿using log4net;
+using MissionPlanner;
 using MissionPlanner.ArduPilot;
 using System;
 using System.Collections.Generic;
@@ -416,7 +417,7 @@ public class Win32DeviceMgmt
             ref guidComPorts, 0, IntPtr.Zero, DIGCF_PRESENT | DIGCF_DEVICEINTERFACE);
         if (hDeviceInfoSet == IntPtr.Zero)
         {
-            throw new Exception("Failed to get device information set for the COM ports");
+            throw new Exception(Strings.FailedToGetDeviceInformationSetForTheCOMPorts);
         }
 
         try
@@ -585,7 +586,7 @@ public class Win32DeviceMgmt
             DICS_FLAG_GLOBAL, 0, DIREG_DEV, KEY_QUERY_VALUE);
         if (hDeviceRegistryKey == IntPtr.Zero)
         {
-            throw new Exception("Failed to open a registry key for device-specific configuration information");
+            throw new Exception(Strings.FailedToOpenARegistryKeyForDeviceSpecificConfigurationInform);
         }
 
         StringBuilder deviceNameBuf = new StringBuilder(256);
@@ -597,7 +598,7 @@ public class Win32DeviceMgmt
             if (result != 0)
             {
                 return null;
-                throw new Exception("Can not read registry value PortName for device " + deviceInfoData.ClassGuid);
+                throw new Exception(string.Format(Strings.CanNotReadRegistryValuePortNameForDevice, deviceInfoData.ClassGuid));
             }
         }
         finally
@@ -618,7 +619,7 @@ public class Win32DeviceMgmt
             out propRegDataType, descriptionBuf, length, out length);
         if (!success)
         {
-            throw new Exception("Can not read registry value PortName for device " + deviceInfoData.ClassGuid);
+            throw new Exception(string.Format(Strings.CanNotReadRegistryValuePortNameForDevice, deviceInfoData.ClassGuid));
         }
         string deviceDescription = descriptionBuf.ToString();
         return deviceDescription;

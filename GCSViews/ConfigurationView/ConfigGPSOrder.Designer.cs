@@ -30,6 +30,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigGPSOrder));
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +53,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(583, 22);
             this.label6.TabIndex = 84;
-            this.label6.Text = "UAVCAN GPS Order";
+            resources.ApplyResources(this.label6, "label6");
             // 
             // groupBox5
             // 
@@ -71,7 +72,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 13);
             this.label1.TabIndex = 82;
-            this.label1.Text = "Set the GPS order if required\r\n";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // myDataGridView1
             // 
@@ -105,37 +106,37 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // orderDataGridViewTextBoxColumn
             // 
             this.orderDataGridViewTextBoxColumn.DataPropertyName = "Order";
-            this.orderDataGridViewTextBoxColumn.HeaderText = "Order";
+            resources.ApplyResources(this.orderDataGridViewTextBoxColumn, "orderDataGridViewTextBoxColumn");
             this.orderDataGridViewTextBoxColumn.Name = "orderDataGridViewTextBoxColumn";
             this.orderDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nodeIDDataGridViewTextBoxColumn
             // 
             this.nodeIDDataGridViewTextBoxColumn.DataPropertyName = "NodeID";
-            this.nodeIDDataGridViewTextBoxColumn.HeaderText = "NodeID";
+            resources.ApplyResources(this.nodeIDDataGridViewTextBoxColumn, "nodeIDDataGridViewTextBoxColumn");
             this.nodeIDDataGridViewTextBoxColumn.Name = "nodeIDDataGridViewTextBoxColumn";
             this.nodeIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            resources.ApplyResources(this.nameDataGridViewTextBoxColumn, "nameDataGridViewTextBoxColumn");
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // GPS1
             // 
-            this.GPS1.HeaderText = "GPS1";
+            resources.ApplyResources(this.GPS1, "GPS1");
             this.GPS1.Name = "GPS1";
             this.GPS1.ReadOnly = true;
-            this.GPS1.Text = "Override 1";
+            resources.ApplyResources(this.GPS1, "GPS1");
             // 
             // GPS2
             // 
-            this.GPS2.HeaderText = "GPS2";
+            resources.ApplyResources(this.GPS2, "GPS2");
             this.GPS2.Name = "GPS2";
             this.GPS2.ReadOnly = true;
-            this.GPS2.Text = "Override 2";
+            resources.ApplyResources(this.GPS2, "GPS2");
             // 
             // ConfigGPSOrder
             // 

@@ -196,7 +196,7 @@ namespace MissionPlanner.Controls
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = Strings.Label1;
             // 
             // panel1
             // 
@@ -218,7 +218,7 @@ namespace MissionPlanner.Controls
             this.myLabel1.resize = false;
             this.myLabel1.Size = new System.Drawing.Size(337, 23);
             this.myLabel1.TabIndex = 3;
-            this.myLabel1.Text = "myLabel1";
+            this.myLabel1.Text = Strings.MyLabel1;
             // 
             // MavlinkCheckBoxBitMask
             // 

@@ -285,7 +285,7 @@ namespace MissionPlanner.Utilities
 
         public override void Write(byte[] buffer, int offset, int count)
         {
-            throw new NotSupportedException("No write");
+            throw new NotSupportedException(Strings.NoWrite);
         }
 
         public override bool CanRead { get; } = true;

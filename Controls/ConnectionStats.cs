@@ -167,11 +167,11 @@ namespace MissionPlanner.Controls
             myPane.CurveList.Clear();
 
             // Set titles
-            myPane.Title.Text = "Link Bandwidth";
+            myPane.Title.Text = Strings.LinkBandwidth;
             myPane.Title.FontSpec.Size = 10;
-            myPane.XAxis.Title.Text = "Time (s)";
+            myPane.XAxis.Title.Text = Strings.TimeS;
             myPane.XAxis.Title.FontSpec.Size = 9;
-            myPane.YAxis.Title.Text = "Bytes/s";
+            myPane.YAxis.Title.Text = Strings.BytesS;
             myPane.YAxis.Title.FontSpec.Size = 9;
 
             // Configure margins for compact display

@@ -27,14 +27,14 @@ namespace MissionPlanner.Controls
         public void setStatusOK()
         {
             LED_ODID_Status.Color = Color.Green;
-            LBL_ODID_OK.Text = "Remote ID OK";
-            LBL_ODID_reason.Text = "DBL CLK -> Emergency";
+            LBL_ODID_OK.Text = Strings.RemoteIDOK;
+            LBL_ODID_reason.Text = Strings.DBLCLKEmergency;
         }
 
         public void setStatusAlert(string alertReason)
         {
             LED_ODID_Status.Color = Color.Red;
-            LBL_ODID_OK.Text = "Remote ID Fail";
+            LBL_ODID_OK.Text = Strings.RemoteIDFail;
             LBL_ODID_reason.Text = alertReason;
         }
 
@@ -42,13 +42,13 @@ namespace MissionPlanner.Controls
         {
             LED_ODID_Status.Color = Color.Red;
             //LED_ODID_Status.Blink(200); 
-            LBL_ODID_OK.Text = "RID Emergency";
+            LBL_ODID_OK.Text = Strings.RIDEmergency;
             LBL_ODID_reason.Text = alertReason;
         }
 
         private void OpenDroneID_Map_Status_DoubleClick(object sender, EventArgs e)
         {
-            if (CustomMessageBox.Show("Are you sure you want to declare Remote ID Emergency?", "RID Emergency?", CustomMessageBox.MessageBoxButtons.YesNo) == CustomMessageBox.DialogResult.Yes)
+            if (CustomMessageBox.Show(Strings.SureWantDeclareRemoteIDEmergency, Strings.SureWantDeclareRemoteIDEmergencyTitle, CustomMessageBox.MessageBoxButtons.YesNo) == CustomMessageBox.DialogResult.Yes)
             {
                 try
                 {

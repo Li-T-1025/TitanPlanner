@@ -183,8 +183,8 @@ namespace MissionPlanner.Controls.PreFlight
             if (addButtonClick == true)
             {
                 //set the text for the textboxes accordingly.
-                wrnctl.TXT_desc.Text = "add description";
-                wrnctl.TXT_text.Text = "add value";
+                wrnctl.TXT_desc.Text = Strings.AddDescription;
+                wrnctl.TXT_text.Text = Strings.AddValue;
                 //Set the item's child to null if the Add button has been clicked
                 item.Child = null;
             }

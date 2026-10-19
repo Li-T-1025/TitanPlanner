@@ -61,6 +61,7 @@
       <Private>false</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\ExtLibs\LEDBulb\Bulb\Bulb.csproj" />
+    <ProjectReference Include="..\..\ExtLibs\Strings\MissionPlanner.Strings.csproj" />
     <ProjectReference Include="..\..\ExtLibs\Maps\MissionPlanner.Maps.csproj">
       <Aliases></Aliases>
       <Private>false</Private>

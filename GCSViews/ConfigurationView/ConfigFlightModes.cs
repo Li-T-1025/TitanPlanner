@@ -369,7 +369,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                         break;
                 }
 
-                LBL_flightmodepwm.Text = "PWM: " + pwm;
+                LBL_flightmodepwm.Text = Strings.PWM + " " + pwm;
             }
 
             Control[] fmodelist = { CMB_fmode1, CMB_fmode2, CMB_fmode3, CMB_fmode4, CMB_fmode5, CMB_fmode6 };
@@ -456,7 +456,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 CustomMessageBox.Show(Strings.ErrorSettingParameter, Strings.ERROR);
             }
-            BUT_SaveModes.Text = "Complete";
+            BUT_SaveModes.Text = Strings.Complete;
         }
 
         private void updateDropDown(ComboBox ctl, string param)

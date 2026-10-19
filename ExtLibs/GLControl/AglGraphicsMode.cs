@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using OpenTK.Graphics;
+using MissionPlanner;
 
 namespace OpenTK.Platform.MacOS
 {
@@ -46,7 +47,7 @@ namespace OpenTK.Platform.MacOS
                         ref color, ref depth, ref stencil, ref samples, ref accum,
                         ref buffers, ref stereo))
                     {
-                        throw new GraphicsModeException("Requested GraphicsMode not available, error: " + Agl.GetError());
+                        throw new GraphicsModeException(string.Format(Strings.RequestedGraphicsModeNotAvailableError, Agl.GetError()));
                     }
                 }
             }

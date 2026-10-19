@@ -97,7 +97,7 @@ namespace MissionPlanner.Utilities
             if (obj is minifloat)
                 return this._value.CompareTo(otherobj._value);
             else
-                throw new ArgumentException("Object is not a quarter");
+                throw new ArgumentException(Strings.ObjectIsNotAQuarter);
         }
 
         public TypeCode GetTypeCode()

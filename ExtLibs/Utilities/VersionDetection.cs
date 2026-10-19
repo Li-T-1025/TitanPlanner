@@ -54,7 +54,7 @@ namespace MissionPlanner.Utilities
                 return version;
             }
 
-            throw new Exception("Bad Version");
+            throw new Exception(Strings.BadVersion);
         }
     }
 }
