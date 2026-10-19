@@ -120,4 +120,22 @@
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+<data name="but_bootloader.Text" xml:space="preserve">
+    <value>BootLoader</value>
+</data>
+<data name="but_firmware.Text" xml:space="preserve">
+    <value>Firmware</value>
+</data>
+<data name="but_privkey.Text" xml:space="preserve">
+    <value>Private Key</value>
+</data>
+<data name="groupBox4.Text" xml:space="preserve">
+    <value>Files</value>
+</data>
+<data name="but_generatekey.Text" xml:space="preserve">
+    <value>Generate Key</value>
+</data>
+<data name="groupBox5.Text" xml:space="preserve">
+    <value>Do Only Once</value>
+</data>
 </root>

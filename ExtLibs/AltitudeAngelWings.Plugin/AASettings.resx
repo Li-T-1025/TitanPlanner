@@ -117,4 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="lst_FlightTelemetry.Items" xml:space="preserve">
+    <value>Do not send flight telemetry</value>
+</data>
+<data name="lst_FlightTelemetry.Items1" xml:space="preserve">
+    <value>Use Telemetry (UDP)</value>
+</data>
+<data name="lst_FlightTelemetry.Items2" xml:space="preserve">
+    <value>Use Surveillance (HTTPS)</value>
+</data>
+<data name="chk_FlightsEnable.Text" xml:space="preserve">
+    <value>Enable Flights</value>
+</data>
+<data name="lbl_OverrideClientSuffix.Text" xml:space="preserve">
+    <value>URL Domain Suffix</value>
+</data>
+<data name="lbl_OverrideClientSecret.Text" xml:space="preserve">
+    <value>Client Secret</value>
+</data>
+<data name="lbl_OverrideClientId.Text" xml:space="preserve">
+    <value>Client ID</value>
+</data>
+<data name="chk_FlightPlansEnable.Text" xml:space="preserve">
+    <value>Enable Flight Plans</value>
+</data>
+<data name="lbl_AltitudeDisplay.Text" xml:space="preserve">
+    <value>altitude</value>
+</data>
+<data name="lbl_AltitudeFilter.Text" xml:space="preserve">
+    <value>Show Below</value>
+</data>
+<data name="lbl_OpacityAdjust.Text" xml:space="preserve">
+    <value>Opacity Adjust</value>
+</data>
+<data name="tabPageFlight.Text" xml:space="preserve">
+    <value>Flight Plans</value>
+</data>
+<data name="lbl_FlightPlanDescription.Text" xml:space="preserve">
+    <value>Flight Plan Description</value>
+</data>
+<data name="lbl_FlightPlanDuration.Text" xml:space="preserve">
+    <value>Flight Plan Duration (minutes)</value>
+</data>
+<data name="lbl_ContactPhoneNumber.Text" xml:space="preserve">
+    <value>Contact Phone Number</value>
+</data>
+<data name="lbl_FlightPlanName.Text" xml:space="preserve">
+    <value>Flight Plan Name</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>Altitude Angel Settings</value>
+</data>
 </root>

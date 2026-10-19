@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="groupScreenOptions.Text" xml:space="preserve">
+    <value>Screen Options</value>
+</data>
+<data name="groupOptions.Text" xml:space="preserve">
+    <value>Item Options</value>
+</data>
+<data name="grEditorOptions.Text" xml:space="preserve">
+    <value>Editor Options</value>
+</data>
+<data name="cbUseNameCaptions.Text" xml:space="preserve">
+    <value>Show Names</value>
+</data>
+<data name="btnClearAll.Text" xml:space="preserve">
+    <value>Clear All</value>
+</data>
+<data name="btnPaste.Text" xml:space="preserve">
+    <value>Paste Layout</value>
+</data>
+<data name="btnCopy.Text" xml:space="preserve">
+    <value>Copy Layout</value>
+</data>
+<data name="cbReducedView.Text" xml:space="preserve">
+    <value>Decrease</value>
+</data>
+<data name="cbHighDefView.Text" xml:space="preserve">
+    <value>HD Layout</value>
+</data>
 </root>

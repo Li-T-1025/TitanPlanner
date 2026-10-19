@@ -120,4 +120,37 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+<data name="groupBoxservo.Text" xml:space="preserve">
+    <value>Servo Setup</value>
+</data>
+<data name="label6.Text" xml:space="preserve">
+    <value>Reversed</value>
+</data>
+<data name="label5.Text" xml:space="preserve">
+    <value>Trim</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>Max</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>Min</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>Servo</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Function</value>
+</data>
+<data name="groupBoxswash.Text" xml:space="preserve">
+    <value>Swashplate Setup</value>
+</data>
+<data name="groupBoxthrot.Text" xml:space="preserve">
+    <value>Throttle Settings</value>
+</data>
+<data name="groupBoxgover.Text" xml:space="preserve">
+    <value>Governor Settings</value>
+</data>
+<data name="groupBoxmisc.Text" xml:space="preserve">
+    <value>Misc Settings</value>
+</data>
 </root>

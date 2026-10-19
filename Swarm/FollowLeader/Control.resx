@@ -117,4 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="but_arm.Text" xml:space="preserve">
+    <value>Arm</value>
+</data>
+<data name="but_takeoff.Text" xml:space="preserve">
+    <value>TakeOff</value>
+</data>
+<data name="but_auto.Text" xml:space="preserve">
+    <value>Auto</value>
+</data>
+<data name="but_master.Text" xml:space="preserve">
+    <value>Set Ground Master</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>Seperation</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Lead</value>
+</data>
+<data name="but_start.Text" xml:space="preserve">
+    <value>Start</value>
+</data>
+<data name="but_guided.Text" xml:space="preserve">
+    <value>Guided</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>Altitude</value>
+</data>
+<data name="but_navguided.Text" xml:space="preserve">
+    <value>NAV Guided</value>
+</data>
+<data name="but_airmaster.Text" xml:space="preserve">
+    <value>Set Air Master</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>Control</value>
+</data>
 </root>

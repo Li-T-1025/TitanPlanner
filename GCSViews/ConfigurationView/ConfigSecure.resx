@@ -120,4 +120,37 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+<data name="label1.Text" xml:space="preserve">
+    <value>CubeOrange Only - DO NOT USE  UNLESS YOU UNDERSTAND THE CONSEQUENCE</value>
+</data>
+<data name="groupBox1.Text" xml:space="preserve">
+    <value>Always</value>
+</data>
+<data name="groupBox2.Text" xml:space="preserve">
+    <value>One Time</value>
+</data>
+<data name="groupBox3.Text" xml:space="preserve">
+    <value>Firmware</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>Device SN</value>
+</data>
+<data name="but_firmware.Text" xml:space="preserve">
+    <value>Get Firmware</value>
+</data>
+<data name="but_dfu.Text" xml:space="preserve">
+    <value>Enter DFU Mode</value>
+</data>
+<data name="but_bootloader.Text" xml:space="preserve">
+    <value>Get Bootloader</value>
+</data>
+<data name="but_login.Text" xml:space="preserve">
+    <value>Login</value>
+</data>
+<data name="but_getsn.Text" xml:space="preserve">
+    <value>Enter Bootloader Mode</value>
+</data>
+<data name="label5.Text" xml:space="preserve">
+    <value>Fw SHA</value>
+</data>
 </root>

@@ -117,4 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="but_upfw.Text" xml:space="preserve">
+    <value>Upload Firmware</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>To use this feature&#xD;&#xA;Please enable serial passthough to the port the CubeID is connected to.&#xD;&#xA;Set param SERIAL_PASSTIMO to 0&#xD;&#xA;Set param SERIAL_PASS2 to the telem port&#xD;&#xA;</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>SERIAL_PASS2 </value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>SERIAL_PASSTIMO</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>Select the ODID device from the dropdown in the top right corner&#xD;&#xA;then click the Update Firmware button</value>
+</data>
+<data name="CHK_forcebaud.Text" xml:space="preserve">
+    <value>Force 57600 baud</value>
+</data>
+<data name="but_customfw.Text" xml:space="preserve">
+    <value>Upload Custom Firmware</value>
+</data>
 </root>

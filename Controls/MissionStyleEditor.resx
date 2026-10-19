@@ -117,4 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="previewButton.Text" xml:space="preserve">
+    <value>Preview</value>
+</data>
+<data name="styleLabel.Text" xml:space="preserve">
+    <value>Style: </value>
+</data>
+<data name="saveAsButton.Text" xml:space="preserve">
+    <value>Save As</value>
+</data>
+<data name="saveButton.Text" xml:space="preserve">
+    <value>Save</value>
+</data>
+<data name="markerRuleTab.Text" xml:space="preserve">
+    <value>Markers</value>
+</data>
+<data name="segmentRuleTab.Text" xml:space="preserve">
+    <value>Segments</value>
+</data>
+<data name="ruleAddButton.Text" xml:space="preserve">
+    <value>Add</value>
+</data>
+<data name="ruleDuplicateButton.Text" xml:space="preserve">
+    <value>Duplicate</value>
+</data>
+<data name="ruleDeleteButton.Text" xml:space="preserve">
+    <value>Delete</value>
+</data>
+<data name="okButton.Text" xml:space="preserve">
+    <value>OK</value>
+</data>
+<data name="cancelButton.Text" xml:space="preserve">
+    <value>Cancel</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>Mission Style Editor</value>
+</data>
 </root>

@@ -117,4 +117,82 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="grpCommand.Text" xml:space="preserve">
+    <value>Control</value>
+</data>
+<data name="btnDoAction.Text" xml:space="preserve">
+    <value>Do Action</value>
+</data>
+<data name="btnSetWP.Text" xml:space="preserve">
+    <value>Set WP</value>
+</data>
+<data name="btnSetMode.Text" xml:space="preserve">
+    <value>Apply</value>
+</data>
+<data name="btnSetMount.Text" xml:space="preserve">
+    <value>Set Mount</value>
+</data>
+<data name="btnRestartMission.Text" xml:space="preserve">
+    <value>Restart Mission</value>
+</data>
+<data name="btnResumeMission.Text" xml:space="preserve">
+    <value>Resume Mission</value>
+</data>
+<data name="grpSetpoints.Text" xml:space="preserve">
+    <value>Setpoints</value>
+</data>
+<data name="lblHomeAlt.Text" xml:space="preserve">
+    <value>Home Alt (m):</value>
+</data>
+<data name="btnHomeAlt.Text" xml:space="preserve">
+    <value>Set Home Alt</value>
+</data>
+<data name="lblSpeed.Text" xml:space="preserve">
+    <value>Speed (m/s):</value>
+</data>
+<data name="lblAlt.Text" xml:space="preserve">
+    <value>Altitude (m):</value>
+</data>
+<data name="lblLoiterRad.Text" xml:space="preserve">
+    <value>Loiter Rad (m):</value>
+</data>
+<data name="grpTools.Text" xml:space="preserve">
+    <value>Tools</value>
+</data>
+<data name="btnRawSensor.Text" xml:space="preserve">
+    <value>Raw Sensor</value>
+</data>
+<data name="btnJoystick.Text" xml:space="preserve">
+    <value>Joystick</value>
+</data>
+<data name="btnMessage.Text" xml:space="preserve">
+    <value>Message</value>
+</data>
+<data name="btnClearTrack.Text" xml:space="preserve">
+    <value>Clear Track</value>
+</data>
+<data name="btnReboot.Text" xml:space="preserve">
+    <value>Reboot</value>
+</data>
+<data name="btnAbortLanding.Text" xml:space="preserve">
+    <value>Abort Land</value>
+</data>
+<data name="grpPayload.Text" xml:space="preserve">
+    <value>Payload</value>
+</data>
+<data name="groupBoxPitch.Text" xml:space="preserve">
+    <value>Tilt</value>
+</data>
+<data name="groupBoxYaw.Text" xml:space="preserve">
+    <value>Pan</value>
+</data>
+<data name="groupBoxRoll.Text" xml:space="preserve">
+    <value>Roll</value>
+</data>
+<data name="btnResetGimbal.Text" xml:space="preserve">
+    <value>Reset Position</value>
+</data>
+<data name="btnGimbalVideo.Text" xml:space="preserve">
+    <value>Video Control</value>
+</data>
 </root>

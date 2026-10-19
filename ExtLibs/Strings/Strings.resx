@@ -693,4 +693,3010 @@ On ArduPlane, zero altitudes may interpreted in two different ways: actual zero 
 
 ONLY SET TO ZERO IF YOU REALLY UNDERSTAND EXACTLY WHAT IS GOING TO HAPPEN IN YOUR CASE (use a simulator to be sure).[link;https://ardupilot.org/plane/docs/common-mavlink-mission-command-messages-mav_cmd.html;Command Documentation]</value>
   </data>
+  <data name="AbsoluteAltSelectedSure" xml:space="preserve">
+    <value>Absolute Alt is selected are you sure?</value>
+  </data>
+  <data name="AbsoluteAltSelectedSureTitle" xml:space="preserve">
+    <value>Alt Mode</value>
+  </data>
+  <data name="AddDescription" xml:space="preserve">
+    <value>add description</value>
+  </data>
+  <data name="AddStep" xml:space="preserve">
+    <value>Add Step</value>
+  </data>
+  <data name="AddValue" xml:space="preserve">
+    <value>add value</value>
+  </data>
+  <data name="AlsoDeleteCachedTilesDisk" xml:space="preserve">
+    <value>Also delete the {0:N0} cached tiles ({1}) from disk?</value>
+  </data>
+  <data name="Altitude" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="AltZ" xml:space="preserve">
+    <value>Alt/Z:</value>
+  </data>
+  <data name="Amplitude" xml:space="preserve">
+    <value>Amplitude</value>
+  </data>
+  <data name="Amps" xml:space="preserve">
+    <value>Amps</value>
+  </data>
+  <data name="AnonymizationCompleteOutputLatOffsetLon" xml:space="preserve">
+    <value>Anonymization complete.
+
+Output: {outputPath}
+
+Lat offset: {offsetLat:+0.000000;-0.000000}�
+Lon offset: {offsetLon:+0.000000;-0.000000}�</value>
+  </data>
+  <data name="AnonymizationCompleteOutputLatOffsetLonTitle" xml:space="preserve">
+    <value>Anonymize Bin Log</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Area:</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="AutoDetect" xml:space="preserve">
+    <value>Auto Detect</value>
+  </data>
+  <data name="AutomaticConfigurationSeptentrioReceiverFailed" xml:space="preserve">
+    <value>Automatic configuration of Septentrio receiver failed.</value>
+  </data>
+  <data name="AutomaticConfigurationUnicoreReceiverFailed" xml:space="preserve">
+    <value>Automatic configuration of Unicore receiver failed.</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Not Available</value>
+  </data>
+  <data name="Available1" xml:space="preserve">
+    <value>Not Available on</value>
+  </data>
+  <data name="AvailableTitle" xml:space="preserve">
+    <value>Unfortunately the windows store version of this app does not support uploading.</value>
+  </data>
+  <data name="Bad" xml:space="preserve">
+    <value>Bad</value>
+  </data>
+  <data name="BadAlt" xml:space="preserve">
+    <value>Bad Alt</value>
+  </data>
+  <data name="BadAltStep" xml:space="preserve">
+    <value>Bad alt step</value>
+  </data>
+  <data name="BadChannel1InputCanceling" xml:space="preserve">
+    <value>Bad channel 1 input, canceling</value>
+  </data>
+  <data name="BadDefaultSystemAssociation" xml:space="preserve">
+    <value>Bad default system association</value>
+  </data>
+  <data name="BadDirectionValue" xml:space="preserve">
+    <value>Bad Direction value</value>
+  </data>
+  <data name="BadGrid" xml:space="preserve">
+    <value>Bad Grid</value>
+  </data>
+  <data name="BadInputFile" xml:space="preserve">
+    <value>Bad input file</value>
+  </data>
+  <data name="BadInputOptionsPleaseTryAgain" xml:space="preserve">
+    <value>Bad input options, please try again</value>
+  </data>
+  <data name="BadLatLong" xml:space="preserve">
+    <value>Bad Lat/Long</value>
+  </data>
+  <data name="BadMaxalt" xml:space="preserve">
+    <value>Bad maxalt</value>
+  </data>
+  <data name="BadMaxPWM" xml:space="preserve">
+    <value>Bad Max PWM</value>
+  </data>
+  <data name="BadMinAlt" xml:space="preserve">
+    <value>Bad min alt</value>
+  </data>
+  <data name="BadMinAlt1" xml:space="preserve">
+    <value>Bad Min Alt</value>
+  </data>
+  <data name="BadMinPWM" xml:space="preserve">
+    <value>Bad Min PWM</value>
+  </data>
+  <data name="BadOffset" xml:space="preserve">
+    <value>Bad Offset</value>
+  </data>
+  <data name="BadPacketName" xml:space="preserve">
+    <value>Bad PacketName</value>
+  </data>
+  <data name="BadPassword" xml:space="preserve">
+    <value>Bad Password</value>
+  </data>
+  <data name="BadPasswordTitle" xml:space="preserve">
+    <value>Bad Password</value>
+  </data>
+  <data name="BadPointValue" xml:space="preserve">
+    <value>Bad Point value</value>
+  </data>
+  <data name="BadRadius" xml:space="preserve">
+    <value>Bad Radius</value>
+  </data>
+  <data name="BadStartAngleValue" xml:space="preserve">
+    <value>Bad start angle value</value>
+  </data>
+  <data name="BadTakeoffPitch" xml:space="preserve">
+    <value>Bad Takeoff pitch</value>
+  </data>
+  <data name="BaseHeading" xml:space="preserve">
+    <value>BaseHeading:</value>
+  </data>
+  <data name="BasePos" xml:space="preserve">
+    <value>BasePos:</value>
+  </data>
+  <data name="BaseVel" xml:space="preserve">
+    <value>BaseVel:</value>
+  </data>
+  <data name="BatteryCellCountMustLeast1" xml:space="preserve">
+    <value>Battery cell count must be at least 1.</value>
+  </data>
+  <data name="BaudRate" xml:space="preserve">
+    <value>Baud Rate:</value>
+  </data>
+  <data name="BetaPleaseConfirmOutputFile" xml:space="preserve">
+    <value>This is beta, please confirm the output file</value>
+  </data>
+  <data name="BetaSet" xml:space="preserve">
+    <value>Beta set to</value>
+  </data>
+  <data name="BetaUseOwnRisk" xml:space="preserve">
+    <value>this is beta, use at own risk</value>
+  </data>
+  <data name="BoardNowRebootingRequiredReconnectAutopilot" xml:space="preserve">
+    <value>Your board is now rebooting, You will be required to reconnect to the autopilot.</value>
+  </data>
+  <data name="But" xml:space="preserve">
+    <value>But</value>
+  </data>
+  <data name="BytesS" xml:space="preserve">
+    <value>Bytes/s</value>
+  </data>
+  <data name="CameraFail" xml:space="preserve">
+    <value>Camera Fail:</value>
+  </data>
+  <data name="CanAddVideoSource" xml:space="preserve">
+    <value>Can not add video source</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="Cancelling" xml:space="preserve">
+    <value>Cancelling...</value>
+  </data>
+  <data name="CanEstablishConnection" xml:space="preserve">
+    <value>Can not establish a connection
+
+{ex.Message}</value>
+  </data>
+  <data name="CanMoveLeader" xml:space="preserve">
+    <value>Can not move Leader</value>
+  </data>
+  <data name="CannotOverwriteDefaultWoodleyLocation" xml:space="preserve">
+    <value>Cannot overwrite the default Woodley location.</value>
+  </data>
+  <data name="CannotRemoveDefaultWoodleyLocation" xml:space="preserve">
+    <value>Cannot remove the default Woodley location.</value>
+  </data>
+  <data name="CannotRemoveDefaultWoodleyLocationTitle" xml:space="preserve">
+    <value>Cannot Remove</value>
+  </data>
+  <data name="CanOpenUrlHttpsFirmwareArdupilot" xml:space="preserve">
+    <value>Can not open url https://firmware.ardupilot.org/</value>
+  </data>
+  <data name="CanTCreateDirectory" xml:space="preserve">
+    <value>Can't create directory:</value>
+  </data>
+  <data name="CanTOpenFile" xml:space="preserve">
+    <value>Can't open file!</value>
+  </data>
+  <data name="CDATATableTrTdRoll" xml:space="preserve">
+    <value>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll:</value>
+  </data>
+  <data name="Change47" xml:space="preserve">
+    <value>Change in 4.7:</value>
+  </data>
+  <data name="ChangesBuiltPresetMustSavedAs" xml:space="preserve">
+    <value>Changes to the built-in preset must be saved as a new profile.</value>
+  </data>
+  <data name="ChangesBuiltPresetMustSavedAsTitle" xml:space="preserve">
+    <value>Save Required</value>
+  </data>
+  <data name="ClearCurrentWaypoints" xml:space="preserve">
+    <value>Clear current waypoints?</value>
+  </data>
+  <data name="ClearExistingPointsContinue" xml:space="preserve">
+    <value>This will clear your existing points, Continue?</value>
+  </data>
+  <data name="ClearExistingPointsContinueTitle" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ClickMapSetHome" xml:space="preserve">
+    <value>Click on the Map to set Home</value>
+  </data>
+  <data name="Cn" xml:space="preserve">
+    <value>亲爱的中国用户，为保证地图使用正常，已为您将默认地图自动切换到具有中国特色的【谷歌中国卫星地图】！
+与默认【谷歌卫星地图】的区别：使用.cn服务器，加入火星坐标修正
+如果您所在的地区仍然无法使用，天书同时推荐必应或高德地图，其它地图由于没有加入坐标修正功能，为确保飞行安全，请谨慎选择</value>
+  </data>
+  <data name="CnTitle" xml:space="preserve">
+    <value>默认地图已被切换</value>
+  </data>
+  <data name="CollectiveControl" xml:space="preserve">
+    <value>Collective Control</value>
+  </data>
+  <data name="CollectiveInput" xml:space="preserve">
+    <value>Collective Input (%)</value>
+  </data>
+  <data name="CollectiveOutput" xml:space="preserve">
+    <value>Collective Output</value>
+  </data>
+  <data name="CommandDeniedAutopilot" xml:space="preserve">
+    <value>Command was denied by the autopilot</value>
+  </data>
+  <data name="CompassConfigurationChangedPleaseReviewMissing" xml:space="preserve">
+    <value>Your compass configuration has changed, please review the missing compass</value>
+  </data>
+  <data name="CompassMotorCalibration" xml:space="preserve">
+    <value>Compass Motor Calibration</value>
+  </data>
+  <data name="CompassmotRequiresAC32" xml:space="preserve">
+    <value>Compassmot requires AC 3.2+</value>
+  </data>
+  <data name="CompileFailed" xml:space="preserve">
+    <value>Compile Failed</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>Complete</value>
+  </data>
+  <data name="COMPort" xml:space="preserve">
+    <value>COM Port:</value>
+  </data>
+  <data name="ComportOpenFailed" xml:space="preserve">
+    <value>Comport open failed</value>
+  </data>
+  <data name="ConfigurationFixedPositionSeptentrioReceiverFailed" xml:space="preserve">
+    <value>Configuration of fixed position on Septentrio receiver failed.</value>
+  </data>
+  <data name="ConfigurationNameCanOnlyContainLetters" xml:space="preserve">
+    <value>Configuration name can only contain letters (A-Z), numbers (0-9), and underscores.</value>
+  </data>
+  <data name="ConfigurationRTCMIntervalSeptentrioReceiverFailed" xml:space="preserve">
+    <value>Configuration of RTCM interval on Septentrio receiver failed.</value>
+  </data>
+  <data name="ConfigurationSavedAs" xml:space="preserve">
+    <value>Configuration saved as '{newName}'.</value>
+  </data>
+  <data name="Connected" xml:space="preserve">
+    <value>Connected to</value>
+  </data>
+  <data name="Connected1" xml:space="preserve">
+    <value>You are not connected</value>
+  </data>
+  <data name="Connected2" xml:space="preserve">
+    <value>Your are not connected</value>
+  </data>
+  <data name="ConnectedNoFix" xml:space="preserve">
+    <value>Connected, No Fix</value>
+  </data>
+  <data name="Connecting" xml:space="preserve">
+    <value>Connecting</value>
+  </data>
+  <data name="Connecting1" xml:space="preserve">
+    <value>Connecting to</value>
+  </data>
+  <data name="ConnectTransponder" xml:space="preserve">
+    <value>Connect To Transponder</value>
+  </data>
+  <data name="CorruptedPacketPleasePowerCycleTry" xml:space="preserve">
+    <value>Corrupted packet. Please power cycle and try again.</value>
+  </data>
+  <data name="CouldFindLocationReason" xml:space="preserve">
+    <value>Could not find location: '{place}'
+Reason: {status}</value>
+  </data>
+  <data name="CouldFindLocationReasonTitle" xml:space="preserve">
+    <value>Location Not Found</value>
+  </data>
+  <data name="CouldnTCommunicateModemTryPower" xml:space="preserve">
+    <value>Couldn't communicate with modem.  Try power-cycling modem.</value>
+  </data>
+  <data name="CouldOpenFolder" xml:space="preserve">
+    <value>Could not open the folder.</value>
+  </data>
+  <data name="CouldSendReportTypicallyDueLack" xml:space="preserve">
+    <value>Could not send report! Typically due to lack of internet connection.</value>
+  </data>
+  <data name="Counting" xml:space="preserve">
+    <value>counting…</value>
+  </data>
+  <data name="CurrentAcc" xml:space="preserve">
+    <value>Current Acc:</value>
+  </data>
+  <data name="CurrentlyConnectedViaMavlinkPleaseMake" xml:space="preserve">
+    <value>You are not currently connected via mavlink. Please make sure the device is already in slcan mode or this is the slcan serialport.</value>
+  </data>
+  <data name="CurrentlyConnectedViaMavlinkPleaseMakeTitle" xml:space="preserve">
+    <value>SLCAN</value>
+  </data>
+  <data name="CurrPin" xml:space="preserve">
+    <value>Curr Pin:</value>
+  </data>
+  <data name="CustomizeTabs" xml:space="preserve">
+    <value>Customize Tabs</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DBLCLKEmergency" xml:space="preserve">
+    <value>DBL CLK -&gt; Emergency</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="DefaultAltValid" xml:space="preserve">
+    <value>Your default alt is not valid</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Detect" xml:space="preserve">
+    <value>Detect</value>
+  </data>
+  <data name="DirectoryExist" xml:space="preserve">
+    <value>{0} Directory does not exist!</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="Disconnected" xml:space="preserve">
+    <value>Disconnected</value>
+  </data>
+  <data name="Disconnected1" xml:space="preserve">
+    <value>Disconnected!</value>
+  </data>
+  <data name="DisplayExternal" xml:space="preserve">
+    <value>Display External</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="Distance1" xml:space="preserve">
+    <value>Distance (</value>
+  </data>
+  <data name="Distance2" xml:space="preserve">
+    <value>Distance:</value>
+  </data>
+  <data name="DoingCommand" xml:space="preserve">
+    <value>Doing Command</value>
+  </data>
+  <data name="DoingCommandATI5" xml:space="preserve">
+    <value>Doing Command ATI5</value>
+  </data>
+  <data name="DoingCommandATIF" xml:space="preserve">
+    <value>Doing Command ATI &amp; AT&amp;F</value>
+  </data>
+  <data name="DoingCommandATIRTI" xml:space="preserve">
+    <value>Doing Command ATI &amp; RTI</value>
+  </data>
+  <data name="DoingCommandRTI5" xml:space="preserve">
+    <value>Doing Command RTI5</value>
+  </data>
+  <data name="DoingCommandRTIF" xml:space="preserve">
+    <value>Doing Command RTI &amp; AT&amp;F</value>
+  </data>
+  <data name="DONATE" xml:space="preserve">
+    <value>DONATE</value>
+  </data>
+  <data name="Done1" xml:space="preserve">
+    <value>Done.</value>
+  </data>
+  <data name="DoneMAVACTIONSTORAGEWRITE" xml:space="preserve">
+    <value>Done MAV_ACTION_STORAGE_WRITE</value>
+  </data>
+  <data name="DoneSomeSettingsModemWereInvalid" xml:space="preserve">
+    <value>Done.  Some settings in modem were invalid.</value>
+  </data>
+  <data name="DowdingInvalidSettings" xml:space="preserve">
+    <value>Dowding invalid settings</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="DroneID" xml:space="preserve">
+    <value>Drone ID</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration:</value>
+  </data>
+  <data name="Elevation" xml:space="preserve">
+    <value>Elevation (</value>
+  </data>
+  <data name="ElevationAboveGround" xml:space="preserve">
+    <value>Elevation above ground</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="EncryptionKeyValidHexNumber" xml:space="preserve">
+    <value>Encryption key not valid hex number &lt;=</value>
+  </data>
+  <data name="EnsureAllSticksCenteredThrottleDown" xml:space="preserve">
+    <value>Ensure all your sticks are centered and throttle is down, and click ok to continue</value>
+  </data>
+  <data name="EQ" xml:space="preserve">
+    <value>EQ</value>
+  </data>
+  <data name="ErrorBeenOccuredWhenTryingDelete" xml:space="preserve">
+    <value>Error has been occured when trying to delete {0}
+{1}</value>
+  </data>
+  <data name="ErrorConfiguring" xml:space="preserve">
+    <value>Error configuring</value>
+  </data>
+  <data name="ErrorConnecting1" xml:space="preserve">
+    <value>Error Connecting to</value>
+  </data>
+  <data name="ErrorConnectingIfUsingCom0comPlease" xml:space="preserve">
+    <value>Error Connecting
+if using com0com please rename the ports to COM??</value>
+  </data>
+  <data name="ErrorConvertingFile" xml:space="preserve">
+    <value>Error converting file</value>
+  </data>
+  <data name="ErrorCopyingFile" xml:space="preserve">
+    <value>Error copying file</value>
+  </data>
+  <data name="ErrorCreatingFileSaveBaseData" xml:space="preserve">
+    <value>Error creating file to save base data into</value>
+  </data>
+  <data name="ErrorDuringRead" xml:space="preserve">
+    <value>Error during read</value>
+  </data>
+  <data name="ErrorExtractingParams" xml:space="preserve">
+    <value>Error Extracting params</value>
+  </data>
+  <data name="ErrorGetingJoystickListDirectxRedist" xml:space="preserve">
+    <value>Error geting joystick list: do you have the directx redist installed?</value>
+  </data>
+  <data name="ErrorGettingGEData" xml:space="preserve">
+    <value>Error getting GE data</value>
+  </data>
+  <data name="ErrorGettingParamList" xml:space="preserve">
+    <value>Error: getting param list</value>
+  </data>
+  <data name="ErrorLoadingSTL" xml:space="preserve">
+    <value>Error loading STL:</value>
+  </data>
+  <data name="ErrorOccurred" xml:space="preserve">
+    <value>An error has occurred</value>
+  </data>
+  <data name="ErrorOpeningComport" xml:space="preserve">
+    <value>Error opening comport</value>
+  </data>
+  <data name="ErrorOpeningFile" xml:space="preserve">
+    <value>Error opening File</value>
+  </data>
+  <data name="ErrorProcessingFileMakeSureFile" xml:space="preserve">
+    <value>Error processing file. Make sure the file is not in use.</value>
+  </data>
+  <data name="ErrorProcessingLogStillDownloading" xml:space="preserve">
+    <value>Error processing log. Is it still downloading?</value>
+  </data>
+  <data name="ErrorReadingData" xml:space="preserve">
+    <value>Error reading data</value>
+  </data>
+  <data name="ErrorReadingSerialOptionRulesJsonFile" xml:space="preserve">
+    <value>Error reading SerialOptionRules.json file:</value>
+  </data>
+  <data name="ErrorRunningScript" xml:space="preserve">
+    <value>Error running script</value>
+  </data>
+  <data name="ErrorSelectingWpPleaseTryAgain" xml:space="preserve">
+    <value>error selecting wp, please try again.</value>
+  </data>
+  <data name="ErrorWritingComPort" xml:space="preserve">
+    <value>Error writing to com port</value>
+  </data>
+  <data name="ExportedAreaS" xml:space="preserve">
+    <value>Exported {0} area(s) to
+{1}
+({2})</value>
+  </data>
+  <data name="Fail" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="FailedArm" xml:space="preserve">
+    <value>Failed to Arm</value>
+  </data>
+  <data name="FailedArmDisarm" xml:space="preserve">
+    <value>Failed to arm/disarm: {ex.Message}</value>
+  </data>
+  <data name="FailedButtonAxis0" xml:space="preserve">
+    <value>Failed to Button_axis0</value>
+  </data>
+  <data name="FailedButtonAxis1" xml:space="preserve">
+    <value>Failed to Button_axis1</value>
+  </data>
+  <data name="FailedChangeModes" xml:space="preserve">
+    <value>Failed to change Modes</value>
+  </data>
+  <data name="FailedChangeMountMode" xml:space="preserve">
+    <value>Failed to change mount mode</value>
+  </data>
+  <data name="FailedChangeSetting" xml:space="preserve">
+    <value>Failed to change setting</value>
+  </data>
+  <data name="FailedClear" xml:space="preserve">
+    <value>Failed to clear {paramName}:</value>
+  </data>
+  <data name="FailedConnectSendRebootCommand" xml:space="preserve">
+    <value>Failed to connect and send the reboot command</value>
+  </data>
+  <data name="FailedConnectSendTracker" xml:space="preserve">
+    <value>Failed to connect/send to tracker</value>
+  </data>
+  <data name="FailedCreateConnection" xml:space="preserve">
+    <value>Failed to create connection: {ex.Message}</value>
+  </data>
+  <data name="FailedCreateDirectory" xml:space="preserve">
+    <value>Failed to create directory</value>
+  </data>
+  <data name="FailedDetectAntennaTracker" xml:space="preserve">
+    <value>Failed to detect antenna tracker</value>
+  </data>
+  <data name="FailedDetectPortUploadUnknownVID" xml:space="preserve">
+    <value>Failed to detect port to upload to (Unknown VID/PID or Board String)
+Please try Disconnect/Reconnect and upload while on this screen</value>
+  </data>
+  <data name="FailedDisarm" xml:space="preserve">
+    <value>Failed to Disarm</value>
+  </data>
+  <data name="FailedDiscoverBoardIdPleaseReconnect" xml:space="preserve">
+    <value>Failed to discover board id. Please reconnect via usb and try again.</value>
+  </data>
+  <data name="FailedDownloadStartSitl" xml:space="preserve">
+    <value>Failed to download and start sitl</value>
+  </data>
+  <data name="FailedEnterCommandMode" xml:space="preserve">
+    <value>Failed to enter AT command mode.</value>
+  </data>
+  <data name="FailedEnterCommandMode1" xml:space="preserve">
+    <value>Failed to enter command mode</value>
+  </data>
+  <data name="FailedEnterCommandModeTryPower" xml:space="preserve">
+    <value>Failed to enter command mode.  Try power-cycling modem.</value>
+  </data>
+  <data name="FailedEnterRSSIReportingMode" xml:space="preserve">
+    <value>Failed to enter RSSI reporting mode.</value>
+  </data>
+  <data name="FailedFindDeviceMavlink" xml:space="preserve">
+    <value>Failed to find device on mavlink</value>
+  </data>
+  <data name="FailedGetFencePoint" xml:space="preserve">
+    <value>Failed to get fence point</value>
+  </data>
+  <data name="FailedGetIAMStreamConfig" xml:space="preserve">
+    <value>Failed to get IAMStreamConfig</value>
+  </data>
+  <data name="FailedGetRallyPoint" xml:space="preserve">
+    <value>Failed to get rally point</value>
+  </data>
+  <data name="FailedGimbalPntTrack" xml:space="preserve">
+    <value>Failed to Gimbal_pnt_track</value>
+  </data>
+  <data name="FailedGraphItem" xml:space="preserve">
+    <value>Failed to graph item:</value>
+  </data>
+  <data name="FailedLevel" xml:space="preserve">
+    <value>Failed to level</value>
+  </data>
+  <data name="FailedLoadAnalyzerResults" xml:space="preserve">
+    <value>Failed to load analyzer results</value>
+  </data>
+  <data name="FailedLoadBasePositionList" xml:space="preserve">
+    <value>Failed to load Base Position List</value>
+  </data>
+  <data name="FailedLoadFile" xml:space="preserve">
+    <value>Failed to load file.</value>
+  </data>
+  <data name="FailedLoadSettings" xml:space="preserve">
+    <value>Failed to load settings from</value>
+  </data>
+  <data name="FailedMakeWMSServerRequest" xml:space="preserve">
+    <value>Failed to make WMS Server request:</value>
+  </data>
+  <data name="FailedMount" xml:space="preserve">
+    <value>Failed to mount:</value>
+  </data>
+  <data name="FailedMountControl0" xml:space="preserve">
+    <value>Failed to Mount_Control_0</value>
+  </data>
+  <data name="FailedOpenUrl" xml:space="preserve">
+    <value>Failed to open url</value>
+  </data>
+  <data name="FailedOpenUrlHttp1270" xml:space="preserve">
+    <value>Failed to open url http://127.0.0.1:56781/network.kml</value>
+  </data>
+  <data name="FailedProcess" xml:space="preserve">
+    <value>Failed to process</value>
+  </data>
+  <data name="FailedPutModemIntoCommandMode" xml:space="preserve">
+    <value>Failed to put modem into AT command mode.</value>
+  </data>
+  <data name="FailedReadFile" xml:space="preserve">
+    <value>Failed to read File:</value>
+  </data>
+  <data name="FailedRenameFile" xml:space="preserve">
+    <value>Failed to rename file</value>
+  </data>
+  <data name="FailedREPEATRELAY" xml:space="preserve">
+    <value>Failed to DO_REPEAT_RELAY</value>
+  </data>
+  <data name="FailedREPEATSERVO" xml:space="preserve">
+    <value>Failed to DO_REPEAT_SERVO</value>
+  </data>
+  <data name="FailedRestoreFENCEACTION" xml:space="preserve">
+    <value>Failed to restore FENCE_ACTION</value>
+  </data>
+  <data name="FailedSave" xml:space="preserve">
+    <value>Failed to save</value>
+  </data>
+  <data name="FailedSaveConfiguration" xml:space="preserve">
+    <value>Failed to save configuration.</value>
+  </data>
+  <data name="FailedSaveParameters" xml:space="preserve">
+    <value>Failed to save parameters</value>
+  </data>
+  <data name="FailedSaveRallyPoint" xml:space="preserve">
+    <value>Failed to save rally point</value>
+  </data>
+  <data name="FailedSaveSettings" xml:space="preserve">
+    <value>Failed to save settings to</value>
+  </data>
+  <data name="FailedSendHomeLocation" xml:space="preserve">
+    <value>Failed to send home location</value>
+  </data>
+  <data name="FailedSendNewFencePoints" xml:space="preserve">
+    <value>Failed to send new fence points</value>
+  </data>
+  <data name="FailedSet" xml:space="preserve">
+    <value>Failed to set {newParamName}:</value>
+  </data>
+  <data name="FailedSet1" xml:space="preserve">
+    <value>Failed to set {paramName}:</value>
+  </data>
+  <data name="FailedSetChannel" xml:space="preserve">
+    <value>Failed to set Channel</value>
+  </data>
+  <data name="FailedSetFENCEACTION" xml:space="preserve">
+    <value>Failed to set FENCE_ACTION</value>
+  </data>
+  <data name="FailedSetFENCEENABLE" xml:space="preserve">
+    <value>Failed to set FENCE_ENABLE</value>
+  </data>
+  <data name="FailedSetFENCETOTAL" xml:space="preserve">
+    <value>Failed to set FENCE_TOTAL</value>
+  </data>
+  <data name="FailedSetGyroGain" xml:space="preserve">
+    <value>Failed to set Gyro Gain</value>
+  </data>
+  <data name="FailedSetInitialPanTilt" xml:space="preserve">
+    <value>Failed to set initial pan and tilt</value>
+  </data>
+  <data name="FailedSetMinMaxFenceAlt" xml:space="preserve">
+    <value>Failed to set min/max fence alt</value>
+  </data>
+  <data name="FailedSetMode" xml:space="preserve">
+    <value>Failed to set mode: {ex.Message}</value>
+  </data>
+  <data name="FailedSetMOTSPINARM" xml:space="preserve">
+    <value>Failed to set MOT_SPIN_ARM:</value>
+  </data>
+  <data name="FailedSetMOTSPINMIN" xml:space="preserve">
+    <value>Failed to set MOT_SPIN_MIN:</value>
+  </data>
+  <data name="FailedSetOSDRates" xml:space="preserve">
+    <value>Failed to set OSD rates.</value>
+  </data>
+  <data name="FailedSetParam" xml:space="preserve">
+    <value>Failed to set Param</value>
+  </data>
+  <data name="FailedSETRELAY" xml:space="preserve">
+    <value>Failed to DO_SET_RELAY</value>
+  </data>
+  <data name="FailedSETSERVO" xml:space="preserve">
+    <value>Failed to DO_SET_SERVO</value>
+  </data>
+  <data name="FailedSimpleAccelerometerCalibration" xml:space="preserve">
+    <value>Failed to simple accelerometer calibration</value>
+  </data>
+  <data name="FailedStartDowding" xml:space="preserve">
+    <value>Failed to start Dowding</value>
+  </data>
+  <data name="FailedStartJoystick" xml:space="preserve">
+    <value>Failed to start joystick</value>
+  </data>
+  <data name="FailedStartMAGCALCheckAutopilot" xml:space="preserve">
+    <value>Failed to start MAG CAL, check the autopilot is still responding.</value>
+  </data>
+  <data name="FailedStartSimulator" xml:space="preserve">
+    <value>Failed to start the simulator</value>
+  </data>
+  <data name="FailedTakeoff" xml:space="preserve">
+    <value>Failed to takeoff</value>
+  </data>
+  <data name="FailedTestMotor" xml:space="preserve">
+    <value>Failed to test motor</value>
+  </data>
+  <data name="FailedTogglePanStab" xml:space="preserve">
+    <value>Failed to Toggle_Pan_Stab</value>
+  </data>
+  <data name="FailedUnmount" xml:space="preserve">
+    <value>Failed to unmount:</value>
+  </data>
+  <data name="FailedUpdateHomeLocation" xml:space="preserve">
+    <value>Failed to update home location (</value>
+  </data>
+  <data name="FailedUpgradeBootloader" xml:space="preserve">
+    <value>Failed to upgrade bootloader</value>
+  </data>
+  <data name="FailedWriteFenceFile" xml:space="preserve">
+    <value>Failed to write fence file</value>
+  </data>
+  <data name="FailedWriteRallyFile" xml:space="preserve">
+    <value>Failed to write rally file</value>
+  </data>
+  <data name="FailedZeroAttitude" xml:space="preserve">
+    <value>Failed to Zero Attitude</value>
+  </data>
+  <data name="FailsafeSure" xml:space="preserve">
+    <value>You are in failsafe, are you sure?</value>
+  </data>
+  <data name="FailsafeSureTitle" xml:space="preserve">
+    <value>Failsafe</value>
+  </data>
+  <data name="FeatureRequiresGStreamerWouldLikeDownload" xml:space="preserve">
+    <value>This feature requires GStreamer. Would you like to download and install it now?</value>
+  </data>
+  <data name="FeatureRequiresGStreamerWouldLikeDownloadTitle" xml:space="preserve">
+    <value>GStreamer not found</value>
+  </data>
+  <data name="FFT" xml:space="preserve">
+    <value>FFT</value>
+  </data>
+  <data name="FFT1" xml:space="preserve">
+    <value>FFT -</value>
+  </data>
+  <data name="FFTSetup" xml:space="preserve">
+    <value>FFT Setup</value>
+  </data>
+  <data name="FileAccessIssue" xml:space="preserve">
+    <value>File access issue:</value>
+  </data>
+  <data name="FileExist" xml:space="preserve">
+    <value>File does not exist</value>
+  </data>
+  <data name="FileReadableOfflineMapPack" xml:space="preserve">
+    <value>This file is not a readable offline map pack.</value>
+  </data>
+  <data name="FileSavedLogFile" xml:space="preserve">
+    <value>File Saved with log file</value>
+  </data>
+  <data name="FileSavedLogFile1" xml:space="preserve">
+    <value>File Saved with log file!</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="FirmwareDoesnTSupportRSSIReporting" xml:space="preserve">
+    <value>Firmware doesn't support RSSI reporting</value>
+  </data>
+  <data name="FlashingImage0x08000000" xml:space="preserve">
+    <value>Flashing image to 0x08000000</value>
+  </data>
+  <data name="FontIssuesPleaseInstallHttpWww" xml:space="preserve">
+    <value>{e}
+
+ Font Issues? Please install this http://www.microsoft.com/en-us/download/details.aspx?id=16083</value>
+  </data>
+  <data name="FreqHz" xml:space="preserve">
+    <value>Freq Hz</value>
+  </data>
+  <data name="Frequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="FUSEDriveMounted" xml:space="preserve">
+    <value>FUSE drive mounted at</value>
+  </data>
+  <data name="FUSEDriveUnmounted" xml:space="preserve">
+    <value>FUSE drive unmounted</value>
+  </data>
+  <data name="FWVersionGreaterThanAPMCopter" xml:space="preserve">
+    <value>is the FW version greater than APM:copter 3.01 or APM:Plane 2.74?</value>
+  </data>
+  <data name="GPSHdop" xml:space="preserve">
+    <value>GPS Hdop</value>
+  </data>
+  <data name="GPSModuleDetectedSystemWouldLike" xml:space="preserve">
+    <value>A GPS module was detected on your system. Would you like to use it to set your tracker home location?</value>
+  </data>
+  <data name="Gpsstat" xml:space="preserve">
+    <value>gpsstat</value>
+  </data>
+  <data name="Graph" xml:space="preserve">
+    <value>Graph It</value>
+  </data>
+  <data name="GStreamer" xml:space="preserve">
+    <value>GStreamer</value>
+  </data>
+  <data name="HereDetectedRadioOptionsNOTEChannels" xml:space="preserve">
+    <value>Here are the detected radio options
+NOTE Channels not connected are displayed as 1500 +-2
+Normal values are around 1100 | 1900
+Channel:Min | Max</value>
+  </data>
+  <data name="HomeLocationInvalid" xml:space="preserve">
+    <value>Your home location is invalid</value>
+  </data>
+  <data name="Host" xml:space="preserve">
+    <value>Host:</value>
+  </data>
+  <data name="HttpCopterArdupilotComWikiConnect" xml:space="preserve">
+    <value>http://copter.ardupilot.com/wiki/connect-escs-and-motors/#motor_order_diagrams</value>
+  </data>
+  <data name="HttpWwwProficncComUtmSource" xml:space="preserve">
+    <value>http://www.proficnc.com/?utm_source=missionplanner&amp;utm_medium=click&amp;utm_campaign=mission</value>
+  </data>
+  <data name="HUDDropout" xml:space="preserve">
+    <value>HUD Dropout</value>
+  </data>
+  <data name="HUDOverlay" xml:space="preserve">
+    <value>HUD Overlay</value>
+  </data>
+  <data name="HV" xml:space="preserve">
+    <value>H: -- | V: --</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="IfReFieldConnectAPMWait" xml:space="preserve">
+    <value>If you're at the field, connect to your APM and wait for GPS lock. Then click 'Home Location' link to set home to your location</value>
+  </data>
+  <data name="InitialParameterCalculationWorksArducopterOnly" xml:space="preserve">
+    <value>Initial parameter calculation works with Arducopter only!</value>
+  </data>
+  <data name="InitialParametersSuccesfullyUpdatedCheckParameters" xml:space="preserve">
+    <value>Initial Parameters succesfully updated.
+Check parameters before flight!
+
+After test flight :
+	Set ATC_THR_MIX_MAN to 0.5
+	Set PSC_ACCZ_P to MOT_THST_HOVER
+	Set PSC_ACCZ_I to 2*MOT_THST_HOVER
+
+Happy flying!</value>
+  </data>
+  <data name="InitialParametersSuccesfullyUpdatedCheckParameters1" xml:space="preserve">
+    <value>Initial Parameters succesfully updated.
+Check parameters before flight!
+
+After test flight :
+	Set ATC_THR_MIX_MAN to 0.5
+	Set PSC_ACCZ_P/PSC_D_ACC_P to MOT_THST_HOVER
+	Set PSC_ACCZ_I/PSC_D_ACC_I to 2*MOT_THST_HOVER
+
+Happy flying!</value>
+  </data>
+  <data name="InitialParametersSuccesfullyUpdatedCheckParameters1Title" xml:space="preserve">
+    <value>Initial parameter calculator</value>
+  </data>
+  <data name="Interference" xml:space="preserve">
+    <value>Interference %</value>
+  </data>
+  <data name="InvalidBaudRate1" xml:space="preserve">
+    <value>Invalid baud rate.</value>
+  </data>
+  <data name="InvalidCommand" xml:space="preserve">
+    <value>Invalid command</value>
+  </data>
+  <data name="InvalidComPortUse" xml:space="preserve">
+    <value>Invalid ComPort or in use</value>
+  </data>
+  <data name="InvalidCoordHowDid" xml:space="preserve">
+    <value>Invalid coord, How did you do this?</value>
+  </data>
+  <data name="InvalidEntryBeenDetected" xml:space="preserve">
+    <value>A invalid entry has been detected</value>
+  </data>
+  <data name="InvalidHomeWpAlt" xml:space="preserve">
+    <value>Invalid Home or wp Alt</value>
+  </data>
+  <data name="InvalidInputData" xml:space="preserve">
+    <value>Invalid input data!</value>
+  </data>
+  <data name="InvalidInsertPosition" xml:space="preserve">
+    <value>Invalid insert position</value>
+  </data>
+  <data name="InvalidLatLongPleaseFix" xml:space="preserve">
+    <value>Invalid Lat/Long, please fix</value>
+  </data>
+  <data name="InvalidNumber" xml:space="preserve">
+    <value>Invalid Number</value>
+  </data>
+  <data name="InvalidNumberTitle" xml:space="preserve">
+    <value>ERROR</value>
+  </data>
+  <data name="InvalidPortNumber" xml:space="preserve">
+    <value>Invalid port number.</value>
+  </data>
+  <data name="InvalidTagMustNumber065535" xml:space="preserve">
+    <value>Invalid Tag. Must be a number from 0 to 65535</value>
+  </data>
+  <data name="InvalidValue" xml:space="preserve">
+    <value>Invalid value "</value>
+  </data>
+  <data name="InvalidWMSServerResponseInvalidNumber" xml:space="preserve">
+    <value>Invalid WMS Server response: Invalid number of GetMap elements.</value>
+  </data>
+  <data name="InvalidWMSServerResponseServerUnable" xml:space="preserve">
+    <value>Invalid WMS Server response: Server unable to return EPSG:4326 / WGS84 compatible images.</value>
+  </data>
+  <data name="InvalidWMSServerResponseServerUnable1" xml:space="preserve">
+    <value>Invalid WMS Server response: Server unable to return PNG images.</value>
+  </data>
+  <data name="Label1" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="LatX" xml:space="preserve">
+    <value>Lat/X:</value>
+  </data>
+  <data name="LayoutEditor" xml:space="preserve">
+    <value>Layout Editor</value>
+  </data>
+  <data name="LineDoesnTExist" xml:space="preserve">
+    <value>Line Doesn't Exist</value>
+  </data>
+  <data name="LineNumber" xml:space="preserve">
+    <value>Line Number</value>
+  </data>
+  <data name="LinkBandwidth" xml:space="preserve">
+    <value>Link Bandwidth</value>
+  </data>
+  <data name="LinkOpenFailedCheckDefaultWebpage" xml:space="preserve">
+    <value>Link open failed. check your default webpage association</value>
+  </data>
+  <data name="ListenPort" xml:space="preserve">
+    <value>Listen Port:</value>
+  </data>
+  <data name="LngY" xml:space="preserve">
+    <value>Lng/Y:</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Loaded" xml:space="preserve">
+    <value>Loaded</value>
+  </data>
+  <data name="LoadedExisting" xml:space="preserve">
+    <value>Loaded Existing</value>
+  </data>
+  <data name="LoadedParameters" xml:space="preserve">
+    <value>Loaded parameters!</value>
+  </data>
+  <data name="LoadedParametersTitle" xml:space="preserve">
+    <value>Loaded</value>
+  </data>
+  <data name="LoadTlog" xml:space="preserve">
+    <value>Load Tlog</value>
+  </data>
+  <data name="LocationNameCannotEmpty" xml:space="preserve">
+    <value>Location name cannot be empty.</value>
+  </data>
+  <data name="LocationNameCannotEmptyTitle" xml:space="preserve">
+    <value>Invalid Name</value>
+  </data>
+  <data name="LocationSavedSuccessfully" xml:space="preserve">
+    <value>Location '{locationName}' saved successfully.</value>
+  </data>
+  <data name="LocationSavedSuccessfullyTitle" xml:space="preserve">
+    <value>Location Saved</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>Log -</value>
+  </data>
+  <data name="LogBrowser" xml:space="preserve">
+    <value>Log Browser -</value>
+  </data>
+  <data name="LogCanOpenedStillConnected" xml:space="preserve">
+    <value>Log Can not be opened. Are you still connected?</value>
+  </data>
+  <data name="LogContainEnoughData" xml:space="preserve">
+    <value>Log does not contain enough data</value>
+  </data>
+  <data name="LoginFailed" xml:space="preserve">
+    <value>Login Failed</value>
+  </data>
+  <data name="LoginSuccessful" xml:space="preserve">
+    <value>Login Successful</value>
+  </data>
+  <data name="Loiter" xml:space="preserve">
+    <value>Loiter</value>
+  </data>
+  <data name="LostJoystick" xml:space="preserve">
+    <value>Lost Joystick</value>
+  </data>
+  <data name="LostJoystickTitle" xml:space="preserve">
+    <value>Lost Joystick</value>
+  </data>
+  <data name="LowAltWP" xml:space="preserve">
+    <value>Low alt on WP#</value>
+  </data>
+  <data name="MainForm" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="MajorErrorOccured" xml:space="preserve">
+    <value>A Major error has occured : {e}</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="Map3DSettingsTitle" xml:space="preserve">
+    <value>3D Map Settings</value>
+  </data>
+  <data name="MapChangeFailedTryZoomingOut" xml:space="preserve">
+    <value>Map change failed. try zooming out first.</value>
+  </data>
+  <data name="MapNoAreaDownloadYet" xml:space="preserve">
+    <value>The map has no area to download yet.</value>
+  </data>
+  <data name="MapNoAreaDownloadYetTitle" xml:space="preserve">
+    <value>Offline Maps</value>
+  </data>
+  <data name="MasterBckp" xml:space="preserve">
+    <value>Master Bckp</value>
+  </data>
+  <data name="MavlinkInspector" xml:space="preserve">
+    <value>Mavlink Inspector</value>
+  </data>
+  <data name="MavlinkLogGraph" xml:space="preserve">
+    <value>Mavlink Log Graph</value>
+  </data>
+  <data name="MavlinkStreamBeenDetected" xml:space="preserve">
+    <value>A Mavlink stream has been detected,</value>
+  </data>
+  <data name="Max20Time" xml:space="preserve">
+    <value>Max 20 at a time.</value>
+  </data>
+  <data name="MaxData" xml:space="preserve">
+    <value>Max Data</value>
+  </data>
+  <data name="MayNeedSelectAnotherTabRestart" xml:space="preserve">
+    <value>You may need to select another tab or restart to see the full effect.</value>
+  </data>
+  <data name="MenuLastLoad" xml:space="preserve">
+    <value>Menu, last load in</value>
+  </data>
+  <data name="MissingSomeDLLSPleaseExtract" xml:space="preserve">
+    <value>You are missing some DLL's. Please extract the zip file somewhere. OR Use the update feature from the menu</value>
+  </data>
+  <data name="Mode" xml:space="preserve">
+    <value>Mode:</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Modified</value>
+  </data>
+  <data name="MotorAssignedServoChannel" xml:space="preserve">
+    <value>Motor {(char)('A' + tag.MotorIndex - 1)} is not assigned to a servo channel.</value>
+  </data>
+  <data name="MOTX" xml:space="preserve">
+    <value>MOT          X:</value>
+  </data>
+  <data name="MountAsDrive" xml:space="preserve">
+    <value>Mount as Drive</value>
+  </data>
+  <data name="Msg620" xml:space="preserve">
+    <value>{name} is {value}</value>
+  </data>
+  <data name="MustHomeAltitude" xml:space="preserve">
+    <value>You must have a home altitude</value>
+  </data>
+  <data name="MustUseLandRTLSplitMission" xml:space="preserve">
+    <value>You must use Land/RTL to split a mission</value>
+  </data>
+  <data name="MyLabel1" xml:space="preserve">
+    <value>myLabel1</value>
+  </data>
+  <data name="NameIDExists" xml:space="preserve">
+    <value>Name or ID exists</value>
+  </data>
+  <data name="NameReservedPleaseChooseDifferentName" xml:space="preserve">
+    <value>The name "{DefaultPresetName}" is reserved.
+Please choose a different name.</value>
+  </data>
+  <data name="NameReservedPleaseChooseDifferentNameTitle" xml:space="preserve">
+    <value>Reserved Name</value>
+  </data>
+  <data name="NeedRestartPlannerTakeEffect" xml:space="preserve">
+    <value>You need to restart the planner for this to take effect</value>
+  </data>
+  <data name="NetCount" xml:space="preserve">
+    <value>Net Count</value>
+  </data>
+  <data name="NewCompass3Offsets" xml:space="preserve">
+    <value>New compass3 offsets are</value>
+  </data>
+  <data name="NewLayout" xml:space="preserve">
+    <value>New Layout</value>
+  </data>
+  <data name="NewOffsetsCompass1" xml:space="preserve">
+    <value>New offsets for compass #1 are</value>
+  </data>
+  <data name="NewOffsetsCompass2" xml:space="preserve">
+    <value>New offsets for compass #2 are</value>
+  </data>
+  <data name="NewOffsetsCompass3" xml:space="preserve">
+    <value>New offsets for compass #3 are</value>
+  </data>
+  <data name="NextMaintH" xml:space="preserve">
+    <value>Next Maint (h)</value>
+  </data>
+  <data name="NoAreaDefinedUseAreaDisplayed" xml:space="preserve">
+    <value>No area defined, use area displayed on screen?</value>
+  </data>
+  <data name="NoAreaDefinedUseAreaDisplayedTitle" xml:space="preserve">
+    <value>Terrain DAT</value>
+  </data>
+  <data name="NoChangesWrite" xml:space="preserve">
+    <value>No Changes to Write!</value>
+  </data>
+  <data name="NoColor" xml:space="preserve">
+    <value>NoColor</value>
+  </data>
+  <data name="NodeCount" xml:space="preserve">
+    <value>Node Count</value>
+  </data>
+  <data name="NoErrors" xml:space="preserve">
+    <value>No Errors</value>
+  </data>
+  <data name="NoErrorsTitle" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="NoExistingTranslationBeenDone" xml:space="preserve">
+    <value>No existing translation has been done</value>
+  </data>
+  <data name="NoGPSDeviceConnectedPleaseVerify" xml:space="preserve">
+    <value>No GPS Device connected. Please verify it is connected and try again.</value>
+  </data>
+  <data name="NoIPv4PropertiesFound" xml:space="preserve">
+    <value>No IPv4 properties found</value>
+  </data>
+  <data name="NoMapTilesWereFoundFile" xml:space="preserve">
+    <value>No map tiles were found in this file.</value>
+  </data>
+  <data name="NoNetworkInterfacesFound" xml:space="preserve">
+    <value>No network interfaces found</value>
+  </data>
+  <data name="NoPolygonDefinedLoadFile" xml:space="preserve">
+    <value>No polygon defined. Load a file?</value>
+  </data>
+  <data name="NoPolygonDefinedLoadFileTitle" xml:space="preserve">
+    <value>Load File</value>
+  </data>
+  <data name="NoPolygonDrawn" xml:space="preserve">
+    <value>No polygon drawn</value>
+  </data>
+  <data name="NoPolygonUpload" xml:space="preserve">
+    <value>No polygon to upload</value>
+  </data>
+  <data name="NoReturnLocationSet" xml:space="preserve">
+    <value>No return location set</value>
+  </data>
+  <data name="NoRippAreaDefinedRippDisplayed" xml:space="preserve">
+    <value>No ripp area defined, ripp displayed on screen?</value>
+  </data>
+  <data name="NoRippAreaDefinedRippDisplayedTitle" xml:space="preserve">
+    <value>Rip</value>
+  </data>
+  <data name="NoSettingsSet" xml:space="preserve">
+    <value>No settings to set</value>
+  </data>
+  <data name="NoSettingsSetTitle" xml:space="preserve">
+    <value>No settings</value>
+  </data>
+  <data name="NoSRTMDataArea" xml:space="preserve">
+    <value>No SRTM data for this area</value>
+  </data>
+  <data name="NOTEAttitudeRate0HudWork" xml:space="preserve">
+    <value>NOTE: your attitude rate is 0, the hud will not work
+Change in Configuration &gt; Planner &gt; Telemetry Rates</value>
+  </data>
+  <data name="NOTEReplaceAnyExistingJoystickConfiguration" xml:space="preserve">
+    <value>NOTE: this will replace any existing joystick configuration.
+Please make sure you have saved your current configuration if needed.</value>
+  </data>
+  <data name="NOTEReplaceAnyExistingJoystickConfigurationTitle" xml:space="preserve">
+    <value>Import Joystick Config</value>
+  </data>
+  <data name="NothingDownload" xml:space="preserve">
+    <value>Nothing to download</value>
+  </data>
+  <data name="NoValidBasePositionDeterminedGps" xml:space="preserve">
+    <value>No valid base position determined by gps yet</value>
+  </data>
+  <data name="NoValidOptionDetected" xml:space="preserve">
+    <value>No valid option was detected</value>
+  </data>
+  <data name="NoWaypointFoundFile" xml:space="preserve">
+    <value>No Waypoint found in file!</value>
+  </data>
+  <data name="NTRIP" xml:space="preserve">
+    <value>NTRIP</value>
+  </data>
+  <data name="NumberAvailableParametersChangedFullParam" xml:space="preserve">
+    <value>The number of available parameters changed. A full param refresh will be done to show all params.</value>
+  </data>
+  <data name="NumberAvailableParametersChangedFullParam1" xml:space="preserve">
+    <value>The number of available parameters changed. A full param refresh will be done.</value>
+  </data>
+  <data name="NumberAvailableParametersChangedUntilFull" xml:space="preserve">
+    <value>The number of available parameters changed, until full param refresh is done, some parameters will not be available.</value>
+  </data>
+  <data name="NumberAvailableParametersChangedUntilFullTitle" xml:space="preserve">
+    <value>Params</value>
+  </data>
+  <data name="NumberTilesLoadedPerZoom" xml:space="preserve">
+    <value>Number of tiles loaded per zoom :</value>
+  </data>
+  <data name="Observations" xml:space="preserve">
+    <value>Observations:</value>
+  </data>
+  <data name="OfflineMapsWindowCouldOpened" xml:space="preserve">
+    <value>The Offline Maps window could not be opened.</value>
+  </data>
+  <data name="OFFSETSX" xml:space="preserve">
+    <value>OFFSETS  X:</value>
+  </data>
+  <data name="OneEntriesValidNumber" xml:space="preserve">
+    <value>One of your entries is not a valid number</value>
+  </data>
+  <data name="OnlyAvailableMissions" xml:space="preserve">
+    <value>Only available for missions</value>
+  </data>
+  <data name="OSDColor" xml:space="preserve">
+    <value>OSD Color</value>
+  </data>
+  <data name="OutputAviSavedLogFolder" xml:space="preserve">
+    <value>Output avi will be saved to the log folder</value>
+  </data>
+  <data name="ParametersCommittedNonVolatileMemory" xml:space="preserve">
+    <value>Parameters committed to non-volatile memory</value>
+  </data>
+  <data name="ParametersSuccessfullySaved" xml:space="preserve">
+    <value>Parameters successfully saved.</value>
+  </data>
+  <data name="PasswordStrength" xml:space="preserve">
+    <value>Password Strength:</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="PilotEmergencyStatusDeclared" xml:space="preserve">
+    <value>Pilot Emergency Status Declared</value>
+  </data>
+  <data name="PlaceHomeMapCenter" xml:space="preserve">
+    <value>Place home at map center?</value>
+  </data>
+  <data name="PlaceHomeMapCenterTitle" xml:space="preserve">
+    <value>Home Off Screen</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="PleaseAssignServoOutputFirstBefore" xml:space="preserve">
+    <value>Please assign a servo output first before using Smart Assign.</value>
+  </data>
+  <data name="PleaseAssignServoOutputFirstBeforeTitle" xml:space="preserve">
+    <value>No Servo Assigned</value>
+  </data>
+  <data name="PleaseCheckFirewallSettingsPleaseTry" xml:space="preserve">
+    <value>Please check your Firewall settings
+Please try running this command
+1.    Run the following command in an elevated command prompt to disable Windows Firewall temporarily:
+    
+Netsh advfirewall set allprofiles state off
+    
+Note: This is just for test; please turn it back on with the command 'Netsh advfirewall set allprofiles state on'.</value>
+  </data>
+  <data name="PleaseConnectFirst" xml:space="preserve">
+    <value>Please Connect First</value>
+  </data>
+  <data name="PleaseConnectFirst1" xml:space="preserve">
+    <value>Please connect first!</value>
+  </data>
+  <data name="PleaseConnectFirst1Title" xml:space="preserve">
+    <value>Initial paremeter calculator</value>
+  </data>
+  <data name="PleaseConnectJoystick" xml:space="preserve">
+    <value>Please Connect a Joystick</value>
+  </data>
+  <data name="PleaseConnectJoystickTitle" xml:space="preserve">
+    <value>No Joystick</value>
+  </data>
+  <data name="PleaseDefinePolygon" xml:space="preserve">
+    <value>Please define a polygon!</value>
+  </data>
+  <data name="PleaseDefinePolygon1" xml:space="preserve">
+    <value>Please define a polygon.</value>
+  </data>
+  <data name="PleaseDisarmDroneBeforeDownloadingLogs" xml:space="preserve">
+    <value>Please disarm the drone before downloading logs!</value>
+  </data>
+  <data name="PleaseDisconnectReconnectApplyChange" xml:space="preserve">
+    <value>Please Disconnect and Reconnect to apply this change.</value>
+  </data>
+  <data name="PleaseEnsureIMURAWIMUFAST" xml:space="preserve">
+    <value>Please ensure IMU_RAW and IMU_FAST are turned off to use FFT</value>
+  </data>
+  <data name="PleaseEnterCOMPortName" xml:space="preserve">
+    <value>Please enter a COM port name.</value>
+  </data>
+  <data name="PleaseEnterConfigurationName" xml:space="preserve">
+    <value>Please enter a configuration name.</value>
+  </data>
+  <data name="PleaseEnterConfigurationNameTitle" xml:space="preserve">
+    <value>Save Configuration</value>
+  </data>
+  <data name="PleaseEnterHostPort" xml:space="preserve">
+    <value>Please enter host and port.</value>
+  </data>
+  <data name="PleaseEnterValidHostPort" xml:space="preserve">
+    <value>Please enter valid host and port.</value>
+  </data>
+  <data name="PleaseFixDefaultAltValue" xml:space="preserve">
+    <value>Please fix your default alt value</value>
+  </data>
+  <data name="PleaseIgnoreUnplugPlugBackWhen" xml:space="preserve">
+    <value>Please ignore the unplug and plug back in when uploading flight firmware.</value>
+  </data>
+  <data name="PleaseInstallMicrosoftDotNet4" xml:space="preserve">
+    <value>Please install Microsoft Dot Net 4.6.2</value>
+  </data>
+  <data name="PleaseMoveJoystickAxisWantAssigned" xml:space="preserve">
+    <value>Please move the joystick axis you want assigned to this function after clicking ok</value>
+  </data>
+  <data name="PleasePickAnotherColumnHighlightCell" xml:space="preserve">
+    <value>Please pick another column, Highlight the cell you wish to graph</value>
+  </data>
+  <data name="PleasePlanSomethingFirst" xml:space="preserve">
+    <value>Please plan something first</value>
+  </data>
+  <data name="PleasePressJoystickButtonWantAssigned" xml:space="preserve">
+    <value>Please press the joystick button you want assigned to this function after clicking ok</value>
+  </data>
+  <data name="PleaseRebootAutopilot" xml:space="preserve">
+    <value>Please reboot the autopilot</value>
+  </data>
+  <data name="PleaseReopenJoystickChangesTakeEffect" xml:space="preserve">
+    <value>Please reopen joystick for changes to take effect</value>
+  </data>
+  <data name="PleaseRePowerAutopilot" xml:space="preserve">
+    <value>Please re-power to autopilot</value>
+  </data>
+  <data name="PleaseRestartPlanner" xml:space="preserve">
+    <value>Please Restart the Planner</value>
+  </data>
+  <data name="PleaseSelectConnectionType" xml:space="preserve">
+    <value>Please select a connection type.</value>
+  </data>
+  <data name="PleaseSelectInterfaceType" xml:space="preserve">
+    <value>Please select an interface type</value>
+  </data>
+  <data name="PleaseSelectJoystick" xml:space="preserve">
+    <value>Please select a joystick</value>
+  </data>
+  <data name="PleaseSelectOptionFirst" xml:space="preserve">
+    <value>Please select an option first</value>
+  </data>
+  <data name="PleaseSelectValidScript" xml:space="preserve">
+    <value>Please select a valid script</value>
+  </data>
+  <data name="PleaseSelectValidScriptTitle" xml:space="preserve">
+    <value>Bad Script</value>
+  </data>
+  <data name="PleaseSetReturnLocation" xml:space="preserve">
+    <value>Please set a return location</value>
+  </data>
+  <data name="PleaseSetSomeRallyPoints" xml:space="preserve">
+    <value>Please set some rally points</value>
+  </data>
+  <data name="PleaseSetValidHomeLocationMap" xml:space="preserve">
+    <value>Please set a valid home location on the map first.</value>
+  </data>
+  <data name="PleaseUpdateSomeOlderLibraryDlls" xml:space="preserve">
+    <value>Please Update - Some older library dlls are causing problems</value>
+  </data>
+  <data name="PleaseUpgradeMonoVersion6Https" xml:space="preserve">
+    <value>Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/</value>
+  </data>
+  <data name="PluginCalculateSomeInitialParametersBased" xml:space="preserve">
+    <value>This plugin will calculate some initial parameters based on battery and prop size for a new copter setup.</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="Port1" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="PortOpenContinue" xml:space="preserve">
+    <value>The port is open
+ Continue?</value>
+  </data>
+  <data name="Power" xml:space="preserve">
+    <value>Power</value>
+  </data>
+  <data name="ProblemCaptureDeviceGrabbingFrameTook" xml:space="preserve">
+    <value>Problem with capture device, grabbing frame took longer than 5 sec</value>
+  </data>
+  <data name="ProgrammingFirmwareFailedTryAgain" xml:space="preserve">
+    <value>Programming firmware failed.  Try again?</value>
+  </data>
+  <data name="ProgrammingFirmwareFailedTryAgainTitle" xml:space="preserve">
+    <value>Programming firmware failed.  Try again?</value>
+  </data>
+  <data name="ProgramRequiresNETFramework40" xml:space="preserve">
+    <value>This program requires .NET Framework 4.0. You currently have</value>
+  </data>
+  <data name="PropSizeMustLargerThanZero" xml:space="preserve">
+    <value>Prop size must be larger than zero.</value>
+  </data>
+  <data name="PropSizeMustLargerThanZeroTitle" xml:space="preserve">
+    <value>ERROR!</value>
+  </data>
+  <data name="ProtectPrivateKeyIfLostThere" xml:space="preserve">
+    <value>Protect your private key, if lost there is no method to get it back.</value>
+  </data>
+  <data name="PWM" xml:space="preserve">
+    <value>PWM:</value>
+  </data>
+  <data name="QuickPanelColoring" xml:space="preserve">
+    <value>QuickPanel Coloring</value>
+  </data>
+  <data name="RadioCalibrationSetup" xml:space="preserve">
+    <value>Radio Calibration Setup:</value>
+  </data>
+  <data name="RallyPointsNothingDownload" xml:space="preserve">
+    <value>Rally points - Nothing to download</value>
+  </data>
+  <data name="RangesOptionsShownRemoteModemMay" xml:space="preserve">
+    <value>The ranges and options shown for the remote modem may not be accurate.  To ensure accurate, use the same firmware version in both the local and remote modems</value>
+  </data>
+  <data name="RC" xml:space="preserve">
+    <value>RC</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="ReadyArm" xml:space="preserve">
+    <value>Ready to Arm</value>
+  </data>
+  <data name="ReallyWantDeleteLogs" xml:space="preserve">
+    <value>Do you really want to delete {0} logs?</value>
+  </data>
+  <data name="Reboot" xml:space="preserve">
+    <value>Reboot?</value>
+  </data>
+  <data name="RebootFailedPleaseManuallyRebootHardware" xml:space="preserve">
+    <value>Reboot failed. please manually reboot the hardware.</value>
+  </data>
+  <data name="RebootRequired" xml:space="preserve">
+    <value>Reboot required</value>
+  </data>
+  <data name="RebootRequiredRebootNow" xml:space="preserve">
+    <value>Reboot required, reboot now?</value>
+  </data>
+  <data name="RebootRequiredSomeParametersTakeEffect" xml:space="preserve">
+    <value>Reboot is required for some parameters to take effect.</value>
+  </data>
+  <data name="RebootRequiredSomeParametersTakeEffectTitle" xml:space="preserve">
+    <value>Reboot Required</value>
+  </data>
+  <data name="Recording" xml:space="preserve">
+    <value>Recording</value>
+  </data>
+  <data name="Relay" xml:space="preserve">
+    <value>Relay</value>
+  </data>
+  <data name="RemoteIDFail" xml:space="preserve">
+    <value>Remote ID Fail</value>
+  </data>
+  <data name="RemoteIDOK" xml:space="preserve">
+    <value>Remote ID OK</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Remove30Days" xml:space="preserve">
+    <value>Remove 30+days</value>
+  </data>
+  <data name="RemoveAll" xml:space="preserve">
+    <value>Remove All</value>
+  </data>
+  <data name="Removed" xml:space="preserve">
+    <value>Removed</value>
+  </data>
+  <data name="RemoveLocation" xml:space="preserve">
+    <value>Remove location '{location.Name}'?</value>
+  </data>
+  <data name="RemoveLocationTitle" xml:space="preserve">
+    <value>Confirm Remove</value>
+  </data>
+  <data name="RemovePointFailedPleaseTryAgain" xml:space="preserve">
+    <value>Remove point Failed. Please try again.</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetAllParamsTheirDefaultValue" xml:space="preserve">
+    <value>This will reset all params to their default value
+Are you sure?</value>
+  </data>
+  <data name="ResetAllParamsTheirDefaultValueTitle" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetChangesContinue" xml:space="preserve">
+    <value>This will reset your changes. Continue?</value>
+  </data>
+  <data name="ResetFlashFactoryDefaults" xml:space="preserve">
+    <value>Reset Flash to Factory Defaults?</value>
+  </data>
+  <data name="ResetOnboardHomePositionEffectsRTL" xml:space="preserve">
+    <value>This will reset the onboard home position (effects RTL etc). Are you Sure?</value>
+  </data>
+  <data name="ResetOnboardHomePositionEffectsRTLTitle" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="RestartMissionPlannerEnableDroneID" xml:space="preserve">
+    <value>Restart Mission Planner to enable Drone ID Tab. Disable Plugin if Not Required CTRL-P</value>
+  </data>
+  <data name="ReturnLocationOutsidePolygon" xml:space="preserve">
+    <value>Your return location is outside the polygon</value>
+  </data>
+  <data name="RIDEmergency" xml:space="preserve">
+    <value>RID Emergency</value>
+  </data>
+  <data name="RowError" xml:space="preserve">
+    <value>Row error</value>
+  </data>
+  <data name="RSSI" xml:space="preserve">
+    <value>RSSI</value>
+  </data>
+  <data name="RTL" xml:space="preserve">
+    <value>RTL</value>
+  </data>
+  <data name="RunStatus" xml:space="preserve">
+    <value>Run Status</value>
+  </data>
+  <data name="RunStep" xml:space="preserve">
+    <value>Run Step</value>
+  </data>
+  <data name="RunTimeHMm" xml:space="preserve">
+    <value>Run Time(h:mm)</value>
+  </data>
+  <data name="RXENCAP" xml:space="preserve">
+    <value>RXENCAP</value>
+  </data>
+  <data name="RxFrame" xml:space="preserve">
+    <value>Rx Frame</value>
+  </data>
+  <data name="SamplePluginSeeSourcePluginsFolder" xml:space="preserve">
+    <value>This is a sample plugin
+See the source in the plugins folder</value>
+  </data>
+  <data name="Sats" xml:space="preserve">
+    <value>Sats: --: ---</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Saved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="SavedSettings" xml:space="preserve">
+    <value>Saved settings to</value>
+  </data>
+  <data name="ScriptStatusFinishedAborted" xml:space="preserve">
+    <value>Script Status: Finished (or aborted)</value>
+  </data>
+  <data name="ScriptStatusRunning" xml:space="preserve">
+    <value>Script Status: Running</value>
+  </data>
+  <data name="SelectedFirmwareCertifiedRunModemAborting" xml:space="preserve">
+    <value>The selected firmware is not certified to run on this modem.  Aborting.</value>
+  </data>
+  <data name="SelectedScript" xml:space="preserve">
+    <value>Selected Script:</value>
+  </data>
+  <data name="SelectMapAreaHoldingALT" xml:space="preserve">
+    <value>Select map area holding ALT</value>
+  </data>
+  <data name="SelectMapAreaHoldingALTTitle" xml:space="preserve">
+    <value>GMap.NET</value>
+  </data>
+  <data name="SelectOneMoreAreasExport" xml:space="preserve">
+    <value>Select one or more areas to export.</value>
+  </data>
+  <data name="SeptentrioFixedBasePositionInvalid" xml:space="preserve">
+    <value>Septentrio fixed base position is invalid.</value>
+  </data>
+  <data name="SerBrkX10ms" xml:space="preserve">
+    <value>Ser. brk. x10ms</value>
+  </data>
+  <data name="SerialConnectionBeenLost" xml:space="preserve">
+    <value>Serial connection has been lost</value>
+  </data>
+  <data name="SERIALPORT" xml:space="preserve">
+    <value>SERIAL PORT</value>
+  </data>
+  <data name="Set" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="SetBATT2AMPPERVOLFailed" xml:space="preserve">
+    <value>Set BATT2_AMP_PERVOL Failed</value>
+  </data>
+  <data name="SetBATT2CAPACITYFailed" xml:space="preserve">
+    <value>Set BATT2_CAPACITY Failed</value>
+  </data>
+  <data name="SetBATT2VOLTMULTFailed" xml:space="preserve">
+    <value>Set BATT2_VOLT_MULT Failed</value>
+  </data>
+  <data name="SetBATTAMPPERVOLTFailed" xml:space="preserve">
+    <value>Set BATT_AMP_PERVOLT Failed</value>
+  </data>
+  <data name="SetBATTCAPACITYFailed" xml:space="preserve">
+    <value>Set BATT_CAPACITY Failed</value>
+  </data>
+  <data name="SetBATTMONITORBATTVOLTPIN" xml:space="preserve">
+    <value>Set BATT_MONITOR,BATT_VOLT_PIN,BATT_CURR_PIN Failed</value>
+  </data>
+  <data name="SetBATTPINFailed" xml:space="preserve">
+    <value>Set BATT_????_PIN Failed</value>
+  </data>
+  <data name="SetBATTVOLTMULTFailed" xml:space="preserve">
+    <value>Set BATT_VOLT_MULT Failed</value>
+  </data>
+  <data name="SetCommandError" xml:space="preserve">
+    <value>Set Command error</value>
+  </data>
+  <data name="SetCOMPASSAUTODECFailed" xml:space="preserve">
+    <value>Set COMPASS_AUTODEC Failed</value>
+  </data>
+  <data name="SetCOMPASSLEARNFailed" xml:space="preserve">
+    <value>Set COMPASS_LEARN Failed</value>
+  </data>
+  <data name="SetFLOWENABLEFailed" xml:space="preserve">
+    <value>Set FLOW_ENABLE Failed</value>
+  </data>
+  <data name="SetHSVMANFailed" xml:space="preserve">
+    <value>Set H_SV_MAN Failed</value>
+  </data>
+  <data name="SetHSWASHTYPEFailed" xml:space="preserve">
+    <value>Set H_SWASH_TYPE Failed</value>
+  </data>
+  <data name="SetImage" xml:space="preserve">
+    <value>set image</value>
+  </data>
+  <data name="SetParamErrorPleaseEnsureVersion" xml:space="preserve">
+    <value>Set param error. Please ensure your version is AC3.3+.</value>
+  </data>
+  <data name="SettingNewOffsetsCompass1Failed" xml:space="preserve">
+    <value>Setting new offsets for compass #1 failed</value>
+  </data>
+  <data name="SettingNewOffsetsCompass2Failed" xml:space="preserve">
+    <value>Setting new offsets for compass #2 failed</value>
+  </data>
+  <data name="SettingNewOffsetsCompass3Failed" xml:space="preserve">
+    <value>Setting new offsets for compass #3 failed</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ShowEuropeanUnionNoFlyZones" xml:space="preserve">
+    <value>Show European Union No fly zones?</value>
+  </data>
+  <data name="ShowGCSTraffic" xml:space="preserve">
+    <value>Show GCS Traffic</value>
+  </data>
+  <data name="ShowHongKongNoFlyZones" xml:space="preserve">
+    <value>Show Hong Kong No fly zones?</value>
+  </data>
+  <data name="ShowHongKongNoFlyZonesTitle" xml:space="preserve">
+    <value>NoFly Zones</value>
+  </data>
+  <data name="ShowingData" xml:space="preserve">
+    <value>Showing Data from:</value>
+  </data>
+  <data name="SikRadios2StatusLEDsOne" xml:space="preserve">
+    <value>The Sik Radios have 2 status LEDs, one red and one green.
+green LED blinking - searching for another radio 
+green LED solid - link is established with another radio 
+red LED flashing - transmitting data 
+red LED solid - in firmware update mode</value>
+  </data>
+  <data name="SmartAssign" xml:space="preserve">
+    <value>Smart Assign</value>
+  </data>
+  <data name="Solo" xml:space="preserve">
+    <value>Solo</value>
+  </data>
+  <data name="SoloTitle" xml:space="preserve">
+    <value>Is this a Solo?</value>
+  </data>
+  <data name="SomeParametersFailedSaved" xml:space="preserve">
+    <value>Some Parameters Failed to be saved.</value>
+  </data>
+  <data name="SomeParametersFailedSavedTitle" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="SpacingMustBetween5100Meters" xml:space="preserve">
+    <value>Spacing must be between 5 and 100 meters</value>
+  </data>
+  <data name="SPLINEWAYPOINTCommandSupported" xml:space="preserve">
+    <value>SPLINE_WAYPOINT command not supported.</value>
+  </data>
+  <data name="StartRecording" xml:space="preserve">
+    <value>Start Recording</value>
+  </data>
+  <data name="StartScriptFailed" xml:space="preserve">
+    <value>Start script failed:</value>
+  </data>
+  <data name="Stats" xml:space="preserve">
+    <value>Stats</value>
+  </data>
+  <data name="StatusLoadedTiles" xml:space="preserve">
+    <value>Status: loaded tiles</value>
+  </data>
+  <data name="StatusLoadingTiles" xml:space="preserve">
+    <value>Status: loading tiles...</value>
+  </data>
+  <data name="STLResourceFoundVehicleType" xml:space="preserve">
+    <value>STL resource not found for vehicle type</value>
+  </data>
+  <data name="STLResourceFoundVehicleTypeTitle" xml:space="preserve">
+    <value>STL Load Error</value>
+  </data>
+  <data name="StopTitle" xml:space="preserve">
+    <value>Disabled forwarding</value>
+  </data>
+  <data name="Subscribe" xml:space="preserve">
+    <value>Subscribe</value>
+  </data>
+  <data name="Supported" xml:space="preserve">
+    <value>Not Supported</value>
+  </data>
+  <data name="Sure" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="SureWant" xml:space="preserve">
+    <value>Are you sure you want to</value>
+  </data>
+  <data name="SureWant1" xml:space="preserve">
+    <value>Are you sure you want to do</value>
+  </data>
+  <data name="SureWantDeclareRemoteIDEmergency" xml:space="preserve">
+    <value>Are you sure you want to declare Remote ID Emergency?</value>
+  </data>
+  <data name="SureWantDeclareRemoteIDEmergencyTitle" xml:space="preserve">
+    <value>RID Emergency?</value>
+  </data>
+  <data name="SureWantDisableOutgoingRemoteID" xml:space="preserve">
+    <value>Are you sure you want to disable outgoing Remote ID?</value>
+  </data>
+  <data name="SureWantDisableOutgoingRemoteIDTitle" xml:space="preserve">
+    <value>RID Developer Mode?</value>
+  </data>
+  <data name="SureWantRebootAutopilot" xml:space="preserve">
+    <value>Are you sure you want to reboot the autopilot?</value>
+  </data>
+  <data name="SureWantRebootAutopilotTitle" xml:space="preserve">
+    <value>Reboot</value>
+  </data>
+  <data name="SureWantUpgradeBootloaderCanBrick" xml:space="preserve">
+    <value>Are you sure you want to upgrade the bootloader? This can brick your board</value>
+  </data>
+  <data name="SureWantUpgradeBootloaderCanBrick1" xml:space="preserve">
+    <value>Are you sure you want to upgrade the bootloader? This can brick your board, Please allow 5 mins for this process</value>
+  </data>
+  <data name="SureWantUpgradeBootloaderCanBrickTitle" xml:space="preserve">
+    <value>BL Update</value>
+  </data>
+  <data name="SyncAny" xml:space="preserve">
+    <value>Sync Any</value>
+  </data>
+  <data name="Takeoff" xml:space="preserve">
+    <value>Takeoff</value>
+  </data>
+  <data name="TAKIPPortUseAnotherApp" xml:space="preserve">
+    <value>TAK IP Port in use. Is another app on this system already using it?</value>
+  </data>
+  <data name="TCP" xml:space="preserve">
+    <value>TCP</value>
+  </data>
+  <data name="TerrainDATCreatedDocumentsMissionPlanner" xml:space="preserve">
+    <value>Terrain DAT created in Documents/Mission Planner/TerrainDat folder</value>
+  </data>
+  <data name="TerrainFollowingAltitudeModeCannotUsed" xml:space="preserve">
+    <value>Terrain following altitude mode cannot be used with the face mapping tool.</value>
+  </data>
+  <data name="ThereAppearsDroneAirMomentSure" xml:space="preserve">
+    <value>There appears to be a drone in the air at the moment. Are you sure you want to continue?</value>
+  </data>
+  <data name="ThereAppearsDroneAirMomentSureTitle" xml:space="preserve">
+    <value>continue</value>
+  </data>
+  <data name="ThereErrorsMission" xml:space="preserve">
+    <value>There are errors in your mission</value>
+  </data>
+  <data name="ThereMuchBadDataFailing" xml:space="preserve">
+    <value>There is to much bad data - failing</value>
+  </data>
+  <data name="Throttle" xml:space="preserve">
+    <value>Throttle %</value>
+  </data>
+  <data name="TilesCopiedWereAlreadyPresentArea" xml:space="preserve">
+    <value>{0}{1:N0} tiles copied, {2:N0} were already present.
+{3} area(s) added to the list.</value>
+  </data>
+  <data name="TimeOffsetSeconds" xml:space="preserve">
+    <value>time offset in seconds</value>
+  </data>
+  <data name="Timeout1" xml:space="preserve">
+    <value>Timeout.</value>
+  </data>
+  <data name="TimeoutStatusMessageReceived" xml:space="preserve">
+    <value>Timeout: Status message not received.</value>
+  </data>
+  <data name="TimeS" xml:space="preserve">
+    <value>Time (s)</value>
+  </data>
+  <data name="TimeSec" xml:space="preserve">
+    <value>Time (sec)</value>
+  </data>
+  <data name="TlogKMLGraph" xml:space="preserve">
+    <value>Tlog &gt; KML/Graph</value>
+  </data>
+  <data name="TooManyFewWPSBig" xml:space="preserve">
+    <value>Too many/few WP's or to Big a Distance</value>
+  </data>
+  <data name="TraceStarted" xml:space="preserve">
+    <value>Trace started</value>
+  </data>
+  <data name="TransponderConnected" xml:space="preserve">
+    <value>Transponder Connected!</value>
+  </data>
+  <data name="TransponderOffline" xml:space="preserve">
+    <value>Transponder Offline</value>
+  </data>
+  <data name="TransponderStatusLost" xml:space="preserve">
+    <value>Transponder Status Lost</value>
+  </data>
+  <data name="TuningDoubleClickChangeItems" xml:space="preserve">
+    <value>Tuning - Double click to change items</value>
+  </data>
+  <data name="TXENCAP" xml:space="preserve">
+    <value>TXENCAP</value>
+  </data>
+  <data name="UAVCANInspector" xml:space="preserve">
+    <value>UAVCAN Inspector</value>
+  </data>
+  <data name="UAVCANParams" xml:space="preserve">
+    <value>UAVCAN Params -</value>
+  </data>
+  <data name="UDP" xml:space="preserve">
+    <value>UDP</value>
+  </data>
+  <data name="UDPCl" xml:space="preserve">
+    <value>UDPCl</value>
+  </data>
+  <data name="UnableSetParameter" xml:space="preserve">
+    <value>Unable to set parameter</value>
+  </data>
+  <data name="UnableUAVAirborne" xml:space="preserve">
+    <value>Unable - UAV airborne</value>
+  </data>
+  <data name="UnicoreFixedBasePositionInvalid" xml:space="preserve">
+    <value>Unicore fixed base position is invalid.</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="UnknownConnectionType" xml:space="preserve">
+    <value>Unknown connection type.</value>
+  </data>
+  <data name="UnmountDrive" xml:space="preserve">
+    <value>Unmount Drive</value>
+  </data>
+  <data name="UpdateMASTERRelease" xml:space="preserve">
+    <value>This will update to MASTER release</value>
+  </data>
+  <data name="UpdatingFolders" xml:space="preserve">
+    <value>Updating Folders</value>
+  </data>
+  <data name="UpgradedBootloader" xml:space="preserve">
+    <value>Upgraded bootloader</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="UploadWpsFailed" xml:space="preserve">
+    <value>Upload wps failed</value>
+  </data>
+  <data name="UsernamePasswordInvalid" xml:space="preserve">
+    <value>Username or password invalid</value>
+  </data>
+  <data name="UserThemeNamed" xml:space="preserve">
+    <value>User theme named</value>
+  </data>
+  <data name="Using" xml:space="preserve">
+    <value>Using</value>
+  </data>
+  <data name="UsingKey" xml:space="preserve">
+    <value>Using Key:</value>
+  </data>
+  <data name="ValueCanOnlyBetween0127" xml:space="preserve">
+    <value>The value can only be between 0 and 127 m</value>
+  </data>
+  <data name="ValueGraph" xml:space="preserve">
+    <value>Value Graph</value>
+  </data>
+  <data name="VehicleArmedPayloadSelectionDisabled" xml:space="preserve">
+    <value>The vehicle is armed. Payload selection is disabled.</value>
+  </data>
+  <data name="VehicleArmedPayloadSelectionDisabledTitle" xml:space="preserve">
+    <value>Payload Selection</value>
+  </data>
+  <data name="Verified" xml:space="preserve">
+    <value>Verified!</value>
+  </data>
+  <data name="VersionTitan" xml:space="preserve">
+    <value>Version: Titan</value>
+  </data>
+  <data name="VideoDevice" xml:space="preserve">
+    <value>Video Device</value>
+  </data>
+  <data name="VideoFormat" xml:space="preserve">
+    <value>Video Format</value>
+  </data>
+  <data name="VideoStreamBeenDetectedButGstreamer" xml:space="preserve">
+    <value>A video stream has been detected, but gstreamer has not been configured/installed.
+Do you want to install/config it now?</value>
+  </data>
+  <data name="VideoStreamBeenDetectedButGstreamerTitle" xml:space="preserve">
+    <value>GStreamer</value>
+  </data>
+  <data name="Voltage" xml:space="preserve">
+    <value>Voltage</value>
+  </data>
+  <data name="VoltPin" xml:space="preserve">
+    <value>Volt Pin:</value>
+  </data>
+  <data name="WantSearchInternetUpdate" xml:space="preserve">
+    <value>Do you want to search the internet for an update?</value>
+  </data>
+  <data name="WantSearchInternetUpdateTitle" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="WantUploadViaDFU" xml:space="preserve">
+    <value>Do you want to upload this via DFU?</value>
+  </data>
+  <data name="WarningWARNING" xml:space="preserve">
+    <value>WARNING: {name} is {value}</value>
+  </data>
+  <data name="WebpageOpenFailedVirusHttpWww" xml:space="preserve">
+    <value>Webpage open failed... do you have a virus?
+http://www.magnetic-declination.com/</value>
+  </data>
+  <data name="WebpageOpenFailedVirusHttpWwwTitle" xml:space="preserve">
+    <value>Mag</value>
+  </data>
+  <data name="WebRequestFailed" xml:space="preserve">
+    <value>Web request failed:</value>
+  </data>
+  <data name="WriteFailedParams" xml:space="preserve">
+    <value>Write Failed for {failed.Count} params: {failedParamsEnum}</value>
+  </data>
+  <data name="WriteFC" xml:space="preserve">
+    <value>Write to FC</value>
+  </data>
+  <data name="Writing" xml:space="preserve">
+    <value>Writing...</value>
+  </data>
+  <data name="WS" xml:space="preserve">
+    <value>WS</value>
+  </data>
+  <data name="CaptionCommsTimeout" xml:space="preserve">
+    <value>comms timeout</value>
+  </data>
+  <data name="CaptionLostComms" xml:space="preserve">
+    <value>lost comms</value>
+  </data>
+  <data name="CaptionPx4Pixhawk" xml:space="preserve">
+    <value>PX4/PIXHAWK</value>
+  </data>
+  <data name="CouldntContact" xml:space="preserve">
+    <value>Couldn't contact </value>
+  </data>
+  <data name="ErrorConnectingCom0comRenamePorts" xml:space="preserve">
+    <value>Error Connecting
+if using com0com please rename the ports to COM??</value>
+  </data>
+  <data name="ErrorGettingParameterInformation" xml:space="preserve">
+    <value>Error getting Parameter Information</value>
+  </data>
+  <data name="FailedDownloadNewFirmware" xml:space="preserve">
+    <value>Failed to download new firmware : </value>
+  </data>
+  <data name="FailedGetChecksumFile" xml:space="preserve">
+    <value>Failed to get checksum file</value>
+  </data>
+  <data name="FailedGetFirmwareList" xml:space="preserve">
+    <value>Failed to get Firmware List : </value>
+  </data>
+  <data name="FailedToDownloadLogAnalyzer" xml:space="preserve">
+    <value>Failed to download LogAnalyzer</value>
+  </data>
+  <data name="FailedToStartLogAnalyzer" xml:space="preserve">
+    <value>Failed to start LogAnalyzer</value>
+  </data>
+  <data name="FirmwareInstalled" xml:space="preserve">
+    <value>Firmware installed!</value>
+  </data>
+  <data name="FirmwareToBigFor1280" xml:space="preserve">
+    <value>Firmware is to big for a 1280, Please upgrade your hardware!!</value>
+  </data>
+  <data name="FirmwareUpdateNoteVerifyParameters" xml:space="preserve">
+    <value>1. If you are updating your firmware from a previous version, please verify your parameters are appropriate for the new version.
+2. Please ensure your accelerometer is calibrated after installing or re-calibrated after updating the firmware.</value>
+  </data>
+  <data name="HexFileLoadedInvalid" xml:space="preserve">
+    <value>The hex file loaded is invalid, please try again.</value>
+  </data>
+  <data name="HexFileNoEndFlag" xml:space="preserve">
+    <value>The hex file did no contain an end flag. aborting</value>
+  </data>
+  <data name="IncorrectExeArchitectureDetectedAt" xml:space="preserve">
+    <value>The incorrect exe architecture has been detected at </value>
+  </data>
+  <data name="InvalidWaypointFile" xml:space="preserve">
+    <value>Invalid Waypoint file</value>
+  </data>
+  <data name="IsThisApm2" xml:space="preserve">
+    <value>Is this a APM 2+?</value>
+  </data>
+  <data name="IsThisApm2Title" xml:space="preserve">
+    <value>APM 2+</value>
+  </data>
+  <data name="IsThisBebop2" xml:space="preserve">
+    <value>Is this Bebop2?</value>
+  </data>
+  <data name="IsThisBebop2Title" xml:space="preserve">
+    <value>Bebop2</value>
+  </data>
+  <data name="IsThisCube" xml:space="preserve">
+    <value>Is this a CUBE?</value>
+  </data>
+  <data name="IsThisCubeBlack" xml:space="preserve">
+    <value>Is this a CubeBlack?</value>
+  </data>
+  <data name="IsThisCubeBlackTitle" xml:space="preserve">
+    <value>CubeBlack</value>
+  </data>
+  <data name="IsThisCubePx4PixhawkPixracer" xml:space="preserve">
+    <value>Is this a CUBE/PX4/PIXHAWK/PIXRACER?</value>
+  </data>
+  <data name="IsThisCubeTitle" xml:space="preserve">
+    <value>CUBE</value>
+  </data>
+  <data name="IsThisDisco" xml:space="preserve">
+    <value>Is this Disco?</value>
+  </data>
+  <data name="IsThisDiscoTitle" xml:space="preserve">
+    <value>Disco</value>
+  </data>
+  <data name="IsThisLinuxBoard" xml:space="preserve">
+    <value>Is this a Linux board?</value>
+  </data>
+  <data name="IsThisLinuxBoardTitle" xml:space="preserve">
+    <value>Linux</value>
+  </data>
+  <data name="IsThisPixhawk" xml:space="preserve">
+    <value>Is this a PIXHAWK?</value>
+  </data>
+  <data name="IsThisPixhawkTitle" xml:space="preserve">
+    <value>PIXHAWK</value>
+  </data>
+  <data name="IsThisPixracer" xml:space="preserve">
+    <value>Is this a PIXRACER?</value>
+  </data>
+  <data name="IsThisPixracerTitle" xml:space="preserve">
+    <value>PIXRACER</value>
+  </data>
+  <data name="IsThisPx4Pixhawk" xml:space="preserve">
+    <value>Is this a PX4/PIXHAWK?</value>
+  </data>
+  <data name="LineInvalid" xml:space="preserve">
+    <value>Line invalid
+</value>
+  </data>
+  <data name="LostCommunicationWithTheBoard" xml:space="preserve">
+    <value>lost communication with the board.</value>
+  </data>
+  <data name="MissingFirmwareHistoryFile" xml:space="preserve">
+    <value>Missing FirmwareHistory.txt file</value>
+  </data>
+  <data name="PleaseConnectTo" xml:space="preserve">
+    <value>Please connect to </value>
+  </data>
+  <data name="PleasePress" xml:space="preserve">
+    <value>Please press </value>
+  </data>
+  <data name="PleaseUpdateYourInstallIsCorrupt" xml:space="preserve">
+    <value>Please update, your install is currupt</value>
+  </data>
+  <data name="PowerButton" xml:space="preserve">
+    <value> Power button </value>
+  </data>
+  <data name="PressPowerButton" xml:space="preserve">
+    <value>. Press the Power button </value>
+  </data>
+  <data name="RepeatTimes" xml:space="preserve">
+    <value> times</value>
+  </data>
+  <data name="RepeatTimesTryAgain" xml:space="preserve">
+    <value> times. Do you want to try to connect again?</value>
+  </data>
+  <data name="SuccessCheckingCredentials" xml:space="preserve">
+    <value>Success checking credentials</value>
+  </data>
+  <data name="TheFileWasNotFoundAt" xml:space="preserve">
+    <value>The file was not found at </value>
+  </data>
+  <data name="UnableToCheckUpdatesInvalidVersion" xml:space="preserve">
+    <value>Unable to check for updates: Invalid version information from server.</value>
+  </data>
+  <data name="UpdateFailed" xml:space="preserve">
+    <value>Update Failed </value>
+  </data>
+  <data name="UploadChibiOS" xml:space="preserve">
+    <value>Upload ChibiOS</value>
+  </data>
+  <data name="UploadChibiOSTitle" xml:space="preserve">
+    <value>ChibiOS</value>
+  </data>
+  <data name="UploadCompleteExclaim" xml:space="preserve">
+    <value>Upload complete!</value>
+  </data>
+  <data name="UploadCompleteUnplugReconnect" xml:space="preserve">
+    <value>Upload complete! Please unplug and reconnect board.</value>
+  </data>
+  <data name="Vrbrain4DetectedUnplugBoard" xml:space="preserve">
+    <value>VRBRAIN 4 detected. Please unplug the board, and then press OK and plug back in.
+</value>
+  </data>
+  <data name="WifiButNoAnswerTryAgain" xml:space="preserve">
+    <value> Wifi but it didn't answer our request. Do you want to try again?</value>
+  </data>
+  <data name="WifiNowAndAfterThatPressOk" xml:space="preserve">
+    <value> Wifi now and after that press OK</value>
+  </data>
+  <data name="WifiPleaseConnectPressOkToTryAgain" xml:space="preserve">
+    <value> Wifi. Please connect to it and press OK to try again</value>
+  </data>
+  <data name="YouDontSeemConnectedTo" xml:space="preserve">
+    <value>You don't seem connected to </value>
+  </data>
+  <data name="YouSeemConnectedTo" xml:space="preserve">
+    <value>You seem connected to </value>
+  </data>
+  <data name="AddPathOpenPathsHaveBeenDisabled" xml:space="preserve">
+    <value>AddPath: Open paths have been disabled.</value>
+  </data>
+  <data name="AddPathOpenPathsMustBeSubject" xml:space="preserve">
+    <value>AddPath: Open paths must be subject.</value>
+  </data>
+  <data name="AirMarketFLYSAFE" xml:space="preserve">
+    <value>AirMarket - FLYSAFE</value>
+  </data>
+  <data name="AlreadyMounted" xml:space="preserve">
+    <value>Already mounted.</value>
+  </data>
+  <data name="AltChangeFailed" xml:space="preserve">
+    <value>Alt Change Failed</value>
+  </data>
+  <data name="AnonymizeBinLog" xml:space="preserve">
+    <value>Anonymize Bin Log...</value>
+  </data>
+  <data name="ArchiveFileNotFound" xml:space="preserve">
+    <value>Archive file not found: {0}</value>
+  </data>
+  <data name="Arm" xml:space="preserve">
+    <value>Arm</value>
+  </data>
+  <data name="ArmForce" xml:space="preserve">
+    <value>Arm(Force)</value>
+  </data>
+  <data name="BadDFLogBufferCache" xml:space="preserve">
+    <value>bad DFLogBuffer cache</value>
+  </data>
+  <data name="BadIndex" xml:space="preserve">
+    <value>Bad index</value>
+  </data>
+  <data name="BadItemCount" xml:space="preserve">
+    <value>Bad Item count {0} vs {1}</value>
+  </data>
+  <data name="BadNtripResponse" xml:space="preserve">
+    <value>Bad ntrip Response
+
+{0}</value>
+  </data>
+  <data name="BADSTATUS" xml:space="preserve">
+    <value>BAD STATUS</value>
+  </data>
+  <data name="BADSYNC" xml:space="preserve">
+    <value>BAD SYNC</value>
+  </data>
+  <data name="BadType" xml:space="preserve">
+    <value>Bad Type {0}</value>
+  </data>
+  <data name="BadTypeNull" xml:space="preserve">
+    <value>Bad Type Null</value>
+  </data>
+  <data name="BadVersion" xml:space="preserve">
+    <value>Bad Version</value>
+  </data>
+  <data name="BitmapOverflow" xml:space="preserve">
+    <value>Bitmap overflow</value>
+  </data>
+  <data name="BitNumberOutOfRange" xml:space="preserve">
+    <value>Bit number out of range</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="BootloaderDeviceIDMismatchDevice" xml:space="preserve">
+    <value>bootloader device ID mismatch - device:{0}</value>
+  </data>
+  <data name="BufferEmpty" xml:space="preserve">
+    <value>Buffer Empty</value>
+  </data>
+  <data name="BufferIsWrongSize" xml:space="preserve">
+    <value>Buffer is wrong size</value>
+  </data>
+  <data name="BufferOverflow" xml:space="preserve">
+    <value>Buffer Overflow</value>
+  </data>
+  <data name="CanceledByRequest" xml:space="preserve">
+    <value>Canceled by request</value>
+  </data>
+  <data name="CanceledByUser" xml:space="preserve">
+    <value>Canceled by user</value>
+  </data>
+  <data name="CANLogExtract" xml:space="preserve">
+    <value>CAN Log Extract</value>
+  </data>
+  <data name="CanNotReadRegistryValuePortNameForDevice" xml:space="preserve">
+    <value>Can not read registry value PortName for device {0}</value>
+  </data>
+  <data name="CANRTCMExtract" xml:space="preserve">
+    <value>CAN RTCM Extract</value>
+  </data>
+  <data name="CapacitySetTo" xml:space="preserve">
+    <value>Capacity set to {0}</value>
+  </data>
+  <data name="CaptureStart" xml:space="preserve">
+    <value>Capture Start</value>
+  </data>
+  <data name="CaptureStop" xml:space="preserve">
+    <value>Capture Stop</value>
+  </data>
+  <data name="ChangeIconDescription" xml:space="preserve">
+    <value>Change icon Description</value>
+  </data>
+  <data name="ChecksumFailedInvalidHex" xml:space="preserve">
+    <value>Checksum Failed - Invalid Hex</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CommandIsNotAJump" xml:space="preserve">
+    <value>Command is not a jump</value>
+  </data>
+  <data name="CommandIsNotALoiterCommand" xml:space="preserve">
+    <value>Command is not a loiter command</value>
+  </data>
+  <data name="CommandIsNotATakeoff" xml:space="preserve">
+    <value>Command is not a takeoff</value>
+  </data>
+  <data name="CommsInjectionNotOpen" xml:space="preserve">
+    <value>CommsInjection not open</value>
+  </data>
+  <data name="CommsInjectionTimeoutOnRead" xml:space="preserve">
+    <value>CommsInjection Timeout on read</value>
+  </data>
+  <data name="CommsSerialPipeTimeoutOnRead" xml:space="preserve">
+    <value>CommsSerialPipe Timeout on read</value>
+  </data>
+  <data name="ComportSocketClosed" xml:space="preserve">
+    <value>Comport / Socket Closed</value>
+  </data>
+  <data name="ConnectAir1V2" xml:space="preserve">
+    <value>Connect air 1 v2</value>
+  </data>
+  <data name="ConnectAir2V2" xml:space="preserve">
+    <value>Connect air 2 v2</value>
+  </data>
+  <data name="ConnectStream1V2" xml:space="preserve">
+    <value>Connect stream 1 v2</value>
+  </data>
+  <data name="ConnectStream2V2" xml:space="preserve">
+    <value>Connect stream 2 v2</value>
+  </data>
+  <data name="ConnectV1" xml:space="preserve">
+    <value>Connect v1</value>
+  </data>
+  <data name="CoordinateOutsideAllowedRange" xml:space="preserve">
+    <value>Coordinate outside allowed range</value>
+  </data>
+  <data name="CopyAllMessages" xml:space="preserve">
+    <value>Copy All Messages</value>
+  </data>
+  <data name="CopyMessage" xml:space="preserve">
+    <value>Copy Message</value>
+  </data>
+  <data name="CouldNotFindATypeForThisValue" xml:space="preserve">
+    <value>Could not find a Type for this value: {0}. Use XmlList&lt;T&gt;.AddType to include the appropriate type.</value>
+  </data>
+  <data name="CouldNotFindDevice" xml:space="preserve">
+    <value>Could not find device</value>
+  </data>
+  <data name="CouldNotVerifyGeoFencePoint" xml:space="preserve">
+    <value>Could not verify GeoFence Point</value>
+  </data>
+  <data name="Delete2" xml:space="preserve">
+    <value>Delete {0}</value>
+  </data>
+  <data name="DeviceCouldNotBeDetectedInTheSystem" xml:space="preserve">
+    <value>Device could not be detected in the system.</value>
+  </data>
+  <data name="DeviceNotOpen" xml:space="preserve">
+    <value>Device not open</value>
+  </data>
+  <data name="DistToHome" xml:space="preserve">
+    <value>Dist to Home: {0}</value>
+  </data>
+  <data name="DoMaximaError" xml:space="preserve">
+    <value>DoMaxima error</value>
+  </data>
+  <data name="Download2" xml:space="preserve">
+    <value>Download {0}</value>
+  </data>
+  <data name="DrawFenceDist" xml:space="preserve">
+    <value>Draw Fence Dist</value>
+  </data>
+  <data name="DumpInfo" xml:space="preserve">
+    <value>Dump Info</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="EndOfData" xml:space="preserve">
+    <value>End of data</value>
+  </data>
+  <data name="ErrorInExecutionOfSetGestureConfig" xml:space="preserve">
+    <value>Error in execution of SetGestureConfig</value>
+  </data>
+  <data name="ErrorInRemoveFromFront" xml:space="preserve">
+    <value>Error in RemoveFromFront: {0} does not start with {1}</value>
+  </data>
+  <data name="ErrorParamDefaultsSupportNotFoundInFirmware" xml:space="preserve">
+    <value>Error: Param defaults support not found in firmware</value>
+  </data>
+  <data name="ErrorPolyTreeStructIsNeededForOpenPathClipping" xml:space="preserve">
+    <value>Error: PolyTree struct is needed for open path clipping.</value>
+  </data>
+  <data name="ExistingLogDownloadAlreadyInProgress" xml:space="preserve">
+    <value>Existing log download already in progress.</value>
+  </data>
+  <data name="FailedToConnect" xml:space="preserve">
+    <value>Failed to connect.
+</value>
+  </data>
+  <data name="FailedToGetDeviceInformationSetForTheCOMPorts" xml:space="preserve">
+    <value>Failed to get device information set for the COM ports</value>
+  </data>
+  <data name="FailedToGetFreeBuffer" xml:space="preserve">
+    <value>Failed to get free buffer</value>
+  </data>
+  <data name="FailedToGetLog" xml:space="preserve">
+    <value>Failed to get log</value>
+  </data>
+  <data name="FailedToGetService" xml:space="preserve">
+    <value>Failed to get service.
+</value>
+  </data>
+  <data name="FailedToOpenARegistryKeyForDeviceSpecificConfigurationInform" xml:space="preserve">
+    <value>Failed to open a registry key for device-specific configuration information</value>
+  </data>
+  <data name="FailedToOpenFile" xml:space="preserve">
+    <value>Failed to OpenFile - {0} {1} {2}</value>
+  </data>
+  <data name="FailedToOpenWinUSBDevice" xml:space="preserve">
+    <value>Failed to open WinUSB device</value>
+  </data>
+  <data name="FailedToRemove" xml:space="preserve">
+    <value>Failed to remove {0} - {1} {2} {3}</value>
+  </data>
+  <data name="FailedToResolveDns" xml:space="preserve">
+    <value>Failed to resolve dns</value>
+  </data>
+  <data name="FailToStartJoystickTask" xml:space="preserve">
+    <value>Fail to start joystick task</value>
+  </data>
+  <data name="FenceMissionItemsNotSupportedPleaseUseLegacyGeofence" xml:space="preserve">
+    <value>Fence mission items not supported, please use legacy geofence</value>
+  </data>
+  <data name="FileDownloadedDoesNotMatchHash" xml:space="preserve">
+    <value>File downloaded does not match hash: {0}</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File Not Found</value>
+  </data>
+  <data name="FileNotOpen" xml:space="preserve">
+    <value>File not open</value>
+  </data>
+  <data name="FixMissionTopBottom" xml:space="preserve">
+    <value>Fix mission top/bottom</value>
+  </data>
+  <data name="FlashVerificationFailed" xml:space="preserve">
+    <value>flash verification failed</value>
+  </data>
+  <data name="FlyTo" xml:space="preserve">
+    <value>Fly To</value>
+  </data>
+  <data name="ForwardBetweenLinks" xml:space="preserve">
+    <value>Forward between links</value>
+  </data>
+  <data name="FunctionDoesNotAcceptFloatingPointNotANumberValues" xml:space="preserve">
+    <value>Function does not accept floating point Not-a-Number values.</value>
+  </data>
+  <data name="GotSOURCETABLEBadNtripMountPoint" xml:space="preserve">
+    <value>Got SOURCETABLE - Bad ntrip mount point
+
+{0}</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="Grid" xml:space="preserve">
+    <value>grid{0}</value>
+  </data>
+  <data name="GUIDED" xml:space="preserve">
+    <value>GUIDED</value>
+  </data>
+  <data name="GuidedModeFailed" xml:space="preserve">
+    <value>Guided Mode Failed</value>
+  </data>
+  <data name="HerelinkInfo" xml:space="preserve">
+    <value>Herelink info</value>
+  </data>
+  <data name="HerelinkVideo" xml:space="preserve">
+    <value>Herelink Video</value>
+  </data>
+  <data name="HLConnect" xml:space="preserve">
+    <value>HL connect</value>
+  </data>
+  <data name="HLGetInfo" xml:space="preserve">
+    <value>HL Get Info</value>
+  </data>
+  <data name="HUDItems" xml:space="preserve">
+    <value>HUD Items</value>
+  </data>
+  <data name="ICAO" xml:space="preserve">
+    <value>ICAO: {0}</value>
+  </data>
+  <data name="ImageFileFormatNotRecognized" xml:space="preserve">
+    <value>Image file format not recognized.</value>
+  </data>
+  <data name="IncompleteMAVLinkFrame" xml:space="preserve">
+    <value>Incomplete MAVLink frame</value>
+  </data>
+  <data name="IndexTooLarge" xml:space="preserve">
+    <value>index too large</value>
+  </data>
+  <data name="InvalidAPJDescriptorNotFound" xml:space="preserve">
+    <value>Invalid APJ, descriptor not found</value>
+  </data>
+  <data name="InvalidBinDescriptorNotFound" xml:space="preserve">
+    <value>Invalid bin, descriptor not found</value>
+  </data>
+  <data name="InvalidIntelHexFile" xml:space="preserve">
+    <value>invalid IntelHex file</value>
+  </data>
+  <data name="InvalidMagic" xml:space="preserve">
+    <value>Invalid Magic {0}</value>
+  </data>
+  <data name="InvalidMatrixItem" xml:space="preserve">
+    <value>Invalid Matrix item</value>
+  </data>
+  <data name="InvalidMAVLinkFrameLength" xml:space="preserve">
+    <value>Invalid MAVLink frame length</value>
+  </data>
+  <data name="InvalidMAVLinkMagic" xml:space="preserve">
+    <value>Invalid MAVLink magic</value>
+  </data>
+  <data name="InvalidNumberOnParam" xml:space="preserve">
+    <value>Invalid number on param {0} : {1}</value>
+  </data>
+  <data name="InvalidNumberOnRow" xml:space="preserve">
+    <value>Invalid number on row {0}</value>
+  </data>
+  <data name="InvalidPiecesParameters" xml:space="preserve">
+    <value>Invalid pieces parameters</value>
+  </data>
+  <data name="InvalidPort" xml:space="preserve">
+    <value>Invalid Port</value>
+  </data>
+  <data name="InvalidRotation" xml:space="preserve">
+    <value>Invalid Rotation</value>
+  </data>
+  <data name="InvalidSerialPort" xml:space="preserve">
+    <value>Invalid Serial Port</value>
+  </data>
+  <data name="InvalidType" xml:space="preserve">
+    <value>invalid type</value>
+  </data>
+  <data name="LED" xml:space="preserve">
+    <value>LED</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Line: {0}</value>
+  </data>
+  <data name="MakeTerrainDAT" xml:space="preserve">
+    <value>Make Terrain DAT</value>
+  </data>
+  <data name="Map3D" xml:space="preserve">
+    <value>Map3D {0} compile failed: {1}</value>
+  </data>
+  <data name="Map3DShaderLinkFailed" xml:space="preserve">
+    <value>Map3D shader link failed: {0}</value>
+  </data>
+  <data name="Mass" xml:space="preserve">
+    <value>Mass</value>
+  </data>
+  <data name="MavftpResponded" xml:space="preserve">
+    <value>Mavftp responded - {0} {1} {2}</value>
+  </data>
+  <data name="MavftpRespondedErrFail" xml:space="preserve">
+    <value>Mavftp responded - Err Fail</value>
+  </data>
+  <data name="MAVLinkSerialPortTimeoutOnRead" xml:space="preserve">
+    <value>MAVLinkSerialPort Timeout on read</value>
+  </data>
+  <data name="MessageHasNoTargetSystemField" xml:space="preserve">
+    <value>Message has no target system field</value>
+  </data>
+  <data name="MiniMap" xml:space="preserve">
+    <value>Mini map</value>
+  </data>
+  <data name="MissingParams" xml:space="preserve">
+    <value>Missing Params {0} vs {1}</value>
+  </data>
+  <data name="MissionTypeOnlySupportedUnderMavlink2" xml:space="preserve">
+    <value>Mission type only supported under mavlink2</value>
+  </data>
+  <data name="MMSI" xml:space="preserve">
+    <value>MMSI: {0}</value>
+  </data>
+  <data name="N0Home" xml:space="preserve">
+    <value>0 (Home)</value>
+  </data>
+  <data name="N3DMap" xml:space="preserve">
+    <value>3D Map</value>
+  </data>
+  <data name="NetSerialTimeoutOnRead" xml:space="preserve">
+    <value>NetSerial Timeout on read</value>
+  </data>
+  <data name="NoAdapterWasFound" xml:space="preserve">
+    <value>No adapter was found.
+</value>
+  </data>
+  <data name="NoCoordinateFieldsFoundInLogFile" xml:space="preserve">
+    <value>No coordinate fields found in log file.</value>
+  </data>
+  <data name="NoDataAvailable" xml:space="preserve">
+    <value>No data available</value>
+  </data>
+  <data name="NoDataInIntelHexFile" xml:space="preserve">
+    <value>no data in IntelHex file</value>
+  </data>
+  <data name="NoDataInSerialBuffer" xml:space="preserve">
+    <value>No data in serial buffer</value>
+  </data>
+  <data name="NoDataToSave" xml:space="preserve">
+    <value>No data to save</value>
+  </data>
+  <data name="NoEndFlagInFile" xml:space="preserve">
+    <value>No end flag in file</value>
+  </data>
+  <data name="NoHeaderFoundInData" xml:space="preserve">
+    <value>No header found in data</value>
+  </data>
+  <data name="NoHeartBeatFound" xml:space="preserve">
+    <value>No HeartBeat found</value>
+  </data>
+  <data name="NoJoystickConfigurationFilesFoundIn" xml:space="preserve">
+    <value>No joystick configuration files found in {0}</value>
+  </data>
+  <data name="NoMapSourceWithThisNameExistsOnThisComputerSoTheseTilesCanno" xml:space="preserve">
+    <value>No map source with this name exists on this computer, so these tiles cannot be shown.</value>
+  </data>
+  <data name="NoMjpegLengthHeader" xml:space="preserve">
+    <value>No mjpeg length header</value>
+  </data>
+  <data name="NoPacketMatchFound" xml:space="preserve">
+    <value>No packet match found</value>
+  </data>
+  <data name="NoParamAreaFound" xml:space="preserve">
+    <value>No param area found</value>
+  </data>
+  <data name="NoPriorConfigSetdefaultShouldHaveCreatedThis" xml:space="preserve">
+    <value>no prior config - setdefault should have created this</value>
+  </data>
+  <data name="NoRepresentableSystemIDsRemain" xml:space="preserve">
+    <value>No representable system IDs remain</value>
+  </data>
+  <data name="NoSuchDevice" xml:space="preserve">
+    <value>No such device</value>
+  </data>
+  <data name="NoSuchName" xml:space="preserve">
+    <value>No such name</value>
+  </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>Not Connected</value>
+  </data>
+  <data name="NotEnoughData" xml:space="preserve">
+    <value>Not Enough Data</value>
+  </data>
+  <data name="NoVehicleHeartbeat" xml:space="preserve">
+    <value>No vehicle heartbeat</value>
+  </data>
+  <data name="NoWrite" xml:space="preserve">
+    <value>No write</value>
+  </data>
+  <data name="NtripSocketClosed" xml:space="preserve">
+    <value>ntrip Socket Closed</value>
+  </data>
+  <data name="NtripTimeoutOnRead" xml:space="preserve">
+    <value>ntrip Timeout on read</value>
+  </data>
+  <data name="ObjectIsNotAQuarter" xml:space="preserve">
+    <value>Object is not a quarter</value>
+  </data>
+  <data name="ObjectMustBeOfTypeHalf" xml:space="preserve">
+    <value>Object must be of type Half.</value>
+  </data>
+  <data name="OK2" xml:space="preserve">
+    <value>OK {0}</value>
+  </data>
+  <data name="OnlyMessageBoxButtonsOKAndYesNoSupportedAtThisTime" xml:space="preserve">
+    <value>Only MessageBoxButtons.OK and YesNo supported at this time</value>
+  </data>
+  <data name="OriginAndDestinationPointsMustBeNonNull" xml:space="preserve">
+    <value>Origin and destination points must be non-null.</value>
+  </data>
+  <data name="OutputPipeNotAvailable" xml:space="preserve">
+    <value>Output pipe not available</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PleaseConnectFirst2" xml:space="preserve">
+    <value>Please Connect First!</value>
+  </data>
+  <data name="PleaseEnterAWidthAndHeightSeperatedByAComma" xml:space="preserve">
+    <value>Please enter a width and height seperated by a comma.</value>
+  </data>
+  <data name="ProcessIntersectionsError" xml:space="preserve">
+    <value>ProcessIntersections error</value>
+  </data>
+  <data name="ProcessScanLine8bitAltIsInvalid" xml:space="preserve">
+    <value>ProcessScanLine: 8bit alt is invalid</value>
+  </data>
+  <data name="ProcessScanLineInvalidGeotiffCoord" xml:space="preserve">
+    <value>ProcessScanLine: Invalid geotiff coord</value>
+  </data>
+  <data name="PropertiesMasterPane" xml:space="preserve">
+    <value>Properties MasterPane</value>
+  </data>
+  <data name="PropertiesYAxis" xml:space="preserve">
+    <value>Properties YAxis</value>
+  </data>
+  <data name="PropertiesYAxis2" xml:space="preserve">
+    <value>Properties YAxis2</value>
+  </data>
+  <data name="Rainbow" xml:space="preserve">
+    <value>Rainbow</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="RequestedGraphicsModeNotAvailableError" xml:space="preserve">
+    <value>Requested GraphicsMode not available, error: {0}</value>
+  </data>
+  <data name="ResetBaud" xml:space="preserve">
+    <value>Reset Baud</value>
+  </data>
+  <data name="SaveAnonymizedLog" xml:space="preserve">
+    <value>Save anonymized log</value>
+  </data>
+  <data name="Saved2" xml:space="preserve">
+    <value>Saved {0}</value>
+  </data>
+  <data name="SelectArduPilotBinLogToAnonymize" xml:space="preserve">
+    <value>Select ArduPilot .bin log to anonymize</value>
+  </data>
+  <data name="SelectCustomAircraftIcon" xml:space="preserve">
+    <value>Select Custom Aircraft Icon</value>
+  </data>
+  <data name="Server" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="SetupOtherPositions" xml:space="preserve">
+    <value>Setup other positions</value>
+  </data>
+  <data name="SetVideoStream1V1" xml:space="preserve">
+    <value>Set Video stream 1 v1</value>
+  </data>
+  <data name="SetVideoStream2V1" xml:space="preserve">
+    <value>Set Video stream 2 v1</value>
+  </data>
+  <data name="ShareToAPI" xml:space="preserve">
+    <value>Share to API</value>
+  </data>
+  <data name="ShowEventNotSet" xml:space="preserve">
+    <value>ShowEvent Not Set</value>
+  </data>
+  <data name="SocketClosed" xml:space="preserve">
+    <value>Socket Closed</value>
+  </data>
+  <data name="Str5" xml:space="preserve">
+    <value>—</value>
+  </data>
+  <data name="Str6" xml:space="preserve">
+    <value>…</value>
+  </data>
+  <data name="Str7" xml:space="preserve">
+    <value>▶</value>
+  </data>
+  <data name="Str8" xml:space="preserve">
+    <value>◀</value>
+  </data>
+  <data name="SwapWithMap" xml:space="preserve">
+    <value>Swap with map</value>
+  </data>
+  <data name="SYNCFAIL" xml:space="preserve">
+    <value>SYNC FAIL</value>
+  </data>
+  <data name="SYNCLOST" xml:space="preserve">
+    <value>SYNC LOST</value>
+  </data>
+  <data name="T" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="TakeOff2m" xml:space="preserve">
+    <value>TakeOff (2m)</value>
+  </data>
+  <data name="TAKMulticast" xml:space="preserve">
+    <value>TAK Multicast</value>
+  </data>
+  <data name="TCPClient" xml:space="preserve">
+    <value>TCP Client</value>
+  </data>
+  <data name="TCPHost" xml:space="preserve">
+    <value>TCP Host</value>
+  </data>
+  <data name="TCPHost14551" xml:space="preserve">
+    <value>TCP Host - 14551</value>
+  </data>
+  <data name="TextIsRequired" xml:space="preserve">
+    <value>"text" is required.</value>
+  </data>
+  <data name="TheDeviceCouldNotBeInitializedItMayNotBeConnectedToTheSystem" xml:space="preserve">
+    <value>The device could not be initialized, it may not be connected to the system.</value>
+  </data>
+  <data name="TheNtripIsClosed" xml:space="preserve">
+    <value>The ntrip is closed</value>
+  </data>
+  <data name="ThereWasAnErrorWhenCreatingTheMATFile" xml:space="preserve">
+    <value>There was an error when creating the MAT-file: 
+{0}</value>
+  </data>
+  <data name="ThereWasAnUnexpectedErrorWhenStartingTheSessionWithTheDevice" xml:space="preserve">
+    <value>There was an unexpected error when starting the session with the device.</value>
+  </data>
+  <data name="TheRTCMIntervalIsnTAValidNumber" xml:space="preserve">
+    <value>The RTCM interval isn't a valid number</value>
+  </data>
+  <data name="TheRTCMIntervalShouldBeBetween01And600" xml:space="preserve">
+    <value>The RTCM interval should be between 0,1 and 600</value>
+  </data>
+  <data name="TheSocketSerialproxyIsClosed" xml:space="preserve">
+    <value>The socket/serialproxy is closed</value>
+  </data>
+  <data name="TheSocketUDPSerialIsClosed" xml:space="preserve">
+    <value>The socket/UDPSerial is closed {0}</value>
+  </data>
+  <data name="ThisFirmwareRequiresBankingSupport" xml:space="preserve">
+    <value>This Firmware requires banking support</value>
+  </data>
+  <data name="Timeout2" xml:space="preserve">
+    <value>Timeout</value>
+  </data>
+  <data name="TimeoutOnReadDoCommand" xml:space="preserve">
+    <value>Timeout on read - doCommand</value>
+  </data>
+  <data name="TimeoutOnReadGetFencePoint" xml:space="preserve">
+    <value>Timeout on read - getFencePoint</value>
+  </data>
+  <data name="TimeoutOnReadGetHomePosition" xml:space="preserve">
+    <value>Timeout on read - getHomePosition</value>
+  </data>
+  <data name="TimeoutOnReadGetLog" xml:space="preserve">
+    <value>Timeout on read - GetLog</value>
+  </data>
+  <data name="TimeoutOnReadGetLogEntry" xml:space="preserve">
+    <value>Timeout on read - GetLogEntry</value>
+  </data>
+  <data name="TimeoutOnReadGetParam" xml:space="preserve">
+    <value>Timeout on read - GetParam</value>
+  </data>
+  <data name="TimeoutOnReadGetRallyPoint" xml:space="preserve">
+    <value>Timeout on read - getRallyPoint</value>
+  </data>
+  <data name="TimeoutOnReadGetRequestedWPNo" xml:space="preserve">
+    <value>Timeout on read - getRequestedWPNo</value>
+  </data>
+  <data name="TimeoutOnReadGetWP" xml:space="preserve">
+    <value>Timeout on read - getWP</value>
+  </data>
+  <data name="TimeoutOnReadGetWPCount" xml:space="preserve">
+    <value>Timeout on read - getWPCount</value>
+  </data>
+  <data name="TimeoutOnReadSetParam" xml:space="preserve">
+    <value>Timeout on read - setParam {0}</value>
+  </data>
+  <data name="TimeoutOnReadSetWP" xml:space="preserve">
+    <value>Timeout on read - setWP</value>
+  </data>
+  <data name="TimeoutOnReadSetWPCurrent" xml:space="preserve">
+    <value>Timeout on read - setWPCurrent</value>
+  </data>
+  <data name="TimeoutOnReadSetWPTotal" xml:space="preserve">
+    <value>Timeout on read - setWPTotal</value>
+  </data>
+  <data name="TimeoutWaitingForData" xml:space="preserve">
+    <value>Timeout waiting for data</value>
+  </data>
+  <data name="Tracemp" xml:space="preserve">
+    <value>tracemp</value>
+  </data>
+  <data name="TrackingVendor" xml:space="preserve">
+    <value>Tracking
+Vendor: {0}
+Model: {1}
+Serial: {2}</value>
+  </data>
+  <data name="TranslationKeyIsRequired" xml:space="preserve">
+    <value>"translationKey" is required.</value>
+  </data>
+  <data name="TruncatedMAVLinkFrame" xml:space="preserve">
+    <value>Truncated MAVLink frame</value>
+  </data>
+  <data name="TruncatedMAVLinkHeader" xml:space="preserve">
+    <value>Truncated MAVLink header</value>
+  </data>
+  <data name="TypeAlreadyExists" xml:space="preserve">
+    <value>Type already exists</value>
+  </data>
+  <data name="UDPClient" xml:space="preserve">
+    <value>UDP Client</value>
+  </data>
+  <data name="UDPHost" xml:space="preserve">
+    <value>UDP Host</value>
+  </data>
+  <data name="UDPHost14551" xml:space="preserve">
+    <value>UDP Host - 14551</value>
+  </data>
+  <data name="UdpSerialConnectTimeoutOnRead" xml:space="preserve">
+    <value>UdpSerialConnect Timeout on read</value>
+  </data>
+  <data name="UnableToCreateControl" xml:space="preserve">
+    <value>Unable to create control {0} of type {1}</value>
+  </data>
+  <data name="UnableToWriteToTheInstallDirectory" xml:space="preserve">
+    <value>Unable to write to the install directory</value>
+  </data>
+  <data name="UnhandledType" xml:space="preserve">
+    <value>unhandled type</value>
+  </data>
+  <data name="UnknownGrabberMediaFormat" xml:space="preserve">
+    <value>Unknown Grabber Media Format</value>
+  </data>
+  <data name="UnsupportedMAVLinkIncompatibilityFlags" xml:space="preserve">
+    <value>Unsupported MAVLink incompatibility flags</value>
+  </data>
+  <data name="UnsupportedMAVLinkIncompatibleFlags" xml:space="preserve">
+    <value>Unsupported MAVLink incompatible flags</value>
+  </data>
+  <data name="UpdateEdgeIntoAELInvalidCall" xml:space="preserve">
+    <value>UpdateEdgeIntoAEL: invalid call</value>
+  </data>
+  <data name="Upload2" xml:space="preserve">
+    <value>Upload {0}</value>
+  </data>
+  <data name="UploadFailedLostSyncTryArduino" xml:space="preserve">
+    <value>Upload failed. Lost sync. Try Arduino!!</value>
+  </data>
+  <data name="UploadFailedPleaseReduceTheNumberOfWpS" xml:space="preserve">
+    <value>Upload failed, please reduce the number of wp's</value>
+  </data>
+  <data name="UserCanceled" xml:space="preserve">
+    <value>User Canceled</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="UserRequest" xml:space="preserve">
+    <value>User Request</value>
+  </data>
+  <data name="VehicleRejectedItsAllocatedSystemID" xml:space="preserve">
+    <value>Vehicle rejected its allocated system ID</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="VERIFYFAIL" xml:space="preserve">
+    <value>VERIFY FAIL</value>
+  </data>
+  <data name="White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="X" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="X2" xml:space="preserve">
+    <value>x {0}</value>
+  </data>
+  <data name="Y" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="Z" xml:space="preserve">
+    <value>Z</value>
+  </data>
 </root>

@@ -120,4 +120,124 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+<data name="NUM_precision.ToolTip" xml:space="preserve">
+    <value>How many decimal places to show</value>
+</data>
+<data name="LBL_precision.Text" xml:space="preserve">
+    <value>Precision:</value>
+</data>
+<data name="LBL_precision.ToolTip" xml:space="preserve">
+    <value>How many decimal places to show</value>
+</data>
+<data name="LBL_color.Text" xml:space="preserve">
+    <value>Color</value>
+</data>
+<data name="LBL_color.ToolTip" xml:space="preserve">
+    <value>Text color for the value</value>
+</data>
+<data name="TXT_color.ToolTip" xml:space="preserve">
+    <value>Apply custom text color</value>
+</data>
+<data name="BUT_colorpicker.ToolTip" xml:space="preserve">
+    <value>Apply custom text color</value>
+</data>
+<data name="groupBox1.Text" xml:space="preserve">
+    <value>Advanced</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>Scale</value>
+</data>
+<data name="label1.ToolTip" xml:space="preserve">
+    <value>Apply scale and offset to convert units.</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Offset</value>
+</data>
+<data name="label2.ToolTip" xml:space="preserve">
+    <value>Apply scale and offset to convert units.</value>
+</data>
+<data name="LBL_label.Text" xml:space="preserve">
+    <value>Label</value>
+</data>
+<data name="LBL_label.ToolTip" xml:space="preserve">
+    <value>Description shown at the top of the item</value>
+</data>
+<data name="TXT_customformat.ToolTip" xml:space="preserve">
+    <value>Custom format specifier, e.g. &quot;0.0&quot; or &quot;m:ss&quot;</value>
+</data>
+<data name="TXT_customlabel.ToolTip" xml:space="preserve">
+    <value>Override the description at the top</value>
+</data>
+<data name="TXT_offset.ToolTip" xml:space="preserve">
+    <value>Apply scale and offset to convert units.</value>
+</data>
+<data name="TXT_scale.ToolTip" xml:space="preserve">
+    <value>Apply scale and offset to convert units.</value>
+</data>
+<data name="LBL_format.Text" xml:space="preserve">
+    <value>Format</value>
+</data>
+<data name="LBL_format.ToolTip" xml:space="preserve">
+    <value>Format specifier, e.g. &quot;0.00&quot; or &quot;m:ss&quot;</value>
+</data>
+<data name="CHK_gauge.Text" xml:space="preserve">
+    <value>Gauge</value>
+</data>
+<data name="CHK_gauge.ToolTip" xml:space="preserve">
+    <value>Display as a 180-degree gauge with needle</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>Min</value>
+</data>
+<data name="label3.ToolTip" xml:space="preserve">
+    <value>Minimum value for gauge scale</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>Max</value>
+</data>
+<data name="label4.ToolTip" xml:space="preserve">
+    <value>Maximum value for gauge scale</value>
+</data>
+<data name="TXT_gaugeMin.ToolTip" xml:space="preserve">
+    <value>Minimum value for gauge scale</value>
+</data>
+<data name="TXT_gaugeMax.ToolTip" xml:space="preserve">
+    <value>Maximum value for gauge scale</value>
+</data>
+<data name="CHK_colorCode.Text" xml:space="preserve">
+    <value>Color-code</value>
+</data>
+<data name="CHK_colorCode.ToolTip" xml:space="preserve">
+    <value>Color the value Red/Yellow/Green based on threshold values below.&#xD;&#xA;The displayed color is the one whose threshold is the highest still &lt;= value.</value>
+</data>
+<data name="LBL_redValue.Text" xml:space="preserve">
+    <value>Red</value>
+</data>
+<data name="LBL_redValue.ToolTip" xml:space="preserve">
+    <value>Value at which the display turns red</value>
+</data>
+<data name="TXT_redValue.ToolTip" xml:space="preserve">
+    <value>Value at which the display turns red</value>
+</data>
+<data name="LBL_yellowValue.Text" xml:space="preserve">
+    <value>Yellow</value>
+</data>
+<data name="LBL_yellowValue.ToolTip" xml:space="preserve">
+    <value>Value at which the display turns yellow</value>
+</data>
+<data name="TXT_yellowValue.ToolTip" xml:space="preserve">
+    <value>Value at which the display turns yellow</value>
+</data>
+<data name="LBL_greenValue.Text" xml:space="preserve">
+    <value>Green</value>
+</data>
+<data name="LBL_greenValue.ToolTip" xml:space="preserve">
+    <value>Value at which the display turns green</value>
+</data>
+<data name="TXT_greenValue.ToolTip" xml:space="preserve">
+    <value>Value at which the display turns green</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>Edit Item</value>
+</data>
 </root>

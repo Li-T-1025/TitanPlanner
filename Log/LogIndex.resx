@@ -117,4 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="olvColumnDate.Text" xml:space="preserve">
+    <value>Date</value>
+</data>
+<data name="olvColumndir.Text" xml:space="preserve">
+    <value>Directory</value>
+</data>
+<data name="olvColumnFrame.Text" xml:space="preserve">
+    <value>Frame</value>
+</data>
+<data name="olvColumnSysid.Text" xml:space="preserve">
+    <value>Aircraft</value>
+</data>
+<data name="olvColumnduration.Text" xml:space="preserve">
+    <value>Duration</value>
+</data>
+<data name="olvColumnName.Text" xml:space="preserve">
+    <value>FileName</value>
+</data>
+<data name="olvColumnSize.Text" xml:space="preserve">
+    <value>Size</value>
+</data>
+<data name="olvColumnHome.Text" xml:space="preserve">
+    <value>Home</value>
+</data>
+<data name="olvColumnTimeInAir.Text" xml:space="preserve">
+    <value>TimeInAir, sec</value>
+</data>
+<data name="olvColumnDistTraveled.Text" xml:space="preserve">
+    <value>DistTraveled, m</value>
+</data>
+<data name="olvColumnCamMSG.Text" xml:space="preserve">
+    <value>CamMSG</value>
+</data>
+<data name="BUT_changedir.Text" xml:space="preserve">
+    <value>Custom Directory</value>
+</data>
+<data name="btnDeleteLog.Text" xml:space="preserve">
+    <value>Delete selected</value>
+</data>
+<data name="lbStats.Text" xml:space="preserve">
+    <value>Selected: 0</value>
+</data>
+<data name="but_defaultlogdir.Text" xml:space="preserve">
+    <value>Default Log Dir</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>LogIndex</value>
+</data>
 </root>

@@ -129,4 +129,25 @@
   <metadata name="Use.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<data name="Command.HeaderText" xml:space="preserve">
+    <value>Command</value>
+</data>
+<data name="Value.HeaderText" xml:space="preserve">
+    <value>Value</value>
+</data>
+<data name="newvalue.HeaderText" xml:space="preserve">
+    <value>New Value</value>
+</data>
+<data name="Use.HeaderText" xml:space="preserve">
+    <value>Use</value>
+</data>
+<data name="BUT_save.Text" xml:space="preserve">
+    <value>Continue</value>
+</data>
+<data name="CHK_toggleall.Text" xml:space="preserve">
+    <value>Check/Uncheck All</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>ParamCompare</value>
+</data>
 </root>

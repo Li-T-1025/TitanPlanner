@@ -117,4 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="but_loadlog.Text" xml:space="preserve">
+    <value>Load Log</value>
+</data>
+<data name="cmb_sensor.Items" xml:space="preserve">
+    <value>ACC1</value>
+</data>
+<data name="cmb_sensor.Items1" xml:space="preserve">
+    <value>ACC2</value>
+</data>
+<data name="cmb_sensor.Items2" xml:space="preserve">
+    <value>ACC3</value>
+</data>
+<data name="cmb_sensor.Items3" xml:space="preserve">
+    <value>ACC4</value>
+</data>
+<data name="cmb_sensor.Items4" xml:space="preserve">
+    <value>ACC5</value>
+</data>
+<data name="cmb_sensor.Items5" xml:space="preserve">
+    <value>GYR1</value>
+</data>
+<data name="cmb_sensor.Items6" xml:space="preserve">
+    <value>GYR2</value>
+</data>
+<data name="cmb_sensor.Items7" xml:space="preserve">
+    <value>GYR3</value>
+</data>
+<data name="cmb_sensor.Items8" xml:space="preserve">
+    <value>GYR4</value>
+</data>
+<data name="cmb_sensor.Items9" xml:space="preserve">
+    <value>GYR5</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>Min</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Max</value>
+</data>
+<data name="but_redraw.Text" xml:space="preserve">
+    <value>Update</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>SpectrogramUI</value>
+</data>
 </root>

@@ -117,4 +117,70 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="label1.Text" xml:space="preserve">
+    <value>Operator ID</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>UAS ID</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>UAS ID Type</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>UA Type</value>
+</data>
+<data name="label4_info.Text" xml:space="preserve">
+    <value>Optional settings. Typically these are set in the ArduRemoteID&#xD;&#xA;device instead.</value>
+</data>
+<data name="label12.Text" xml:space="preserve">
+    <value>ARM Status</value>
+</data>
+<data name="LED_ArmedError.Text" xml:space="preserve">
+    <value>ledBulb1</value>
+</data>
+<data name="label13.Text" xml:space="preserve">
+    <value>RID Comms</value>
+</data>
+<data name="LED_RemoteID_Messages.Text" xml:space="preserve">
+    <value>ledBulb1</value>
+</data>
+<data name="LED_gps_valid.Text" xml:space="preserve">
+    <value>LED_gps_sbas</value>
+</data>
+<data name="label14.Text" xml:space="preserve">
+    <value>GCS GPS</value>
+</data>
+<data name="label17.Text" xml:space="preserve">
+    <value>Self ID Type</value>
+</data>
+<data name="label18.Text" xml:space="preserve">
+    <value>Self ID Desc</value>
+</data>
+<data name="label18_info.Text" xml:space="preserve">
+    <value>These fields are optional in the USA.&#xD;&#xA;They can also be set in the ArduRemoteID device.</value>
+</data>
+<data name="groupBox2.Text" xml:space="preserve">
+    <value>Remote ID Status</value>
+</data>
+<data name="tabStatus.Text" xml:space="preserve">
+    <value>Status</value>
+</data>
+<data name="label8.Text" xml:space="preserve">
+    <value>This version of Open Drone ID Plugin is for Testing Only.&#xD;&#xA;Double Click GPS Data for RAW NMEA Viewer. </value>
+</data>
+<data name="label5.Text" xml:space="preserve">
+    <value>RID Armed Status</value>
+</data>
+<data name="tab_uid.Text" xml:space="preserve">
+    <value>UAS ID</value>
+</data>
+<data name="tab_ops.Text" xml:space="preserve">
+    <value>Operations</value>
+</data>
+<data name="label7.Text" xml:space="preserve">
+    <value>Self ID: </value>
+</data>
+<data name="label6.Text" xml:space="preserve">
+    <value>Oper. ID Type</value>
+</data>
 </root>

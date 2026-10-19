@@ -120,4 +120,37 @@
   <metadata name="colorSelectDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+<data name="lblItemName.Text" xml:space="preserve">
+    <value>ItemName</value>
+</data>
+<data name="lblColorName.Text" xml:space="preserve">
+    <value>ColorName</value>
+</data>
+<data name="btnCopy.Text" xml:space="preserve">
+    <value>Create Copy</value>
+</data>
+<data name="btnPreview.Text" xml:space="preserve">
+    <value>Preview Colors</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>Theme Name:</value>
+</data>
+<data name="groupBox1.Text" xml:space="preserve">
+    <value>Selected Item</value>
+</data>
+<data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+</data>
+<data name="btnSaveApply.Text" xml:space="preserve">
+    <value>Save &amp;&amp; Apply</value>
+</data>
+<data name="btnRestore.Text" xml:space="preserve">
+    <value>Restore Theme</value>
+</data>
+<data name="cbIconSet.Text" xml:space="preserve">
+    <value>Dark menuicons</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>ThemeEditor</value>
+</data>
 </root>

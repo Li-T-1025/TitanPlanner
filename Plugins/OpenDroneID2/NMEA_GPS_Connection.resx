@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="CB_auto_connect.Text" xml:space="preserve">
+    <value>Auto</value>
+</data>
+<data name="BUT_connect.Text" xml:space="preserve">
+    <value>Connect Base GPS</value>
+</data>
+<data name="groupBox1.Text" xml:space="preserve">
+    <value>GCS GPS </value>
+</data>
+<data name="LBL_gpsStatus.Text" xml:space="preserve">
+    <value>Not Yet Started                                                                                            </value>
+</data>
 </root>

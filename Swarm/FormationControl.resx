@@ -126,4 +126,37 @@
   <metadata name="timer_status.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>154, 17</value>
   </metadata>
+<data name="BUT_Start.Text" xml:space="preserve">
+    <value>Start</value>
+</data>
+<data name="BUT_leader.Text" xml:space="preserve">
+    <value>Set Leader</value>
+</data>
+<data name="BUT_Land.Text" xml:space="preserve">
+    <value>Land (all)</value>
+</data>
+<data name="BUT_Takeoff.Text" xml:space="preserve">
+    <value>Takeoff</value>
+</data>
+<data name="BUT_Disarm.Text" xml:space="preserve">
+    <value>Disarm (exl leader)</value>
+</data>
+<data name="BUT_Arm.Text" xml:space="preserve">
+    <value>Arm (exl leader)</value>
+</data>
+<data name="tabPage1.Text" xml:space="preserve">
+    <value>Stage 1</value>
+</data>
+<data name="BUT_Updatepos.Text" xml:space="preserve">
+    <value>Update Pos</value>
+</data>
+<data name="but_guided.Text" xml:space="preserve">
+    <value>Guided Mode (exl leader)</value>
+</data>
+<data name="but_auto.Text" xml:space="preserve">
+    <value>Auto Mode  (exl leader)</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>Control</value>
+</data>
 </root>

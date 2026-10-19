@@ -135,4 +135,31 @@
   <metadata name="GPS2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<data name="label6.Text" xml:space="preserve">
+    <value>UAVCAN GPS Order</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>Set the GPS order if required&#xD;&#xA;</value>
+</data>
+<data name="orderDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Order</value>
+</data>
+<data name="nodeIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>NodeID</value>
+</data>
+<data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Name</value>
+</data>
+<data name="GPS1.HeaderText" xml:space="preserve">
+    <value>GPS1</value>
+</data>
+<data name="GPS1.Text" xml:space="preserve">
+    <value>Override 1</value>
+</data>
+<data name="GPS2.HeaderText" xml:space="preserve">
+    <value>GPS2</value>
+</data>
+<data name="GPS2.Text" xml:space="preserve">
+    <value>Override 2</value>
+</data>
 </root>

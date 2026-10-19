@@ -121,4 +121,25 @@
     <value>17, 17</value>
   </metadata>
 
+<data name="BUT_tlogfile.Text" xml:space="preserve">
+    <value>Browse Tlog</value>
+</data>
+<data name="BUT_vidfile.Text" xml:space="preserve">
+    <value>Browse Video</value>
+</data>
+<data name="textBox1.Text" xml:space="preserve">
+    <value>Please make sure you have installed&#xD;&#xA;ffdshow&#xD;&#xA;and haali media splitter.</value>
+</data>
+<data name="CHK_fullres.Text" xml:space="preserve">
+    <value>Full Res</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>time offset in seconds</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>playback timeline</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>OSDVideo</value>
+</data>
 </root>

@@ -153,4 +153,55 @@
   <metadata name="VMF.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<data name="BTN_clear_TB.Text" xml:space="preserve">
+    <value>Clear Window</value>
+</data>
+<data name="GB_connection.Text" xml:space="preserve">
+    <value>Connection</value>
+</data>
+<data name="BUT_connect.Text" xml:space="preserve">
+    <value>Connect</value>
+</data>
+<data name="label_type.Text" xml:space="preserve">
+    <value>Type</value>
+</data>
+<data name="CB_advancedMode.Text" xml:space="preserve">
+    <value>Additional Details</value>
+</data>
+<data name="chk_indent.Text" xml:space="preserve">
+    <value>Nice Formatting</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Interval (sec)</value>
+</data>
+<data name="sysid.HeaderText" xml:space="preserve">
+    <value>sysid</value>
+</data>
+<data name="UID.HeaderText" xml:space="preserve">
+    <value>UID</value>
+</data>
+<data name="takv.HeaderText" xml:space="preserve">
+    <value>takv</value>
+</data>
+<data name="ContactCallsign.HeaderText" xml:space="preserve">
+    <value>ContactCallsign</value>
+</data>
+<data name="ContactEndPointIP.HeaderText" xml:space="preserve">
+    <value>ContactEndPointIP</value>
+</data>
+<data name="VMF.HeaderText" xml:space="preserve">
+    <value>VMF</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>Output Cursor on Target</value>
+</data>
+<data name="ContactCallsign.ToolTipText" xml:space="preserve">
+    <value>If you don&apos;t know what this is then leave it blank or use the UID</value>
+</data>
+<data name="ContactEndPointIP.ToolTipText" xml:space="preserve">
+    <value>If you don&apos;t know what this is then leave it blank</value>
+</data>
+<data name="VMF.ToolTipText" xml:space="preserve">
+    <value>If you don&apos;t know what this is then leave it blank</value>
+</data>
 </root>

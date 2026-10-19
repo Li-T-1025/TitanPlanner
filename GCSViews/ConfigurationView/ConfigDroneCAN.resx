@@ -144,4 +144,103 @@
   <metadata name="Menu.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+<data name="label6.Text" xml:space="preserve">
+    <value>DroneCAN/UAVCAN</value>
+</data>
+<data name="menu_parameters.Text" xml:space="preserve">
+    <value>Parameters</value>
+</data>
+<data name="menu_restart.Text" xml:space="preserve">
+    <value>Restart</value>
+</data>
+<data name="menu_update.Text" xml:space="preserve">
+    <value>Update</value>
+</data>
+<data name="menu_updatebeta.Text" xml:space="preserve">
+    <value>Update Beta</value>
+</data>
+<data name="menu_passthrough.Text" xml:space="preserve">
+    <value>CANPassThrough Here3</value>
+</data>
+<data name="menu_passthrough4.Text" xml:space="preserve">
+    <value>CANPassThough Here3+/4</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>After enabling SLCAN, you will no longer be able to connect via MAVLINK.&#xD;&#xA;You must leave this screen and wait 2 seconds before connecting again&#xD;&#xA;</value>
+</data>
+<data name="but_uavcaninspector.Text" xml:space="preserve">
+    <value>Inspector</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Node ID / Name</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>Mode / Health / Uptime</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>Vendor-specific code</value>
+</data>
+<data name="label5.Text" xml:space="preserve">
+    <value>Software version/CRC64</value>
+</data>
+<data name="label7.Text" xml:space="preserve">
+    <value>Hardware version/UID</value>
+</data>
+<data name="chk_log.Text" xml:space="preserve">
+    <value>Log</value>
+</data>
+<data name="Node.HeaderText" xml:space="preserve">
+    <value>Node</value>
+</data>
+<data name="Level.HeaderText" xml:space="preserve">
+    <value>Level</value>
+</data>
+<data name="Source.HeaderText" xml:space="preserve">
+    <value>Source</value>
+</data>
+<data name="UAVText.HeaderText" xml:space="preserve">
+    <value>Text</value>
+</data>
+<data name="chk_canonclose.Text" xml:space="preserve">
+    <value>Exit SLCAN on leave?</value>
+</data>
+<data name="but_filter.Text" xml:space="preserve">
+    <value>Filter</value>
+</data>
+<data name="but_stats.Text" xml:space="preserve">
+    <value>Stats</value>
+</data>
+<data name="but_connect.Text" xml:space="preserve">
+    <value>Connect</value>
+</data>
+<data name="iDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ID</value>
+</data>
+<data name="nameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Name</value>
+</data>
+<data name="modeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Mode</value>
+</data>
+<data name="healthDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Health</value>
+</data>
+<data name="uptimeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Uptime</value>
+</data>
+<data name="hardwareVersionDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>HW Version</value>
+</data>
+<data name="SoftwareVersion.HeaderText" xml:space="preserve">
+    <value>SW Version</value>
+</data>
+<data name="SoftwareCRC.HeaderText" xml:space="preserve">
+    <value>SW CRC</value>
+</data>
+<data name="Menu.HeaderText" xml:space="preserve">
+    <value>Menu</value>
+</data>
+<data name="CHK_checkupdate.Text" xml:space="preserve">
+    <value>Check for Updates</value>
+</data>
 </root>

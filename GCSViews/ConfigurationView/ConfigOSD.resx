@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="btnOsd56ItemsSetup.Text" xml:space="preserve">
+    <value>OSD / Telmetry Slots Config</value>
+</data>
+<data name="btnRefreshParameters.Text" xml:space="preserve">
+    <value>Refresh</value>
+</data>
+<data name="btnDiscardChanges.Text" xml:space="preserve">
+    <value>Discard all changes</value>
+</data>
+<data name="cbAutoWriteOnLeave.Text" xml:space="preserve">
+    <value>Auto write on leaving</value>
+</data>
+<data name="btnWrite.Text" xml:space="preserve">
+    <value>Write customization</value>
+</data>
 </root>

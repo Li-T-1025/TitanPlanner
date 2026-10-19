@@ -117,4 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="label1.Text" xml:space="preserve">
+    <value>GPS</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Armed</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>Mode</value>
+</data>
+<data name="lbl_gps.Text" xml:space="preserve">
+    <value>GPS</value>
+</data>
+<data name="lbl_armed.Text" xml:space="preserve">
+    <value>Armed</value>
+</data>
+<data name="lbl_mode.Text" xml:space="preserve">
+    <value>Mode</value>
+</data>
+<data name="lbl_mav.Text" xml:space="preserve">
+    <value>GPS</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>Guided</value>
+</data>
+<data name="label6.Text" xml:space="preserve">
+    <value>Location</value>
+</data>
+<data name="label8.Text" xml:space="preserve">
+    <value>Speed</value>
+</data>
 </root>

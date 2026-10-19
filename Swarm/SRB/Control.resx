@@ -120,4 +120,43 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+<data name="but_start.Text" xml:space="preserve">
+    <value>Start</value>
+</data>
+<data name="but_z.Text" xml:space="preserve">
+    <value>Start Z</value>
+</data>
+<data name="but_land.Text" xml:space="preserve">
+    <value>Start Land</value>
+</data>
+<data name="but_stop.Text" xml:space="preserve">
+    <value>Stop</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>TakeOffAlt</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>MinOffset</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>MaxOffset</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>label4</value>
+</data>
+<data name="label5.Text" xml:space="preserve">
+    <value>label5</value>
+</data>
+<data name="label6.Text" xml:space="preserve">
+    <value>label6</value>
+</data>
+<data name="label7.Text" xml:space="preserve">
+    <value>label7</value>
+</data>
+<data name="label8.Text" xml:space="preserve">
+    <value>Z speed</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>Control</value>
+</data>
 </root>

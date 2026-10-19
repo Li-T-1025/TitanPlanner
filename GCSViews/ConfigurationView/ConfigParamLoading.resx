@@ -120,4 +120,10 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+<data name="label1.Text" xml:space="preserve">
+    <value>Paramaters are still loading. Many screens will not work untill all Parameters are loaded. </value>
+</data>
+<data name="but_forceparams.Text" xml:space="preserve">
+    <value>Retry Now</value>
+</data>
 </root>

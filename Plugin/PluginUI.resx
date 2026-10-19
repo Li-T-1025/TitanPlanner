@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="labelWarning.Text" xml:space="preserve">
+    <value>Enable/Disable settings changed, till restart &#xD;&#xA;not loaded but enabled plugins will not shown!</value>
+</data>
+<data name="but_errors.Text" xml:space="preserve">
+    <value>Show Errors</value>
+</data>
+<data name="bSave.Text" xml:space="preserve">
+    <value>Save &amp;&amp; Close</value>
+</data>
+<data name="pluginName.HeaderText" xml:space="preserve">
+    <value>Plugin Name</value>
+</data>
+<data name="pluginAuthor.HeaderText" xml:space="preserve">
+    <value>Author</value>
+</data>
+<data name="pluginVersion.HeaderText" xml:space="preserve">
+    <value>Version</value>
+</data>
+<data name="pluginDll.HeaderText" xml:space="preserve">
+    <value>FileName</value>
+</data>
+<data name="pluginEnabled.HeaderText" xml:space="preserve">
+    <value>Enabled</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>PluginManager</value>
+</data>
 </root>

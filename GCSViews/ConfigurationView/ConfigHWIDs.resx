@@ -120,4 +120,22 @@
   <metadata name="deviceInfoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+<data name="paramNameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ParamName</value>
+</data>
+<data name="devIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>DevID</value>
+</data>
+<data name="busTypeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>BusType</value>
+</data>
+<data name="busDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Bus</value>
+</data>
+<data name="addressDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Address</value>
+</data>
+<data name="devTypeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>DevType</value>
+</data>
 </root>

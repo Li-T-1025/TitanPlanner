@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="but_cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+</data>
+<data name="but_save.Text" xml:space="preserve">
+    <value>Save</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>GimbalVideoControlSettings</value>
+</data>
 </root>

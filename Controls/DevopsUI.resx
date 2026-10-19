@@ -117,4 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="but_doit.Text" xml:space="preserve">
+    <value>Do It</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>sysid</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>compid</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>bus type</value>
+</data>
+<data name="dom_bustype.Text" xml:space="preserve">
+    <value>SPI</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>bus</value>
+</data>
+<data name="label5.Text" xml:space="preserve">
+    <value>address</value>
+</data>
+<data name="label6.Text" xml:space="preserve">
+    <value>regstart</value>
+</data>
+<data name="label7.Text" xml:space="preserve">
+    <value>count</value>
+</data>
+<data name="but_test.Text" xml:space="preserve">
+    <value>test</value>
+</data>
 </root>

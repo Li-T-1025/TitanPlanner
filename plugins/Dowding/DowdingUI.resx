@@ -117,4 +117,73 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="chk_enable.Text" xml:space="preserve">
+    <value>Enable at Start</value>
+</data>
+<data name="myLabel1.Text" xml:space="preserve">
+    <value>Username</value>
+</data>
+<data name="myLabel3.Text" xml:space="preserve">
+    <value>Password</value>
+</data>
+<data name="myLabel2.Text" xml:space="preserve">
+    <value>Server</value>
+</data>
+<data name="but_verify.Text" xml:space="preserve">
+    <value>Verify</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>Or</value>
+</data>
+<data name="but_token.Text" xml:space="preserve">
+    <value>Enter Token</value>
+</data>
+<data name="but_start.Text" xml:space="preserve">
+    <value>Start</value>
+</data>
+<data name="lbl_header.Text" xml:space="preserve">
+    <value>Dowding</value>
+</data>
+<data name="but_setathome.Text" xml:space="preserve">
+    <value>Set Tracker Home</value>
+</data>
+<data name="label9.Text" xml:space="preserve">
+    <value>Tracker Long</value>
+</data>
+<data name="label8.Text" xml:space="preserve">
+    <value>Tracker HAE</value>
+</data>
+<data name="label7.Text" xml:space="preserve">
+    <value>Tracker Lat</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Antenna Tracker</value>
+</data>
+<data name="BUT_connect.Text" xml:space="preserve">
+    <value>Connect</value>
+</data>
+<data name="label6.Text" xml:space="preserve">
+    <value>Password</value>
+</data>
+<data name="label5.Text" xml:space="preserve">
+    <value>User</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>IP:Port</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>Onvif</value>
+</data>
+<data name="but_onvif.Text" xml:space="preserve">
+    <value>Start</value>
+</data>
+<data name="label10.Text" xml:space="preserve">
+    <value>CoT</value>
+</data>
+<data name="but_cotstart.Text" xml:space="preserve">
+    <value>Connect</value>
+</data>
+<data name="label11.Text" xml:space="preserve">
+    <value>Yaw</value>
+</data>
 </root>

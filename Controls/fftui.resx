@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+<data name="label1.Text" xml:space="preserve">
+    <value>Bins</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>Start Freq</value>
+</data>
+<data name="chk_mag.Text" xml:space="preserve">
+    <value>Magnitude</value>
+</data>
+<data name="but_ISBH.Text" xml:space="preserve">
+    <value>IMU Batch Sample</value>
+</data>
+<data name="but_fftimu13.Text" xml:space="preserve">
+    <value>Run all imus - IMU1-3 MSG</value>
+</data>
+<data name="BUT_accgyrall.Text" xml:space="preserve">
+    <value>Run all imus - ACC GYR MSG</value>
+</data>
+<data name="but_accgyr1.Text" xml:space="preserve">
+    <value>Run Log - imu1 ACC1 GYR1 MSG</value>
+</data>
+<data name="BUT_runwav.Text" xml:space="preserve">
+    <value>Run 16bit Mono Wav</value>
+</data>
+<data name="$this.Text" xml:space="preserve">
+    <value>fftui</value>
+</data>
 </root>
