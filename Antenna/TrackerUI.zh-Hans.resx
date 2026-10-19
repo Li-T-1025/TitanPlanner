@@ -232,4 +232,25 @@
   <data name="label14.Text" xml:space="preserve">
     <value>中点的PWM</value>
   </data>
+<data name="CMB_interface.Items" xml:space="preserve">
+    <value>Maestro</value>
+</data>
+<data name="CMB_interface.Items1" xml:space="preserve">
+    <value>ArduTracker</value>
+</data>
+<data name="CMB_interface.Text" xml:space="preserve">
+    <value>Maestro</value>
+</data>
+<data name="label15.Text" xml:space="preserve">
+    <value>速度</value>
+</data>
+<data name="label16.Text" xml:space="preserve">
+    <value>加速度</value>
+</data>
+<data name="label17.Text" xml:space="preserve">
+    <value>加速度</value>
+</data>
+<data name="label18.Text" xml:space="preserve">
+    <value>速度</value>
+</data>
 </root>

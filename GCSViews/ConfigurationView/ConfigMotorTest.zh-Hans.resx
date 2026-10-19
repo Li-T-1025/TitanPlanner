@@ -152,4 +152,22 @@
   <data name="label3.Text" xml:space="preserve">
     <value>持续时间 (s)</value>
   </data>
+  <data name="FrameClass.Text" xml:space="preserve">
+    <value>类别：未知，类型：未知</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>最低起转油门</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>解锁起转油门</value>
+  </data>
+  <data name="btnTestAll.Text" xml:space="preserve">
+    <value>测试所有电机</value>
+  </data>
+  <data name="btnStopAll.Text" xml:space="preserve">
+    <value>停止所有电机</value>
+  </data>
+  <data name="btnTestSequence.Text" xml:space="preserve">
+    <value>顺序测试</value>
+  </data>
 </root>

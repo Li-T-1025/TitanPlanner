@@ -126,4 +126,10 @@
   <data name="BUT_Repeat.Text" xml:space="preserve">
     <value>切换</value>
   </data>
+    <data name="renameToolStripMenuItem.Text" xml:space="preserve">
+    <value>重命名</value>
+    </data>
+    <data name="but_mid.Text" xml:space="preserve">
+    <value>中位</value>
+    </data>
 </root>

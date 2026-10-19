@@ -160,4 +160,31 @@
   <data name="GS" xml:space="preserve">
     <value>地速 </value>
   </data>
+  <data name="E" xml:space="preserve">
+    <value>东</value>
+  </data>
+  <data name="GPS6" xml:space="preserve">
+    <value>GPS: RTK固定解</value>
+  </data>
+  <data name="N" xml:space="preserve">
+    <value>北</value>
+  </data>
+  <data name="NE" xml:space="preserve">
+    <value>东北</value>
+  </data>
+  <data name="NW" xml:space="preserve">
+    <value>西北</value>
+  </data>
+  <data name="S" xml:space="preserve">
+    <value>南</value>
+  </data>
+  <data name="SE" xml:space="preserve">
+    <value>东南</value>
+  </data>
+  <data name="SW" xml:space="preserve">
+    <value>西南</value>
+  </data>
+  <data name="W" xml:space="preserve">
+    <value>西</value>
+  </data>
 </root>

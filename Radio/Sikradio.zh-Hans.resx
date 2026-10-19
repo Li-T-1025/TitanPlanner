@@ -558,4 +558,355 @@
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="RRTSCTS.ToolTip" xml:space="preserve">
+    <value>启用或禁用硬件流控</value>
+  </data>
+  <data name="RMAX_FREQ.ToolTip" xml:space="preserve">
+    <value>最大频率 单位kHz </value>
+  </data>
+  <data name="RNUM_CHANNELS.ToolTip" xml:space="preserve">
+    <value>信道数量</value>
+  </data>
+  <data name="RDUTY_CYCLE.ToolTip" xml:space="preserve">
+    <value>允许传输的时间百分比</value>
+  </data>
+  <data name="RLBT_RSSI.ToolTip" xml:space="preserve">
+    <value>达到通话阈值前仅收听</value>
+  </data>
+  <data name="RMIN_FREQ.ToolTip" xml:space="preserve">
+    <value>最小频率 单位kHz </value>
+  </data>
+  <data name="RGPO1_1R_COUT.ToolTip" xml:space="preserve">
+    <value>GPI1_1R/COUT 将 GPIO 1.1 设为 R/C(PPM) 输出</value>
+  </data>
+  <data name="RGPI1_1R_CIN.ToolTip" xml:space="preserve">
+    <value>GPI1_1R/CIN 将 GPIO 1.1 设为 R/C(PPM) 输入</value>
+  </data>
+  <data name="RSERIAL_SPEED.ToolTip" xml:space="preserve">
+    <value>串行波特率 取整kbps。所以57的意思是57600。</value>
+  </data>
+  <data name="RAIR_SPEED.ToolTip" xml:space="preserve">
+    <value>AIR_SPEED是内部无线数据速率，以kbps为单位取整。所以128意味着128kbps。最大是192，最小为2。我不推荐把值设为低于16的。值太小的话会使地面通信设备对频同步的时间过长。</value>
+  </data>
+  <data name="RNETID.ToolTip" xml:space="preserve">
+    <value>网络ID是一个16位的 &apos;network ID&apos;。用于播发频率期望序列来识别数据包是否来自正确的数传。确保你使用的网络ID和本区域的其他数传不同。</value>
+  </data>
+  <data name="RTXPOWER.ToolTip" xml:space="preserve">
+    <value>TXPOWER为发射功率，单位dBm。20dBm是100mW，短距离测试时可设低一些。</value>
+  </data>
+  <data name="RECC.ToolTip" xml:space="preserve">
+    <value>ECC用来启用/禁用戈莱纠错码。默认为关。如果你启用了它，那么你的数据包就会以两倍的字节发送，这样你就失去了一半的空中波特宽度，但是它可以纠正每12位数据的3位错误。在长距离时用此项，通常结合较低的空中数据速率。戈莱解码每个传输字节花费20微秒 (每个用户数据字节40微秒)这意味着在空中高速率传播CPU有一点受限。所以使用个戈莱纠错时速率要在128kbps或更低。</value>
+  </data>
+  <data name="ROPPRESEND.ToolTip" xml:space="preserve">
+    <value>OPPRESEND 启用/禁用“条件性重发”。当启动时，当输入缓冲含有少于256字节时电台将两次发送同一个数据包。第二遍将标记为重发，接收电台在正确收到第一个包时会忽略重发的包。这对链路质量，特别是上行命令有很大的影响。</value>
+  </data>
+  <data name="RTSCTS.ToolTip" xml:space="preserve">
+    <value>启用或禁用硬件流控</value>
+  </data>
+  <data name="MAX_FREQ.ToolTip" xml:space="preserve">
+    <value>最大频率 单位kHz </value>
+  </data>
+  <data name="NUM_CHANNELS.ToolTip" xml:space="preserve">
+    <value>信道数量</value>
+  </data>
+  <data name="LBT_RSSI.ToolTip" xml:space="preserve">
+    <value>达到通话阈值前仅收听</value>
+  </data>
+  <data name="MIN_FREQ.ToolTip" xml:space="preserve">
+    <value>最小频率 单位kHz </value>
+  </data>
+  <data name="DUTY_CYCLE.ToolTip" xml:space="preserve">
+    <value>允许传输的时间百分比</value>
+  </data>
+  <data name="GPO1_1R_COUT.ToolTip" xml:space="preserve">
+    <value>GPI1_1R/COUT 将 GPIO 1.1 设为 R/C(PPM) 输出</value>
+  </data>
+  <data name="GPI1_1R_CIN.ToolTip" xml:space="preserve">
+    <value>GPI1_1R/CIN 将 GPIO 1.1 设为 R/C(PPM) 输入</value>
+  </data>
+  <data name="MAVLINK.ToolTip" xml:space="preserve">
+    <value>Mavlink</value>
+  </data>
+  <data name="SERIAL_SPEED.ToolTip" xml:space="preserve">
+    <value>串行波特率 取整kbps。所以57的意思是57600。</value>
+  </data>
+  <data name="AIR_SPEED.ToolTip" xml:space="preserve">
+    <value>AIR_SPEED是内部无线数据速率，以kbps为单位取整。所以128意味着128kbps。最大是192，最小为2。我不推荐把值设为低于16的。值太小的话会使地面通信设备对频同步的时间过长。</value>
+  </data>
+  <data name="NETID.ToolTip" xml:space="preserve">
+    <value>网络ID是一个16位的 &apos;network ID&apos;。用于播发频率期望序列来识别数据包是否来自正确的数传。确保你使用的网络ID和本区域的其他数传不同。</value>
+  </data>
+  <data name="TXPOWER.ToolTip" xml:space="preserve">
+    <value>TXPOWER为发射功率，单位dBm。20dBm是100mW，短距离测试时可设低一些。</value>
+  </data>
+  <data name="ECC.ToolTip" xml:space="preserve">
+    <value>ECC用来启用/禁用戈莱纠错码。默认为关。如果你启用了它，那么你的数据包就会以两倍的字节发送，这样你就失去了一半的空中波特宽度，但是它可以纠正每12位数据的3位错误。在长距离时用此项，通常结合较低的空中数据速率。戈莱解码每个传输字节花费20微秒 (每个用户数据字节40微秒)这意味着在空中高速率传播CPU有一点受限。所以使用个戈莱纠错时速率要在128kbps或更低。</value>
+  </data>
+  <data name="OPPRESEND.ToolTip" xml:space="preserve">
+    <value>OPPRESEND 启用/禁用“条件性重发”。当启动时，当输入缓冲含有少于256字节时电台将两次发送同一个数据包。第二遍将标记为重发，接收电台在正确收到第一个包时会忽略重发的包。这对链路质量，特别是上行命令有很大的影响。</value>
+  </data>
+  <data name="ENCRYPTION_LEVEL.ToolTip" xml:space="preserve">
+    <value>AES 加密级别</value>
+  </data>
+  <data name="RENCRYPTION_LEVEL.ToolTip" xml:space="preserve">
+    <value>AES 加密级别</value>
+  </data>
+  <data name="FSFRAMELOSS.ToolTip" xml:space="preserve">
+    <value>在进入故障保护之前，允许丢失的 SBUS 或 PPM 输出帧数。</value>
+  </data>
+  <data name="RFSFRAMELOSS.ToolTip" xml:space="preserve">
+    <value>在进入故障保护之前，允许丢失的 SBUS 或 PPM 输出帧数。</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>RSSI</value>
+  </data>
+  <data name="groupBoxLocal.Text" xml:space="preserve">
+    <value>本地</value>
+  </data>
+  <data name="label54.Text" xml:space="preserve">
+    <value>故障保护帧丢失</value>
+  </data>
+  <data name="lblGPO1_3AUXOUT.Text" xml:space="preserve">
+    <value>GPO1_3AUXOUT</value>
+  </data>
+  <data name="lblGPI1_2AUXIN.Text" xml:space="preserve">
+    <value>GPI1_2AUXIN</value>
+  </data>
+  <data name="lblGPIO1_1FUNC.Text" xml:space="preserve">
+    <value>GPIO1_1FUNC</value>
+  </data>
+  <data name="lblGPO1_0TXEN485.Text" xml:space="preserve">
+    <value>GPO1_0TXEN485</value>
+  </data>
+  <data name="lblGPO1_3STATLED.Text" xml:space="preserve">
+    <value>GPO1_3STATLED</value>
+  </data>
+  <data name="label49.Text" xml:space="preserve">
+    <value>国家：</value>
+  </data>
+  <data name="label45.Text" xml:space="preserve">
+    <value>速率/频段</value>
+  </data>
+  <data name="lblSBUSOUT.Text" xml:space="preserve">
+    <value>GPO1_3SBUSOUT:</value>
+  </data>
+  <data name="lblSBUSIN.Text" xml:space="preserve">
+    <value>GPO1_3SBUSIN</value>
+  </data>
+  <data name="btnRandom.Text" xml:space="preserve">
+    <value>随机</value>
+  </data>
+  <data name="lblRX_ENCAP_METHOD.Text" xml:space="preserve">
+    <value>RXENCAP</value>
+  </data>
+  <data name="lblTX_ENCAP_METHOD.Text" xml:space="preserve">
+    <value>TXENCAP</value>
+  </data>
+  <data name="lblDESTID.Text" xml:space="preserve">
+    <value>目标 ID</value>
+  </data>
+  <data name="lblNODEID.Text" xml:space="preserve">
+    <value>节点 ID</value>
+  </data>
+  <data name="lblGPO1_1R_COUT.Text" xml:space="preserve">
+    <value>GPO1_1R/COUT</value>
+  </data>
+  <data name="lblGPI1_1R_CIN.Text" xml:space="preserve">
+    <value>GPI1_1R/CIN</value>
+  </data>
+  <data name="lblNETID.Text" xml:space="preserve">
+    <value>网络 ID</value>
+  </data>
+  <data name="lblTXPOWER.Text" xml:space="preserve">
+    <value>发射功率</value>
+  </data>
+  <data name="lblECC.Text" xml:space="preserve">
+    <value>ECC</value>
+  </data>
+  <data name="lblOPPRESEND.Text" xml:space="preserve">
+    <value>Op 重发</value>
+  </data>
+  <data name="lblMAVLINK.Text" xml:space="preserve">
+    <value>Mavlink</value>
+  </data>
+  <data name="lblANT_MODE.Text" xml:space="preserve">
+    <value>天线模式</value>
+  </data>
+  <data name="lblSER_BRK_DETMS.Text" xml:space="preserve">
+    <value>断线检测</value>
+  </data>
+  <data name="lblGLOBAL_RETRIES.Text" xml:space="preserve">
+    <value>全局重试次数</value>
+  </data>
+  <data name="lblMAX_RETRIES.Text" xml:space="preserve">
+    <value>最大重试次数</value>
+  </data>
+  <data name="lblMAX_DATA.Text" xml:space="preserve">
+    <value>最大数据</value>
+  </data>
+  <data name="lblENCRYPTION_LEVEL.Text" xml:space="preserve">
+    <value>AES 加密</value>
+  </data>
+  <data name="label35.Text" xml:space="preserve">
+    <value>AES 密钥</value>
+  </data>
+  <data name="lblRTSCTS.Text" xml:space="preserve">
+    <value>RTS CTS</value>
+  </data>
+  <data name="lblMAX_WINDOW.Text" xml:space="preserve">
+    <value>最大窗口 (ms)</value>
+  </data>
+  <data name="lblMIN_FREQ.Text" xml:space="preserve">
+    <value>最小频率</value>
+  </data>
+  <data name="lblLBT_RSSI.Text" xml:space="preserve">
+    <value>LBT RSSI</value>
+  </data>
+  <data name="lblDUTY_CYCLE.Text" xml:space="preserve">
+    <value>占空比</value>
+  </data>
+  <data name="lblNUM_CHANNELS.Text" xml:space="preserve">
+    <value>通道数</value>
+  </data>
+  <data name="lblMAX_FREQ.Text" xml:space="preserve">
+    <value>最大频率</value>
+  </data>
+  <data name="btnRemoteLoadFromFile.Text" xml:space="preserve">
+    <value>从文件加载…</value>
+  </data>
+  <data name="btnRemoteSaveToFile.Text" xml:space="preserve">
+    <value>保存到文件…</value>
+  </data>
+  <data name="lblRFSFRAMELOSS.Text" xml:space="preserve">
+    <value>故障保护帧丢失</value>
+  </data>
+  <data name="lblRGPO1_3AUXOUT.Text" xml:space="preserve">
+    <value>GPO1_3AUXOUT</value>
+  </data>
+  <data name="lblRGPI1_2AUXIN.Text" xml:space="preserve">
+    <value>GPI1_2AUXIN</value>
+  </data>
+  <data name="lblRGPIO1_1FUNC.Text" xml:space="preserve">
+    <value>GPIO1_1FUNC</value>
+  </data>
+  <data name="lblRGPO1_0TXEN485.Text" xml:space="preserve">
+    <value>GPO1_0TXEN485</value>
+  </data>
+  <data name="lblRGPO1_3STATLED.Text" xml:space="preserve">
+    <value>GPO1_3STATLED</value>
+  </data>
+  <data name="BUT_SetPPMFailSafeRemote.Text" xml:space="preserve">
+    <value>设置 PPM 故障保护</value>
+  </data>
+  <data name="BUT_SetPPMFailSafeRemote.ToolTip" xml:space="preserve">
+    <value>为 PPM 输出记录默认 PPM 数据流（机载端）</value>
+  </data>
+  <data name="label50.Text" xml:space="preserve">
+    <value>国家：</value>
+  </data>
+  <data name="lblRSBUSOUT.Text" xml:space="preserve">
+    <value>GPO1_3SBUSOUT:</value>
+  </data>
+  <data name="lblRSBUSIN.Text" xml:space="preserve">
+    <value>GPO1_3SBUSIN</value>
+  </data>
+  <data name="label46.Text" xml:space="preserve">
+    <value>速率/频段</value>
+  </data>
+  <data name="lblRRX_ENCAP_METHOD.Text" xml:space="preserve">
+    <value>RXENCAP</value>
+  </data>
+  <data name="lblRTX_ENCAP_METHOD.Text" xml:space="preserve">
+    <value>TXENCAP</value>
+  </data>
+  <data name="lblRDESTID.Text" xml:space="preserve">
+    <value>目标 ID</value>
+  </data>
+  <data name="lblRNODEID.Text" xml:space="preserve">
+    <value>节点 ID</value>
+  </data>
+  <data name="lblRGPO1_1R_COUT.Text" xml:space="preserve">
+    <value>GPO1_1R/COUT</value>
+  </data>
+  <data name="lblRGPI1_1R_CIN.Text" xml:space="preserve">
+    <value>GPI1_1R/CIN</value>
+  </data>
+  <data name="lblROPPRESEND.Text" xml:space="preserve">
+    <value>Op 重发</value>
+  </data>
+  <data name="lblRMAVLINK.Text" xml:space="preserve">
+    <value>Mavlink</value>
+  </data>
+  <data name="lblRECC.Text" xml:space="preserve">
+    <value>ECC</value>
+  </data>
+  <data name="lblRTXPOWER.Text" xml:space="preserve">
+    <value>发射功率</value>
+  </data>
+  <data name="lblRNETID.Text" xml:space="preserve">
+    <value>网络 ID</value>
+  </data>
+  <data name="lblRANT_MODE.Text" xml:space="preserve">
+    <value>天线模式</value>
+  </data>
+  <data name="lblRSER_BRK_DETMS.Text" xml:space="preserve">
+    <value>断线检测</value>
+  </data>
+  <data name="lblRGLOBAL_RETRIES.Text" xml:space="preserve">
+    <value>全局重试次数</value>
+  </data>
+  <data name="lblRMAX_RETRIES.Text" xml:space="preserve">
+    <value>最大重试次数</value>
+  </data>
+  <data name="lblRMAX_DATA.Text" xml:space="preserve">
+    <value>最大数据</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>AES 密钥</value>
+  </data>
+  <data name="lblRENCRYPTION_LEVEL.Text" xml:space="preserve">
+    <value>AES 加密</value>
+  </data>
+  <data name="lblRRTSCTS.Text" xml:space="preserve">
+    <value>RTS CTS</value>
+  </data>
+  <data name="lblRMAX_WINDOW.Text" xml:space="preserve">
+    <value>最大窗口 (ms)</value>
+  </data>
+  <data name="lblRMIN_FREQ.Text" xml:space="preserve">
+    <value>最小频率</value>
+  </data>
+  <data name="lblRMAX_FREQ.Text" xml:space="preserve">
+    <value>最大频率</value>
+  </data>
+  <data name="lblRNUM_CHANNELS.Text" xml:space="preserve">
+    <value>通道数</value>
+  </data>
+  <data name="lblRDUTY_CYCLE.Text" xml:space="preserve">
+    <value>占空比</value>
+  </data>
+  <data name="lblRLBT_RSSI.Text" xml:space="preserve">
+    <value>LBT RSSI</value>
+  </data>
+  <data name="groupBoxRemote.Text" xml:space="preserve">
+    <value>远程</value>
+  </data>
+  <data name="dlgSave.Filter" xml:space="preserve">
+    <value>INI 文件|*.ini</value>
+  </data>
+  <data name="dlgOpen.Filter" xml:space="preserve">
+    <value>INI 文件|*.ini</value>
+  </data>
+  <data name="BUT_SetPPMFailSafe.Text" xml:space="preserve">
+    <value>设置 PPM 故障保护</value>
+  </data>
+  <data name="BUT_SetPPMFailSafe.ToolTip" xml:space="preserve">
+    <value>为 PPM 输出记录默认 PPM 数据流（机载端）</value>
+  </data>
+  <data name="btnSaveToFile.Text" xml:space="preserve">
+    <value>保存到文件…</value>
+  </data>
+  <data name="btnLoadFromFile.Text" xml:space="preserve">
+    <value>从文件加载…</value>
+  </data>
 </root>

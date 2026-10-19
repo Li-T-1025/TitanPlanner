@@ -150,4 +150,19 @@
     <value>水平放置您的自驾仪，设置加速度计的默认偏移（1轴/航姿系统平衡）
 这需要您将自驾仪放置在水平的平面上。</value>
   </data>
+<data name="groupBoxAccelCal.Text" xml:space="preserve">
+    <value>校准加速度计（3 轴）</value>
+</data>
+<data name="groupBoxLevel.Text" xml:space="preserve">
+    <value>校准水平（1 轴 / AHRS 微调）</value>
+</data>
+<data name="groupBoxSimple.Text" xml:space="preserve">
+    <value>简易加速度计校准（1 轴）</value>
+</data>
+<data name="BUT_simpleAccelCal.Text" xml:space="preserve">
+    <value>简易加速度计校准</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>将飞控调平，以设置平飞的默认加速度计比例系数（1 轴）。&#xD;&#xA;这需要将飞控水平平放。</value>
+</data>
 </root>

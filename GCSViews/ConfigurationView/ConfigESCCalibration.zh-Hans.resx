@@ -156,4 +156,37 @@
   <data name="buttonStart.Text" xml:space="preserve">
     <value>开始</value>
   </data>
+<data name="label3.Text" xml:space="preserve">
+    <value>电调类型：</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>输出 PWM 最小</value>
+</data>
+<data name="label5.Text" xml:space="preserve">
+    <value>输出 PWM 最大</value>
+</data>
+<data name="label6.Text" xml:space="preserve">
+    <value>解锁时怠速</value>
+</data>
+<data name="label7.Text" xml:space="preserve">
+    <value>怠速最小值</value>
+</data>
+<data name="label8.Text" xml:space="preserve">
+    <value>怠速最大值</value>
+</data>
+<data name="label9.Text" xml:space="preserve">
+    <value>设为 0 则使用遥控输入范围</value>
+</data>
+<data name="label10.Text" xml:space="preserve">
+    <value>设为 0 则使用遥控输入范围</value>
+</data>
+<data name="label11.Text" xml:space="preserve">
+    <value>电机解锁但油门为零时的转速（怠速）</value>
+</data>
+<data name="label12.Text" xml:space="preserve">
+    <value>飞行中电机的最低转速（略高于“解锁时怠速”）</value>
+</data>
+<data name="label13.Text" xml:space="preserve">
+    <value>飞行中电机的最高转速（几乎所有电调在顶部都有死区）</value>
+</data>
 </root>

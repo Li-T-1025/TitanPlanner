@@ -328,4 +328,10 @@
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
+<data name="LNK_wiki.Text" xml:space="preserve">
+    <value>维基</value>
+</data>
+<data name="label6.Text" xml:space="preserve">
+    <value>低电量计时</value>
+</data>
 </root>

@@ -123,4 +123,49 @@
   <data name="label3.Text" xml:space="preserve">
     <value>光流</value>
   </data>
+    <data name="label1.Text" xml:space="preserve">
+        <value>类型</value>
+    </data>
+    <data name="label2.Text" xml:space="preserve">
+        <value>偏航朝向</value>
+    </data>
+    <data name="label4.Text" xml:space="preserve">
+        <value>FX 比例</value>
+    </data>
+    <data name="label5.Text" xml:space="preserve">
+        <value>FY 比例</value>
+    </data>
+    <data name="label6.Text" xml:space="preserve">
+        <value>位置 X</value>
+    </data>
+    <data name="label7.Text" xml:space="preserve">
+        <value>位置 Y</value>
+    </data>
+    <data name="label8.Text" xml:space="preserve">
+        <value>位置 Z</value>
+    </data>
+    <data name="label9.Text" xml:space="preserve">
+        <value>度，相对于飞行器</value>
+    </data>
+    <data name="label10.Text" xml:space="preserve">
+        <value>米，向前</value>
+    </data>
+    <data name="label11.Text" xml:space="preserve">
+        <value>米，向右</value>
+    </data>
+    <data name="label12.Text" xml:space="preserve">
+        <value>米，向下</value>
+    </data>
+    <data name="label13.Text" xml:space="preserve">
+        <value>传感器位置，相对于 IMU</value>
+    </data>
+    <data name="label14.Text" xml:space="preserve">
+        <value>比例系数</value>
+    </data>
+    <data name="label15.Text" xml:space="preserve">
+        <value>强制高度</value>
+    </data>
+    <data name="label16.Text" xml:space="preserve">
+        <value>米，离地</value>
+    </data>
 </root>

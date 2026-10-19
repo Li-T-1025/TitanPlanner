@@ -280,4 +280,49 @@
   <data name="groupBoxCompass3.Text" xml:space="preserve">
     <value>指南针 #3</value>
   </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>校准失败时放宽拟合度要求</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>拟合度</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>指南针 #3</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>指南针 #2</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>指南针 #1</value>
+  </data>
+  <data name="groupBoxonboardcalib.Text" xml:space="preserve">
+    <value>板载磁校准</value>
+  </data>
+  <data name="groupBoxmpcalib.Text" xml:space="preserve">
+    <value>Mission Planner 磁校准</value>
+  </data>
+  <data name="LBL_compass1_mot.Text" xml:space="preserve">
+    <value>电机干扰</value>
+  </data>
+  <data name="LBL_compass1_offset.Text" xml:space="preserve">
+    <value>偏移</value>
+  </data>
+  <data name="LBL_compass2_mot.Text" xml:space="preserve">
+    <value>电机干扰</value>
+  </data>
+  <data name="LBL_compass2_offset.Text" xml:space="preserve">
+    <value>偏移</value>
+  </data>
+  <data name="LBL_compass3_mot.Text" xml:space="preserve">
+    <value>电机干扰</value>
+  </data>
+  <data name="LBL_compass3_offset.Text" xml:space="preserve">
+    <value>偏移</value>
+  </data>
+  <data name="buttonQuickPixhawk.Text" xml:space="preserve">
+    <value>Pixhawk/PX4</value>
+  </data>
+  <data name="but_largemagcal.Text" xml:space="preserve">
+    <value>大型载具磁校准</value>
+  </data>
 </root>

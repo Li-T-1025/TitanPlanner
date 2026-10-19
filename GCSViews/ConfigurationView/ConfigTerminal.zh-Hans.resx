@@ -149,4 +149,19 @@
   <data name="BUTsetupshow.Text" xml:space="preserve">
     <value>显示设置</value>
   </data>
+  <data name="CMB_boardtype.Items" xml:space="preserve">
+    <value>APM</value>
+  </data>
+  <data name="CMB_boardtype.Items1" xml:space="preserve">
+    <value>PX4/PIXHAWK</value>
+  </data>
+  <data name="CMB_boardtype.Items2" xml:space="preserve">
+    <value>VRX/VRBRAIN</value>
+  </data>
+  <data name="CMB_boardtype.Items3" xml:space="preserve">
+    <value>NSH</value>
+  </data>
+  <data name="CMB_boardtype.Items4" xml:space="preserve">
+    <value>SSH</value>
+  </data>
 </root>

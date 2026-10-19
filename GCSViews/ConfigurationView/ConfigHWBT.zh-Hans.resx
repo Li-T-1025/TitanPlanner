@@ -136,4 +136,7 @@
   <data name="label3.Text" xml:space="preserve">
     <value>PIN</value>
   </data>
+  <data name="txt_name.Text" xml:space="preserve">
+    <value>Ardupilot</value>
+  </data>
 </root>

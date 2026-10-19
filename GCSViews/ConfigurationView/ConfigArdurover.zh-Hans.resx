@@ -210,4 +210,31 @@
   <data name="BUT_rerequestparams.Text" xml:space="preserve">
     <value>刷新参数</value>
   </data>
+<data name="label22.Text" xml:space="preserve">
+    <value>电机类型</value>
+</data>
+<data name="label23.Text" xml:space="preserve">
+    <value>刹车</value>
+</data>
+<data name="label20.Text" xml:space="preserve">
+    <value>最大加速度 (m/s/s)</value>
+</data>
+<data name="label19.Text" xml:space="preserve">
+    <value>航点超调</value>
+</data>
+<data name="label24.Text" xml:space="preserve">
+    <value>FF</value>
+</data>
+<data name="label21.Text" xml:space="preserve">
+    <value>通道7选项</value>
+</data>
+<data name="label25.Text" xml:space="preserve">
+    <value>通道8选项</value>
+</data>
+<data name="label26.Text" xml:space="preserve">
+    <value>通道9选项</value>
+</data>
+<data name="label27.Text" xml:space="preserve">
+    <value>通道10选项</value>
+</data>
 </root>

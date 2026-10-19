@@ -138,4 +138,49 @@
   <data name="BUT_cleargraph.Text" xml:space="preserve">
     <value>清除图表</value>
   </data>
+<data name="exportVisibleToolStripMenuItem.Text" xml:space="preserve">
+    <value>导出可见项</value>
+</data>
+<data name="exportFilesToolStripMenuItem.Text" xml:space="preserve">
+    <value>导出文件</value>
+</data>
+<data name="label4.Text" xml:space="preserve">
+    <value>GPSB</value>
+</data>
+<data name="label3.Text" xml:space="preserve">
+    <value>POS</value>
+</data>
+<data name="label2.Text" xml:space="preserve">
+    <value>GPS2</value>
+</data>
+<data name="label1.Text" xml:space="preserve">
+    <value>GPS</value>
+</data>
+<data name="chk_params.Text" xml:space="preserve">
+    <value>显示参数</value>
+</data>
+<data name="chk_events.Text" xml:space="preserve">
+    <value>事件</value>
+</data>
+<data name="chk_datagrid.Text" xml:space="preserve">
+    <value>数据表</value>
+</data>
+<data name="chk_msg.Text" xml:space="preserve">
+    <value>MSG</value>
+</data>
+<data name="chk_errors.Text" xml:space="preserve">
+    <value>错误</value>
+</data>
+<data name="chk_mode.Text" xml:space="preserve">
+    <value>模式</value>
+</data>
+<data name="chk_time.Text" xml:space="preserve">
+    <value>时间</value>
+</data>
+<data name="treeView1.Nodes" xml:space="preserve">
+    <value>&#xD;&#xA;        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w&#xD;&#xA;        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0&#xD;&#xA;        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQsAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tl&#xD;&#xA;        ZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNo&#xD;&#xA;        aWxkQ291bnQJY2hpbGRyZW4wCWNoaWxkcmVuMQEBAQAAAQABAAQEAQgICB1TeXN0ZW0uV2luZG93cy5G&#xD;&#xA;        b3Jtcy5UcmVlTm9kZQIAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUCAAAAAgAAAAYDAAAA&#xD;&#xA;        BU5vZGUwBgQAAAAACQMAAAAA/////wkEAAAA/////wkEAAAAAgAAAAkHAAAACQgAAAAFBwAAAB1TeXN0&#xD;&#xA;        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQkAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tl&#xD;&#xA;        ZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNo&#xD;&#xA;        aWxkQ291bnQBAQEAAAEAAQABCAgIAgAAAAYJAAAABU5vZGU0CQQAAAAJCQAAAAD/////CQQAAAD/////&#xD;&#xA;        CQQAAAAAAAAABQgAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUJAAAABFRleHQLVG9vbFRp&#xD;&#xA;        cFRleHQETmFtZQlJc0NoZWNrZWQKSW1hZ2VJbmRleAhJbWFnZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQ&#xD;&#xA;        U2VsZWN0ZWRJbWFnZUtleQpDaGlsZENvdW50AQEBAAABAAEAAQgICAIAAAAGDQAAAAVOb2RlNQkEAAAA&#xD;&#xA;        CQ0AAAAA/////wkEAAAA/////wkEAAAAAAAAAAs=&#xD;&#xA;</value>
+</data>
+<data name="treeView1.Nodes1" xml:space="preserve">
+    <value>&#xD;&#xA;        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w&#xD;&#xA;        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0&#xD;&#xA;        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQsAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tl&#xD;&#xA;        ZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNo&#xD;&#xA;        aWxkQ291bnQJY2hpbGRyZW4wCWNoaWxkcmVuMQEBAQAAAQABAAQEAQgICB1TeXN0ZW0uV2luZG93cy5G&#xD;&#xA;        b3Jtcy5UcmVlTm9kZQIAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUCAAAAAgAAAAYDAAAA&#xD;&#xA;        BU5vZGUxBgQAAAAACQMAAAAA/////wkEAAAA/////wkEAAAAAgAAAAkHAAAACQgAAAAFBwAAAB1TeXN0&#xD;&#xA;        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQkAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tl&#xD;&#xA;        ZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNo&#xD;&#xA;        aWxkQ291bnQBAQEAAAEAAQABCAgIAgAAAAYJAAAABU5vZGUyCQQAAAAJCQAAAAD/////CQQAAAD/////&#xD;&#xA;        CQQAAAAAAAAABQgAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUJAAAABFRleHQLVG9vbFRp&#xD;&#xA;        cFRleHQETmFtZQlJc0NoZWNrZWQKSW1hZ2VJbmRleAhJbWFnZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQ&#xD;&#xA;        U2VsZWN0ZWRJbWFnZUtleQpDaGlsZENvdW50AQEBAAABAAEAAQgICAIAAAAGDQAAAAVOb2RlMwkEAAAA&#xD;&#xA;        CQ0AAAAA/////wkEAAAA/////wkEAAAAAAAAAAs=&#xD;&#xA;</value>
+</data>
 </root>

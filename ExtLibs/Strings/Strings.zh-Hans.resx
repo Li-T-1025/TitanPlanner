@@ -209,7 +209,7 @@
     <value>请加载一个有效的文件</value>
   </data>
   <data name="PleaseSelectCell" xml:space="preserve">
-    <value>Please select a cell first</value>
+    <value>请先选择一个单元格</value>
   </data>
   <data name="SelectComport" xml:space="preserve">
     <value>请先选择一个串口</value>
@@ -319,8 +319,7 @@
     <value>只接收到一次Heartbeat</value>
   </data>
   <data name="Only1HbD" xml:space="preserve">
-    <value>Only 1 Mavlink Heartbeat Packets was read from this port - Verify your hardware is setup correctly
-Mission Planner waits for 2 valid heartbeat packets before connecting</value>
+    <value>从该串口只读到 1 个 Mavlink Heartbeat 数据包 - 请检查硬件设置是否正确&#xD;&#xA;Mission Planner 在连接前需要收到 2 个有效的 Heartbeat 数据包</value>
   </data>
   <data name="Trying" xml:space="preserve">
     <value>尝试连接。
@@ -538,16 +537,16 @@ Mission Planner将会在30秒内寻找控制板。</value>
     <value>追踪器的家</value>
   </data>
   <data name="velocity_variance" xml:space="preserve">
-    <value>velocity variance</value>
+    <value>速度差异</value>
   </data>
   <data name="compass_variance" xml:space="preserve">
-    <value>compass variance</value>
+    <value>罗盘差异</value>
   </data>
   <data name="pos_horiz_variance" xml:space="preserve">
-    <value>pos horiz variance</value>
+    <value>水平位置差异</value>
   </data>
   <data name="pos_vert_variance" xml:space="preserve">
-    <value>pos vert variance</value>
+    <value>垂直位置差异</value>
   </data>
   <data name="terrain_alt_variance" xml:space="preserve">
     <value>地形高度差异</value>
@@ -566,5 +565,128 @@ Mission Planner将会在30秒内寻找控制板。</value>
   </data>
   <data name="Failed_to_connect_to_SITL_instance" xml:space="preserve">
     <value>无法连接到SITL实例</value>
+  </data>
+  <data name="ProgrammedOK" xml:space="preserve">
+    <value>烧录成功</value>
+  </data>
+  <data name="BadGPSHealth" xml:space="preserve">
+    <value>GPS 信号不健康</value>
+  </data>
+  <data name="BadAirspeed" xml:space="preserve">
+    <value>空速传感器不健康</value>
+  </data>
+  <data name="BadGyroHealth" xml:space="preserve">
+    <value>陀螺仪不健康</value>
+  </data>
+  <data name="BadAccelHealth" xml:space="preserve">
+    <value>加速度计不健康</value>
+  </data>
+  <data name="BadCompassHealth" xml:space="preserve">
+    <value>罗盘不健康</value>
+  </data>
+  <data name="BadBaroHealth" xml:space="preserve">
+    <value>气压计不健康</value>
+  </data>
+  <data name="BadLiDARHealth" xml:space="preserve">
+    <value>激光雷达不健康</value>
+  </data>
+  <data name="BadOptFlowHealth" xml:space="preserve">
+    <value>光流不健康</value>
+  </data>
+  <data name="BadorNoTerrainData" xml:space="preserve">
+    <value>地形数据异常或缺失</value>
+  </data>
+  <data name="GeofenceBreach" xml:space="preserve">
+    <value>地理围栏突破</value>
+  </data>
+  <data name="BadAHRS" xml:space="preserve">
+    <value>AHRS 不健康</value>
+  </data>
+  <data name="NORCReceiver" xml:space="preserve">
+    <value>无遥控器接收机</value>
+  </data>
+  <data name="Scanning_File" xml:space="preserve">
+    <value>正在扫描文件</value>
+  </data>
+  <data name="Zoom_to_the_center_or_the_loaded_file" xml:space="preserve">
+    <value>是否缩放至中心或已加载的文件？</value>
+  </data>
+  <data name="Zoom_To" xml:space="preserve">
+    <value>缩放至</value>
+  </data>
+  <data name="Do_you_want_to_load_this_into_the_flight_data_screen" xml:space="preserve">
+    <value>是否将其加载到飞行数据界面？</value>
+  </data>
+  <data name="Load_data" xml:space="preserve">
+    <value>加载数据</value>
+  </data>
+  <data name="Bad_KML_File" xml:space="preserve">
+    <value>无效的 KML 文件：</value>
+  </data>
+  <data name="No_valid_heartbeats_read_from_port" xml:space="preserve">
+    <value>从该串口未读到有效的 Heartbeat</value>
+  </data>
+  <data name="Bad_Vision_Position" xml:space="preserve">
+    <value>视觉位置异常</value>
+  </data>
+  <data name="BadLogging" xml:space="preserve">
+    <value>日志记录异常</value>
+  </data>
+  <data name="ParamRefreshRequired" xml:space="preserve">
+    <value>需要刷新参数 - 请按 F5&#xD;&#xA;旧 #{0}  新 #{1}</value>
+  </data>
+  <data name="Failed_to_download_the_SITL_image" xml:space="preserve">
+    <value>下载 SITL 镜像失败。</value>
+  </data>
+  <data name="Not_available_when_used_as_a_windows_store_app" xml:space="preserve">
+    <value>以 Windows 应用商店应用运行时不可用</value>
+  </data>
+  <data name="No_firmware_available_for_this_board" xml:space="preserve">
+    <value>该控制板没有可用固件！</value>
+  </data>
+  <data name="OnboardOSD" xml:space="preserve">
+    <value>机载 OSD</value>
+  </data>
+  <data name="User_Params" xml:space="preserve">
+    <value>用户参数</value>
+  </data>
+  <data name="Planner" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="No_valid_sik_radio" xml:space="preserve">
+    <value>无有效的 SiK 电台</value>
+  </data>
+  <data name="MAVFtp" xml:space="preserve">
+    <value>MAVFtp</value>
+  </data>
+  <data name="Bad_Battery" xml:space="preserve">
+    <value>电池异常</value>
+  </data>
+  <data name="Bad_Proximity" xml:space="preserve">
+    <value>距离传感器异常</value>
+  </data>
+  <data name="Bad_SatCom" xml:space="preserve">
+    <value>SatCom 异常</value>
+  </data>
+  <data name="Prearm_check_failed" xml:space="preserve">
+    <value>解锁前检查失败 - 请查看消息</value>
+  </data>
+  <data name="Invalid_Location" xml:space="preserve">
+    <value>位置无效</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>加载中</value>
+  </data>
+  <data name="ZeroAltWarningCopter" xml:space="preserve">
+    <value>航点 {0} 高度为零，这意味着高度不变化！如果确实需要零高度，请改为 0.01。是否继续或取消航点上传？</value>
+  </data>
+  <data name="ZeroAltWarningTitle" xml:space="preserve">
+    <value>零高度警告</value>
+  </data>
+  <data name="ZeroAltWarningPlane" xml:space="preserve">
+    <value>航点 {0} 高度为零。如果确实需要零高度，请改为 0.01 以获得可预期的行为。&#xD;&#xA;&#xD;&#xA;在 ArduPlane 上，零高度可能有两种解释：实际零高度，或保持当前高度。WAYPOINT 命令通常会遵循零高度，而 LOITER 命令通常将其解释为“使用当前高度”，但仅在高度框架为“相对”时成立。可能还有更多例外，且未来版本可能改变此行为。&#xD;&#xA;&#xD;&#xA;仅当您完全理解在您的具体情况下会发生什么时才设置为零（可使用模拟器确认）。[link;https://ardupilot.org/plane/docs/common-mavlink-mission-command-messages-mav_cmd.html;命令文档]</value>
   </data>
 </root>
