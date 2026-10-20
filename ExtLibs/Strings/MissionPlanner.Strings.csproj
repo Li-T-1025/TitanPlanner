@@ -7,8 +7,8 @@
     <ApplicationIcon />
     <OutputType>Library</OutputType>
     <StartupObject />
-    <SignAssembly>false</SignAssembly>
-    <DelaySign>true</DelaySign>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>mykey.snk</AssemblyOriginatorKeyFile>
     <NeutralLanguage>en</NeutralLanguage>
   
