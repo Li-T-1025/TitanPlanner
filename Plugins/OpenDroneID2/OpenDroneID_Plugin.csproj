@@ -95,6 +95,9 @@
     <EmbeddedResource Update="OpenDroneID_Map_Status.resx">
       <LogicalName>MissionPlanner.Controls.OpenDroneID_Map_Status.resources</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Update="OpenDroneID_UI.resx">
+      <LogicalName>MissionPlanner.Controls.OpenDroneID_UI.resources</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

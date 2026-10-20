@@ -23,6 +23,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Security.RightsManagement;
 using Org.BouncyCastle.Utilities;
+using Strings = MissionPlanner.Strings;
 using NetTopologySuite.Operation.Valid;
 using Org.BouncyCastle.Asn1.X509;
 
