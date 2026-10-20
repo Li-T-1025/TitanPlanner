@@ -4279,4 +4279,70 @@ Ensure the final payload is ! videoconvert ! video/x-raw,format=BGRA ! appsink n
   <data name="NameForTheCurrentMapViewHoldAltAndDragOnTheMapToPickAnExactAreaInstead" xml:space="preserve">
     <value>Name for the current map view (hold ALT and drag on the map to pick an exact area instead):</value>
   </data>
+<data name="Legacy" xml:space="preserve">
+    <value>Legacy</value>
+</data>
+<data name="Secure" xml:space="preserve">
+    <value>Secure</value>
+</data>
+<data name="ServoOutput" xml:space="preserve">
+    <value>Servo Output</value>
+</data>
+<data name="EscCalibration" xml:space="preserve">
+    <value>ESC Calibration</value>
+</data>
+<data name="HwId" xml:space="preserve">
+    <value>HW ID</value>
+</data>
+<data name="RtkGpsInject" xml:space="preserve">
+    <value>RTK/GPS Inject</value>
+</data>
+<data name="CubeIdUpdate" xml:space="preserve">
+    <value>CubeID Update</value>
+</data>
+<data name="CanGpsOrder" xml:space="preserve">
+    <value>CAN GPS Order</value>
+</data>
+<data name="Joystick" xml:space="preserve">
+    <value>Joystick</value>
+</data>
+<data name="Advanced" xml:space="preserve">
+    <value>Advanced</value>
+</data>
+<data name="AlwaysStartFullscreen" xml:space="preserve">
+    <value>Always start fullscreen</value>
+</data>
+<data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+</data>
+<data name="Updates" xml:space="preserve">
+    <value>Updates</value>
+</data>
+<data name="CheckForUpdates" xml:space="preserve">
+    <value>Check for Updates</value>
+</data>
+<data name="UpdateToDev" xml:space="preserve">
+    <value>Update to Dev</value>
+</data>
+<data name="ManualDownloadsGitHubReleases" xml:space="preserve">
+    <value>Manual downloads (GitHub releases)</value>
+</data>
+<data name="UnitsMeasurement" xml:space="preserve">
+    <value>Units &amp; Measurement</value>
+</data>
+<data name="ConnectionData" xml:space="preserve">
+    <value>Connection &amp;&amp; Data</value>
+</data>
+<data name="MapDisplay" xml:space="preserve">
+    <value>Map &amp; Display</value>
+</data>
+<data name="CustomIcon" xml:space="preserve">
+    <value>Custom Icon</value>
+</data>
+<data name="SetIcon" xml:space="preserve">
+    <value>Set</value>
+</data>
+<data name="SaveAs" xml:space="preserve">
+    <value>Save As</value>
+</data>
 </root>

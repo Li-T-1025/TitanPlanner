@@ -3,7 +3,7 @@
   <CheckListItem>
     <TrueColor>Green</TrueColor>
     <FalseColor>Red</FalseColor>
-    <Description>Veryify GPS</Description>
+    <Description>校验 GPS</Description>
     <Text>{value} &gt;= 3</Text>
     <TriggerValue>3</TriggerValue>
     <Name>gpsstatus</Name>
@@ -12,8 +12,8 @@
   <CheckListItem>
     <TrueColor>Green</TrueColor>
     <FalseColor>Red</FalseColor>
-    <Description>Gps Sat Count</Description>
-    <Text>{value} Sats</Text>
+    <Description>GPS 卫星数</Description>
+    <Text>{value} 颗卫星</Text>
     <TriggerValue>5</TriggerValue>
     <Name>satcount</Name>
     <ConditionType>GTEQ</ConditionType>
@@ -21,7 +21,7 @@
   <CheckListItem>
     <TrueColor>Green</TrueColor>
     <FalseColor>Red</FalseColor>
-    <Description>Telemetry Signal</Description>
+    <Description>遥测信号</Description>
     <Text>{value}%</Text>
     <TriggerValue>95</TriggerValue>
     <Name>linkqualitygcs</Name>
@@ -30,8 +30,8 @@
   <CheckListItem>
     <TrueColor>Green</TrueColor>
     <FalseColor>Red</FalseColor>
-    <Description>Battery Level</Description>
-    <Text>{value} V</Text>
+    <Description>电池电压</Description>
+    <Text>{value} 伏</Text>
     <TriggerValue>22</TriggerValue>
     <Name>battery_voltage</Name>
     <ConditionType>GT</ConditionType>
@@ -39,7 +39,7 @@
   <CheckListItem>
     <TrueColor>White</TrueColor>
     <FalseColor>White</FalseColor>
-    <Description>Mode</Description>
+    <Description>模式</Description>
     <Text>{value}</Text>
     <TriggerValue>0</TriggerValue>
     <Name>mode</Name>
@@ -48,8 +48,8 @@
   <CheckListItem>
     <TrueColor>White</TrueColor>
     <FalseColor>White</FalseColor>
-    <Description>Check Altitude</Description>
-    <Text>{value} &lt; 5m</Text>
+    <Description>检查高度</Description>
+    <Text>{value} &lt; 5 米</Text>
     <TriggerValue>5</TriggerValue>
     <Name>alt</Name>
     <ConditionType>LT</ConditionType>
@@ -57,7 +57,7 @@
   <CheckListItem>
     <TrueColor>White</TrueColor>
     <FalseColor>White</FalseColor>
-    <Description>Tail and wings secured?</Description>
+    <Description>机尾与机翼已固定？</Description>
     <Text />
     <TriggerValue>0</TriggerValue>
     <Name>roll</Name>
@@ -66,7 +66,7 @@
   <CheckListItem>
     <TrueColor>White</TrueColor>
     <FalseColor>White</FalseColor>
-    <Description>All servos respond to input?</Description>
+    <Description>所有舵机响应输入？</Description>
     <Text />
     <TriggerValue>0</TriggerValue>
     <Name>roll</Name>
@@ -75,7 +75,7 @@
   <CheckListItem>
     <TrueColor>White</TrueColor>
     <FalseColor>White</FalseColor>
-    <Description>All servos respond to pitch and roll?</Description>
+    <Description>所有舵机响应俯仰和横滚？</Description>
     <Text />
     <TriggerValue>0</TriggerValue>
     <Name>roll</Name>
@@ -84,7 +84,7 @@
   <CheckListItem>
     <TrueColor>White</TrueColor>
     <FalseColor>White</FalseColor>
-    <Description>Center of gravity at indicated point?</Description>
+    <Description>重心位于指定点？</Description>
     <Text />
     <TriggerValue>0</TriggerValue>
     <Name>roll</Name>
@@ -93,7 +93,7 @@
   <CheckListItem>
     <TrueColor>White</TrueColor>
     <FalseColor>White</FalseColor>
-    <Description>Servo linkages are secure?</Description>
+    <Description>舵机连杆已紧固？</Description>
     <Text />
     <TriggerValue>0</TriggerValue>
     <Name>roll</Name>
@@ -102,7 +102,7 @@
   <CheckListItem>
     <TrueColor>White</TrueColor>
     <FalseColor>White</FalseColor>
-    <Description>Camera is on and ready to fly?</Description>
+    <Description>相机已开启并可飞行？</Description>
     <Text />
     <TriggerValue>0</TriggerValue>
     <Name>roll</Name>

@@ -4201,4 +4201,70 @@ Please choose one by typing the associated number.</value>
   <data name="NameForTheCurrentMapViewHoldAltAndDragOnTheMapToPickAnExactAreaInstead" xml:space="preserve">
     <value>当前地图视图的名称（按住 ALT 并在地图上拖动可改为精确选取区域）：</value>
   </data>
+<data name="Legacy" xml:space="preserve">
+    <value>旧版</value>
+</data>
+<data name="Secure" xml:space="preserve">
+    <value>安全</value>
+</data>
+<data name="ServoOutput" xml:space="preserve">
+    <value>舵机输出</value>
+</data>
+<data name="EscCalibration" xml:space="preserve">
+    <value>电调校准</value>
+</data>
+<data name="HwId" xml:space="preserve">
+    <value>硬件 ID</value>
+</data>
+<data name="RtkGpsInject" xml:space="preserve">
+    <value>RTK/GPS 注入</value>
+</data>
+<data name="CubeIdUpdate" xml:space="preserve">
+    <value>CubeID 更新</value>
+</data>
+<data name="CanGpsOrder" xml:space="preserve">
+    <value>CAN GPS 顺序</value>
+</data>
+<data name="Joystick" xml:space="preserve">
+    <value>摇杆</value>
+</data>
+<data name="Advanced" xml:space="preserve">
+    <value>高级</value>
+</data>
+<data name="AlwaysStartFullscreen" xml:space="preserve">
+    <value>始终全屏启动</value>
+</data>
+<data name="Configuration" xml:space="preserve">
+    <value>配置</value>
+</data>
+<data name="Updates" xml:space="preserve">
+    <value>更新</value>
+</data>
+<data name="CheckForUpdates" xml:space="preserve">
+    <value>检查更新</value>
+</data>
+<data name="UpdateToDev" xml:space="preserve">
+    <value>更新到开发版</value>
+</data>
+<data name="ManualDownloadsGitHubReleases" xml:space="preserve">
+    <value>手动下载（GitHub 发布版）</value>
+</data>
+<data name="UnitsMeasurement" xml:space="preserve">
+    <value>单位测量</value>
+</data>
+<data name="ConnectionData" xml:space="preserve">
+    <value>连接与数据</value>
+</data>
+<data name="MapDisplay" xml:space="preserve">
+    <value>地图显示</value>
+</data>
+<data name="CustomIcon" xml:space="preserve">
+    <value>自定义图标</value>
+</data>
+<data name="SetIcon" xml:space="preserve">
+    <value>设置</value>
+</data>
+<data name="SaveAs" xml:space="preserve">
+    <value>另存为</value>
+</data>
 </root>

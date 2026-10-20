@@ -12320,5 +12320,115 @@ public static string compass_variance {
             get { return ResourceManager.GetString("NameForTheCurrentMapViewHoldAltAndDragOnTheMapToPickAnExactAreaInstead", resourceCulture); }
         }
 
+        public static string Legacy
+        {
+            get { return ResourceManager.GetString("Legacy", resourceCulture); }
+        }
+
+        public static string Secure
+        {
+            get { return ResourceManager.GetString("Secure", resourceCulture); }
+        }
+
+        public static string ServoOutput
+        {
+            get { return ResourceManager.GetString("ServoOutput", resourceCulture); }
+        }
+
+        public static string EscCalibration
+        {
+            get { return ResourceManager.GetString("EscCalibration", resourceCulture); }
+        }
+
+        public static string HwId
+        {
+            get { return ResourceManager.GetString("HwId", resourceCulture); }
+        }
+
+        public static string RtkGpsInject
+        {
+            get { return ResourceManager.GetString("RtkGpsInject", resourceCulture); }
+        }
+
+        public static string CubeIdUpdate
+        {
+            get { return ResourceManager.GetString("CubeIdUpdate", resourceCulture); }
+        }
+
+        public static string CanGpsOrder
+        {
+            get { return ResourceManager.GetString("CanGpsOrder", resourceCulture); }
+        }
+
+        public static string Joystick
+        {
+            get { return ResourceManager.GetString("Joystick", resourceCulture); }
+        }
+
+        public static string Advanced
+        {
+            get { return ResourceManager.GetString("Advanced", resourceCulture); }
+        }
+
+        public static string AlwaysStartFullscreen
+        {
+            get { return ResourceManager.GetString("AlwaysStartFullscreen", resourceCulture); }
+        }
+
+        public static string Configuration
+        {
+            get { return ResourceManager.GetString("Configuration", resourceCulture); }
+        }
+
+        public static string Updates
+        {
+            get { return ResourceManager.GetString("Updates", resourceCulture); }
+        }
+
+        public static string CheckForUpdates
+        {
+            get { return ResourceManager.GetString("CheckForUpdates", resourceCulture); }
+        }
+
+        public static string UpdateToDev
+        {
+            get { return ResourceManager.GetString("UpdateToDev", resourceCulture); }
+        }
+
+        public static string ManualDownloadsGitHubReleases
+        {
+            get { return ResourceManager.GetString("ManualDownloadsGitHubReleases", resourceCulture); }
+        }
+
+        public static string UnitsMeasurement
+        {
+            get { return ResourceManager.GetString("UnitsMeasurement", resourceCulture); }
+        }
+
+        public static string ConnectionData
+        {
+            get { return ResourceManager.GetString("ConnectionData", resourceCulture); }
+        }
+
+        public static string MapDisplay
+        {
+            get { return ResourceManager.GetString("MapDisplay", resourceCulture); }
+        }
+
+        public static string CustomIcon
+        {
+            get { return ResourceManager.GetString("CustomIcon", resourceCulture); }
+        }
+
+        public static string SetIcon
+        {
+            get { return ResourceManager.GetString("SetIcon", resourceCulture); }
+        }
+
+        public static string SaveAs
+        {
+            get { return ResourceManager.GetString("SaveAs", resourceCulture); }
+        }
+
     }
 }

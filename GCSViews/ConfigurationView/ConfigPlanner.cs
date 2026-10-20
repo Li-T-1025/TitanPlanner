@@ -33,7 +33,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 Name = "CHK_startFullscreen",
                 AutoSize = true,
-                Text = "Always start fullscreen"
+                Text = Strings.AlwaysStartFullscreen
             };
             CHK_startFullscreen.CheckedChanged += CHK_startFullscreen_CheckedChanged;
 
@@ -213,7 +213,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private Control CreateConfigurationGroup()
         {
-            var group = CreateGroupBox("Configuration");
+            var group = CreateGroupBox(Strings.Configuration);
             var table = CreateTableLayout(3);
 
             table.Controls.Add(label_configprofile, 0, 0);
@@ -267,12 +267,12 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private Control CreateUpdatesGroup()
         {
-            var group = CreateGroupBox("Updates");
+            var group = CreateGroupBox(Strings.Updates);
             var table = CreateTableLayout(1);
 
             var btnCheckUpdate = new MyButton
             {
-                Text = "Check for Updates",
+                Text = Strings.CheckForUpdates,
                 AutoSize = true
             };
             btnCheckUpdate.Click += BtnCheckUpdate_Click;
@@ -280,7 +280,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             var btnBetaUpdate = new MyButton
             {
-                Text = "Update to Dev",
+                Text = Strings.UpdateToDev,
                 AutoSize = true
             };
             btnBetaUpdate.Click += BtnBetaUpdate_Click;
@@ -288,7 +288,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             var lnkReleases = new LinkLabel
             {
-                Text = "Manual downloads (GitHub releases)",
+                Text = Strings.ManualDownloadsGitHubReleases,
                 AutoSize = true,
                 Margin = new Padding(3, 6, 3, 3)
             };
@@ -375,7 +375,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private Control CreateUnitsGroup()
         {
-            var group = CreateGroupBox("Units & Measurement");
+            var group = CreateGroupBox(Strings.UnitsMeasurement);
             var table = CreateTableLayout(2);
 
             table.Controls.Add(label97, 0, 0);
@@ -396,7 +396,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private Control CreateMapAndDisplayGroup()
         {
-            var group = CreateGroupBox("Map & Display");
+            var group = CreateGroupBox(Strings.MapDisplay);
             var table = CreateTableLayout(3);
 
             table.Controls.Add(label1, 0, 0);
@@ -452,7 +452,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private Control CreateConnectivityGroup()
         {
-            var group = CreateGroupBox("Connection && Data");
+            var group = CreateGroupBox(Strings.ConnectionData);
             var table = CreateTableLayout(3);
 
             table.Controls.Add(label7, 0, 0);
