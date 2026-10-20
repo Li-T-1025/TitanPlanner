@@ -92,6 +92,9 @@
     <Compile Update="OpenDroneID_UI.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Update="OpenDroneID_Map_Status.resx">
+      <LogicalName>MissionPlanner.Controls.OpenDroneID_Map_Status.resources</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
