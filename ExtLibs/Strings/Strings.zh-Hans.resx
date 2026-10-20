@@ -1692,7 +1692,7 @@ Mission Planner将会在30秒内寻找控制板。</value>
     <value>登录成功</value>
   </data>
   <data name="Loiter" xml:space="preserve">
-    <value>Loiter</value>
+    <value>悬停</value>
   </data>
   <data name="LostJoystick" xml:space="preserve">
     <value>摇杆已丢失</value>
@@ -3531,7 +3531,7 @@ Mission Planner将会在30秒内寻找控制板。</value>
     <value>等待数据超时</value>
   </data>
   <data name="Tracemp" xml:space="preserve">
-    <value>tracemp</value>
+    <value>轨迹追踪</value>
   </data>
   <data name="TrackingVendor" xml:space="preserve">
     <value>Tracking&amp;#xD;&amp;#xA;厂商：{0}&amp;#xD;&amp;#xA;型号：{1}&amp;#xD;&amp;#xA;序列号：{2}</value>
