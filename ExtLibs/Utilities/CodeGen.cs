@@ -72,6 +72,18 @@ namespace MissionPlanner
             catch
             {
             }
+            // netstandard facade is required so that plugins referencing netstandard-targeted
+            // assemblies (e.g. DroneCAN) can resolve forwarded types (IEnumerable/Object etc.).
+            // It is not present in the app base directory - resolve it from the runtime/GAC.
+            try
+            {
+                var nsasm = Assembly.Load("netstandard");
+                if (nsasm != null && !string.IsNullOrEmpty(nsasm.Location) && File.Exists(nsasm.Location))
+                    refFiles = refFiles.Concat(new[] {nsasm.Location}).Distinct();
+            }
+            catch
+            {
+            }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 refFiles = refs.Where(a => !a.IsDynamic).Select(a => a.Location);
             var refmeta = refFiles.Select(a =>
