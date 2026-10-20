@@ -67,6 +67,11 @@ namespace MissionPlanner.Plugin
             }
 
             // check local directory
+            // plugins are often loaded from memory (Assembly.Load(byte[])); their
+            // Location is empty, so skip the local-directory lookup to avoid
+            // Path.GetDirectoryName("") throwing "path is not of a legal form"
+            if (string.IsNullOrEmpty(args.RequestingAssembly.Location))
+                return null;
             folderPath = Path.GetDirectoryName(args.RequestingAssembly.Location);
             if (filecache.ContainsKey(folderPath))
             {
