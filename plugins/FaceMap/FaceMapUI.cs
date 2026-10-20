@@ -1228,7 +1228,7 @@ namespace MissionPlanner
 
             string camname = "Default";
 
-            if (MissionPlanner.Controls.InputBox.Show("Camera Name", "Please and a camera name", ref camname) != System.Windows.Forms.DialogResult.OK)
+            if (MissionPlanner.Controls.InputBox.Show(Strings.CameraName, Strings.PleaseAndACameraName, ref camname) != System.Windows.Forms.DialogResult.OK)
                 return;
 
             CMB_camera.Text = camname;

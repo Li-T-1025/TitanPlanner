@@ -936,7 +936,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechwaypoint"] != null)
                     speechstring = Settings.Instance["speechwaypoint"].ToString();
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Notification", "What do you want it to say?", ref speechstring))
+                    InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechwaypoint"] = speechstring;
             }
@@ -954,7 +954,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechmode"] != null)
                     speechstring = Settings.Instance["speechmode"].ToString();
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Notification", "What do you want it to say?", ref speechstring))
+                    InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechmode"] = speechstring;
             }
@@ -972,7 +972,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechcustom"] != null)
                     speechstring = Settings.Instance["speechcustom"].ToString();
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Notification", "What do you want it to say?", ref speechstring))
+                    InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechcustom"] = speechstring;
             }
@@ -1012,7 +1012,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechbattery"] != null)
                     speechstring = Settings.Instance["speechbattery"].ToString();
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Notification", "What do you want it to say?", ref speechstring))
+                    InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechbattery"] = speechstring;
 
@@ -1020,7 +1020,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechbatteryvolt"] != null)
                     speechstring = Settings.Instance["speechbatteryvolt"].ToString();
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Battery Level", "What Voltage do you want to warn at?", ref speechstring))
+                    InputBox.Show(Strings.BatteryLevel, Strings.WhatVoltageDoYouWantToWarnAt, ref speechstring))
                     return;
                 Settings.Instance["speechbatteryvolt"] = speechstring;
 
@@ -1028,7 +1028,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechbatterypercent"] != null)
                     speechstring = Settings.Instance["speechbatterypercent"].ToString();
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Battery Level", "What percentage do you want to warn at?", ref speechstring))
+                    InputBox.Show(Strings.BatteryLevel, Strings.WhatPercentageDoYouWantToWarnAt, ref speechstring))
                     return;
                 Settings.Instance["speechbatterypercent"] = speechstring;
             }
@@ -1154,7 +1154,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechalt"] != null)
                     speechstring = Settings.Instance["speechalt"].ToString();
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Notification", "What do you want it to say?", ref speechstring))
+                    InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechalt"] = speechstring;
 
@@ -1162,7 +1162,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechaltheight"] != null)
                     speechstring = Settings.Instance["speechaltheight"].ToString();
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Min Alt", "What altitude do you want to warn at? (relative to home)",
+                    InputBox.Show(Strings.MinAlt, Strings.WhatAltitudeDoYouWantToWarnAtRelativeToHome,
                         ref speechstring))
                     return;
                 Settings.Instance["speechaltheight"] = (double.Parse(speechstring) / CurrentState.multiplieralt).ToString();
@@ -1304,14 +1304,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 var speechstring = "Armed";
                 if (Settings.Instance["speecharm"] != null)
                     speechstring = Settings.Instance["speecharm"];
-                if (DialogResult.Cancel == InputBox.Show("Arm", "What do you want it to say?", ref speechstring))
+                if (DialogResult.Cancel == InputBox.Show(Strings.Arm, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speecharm"] = speechstring;
 
                 speechstring = "Disarmed";
                 if (Settings.Instance["speechdisarm"] != null)
                     speechstring = Settings.Instance["speechdisarm"];
-                if (DialogResult.Cancel == InputBox.Show("Disarmed", "What do you want it to say?", ref speechstring))
+                if (DialogResult.Cancel == InputBox.Show(Strings.Disarmed, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechdisarm"] = speechstring;
             }
@@ -1360,7 +1360,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 // keep this one local
                 string pw = "";
 
-                InputBox.Show("Enter Password", "Please enter a password", ref pw, true);
+                InputBox.Show(Strings.EnterPassword, Strings.PleaseEnterAPassword, ref pw, true);
 
                 Password.EnterPassword(pw);
             }
@@ -1378,7 +1378,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechlowgroundspeed"] != null)
                     speechstring = Settings.Instance["speechlowgroundspeed"];
                 if (DialogResult.Cancel ==
-                    InputBox.Show("Ground Speed", "What do you want it to say?", ref speechstring))
+                    InputBox.Show(Strings.GroundSpeed, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechlowgroundspeed"] = speechstring;
 
@@ -1386,14 +1386,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechlowgroundspeedtrigger"] != null)
                     speechstring = Settings.Instance["speechlowgroundspeedtrigger"];
                 if (DialogResult.Cancel ==
-                    InputBox.Show("speed trigger", "What speed do you want to warn at (m/s)?", ref speechstring))
+                    InputBox.Show(Strings.SpeedTrigger, Strings.WhatSpeedDoYouWantToWarnAtMS, ref speechstring))
                     return;
                 Settings.Instance["speechlowgroundspeedtrigger"] = speechstring;
 
                 speechstring = "Low Air Speed {asp}";
                 if (Settings.Instance["speechlowairspeed"] != null)
                     speechstring = Settings.Instance["speechlowairspeed"];
-                if (DialogResult.Cancel == InputBox.Show("Air Speed", "What do you want it to say?", ref speechstring))
+                if (DialogResult.Cancel == InputBox.Show(Strings.AirSpeed, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechlowairspeed"] = speechstring;
 
@@ -1401,7 +1401,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (Settings.Instance["speechlowairspeedtrigger"] != null)
                     speechstring = Settings.Instance["speechlowairspeedtrigger"];
                 if (DialogResult.Cancel ==
-                    InputBox.Show("speed trigger", "What speed do you want to warn at (m/s)?", ref speechstring))
+                    InputBox.Show(Strings.SpeedTrigger, Strings.WhatSpeedDoYouWantToWarnAtMS, ref speechstring))
                     return;
                 Settings.Instance["speechlowairspeedtrigger"] = speechstring;
             }
@@ -1421,7 +1421,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             if (((CheckBox)sender).Checked)
             {
                 var server = Settings.Instance["adsbserverv2"] ?? Settings.Instance["adsbserver"] ?? "https://api.adsb.lol/";
-                if (DialogResult.Cancel == InputBox.Show("ADSB Server", "Server IP or API base URL (see https://ardupilot.org/planner/docs/common-adsb.html)", ref server))
+                if (DialogResult.Cancel == InputBox.Show(Strings.ADSBServer, Strings.ServerIPOrAPIBaseURLSeeHttpsArdupilotOrgPlannerDocsCommonAdsbHtml, ref server))
                     return;
                 // Strip ending slash off server
                 if (server.EndsWith("/"))
@@ -1434,7 +1434,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     var port = "30003";
                     if (Settings.Instance["adsbport"] != null)
                         port = Settings.Instance["adsbport"];
-                    if (DialogResult.Cancel == InputBox.Show("Server port", "Server port?", ref port))
+                    if (DialogResult.Cancel == InputBox.Show(Strings.ServerPort, Strings.ServerPort2, ref port))
                         return;
                     Settings.Instance["adsbport"] = port;
                 }
@@ -1608,7 +1608,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 var descstring = Settings.Instance["mapicondesc_default",
                     "{alt}{altunit} {airspeed}{speedunit} id:{sysid} Sats:{satcount} HDOP:{gpshdop} Volts:{battery_voltage}"];
 
-                if (DialogResult.Cancel == InputBox.Show("Description", "What do you want it to show?", ref descstring))
+                if (DialogResult.Cancel == InputBox.Show(Strings.Description, Strings.WhatDoYouWantItToShow, ref descstring))
                 {
                     return;
                 }

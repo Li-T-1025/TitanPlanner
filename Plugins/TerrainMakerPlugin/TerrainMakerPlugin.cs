@@ -90,7 +90,7 @@ namespace TerrainMakerPlugin
             if (!area.IsEmpty)
             {
                 string spacingstring = "30";
-                if (InputBox.Show("SPACING", "Enter the grid spacing in meters (5-100).", ref spacingstring) !=
+                if (InputBox.Show(Strings.SPACING, Strings.EnterTheGridSpacingInMeters5100, ref spacingstring) !=
                     DialogResult.OK)
                     return;
 

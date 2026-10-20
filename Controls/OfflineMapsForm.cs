@@ -740,9 +740,9 @@ namespace MissionPlanner.Controls
             string defaultName = string.Format(CultureInfo.InvariantCulture, "Area {0:F4}, {1:F4}", mid.Lat, mid.Lng);
             string name = defaultName;
             string prompt = fromSelection
-                ? "Name for the area selected on the map:"
-                : "Name for the current map view (hold ALT and drag on the map to pick an exact area instead):";
-            if (InputBox.Show("Download map area", prompt, ref name) != DialogResult.OK)
+                ? Strings.NameForTheAreaSelectedOnTheMap
+                : Strings.NameForTheCurrentMapViewHoldAltAndDragOnTheMapToPickAnExactAreaInstead;
+            if (InputBox.Show(Strings.DownloadMapArea, prompt, ref name) != DialogResult.OK)
                 return;
             if (string.IsNullOrWhiteSpace(name))
                 name = defaultName;
@@ -767,7 +767,7 @@ namespace MissionPlanner.Controls
 
             var region = regions[0];
             string name = region.Name;
-            if (InputBox.Show("Rename area", "Name:", ref name) != DialogResult.OK || string.IsNullOrWhiteSpace(name))
+            if (InputBox.Show(Strings.RenameArea, Strings.Name2, ref name) != DialogResult.OK || string.IsNullOrWhiteSpace(name))
                 return;
 
             region.Name = name.Trim();

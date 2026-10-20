@@ -70,7 +70,7 @@ namespace MissionPlanner.Log
 
             //solo - root:TjSDBkAu@10.1.1.10:/log/dataflash/
 
-            InputBox.Show("", "Please enter scp path eg (user:password@host:/dir/path/to/files/)", ref path);
+            InputBox.Show(string.Empty, Strings.PleaseEnterScpPathEgUserPasswordHostDirPathToFiles, ref path);
 
             Uri ur = new Uri("http://" + path);
 

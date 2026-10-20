@@ -44,17 +44,17 @@ namespace MissionPlanner.plugins
 
         private void but_Click(object sender2, EventArgs e)
         {
-            if (InputBox.Show("Server", "Server", ref address) != DialogResult.OK)
+            if (InputBox.Show(Strings.Server, Strings.Server, ref address) != DialogResult.OK)
                 return;
-            if (InputBox.Show("Server port", "Server port", ref port) != DialogResult.OK)
+            if (InputBox.Show(Strings.ServerPort, Strings.ServerPort, ref port) != DialogResult.OK)
                 return;
 
             string username = Settings.Instance.GetString("ex_api_username");
             string token = Settings.Instance.GetString("ex_api_psk");
 
-            if (InputBox.Show("Username", "Username", ref username) != DialogResult.OK)
+            if (InputBox.Show(Strings.Username, Strings.Username, ref username) != DialogResult.OK)
                 return;
-            if (InputBox.Show("Token", "Token", ref token) != DialogResult.OK)
+            if (InputBox.Show(Strings.Token, Strings.Token, ref token) != DialogResult.OK)
                 return;
 
             Settings.Instance["ex_api_address"] = address;

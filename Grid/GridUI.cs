@@ -1570,7 +1570,7 @@ namespace MissionPlanner.Grid
 
             string camname = "Default";
 
-            if (MissionPlanner.Controls.InputBox.Show("Camera Name", "Please and a camera name", ref camname) != System.Windows.Forms.DialogResult.OK)
+            if (MissionPlanner.Controls.InputBox.Show(Strings.CameraName, Strings.PleaseAndACameraName, ref camname) != System.Windows.Forms.DialogResult.OK)
                 return;
 
             CMB_camera.Text = camname;
@@ -1925,7 +1925,7 @@ namespace MissionPlanner.Grid
             if (CMB_startfrom.Text == Utilities.Grid.StartPosition.Point.ToString())
             {
                 int pnt = 1;
-                InputBox.Show("Enter point #", "Please enter a boundary point number", ref pnt);
+                InputBox.Show(Strings.EnterPoint, Strings.PleaseEnterABoundaryPointNumber, ref pnt);
 
                 if(list.Count > pnt)
                     Utilities.Grid.StartPointLatLngAlt = list[pnt - 1];

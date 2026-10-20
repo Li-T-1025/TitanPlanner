@@ -56,7 +56,7 @@ namespace MissionPlanner.Controls
             //Create a new theme based on the current theme. Nem theme will allways be a .mpusertheme
             string name = Path.GetFileNameWithoutExtension(ThemeManager.thmColor.strThemeName);
 
-            if (DialogResult.Cancel == InputBox.Show("Create Theme Copy", "Enter nem theme name (without extension)", ref name))
+            if (DialogResult.Cancel == InputBox.Show(Strings.CreateThemeCopy, Strings.EnterNemThemeNameWithoutExtension, ref name))
                 return;
 
             name = name + ".mpusertheme";

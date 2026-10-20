@@ -98,6 +98,12 @@
     <EmbeddedResource Update="OpenDroneID_UI.resx">
       <LogicalName>MissionPlanner.Controls.OpenDroneID_UI.resources</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Update="OpenDroneID_Map_Status.zh-Hans.resx">
+      <LogicalName>MissionPlanner.Controls.OpenDroneID_Map_Status.zh-Hans.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Update="OpenDroneID_UI.zh-Hans.resx">
+      <LogicalName>MissionPlanner.Controls.OpenDroneID_UI.zh-Hans.resources</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

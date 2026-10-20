@@ -363,7 +363,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             var minthro = "30";
             if (DialogResult.Cancel ==
-                InputBox.Show("Min Throttle", "Use only data above this throttle percent.", ref minthro))
+                InputBox.Show(Strings.MinThrottle, Strings.UseOnlyDataAboveThisThrottlePercent, ref minthro))
                 return;
 
             var ans = 0;
@@ -758,7 +758,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private void but_largemagcal_Click(object sender, EventArgs e)
         {
             double value = 0;
-            if (InputBox.Show("MagCal Yaw", "Enter current heading in degrees\nNOTE: gps lock is required. Heading is true, not magnetic", ref value) == DialogResult.OK)
+            if (InputBox.Show(Strings.MagCalYaw, Strings.EnterCurrentHeadingInDegreesNNOTEGpsLockIsRequiredHeadingIsTrueNotMagnetic, ref value) == DialogResult.OK)
             {
                 try
                 {

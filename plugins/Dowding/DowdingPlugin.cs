@@ -119,7 +119,7 @@ namespace Dowding
         private void men2_Click(object sender, EventArgs e)
         {
             double alt = 0;
-            InputBox.Show("Altitude", "Enter HAE altitude", ref alt);
+            InputBox.Show(Strings.Altitude, Strings.EnterHAEAltitude, ref alt);
             UpdateOutput?.Invoke(this, this.Host.FDMenuMapPosition.ToPLLA(alt));
         }
 

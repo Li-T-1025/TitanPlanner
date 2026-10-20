@@ -63,7 +63,16 @@ namespace MissionPlanner {
         /// <summary>
         ///   Looks up a localized string similar to Advanced Params.
         /// </summary>
-        public static string AdvancedParams {
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Absolute.
+        /// </summary>
+        public static string AbsoluteFrame {
+            get {
+                return ResourceManager.GetString("AbsoluteFrame", resourceCulture);
+            }
+        }
+public static string AdvancedParams {
             get {
                 return ResourceManager.GetString("AdvancedParams", resourceCulture);
             }
@@ -361,7 +370,25 @@ namespace MissionPlanner {
         /// <summary>
         ///   Looks up a localized string similar to compass variance.
         /// </summary>
-        public static string compass_variance {
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Relative.
+        /// </summary>
+        public static string RelativeFrame {
+            get {
+                return ResourceManager.GetString("RelativeFrame", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Terrain.
+        /// </summary>
+        public static string TerrainFrame {
+            get {
+                return ResourceManager.GetString("TerrainFrame", resourceCulture);
+            }
+        }
+public static string compass_variance {
             get {
                 return ResourceManager.GetString("compass_variance", resourceCulture);
             }
@@ -7478,6 +7505,15 @@ namespace MissionPlanner {
 
         
         /// <summary>
+        ///   Looks up a localized string similar to External Guided.
+        /// </summary>
+        public static string ExternalGuided {
+            get {
+                return ResourceManager.GetString("ExternalGuided", resourceCulture);
+            }
+        }
+
+        /// <summary>
         ///   Looks up a localized string similar to Status: loaded tiles.
         /// </summary>
         public static string StatusLoadedTiles {
@@ -11531,6 +11567,758 @@ namespace MissionPlanner {
         }
 
         
+        public static string AltStep
+        {
+            get { return ResourceManager.GetString("AltStep", resourceCulture); }
+        }
+        public static string Angle
+        {
+            get { return ResourceManager.GetString("Angle", resourceCulture); }
+        }
+        public static string AngleOfFirstPointWholeDegrees
+        {
+            get { return ResourceManager.GetString("AngleOfFirstPointWholeDegrees", resourceCulture); }
+        }
+        public static string BoxMaximumAltitude
+        {
+            get { return ResourceManager.GetString("BoxMaximumAltitude", resourceCulture); }
+        }
+        public static string BoxMinimumAltitude
+        {
+            get { return ResourceManager.GetString("BoxMinimumAltitude", resourceCulture); }
+        }
+        public static string DefaultAlt
+        {
+            get { return ResourceManager.GetString("DefaultAlt", resourceCulture); }
+        }
+        public static string DefaultAltitude
+        {
+            get { return ResourceManager.GetString("DefaultAltitude", resourceCulture); }
+        }
+        public static string DirectionOfCircle1Or1
+        {
+            get { return ResourceManager.GetString("DirectionOfCircle1Or1", resourceCulture); }
+        }
+        public static string Easting
+        {
+            get { return ResourceManager.GetString("Easting", resourceCulture); }
+        }
+        public static string EnterALocationToSearchFor
+        {
+            get { return ResourceManager.GetString("EnterALocationToSearchFor", resourceCulture); }
+        }
+        public static string EnterMapBoxShareURL
+        {
+            get { return ResourceManager.GetString("EnterMapBoxShareURL", resourceCulture); }
+        }
+        public static string EnterNewUPHeading
+        {
+            get { return ResourceManager.GetString("EnterNewUPHeading", resourceCulture); }
+        }
+        public static string EnterOpacity0010
+        {
+            get { return ResourceManager.GetString("EnterOpacity0010", resourceCulture); }
+        }
+        public static string EnterRotation
+        {
+            get { return ResourceManager.GetString("EnterRotation", resourceCulture); }
+        }
+        public static string EnterSize
+        {
+            get { return ResourceManager.GetString("EnterSize", resourceCulture); }
+        }
+        public static string EnterString
+        {
+            get { return ResourceManager.GetString("EnterString", resourceCulture); }
+        }
+        public static string EnterStringRequires1CamBamStick3Font
+        {
+            get { return ResourceManager.GetString("EnterStringRequires1CamBamStick3Font", resourceCulture); }
+        }
+        public static string EnterTheMaxZoomToPrefetchTo
+        {
+            get { return ResourceManager.GetString("EnterTheMaxZoomToPrefetchTo", resourceCulture); }
+        }
+        public static string EnterTheWMSServerURL
+        {
+            get { return ResourceManager.GetString("EnterTheWMSServerURL", resourceCulture); }
+        }
+        public static string EnterTheWMSTServerURL
+        {
+            get { return ResourceManager.GetString("EnterTheWMSTServerURL", resourceCulture); }
+        }
+        public static string EnterTrackerASLAlt
+        {
+            get { return ResourceManager.GetString("EnterTrackerASLAlt", resourceCulture); }
+        }
+        public static string EnterZoneEg50S11N
+        {
+            get { return ResourceManager.GetString("EnterZoneEg50S11N", resourceCulture); }
+        }
+        public static string FindLocation
+        {
+            get { return ResourceManager.GetString("FindLocation", resourceCulture); }
+        }
+        public static string HomeAlt
+        {
+            get { return ResourceManager.GetString("HomeAlt", resourceCulture); }
+        }
+        public static string HomeAltitude
+        {
+            get { return ResourceManager.GetString("HomeAltitude", resourceCulture); }
+        }
+        public static string InsertWP
+        {
+            get { return ResourceManager.GetString("InsertWP", resourceCulture); }
+        }
+        public static string InsertWPAfterWp
+        {
+            get { return ResourceManager.GetString("InsertWPAfterWp", resourceCulture); }
+        }
+        public static string JumpRepeat
+        {
+            get { return ResourceManager.GetString("JumpRepeat", resourceCulture); }
+        }
+        public static string JumpToWPNo
+        {
+            get { return ResourceManager.GetString("JumpToWPNo", resourceCulture); }
+        }
+        public static string LoiterTime
+        {
+            get { return ResourceManager.GetString("LoiterTime", resourceCulture); }
+        }
+        public static string LoiterTurns
+        {
+            get { return ResourceManager.GetString("LoiterTurns", resourceCulture); }
+        }
+        public static string MavlinkID
+        {
+            get { return ResourceManager.GetString("MavlinkID", resourceCulture); }
+        }
+        public static string MaxAlt
+        {
+            get { return ResourceManager.GetString("MaxAlt", resourceCulture); }
+        }
+        public static string MaxAlt2
+        {
+            get { return ResourceManager.GetString("MaxAlt2", resourceCulture); }
+        }
+        public static string MaxZoom
+        {
+            get { return ResourceManager.GetString("MaxZoom", resourceCulture); }
+        }
+        public static string MinAlt
+        {
+            get { return ResourceManager.GetString("MinAlt", resourceCulture); }
+        }
+        public static string MinAlt2
+        {
+            get { return ResourceManager.GetString("MinAlt2", resourceCulture); }
+        }
+        public static string Northing
+        {
+            get { return ResourceManager.GetString("Northing", resourceCulture); }
+        }
+        public static string NumberOfPointsToGenerateCircle
+        {
+            get { return ResourceManager.GetString("NumberOfPointsToGenerateCircle", resourceCulture); }
+        }
+        public static string NumberOfTimesToRepeat
+        {
+            get { return ResourceManager.GetString("NumberOfTimesToRepeat", resourceCulture); }
+        }
+        public static string OffsetInMeters
+        {
+            get { return ResourceManager.GetString("OffsetInMeters", resourceCulture); }
+        }
+        public static string Opacity0010
+        {
+            get { return ResourceManager.GetString("Opacity0010", resourceCulture); }
+        }
+        public static string PleaseEnterTheCommandID
+        {
+            get { return ResourceManager.GetString("PleaseEnterTheCommandID", resourceCulture); }
+        }
+        public static string PleaseEnterTheOffsetInMetersEnterANegativeValueToMakeThePolygonSmaller
+        {
+            get { return ResourceManager.GetString("PleaseEnterTheOffsetInMetersEnterANegativeValueToMakeThePolygonSmaller", resourceCulture); }
+        }
+        public static string PleaseEnterTheUTMZoneOrCancelToNotChange
+        {
+            get { return ResourceManager.GetString("PleaseEnterTheUTMZoneOrCancelToNotChange", resourceCulture); }
+        }
+        public static string PleaseEnterYourTakeoffAltitudeIn
+        {
+            get { return ResourceManager.GetString("PleaseEnterYourTakeoffAltitudeIn", resourceCulture); }
+        }
+        public static string PleaseEnterYourTakeoffPitch
+        {
+            get { return ResourceManager.GetString("PleaseEnterYourTakeoffPitch", resourceCulture); }
+        }
+        public static string Points
+        {
+            get { return ResourceManager.GetString("Points", resourceCulture); }
+        }
+        public static string Radius
+        {
+            get { return ResourceManager.GetString("Radius", resourceCulture); }
+        }
+        public static string RotateMapToHeading
+        {
+            get { return ResourceManager.GetString("RotateMapToHeading", resourceCulture); }
+        }
+        public static string TakeoffPitch
+        {
+            get { return ResourceManager.GetString("TakeoffPitch", resourceCulture); }
+        }
+        public static string TrackerAlt
+        {
+            get { return ResourceManager.GetString("TrackerAlt", resourceCulture); }
+        }
+        public static string WMSServer
+        {
+            get { return ResourceManager.GetString("WMSServer", resourceCulture); }
+        }
+        public static string WMSTServer
+        {
+            get { return ResourceManager.GetString("WMSTServer", resourceCulture); }
+        }
+        public static string WPNo
+        {
+            get { return ResourceManager.GetString("WPNo", resourceCulture); }
+        }
+        public static string Zone
+        {
+            get { return ResourceManager.GetString("Zone", resourceCulture); }
+        }
+        public static string AltChange
+        {
+            get { return ResourceManager.GetString("AltChange", resourceCulture); }
+        }
+        public static string PleaseEnterTheAltitudeChangeYouRequire
+        {
+            get { return ResourceManager.GetString("PleaseEnterTheAltitudeChangeYouRequire", resourceCulture); }
+        }
+        public static string WmtsServer
+        {
+            get { return ResourceManager.GetString("WmtsServer", resourceCulture); }
+        }
+        public static string TheFollowingLayersWereDetected
+        {
+            get { return ResourceManager.GetString("TheFollowingLayersWereDetected", resourceCulture); }
+        }
+        public static string BatteryCellCount
+        {
+            get { return ResourceManager.GetString("BatteryCellCount", resourceCulture); }
+        }
+        public static string BatteryLevel
+        {
+            get { return ResourceManager.GetString("BatteryLevel", resourceCulture); }
+        }
+        public static string CellCount
+        {
+            get { return ResourceManager.GetString("CellCount", resourceCulture); }
+        }
+        public static string Columns
+        {
+            get { return ResourceManager.GetString("Columns", resourceCulture); }
+        }
+        public static string Endalt
+        {
+            get { return ResourceManager.GetString("Endalt", resourceCulture); }
+        }
+        public static string EnterAirscrewSizeInInch
+        {
+            get { return ResourceManager.GetString("EnterAirscrewSizeInInch", resourceCulture); }
+        }
+        public static string EnterAlt
+        {
+            get { return ResourceManager.GetString("EnterAlt", resourceCulture); }
+        }
+        public static string EnterBatteryCellFullyChargedVoltageRNLiPo42LipoHV435LiIon41Or42
+        {
+            get { return ResourceManager.GetString("EnterBatteryCellFullyChargedVoltageRNLiPo42LipoHV435LiIon41Or42", resourceCulture); }
+        }
+        public static string EnterBatteryCellFullyDischargedVoltageRNLiPoLipoHV33LiIon28
+        {
+            get { return ResourceManager.GetString("EnterBatteryCellFullyDischargedVoltageRNLiPoLipoHV33LiIon28", resourceCulture); }
+        }
+        public static string EnterBatteryCellcount
+        {
+            get { return ResourceManager.GetString("EnterBatteryCellcount", resourceCulture); }
+        }
+        public static string EnterCoords
+        {
+            get { return ResourceManager.GetString("EnterCoords", resourceCulture); }
+        }
+        public static string EnterFlyToCoords
+        {
+            get { return ResourceManager.GetString("EnterFlyToCoords", resourceCulture); }
+        }
+        public static string EnterGuidedModeAlt
+        {
+            get { return ResourceManager.GetString("EnterGuidedModeAlt", resourceCulture); }
+        }
+        public static string EnterHAEAltitude
+        {
+            get { return ResourceManager.GetString("EnterHAEAltitude", resourceCulture); }
+        }
+        public static string EnterHerelinkIpAddress
+        {
+            get { return ResourceManager.GetString("EnterHerelinkIpAddress", resourceCulture); }
+        }
+        public static string EnterMaxSpeed
+        {
+            get { return ResourceManager.GetString("EnterMaxSpeed", resourceCulture); }
+        }
+        public static string EnterMessage
+        {
+            get { return ResourceManager.GetString("EnterMessage", resourceCulture); }
+        }
+        public static string EnterMessageToBeLogged
+        {
+            get { return ResourceManager.GetString("EnterMessageToBeLogged", resourceCulture); }
+        }
+        public static string EnterNumberOfColumnsToHave
+        {
+            get { return ResourceManager.GetString("EnterNumberOfColumnsToHave", resourceCulture); }
+        }
+        public static string EnterNumberOfRowsToHave
+        {
+            get { return ResourceManager.GetString("EnterNumberOfRowsToHave", resourceCulture); }
+        }
+        public static string EnterPOICoords
+        {
+            get { return ResourceManager.GetString("EnterPOICoords", resourceCulture); }
+        }
+        public static string EnterTakeoffAlt
+        {
+            get { return ResourceManager.GetString("EnterTakeoffAlt", resourceCulture); }
+        }
+        public static string EnterTheUrlToTheMjpegSourceUrl
+        {
+            get { return ResourceManager.GetString("EnterTheUrlToTheMjpegSourceUrl", resourceCulture); }
+        }
+        public static string HerelinkIp
+        {
+            get { return ResourceManager.GetString("HerelinkIp", resourceCulture); }
+        }
+        public static string HudHeader
+        {
+            get { return ResourceManager.GetString("HudHeader", resourceCulture); }
+        }
+        public static string JumpToTag
+        {
+            get { return ResourceManager.GetString("JumpToTag", resourceCulture); }
+        }
+        public static string MjpegUrl
+        {
+            get { return ResourceManager.GetString("MjpegUrl", resourceCulture); }
+        }
+        public static string Notification
+        {
+            get { return ResourceManager.GetString("Notification", resourceCulture); }
+        }
+        public static string Photos
+        {
+            get { return ResourceManager.GetString("Photos", resourceCulture); }
+        }
+        public static string PleaseEnterTheCoordsLatLongAltAbsOrLatLong
+        {
+            get { return ResourceManager.GetString("PleaseEnterTheCoordsLatLongAltAbsOrLatLong", resourceCulture); }
+        }
+        public static string PleaseEnterTheCoordsLatLongAltOrLatLong
+        {
+            get { return ResourceManager.GetString("PleaseEnterTheCoordsLatLongAltOrLatLong", resourceCulture); }
+        }
+        public static string PleaseEnterYourItemPrefix
+        {
+            get { return ResourceManager.GetString("PleaseEnterYourItemPrefix", resourceCulture); }
+        }
+        public static string Radius2
+        {
+            get { return ResourceManager.GetString("Radius2", resourceCulture); }
+        }
+        public static string ResumeAt
+        {
+            get { return ResourceManager.GetString("ResumeAt", resourceCulture); }
+        }
+        public static string ResumeMissionAtWaypoint
+        {
+            get { return ResourceManager.GetString("ResumeMissionAtWaypoint", resourceCulture); }
+        }
+        public static string Rows
+        {
+            get { return ResourceManager.GetString("Rows", resourceCulture); }
+        }
+        public static string Seperation
+        {
+            get { return ResourceManager.GetString("Seperation", resourceCulture); }
+        }
+        public static string StartHeading
+        {
+            get { return ResourceManager.GetString("StartHeading", resourceCulture); }
+        }
+        public static string Startalt
+        {
+            get { return ResourceManager.GetString("Startalt", resourceCulture); }
+        }
+        public static string TagId
+        {
+            get { return ResourceManager.GetString("TagId", resourceCulture); }
+        }
+        public static string WhatDoYouWantItToSay
+        {
+            get { return ResourceManager.GetString("WhatDoYouWantItToSay", resourceCulture); }
+        }
+        public static string WhatPercentageDoYouWantToWarnAt
+        {
+            get { return ResourceManager.GetString("WhatPercentageDoYouWantToWarnAt", resourceCulture); }
+        }
+        public static string WhatVoltageDoYouWantToWarnAt
+        {
+            get { return ResourceManager.GetString("WhatVoltageDoYouWantToWarnAt", resourceCulture); }
+        }
+        public static string EnterTargetAltRelativeToHome
+        {
+            get { return ResourceManager.GetString("EnterTargetAltRelativeToHome", resourceCulture); }
+        }
+        public static string GStreamerUrl
+        {
+            get { return ResourceManager.GetString("GStreamerUrl", resourceCulture); }
+        }
+        public static string EnterTheSourcePipelineEnsureTheFinalPayloadIsVideoconvertVideoXraw
+        {
+            get { return ResourceManager.GetString("EnterTheSourcePipelineEnsureTheFinalPayloadIsVideoconvertVideoXraw", resourceCulture); }
+        }
+        public static string RelativeAlt
+        {
+            get { return ResourceManager.GetString("RelativeAlt", resourceCulture); }
+        }
+        public static string PleaseEnterYourHomeAltitudeOrPressCancelToUseAbsoluteAlt
+        {
+            get { return ResourceManager.GetString("PleaseEnterYourHomeAltitudeOrPressCancelToUseAbsoluteAlt", resourceCulture); }
+        }
+        public static string AltOffset
+        {
+            get { return ResourceManager.GetString("AltOffset", resourceCulture); }
+        }
+        public static string EnterTheAltOffsetRelativeToTheCurrentAltForTheBelowMessages
+        {
+            get { return ResourceManager.GetString("EnterTheAltOffsetRelativeToTheCurrentAltForTheBelowMessages", resourceCulture); }
+        }
+        public static string ADSBServer
+        {
+            get { return ResourceManager.GetString("ADSBServer", resourceCulture); }
+        }
+        public static string AirSpeed
+        {
+            get { return ResourceManager.GetString("AirSpeed", resourceCulture); }
+        }
+        public static string Description
+        {
+            get { return ResourceManager.GetString("Description", resourceCulture); }
+        }
+        public static string Disarmed
+        {
+            get { return ResourceManager.GetString("Disarmed", resourceCulture); }
+        }
+        public static string EnterANameForThisLocation
+        {
+            get { return ResourceManager.GetString("EnterANameForThisLocation", resourceCulture); }
+        }
+        public static string EnterAltRelativeToHomeAlt
+        {
+            get { return ResourceManager.GetString("EnterAltRelativeToHomeAlt", resourceCulture); }
+        }
+        public static string EnterPassword
+        {
+            get { return ResourceManager.GetString("EnterPassword", resourceCulture); }
+        }
+        public static string EnterTheHeading0360
+        {
+            get { return ResourceManager.GetString("EnterTheHeading0360", resourceCulture); }
+        }
+        public static string GroundSpeed
+        {
+            get { return ResourceManager.GetString("GroundSpeed", resourceCulture); }
+        }
+        public static string Heading
+        {
+            get { return ResourceManager.GetString("Heading", resourceCulture); }
+        }
+        public static string HowMany
+        {
+            get { return ResourceManager.GetString("HowMany", resourceCulture); }
+        }
+        public static string InputSeed
+        {
+            get { return ResourceManager.GetString("InputSeed", resourceCulture); }
+        }
+        public static string Name
+        {
+            get { return ResourceManager.GetString("Name", resourceCulture); }
+        }
+        public static string PleaseEnterAFriendlyName
+        {
+            get { return ResourceManager.GetString("PleaseEnterAFriendlyName", resourceCulture); }
+        }
+        public static string PleaseEnterAPassword
+        {
+            get { return ResourceManager.GetString("PleaseEnterAPassword", resourceCulture); }
+        }
+        public static string PleaseEnterYourPassPhraseSentenceNNumbersLowerCaseUpperCaseSymbolsAnd12CharsLongUsingAtleast2OfEach
+        {
+            get { return ResourceManager.GetString("PleaseEnterYourPassPhraseSentenceNNumbersLowerCaseUpperCaseSymbolsAnd12CharsLongUsingAtleast2OfEach", resourceCulture); }
+        }
+        public static string SaveLocation
+        {
+            get { return ResourceManager.GetString("SaveLocation", resourceCulture); }
+        }
+        public static string ServerIPOrAPIBaseURLSeeHttpsArdupilotOrgPlannerDocsCommonAdsbHtml
+        {
+            get { return ResourceManager.GetString("ServerIPOrAPIBaseURLSeeHttpsArdupilotOrgPlannerDocsCommonAdsbHtml", resourceCulture); }
+        }
+        public static string ServerPort
+        {
+            get { return ResourceManager.GetString("ServerPort", resourceCulture); }
+        }
+        public static string ServerPort2
+        {
+            get { return ResourceManager.GetString("ServerPort2", resourceCulture); }
+        }
+        public static string SpeedTrigger
+        {
+            get { return ResourceManager.GetString("SpeedTrigger", resourceCulture); }
+        }
+        public static string WhatAltitudeDoYouWantToWarnAtRelativeToHome
+        {
+            get { return ResourceManager.GetString("WhatAltitudeDoYouWantToWarnAtRelativeToHome", resourceCulture); }
+        }
+        public static string WhatDoYouWantItToShow
+        {
+            get { return ResourceManager.GetString("WhatDoYouWantItToShow", resourceCulture); }
+        }
+        public static string WhatSpeedDoYouWantToWarnAtMS
+        {
+            get { return ResourceManager.GetString("WhatSpeedDoYouWantToWarnAtMS", resourceCulture); }
+        }
+        public static string CameraName
+        {
+            get { return ResourceManager.GetString("CameraName", resourceCulture); }
+        }
+        public static string EnterCommandID
+        {
+            get { return ResourceManager.GetString("EnterCommandID", resourceCulture); }
+        }
+        public static string EnterCurrentHeadingInDegreesNNOTEGpsLockIsRequiredHeadingIsTrueNotMagnetic
+        {
+            get { return ResourceManager.GetString("EnterCurrentHeadingInDegreesNNOTEGpsLockIsRequiredHeadingIsTrueNotMagnetic", resourceCulture); }
+        }
+        public static string EnterDriveLetterOrPathEGM
+        {
+            get { return ResourceManager.GetString("EnterDriveLetterOrPathEGM", resourceCulture); }
+        }
+        public static string EnterFolderName
+        {
+            get { return ResourceManager.GetString("EnterFolderName", resourceCulture); }
+        }
+        public static string EnterNewDescription
+        {
+            get { return ResourceManager.GetString("EnterNewDescription", resourceCulture); }
+        }
+        public static string EnterPoint
+        {
+            get { return ResourceManager.GetString("EnterPoint", resourceCulture); }
+        }
+        public static string EnterPort
+        {
+            get { return ResourceManager.GetString("EnterPort", resourceCulture); }
+        }
+        public static string EnterYourToken
+        {
+            get { return ResourceManager.GetString("EnterYourToken", resourceCulture); }
+        }
+        public static string FolderName
+        {
+            get { return ResourceManager.GetString("FolderName", resourceCulture); }
+        }
+        public static string IDNumberOfTheCommand
+        {
+            get { return ResourceManager.GetString("IDNumberOfTheCommand", resourceCulture); }
+        }
+        public static string MagCalYaw
+        {
+            get { return ResourceManager.GetString("MagCalYaw", resourceCulture); }
+        }
+        public static string MinThrottle
+        {
+            get { return ResourceManager.GetString("MinThrottle", resourceCulture); }
+        }
+        public static string MountPoint
+        {
+            get { return ResourceManager.GetString("MountPoint", resourceCulture); }
+        }
+        public static string PleaseAndACameraName
+        {
+            get { return ResourceManager.GetString("PleaseAndACameraName", resourceCulture); }
+        }
+        public static string PleaseEnterABoundaryPointNumber
+        {
+            get { return ResourceManager.GetString("PleaseEnterABoundaryPointNumber", resourceCulture); }
+        }
+        public static string PleaseEnterAListenPort
+        {
+            get { return ResourceManager.GetString("PleaseEnterAListenPort", resourceCulture); }
+        }
+        public static string PleaseEnterYourPassword
+        {
+            get { return ResourceManager.GetString("PleaseEnterYourPassword", resourceCulture); }
+        }
+        public static string PointsOfHistory
+        {
+            get { return ResourceManager.GetString("PointsOfHistory", resourceCulture); }
+        }
+        public static string Token
+        {
+            get { return ResourceManager.GetString("Token", resourceCulture); }
+        }
+        public static string UseOnlyDataAboveThisThrottlePercent
+        {
+            get { return ResourceManager.GetString("UseOnlyDataAboveThisThrottlePercent", resourceCulture); }
+        }
+        public static string WhatIsTheName
+        {
+            get { return ResourceManager.GetString("WhatIsTheName", resourceCulture); }
+        }
+        public static string Alt
+        {
+            get { return ResourceManager.GetString("Alt", resourceCulture); }
+        }
+        public static string CreateThemeCopy
+        {
+            get { return ResourceManager.GetString("CreateThemeCopy", resourceCulture); }
+        }
+        public static string EnterAFriendlyNameForThisLocation
+        {
+            get { return ResourceManager.GetString("EnterAFriendlyNameForThisLocation", resourceCulture); }
+        }
+        public static string EnterASingleWordToSearchFor
+        {
+            get { return ResourceManager.GetString("EnterASingleWordToSearchFor", resourceCulture); }
+        }
+        public static string EnterAngle
+        {
+            get { return ResourceManager.GetString("EnterAngle", resourceCulture); }
+        }
+        public static string EnterBaudrate
+        {
+            get { return ResourceManager.GetString("EnterBaudrate", resourceCulture); }
+        }
+        public static string EnterID
+        {
+            get { return ResourceManager.GetString("EnterID", resourceCulture); }
+        }
+        public static string EnterIPPort
+        {
+            get { return ResourceManager.GetString("EnterIPPort", resourceCulture); }
+        }
+        public static string EnterLineNumber
+        {
+            get { return ResourceManager.GetString("EnterLineNumber", resourceCulture); }
+        }
+        public static string EnterLocation
+        {
+            get { return ResourceManager.GetString("EnterLocation", resourceCulture); }
+        }
+        public static string EnterNemThemeNameWithoutExtension
+        {
+            get { return ResourceManager.GetString("EnterNemThemeNameWithoutExtension", resourceCulture); }
+        }
+        public static string EnterNewAlt
+        {
+            get { return ResourceManager.GetString("EnterNewAlt", resourceCulture); }
+        }
+        public static string EnterParamNames
+        {
+            get { return ResourceManager.GetString("EnterParamNames", resourceCulture); }
+        }
+        public static string EnterTCPPort
+        {
+            get { return ResourceManager.GetString("EnterTCPPort", resourceCulture); }
+        }
+        public static string EnterTheGridSpacingInMeters5100
+        {
+            get { return ResourceManager.GetString("EnterTheGridSpacingInMeters5100", resourceCulture); }
+        }
+        public static string FftSampleRate
+        {
+            get { return ResourceManager.GetString("FftSampleRate", resourceCulture); }
+        }
+        public static string LayoutName
+        {
+            get { return ResourceManager.GetString("LayoutName", resourceCulture); }
+        }
+        public static string LineNo
+        {
+            get { return ResourceManager.GetString("LineNo", resourceCulture); }
+        }
+        public static string Message
+        {
+            get { return ResourceManager.GetString("Message", resourceCulture); }
+        }
+        public static string Name2
+        {
+            get { return ResourceManager.GetString("Name2", resourceCulture); }
+        }
+        public static string NterSourceFileSampleRate
+        {
+            get { return ResourceManager.GetString("NterSourceFileSampleRate", resourceCulture); }
+        }
+        public static string POI
+        {
+            get { return ResourceManager.GetString("POI", resourceCulture); }
+        }
+        public static string PleaseEnterAMessageAboutThisErrorIfYouCan
+        {
+            get { return ResourceManager.GetString("PleaseEnterAMessageAboutThisErrorIfYouCan", resourceCulture); }
+        }
+        public static string PleaseEnterScpPathEgUserPasswordHostDirPathToFiles
+        {
+            get { return ResourceManager.GetString("PleaseEnterScpPathEgUserPasswordHostDirPathToFiles", resourceCulture); }
+        }
+        public static string RenameArea
+        {
+            get { return ResourceManager.GetString("RenameArea", resourceCulture); }
+        }
+        public static string SPACING
+        {
+            get { return ResourceManager.GetString("SPACING", resourceCulture); }
+        }
+        public static string SSHRemote
+        {
+            get { return ResourceManager.GetString("SSHRemote", resourceCulture); }
+        }
+        public static string SearchFor
+        {
+            get { return ResourceManager.GetString("SearchFor", resourceCulture); }
+        }
+        public static string ThisWillBeTheHeading
+        {
+            get { return ResourceManager.GetString("ThisWillBeTheHeading", resourceCulture); }
+        }
+        public static string DownloadMapArea
+        {
+            get { return ResourceManager.GetString("DownloadMapArea", resourceCulture); }
+        }
+        public static string NameForTheAreaSelectedOnTheMap
+        {
+            get { return ResourceManager.GetString("NameForTheAreaSelectedOnTheMap", resourceCulture); }
+        }
+        public static string NameForTheCurrentMapViewHoldAltAndDragOnTheMapToPickAnExactAreaInstead
+        {
+            get { return ResourceManager.GetString("NameForTheCurrentMapViewHoldAltAndDragOnTheMapToPickAnExactAreaInstead", resourceCulture); }
+        }
 
     }
 }

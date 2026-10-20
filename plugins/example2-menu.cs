@@ -67,7 +67,7 @@ namespace Shortcuts
             CustomMessageBox.Show(Strings.SamplePluginSeeSourcePluginsFolder);
 
 			string angle = "0";
-            InputBox.Show("Enter Angle", "This will be the heading", ref angle);
+            InputBox.Show(Strings.EnterAngle, Strings.ThisWillBeTheHeading, ref angle);
 		    int angle_in_number = Int32.Parse(angle);
 			
 			Host.InsertWP(0, MAVLink.MAV_CMD.DO_SET_SERVO, 9, angle_in_number, 0, 0, 0, 0, 0);

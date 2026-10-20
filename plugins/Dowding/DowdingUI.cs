@@ -127,7 +127,7 @@ namespace Dowding
         private void but_token_Click(object sender, EventArgs e)
         {
             var token = "";
-            if (InputBox.Show("Token", "Enter your token", ref token) == DialogResult.OK)
+            if (InputBox.Show(Strings.Token, Strings.EnterYourToken, ref token) == DialogResult.OK)
             {
                 Settings.Instance["Dowding_token"] = token;
             }
@@ -463,7 +463,7 @@ namespace Dowding
                     {
                         CoTStream = new TcpSerial();
                         int portt = int.Parse(Settings.Instance["cot_tcphostport", "14551"]);
-                        InputBox.Show("Enter Port", "Please enter a listen port", ref portt);
+                        InputBox.Show(Strings.EnterPort, Strings.PleaseEnterAListenPort, ref portt);
                         cmb_cotbaud.SelectedIndex = 0;
                         listenerCoT = new TcpListener(System.Net.IPAddress.Any, portt);
                         listenerCoT.Start(0);
@@ -477,7 +477,7 @@ namespace Dowding
                     else if (cmb_cotport.Text == Strings.UDPHost14551 || cmb_cotport.Text == Strings.UDPHost)
                     {
                         int portu = int.Parse(Settings.Instance["cot_udphostport", "10011"]);
-                        InputBox.Show("Enter Port", "Please enter a listen port", ref portu);
+                        InputBox.Show(Strings.EnterPort, Strings.PleaseEnterAListenPort, ref portu);
                         Settings.Instance["cot_udphostport"] = portu.ToString();
                         CoTStream = new UdpSerial()
                         {

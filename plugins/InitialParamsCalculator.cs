@@ -139,10 +139,10 @@ namespace MissionPlanner.InitialParamCalc
 
 
             // Get input parameters
-            if (MissionPlanner.Controls.InputBox.Show("Initial parameter calculator", "Enter airscrew size in inch", ref prop) != DialogResult.OK) return;
-            if (MissionPlanner.Controls.InputBox.Show("Initial parameter calculator", "Enter battery cellcount", ref cellcount) != DialogResult.OK) return;
-            if (MissionPlanner.Controls.InputBox.Show("Initial parameter calculator", "Enter battery cell fully charged voltage\r\nLiPo - 4.2, LipoHV - 4.35, LiIon - 4.1 or 4.2", ref cellmax) != DialogResult.OK) return;
-            if (MissionPlanner.Controls.InputBox.Show("Initial parameter calculator", "Enter battery cell fully discharged voltage\r\nLiPo/LipoHV - 3.3, LiIon - 2.8", ref cellmin) != DialogResult.OK) return;
+            if (MissionPlanner.Controls.InputBox.Show(Strings.InitialParametersSuccesfullyUpdatedCheckParameters1Title, Strings.EnterAirscrewSizeInInch, ref prop) != DialogResult.OK) return;
+            if (MissionPlanner.Controls.InputBox.Show(Strings.InitialParametersSuccesfullyUpdatedCheckParameters1Title, Strings.EnterBatteryCellcount, ref cellcount) != DialogResult.OK) return;
+            if (MissionPlanner.Controls.InputBox.Show(Strings.InitialParametersSuccesfullyUpdatedCheckParameters1Title, Strings.EnterBatteryCellFullyChargedVoltageRNLiPo42LipoHV435LiIon41Or42, ref cellmax) != DialogResult.OK) return;
+            if (MissionPlanner.Controls.InputBox.Show(Strings.InitialParametersSuccesfullyUpdatedCheckParameters1Title, Strings.EnterBatteryCellFullyDischargedVoltageRNLiPoLipoHV33LiIon28, ref cellmin) != DialogResult.OK) return;
 
 
 

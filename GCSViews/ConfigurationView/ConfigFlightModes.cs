@@ -616,7 +616,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             modifyButton.Click += (o, e) =>
             {
                 var opts = UserParamOptions.Aggregate((a, b) => a + "\r\n" + b);
-                InputBox.Show("Params", "Enter Param Names", ref opts, false, true);
+                InputBox.Show(Strings.NumberAvailableParametersChangedUntilFullTitle, Strings.EnterParamNames, ref opts, false, true);
                 UserParamOptions = opts.Split(new[] { ',', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
                 Settings.Instance["FlightModeUserParams"] = UserParamOptions.Aggregate((a, b) => a.Trim() + "," + b.Trim());
                 LoadUserParams();

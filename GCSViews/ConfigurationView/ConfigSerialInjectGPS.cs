@@ -1299,7 +1299,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
 
             string location = "";
-            if (InputBox.Show("Enter Location", "Enter a friendly name for this location.", ref location) ==
+            if (InputBox.Show(Strings.EnterLocation, Strings.EnterAFriendlyNameForThisLocation, ref location) ==
                 DialogResult.OK)
             {
                 var basepos = MainV2.comPort.MAV.cs.Base;

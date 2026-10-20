@@ -124,7 +124,7 @@
     <value>连接基站 GPS</value>
 </data>
 <data name="groupBox1.Text" xml:space="preserve">
-    <value>GCS GPS</value>
+    <value>地面站 GPS</value>
 </data>
 <data name="LBL_gpsStatus.Text" xml:space="preserve">
     <value>尚未启动</value>

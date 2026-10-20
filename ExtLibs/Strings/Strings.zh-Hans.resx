@@ -14,6 +14,9 @@
     
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
+  <data name="AbsoluteFrame" xml:space="preserve">
+    <value>绝对</value>
+  </data>
     <resheader name="version">2.0</resheader>
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
@@ -211,8 +214,14 @@
   <data name="PleaseSelectCell" xml:space="preserve">
     <value>请先选择一个单元格</value>
   </data>
+  <data name="RelativeFrame" xml:space="preserve">
+    <value>相对</value>
+  </data>
   <data name="SelectComport" xml:space="preserve">
     <value>请先选择一个串口</value>
+  </data>
+  <data name="TerrainFrame" xml:space="preserve">
+    <value>地形</value>
   </data>
   <data name="WarningLogBrowseFMTMissing" xml:space="preserve">
     <value>日志浏览因您的日志中没有格式(FMT)信息而不能正确工作。
@@ -246,6 +255,9 @@
   </data>
   <data name="ExtendedTuning" xml:space="preserve">
     <value>扩展调参</value>
+  </data>
+  <data name="ExternalGuided" xml:space="preserve">
+    <value>外部引导</value>
   </data>
   <data name="FlightModes" xml:space="preserve">
     <value>飞行模式</value>
@@ -3622,5 +3634,571 @@ Mission Planner将会在30秒内寻找控制板。</value>
   </data>
   <data name="Z" xml:space="preserve">
     <value>Z</value>
+  </data>
+  <data name="AltStep" xml:space="preserve">
+    <value>高度增量</value>
+  </data>
+  <data name="Angle" xml:space="preserve">
+    <value>角度</value>
+  </data>
+  <data name="AngleOfFirstPointWholeDegrees" xml:space="preserve">
+    <value>第一个航点的角度（整度数）</value>
+  </data>
+  <data name="BoxMaximumAltitude" xml:space="preserve">
+    <value>围栏最大高度？</value>
+  </data>
+  <data name="BoxMinimumAltitude" xml:space="preserve">
+    <value>围栏最小高度？</value>
+  </data>
+  <data name="DefaultAlt" xml:space="preserve">
+    <value>默认高度</value>
+  </data>
+  <data name="DefaultAltitude" xml:space="preserve">
+    <value>默认高度</value>
+  </data>
+  <data name="DirectionOfCircle1Or1" xml:space="preserve">
+    <value>环绕方向（-1 或 1）</value>
+  </data>
+  <data name="Easting" xml:space="preserve">
+    <value>东坐标</value>
+  </data>
+  <data name="EnterALocationToSearchFor" xml:space="preserve">
+    <value>输入要搜索的位置：</value>
+  </data>
+  <data name="EnterMapBoxShareURL" xml:space="preserve">
+    <value>输入 MapBox 分享 URL</value>
+  </data>
+  <data name="EnterNewUPHeading" xml:space="preserve">
+    <value>输入新的向上航向</value>
+  </data>
+  <data name="EnterOpacity0010" xml:space="preserve">
+    <value>输入不透明度（0.0-1.0）</value>
+  </data>
+  <data name="EnterRotation" xml:space="preserve">
+    <value>输入旋转角度</value>
+  </data>
+  <data name="EnterSize" xml:space="preserve">
+    <value>输入大小</value>
+  </data>
+  <data name="EnterString" xml:space="preserve">
+    <value>输入字符串</value>
+  </data>
+  <data name="EnterStringRequires1CamBamStick3Font" xml:space="preserve">
+    <value>输入字符串（需 1CamBam_Stick_3 字体）</value>
+  </data>
+  <data name="EnterTheMaxZoomToPrefetchTo" xml:space="preserve">
+    <value>输入预取的最大缩放级别。</value>
+  </data>
+  <data name="EnterTheWMSServerURL" xml:space="preserve">
+    <value>输入 WMS 服务器 URL</value>
+  </data>
+  <data name="EnterTheWMSTServerURL" xml:space="preserve">
+    <value>输入 WMST 服务器 URL</value>
+  </data>
+  <data name="EnterTrackerASLAlt" xml:space="preserve">
+    <value>输入跟踪器海拔高度</value>
+  </data>
+  <data name="EnterZoneEg50S11N" xml:space="preserve">
+    <value>输入分区。（例如 50S、11N）</value>
+  </data>
+  <data name="FindLocation" xml:space="preserve">
+    <value>查找位置</value>
+  </data>
+  <data name="HomeAlt" xml:space="preserve">
+    <value>Home 高度</value>
+  </data>
+  <data name="HomeAltitude" xml:space="preserve">
+    <value>Home 高度</value>
+  </data>
+  <data name="InsertWP" xml:space="preserve">
+    <value>插入航点</value>
+  </data>
+  <data name="InsertWPAfterWp" xml:space="preserve">
+    <value>在航点# 之后插入</value>
+  </data>
+  <data name="JumpRepeat" xml:space="preserve">
+    <value>跳转重复次数</value>
+  </data>
+  <data name="JumpToWPNo" xml:space="preserve">
+    <value>跳转到航点编号？</value>
+  </data>
+  <data name="LoiterTime" xml:space="preserve">
+    <value>悬停时间</value>
+  </data>
+  <data name="LoiterTurns" xml:space="preserve">
+    <value>悬停圈数</value>
+  </data>
+  <data name="MavlinkID" xml:space="preserve">
+    <value>MAVLink ID</value>
+  </data>
+  <data name="MaxAlt" xml:space="preserve">
+    <value>最大高度</value>
+  </data>
+  <data name="MaxAlt2" xml:space="preserve">
+    <value>最大高度</value>
+  </data>
+  <data name="MaxZoom" xml:space="preserve">
+    <value>最大缩放</value>
+  </data>
+  <data name="MinAlt" xml:space="preserve">
+    <value>最小高度</value>
+  </data>
+  <data name="MinAlt2" xml:space="preserve">
+    <value>最小高度</value>
+  </data>
+  <data name="Northing" xml:space="preserve">
+    <value>北坐标</value>
+  </data>
+  <data name="NumberOfPointsToGenerateCircle" xml:space="preserve">
+    <value>生成圆周的航点数量</value>
+  </data>
+  <data name="NumberOfTimesToRepeat" xml:space="preserve">
+    <value>重复次数</value>
+  </data>
+  <data name="OffsetInMeters" xml:space="preserve">
+    <value>偏移量（米）</value>
+  </data>
+  <data name="Opacity0010" xml:space="preserve">
+    <value>不透明度 0.0-1.0</value>
+  </data>
+  <data name="PleaseEnterTheCommandID" xml:space="preserve">
+    <value>请输入命令 ID</value>
+  </data>
+  <data name="PleaseEnterTheOffsetInMetersEnterANegativeValueToMakeThePolygonSmaller" xml:space="preserve">
+    <value>请输入以米为单位的偏移量。输入负值可缩小多边形</value>
+  </data>
+  <data name="PleaseEnterTheUTMZoneOrCancelToNotChange" xml:space="preserve">
+    <value>请输入 UTM 分区，或点击取消以不更改</value>
+  </data>
+  <data name="PleaseEnterYourTakeoffAltitudeIn" xml:space="preserve">
+    <value>Please enter your takeoff altitude in {0}</value>
+  </data>
+  <data name="PleaseEnterYourTakeoffPitch" xml:space="preserve">
+    <value>请输入起飞俯仰角</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>点数</value>
+  </data>
+  <data name="Radius" xml:space="preserve">
+    <value>半径</value>
+  </data>
+  <data name="RotateMapToHeading" xml:space="preserve">
+    <value>旋转地图至航向</value>
+  </data>
+  <data name="TakeoffPitch" xml:space="preserve">
+    <value>起飞俯仰角</value>
+  </data>
+  <data name="TrackerAlt" xml:space="preserve">
+    <value>跟踪器高度</value>
+  </data>
+  <data name="WMSServer" xml:space="preserve">
+    <value>WMS 服务器</value>
+  </data>
+  <data name="WMSTServer" xml:space="preserve">
+    <value>WMST 服务器</value>
+  </data>
+  <data name="WPNo" xml:space="preserve">
+    <value>航点编号</value>
+  </data>
+  <data name="Zone" xml:space="preserve">
+    <value>分区</value>
+  </data>
+  <data name="AltChange" xml:space="preserve">
+    <value>高度变化</value>
+  </data>
+  <data name="PleaseEnterTheAltitudeChangeYouRequire" xml:space="preserve">
+    <value>请输入所需的高度变化。&amp;#xD;&amp;#xA;（20 = 上升 20，*2 = 按高度 * 2 上升）</value>
+  </data>
+  <data name="WmtsServer" xml:space="preserve">
+    <value>WMTS 服务器</value>
+  </data>
+  <data name="TheFollowingLayersWereDetected" xml:space="preserve">
+    <value>The following layers were detected:
+ {0}
+Please choose one by typing the associated number.</value>
+  </data>
+  <data name="BatteryCellCount" xml:space="preserve">
+    <value>电池芯数量</value>
+  </data>
+  <data name="BatteryLevel" xml:space="preserve">
+    <value>电池电量</value>
+  </data>
+  <data name="CellCount" xml:space="preserve">
+    <value>电芯数量</value>
+  </data>
+  <data name="Columns" xml:space="preserve">
+    <value>列数</value>
+  </data>
+  <data name="Endalt" xml:space="preserve">
+    <value>结束高度</value>
+  </data>
+  <data name="EnterAirscrewSizeInInch" xml:space="preserve">
+    <value>输入螺旋桨尺寸（英寸）</value>
+  </data>
+  <data name="EnterAlt" xml:space="preserve">
+    <value>输入高度</value>
+  </data>
+  <data name="EnterBatteryCellFullyChargedVoltageRNLiPo42LipoHV435LiIon41Or42" xml:space="preserve">
+    <value>输入电芯满电电压&amp;#xD;&amp;#xA;LiPo - 4.2，LipoHV - 4.35，LiIon - 4.1 或 4.2</value>
+  </data>
+  <data name="EnterBatteryCellFullyDischargedVoltageRNLiPoLipoHV33LiIon28" xml:space="preserve">
+    <value>输入电芯放电截止电压&amp;#xD;&amp;#xA;LiPo/LipoHV - 3.3，LiIon - 2.8</value>
+  </data>
+  <data name="EnterBatteryCellcount" xml:space="preserve">
+    <value>输入电池电芯数量</value>
+  </data>
+  <data name="EnterCoords" xml:space="preserve">
+    <value>输入坐标</value>
+  </data>
+  <data name="EnterFlyToCoords" xml:space="preserve">
+    <value>输入飞往坐标</value>
+  </data>
+  <data name="EnterGuidedModeAlt" xml:space="preserve">
+    <value>输入 Guided 模式高度</value>
+  </data>
+  <data name="EnterHAEAltitude" xml:space="preserve">
+    <value>输入 HAE 海拔高度</value>
+  </data>
+  <data name="EnterHerelinkIpAddress" xml:space="preserve">
+    <value>输入 herelink IP 地址</value>
+  </data>
+  <data name="EnterMaxSpeed" xml:space="preserve">
+    <value>输入最大速度</value>
+  </data>
+  <data name="EnterMessage" xml:space="preserve">
+    <value>输入消息</value>
+  </data>
+  <data name="EnterMessageToBeLogged" xml:space="preserve">
+    <value>输入要记录的消息</value>
+  </data>
+  <data name="EnterNumberOfColumnsToHave" xml:space="preserve">
+    <value>输入所需列数。</value>
+  </data>
+  <data name="EnterNumberOfRowsToHave" xml:space="preserve">
+    <value>输入所需行数。</value>
+  </data>
+  <data name="EnterPOICoords" xml:space="preserve">
+    <value>输入 POI 坐标</value>
+  </data>
+  <data name="EnterTakeoffAlt" xml:space="preserve">
+    <value>输入起飞高度</value>
+  </data>
+  <data name="EnterTheUrlToTheMjpegSourceUrl" xml:space="preserve">
+    <value>输入 MJPEG 源 URL 地址</value>
+  </data>
+  <data name="HerelinkIp" xml:space="preserve">
+    <value>herelink IP</value>
+  </data>
+  <data name="HudHeader" xml:space="preserve">
+    <value>HUD 表头</value>
+  </data>
+  <data name="JumpToTag" xml:space="preserve">
+    <value>跳转到标签</value>
+  </data>
+  <data name="MjpegUrl" xml:space="preserve">
+    <value>MJPEG 地址</value>
+  </data>
+  <data name="Notification" xml:space="preserve">
+    <value>通知</value>
+  </data>
+  <data name="Photos" xml:space="preserve">
+    <value>照片数</value>
+  </data>
+  <data name="PleaseEnterTheCoordsLatLongAltAbsOrLatLong" xml:space="preserve">
+    <value>请输入坐标 '纬度;经度;高度(绝对)' 或 '纬度;经度'</value>
+  </data>
+  <data name="PleaseEnterTheCoordsLatLongAltOrLatLong" xml:space="preserve">
+    <value>请输入坐标 '纬度;经度;高度' 或 '纬度;经度'</value>
+  </data>
+  <data name="PleaseEnterYourItemPrefix" xml:space="preserve">
+    <value>请输入你的条目前缀</value>
+  </data>
+  <data name="Radius2" xml:space="preserve">
+    <value>半径</value>
+  </data>
+  <data name="ResumeAt" xml:space="preserve">
+    <value>恢复于</value>
+  </data>
+  <data name="ResumeMissionAtWaypoint" xml:space="preserve">
+    <value>从航点 # 恢复任务</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>行数</value>
+  </data>
+  <data name="Seperation" xml:space="preserve">
+    <value>间距</value>
+  </data>
+  <data name="StartHeading" xml:space="preserve">
+    <value>起始航向</value>
+  </data>
+  <data name="Startalt" xml:space="preserve">
+    <value>起始高度</value>
+  </data>
+  <data name="TagId" xml:space="preserve">
+    <value>标签 ID：</value>
+  </data>
+  <data name="WhatDoYouWantItToSay" xml:space="preserve">
+    <value>你想让它说什么？</value>
+  </data>
+  <data name="WhatPercentageDoYouWantToWarnAt" xml:space="preserve">
+    <value>你想在多少百分比时发出警告？</value>
+  </data>
+  <data name="WhatVoltageDoYouWantToWarnAt" xml:space="preserve">
+    <value>你想在多少电压时发出警告？</value>
+  </data>
+  <data name="EnterTargetAltRelativeToHome" xml:space="preserve">
+    <value>输入目标高度（相对 home）</value>
+  </data>
+  <data name="GStreamerUrl" xml:space="preserve">
+    <value>GStreamer 地址</value>
+  </data>
+  <data name="EnterTheSourcePipelineEnsureTheFinalPayloadIsVideoconvertVideoXraw" xml:space="preserve">
+    <value>输入源管线&amp;#xD;&amp;#xA;确保最终载荷为 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink</value>
+  </data>
+  <data name="RelativeAlt" xml:space="preserve">
+    <value>相对高度</value>
+  </data>
+  <data name="PleaseEnterYourHomeAltitudeOrPressCancelToUseAbsoluteAlt" xml:space="preserve">
+    <value>请输入你的家（Home）高度，或按取消以使用绝对高度</value>
+  </data>
+  <data name="AltOffset" xml:space="preserve">
+    <value>高度偏移</value>
+  </data>
+  <data name="EnterTheAltOffsetRelativeToTheCurrentAltForTheBelowMessages" xml:space="preserve">
+    <value>Please enter your offset altitude</value>
+  </data>
+  <data name="ADSBServer" xml:space="preserve">
+    <value>ADSB 服务器</value>
+  </data>
+  <data name="AirSpeed" xml:space="preserve">
+    <value>空速</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Disarmed" xml:space="preserve">
+    <value>上锁</value>
+  </data>
+  <data name="EnterANameForThisLocation" xml:space="preserve">
+    <value>输入此位置的名称：</value>
+  </data>
+  <data name="EnterAltRelativeToHomeAlt" xml:space="preserve">
+    <value>输入高度（相对于起飞点高度）</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>输入密码</value>
+  </data>
+  <data name="EnterTheHeading0360" xml:space="preserve">
+    <value>输入航向（0-360）：</value>
+  </data>
+  <data name="GroundSpeed" xml:space="preserve">
+    <value>地速</value>
+  </data>
+  <data name="Heading" xml:space="preserve">
+    <value>航向</value>
+  </data>
+  <data name="HowMany" xml:space="preserve">
+    <value>数量？</value>
+  </data>
+  <data name="InputSeed" xml:space="preserve">
+    <value>输入种子</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="PleaseEnterAFriendlyName" xml:space="preserve">
+    <value>请输入一个易记的名称</value>
+  </data>
+  <data name="PleaseEnterAPassword" xml:space="preserve">
+    <value>请输入密码</value>
+  </data>
+  <data name="PleaseEnterYourPassPhraseSentenceNNumbersLowerCaseUpperCaseSymbolsAnd12CharsLongUsingAtleast2OfEach" xml:space="preserve">
+    <value>请输入你的口令/句子&amp;#xD;&amp;#xA;包含数字、小写、大写、符号，长度至少 12 位，且每种至少 2 个</value>
+  </data>
+  <data name="SaveLocation" xml:space="preserve">
+    <value>保存位置</value>
+  </data>
+  <data name="ServerIPOrAPIBaseURLSeeHttpsArdupilotOrgPlannerDocsCommonAdsbHtml" xml:space="preserve">
+    <value>服务器 IP 或 API 基础 URL（参见 https://ardupilot.org/planner/docs/common-adsb.html）</value>
+  </data>
+  <data name="ServerPort" xml:space="preserve">
+    <value>服务器端口</value>
+  </data>
+  <data name="ServerPort2" xml:space="preserve">
+    <value>服务器端口？</value>
+  </data>
+  <data name="SpeedTrigger" xml:space="preserve">
+    <value>速度触发</value>
+  </data>
+  <data name="WhatAltitudeDoYouWantToWarnAtRelativeToHome" xml:space="preserve">
+    <value>你想在什么高度时发出警告？（相对于起飞点）</value>
+  </data>
+  <data name="WhatDoYouWantItToShow" xml:space="preserve">
+    <value>你希望显示什么？</value>
+  </data>
+  <data name="WhatSpeedDoYouWantToWarnAtMS" xml:space="preserve">
+    <value>你想在多少速度时发出警告（m/s）？</value>
+  </data>
+  <data name="CameraName" xml:space="preserve">
+    <value>相机名称</value>
+  </data>
+  <data name="EnterCommandID" xml:space="preserve">
+    <value>输入命令 ID</value>
+  </data>
+  <data name="EnterCurrentHeadingInDegreesNNOTEGpsLockIsRequiredHeadingIsTrueNotMagnetic" xml:space="preserve">
+    <value>输入当前航向（度）&amp;#xD;&amp;#xA;注意：需要 GPS 定位。航向为真航向，非磁航向</value>
+  </data>
+  <data name="EnterDriveLetterOrPathEGM" xml:space="preserve">
+    <value>输入驱动器号或路径（例如 M:\）</value>
+  </data>
+  <data name="EnterFolderName" xml:space="preserve">
+    <value>输入文件夹名称</value>
+  </data>
+  <data name="EnterNewDescription" xml:space="preserve">
+    <value>输入新描述</value>
+  </data>
+  <data name="EnterPoint" xml:space="preserve">
+    <value>输入点编号</value>
+  </data>
+  <data name="EnterPort" xml:space="preserve">
+    <value>输入端口</value>
+  </data>
+  <data name="EnterYourToken" xml:space="preserve">
+    <value>输入你的令牌</value>
+  </data>
+  <data name="FolderName" xml:space="preserve">
+    <value>文件夹名称</value>
+  </data>
+  <data name="IDNumberOfTheCommand" xml:space="preserve">
+    <value>命令的 ID 编号</value>
+  </data>
+  <data name="MagCalYaw" xml:space="preserve">
+    <value>磁力计校准偏航角</value>
+  </data>
+  <data name="MinThrottle" xml:space="preserve">
+    <value>最小油门</value>
+  </data>
+  <data name="MountPoint" xml:space="preserve">
+    <value>挂载点</value>
+  </data>
+  <data name="PleaseAndACameraName" xml:space="preserve">
+    <value>请输入相机名称</value>
+  </data>
+  <data name="PleaseEnterABoundaryPointNumber" xml:space="preserve">
+    <value>请输入边界点编号</value>
+  </data>
+  <data name="PleaseEnterAListenPort" xml:space="preserve">
+    <value>请输入监听端口</value>
+  </data>
+  <data name="PleaseEnterYourPassword" xml:space="preserve">
+    <value>请输入你的密码</value>
+  </data>
+  <data name="PointsOfHistory" xml:space="preserve">
+    <value>历史数据点数？</value>
+  </data>
+  <data name="Token" xml:space="preserve">
+    <value>令牌</value>
+  </data>
+  <data name="UseOnlyDataAboveThisThrottlePercent" xml:space="preserve">
+    <value>仅使用油门百分比高于此值的数据。</value>
+  </data>
+  <data name="WhatIsTheName" xml:space="preserve">
+    <value>名称是什么</value>
+  </data>
+  <data name="Alt" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="CreateThemeCopy" xml:space="preserve">
+    <value>创建主题副本</value>
+  </data>
+  <data name="EnterAFriendlyNameForThisLocation" xml:space="preserve">
+    <value>请输入此位置的友好名称。</value>
+  </data>
+  <data name="EnterASingleWordToSearchFor" xml:space="preserve">
+    <value>输入要搜索的单词</value>
+  </data>
+  <data name="EnterAngle" xml:space="preserve">
+    <value>输入角度</value>
+  </data>
+  <data name="EnterBaudrate" xml:space="preserve">
+    <value>输入波特率</value>
+  </data>
+  <data name="EnterID" xml:space="preserve">
+    <value>输入 ID</value>
+  </data>
+  <data name="EnterIPPort" xml:space="preserve">
+    <value>输入 IP:端口</value>
+  </data>
+  <data name="EnterLineNumber" xml:space="preserve">
+    <value>输入行号</value>
+  </data>
+  <data name="EnterLocation" xml:space="preserve">
+    <value>输入位置</value>
+  </data>
+  <data name="EnterNemThemeNameWithoutExtension" xml:space="preserve">
+    <value>输入新主题名称（不含扩展名）</value>
+  </data>
+  <data name="EnterNewAlt" xml:space="preserve">
+    <value>输入新高度</value>
+  </data>
+  <data name="EnterParamNames" xml:space="preserve">
+    <value>输入参数名称</value>
+  </data>
+  <data name="EnterTCPPort" xml:space="preserve">
+    <value>输入 TCP 端口</value>
+  </data>
+  <data name="EnterTheGridSpacingInMeters5100" xml:space="preserve">
+    <value>输入网格间距（米）（5-100）。</value>
+  </data>
+  <data name="FftSampleRate" xml:space="preserve">
+    <value>fft 采样率</value>
+  </data>
+  <data name="LayoutName" xml:space="preserve">
+    <value>布局名称</value>
+  </data>
+  <data name="LineNo" xml:space="preserve">
+    <value>行号</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>消息</value>
+  </data>
+  <data name="Name2" xml:space="preserve">
+    <value>名称：</value>
+  </data>
+  <data name="NterSourceFileSampleRate" xml:space="preserve">
+    <value>输入源文件采样率</value>
+  </data>
+  <data name="POI" xml:space="preserve">
+    <value>POI</value>
+  </data>
+  <data name="PleaseEnterAMessageAboutThisErrorIfYouCan" xml:space="preserve">
+    <value>如果可以，请输入关于此错误的说明。</value>
+  </data>
+  <data name="PleaseEnterScpPathEgUserPasswordHostDirPathToFiles" xml:space="preserve">
+    <value>请输入 scp 路径，例如（user:password@host:/dir/path/to/files/）</value>
+  </data>
+  <data name="RenameArea" xml:space="preserve">
+    <value>重命名区域</value>
+  </data>
+  <data name="SPACING" xml:space="preserve">
+    <value>间距</value>
+  </data>
+  <data name="SSHRemote" xml:space="preserve">
+    <value>SSH 远程连接</value>
+  </data>
+  <data name="SearchFor" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="ThisWillBeTheHeading" xml:space="preserve">
+    <value>这将作为航向</value>
+  </data>
+  <data name="DownloadMapArea" xml:space="preserve">
+    <value>下载地图区域</value>
+  </data>
+  <data name="NameForTheAreaSelectedOnTheMap" xml:space="preserve">
+    <value>在地图上所选区域的名称：</value>
+  </data>
+  <data name="NameForTheCurrentMapViewHoldAltAndDragOnTheMapToPickAnExactAreaInstead" xml:space="preserve">
+    <value>当前地图视图的名称（按住 ALT 并在地图上拖动可改为精确选取区域）：</value>
   </data>
 </root>

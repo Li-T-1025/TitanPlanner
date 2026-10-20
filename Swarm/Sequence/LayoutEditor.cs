@@ -279,7 +279,7 @@ namespace MissionPlanner.Swarm.Sequence
         private void BUT_new_Click(object sender, EventArgs e)
         {
             string name = "Layout X";
-            InputBox.Show("", "Layout Name", ref name);
+            InputBox.Show(string.Empty, Strings.LayoutName, ref name);
 
             var newworkingLayout = new Layout() { Id = name };
 

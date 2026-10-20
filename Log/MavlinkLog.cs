@@ -65,8 +65,8 @@ namespace MissionPlanner.Log
 
                     if (Control.ModifierKeys == Keys.Shift)
                     {
-                        InputBox.Show("Alt offset",
-                            "Please enter your offset altitude",
+                        InputBox.Show(Strings.AltOffset,
+                            Strings.EnterTheAltOffsetRelativeToTheCurrentAltForTheBelowMessages,
                             ref offsetalt);
 
                         float temp = 0;
@@ -167,8 +167,8 @@ namespace MissionPlanner.Log
                             }
                             else
                             {
-                                InputBox.Show("Relative Alt",
-                                    "Please enter your home altitude, or press cancel to use absolute alt",
+                                InputBox.Show(Strings.RelativeAlt,
+                                    Strings.PleaseEnterYourHomeAltitudeOrPressCancelToUseAbsoluteAlt,
                                     ref basealtstring);
                             }
 

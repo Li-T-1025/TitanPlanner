@@ -547,7 +547,7 @@ namespace MissionPlanner.Controls
         private void NewFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string folder = "";
-            var dr = InputBox.Show("Folder Name", "Enter folder name", ref folder);
+            var dr = InputBox.Show(Strings.FolderName, Strings.EnterFolderName, ref folder);
             if (dr == DialogResult.OK)
             {
                 ProgressReporterDialogue prd = new ProgressReporterDialogue();
@@ -723,7 +723,7 @@ namespace MissionPlanner.Controls
             {
                 // Ask user for mount point
                 string mountPoint = DefaultMountPoint;
-                var dr = InputBox.Show("Mount Point", "Enter drive letter or path (e.g. M:\\)", ref mountPoint);
+                var dr = InputBox.Show(Strings.MountPoint, Strings.EnterDriveLetterOrPathEGM, ref mountPoint);
                 if (dr != DialogResult.OK)
                     return;
 

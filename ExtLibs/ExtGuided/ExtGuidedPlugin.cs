@@ -10,7 +10,7 @@ using MissionPlanner.Utilities;
 
     public class ExtGuidedPlugin : Plugin
     {
-        string _Name = "External Guided"; 
+        string _Name = Strings.ExternalGuided; 
         string _Version = "0.1";
         string _Author = "Michael Oborne";
 
@@ -24,7 +24,7 @@ using MissionPlanner.Utilities;
 
         public override bool Loaded() 
         {
-            ToolStripLabel item = new ToolStripLabel("External Guided");
+            ToolStripLabel item = new ToolStripLabel(Strings.ExternalGuided);
             item.Click += item_Click;
 
             Host.FDMenuMap.Items.Add(item);

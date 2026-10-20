@@ -263,7 +263,7 @@ namespace MissionPlanner.GCSViews
 
             // Ask for location name
             string locationName = "";
-            if (InputBox.Show("Save Location", "Enter a name for this location:", ref locationName) != DialogResult.OK)
+            if (InputBox.Show(Strings.SaveLocation, Strings.EnterANameForThisLocation, ref locationName) != DialogResult.OK)
                 return;
 
             if (string.IsNullOrWhiteSpace(locationName))
@@ -281,7 +281,7 @@ namespace MissionPlanner.GCSViews
 
             // Ask for heading
             int heading = (int)NUM_heading.Value;
-            if (InputBox.Show("Heading", "Enter the heading (0-360):", ref heading) != DialogResult.OK)
+            if (InputBox.Show(Strings.Heading, Strings.EnterTheHeading0360, ref heading) != DialogResult.OK)
                 return;
 
             heading = Math.Max(0, Math.Min(360, heading));
@@ -363,7 +363,7 @@ namespace MissionPlanner.GCSViews
         private void findLoc_Click(object sender, EventArgs e)
         {
             string place = "";
-            if (InputBox.Show("Find Location", "Enter a location to search for:", ref place) == DialogResult.OK)
+            if (InputBox.Show(Strings.FindLocation, Strings.EnterALocationToSearchFor, ref place) == DialogResult.OK)
             {
                 if (string.IsNullOrWhiteSpace(place))
                     return;
@@ -1110,7 +1110,7 @@ namespace MissionPlanner.GCSViews
         {
             var max = 10;
 
-            if (InputBox.Show("how many?", "how many?", ref max) != DialogResult.OK)
+            if (InputBox.Show(Strings.HowMany, Strings.HowMany, ref max) != DialogResult.OK)
                 return;
 
             // kill old session
@@ -1274,7 +1274,7 @@ SIM_DRIFT_TIME=0
         {
             var max = 10;
 
-            if (InputBox.Show("how many?", "how many?", ref max) != DialogResult.OK)
+            if (InputBox.Show(Strings.HowMany, Strings.HowMany, ref max) != DialogResult.OK)
                 return;
 
             // kill old session

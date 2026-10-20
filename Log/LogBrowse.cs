@@ -186,7 +186,7 @@ namespace MissionPlanner.Log
             if (keyData == (Keys.Control | Keys.G))
             {
                 string lineno = "0";
-                InputBox.Show("Line no", "Enter Line Number", ref lineno);
+                InputBox.Show(Strings.LineNo, Strings.EnterLineNumber, ref lineno);
 
                 int line = int.Parse(lineno);
 

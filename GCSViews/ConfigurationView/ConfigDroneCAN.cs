@@ -749,7 +749,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
 
             var port = 500;
-            if (InputBox.Show("Enter TCP Port", "Enter TCP Port", ref port) == DialogResult.OK)
+            if (InputBox.Show(Strings.EnterTCPPort, Strings.EnterTCPPort, ref port) == DialogResult.OK)
             {
                 menu_passthrough.Checked = true;
 
@@ -1004,12 +1004,12 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             var baudrate = 230400;
             var target_node =
                 byte.Parse(myDataGridView1.CurrentRow.Cells[iDDataGridViewTextBoxColumn.Index].Value.ToString());
-            if (InputBox.Show("Enter TCP Port", "Enter TCP Port", ref port) != DialogResult.OK)
+            if (InputBox.Show(Strings.EnterTCPPort, Strings.EnterTCPPort, ref port) != DialogResult.OK)
             {
                 return;
             }
 
-            if (InputBox.Show("Enter Baudrate", "Enter Baudrate", ref baudrate) != DialogResult.OK)
+            if (InputBox.Show(Strings.EnterBaudrate, Strings.EnterBaudrate, ref baudrate) != DialogResult.OK)
             {
                 return;
             }

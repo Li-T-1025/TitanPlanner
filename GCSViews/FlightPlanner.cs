@@ -1209,7 +1209,7 @@ namespace MissionPlanner.GCSViews
                     {
                         CustomMessageBox.Show(Strings.MustHomeAltitude);
                         string homealt = "100";
-                        if (DialogResult.Cancel == InputBox.Show("Home Alt", "Home Altitude", ref homealt))
+                        if (DialogResult.Cancel == InputBox.Show(Strings.HomeAlt, Strings.HomeAltitude, ref homealt))
                             return;
                         TXT_homealt.Text = homealt;
                     }
@@ -1224,7 +1224,7 @@ namespace MissionPlanner.GCSViews
                     if (results1 == 0)
                     {
                         string defalt = "100";
-                        if (DialogResult.Cancel == InputBox.Show("Default Alt", "Default Altitude", ref defalt))
+                        if (DialogResult.Cancel == InputBox.Show(Strings.DefaultAlt, Strings.DefaultAltitude, ref defalt))
                             return;
                         TXT_DefaultAlt.Text = defalt;
                     }
@@ -2282,7 +2282,7 @@ namespace MissionPlanner.GCSViews
                     (GMapProvider) comboBoxMapType.SelectedItem == MapboxUser.Instance)
                 {
                     var url = Settings.Instance["MapBoxURL", ""];
-                    InputBox.Show("Enter MapBox Share URL", "Enter MapBox Share URL", ref url);
+                    InputBox.Show(Strings.EnterMapBoxShareURL, Strings.EnterMapBoxShareURL, ref url);
                     var match = Regex.Matches(url, @"\/styles\/[^\/]+\/([^\/]+)\/([^\/\.]+).*access_token=([^#&=]+)");
                     if (match != null)
                     {
@@ -2607,7 +2607,7 @@ namespace MissionPlanner.GCSViews
                 if (((ComboBox) sender).Text == "UNKNOWN")
                 {
                     string cmdid = "-1";
-                    if (InputBox.Show("Mavlink ID", "Please enter the command ID", ref cmdid) == DialogResult.OK)
+                    if (InputBox.Show(Strings.MavlinkID, Strings.PleaseEnterTheCommandID, ref cmdid) == DialogResult.OK)
                     {
                         if (cmdid != "-1")
                         {
@@ -2924,24 +2924,24 @@ namespace MissionPlanner.GCSViews
         public void createSplineCircleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string RadiusIn = "50";
-            if (DialogResult.Cancel == InputBox.Show("Radius", "Radius", ref RadiusIn))
+            if (DialogResult.Cancel == InputBox.Show(Strings.Radius, Strings.Radius, ref RadiusIn))
                 return;
 
             string minaltin = "5";
-            if (DialogResult.Cancel == InputBox.Show("min alt", "Min Alt", ref minaltin))
+            if (DialogResult.Cancel == InputBox.Show(Strings.MinAlt2, Strings.MinAlt, ref minaltin))
                 return;
 
             string maxaltin = "20";
-            if (DialogResult.Cancel == InputBox.Show("max alt", "Max Alt", ref maxaltin))
+            if (DialogResult.Cancel == InputBox.Show(Strings.MaxAlt, Strings.MaxAlt2, ref maxaltin))
                 return;
 
             string altstepin = "5";
-            if (DialogResult.Cancel == InputBox.Show("alt step", "alt step", ref altstepin))
+            if (DialogResult.Cancel == InputBox.Show(Strings.AltStep, Strings.AltStep, ref altstepin))
                 return;
 
 
             string startanglein = "0";
-            if (DialogResult.Cancel == InputBox.Show("angle", "Angle of first point (whole degrees)", ref startanglein))
+            if (DialogResult.Cancel == InputBox.Show(Strings.Angle, Strings.AngleOfFirstPointWholeDegrees, ref startanglein))
                 return;
 
             int Points = 4;
@@ -3030,19 +3030,19 @@ namespace MissionPlanner.GCSViews
         public void createWpCircleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string RadiusIn = "50";
-            if (DialogResult.Cancel == InputBox.Show("Radius", "Radius", ref RadiusIn))
+            if (DialogResult.Cancel == InputBox.Show(Strings.Radius, Strings.Radius, ref RadiusIn))
                 return;
 
             string Pointsin = "20";
-            if (DialogResult.Cancel == InputBox.Show("Points", "Number of points to generate Circle", ref Pointsin))
+            if (DialogResult.Cancel == InputBox.Show(Strings.Points, Strings.NumberOfPointsToGenerateCircle, ref Pointsin))
                 return;
 
             string Directionin = "1";
-            if (DialogResult.Cancel == InputBox.Show("Points", "Direction of circle (-1 or 1)", ref Directionin))
+            if (DialogResult.Cancel == InputBox.Show(Strings.Points, Strings.DirectionOfCircle1Or1, ref Directionin))
                 return;
 
             string startanglein = "0";
-            if (DialogResult.Cancel == InputBox.Show("angle", "Angle of first point (whole degrees)", ref startanglein))
+            if (DialogResult.Cancel == InputBox.Show(Strings.Angle, Strings.AngleOfFirstPointWholeDegrees, ref startanglein))
                 return;
 
             int Points = 0;
@@ -3327,11 +3327,11 @@ namespace MissionPlanner.GCSViews
             string easting = "578994";
             string northing = "6126244";
 
-            if (InputBox.Show("Zone", "Enter Zone. (eg 50S, 11N)", ref zone) != DialogResult.OK)
+            if (InputBox.Show(Strings.Zone, Strings.EnterZoneEg50S11N, ref zone) != DialogResult.OK)
                 return;
-            if (InputBox.Show("Easting", "Easting", ref easting) != DialogResult.OK)
+            if (InputBox.Show(Strings.Easting, Strings.Easting, ref easting) != DialogResult.OK)
                 return;
-            if (InputBox.Show("Northing", "Northing", ref northing) != DialogResult.OK)
+            if (InputBox.Show(Strings.Northing, Strings.Northing, ref northing) != DialogResult.OK)
                 return;
 
             string newzone = zone.ToLower().Replace('s', ' ');
@@ -3374,7 +3374,7 @@ namespace MissionPlanner.GCSViews
             PointLatLngAlt lastpnt = null;
 
             string maxzoomstring = "20";
-            if (InputBox.Show("max zoom", "Enter the max zoom to prefetch to.", ref maxzoomstring) != DialogResult.OK)
+            if (InputBox.Show(Strings.MaxZoom, Strings.EnterTheMaxZoomToPrefetchTo, ref maxzoomstring) != DialogResult.OK)
                 return;
 
             int maxzoom = 20;
@@ -3698,7 +3698,7 @@ namespace MissionPlanner.GCSViews
             }
             string meter = "0";
             double intmeter = 0;
-            if (InputBox.Show("Offset in Meters", "Please enter the offset in meters. Enter a negative value to make the polygon smaller", ref meter) == DialogResult.OK)
+            if (InputBox.Show(Strings.OffsetInMeters, Strings.PleaseEnterTheOffsetInMetersEnterANegativeValueToMakeThePolygonSmaller, ref meter) == DialogResult.OK)
             {
                 if (meter != "0")
                 {
@@ -3817,7 +3817,7 @@ namespace MissionPlanner.GCSViews
                     (int.Parse(MainV2.comPort.MAV.param["FENCE_MINALT"].ToString()) * CurrentState.multiplieralt)
                     .ToString(
                         "0");
-                if (DialogResult.Cancel == InputBox.Show("Min Alt", "Box Minimum Altitude?", ref minalts))
+                if (DialogResult.Cancel == InputBox.Show(Strings.MinAlt, Strings.BoxMinimumAltitude, ref minalts))
                     return;
 
                 if (!int.TryParse(minalts, out minalt))
@@ -3833,7 +3833,7 @@ namespace MissionPlanner.GCSViews
                     (int.Parse(MainV2.comPort.MAV.param["FENCE_MAXALT"].ToString()) * CurrentState.multiplieralt)
                     .ToString(
                         "0");
-                if (DialogResult.Cancel == InputBox.Show("Max Alt", "Box Maximum Altitude?", ref maxalts))
+                if (DialogResult.Cancel == InputBox.Show(Strings.MaxAlt2, Strings.BoxMaximumAltitude, ref maxalts))
                     return;
 
                 if (!int.TryParse(maxalts, out maxalt))
@@ -4101,7 +4101,7 @@ namespace MissionPlanner.GCSViews
         public void insertSplineWPToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string wpno = (selectedrow + 1).ToString("0");
-            if (InputBox.Show("Insert WP", "Insert WP after wp#", ref wpno) == DialogResult.OK)
+            if (InputBox.Show(Strings.InsertWP, Strings.InsertWPAfterWp, ref wpno) == DialogResult.OK)
             {
                 try
                 {
@@ -4136,7 +4136,7 @@ namespace MissionPlanner.GCSViews
         public void insertWpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string wpno = (selectedrow + 1).ToString("0");
-            if (InputBox.Show("Insert WP", "Insert WP after wp#", ref wpno) == DialogResult.OK)
+            if (InputBox.Show(Strings.InsertWP, Strings.InsertWPAfterWp, ref wpno) == DialogResult.OK)
             {
                 try
                 {
@@ -4160,7 +4160,7 @@ namespace MissionPlanner.GCSViews
         public void jumpstartToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string repeat = "5";
-            if (DialogResult.Cancel == InputBox.Show("Jump repeat", "Number of times to Repeat", ref repeat))
+            if (DialogResult.Cancel == InputBox.Show(Strings.JumpRepeat, Strings.NumberOfTimesToRepeat, ref repeat))
                 return;
 
             selectedrow = Commands.Rows.Add();
@@ -4177,10 +4177,10 @@ namespace MissionPlanner.GCSViews
         public void jumpwPToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string wp = "1";
-            if (DialogResult.Cancel == InputBox.Show("WP No", "Jump to WP no?", ref wp))
+            if (DialogResult.Cancel == InputBox.Show(Strings.WPNo, Strings.JumpToWPNo, ref wp))
                 return;
             string repeat = "5";
-            if (DialogResult.Cancel == InputBox.Show("Jump repeat", "Number of times to Repeat", ref repeat))
+            if (DialogResult.Cancel == InputBox.Show(Strings.JumpRepeat, Strings.NumberOfTimesToRepeat, ref repeat))
                 return;
 
             selectedrow = Commands.Rows.Add();
@@ -4255,7 +4255,7 @@ namespace MissionPlanner.GCSViews
                     else if (file.ToLower().EndsWith("dxf"))
                     {
                         string zone = "-99";
-                        InputBox.Show("Zone", "Please enter the UTM zone, or cancel to not change", ref zone);
+                        InputBox.Show(Strings.Zone, Strings.PleaseEnterTheUTMZoneOrCancelToNotChange, ref zone);
 
                         dxf dxf = new dxf();
                         if (zone != "-99")
@@ -4809,7 +4809,7 @@ namespace MissionPlanner.GCSViews
         public void loitercirclesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string turns = "3";
-            if (DialogResult.Cancel == InputBox.Show("Loiter Turns", "Loiter Turns", ref turns))
+            if (DialogResult.Cancel == InputBox.Show(Strings.LoiterTurns, Strings.LoiterTurns, ref turns))
                 return;
 
             selectedrow = Commands.Rows.Add();
@@ -4842,7 +4842,7 @@ namespace MissionPlanner.GCSViews
         public void loitertimeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string time = "5";
-            if (DialogResult.Cancel == InputBox.Show("Loiter Time", "Loiter Time", ref time))
+            if (DialogResult.Cancel == InputBox.Show(Strings.LoiterTime, Strings.LoiterTime, ref time))
                 return;
 
             selectedrow = Commands.Rows.Add();
@@ -4987,8 +4987,8 @@ namespace MissionPlanner.GCSViews
         public void modifyAltToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string altdif = "0";
-            InputBox.Show("Alt Change",
-                "Please enter the alitude change you require.\n(20 = up 20, *2 = up by alt * 2)",
+            InputBox.Show(Strings.AltChange,
+                Strings.PleaseEnterTheAltitudeChangeYouRequire,
                 ref altdif);
 
             float altchange = 0;
@@ -5977,7 +5977,7 @@ namespace MissionPlanner.GCSViews
         public void rotateMapToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string heading = "0";
-            if (DialogResult.Cancel == InputBox.Show("Rotate map to heading", "Enter new UP heading", ref heading))
+            if (DialogResult.Cancel == InputBox.Show(Strings.RotateMapToHeading, Strings.EnterNewUPHeading, ref heading))
                 return;
             float ans = 0;
             if (float.TryParse(heading, out ans))
@@ -6749,7 +6749,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         {
             string altstring = TXT_DefaultAlt.Text;
 
-            if (InputBox.Show("Altitude", "Altitude", ref altstring) == DialogResult.Cancel)
+            if (InputBox.Show(Strings.Altitude, Strings.Altitude, ref altstring) == DialogResult.Cancel)
                 return;
 
             int alt = 0;
@@ -6895,7 +6895,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             // altitude
             string alt = CurrentState.AltUnit == "m" ? "10" : "30"; ;
 
-            if (DialogResult.Cancel == InputBox.Show("Altitude", "Please enter your takeoff altitude in " + CurrentState.AltUnit, ref alt))
+            if (DialogResult.Cancel == InputBox.Show(Strings.Altitude, string.Format(Strings.PleaseEnterYourTakeoffAltitudeIn, CurrentState.AltUnit), ref alt))
                 return;
 
             int alti = -1;
@@ -6925,7 +6925,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
                 if (!skipPitch)
                 {
-                    if (DialogResult.Cancel == InputBox.Show("Takeoff Pitch", "Please enter your takeoff pitch", ref top))
+                    if (DialogResult.Cancel == InputBox.Show(Strings.TakeoffPitch, Strings.PleaseEnterYourTakeoffPitch, ref top))
                         return;
 
                     if (!int.TryParse(top, out topi))
@@ -6952,11 +6952,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         public void textToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string text = "";
-            InputBox.Show("Enter String", "Enter String (requires 1CamBam_Stick_3 font)", ref text);
+            InputBox.Show(Strings.EnterString, Strings.EnterStringRequires1CamBamStick3Font, ref text);
             string size = "5";
-            InputBox.Show("Enter size", "Enter size", ref size);
+            InputBox.Show(Strings.EnterSize, Strings.EnterSize, ref size);
             string rotation = "0";
-            InputBox.Show("Enter rotation", "Enter rotation", ref rotation);
+            InputBox.Show(Strings.EnterRotation, Strings.EnterRotation, ref rotation);
 
             using (Font font = new System.Drawing.Font("1CamBam_Stick_3", float.Parse(size) * 1.35f, FontStyle.Regular))
             using (GraphicsPath gp = new GraphicsPath())
@@ -7090,7 +7090,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             double alt = MainV2.comPort.MAV.cs.TrackerLocation.Alt != 0
                 ? MainV2.comPort.MAV.cs.TrackerLocation.Alt
                 : MainV2.comPort.MAV.cs.HomeAlt;
-            if (InputBox.Show("Tracker Alt", "Enter tracker ASL alt", ref alt) == DialogResult.OK)
+            if (InputBox.Show(Strings.TrackerAlt, Strings.EnterTrackerASLAlt, ref alt) == DialogResult.OK)
             {
                 MainV2.comPort.MAV.cs.TrackerLocation = new PointLatLngAlt(MouseDownEnd)
                 {
@@ -8088,7 +8088,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 string url = "";
                 if (Settings.Instance["WMSserver"] != null)
                     url = Settings.Instance["WMSserver"];
-                if (DialogResult.Cancel == InputBox.Show("WMS Server", "Enter the WMS server URL", ref url))
+                if (DialogResult.Cancel == InputBox.Show(Strings.WMSServer, Strings.EnterTheWMSServerURL, ref url))
                     return;
 
                 // Build get capability request.
@@ -8106,7 +8106,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 string url = "";
                 if (Settings.Instance["WMSTserver"] != null)
                     url = Settings.Instance["WMSTserver"];
-                if (DialogResult.Cancel == InputBox.Show("WMST Server", "Enter the WMST server URL", ref url))
+                if (DialogResult.Cancel == InputBox.Show(Strings.WMSTServer, Strings.EnterTheWMSTServerURL, ref url))
                     return;
 
 
@@ -8117,9 +8117,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 string szUserSelection = Settings.Instance["WMSTLayer"];
                 int c=0;
                 if (DialogResult.Cancel ==
-                    InputBox.Show("WMTS Server",
-                        "The following layers were detected:\n " + WMTSProvider.Layers.Aggregate("", (a, b) => a + "\r\n" + c++ + " " + b) +
-                        "\r\nPlease choose one by typing the associated number.", ref szUserSelection))
+                    InputBox.Show(Strings.WmtsServer,
+                        string.Format(Strings.TheFollowingLayersWereDetected, WMTSProvider.Layers.Aggregate("", (a, b) => a + "\r\n" + c++ + " " + b)), ref szUserSelection))
                     return;
                 int iUserSelection = 0;
                 try
@@ -8449,9 +8448,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 //now let the user select a layer
                 string szUserSelection = "";
                 if (DialogResult.Cancel ==
-                    InputBox.Show("WMS Server",
-                        "The following layers were detected:\n " + szLayerSelection +
-                        "Please choose one by typing the associated number.", ref szUserSelection))
+                    InputBox.Show(Strings.WMSServer,
+                        string.Format(Strings.TheFollowingLayersWereDetected, szLayerSelection), ref szUserSelection))
                     return;
                 int iUserSelection = 0;
                 try
@@ -8472,7 +8470,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         public void zoomToToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string place = "";
-            if (DialogResult.OK == InputBox.Show("Find Location", "Enter a location to search for:", ref place))
+            if (DialogResult.OK == InputBox.Show(Strings.FindLocation, Strings.EnterALocationToSearchFor, ref place))
             {
                 if (string.IsNullOrWhiteSpace(place))
                     return;
@@ -8558,7 +8556,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
         private void gDALOpacityToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var ans = GDAL.GDALProvider.Instance.opacity;
-            if (InputBox.Show("Opacity 0.0-1.0", "Enter opacity (0.0-1.0)", ref ans) == DialogResult.OK)
+            if (InputBox.Show(Strings.Opacity0010, Strings.EnterOpacity0010, ref ans) == DialogResult.OK)
                 GDAL.GDALProvider.Instance.opacity = double.Parse(InputBox.value);
         }
 

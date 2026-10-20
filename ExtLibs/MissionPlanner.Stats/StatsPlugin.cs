@@ -27,7 +27,7 @@ namespace MissionPlanner.Stats
 
         public override string Name
         {
-            get { return "Stats"; }
+            get { return Strings.Stats; }
         }
 
         public override string Version
@@ -64,7 +64,7 @@ namespace MissionPlanner.Stats
                 delegate
                 {
 
-            System.Windows.Forms.ToolStripMenuItem men = new System.Windows.Forms.ToolStripMenuItem() { Text = "Stats" };
+            System.Windows.Forms.ToolStripMenuItem men = new System.Windows.Forms.ToolStripMenuItem() { Text = Strings.Stats };
             men.Click += men_Click;
             Host.FDMenuMap.Items.Add(men);
             });

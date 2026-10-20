@@ -14,6 +14,9 @@
     
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
+  <data name="AbsoluteFrame" xml:space="preserve">
+    <value>Absolute</value>
+  </data>
     <resheader name="version">2.0</resheader>
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
@@ -211,8 +214,14 @@
   <data name="PleaseSelectCell" xml:space="preserve">
     <value>Please select a cell first</value>
   </data>
+  <data name="RelativeFrame" xml:space="preserve">
+    <value>Relative</value>
+  </data>
   <data name="SelectComport" xml:space="preserve">
     <value>Please select a comport</value>
+  </data>
+  <data name="TerrainFrame" xml:space="preserve">
+    <value>Terrain</value>
   </data>
   <data name="WarningLogBrowseFMTMissing" xml:space="preserve">
     <value>Log Browse will not function correctly without FMT messages in your log.
@@ -244,6 +253,9 @@ These appear to be missing from your log.</value>
   </data>
   <data name="ExtendedTuning" xml:space="preserve">
     <value>Extended Tuning</value>
+  </data>
+  <data name="ExternalGuided" xml:space="preserve">
+    <value>External Guided</value>
   </data>
   <data name="FlightModes" xml:space="preserve">
     <value>Flight Modes</value>
@@ -3698,5 +3710,573 @@ Serial: {2}</value>
   </data>
   <data name="Z" xml:space="preserve">
     <value>Z</value>
+  </data>
+  <data name="AltStep" xml:space="preserve">
+    <value>alt step</value>
+  </data>
+  <data name="Angle" xml:space="preserve">
+    <value>angle</value>
+  </data>
+  <data name="AngleOfFirstPointWholeDegrees" xml:space="preserve">
+    <value>Angle of first point (whole degrees)</value>
+  </data>
+  <data name="BoxMaximumAltitude" xml:space="preserve">
+    <value>Box Maximum Altitude?</value>
+  </data>
+  <data name="BoxMinimumAltitude" xml:space="preserve">
+    <value>Box Minimum Altitude?</value>
+  </data>
+  <data name="DefaultAlt" xml:space="preserve">
+    <value>Default Alt</value>
+  </data>
+  <data name="DefaultAltitude" xml:space="preserve">
+    <value>Default Altitude</value>
+  </data>
+  <data name="DirectionOfCircle1Or1" xml:space="preserve">
+    <value>Direction of circle (-1 or 1)</value>
+  </data>
+  <data name="Easting" xml:space="preserve">
+    <value>Easting</value>
+  </data>
+  <data name="EnterALocationToSearchFor" xml:space="preserve">
+    <value>Enter a location to search for:</value>
+  </data>
+  <data name="EnterMapBoxShareURL" xml:space="preserve">
+    <value>Enter MapBox Share URL</value>
+  </data>
+  <data name="EnterNewUPHeading" xml:space="preserve">
+    <value>Enter new UP heading</value>
+  </data>
+  <data name="EnterOpacity0010" xml:space="preserve">
+    <value>Enter opacity (0.0-1.0)</value>
+  </data>
+  <data name="EnterRotation" xml:space="preserve">
+    <value>Enter rotation</value>
+  </data>
+  <data name="EnterSize" xml:space="preserve">
+    <value>Enter size</value>
+  </data>
+  <data name="EnterString" xml:space="preserve">
+    <value>Enter String</value>
+  </data>
+  <data name="EnterStringRequires1CamBamStick3Font" xml:space="preserve">
+    <value>Enter String (requires 1CamBam_Stick_3 font)</value>
+  </data>
+  <data name="EnterTheMaxZoomToPrefetchTo" xml:space="preserve">
+    <value>Enter the max zoom to prefetch to.</value>
+  </data>
+  <data name="EnterTheWMSServerURL" xml:space="preserve">
+    <value>Enter the WMS server URL</value>
+  </data>
+  <data name="EnterTheWMSTServerURL" xml:space="preserve">
+    <value>Enter the WMST server URL</value>
+  </data>
+  <data name="EnterTrackerASLAlt" xml:space="preserve">
+    <value>Enter tracker ASL alt</value>
+  </data>
+  <data name="EnterZoneEg50S11N" xml:space="preserve">
+    <value>Enter Zone. (eg 50S, 11N)</value>
+  </data>
+  <data name="FindLocation" xml:space="preserve">
+    <value>Find Location</value>
+  </data>
+  <data name="HomeAlt" xml:space="preserve">
+    <value>Home Alt</value>
+  </data>
+  <data name="HomeAltitude" xml:space="preserve">
+    <value>Home Altitude</value>
+  </data>
+  <data name="InsertWP" xml:space="preserve">
+    <value>Insert WP</value>
+  </data>
+  <data name="InsertWPAfterWp" xml:space="preserve">
+    <value>Insert WP after wp#</value>
+  </data>
+  <data name="JumpRepeat" xml:space="preserve">
+    <value>Jump repeat</value>
+  </data>
+  <data name="JumpToWPNo" xml:space="preserve">
+    <value>Jump to WP no?</value>
+  </data>
+  <data name="LoiterTime" xml:space="preserve">
+    <value>Loiter Time</value>
+  </data>
+  <data name="LoiterTurns" xml:space="preserve">
+    <value>Loiter Turns</value>
+  </data>
+  <data name="MavlinkID" xml:space="preserve">
+    <value>Mavlink ID</value>
+  </data>
+  <data name="MaxAlt" xml:space="preserve">
+    <value>max alt</value>
+  </data>
+  <data name="MaxAlt2" xml:space="preserve">
+    <value>Max Alt</value>
+  </data>
+  <data name="MaxZoom" xml:space="preserve">
+    <value>max zoom</value>
+  </data>
+  <data name="MinAlt" xml:space="preserve">
+    <value>Min Alt</value>
+  </data>
+  <data name="MinAlt2" xml:space="preserve">
+    <value>min alt</value>
+  </data>
+  <data name="Northing" xml:space="preserve">
+    <value>Northing</value>
+  </data>
+  <data name="NumberOfPointsToGenerateCircle" xml:space="preserve">
+    <value>Number of points to generate Circle</value>
+  </data>
+  <data name="NumberOfTimesToRepeat" xml:space="preserve">
+    <value>Number of times to Repeat</value>
+  </data>
+  <data name="OffsetInMeters" xml:space="preserve">
+    <value>Offset in Meters</value>
+  </data>
+  <data name="Opacity0010" xml:space="preserve">
+    <value>Opacity 0.0-1.0</value>
+  </data>
+  <data name="PleaseEnterTheCommandID" xml:space="preserve">
+    <value>Please enter the command ID</value>
+  </data>
+  <data name="PleaseEnterTheOffsetInMetersEnterANegativeValueToMakeThePolygonSmaller" xml:space="preserve">
+    <value>Please enter the offset in meters. Enter a negative value to make the polygon smaller</value>
+  </data>
+  <data name="PleaseEnterTheUTMZoneOrCancelToNotChange" xml:space="preserve">
+    <value>Please enter the UTM zone, or cancel to not change</value>
+  </data>
+  <data name="PleaseEnterYourTakeoffAltitudeIn" xml:space="preserve">
+    <value>Please enter your takeoff altitude in {0}</value>
+  </data>
+  <data name="PleaseEnterYourTakeoffPitch" xml:space="preserve">
+    <value>Please enter your takeoff pitch</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="Radius" xml:space="preserve">
+    <value>Radius</value>
+  </data>
+  <data name="RotateMapToHeading" xml:space="preserve">
+    <value>Rotate map to heading</value>
+  </data>
+  <data name="TakeoffPitch" xml:space="preserve">
+    <value>Takeoff Pitch</value>
+  </data>
+  <data name="TrackerAlt" xml:space="preserve">
+    <value>Tracker Alt</value>
+  </data>
+  <data name="WMSServer" xml:space="preserve">
+    <value>WMS Server</value>
+  </data>
+  <data name="WMSTServer" xml:space="preserve">
+    <value>WMST Server</value>
+  </data>
+  <data name="WPNo" xml:space="preserve">
+    <value>WP No</value>
+  </data>
+  <data name="Zone" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="AltChange" xml:space="preserve">
+    <value>Alt Change</value>
+  </data>
+  <data name="PleaseEnterTheAltitudeChangeYouRequire" xml:space="preserve">
+    <value>Please enter the alitude change you require.
+(20 = up 20, *2 = up by alt * 2)</value>
+  </data>
+  <data name="WmtsServer" xml:space="preserve">
+    <value>WMTS Server</value>
+  </data>
+  <data name="TheFollowingLayersWereDetected" xml:space="preserve">
+    <value>The following layers were detected:
+ {0}
+Please choose one by typing the associated number.</value>
+  </data>
+  <data name="BatteryCellCount" xml:space="preserve">
+    <value>Battery Cell Count</value>
+  </data>
+  <data name="BatteryLevel" xml:space="preserve">
+    <value>Battery Level</value>
+  </data>
+  <data name="CellCount" xml:space="preserve">
+    <value>Cell Count</value>
+  </data>
+  <data name="Columns" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="Endalt" xml:space="preserve">
+    <value>endalt</value>
+  </data>
+  <data name="EnterAirscrewSizeInInch" xml:space="preserve">
+    <value>Enter airscrew size in inch</value>
+  </data>
+  <data name="EnterAlt" xml:space="preserve">
+    <value>Enter Alt</value>
+  </data>
+  <data name="EnterBatteryCellFullyChargedVoltageRNLiPo42LipoHV435LiIon41Or42" xml:space="preserve">
+    <value>Enter battery cell fully charged voltage\r\nLiPo - 4.2, LipoHV - 4.35, LiIon - 4.1 or 4.2</value>
+  </data>
+  <data name="EnterBatteryCellFullyDischargedVoltageRNLiPoLipoHV33LiIon28" xml:space="preserve">
+    <value>Enter battery cell fully discharged voltage\r\nLiPo/LipoHV - 3.3, LiIon - 2.8</value>
+  </data>
+  <data name="EnterBatteryCellcount" xml:space="preserve">
+    <value>Enter battery cellcount</value>
+  </data>
+  <data name="EnterCoords" xml:space="preserve">
+    <value>Enter Coords</value>
+  </data>
+  <data name="EnterFlyToCoords" xml:space="preserve">
+    <value>Enter Fly To Coords</value>
+  </data>
+  <data name="EnterGuidedModeAlt" xml:space="preserve">
+    <value>Enter Guided Mode Alt</value>
+  </data>
+  <data name="EnterHAEAltitude" xml:space="preserve">
+    <value>Enter HAE altitude</value>
+  </data>
+  <data name="EnterHerelinkIpAddress" xml:space="preserve">
+    <value>Enter herelink ip address</value>
+  </data>
+  <data name="EnterMaxSpeed" xml:space="preserve">
+    <value>Enter Max Speed</value>
+  </data>
+  <data name="EnterMessage" xml:space="preserve">
+    <value>Enter Message</value>
+  </data>
+  <data name="EnterMessageToBeLogged" xml:space="preserve">
+    <value>Enter Message to be logged</value>
+  </data>
+  <data name="EnterNumberOfColumnsToHave" xml:space="preserve">
+    <value>Enter number of columns to have.</value>
+  </data>
+  <data name="EnterNumberOfRowsToHave" xml:space="preserve">
+    <value>Enter number of rows to have.</value>
+  </data>
+  <data name="EnterPOICoords" xml:space="preserve">
+    <value>Enter POI Coords</value>
+  </data>
+  <data name="EnterTakeoffAlt" xml:space="preserve">
+    <value>Enter Takeoff Alt</value>
+  </data>
+  <data name="EnterTheUrlToTheMjpegSourceUrl" xml:space="preserve">
+    <value>Enter the url to the mjpeg source url</value>
+  </data>
+  <data name="HerelinkIp" xml:space="preserve">
+    <value>herelink ip</value>
+  </data>
+  <data name="HudHeader" xml:space="preserve">
+    <value>Hud Header</value>
+  </data>
+  <data name="JumpToTag" xml:space="preserve">
+    <value>Jump to Tag</value>
+  </data>
+  <data name="MjpegUrl" xml:space="preserve">
+    <value>Mjpeg url</value>
+  </data>
+  <data name="Notification" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="Photos" xml:space="preserve">
+    <value>photos</value>
+  </data>
+  <data name="PleaseEnterTheCoordsLatLongAltAbsOrLatLong" xml:space="preserve">
+    <value>Please enter the coords 'lat;long;alt(abs)' or 'lat;long'</value>
+  </data>
+  <data name="PleaseEnterTheCoordsLatLongAltOrLatLong" xml:space="preserve">
+    <value>Please enter the coords 'lat;long;alt' or 'lat;long'</value>
+  </data>
+  <data name="PleaseEnterYourItemPrefix" xml:space="preserve">
+    <value>Please enter your item prefix</value>
+  </data>
+  <data name="Radius2" xml:space="preserve">
+    <value>radius</value>
+  </data>
+  <data name="ResumeAt" xml:space="preserve">
+    <value>Resume at</value>
+  </data>
+  <data name="ResumeMissionAtWaypoint" xml:space="preserve">
+    <value>Resume mission at waypoint#</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Rows</value>
+  </data>
+  <data name="Seperation" xml:space="preserve">
+    <value>seperation</value>
+  </data>
+  <data name="StartHeading" xml:space="preserve">
+    <value>start heading</value>
+  </data>
+  <data name="Startalt" xml:space="preserve">
+    <value>startalt</value>
+  </data>
+  <data name="TagId" xml:space="preserve">
+    <value>Tag Id:</value>
+  </data>
+  <data name="WhatDoYouWantItToSay" xml:space="preserve">
+    <value>What do you want it to say?</value>
+  </data>
+  <data name="WhatPercentageDoYouWantToWarnAt" xml:space="preserve">
+    <value>What percentage do you want to warn at?</value>
+  </data>
+  <data name="WhatVoltageDoYouWantToWarnAt" xml:space="preserve">
+    <value>What Voltage do you want to warn at?</value>
+  </data>
+  <data name="EnterTargetAltRelativeToHome" xml:space="preserve">
+    <value>Enter Target Alt (Relative to home)</value>
+  </data>
+  <data name="GStreamerUrl" xml:space="preserve">
+    <value>GStreamer url</value>
+  </data>
+  <data name="EnterTheSourcePipelineEnsureTheFinalPayloadIsVideoconvertVideoXraw" xml:space="preserve">
+    <value>Enter the source pipeline
+Ensure the final payload is ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink</value>
+  </data>
+  <data name="RelativeAlt" xml:space="preserve">
+    <value>Relative Alt</value>
+  </data>
+  <data name="PleaseEnterYourHomeAltitudeOrPressCancelToUseAbsoluteAlt" xml:space="preserve">
+    <value>Please enter your home altitude, or press cancel to use absolute alt</value>
+  </data>
+  <data name="AltOffset" xml:space="preserve">
+    <value>Alt offset</value>
+  </data>
+  <data name="EnterTheAltOffsetRelativeToTheCurrentAltForTheBelowMessages" xml:space="preserve">
+    <value>Please enter your offset altitude</value>
+  </data>
+  <data name="ADSBServer" xml:space="preserve">
+    <value>ADSB Server</value>
+  </data>
+  <data name="AirSpeed" xml:space="preserve">
+    <value>Air Speed</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Disarmed" xml:space="preserve">
+    <value>Disarmed</value>
+  </data>
+  <data name="EnterANameForThisLocation" xml:space="preserve">
+    <value>Enter a name for this location:</value>
+  </data>
+  <data name="EnterAltRelativeToHomeAlt" xml:space="preserve">
+    <value>Enter Alt (relative to home alt)</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Enter Password</value>
+  </data>
+  <data name="EnterTheHeading0360" xml:space="preserve">
+    <value>Enter the heading (0-360):</value>
+  </data>
+  <data name="GroundSpeed" xml:space="preserve">
+    <value>Ground Speed</value>
+  </data>
+  <data name="Heading" xml:space="preserve">
+    <value>Heading</value>
+  </data>
+  <data name="HowMany" xml:space="preserve">
+    <value>how many?</value>
+  </data>
+  <data name="InputSeed" xml:space="preserve">
+    <value>Input Seed</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="PleaseEnterAFriendlyName" xml:space="preserve">
+    <value>Please enter a friendly name</value>
+  </data>
+  <data name="PleaseEnterAPassword" xml:space="preserve">
+    <value>Please enter a password</value>
+  </data>
+  <data name="PleaseEnterYourPassPhraseSentenceNNumbersLowerCaseUpperCaseSymbolsAnd12CharsLongUsingAtleast2OfEach" xml:space="preserve">
+    <value>Please enter your pass phrase/sentence\nNumbers, Lower Case, Upper Case, Symbols, and 12+ chars long using atleast 2 of each</value>
+  </data>
+  <data name="SaveLocation" xml:space="preserve">
+    <value>Save Location</value>
+  </data>
+  <data name="ServerIPOrAPIBaseURLSeeHttpsArdupilotOrgPlannerDocsCommonAdsbHtml" xml:space="preserve">
+    <value>Server IP or API base URL (see https://ardupilot.org/planner/docs/common-adsb.html)</value>
+  </data>
+  <data name="ServerPort" xml:space="preserve">
+    <value>Server port</value>
+  </data>
+  <data name="ServerPort2" xml:space="preserve">
+    <value>Server port?</value>
+  </data>
+  <data name="SpeedTrigger" xml:space="preserve">
+    <value>speed trigger</value>
+  </data>
+  <data name="WhatAltitudeDoYouWantToWarnAtRelativeToHome" xml:space="preserve">
+    <value>What altitude do you want to warn at? (relative to home)</value>
+  </data>
+  <data name="WhatDoYouWantItToShow" xml:space="preserve">
+    <value>What do you want it to show?</value>
+  </data>
+  <data name="WhatSpeedDoYouWantToWarnAtMS" xml:space="preserve">
+    <value>What speed do you want to warn at (m/s)?</value>
+  </data>
+  <data name="CameraName" xml:space="preserve">
+    <value>Camera Name</value>
+  </data>
+  <data name="EnterCommandID" xml:space="preserve">
+    <value>Enter command ID</value>
+  </data>
+  <data name="EnterCurrentHeadingInDegreesNNOTEGpsLockIsRequiredHeadingIsTrueNotMagnetic" xml:space="preserve">
+    <value>Enter current heading in degrees\nNOTE: gps lock is required. Heading is true, not magnetic</value>
+  </data>
+  <data name="EnterDriveLetterOrPathEGM" xml:space="preserve">
+    <value>Enter drive letter or path (e.g. M:\\)</value>
+  </data>
+  <data name="EnterFolderName" xml:space="preserve">
+    <value>Enter folder name</value>
+  </data>
+  <data name="EnterNewDescription" xml:space="preserve">
+    <value>Enter new Description</value>
+  </data>
+  <data name="EnterPoint" xml:space="preserve">
+    <value>Enter point #</value>
+  </data>
+  <data name="EnterPort" xml:space="preserve">
+    <value>Enter Port</value>
+  </data>
+  <data name="EnterYourToken" xml:space="preserve">
+    <value>Enter your token</value>
+  </data>
+  <data name="FolderName" xml:space="preserve">
+    <value>Folder Name</value>
+  </data>
+  <data name="IDNumberOfTheCommand" xml:space="preserve">
+    <value>ID number of the command</value>
+  </data>
+  <data name="MagCalYaw" xml:space="preserve">
+    <value>MagCal Yaw</value>
+  </data>
+  <data name="MinThrottle" xml:space="preserve">
+    <value>Min Throttle</value>
+  </data>
+  <data name="MountPoint" xml:space="preserve">
+    <value>Mount Point</value>
+  </data>
+  <data name="PleaseAndACameraName" xml:space="preserve">
+    <value>Please and a camera name</value>
+  </data>
+  <data name="PleaseEnterABoundaryPointNumber" xml:space="preserve">
+    <value>Please enter a boundary point number</value>
+  </data>
+  <data name="PleaseEnterAListenPort" xml:space="preserve">
+    <value>Please enter a listen port</value>
+  </data>
+  <data name="PleaseEnterYourPassword" xml:space="preserve">
+    <value>Please enter your password</value>
+  </data>
+  <data name="PointsOfHistory" xml:space="preserve">
+    <value>Points of history?</value>
+  </data>
+  <data name="Token" xml:space="preserve">
+    <value>Token</value>
+  </data>
+  <data name="UseOnlyDataAboveThisThrottlePercent" xml:space="preserve">
+    <value>Use only data above this throttle percent.</value>
+  </data>
+  <data name="WhatIsTheName" xml:space="preserve">
+    <value>What is the name</value>
+  </data>
+  <data name="Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="CreateThemeCopy" xml:space="preserve">
+    <value>Create Theme Copy</value>
+  </data>
+  <data name="EnterAFriendlyNameForThisLocation" xml:space="preserve">
+    <value>Enter a friendly name for this location.</value>
+  </data>
+  <data name="EnterASingleWordToSearchFor" xml:space="preserve">
+    <value>Enter a single word to search for</value>
+  </data>
+  <data name="EnterAngle" xml:space="preserve">
+    <value>Enter Angle</value>
+  </data>
+  <data name="EnterBaudrate" xml:space="preserve">
+    <value>Enter Baudrate</value>
+  </data>
+  <data name="EnterID" xml:space="preserve">
+    <value>Enter ID</value>
+  </data>
+  <data name="EnterIPPort" xml:space="preserve">
+    <value>Enter IP:port</value>
+  </data>
+  <data name="EnterLineNumber" xml:space="preserve">
+    <value>Enter Line Number</value>
+  </data>
+  <data name="EnterLocation" xml:space="preserve">
+    <value>Enter Location</value>
+  </data>
+  <data name="EnterNemThemeNameWithoutExtension" xml:space="preserve">
+    <value>Enter nem theme name (without extension)</value>
+  </data>
+  <data name="EnterNewAlt" xml:space="preserve">
+    <value>Enter New Alt</value>
+  </data>
+  <data name="EnterParamNames" xml:space="preserve">
+    <value>Enter Param Names</value>
+  </data>
+  <data name="EnterTCPPort" xml:space="preserve">
+    <value>Enter TCP Port</value>
+  </data>
+  <data name="EnterTheGridSpacingInMeters5100" xml:space="preserve">
+    <value>Enter the grid spacing in meters (5-100).</value>
+  </data>
+  <data name="FftSampleRate" xml:space="preserve">
+    <value>fft sample rate</value>
+  </data>
+  <data name="LayoutName" xml:space="preserve">
+    <value>Layout Name</value>
+  </data>
+  <data name="LineNo" xml:space="preserve">
+    <value>Line no</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Name2" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="NterSourceFileSampleRate" xml:space="preserve">
+    <value>nter source file sample rate</value>
+  </data>
+  <data name="POI" xml:space="preserve">
+    <value>POI</value>
+  </data>
+  <data name="PleaseEnterAMessageAboutThisErrorIfYouCan" xml:space="preserve">
+    <value>Please enter a message about this error if you can.</value>
+  </data>
+  <data name="PleaseEnterScpPathEgUserPasswordHostDirPathToFiles" xml:space="preserve">
+    <value>Please enter scp path eg (user:password@host:/dir/path/to/files/)</value>
+  </data>
+  <data name="RenameArea" xml:space="preserve">
+    <value>Rename area</value>
+  </data>
+  <data name="SPACING" xml:space="preserve">
+    <value>SPACING</value>
+  </data>
+  <data name="SSHRemote" xml:space="preserve">
+    <value>SSH Remote</value>
+  </data>
+  <data name="SearchFor" xml:space="preserve">
+    <value>Search For</value>
+  </data>
+  <data name="ThisWillBeTheHeading" xml:space="preserve">
+    <value>This will be the heading</value>
+  </data>
+  <data name="DownloadMapArea" xml:space="preserve">
+    <value>Download map area</value>
+  </data>
+  <data name="NameForTheAreaSelectedOnTheMap" xml:space="preserve">
+    <value>Name for the area selected on the map:</value>
+  </data>
+  <data name="NameForTheCurrentMapViewHoldAltAndDragOnTheMapToPickAnExactAreaInstead" xml:space="preserve">
+    <value>Name for the current map view (hold ALT and drag on the map to pick an exact area instead):</value>
   </data>
 </root>

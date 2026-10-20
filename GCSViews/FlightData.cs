@@ -1864,7 +1864,7 @@ namespace MissionPlanner.GCSViews
             try
             {
                 string txt = "";
-                if (DialogResult.Cancel == InputBox.Show("Enter Message", "Enter Message to be logged", ref txt))
+                if (DialogResult.Cancel == InputBox.Show(Strings.EnterMessage, Strings.EnterMessageToBeLogged, ref txt))
                     return;
                 MainV2.comPort.send_text(5, txt);
             }
@@ -2112,7 +2112,7 @@ namespace MissionPlanner.GCSViews
                     if (lastwp == "-1")
                         lastwp = "1";
 
-                    if (InputBox.Show("Resume at", "Resume mission at waypoint#", ref lastwp) == DialogResult.OK)
+                    if (InputBox.Show(Strings.ResumeAt, Strings.ResumeMissionAtWaypoint, ref lastwp) == DialogResult.OK)
                     {
                         int timeout = 0;
                         int lastwpno = int.Parse(lastwp);
@@ -3283,7 +3283,7 @@ namespace MissionPlanner.GCSViews
                 if (Settings.Instance["hud1_useritem_" + checkbox.Name] != null)
                     prefix = Settings.Instance["hud1_useritem_" + checkbox.Name];
 
-                if (DialogResult.Cancel == InputBox.Show("Hud Header", "Please enter your item prefix", ref prefix))
+                if (DialogResult.Cancel == InputBox.Show(Strings.HudHeader, Strings.PleaseEnterYourItemPrefix, ref prefix))
                 {
                     checkbox.Checked = false;
                     return;
@@ -3894,7 +3894,7 @@ namespace MissionPlanner.GCSViews
             if (Settings.Instance.ContainsKey("guided_alt_frame"))
                 frame = (MAVLink.MAV_FRAME)byte.Parse(Settings.Instance["guided_alt_frame"]);
 
-            if (DialogResult.Cancel == AltInputBox.Show("Enter Alt", "Enter Guided Mode Alt", ref alt, ref frame))
+            if (DialogResult.Cancel == AltInputBox.Show(Strings.EnterAlt, Strings.EnterGuidedModeAlt, ref alt, ref frame))
                 return;
 
             Settings.Instance["guided_alt"] = alt;
@@ -4126,7 +4126,7 @@ namespace MissionPlanner.GCSViews
         private void Gspeed_DoubleClick(object sender, EventArgs e)
         {
             string max = "60";
-            if (DialogResult.OK == InputBox.Show("Enter Max Speed", "Enter Max Speed", ref max))
+            if (DialogResult.OK == InputBox.Show(Strings.EnterMaxSpeed, Strings.EnterMaxSpeed, ref max))
             {
                 Gspeed.MaxValue = float.Parse(max);
                 Settings.Instance["GspeedMAX"] = Gspeed.MaxValue.ToString();
@@ -4145,7 +4145,7 @@ namespace MissionPlanner.GCSViews
             if (Settings.Instance["herelinkip"] != null)
                 ipaddr = Settings.Instance["herelinkip"].ToString();
 
-            InputBox.Show("herelink ip", "Enter herelink ip address", ref ipaddr);
+            InputBox.Show(Strings.HerelinkIp, Strings.EnterHerelinkIpAddress, ref ipaddr);
 
             Settings.Instance["herelinkip"] = ipaddr;
 
@@ -5582,7 +5582,7 @@ namespace MissionPlanner.GCSViews
         private void PointCameraCoordsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var location = "";
-            InputBox.Show("Enter Coords", "Please enter the coords 'lat;long;alt(abs)' or 'lat;long'", ref location);
+            InputBox.Show(Strings.EnterCoords, Strings.PleaseEnterTheCoordsLatLongAltAbsOrLatLong, ref location);
 
             var split = location.Split(';');
 
@@ -5621,8 +5621,8 @@ namespace MissionPlanner.GCSViews
             }
 
             string alt = "0";
-            if (DialogResult.Cancel == InputBox.Show("Enter Alt",
-                "Enter Target Alt (Relative to home)", ref alt))
+            if (DialogResult.Cancel == InputBox.Show(Strings.EnterAlt,
+                Strings.EnterTargetAltRelativeToHome, ref alt))
                 return;
 
             if (!float.TryParse(alt, out var intalt))
@@ -5821,8 +5821,8 @@ namespace MissionPlanner.GCSViews
                 ? Settings.Instance["gstreamer_url"]
                 : @"videotestsrc ! video/x-raw, width=1280, height=720, framerate=30/1 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink";
 
-            if (DialogResult.OK == InputBox.Show("GStreamer url",
-                "Enter the source pipeline\nEnsure the final payload is ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink",
+            if (DialogResult.OK == InputBox.Show(Strings.GStreamerUrl,
+                Strings.EnterTheSourcePipelineEnsureTheFinalPayloadIsVideoconvertVideoXraw,
                 ref url))
             {
                 Settings.Instance["gstreamer_url"] = url;
@@ -5900,7 +5900,7 @@ namespace MissionPlanner.GCSViews
                 ? Settings.Instance["mjpeg_url"]
                 : @"http://127.0.0.1:56781/map.jpg";
 
-            if (DialogResult.OK == InputBox.Show("Mjpeg url", "Enter the url to the mjpeg source url", ref url))
+            if (DialogResult.OK == InputBox.Show(Strings.MjpegUrl, Strings.EnterTheUrlToTheMjpegSourceUrl, ref url))
             {
                 Settings.Instance["mjpeg_url"] = url;
 
@@ -6012,9 +6012,9 @@ namespace MissionPlanner.GCSViews
                 cols = Settings.Instance["dashboardCols"];
             }
 
-            if (InputBox.Show("Columns", "Enter number of columns to have.", ref cols) == DialogResult.OK)
+            if (InputBox.Show(Strings.Columns, Strings.EnterNumberOfColumnsToHave, ref cols) == DialogResult.OK)
             {
-                if (InputBox.Show("Rows", "Enter number of rows to have.", ref rows) == DialogResult.OK)
+                if (InputBox.Show(Strings.Rows, Strings.EnterNumberOfRowsToHave, ref rows) == DialogResult.OK)
                 {
                     if (rows.IsNumber() && cols.IsNumber())
                         setQuickViewRowsCols(cols, rows);
@@ -6914,7 +6914,7 @@ namespace MissionPlanner.GCSViews
             {
                 string alt = Settings.Instance["takeoff_alt", "5"];
 
-                if (DialogResult.Cancel == InputBox.Show("Enter Alt", "Enter Takeoff Alt", ref alt))
+                if (DialogResult.Cancel == InputBox.Show(Strings.EnterAlt, Strings.EnterTakeoffAlt, ref alt))
                     return;
 
                 var altf = float.Parse(alt, CultureInfo.InvariantCulture);
@@ -7359,7 +7359,7 @@ namespace MissionPlanner.GCSViews
         private void flyToCoordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var location = "";
-            InputBox.Show("Enter Fly To Coords", "Please enter the coords 'lat;long;alt' or 'lat;long'", ref location);
+            InputBox.Show(Strings.EnterFlyToCoords, Strings.PleaseEnterTheCoordsLatLongAltOrLatLong, ref location);
 
             byte frame = (byte)MAVLink.MAV_FRAME.GLOBAL_RELATIVE_ALT;
             if (!MainV2.comPort.MAV.GuidedMode.Equals(new MAVLink.mavlink_mission_item_int_t()))
@@ -7432,7 +7432,7 @@ namespace MissionPlanner.GCSViews
         private void poiatcoordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var location = "";
-            InputBox.Show("Enter POI Coords", "Please enter the coords 'lat;long;alt' or 'lat;long'", ref location);
+            InputBox.Show(Strings.EnterPOICoords, Strings.PleaseEnterTheCoordsLatLongAltOrLatLong, ref location);
 
             var split = location.Split(';');
 
@@ -7501,7 +7501,7 @@ namespace MissionPlanner.GCSViews
             string CellCount = "4";
             int iCellCount;
 
-            if (DialogResult.Cancel == InputBox.Show("Battery Cell Count", "Cell Count", ref CellCount))
+            if (DialogResult.Cancel == InputBox.Show(Strings.BatteryCellCount, Strings.CellCount, ref CellCount))
                 return;
 
             if (!int.TryParse(CellCount, out iCellCount))
@@ -7909,7 +7909,7 @@ namespace MissionPlanner.GCSViews
         private void jumpToTagToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string tag_str = "";
-            if (InputBox.Show("Jump to Tag", "Tag Id:", ref tag_str) != DialogResult.OK)
+            if (InputBox.Show(Strings.JumpToTag, Strings.TagId, ref tag_str) != DialogResult.OK)
             {
                 return;
             }

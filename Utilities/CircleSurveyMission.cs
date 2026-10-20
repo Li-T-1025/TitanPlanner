@@ -14,12 +14,12 @@ namespace MissionPlanner.Utilities
             int photos = 50;
             int startheading = 0;
 
-            InputBox.Show("", "startalt", ref startalt);
-            InputBox.Show("", "endalt", ref endalt);
-            InputBox.Show("", "seperation", ref seperation);
-            InputBox.Show("", "radius", ref radius);
-            InputBox.Show("", "photos", ref photos);
-            InputBox.Show("", "start heading", ref startheading);
+            InputBox.Show(string.Empty, Strings.Startalt, ref startalt);
+            InputBox.Show(string.Empty, Strings.Endalt, ref endalt);
+            InputBox.Show(string.Empty, Strings.Seperation, ref seperation);
+            InputBox.Show(string.Empty, Strings.Radius2, ref radius);
+            InputBox.Show(string.Empty, Strings.Photos, ref photos);
+            InputBox.Show(string.Empty, Strings.StartHeading, ref startheading);
 
             MainV2.instance.FlightPlanner.quickadd = true;
 

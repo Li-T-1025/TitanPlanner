@@ -360,7 +360,7 @@ namespace MissionPlanner.Controls
         private void NewFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string folder = "";
-            var dr = InputBox.Show("Folder Name", "Enter folder name", ref folder);
+            var dr = InputBox.Show(Strings.FolderName, Strings.EnterFolderName, ref folder);
             //if (dr == DialogResult.OK)
             // _mavftp.kCmdCreateDirectory(treeView1.SelectedNode.FullPath + "/" + folder);
 

@@ -364,7 +364,7 @@ namespace MissionPlanner.Controls
 
         private void but_graphit_Click(object sender, EventArgs e)
         {
-            InputBox.Show("Points", "Points of history?", ref history);
+            InputBox.Show(Strings.Points, Strings.PointsOfHistory, ref history);
             var form = new Form() { Size = new Size(640, 480) };
             var zg1 = new ZedGraphControl() { Dock = DockStyle.Fill };
             var path = selectedmsgid.Split('\\');

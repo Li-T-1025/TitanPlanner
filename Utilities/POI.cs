@@ -78,7 +78,7 @@ namespace MissionPlanner.Utilities
 
             string output = "";
 
-            if (DialogResult.OK != InputBox.Show("POI", "Enter ID", ref output))
+            if (DialogResult.OK != InputBox.Show(Strings.POI, Strings.EnterID, ref output))
                 return;
 
             POIAdd(Point, output);
@@ -108,7 +108,7 @@ namespace MissionPlanner.Utilities
 
             string output = "";
 
-            if (DialogResult.OK != InputBox.Show("POI", "Enter ID", ref output))
+            if (DialogResult.OK != InputBox.Show(Strings.POI, Strings.EnterID, ref output))
                 return;
 
             for (int a = 0; a < POI.POIs.Count; a++)

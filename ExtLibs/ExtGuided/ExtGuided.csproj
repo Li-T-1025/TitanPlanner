@@ -150,6 +150,7 @@
       <Name>MissionPlanner.Utilities</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Strings\MissionPlanner.Strings.csproj" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="FilePick.resx">

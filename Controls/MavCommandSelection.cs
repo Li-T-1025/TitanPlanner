@@ -105,7 +105,7 @@ namespace MissionPlanner.Controls
         private void btn_AddLine_Click(object sender, EventArgs e)
         {
             var cmdid = "-1";
-            InputBox.Show("Enter command ID","ID number of the command", ref cmdid);
+            InputBox.Show(Strings.EnterCommandID, Strings.IDNumberOfTheCommand, ref cmdid);
 
             try
             {
@@ -124,7 +124,7 @@ namespace MissionPlanner.Controls
                     if (a == i.ToString())
                     {
                         string cmdName = "NEW_COMMAND";
-                        InputBox.Show("What is the name", "Name", ref cmdName);
+                        InputBox.Show(Strings.WhatIsTheName, Strings.Name, ref cmdName);
                         if (cmdName.Length > 0)
                         {
                             if (checkIDandName(i, cmdName))

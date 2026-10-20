@@ -56,13 +56,13 @@ namespace MissionPlanner.Controls
 
             string name = "";
 
-            if (InputBox.Show("Name", "Please enter a friendly name", ref name) == DialogResult.OK)
+            if (InputBox.Show(Strings.Name, Strings.PleaseEnterAFriendlyName, ref name) == DialogResult.OK)
             {
                 dataGridView1[FName.Index, row].Value = name;
 
                 string pass = "";
 
-                if (InputBox.Show("Input Seed", "Please enter your pass phrase/sentence\nNumbers, Lower Case, Upper Case, Symbols, and 12+ chars long using atleast 2 of each", ref pass) == DialogResult.OK)
+                if (InputBox.Show(Strings.InputSeed, Strings.PleaseEnterYourPassPhraseSentenceNNumbersLowerCaseUpperCaseSymbolsAnd12CharsLongUsingAtleast2OfEach, ref pass) == DialogResult.OK)
                 {
                     var input = InputBox.value;
                     {

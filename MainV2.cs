@@ -1403,7 +1403,7 @@ namespace MissionPlanner
             else
             {
                 var pw = "";
-                if (InputBox.Show("Enter Password", "Please enter your password", ref pw, true) ==
+                if (InputBox.Show(Strings.EnterPassword, Strings.PleaseEnterYourPassword, ref pw, true) ==
                     System.Windows.Forms.DialogResult.OK)
                 {
                     bool ans = Password.ValidatePassword(pw);
@@ -1435,7 +1435,7 @@ namespace MissionPlanner
             else
             {
                 var pw = "";
-                if (InputBox.Show("Enter Password", "Please enter your password", ref pw, true) ==
+                if (InputBox.Show(Strings.EnterPassword, Strings.PleaseEnterYourPassword, ref pw, true) ==
                     System.Windows.Forms.DialogResult.OK)
                 {
                     bool ans = Password.ValidatePassword(pw);

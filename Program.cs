@@ -865,7 +865,7 @@ namespace MissionPlanner
 
                     try
                     {
-                        Controls.InputBox.Show("Message", "Please enter a message about this error if you can.",
+                        Controls.InputBox.Show(Strings.Message, Strings.PleaseEnterAMessageAboutThisErrorIfYouCan,
                             ref message);
                     }
                     catch
