@@ -59,6 +59,19 @@ namespace MissionPlanner
             var refFiles = refs.Where(a =>
                     !a.IsDynamic && !a.FullName.Contains("MissionPlanner.Drawing"))
                 .Select(a => a.Location);
+            // also reference all assemblies in the app base directory, so plugins can
+            // use types from assemblies not yet loaded into the AppDomain
+            // (e.g. MissionPlanner.Strings referenced by localized plugin sources)
+            try
+            {
+                refFiles = refFiles.Concat(Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll"))
+                    .Where(f => f != "" && File.Exists(f) &&
+                                !Path.GetFileName(f).Contains("MissionPlanner.Drawing"))
+                    .Distinct();
+            }
+            catch
+            {
+            }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 refFiles = refs.Where(a => !a.IsDynamic).Select(a => a.Location);
             var refmeta = refFiles.Select(a =>
