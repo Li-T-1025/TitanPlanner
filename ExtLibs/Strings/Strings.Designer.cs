@@ -12430,5 +12430,249 @@ public static string compass_variance {
             get { return ResourceManager.GetString("SaveAs", resourceCulture); }
         }
 
+        public static string OfflineMapTitle
+        {
+            get { return ResourceManager.GetString("OfflineMapTitle", resourceCulture); }
+        }
+        public static string OfflineMapColName
+        {
+            get { return ResourceManager.GetString("OfflineMapColName", resourceCulture); }
+        }
+        public static string OfflineMapColSource
+        {
+            get { return ResourceManager.GetString("OfflineMapColSource", resourceCulture); }
+        }
+        public static string OfflineMapColZoom
+        {
+            get { return ResourceManager.GetString("OfflineMapColZoom", resourceCulture); }
+        }
+        public static string OfflineMapColTilesDisk
+        {
+            get { return ResourceManager.GetString("OfflineMapColTilesDisk", resourceCulture); }
+        }
+        public static string OfflineMapColSize
+        {
+            get { return ResourceManager.GetString("OfflineMapColSize", resourceCulture); }
+        }
+        public static string OfflineMapEmpty
+        {
+            get { return ResourceManager.GetString("OfflineMapEmpty", resourceCulture); }
+        }
+        public static string OfflineMapBtnDownload
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnDownload", resourceCulture); }
+        }
+        public static string OfflineMapBtnDownloadTip
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnDownloadTip", resourceCulture); }
+        }
+        public static string OfflineMapBtnShow
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnShow", resourceCulture); }
+        }
+        public static string OfflineMapBtnShowTip
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnShowTip", resourceCulture); }
+        }
+        public static string OfflineMapBtnRename
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnRename", resourceCulture); }
+        }
+        public static string OfflineMapBtnRenameTip
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnRenameTip", resourceCulture); }
+        }
+        public static string OfflineMapBtnExport
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnExport", resourceCulture); }
+        }
+        public static string OfflineMapBtnExportTip
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnExportTip", resourceCulture); }
+        }
+        public static string OfflineMapBtnImport
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnImport", resourceCulture); }
+        }
+        public static string OfflineMapBtnImportTip
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnImportTip", resourceCulture); }
+        }
+        public static string OfflineMapBtnDelete
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnDelete", resourceCulture); }
+        }
+        public static string OfflineMapBtnDeleteTip
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnDeleteTip", resourceCulture); }
+        }
+        public static string OfflineMapBtnRefresh
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnRefresh", resourceCulture); }
+        }
+        public static string OfflineMapBtnRefreshTip
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnRefreshTip", resourceCulture); }
+        }
+        public static string OfflineMapBtnFolder
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnFolder", resourceCulture); }
+        }
+        public static string OfflineMapBtnFolderTip
+        {
+            get { return ResourceManager.GetString("OfflineMapBtnFolderTip", resourceCulture); }
+        }
+        public static string OfflineMapFactSize
+        {
+            get { return ResourceManager.GetString("OfflineMapFactSize", resourceCulture); }
+        }
+        public static string OfflineMapFactTiles
+        {
+            get { return ResourceManager.GetString("OfflineMapFactTiles", resourceCulture); }
+        }
+        public static string OfflineMapFactCoverage
+        {
+            get { return ResourceManager.GetString("OfflineMapFactCoverage", resourceCulture); }
+        }
+        public static string OfflineMapFactDisk
+        {
+            get { return ResourceManager.GetString("OfflineMapFactDisk", resourceCulture); }
+        }
+        public static string OfflineMapFactAdded
+        {
+            get { return ResourceManager.GetString("OfflineMapFactAdded", resourceCulture); }
+        }
+        public static string OfflineMapFactSource
+        {
+            get { return ResourceManager.GetString("OfflineMapFactSource", resourceCulture); }
+        }
+        public static string OfflineMapSelectPreview
+        {
+            get { return ResourceManager.GetString("OfflineMapSelectPreview", resourceCulture); }
+        }
+        public static string OfflineMapNoArea
+        {
+            get { return ResourceManager.GetString("OfflineMapNoArea", resourceCulture); }
+        }
+        public static string OfflineMapAreasSelected
+        {
+            get { return ResourceManager.GetString("OfflineMapAreasSelected", resourceCulture); }
+        }
+        public static string OfflineMapAreasCount
+        {
+            get { return ResourceManager.GetString("OfflineMapAreasCount", resourceCulture); }
+        }
+        public static string OfflineMapExportDeleteTip
+        {
+            get { return ResourceManager.GetString("OfflineMapExportDeleteTip", resourceCulture); }
+        }
+        public static string OfflineMapCacheAt
+        {
+            get { return ResourceManager.GetString("OfflineMapCacheAt", resourceCulture); }
+        }
+        public static string OfflineMapCountingTiles
+        {
+            get { return ResourceManager.GetString("OfflineMapCountingTiles", resourceCulture); }
+        }
+        public static string OfflineMapStatusTotals
+        {
+            get { return ResourceManager.GetString("OfflineMapStatusTotals", resourceCulture); }
+        }
+        public static string OfflineMapRendering
+        {
+            get { return ResourceManager.GetString("OfflineMapRendering", resourceCulture); }
+        }
+        public static string OfflineMapPreviewNoSource
+        {
+            get { return ResourceManager.GetString("OfflineMapPreviewNoSource", resourceCulture); }
+        }
+        public static string OfflineMapPreviewUnavailable
+        {
+            get { return ResourceManager.GetString("OfflineMapPreviewUnavailable", resourceCulture); }
+        }
+        public static string OfflineMapNoTilesYet
+        {
+            get { return ResourceManager.GetString("OfflineMapNoTilesYet", resourceCulture); }
+        }
+        public static string OfflineMapCentreCaption
+        {
+            get { return ResourceManager.GetString("OfflineMapCentreCaption", resourceCulture); }
+        }
+        public static string OfflineMapZoomCaption
+        {
+            get { return ResourceManager.GetString("OfflineMapZoomCaption", resourceCulture); }
+        }
+        public static string OfflineMapExportDlgTitle
+        {
+            get { return ResourceManager.GetString("OfflineMapExportDlgTitle", resourceCulture); }
+        }
+        public static string OfflineMapImportDlgTitle
+        {
+            get { return ResourceManager.GetString("OfflineMapImportDlgTitle", resourceCulture); }
+        }
+        public static string OfflineMapExporting
+        {
+            get { return ResourceManager.GetString("OfflineMapExporting", resourceCulture); }
+        }
+        public static string OfflineMapImporting
+        {
+            get { return ResourceManager.GetString("OfflineMapImporting", resourceCulture); }
+        }
+        public static string OfflineMapDeleting
+        {
+            get { return ResourceManager.GetString("OfflineMapDeleting", resourceCulture); }
+        }
+        public static string OfflineMapTilesIn
+        {
+            get { return ResourceManager.GetString("OfflineMapTilesIn", resourceCulture); }
+        }
+        public static string OfflineMapRegionLine
+        {
+            get { return ResourceManager.GetString("OfflineMapRegionLine", resourceCulture); }
+        }
+        public static string OfflineMapMore
+        {
+            get { return ResourceManager.GetString("OfflineMapMore", resourceCulture); }
+        }
+        public static string OfflineMapSources
+        {
+            get { return ResourceManager.GetString("OfflineMapSources", resourceCulture); }
+        }
+        public static string OfflineMapNoSourceWarning
+        {
+            get { return ResourceManager.GetString("OfflineMapNoSourceWarning", resourceCulture); }
+        }
+        public static string OfflineMapImportConfirm
+        {
+            get { return ResourceManager.GetString("OfflineMapImportConfirm", resourceCulture); }
+        }
+        public static string OfflineMapImportConfirmTitle
+        {
+            get { return ResourceManager.GetString("OfflineMapImportConfirmTitle", resourceCulture); }
+        }
+        public static string OfflineMapRemoveFromList
+        {
+            get { return ResourceManager.GetString("OfflineMapRemoveFromList", resourceCulture); }
+        }
+        public static string OfflineMapNoKeepsTiles
+        {
+            get { return ResourceManager.GetString("OfflineMapNoKeepsTiles", resourceCulture); }
+        }
+        public static string OfflineMapDeletedTiles
+        {
+            get { return ResourceManager.GetString("OfflineMapDeletedTiles", resourceCulture); }
+        }
+        public static string OfflineMapZoomSubtitle
+        {
+            get { return ResourceManager.GetString("OfflineMapZoomSubtitle", resourceCulture); }
+        }
+        public static string OfflineMapExportNameMore
+        {
+            get { return ResourceManager.GetString("OfflineMapExportNameMore", resourceCulture); }
+        }
+        public static string OfflineMapImportCancelled
+        {
+            get { return ResourceManager.GetString("OfflineMapImportCancelled", resourceCulture); }
+        }
     }
 }

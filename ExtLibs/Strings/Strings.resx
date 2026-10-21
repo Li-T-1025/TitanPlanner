@@ -4345,4 +4345,190 @@ Ensure the final payload is ! videoconvert ! video/x-raw,format=BGRA ! appsink n
 <data name="SaveAs" xml:space="preserve">
     <value>Save As</value>
 </data>
+<data name="OfflineMapTitle" xml:space="preserve">
+    <value>Offline Maps</value>
+</data>
+<data name="OfflineMapColName" xml:space="preserve">
+    <value>Name</value>
+</data>
+<data name="OfflineMapColSource" xml:space="preserve">
+    <value>Map source</value>
+</data>
+<data name="OfflineMapColZoom" xml:space="preserve">
+    <value>Zoom</value>
+</data>
+<data name="OfflineMapColTilesDisk" xml:space="preserve">
+    <value>Tiles on disk</value>
+</data>
+<data name="OfflineMapColSize" xml:space="preserve">
+    <value>Size</value>
+</data>
+<data name="OfflineMapEmpty" xml:space="preserve">
+    <value>No offline map areas yet.
+
+Click Download… while online, or Import… a .mappack file.</value>
+</data>
+<data name="OfflineMapBtnDownload" xml:space="preserve">
+    <value>Download…</value>
+</data>
+<data name="OfflineMapBtnDownloadTip" xml:space="preserve">
+    <value>Download the area shown on the map, or the area selected with ALT + drag</value>
+</data>
+<data name="OfflineMapBtnShow" xml:space="preserve">
+    <value>Show on Map</value>
+</data>
+<data name="OfflineMapBtnShowTip" xml:space="preserve">
+    <value>Outline the selected area on the map and zoom to it</value>
+</data>
+<data name="OfflineMapBtnRename" xml:space="preserve">
+    <value>Rename</value>
+</data>
+<data name="OfflineMapBtnRenameTip" xml:space="preserve">
+    <value>Rename the selected area</value>
+</data>
+<data name="OfflineMapBtnExport" xml:space="preserve">
+    <value>Export…</value>
+</data>
+<data name="OfflineMapBtnExportTip" xml:space="preserve">
+    <value>Save the selected areas and their tiles to a .mappack file</value>
+</data>
+<data name="OfflineMapBtnImport" xml:space="preserve">
+    <value>Import…</value>
+</data>
+<data name="OfflineMapBtnImportTip" xml:space="preserve">
+    <value>Load areas and tiles from a .mappack file into this computer's map cache</value>
+</data>
+<data name="OfflineMapBtnDelete" xml:space="preserve">
+    <value>Delete</value>
+</data>
+<data name="OfflineMapBtnDeleteTip" xml:space="preserve">
+    <value>Remove the selected areas from the list, optionally deleting their tiles</value>
+</data>
+<data name="OfflineMapBtnRefresh" xml:space="preserve">
+    <value>Refresh</value>
+</data>
+<data name="OfflineMapBtnRefreshTip" xml:space="preserve">
+    <value>Recount tiles on disk and redraw previews</value>
+</data>
+<data name="OfflineMapBtnFolder" xml:space="preserve">
+    <value>Open Folder</value>
+</data>
+<data name="OfflineMapBtnFolderTip" xml:space="preserve">
+    <value>Open the tile cache folder in Explorer</value>
+</data>
+<data name="OfflineMapFactSize" xml:space="preserve">
+    <value>Size</value>
+</data>
+<data name="OfflineMapFactTiles" xml:space="preserve">
+    <value>Tiles</value>
+</data>
+<data name="OfflineMapFactCoverage" xml:space="preserve">
+    <value>Coverage</value>
+</data>
+<data name="OfflineMapFactDisk" xml:space="preserve">
+    <value>On disk</value>
+</data>
+<data name="OfflineMapFactAdded" xml:space="preserve">
+    <value>Added</value>
+</data>
+<data name="OfflineMapFactSource" xml:space="preserve">
+    <value>Source</value>
+</data>
+<data name="OfflineMapSelectPreview" xml:space="preserve">
+    <value>Select an area to preview it</value>
+</data>
+<data name="OfflineMapNoArea" xml:space="preserve">
+    <value>No area selected</value>
+</data>
+<data name="OfflineMapAreasSelected" xml:space="preserve">
+    <value>{0} areas selected</value>
+</data>
+<data name="OfflineMapAreasCount" xml:space="preserve">
+    <value>{0} areas</value>
+</data>
+<data name="OfflineMapExportDeleteTip" xml:space="preserve">
+    <value>Export and Delete act on all selected areas</value>
+</data>
+<data name="OfflineMapCacheAt" xml:space="preserve">
+    <value>The tile cache is at </value>
+</data>
+<data name="OfflineMapCountingTiles" xml:space="preserve">
+    <value>{0} area(s) · counting tiles…</value>
+</data>
+<data name="OfflineMapStatusTotals" xml:space="preserve">
+    <value>{0} area(s)  ·  the whole tile cache holds {1:N0} tiles, {2}</value>
+</data>
+<data name="OfflineMapRendering" xml:space="preserve">
+    <value>Rendering preview…</value>
+</data>
+<data name="OfflineMapPreviewNoSource" xml:space="preserve">
+    <value>Preview unavailable: map source not installed</value>
+</data>
+<data name="OfflineMapPreviewUnavailable" xml:space="preserve">
+    <value>Preview unavailable</value>
+</data>
+<data name="OfflineMapNoTilesYet" xml:space="preserve">
+    <value>No tiles on disk for this area yet</value>
+</data>
+<data name="OfflineMapCentreCaption" xml:space="preserve">
+    <value>Centre of the area at zoom {0}  ·  hatching = tile not downloaded</value>
+</data>
+<data name="OfflineMapZoomCaption" xml:space="preserve">
+    <value>Zoom {0}  ·  hatching = tile not downloaded</value>
+</data>
+<data name="OfflineMapExportDlgTitle" xml:space="preserve">
+    <value>Export offline map pack</value>
+</data>
+<data name="OfflineMapImportDlgTitle" xml:space="preserve">
+    <value>Import offline map pack</value>
+</data>
+<data name="OfflineMapExporting" xml:space="preserve">
+    <value>Exporting offline maps</value>
+</data>
+<data name="OfflineMapImporting" xml:space="preserve">
+    <value>Importing offline maps</value>
+</data>
+<data name="OfflineMapDeleting" xml:space="preserve">
+    <value>Deleting cached tiles</value>
+</data>
+<data name="OfflineMapTilesIn" xml:space="preserve">
+    <value>{0:N0} tiles in {1}</value>
+</data>
+<data name="OfflineMapRegionLine" xml:space="preserve">
+    <value>    {0}  ({1}, zoom {2}–{3})</value>
+</data>
+<data name="OfflineMapMore" xml:space="preserve">
+    <value>    …and {0} more</value>
+</data>
+<data name="OfflineMapSources" xml:space="preserve">
+    <value>Map sources: </value>
+</data>
+<data name="OfflineMapNoSourceWarning" xml:space="preserve">
+    <value>Warning: this computer has no map source named {0}. Those tiles will be copied but cannot be displayed.</value>
+</data>
+<data name="OfflineMapImportConfirm" xml:space="preserve">
+    <value>Import into the map cache? Tiles already present are kept as they are.</value>
+</data>
+<data name="OfflineMapImportConfirmTitle" xml:space="preserve">
+    <value>Import offline maps</value>
+</data>
+<data name="OfflineMapRemoveFromList" xml:space="preserve">
+    <value>from the offline maps list?</value>
+</data>
+<data name="OfflineMapNoKeepsTiles" xml:space="preserve">
+    <value>No keeps the tiles: the map still uses them, they are just no longer listed here.
+Yes frees the space; tiles shared with an overlapping area are deleted too.</value>
+</data>
+<data name="OfflineMapDeletedTiles" xml:space="preserve">
+    <value>Deleted {0:N0} tiles</value>
+</data>
+<data name="OfflineMapZoomSubtitle" xml:space="preserve">
+    <value>{0}  ·  zoom {1}</value>
+</data>
+<data name="OfflineMapExportNameMore" xml:space="preserve">
+    <value>{0} +{1} more</value>
+</data>
+<data name="OfflineMapImportCancelled" xml:space="preserve">
+    <value>Import cancelled. </value>
+</data>
 </root>

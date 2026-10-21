@@ -123,7 +123,7 @@ namespace MissionPlanner.Controls
 
         private void BuildLayout()
         {
-            Text = "Offline Maps";
+            Text = Strings.OfflineMapTitle;
             StartPosition = FormStartPosition.CenterParent;
             Size = new Size(1080, 650);
             MinimumSize = new Size(900, 600);
@@ -155,11 +155,11 @@ namespace MissionPlanner.Controls
                 // a 1px-wide image list is the standard trick for taller, more readable rows
                 SmallImageList = new ImageList { ImageSize = new Size(1, 26) }
             };
-            _list.Columns.Add("Name", 220);
-            _list.Columns.Add("Map source", 150);
-            _list.Columns.Add("Zoom", 60);
-            _list.Columns.Add("Tiles on disk", 150);
-            _list.Columns.Add("Size", 80);
+            _list.Columns.Add(Strings.OfflineMapColName, 220);
+            _list.Columns.Add(Strings.OfflineMapColSource, 150);
+            _list.Columns.Add(Strings.OfflineMapColZoom, 60);
+            _list.Columns.Add(Strings.OfflineMapColTilesDisk, 150);
+            _list.Columns.Add(Strings.OfflineMapColSize, 80);
             _list.SelectedIndexChanged += (s, e) => OnSelectionChanged();
             _list.DoubleClick += (s, e) => ShowOnMap();
             _list.Resize += (s, e) => FitNameColumn();
@@ -176,7 +176,7 @@ namespace MissionPlanner.Controls
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.MiddleCenter,
                 Font = new Font("Segoe UI", 10F),
-                Text = "No offline map areas yet.\n\nClick Download… while online, or Import… a .mappack file.",
+                Text = Strings.OfflineMapEmpty,
                 Visible = false
             };
             _dimLabels.Add(_lblEmpty);
@@ -199,16 +199,16 @@ namespace MissionPlanner.Controls
                 WrapContents = true,
                 Padding = new Padding(16, 12, 16, 0)
             };
-            _btnDownload = MakeButton(buttonRow, tips, "Download…", 118,
-                "Download the area shown on the map, or the area selected with ALT + drag", (s, e) => Download());
-            _btnShow = MakeButton(buttonRow, tips, "Show on Map", 100, "Outline the selected area on the map and zoom to it", (s, e) => ShowOnMap());
-            _btnRename = MakeButton(buttonRow, tips, "Rename", 80, "Rename the selected area", (s, e) => Rename());
-            _btnExport = MakeButton(buttonRow, tips, "Export…", 90, "Save the selected areas and their tiles to a .mappack file", (s, e) => Export());
-            _btnImport = MakeButton(buttonRow, tips, "Import…", 100,
-                "Load areas and tiles from a .mappack file into this computer's map cache", (s, e) => Import());
-            _btnDelete = MakeButton(buttonRow, tips, "Delete", 80, "Remove the selected areas from the list, optionally deleting their tiles", (s, e) => DeleteSelected());
-            _btnRefresh = MakeButton(buttonRow, tips, "Refresh", 80, "Recount tiles on disk and redraw previews", (s, e) => RefreshList());
-            _btnFolder = MakeButton(buttonRow, tips, "Open Folder", 100, "Open the tile cache folder in Explorer", (s, e) => OpenFolder());
+            _btnDownload = MakeButton(buttonRow, tips, Strings.OfflineMapBtnDownload, 118,
+                Strings.OfflineMapBtnDownloadTip, (s, e) => Download());
+            _btnShow = MakeButton(buttonRow, tips, Strings.OfflineMapBtnShow, 100, Strings.OfflineMapBtnShowTip, (s, e) => ShowOnMap());
+            _btnRename = MakeButton(buttonRow, tips, Strings.OfflineMapBtnRename, 80, Strings.OfflineMapBtnRenameTip, (s, e) => Rename());
+            _btnExport = MakeButton(buttonRow, tips, Strings.OfflineMapBtnExport, 90, Strings.OfflineMapBtnExportTip, (s, e) => Export());
+            _btnImport = MakeButton(buttonRow, tips, Strings.OfflineMapBtnImport, 100,
+                Strings.OfflineMapBtnImportTip, (s, e) => Import());
+            _btnDelete = MakeButton(buttonRow, tips, Strings.OfflineMapBtnDelete, 80, Strings.OfflineMapBtnDeleteTip, (s, e) => DeleteSelected());
+            _btnRefresh = MakeButton(buttonRow, tips, Strings.OfflineMapBtnRefresh, 80, Strings.OfflineMapBtnRefreshTip, (s, e) => RefreshList());
+            _btnFolder = MakeButton(buttonRow, tips, Strings.OfflineMapBtnFolder, 100, Strings.OfflineMapBtnFolderTip, (s, e) => OpenFolder());
             _lblStatus = new Label
             {
                 Dock = DockStyle.Fill,
@@ -278,12 +278,12 @@ namespace MissionPlanner.Controls
             };
             facts.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 92));
             facts.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            _valSize = AddFact(facts, "Size");
-            _valTiles = AddFact(facts, "Tiles");
+            _valSize = AddFact(facts, Strings.OfflineMapFactSize);
+            _valTiles = AddFact(facts, Strings.OfflineMapFactTiles);
             _valCoverage = AddCoverageFact(facts);
-            _valDisk = AddFact(facts, "On disk");
-            _valAdded = AddFact(facts, "Added");
-            _valSource = AddFact(facts, "Source");
+            _valDisk = AddFact(facts, Strings.OfflineMapFactDisk);
+            _valAdded = AddFact(facts, Strings.OfflineMapFactAdded);
+            _valSource = AddFact(facts, Strings.OfflineMapFactSource);
 
             detail.Controls.Add(_preview, 0, 0);
             detail.Controls.Add(_lblName, 0, 1);
@@ -308,7 +308,7 @@ namespace MissionPlanner.Controls
         {
             int row = facts.RowCount++;
             facts.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            var keyLabel = new Label { Text = "Coverage", AutoSize = true, Margin = new Padding(0, 4, 0, 4) };
+            var keyLabel = new Label { Text = Strings.OfflineMapFactCoverage, AutoSize = true, Margin = new Padding(0, 4, 0, 4) };
             _dimLabels.Add(keyLabel);
 
             var host = new Panel { Height = 22, Dock = DockStyle.Fill, Margin = new Padding(0, 2, 0, 2) };
@@ -494,8 +494,8 @@ namespace MissionPlanner.Controls
                 _list.Items[0].Selected = true;
 
             _lblStatus.Text = regions.Count == 0
-                ? "The tile cache is at " + OfflineMapPack.CacheRoot
-                : regions.Count + " area(s) · counting tiles…";
+                ? Strings.OfflineMapCacheAt + OfflineMapPack.CacheRoot
+                : string.Format(Strings.OfflineMapCountingTiles, regions.Count);
 
             OnSelectionChanged();
             Task.Run(() => ComputeStats(regions, ct), ct);
@@ -522,11 +522,11 @@ namespace MissionPlanner.Controls
                 _detailRegionId = null;
                 _previewCts?.Cancel();
                 _preview.Image = null;
-                _previewCaption = selectedCount > 1 ? selectedCount + " areas selected" : "Select an area to preview it";
+                _previewCaption = selectedCount > 1 ? string.Format(Strings.OfflineMapAreasSelected, selectedCount) : Strings.OfflineMapSelectPreview;
                 _preview.Invalidate();
 
-                _lblName.Text = selectedCount > 1 ? selectedCount + " areas selected" : "No area selected";
-                _lblSubtitle.Text = selectedCount > 1 ? "Export and Delete act on all selected areas" : "";
+                _lblName.Text = selectedCount > 1 ? string.Format(Strings.OfflineMapAreasSelected, selectedCount) : Strings.OfflineMapNoArea;
+                _lblSubtitle.Text = selectedCount > 1 ? Strings.OfflineMapExportDeleteTip : "";
                 foreach (var value in new[] { _valSize, _valTiles, _valCoverage, _valDisk, _valAdded, _valSource })
                     value.Text = Strings.Str5;
                 _coverage = -1;
@@ -536,7 +536,7 @@ namespace MissionPlanner.Controls
 
             _detailRegionId = region.Id;
             _lblName.Text = region.Name;
-            _lblSubtitle.Text = region.Provider + "  ·  zoom " + ZoomText(region);
+            _lblSubtitle.Text = string.Format(Strings.OfflineMapZoomSubtitle, region.Provider, ZoomText(region));
 
             double widthKm, heightKm;
             OfflineMapPack.GetSizeKm(region.Bounds, out widthKm, out heightKm);
@@ -600,7 +600,7 @@ namespace MissionPlanner.Controls
 
                 long files, bytes;
                 OfflineMapPack.GetCacheTotals(ct, out files, out bytes);
-                SafeInvoke(() => _lblStatus.Text = string.Format("{0} area(s)  ·  the whole tile cache holds {1:N0} tiles, {2}",
+                SafeInvoke(() => _lblStatus.Text = string.Format(Strings.OfflineMapStatusTotals,
                     regions.Count, files, OfflineMapPack.FormatSize(bytes)));
             }
             catch (OperationCanceledException)
@@ -628,7 +628,7 @@ namespace MissionPlanner.Controls
             var ct = _previewCts.Token;
 
             _preview.Image = null;
-            _previewCaption = "Rendering preview…";
+            _previewCaption = Strings.OfflineMapRendering;
             _preview.Invalidate();
 
             Task.Run(() =>
@@ -642,14 +642,14 @@ namespace MissionPlanner.Controls
                     bitmap = OfflineMapPack.RenderPreview(region, PreviewTilesPerSide, ct, out zoom, out drawn, out partial);
                     if (bitmap == null)
                         caption = OfflineMapPack.FindProvider(region.Provider) == null
-                            ? "Preview unavailable: map source not installed"
-                            : "Preview unavailable";
+                            ? Strings.OfflineMapPreviewNoSource
+                            : Strings.OfflineMapPreviewUnavailable;
                     else if (drawn == 0)
-                        caption = "No tiles on disk for this area yet";
+                        caption = Strings.OfflineMapNoTilesYet;
                     else if (partial)
-                        caption = "Centre of the area at zoom " + zoom + "  ·  hatching = tile not downloaded";
+                        caption = string.Format(Strings.OfflineMapCentreCaption, zoom);
                     else
-                        caption = "Zoom " + zoom + "  ·  hatching = tile not downloaded";
+                        caption = string.Format(Strings.OfflineMapZoomCaption, zoom);
                 }
                 catch (OperationCanceledException)
                 {
@@ -661,7 +661,7 @@ namespace MissionPlanner.Controls
                     log.Error(ex);
                     bitmap?.Dispose();
                     bitmap = null;
-                    caption = "Preview unavailable";
+                    caption = Strings.OfflineMapPreviewUnavailable;
                 }
 
                 SafeInvoke(() =>
@@ -783,10 +783,10 @@ namespace MissionPlanner.Controls
                 return;
             }
 
-            string suggested = regions.Count == 1 ? regions[0].Name : regions[0].Name + " +" + (regions.Count - 1) + " more";
+            string suggested = regions.Count == 1 ? regions[0].Name : string.Format(Strings.OfflineMapExportNameMore, regions[0].Name, regions.Count - 1);
             using (var dlg = new SaveFileDialog
             {
-                Title = "Export offline map pack",
+                Title = Strings.OfflineMapExportDlgTitle,
                 Filter = OfflineMapPack.FileFilter,
                 DefaultExt = OfflineMapPack.FileExtension,
                 AddExtension = true,
@@ -800,7 +800,7 @@ namespace MissionPlanner.Controls
                 Settings.Instance[LastDirSetting] = Path.GetDirectoryName(dlg.FileName);
 
                 bool completed = false;
-                RunWithProgress("Exporting offline maps", sender =>
+                RunWithProgress(Strings.OfflineMapExporting, sender =>
                 {
                     completed = OfflineMapPack.Export(regions, dlg.FileName, sender.UpdateProgressAndStatus,
                         () => sender.doWorkArgs.CancelRequested);
@@ -829,7 +829,7 @@ namespace MissionPlanner.Controls
         {
             using (var dlg = new OpenFileDialog
             {
-                Title = "Import offline map pack",
+                Title = Strings.OfflineMapImportDlgTitle,
                 Filter = OfflineMapPack.FileFilter,
                 DefaultExt = OfflineMapPack.FileExtension,
                 InitialDirectory = Settings.Instance.GetString(LastDirSetting, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))
@@ -858,38 +858,37 @@ namespace MissionPlanner.Controls
                 }
 
                 var summary = new StringBuilder();
-                summary.AppendLine(string.Format("{0:N0} tiles in {1}", info.TileEntries, Path.GetFileName(dlg.FileName)));
+                summary.AppendLine(string.Format(Strings.OfflineMapTilesIn, info.TileEntries, Path.GetFileName(dlg.FileName)));
                 var regions = info.Manifest?.Regions;
                 if (regions != null && regions.Count > 0)
                 {
                     summary.AppendLine();
                     foreach (var region in regions.Take(12))
-                        summary.AppendLine(string.Format("    {0}  ({1}, zoom {2}–{3})", region.Name, region.Provider, region.MinZoom, region.MaxZoom));
+                        summary.AppendLine(string.Format(Strings.OfflineMapRegionLine, region.Name, region.Provider, region.MinZoom, region.MaxZoom));
                     if (regions.Count > 12)
-                        summary.AppendLine("    …and " + (regions.Count - 12) + " more");
+                        summary.AppendLine(string.Format(Strings.OfflineMapMore, regions.Count - 12));
                 }
                 else
                 {
-                    summary.AppendLine("Map sources: " + string.Join(", ", info.Providers));
+                    summary.AppendLine(Strings.OfflineMapSources + string.Join(", ", info.Providers));
                 }
 
                 var unknown = info.Providers.Where(p => OfflineMapPack.FindProvider(p) == null).ToList();
                 if (unknown.Count > 0)
                 {
                     summary.AppendLine();
-                    summary.AppendLine("Warning: this computer has no map source named " + string.Join(", ", unknown) +
-                                       ". Those tiles will be copied but cannot be displayed.");
+                    summary.AppendLine(string.Format(Strings.OfflineMapNoSourceWarning, string.Join(", ", unknown)));
                 }
 
                 summary.AppendLine();
-                summary.Append("Import into the map cache? Tiles already present are kept as they are.");
+                summary.Append(Strings.OfflineMapImportConfirm);
 
-                if (CustomMessageBox.Show(summary.ToString(), "Import offline maps", MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
+                if (CustomMessageBox.Show(summary.ToString(), Strings.OfflineMapImportConfirmTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Question) !=
                     (int)DialogResult.Yes)
                     return;
 
                 OfflineMapPack.ImportResult result = null;
-                RunWithProgress("Importing offline maps", sender =>
+                RunWithProgress(Strings.OfflineMapImporting, sender =>
                 {
                     result = OfflineMapPack.Import(dlg.FileName, false, sender.UpdateProgressAndStatus,
                         () => sender.doWorkArgs.CancelRequested);
@@ -913,7 +912,7 @@ namespace MissionPlanner.Controls
 
                 RefreshList();
                 CustomMessageBox.Show(string.Format(Strings.TilesCopiedWereAlreadyPresentArea,
-                    result.Cancelled ? "Import cancelled. " : "", result.Added, result.Skipped, added), Strings.MapNoAreaDownloadYetTitle);
+                    result.Cancelled ? Strings.OfflineMapImportCancelled : "", result.Added, result.Skipped, added), Strings.MapNoAreaDownloadYetTitle);
             }
         }
 
@@ -923,8 +922,8 @@ namespace MissionPlanner.Controls
             if (regions.Count == 0)
                 return;
 
-            string what = regions.Count == 1 ? "'" + regions[0].Name + "'" : regions.Count + " areas";
-            if (CustomMessageBox.Show(Strings.Remove + " " + what + " from the offline maps list?", Strings.MapNoAreaDownloadYetTitle,
+            string what = regions.Count == 1 ? "'" + regions[0].Name + "'" : string.Format(Strings.OfflineMapAreasCount, regions.Count);
+            if (CustomMessageBox.Show(Strings.Remove + " " + what + " " + Strings.OfflineMapRemoveFromList, Strings.MapNoAreaDownloadYetTitle,
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) != (int)DialogResult.Yes)
                 return;
 
@@ -944,15 +943,14 @@ namespace MissionPlanner.Controls
             {
                 deleteTiles = CustomMessageBox.Show(
                     string.Format(Strings.AlsoDeleteCachedTilesDisk + "\n\n" +
-                                  "No keeps the tiles: the map still uses them, they are just no longer listed here.\n" +
-                                  "Yes frees the space; tiles shared with an overlapping area are deleted too.",
+                                  Strings.OfflineMapNoKeepsTiles,
                         tiles, OfflineMapPack.FormatSize(bytes)),
                     Strings.MapNoAreaDownloadYetTitle, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == (int)DialogResult.Yes;
             }
 
             if (deleteTiles)
             {
-                RunWithProgress("Deleting cached tiles", sender =>
+                RunWithProgress(Strings.OfflineMapDeleting, sender =>
                 {
                     long done = 0;
                     foreach (var region in regions)
@@ -965,7 +963,7 @@ namespace MissionPlanner.Controls
 
                         long before = done;
                         done += OfflineMapPack.DeleteTiles(region,
-                            n => sender.UpdateProgressAndStatus(-1, string.Format("Deleted {0:N0} tiles", before + n)),
+                            n => sender.UpdateProgressAndStatus(-1, string.Format(Strings.OfflineMapDeletedTiles, before + n)),
                             () => sender.doWorkArgs.CancelRequested);
                     }
                 });

@@ -4267,4 +4267,190 @@ Please choose one by typing the associated number.</value>
 <data name="SaveAs" xml:space="preserve">
     <value>另存为</value>
 </data>
+<data name="OfflineMapTitle" xml:space="preserve">
+    <value>离线地图</value>
+</data>
+<data name="OfflineMapColName" xml:space="preserve">
+    <value>名称</value>
+</data>
+<data name="OfflineMapColSource" xml:space="preserve">
+    <value>地图源</value>
+</data>
+<data name="OfflineMapColZoom" xml:space="preserve">
+    <value>缩放</value>
+</data>
+<data name="OfflineMapColTilesDisk" xml:space="preserve">
+    <value>磁盘瓦片</value>
+</data>
+<data name="OfflineMapColSize" xml:space="preserve">
+    <value>大小</value>
+</data>
+<data name="OfflineMapEmpty" xml:space="preserve">
+    <value>尚无离线地图区域。
+
+在线时点击“下载…”，或导入 .mappack 文件。</value>
+</data>
+<data name="OfflineMapBtnDownload" xml:space="preserve">
+    <value>下载…</value>
+</data>
+<data name="OfflineMapBtnDownloadTip" xml:space="preserve">
+    <value>下载地图上显示的区域，或通过 ALT + 拖拽选择的区域</value>
+</data>
+<data name="OfflineMapBtnShow" xml:space="preserve">
+    <value>在地图上显示</value>
+</data>
+<data name="OfflineMapBtnShowTip" xml:space="preserve">
+    <value>在地图上标出所选区域并缩放至该区域</value>
+</data>
+<data name="OfflineMapBtnRename" xml:space="preserve">
+    <value>重命名</value>
+</data>
+<data name="OfflineMapBtnRenameTip" xml:space="preserve">
+    <value>重命名所选区域</value>
+</data>
+<data name="OfflineMapBtnExport" xml:space="preserve">
+    <value>导出…</value>
+</data>
+<data name="OfflineMapBtnExportTip" xml:space="preserve">
+    <value>将所选区域及其瓦片保存到 .mappack 文件</value>
+</data>
+<data name="OfflineMapBtnImport" xml:space="preserve">
+    <value>导入…</value>
+</data>
+<data name="OfflineMapBtnImportTip" xml:space="preserve">
+    <value>从 .mappack 文件加载区域和瓦片到本机地图缓存</value>
+</data>
+<data name="OfflineMapBtnDelete" xml:space="preserve">
+    <value>删除</value>
+</data>
+<data name="OfflineMapBtnDeleteTip" xml:space="preserve">
+    <value>从列表中移除所选区域，可选删除其瓦片</value>
+</data>
+<data name="OfflineMapBtnRefresh" xml:space="preserve">
+    <value>刷新</value>
+</data>
+<data name="OfflineMapBtnRefreshTip" xml:space="preserve">
+    <value>重新统计磁盘瓦片并重绘预览</value>
+</data>
+<data name="OfflineMapBtnFolder" xml:space="preserve">
+    <value>打开文件夹</value>
+</data>
+<data name="OfflineMapBtnFolderTip" xml:space="preserve">
+    <value>在资源管理器中打开瓦片缓存文件夹</value>
+</data>
+<data name="OfflineMapFactSize" xml:space="preserve">
+    <value>大小</value>
+</data>
+<data name="OfflineMapFactTiles" xml:space="preserve">
+    <value>瓦片</value>
+</data>
+<data name="OfflineMapFactCoverage" xml:space="preserve">
+    <value>覆盖范围</value>
+</data>
+<data name="OfflineMapFactDisk" xml:space="preserve">
+    <value>磁盘占用</value>
+</data>
+<data name="OfflineMapFactAdded" xml:space="preserve">
+    <value>添加时间</value>
+</data>
+<data name="OfflineMapFactSource" xml:space="preserve">
+    <value>来源</value>
+</data>
+<data name="OfflineMapSelectPreview" xml:space="preserve">
+    <value>选择要预览的区域</value>
+</data>
+<data name="OfflineMapNoArea" xml:space="preserve">
+    <value>未选择区域</value>
+</data>
+<data name="OfflineMapAreasSelected" xml:space="preserve">
+    <value>已选择 {0} 个区域</value>
+</data>
+<data name="OfflineMapAreasCount" xml:space="preserve">
+    <value>{0} 个区域</value>
+</data>
+<data name="OfflineMapExportDeleteTip" xml:space="preserve">
+    <value>导出和删除将作用于所有选中的区域</value>
+</data>
+<data name="OfflineMapCacheAt" xml:space="preserve">
+    <value>瓦片缓存位于 </value>
+</data>
+<data name="OfflineMapCountingTiles" xml:space="preserve">
+    <value>共 {0} 个区域 · 正在统计瓦片…</value>
+</data>
+<data name="OfflineMapStatusTotals" xml:space="preserve">
+    <value>共 {0} 个区域 · 整个瓦片缓存包含 {1:N0} 个瓦片，{2}</value>
+</data>
+<data name="OfflineMapRendering" xml:space="preserve">
+    <value>正在渲染预览…</value>
+</data>
+<data name="OfflineMapPreviewNoSource" xml:space="preserve">
+    <value>预览不可用：未安装地图源</value>
+</data>
+<data name="OfflineMapPreviewUnavailable" xml:space="preserve">
+    <value>预览不可用</value>
+</data>
+<data name="OfflineMapNoTilesYet" xml:space="preserve">
+    <value>此区域磁盘上尚无瓦片</value>
+</data>
+<data name="OfflineMapCentreCaption" xml:space="preserve">
+    <value>区域中心（缩放级别 {0}）· 阴影 = 瓦片未下载</value>
+</data>
+<data name="OfflineMapZoomCaption" xml:space="preserve">
+    <value>缩放级别 {0} · 阴影 = 瓦片未下载</value>
+</data>
+<data name="OfflineMapExportDlgTitle" xml:space="preserve">
+    <value>导出离线地图包</value>
+</data>
+<data name="OfflineMapImportDlgTitle" xml:space="preserve">
+    <value>导入离线地图包</value>
+</data>
+<data name="OfflineMapExporting" xml:space="preserve">
+    <value>正在导出离线地图</value>
+</data>
+<data name="OfflineMapImporting" xml:space="preserve">
+    <value>正在导入离线地图</value>
+</data>
+<data name="OfflineMapDeleting" xml:space="preserve">
+    <value>正在删除缓存瓦片</value>
+</data>
+<data name="OfflineMapTilesIn" xml:space="preserve">
+    <value>{1} 中有 {0:N0} 个瓦片</value>
+</data>
+<data name="OfflineMapRegionLine" xml:space="preserve">
+    <value>　　{0}（{1}，缩放 {2}–{3}）</value>
+</data>
+<data name="OfflineMapMore" xml:space="preserve">
+    <value>　　以及另外 {0} 个</value>
+</data>
+<data name="OfflineMapSources" xml:space="preserve">
+    <value>地图源：</value>
+</data>
+<data name="OfflineMapNoSourceWarning" xml:space="preserve">
+    <value>警告：此计算机没有名为 {0} 的地图源。这些瓦片将被复制，但无法显示。</value>
+</data>
+<data name="OfflineMapImportConfirm" xml:space="preserve">
+    <value>是否导入到地图缓存？已存在的瓦片将保持不变。</value>
+</data>
+<data name="OfflineMapImportConfirmTitle" xml:space="preserve">
+    <value>导入离线地图</value>
+</data>
+<data name="OfflineMapRemoveFromList" xml:space="preserve">
+    <value>从离线地图列表中移除？</value>
+</data>
+<data name="OfflineMapNoKeepsTiles" xml:space="preserve">
+    <value>选择“否”将保留瓦片：地图仍会使用它们，只是不再在此列出。
+选择“是”将释放空间；与重叠区域共享的瓦片也会被删除。</value>
+</data>
+<data name="OfflineMapDeletedTiles" xml:space="preserve">
+    <value>已删除 {0:N0} 个瓦片</value>
+</data>
+<data name="OfflineMapZoomSubtitle" xml:space="preserve">
+    <value>{0} · 缩放 {1}</value>
+</data>
+<data name="OfflineMapExportNameMore" xml:space="preserve">
+    <value>{0} 及另外 {1} 个</value>
+</data>
+<data name="OfflineMapImportCancelled" xml:space="preserve">
+    <value>导入已取消。</value>
+</data>
 </root>
