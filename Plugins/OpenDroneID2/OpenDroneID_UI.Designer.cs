@@ -42,7 +42,7 @@ namespace MissionPlanner.Controls
             this.label13 = new System.Windows.Forms.Label();
             this.LED_RemoteID_Messages = new Bulb.LedBulb();
             this.LED_gps_valid = new Bulb.LedBulb();
-            this.label14 = new System.Windows.Forms.Label();            
+            this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.CMB_uas_id_type = new System.Windows.Forms.ComboBox();
             this.CMB_uas_type = new System.Windows.Forms.ComboBox();
@@ -75,203 +75,118 @@ namespace MissionPlanner.Controls
             // 
             // txt_UserID
             // 
-            this.txt_UserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_UserID.Location = new System.Drawing.Point(100, 9);
-            this.txt_UserID.MaxLength = 20;
+            resources.ApplyResources(this.txt_UserID, "txt_UserID");
             this.txt_UserID.Name = "txt_UserID";
-            this.txt_UserID.Size = new System.Drawing.Size(195, 20);
-            this.txt_UserID.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 7;
             resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 9;
             resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
             // 
             // TXT_UAS_ID
             // 
-            this.TXT_UAS_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXT_UAS_ID.Location = new System.Drawing.Point(109, 17);
-            this.TXT_UAS_ID.MaxLength = 20;
+            resources.ApplyResources(this.TXT_UAS_ID, "TXT_UAS_ID");
             this.TXT_UAS_ID.Name = "TXT_UAS_ID";
-            this.TXT_UAS_ID.Size = new System.Drawing.Size(205, 20);
-            this.TXT_UAS_ID.TabIndex = 8;
             this.TXT_UAS_ID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
-            this.label3.TabIndex = 10;
             resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 11;
             resources.ApplyResources(this.label4, "label4");
-
+            this.label4.Name = "label4";
             // 
-            // label4 info
+            // label4_info
             // 
-            this.label4_info.AutoSize = true;
-            this.label4_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4_info.Location = new System.Drawing.Point(6, 119);
-            this.label4_info.Name = "label4_info";
-            this.label4_info.Size = new System.Drawing.Size(49, 13);
-            this.label4_info.TabIndex = 12;
             resources.ApplyResources(this.label4_info, "label4_info");
-
+            this.label4_info.Name = "label4_info";
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(112, 43);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 13);
-            this.label12.TabIndex = 31;
             resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
             // 
             // LED_ArmedError
             // 
             this.LED_ArmedError.Color = System.Drawing.Color.White;
-            this.LED_ArmedError.Location = new System.Drawing.Point(92, 41);
+            resources.ApplyResources(this.LED_ArmedError, "LED_ArmedError");
             this.LED_ArmedError.Name = "LED_ArmedError";
             this.LED_ArmedError.On = true;
-            this.LED_ArmedError.Size = new System.Drawing.Size(16, 16);
-            this.LED_ArmedError.TabIndex = 32;
-            resources.ApplyResources(this.LED_ArmedError, "LED_ArmedError");
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(24, 20);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
-            this.label13.TabIndex = 33;
             resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
             // 
             // LED_RemoteID_Messages
             // 
             this.LED_RemoteID_Messages.Color = System.Drawing.Color.White;
-            this.LED_RemoteID_Messages.Location = new System.Drawing.Point(7, 19);
+            resources.ApplyResources(this.LED_RemoteID_Messages, "LED_RemoteID_Messages");
             this.LED_RemoteID_Messages.Name = "LED_RemoteID_Messages";
             this.LED_RemoteID_Messages.On = true;
-            this.LED_RemoteID_Messages.Size = new System.Drawing.Size(16, 16);
-            this.LED_RemoteID_Messages.TabIndex = 34;
-            resources.ApplyResources(this.LED_RemoteID_Messages, "LED_RemoteID_Messages");
             // 
             // LED_gps_valid
             // 
             this.LED_gps_valid.Color = System.Drawing.Color.White;
-            this.LED_gps_valid.Location = new System.Drawing.Point(8, 41);
+            resources.ApplyResources(this.LED_gps_valid, "LED_gps_valid");
             this.LED_gps_valid.Name = "LED_gps_valid";
             this.LED_gps_valid.On = true;
-            this.LED_gps_valid.Size = new System.Drawing.Size(16, 16);
-            this.LED_gps_valid.TabIndex = 36;
-            resources.ApplyResources(this.LED_gps_valid, "LED_gps_valid");
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(27, 43);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 13);
-            this.label14.TabIndex = 35;
             resources.ApplyResources(this.label14, "label14");
-
+            this.label14.Name = "label14";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
             // 
             // CMB_uas_id_type
             // 
-            this.CMB_uas_id_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.CMB_uas_id_type, "CMB_uas_id_type");
             this.CMB_uas_id_type.FormattingEnabled = true;
-            this.CMB_uas_id_type.Location = new System.Drawing.Point(109, 45);
             this.CMB_uas_id_type.Name = "CMB_uas_id_type";
-            this.CMB_uas_id_type.Size = new System.Drawing.Size(205, 21);
-            this.CMB_uas_id_type.TabIndex = 42;
             // 
             // CMB_uas_type
             // 
-            this.CMB_uas_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.CMB_uas_type, "CMB_uas_type");
             this.CMB_uas_type.FormattingEnabled = true;
-            this.CMB_uas_type.Location = new System.Drawing.Point(109, 76);
             this.CMB_uas_type.Name = "CMB_uas_type";
-            this.CMB_uas_type.Size = new System.Drawing.Size(205, 21);
-            this.CMB_uas_type.TabIndex = 43;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(7, 116);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(66, 13);
-            this.label17.TabIndex = 44;
             resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
             // 
             // CMB_self_id_type
             // 
-            this.CMB_self_id_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.CMB_self_id_type, "CMB_self_id_type");
             this.CMB_self_id_type.FormattingEnabled = true;
-            this.CMB_self_id_type.Location = new System.Drawing.Point(100, 116);
             this.CMB_self_id_type.Name = "CMB_self_id_type";
-            this.CMB_self_id_type.Size = new System.Drawing.Size(195, 21);
-            this.CMB_self_id_type.TabIndex = 45;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 88);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 13);
-            this.label18.TabIndex = 47;
             resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // label18_info
+            // 
+            resources.ApplyResources(this.label18_info, "label18_info");
+            this.label18_info.Name = "label18_info";
             // 
             // TXT_self_id_TXT
             // 
-            this.TXT_self_id_TXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXT_self_id_TXT.Location = new System.Drawing.Point(100, 88);
-            this.TXT_self_id_TXT.MaxLength = 23;
+            resources.ApplyResources(this.TXT_self_id_TXT, "TXT_self_id_TXT");
             this.TXT_self_id_TXT.Name = "TXT_self_id_TXT";
-            this.TXT_self_id_TXT.Size = new System.Drawing.Size(195, 20);
-            this.TXT_self_id_TXT.TabIndex = 46;
-
-            // 
-            // label18 info
-            // 
-            this.label18_info.AutoSize = true;
-            this.label18_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18_info.Location = new System.Drawing.Point(6, 150);
-            this.label18_info.Name = "label18_info";
-            this.label18_info.Size = new System.Drawing.Size(273, 26);
-            this.label18_info.TabIndex = 47;
-            resources.ApplyResources(this.label18_info, "label18_info");
-
             // 
             // groupBox2
             // 
@@ -282,25 +197,18 @@ namespace MissionPlanner.Controls
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.LED_gps_valid);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(171, 89);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(197, 69);
-            this.groupBox2.TabIndex = 53;
-            this.groupBox2.TabStop = false;
             resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
             // 
             // ODOD_tabs
             // 
             this.ODOD_tabs.Controls.Add(this.tabStatus);
             this.ODOD_tabs.Controls.Add(this.tab_uid);
             this.ODOD_tabs.Controls.Add(this.tab_ops);
-            this.ODOD_tabs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ODOD_tabs.Location = new System.Drawing.Point(6, 164);
+            resources.ApplyResources(this.ODOD_tabs, "ODOD_tabs");
             this.ODOD_tabs.Name = "ODOD_tabs";
             this.ODOD_tabs.SelectedIndex = 0;
-            this.ODOD_tabs.Size = new System.Drawing.Size(362, 209);
-            this.ODOD_tabs.TabIndex = 57;
             // 
             // tabStatus
             // 
@@ -309,60 +217,35 @@ namespace MissionPlanner.Controls
             this.tabStatus.Controls.Add(this.TXT_RID_Status_Msg);
             this.tabStatus.Controls.Add(this.label5);
             this.tabStatus.Controls.Add(this.TXT_ODID_Status);
-            this.tabStatus.Location = new System.Drawing.Point(4, 22);
-            this.tabStatus.Name = "tabStatus";
-            this.tabStatus.Size = new System.Drawing.Size(354, 183);
-            this.tabStatus.TabIndex = 2;
             resources.ApplyResources(this.tabStatus, "tabStatus");
+            this.tabStatus.Name = "tabStatus";
             this.tabStatus.UseVisualStyleBackColor = true;
             // 
             // LBL_version
             // 
-            this.LBL_version.AutoSize = true;
-            this.LBL_version.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_version.Location = new System.Drawing.Point(278, 166);
+            resources.ApplyResources(this.LBL_version, "LBL_version");
             this.LBL_version.Name = "LBL_version";
-            this.LBL_version.Size = new System.Drawing.Size(70, 13);
-            this.LBL_version.TabIndex = 13;
-            this.LBL_version.Text = "                     ";
-            this.LBL_version.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.LBL_version.DoubleClick += new System.EventHandler(this.LBL_version_DoubleClick);
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 145);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(273, 26);
-            this.label8.TabIndex = 12;
             resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
             // 
             // TXT_RID_Status_Msg
             // 
-            this.TXT_RID_Status_Msg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXT_RID_Status_Msg.Location = new System.Drawing.Point(146, 4);
+            resources.ApplyResources(this.TXT_RID_Status_Msg, "TXT_RID_Status_Msg");
             this.TXT_RID_Status_Msg.Name = "TXT_RID_Status_Msg";
-            this.TXT_RID_Status_Msg.Size = new System.Drawing.Size(205, 20);
-            this.TXT_RID_Status_Msg.TabIndex = 10;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 11;
             resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
             // 
             // TXT_ODID_Status
             // 
-            this.TXT_ODID_Status.Location = new System.Drawing.Point(4, 30);
+            resources.ApplyResources(this.TXT_ODID_Status, "TXT_ODID_Status");
             this.TXT_ODID_Status.Name = "TXT_ODID_Status";
-            this.TXT_ODID_Status.Size = new System.Drawing.Size(347, 112);
-            this.TXT_ODID_Status.TabIndex = 0;
-            this.TXT_ODID_Status.Text = "";
             // 
             // tab_uid
             // 
@@ -373,12 +256,8 @@ namespace MissionPlanner.Controls
             this.tab_uid.Controls.Add(this.CMB_uas_id_type);
             this.tab_uid.Controls.Add(this.CMB_uas_type);
             this.tab_uid.Controls.Add(this.label3);
-            this.tab_uid.Location = new System.Drawing.Point(4, 22);
-            this.tab_uid.Name = "tab_uid";
-            this.tab_uid.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_uid.Size = new System.Drawing.Size(354, 183);
-            this.tab_uid.TabIndex = 0;
             resources.ApplyResources(this.tab_uid, "tab_uid");
+            this.tab_uid.Name = "tab_uid";
             this.tab_uid.UseVisualStyleBackColor = true;
             // 
             // tab_ops
@@ -393,67 +272,46 @@ namespace MissionPlanner.Controls
             this.tab_ops.Controls.Add(this.label18);
             this.tab_ops.Controls.Add(this.label18_info);
             this.tab_ops.Controls.Add(this.TXT_self_id_TXT);
-            this.tab_ops.Location = new System.Drawing.Point(4, 22);
-            this.tab_ops.Name = "tab_ops";
-            this.tab_ops.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ops.Size = new System.Drawing.Size(354, 183);
-            this.tab_ops.TabIndex = 1;
             resources.ApplyResources(this.tab_ops, "tab_ops");
+            this.tab_ops.Name = "tab_ops";
             this.tab_ops.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 66);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 13);
-            this.label7.TabIndex = 50;
             resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 48;
             resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
             // 
             // CMB_op_id_type
             // 
-            this.CMB_op_id_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.CMB_op_id_type, "CMB_op_id_type");
             this.CMB_op_id_type.FormattingEnabled = true;
-            this.CMB_op_id_type.Location = new System.Drawing.Point(100, 34);
             this.CMB_op_id_type.Name = "CMB_op_id_type";
-            this.CMB_op_id_type.Size = new System.Drawing.Size(195, 21);
-            this.CMB_op_id_type.TabIndex = 49;
             // 
             // nmea_GPS_1
             // 
-            this.nmea_GPS_1.Location = new System.Drawing.Point(6, 3);
+            resources.ApplyResources(this.nmea_GPS_1, "nmea_GPS_1");
             this.nmea_GPS_1.Name = "nmea_GPS_1";
-            this.nmea_GPS_1.Size = new System.Drawing.Size(369, 88);
-            this.nmea_GPS_1.TabIndex = 56;
             // 
             // myODID_Status
             // 
-            this.myODID_Status.Location = new System.Drawing.Point(6, 97);
+            this.myODID_Status._parent_ODID = null;
+            resources.ApplyResources(this.myODID_Status, "myODID_Status");
             this.myODID_Status.Name = "myODID_Status";
-            this.myODID_Status.Size = new System.Drawing.Size(140, 40);
-            this.myODID_Status.TabIndex = 54;
             // 
             // OpenDroneID_UI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ODOD_tabs);
             this.Controls.Add(this.nmea_GPS_1);
             this.Controls.Add(this.myODID_Status);
             this.Controls.Add(this.groupBox2);
             this.Name = "OpenDroneID_UI";
-            this.Size = new System.Drawing.Size(380, 380);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ODOD_tabs.ResumeLayout(false);

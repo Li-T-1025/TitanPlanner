@@ -1245,4 +1245,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <Target Name="BuildExternalPlugins" AfterTargets="Build">
+    <Exec Command="&quot;$(MSBuildBinPath)\MSBuild.exe&quot; Plugins\OpenDroneID2\OpenDroneID_Plugin.csproj /t:Build /p:Configuration=$(Configuration) /p:BuildProjectReferences=false /m:1 /nologo /nodeReuse:false" />
+    <Exec Command="&quot;$(MSBuildBinPath)\MSBuild.exe&quot; ExtLibs\MissionPlanner.Stats\MissionPlanner.Stats.csproj /t:Build /p:Configuration=$(Configuration) /p:BuildProjectReferences=false /m:1 /nologo /nodeReuse:false" />
+    <Exec Command="&quot;$(MSBuildBinPath)\MSBuild.exe&quot; ExtLibs\ExtGuided\ExtGuided.csproj /t:Build /p:Configuration=$(Configuration) /p:BuildProjectReferences=false /m:1 /nologo /nodeReuse:false" />
+    <Exec Command="&quot;$(MSBuildBinPath)\MSBuild.exe&quot; ExtLibs\AltitudeAngelWings.Plugin\AltitudeAngelWings.Plugin.csproj /t:Build /p:Configuration=$(Configuration) /p:BuildProjectReferences=false /m:1 /nologo /nodeReuse:false" />
+  </Target>
 </Project>
