@@ -4531,4 +4531,55 @@ Yes frees the space; tiles shared with an overlapping area are deleted too.</val
 <data name="OfflineMapImportCancelled" xml:space="preserve">
     <value>Import cancelled. </value>
 </data>
+<data name="Map3DCameraDist" xml:space="preserve">
+    <value>Camera Dist:</value>
+</data>
+<data name="Map3DCameraHeight" xml:space="preserve">
+    <value>Camera Height:</value>
+</data>
+<data name="Map3DCameraFov" xml:space="preserve">
+    <value>Camera FoV:</value>
+</data>
+<data name="Map3DMavScale" xml:space="preserve">
+    <value>MAV Scale (m):</value>
+</data>
+<data name="Map3DWpMarkerSize" xml:space="preserve">
+    <value>WP Marker Size:</value>
+</data>
+<data name="Map3DAdsbSize" xml:space="preserve">
+    <value>ADSB Size:</value>
+</data>
+<data name="Map3DMavColor" xml:space="preserve">
+    <value>MAV Color:</value>
+</data>
+<data name="Map3DStlFile" xml:space="preserve">
+    <value>STL File:</value>
+</data>
+<data name="Map3DStlFilter" xml:space="preserve">
+    <value>STL Files (*.stl)|*.stl|All Files (*.*)|*.*</value>
+</data>
+<data name="Map3DSelectStlTitle" xml:space="preserve">
+    <value>Select Plane STL File</value>
+</data>
+<data name="Map3DHeadingLine" xml:space="preserve">
+    <value>Heading Line (Red)</value>
+</data>
+<data name="Map3DNavBearingLine" xml:space="preserve">
+    <value>Nav Bearing Line (Orange)</value>
+</data>
+<data name="Map3DGpsHeadingLine" xml:space="preserve">
+    <value>GPS Heading Line (Black)</value>
+</data>
+<data name="Map3DTurnRadius" xml:space="preserve">
+    <value>Turn Radius Arc (Pink)</value>
+</data>
+<data name="Map3DFlightTrail" xml:space="preserve">
+    <value>Flight Path Trail</value>
+</data>
+<data name="Map3DFpvMode" xml:space="preserve">
+    <value>FPV Mode (camera at aircraft)</value>
+</data>
+<data name="Map3DStatsForNerds" xml:space="preserve">
+    <value>Stats for nerds</value>
+</data>
 </root>

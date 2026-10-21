@@ -12674,5 +12674,73 @@ public static string compass_variance {
         {
             get { return ResourceManager.GetString("OfflineMapImportCancelled", resourceCulture); }
         }
+        public static string Map3DCameraDist
+        {
+            get { return ResourceManager.GetString("Map3DCameraDist", resourceCulture); }
+        }
+        public static string Map3DCameraHeight
+        {
+            get { return ResourceManager.GetString("Map3DCameraHeight", resourceCulture); }
+        }
+        public static string Map3DCameraFov
+        {
+            get { return ResourceManager.GetString("Map3DCameraFov", resourceCulture); }
+        }
+        public static string Map3DMavScale
+        {
+            get { return ResourceManager.GetString("Map3DMavScale", resourceCulture); }
+        }
+        public static string Map3DWpMarkerSize
+        {
+            get { return ResourceManager.GetString("Map3DWpMarkerSize", resourceCulture); }
+        }
+        public static string Map3DAdsbSize
+        {
+            get { return ResourceManager.GetString("Map3DAdsbSize", resourceCulture); }
+        }
+        public static string Map3DMavColor
+        {
+            get { return ResourceManager.GetString("Map3DMavColor", resourceCulture); }
+        }
+        public static string Map3DStlFile
+        {
+            get { return ResourceManager.GetString("Map3DStlFile", resourceCulture); }
+        }
+        public static string Map3DStlFilter
+        {
+            get { return ResourceManager.GetString("Map3DStlFilter", resourceCulture); }
+        }
+        public static string Map3DSelectStlTitle
+        {
+            get { return ResourceManager.GetString("Map3DSelectStlTitle", resourceCulture); }
+        }
+        public static string Map3DHeadingLine
+        {
+            get { return ResourceManager.GetString("Map3DHeadingLine", resourceCulture); }
+        }
+        public static string Map3DNavBearingLine
+        {
+            get { return ResourceManager.GetString("Map3DNavBearingLine", resourceCulture); }
+        }
+        public static string Map3DGpsHeadingLine
+        {
+            get { return ResourceManager.GetString("Map3DGpsHeadingLine", resourceCulture); }
+        }
+        public static string Map3DTurnRadius
+        {
+            get { return ResourceManager.GetString("Map3DTurnRadius", resourceCulture); }
+        }
+        public static string Map3DFlightTrail
+        {
+            get { return ResourceManager.GetString("Map3DFlightTrail", resourceCulture); }
+        }
+        public static string Map3DFpvMode
+        {
+            get { return ResourceManager.GetString("Map3DFpvMode", resourceCulture); }
+        }
+        public static string Map3DStatsForNerds
+        {
+            get { return ResourceManager.GetString("Map3DStatsForNerds", resourceCulture); }
+        }
     }
 }

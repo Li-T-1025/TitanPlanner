@@ -4453,4 +4453,55 @@ Please choose one by typing the associated number.</value>
 <data name="OfflineMapImportCancelled" xml:space="preserve">
     <value>导入已取消。</value>
 </data>
+<data name="Map3DCameraDist" xml:space="preserve">
+    <value>相机距离:</value>
+</data>
+<data name="Map3DCameraHeight" xml:space="preserve">
+    <value>相机高度:</value>
+</data>
+<data name="Map3DCameraFov" xml:space="preserve">
+    <value>相机视场角:</value>
+</data>
+<data name="Map3DMavScale" xml:space="preserve">
+    <value>MAV 比例 (m):</value>
+</data>
+<data name="Map3DWpMarkerSize" xml:space="preserve">
+    <value>航点标记大小:</value>
+</data>
+<data name="Map3DAdsbSize" xml:space="preserve">
+    <value>ADSB 大小:</value>
+</data>
+<data name="Map3DMavColor" xml:space="preserve">
+    <value>MAV 颜色:</value>
+</data>
+<data name="Map3DStlFile" xml:space="preserve">
+    <value>STL 文件:</value>
+</data>
+<data name="Map3DStlFilter" xml:space="preserve">
+    <value>STL 文件 (*.stl)|*.stl|所有文件 (*.*)|*.*</value>
+</data>
+<data name="Map3DSelectStlTitle" xml:space="preserve">
+    <value>选择飞行器 STL 文件</value>
+</data>
+<data name="Map3DHeadingLine" xml:space="preserve">
+    <value>航向线（红）</value>
+</data>
+<data name="Map3DNavBearingLine" xml:space="preserve">
+    <value>导航方位线（橙）</value>
+</data>
+<data name="Map3DGpsHeadingLine" xml:space="preserve">
+    <value>GPS 航向线（黑）</value>
+</data>
+<data name="Map3DTurnRadius" xml:space="preserve">
+    <value>转弯半径弧（粉）</value>
+</data>
+<data name="Map3DFlightTrail" xml:space="preserve">
+    <value>飞行路径轨迹</value>
+</data>
+<data name="Map3DFpvMode" xml:space="preserve">
+    <value>FPV 模式（相机位于飞行器）</value>
+</data>
+<data name="Map3DStatsForNerds" xml:space="preserve">
+    <value>极客统计</value>
+</data>
 </root>

@@ -61,22 +61,22 @@ namespace MissionPlanner.Controls
                 Func<double, double, double, decimal> clamp = (value, min, max) => (decimal)Math.Max(min, Math.Min(max, value));
 
                 var numDist = new NumericUpDown { Minimum = 0.1m, Maximum = 100, DecimalPlaces = 2, Increment = 0.05m, Value = clamp(settings.CameraDistance, 0.1, 100) };
-                addRow("Camera Dist:", numDist);
+                addRow(Strings.Map3DCameraDist, numDist);
 
                 var numHeight = new NumericUpDown { Minimum = -100, Maximum = 100, DecimalPlaces = 2, Increment = 0.05m, Value = clamp(settings.CameraHeight, -100, 100) };
-                addRow("Camera Height:", numHeight);
+                addRow(Strings.Map3DCameraHeight, numHeight);
 
                 var numFov = new NumericUpDown { Minimum = 30, Maximum = 120, Increment = 5, Value = clamp(settings.FieldOfView, 30, 120) };
-                addRow("Camera FoV:", numFov);
+                addRow(Strings.Map3DCameraFov, numFov);
 
                 var numScale = new NumericUpDown { Minimum = 0.1m, Maximum = 10, DecimalPlaces = 2, Increment = 0.05m, Value = clamp(settings.VehicleScale, 0.1, 10) };
-                addRow("MAV Scale (m):", numScale);
+                addRow(Strings.Map3DMavScale, numScale);
 
                 var numMarkerSize = new NumericUpDown { Minimum = 10, Maximum = 500, Increment = 10, Value = clamp(settings.WaypointMarkerSize, 10, 500) };
-                addRow("WP Marker Size:", numMarkerSize);
+                addRow(Strings.Map3DWpMarkerSize, numMarkerSize);
 
                 var numAdsbSize = new NumericUpDown { Minimum = 50, Maximum = 2000, Increment = 50, Value = clamp(settings.AdsbCircleSize, 50, 2000) };
-                addRow("ADSB Size:", numAdsbSize);
+                addRow(Strings.Map3DAdsbSize, numAdsbSize);
 
                 Color selectedColor = settings.VehicleColor;
                 var colorPanel = new Panel { Height = 23, BorderStyle = BorderStyle.FixedSingle, Cursor = Cursors.Hand, Tag = "IgnoreTheme", BackColor = selectedColor };
@@ -91,13 +91,13 @@ namespace MissionPlanner.Controls
                         }
                     }
                 };
-                addRow("MAV Color:", colorPanel);
+                addRow(Strings.Map3DMavColor, colorPanel);
 
                 string selectedStl = settings.StlPath;
                 var stlButton = new MyButton { Text = string.IsNullOrEmpty(selectedStl) ? Strings.Default : Path.GetFileName(selectedStl), Height = 23 };
                 stlButton.Click += (s, e) =>
                 {
-                    using (var open = new OpenFileDialog { Filter = "STL Files (*.stl)|*.stl|All Files (*.*)|*.*", Title = "Select Plane STL File" })
+                    using (var open = new OpenFileDialog { Filter = Strings.Map3DStlFilter, Title = Strings.Map3DSelectStlTitle })
                     {
                         if (!string.IsNullOrEmpty(selectedStl) && File.Exists(selectedStl))
                             open.InitialDirectory = Path.GetDirectoryName(selectedStl);
@@ -108,19 +108,19 @@ namespace MissionPlanner.Controls
                         }
                     }
                 };
-                addRow("STL File:", stlButton);
+                addRow(Strings.Map3DStlFile, stlButton);
 
-                var chkHeading = new CheckBox { Text = "Heading Line (Red)", Checked = settings.ShowHeadingLine };
+                var chkHeading = new CheckBox { Text = Strings.Map3DHeadingLine, Checked = settings.ShowHeadingLine };
                 addCheckbox(chkHeading);
-                var chkNavBearing = new CheckBox { Text = "Nav Bearing Line (Orange)", Checked = settings.ShowNavBearingLine };
+                var chkNavBearing = new CheckBox { Text = Strings.Map3DNavBearingLine, Checked = settings.ShowNavBearingLine };
                 addCheckbox(chkNavBearing);
-                var chkGpsHeading = new CheckBox { Text = "GPS Heading Line (Black)", Checked = settings.ShowGpsHeadingLine };
+                var chkGpsHeading = new CheckBox { Text = Strings.Map3DGpsHeadingLine, Checked = settings.ShowGpsHeadingLine };
                 addCheckbox(chkGpsHeading);
-                var chkTurnRadius = new CheckBox { Text = "Turn Radius Arc (Pink)", Checked = settings.ShowTurnRadius };
+                var chkTurnRadius = new CheckBox { Text = Strings.Map3DTurnRadius, Checked = settings.ShowTurnRadius };
                 addCheckbox(chkTurnRadius);
-                var chkTrail = new CheckBox { Text = "Flight Path Trail", Checked = settings.ShowTrail };
+                var chkTrail = new CheckBox { Text = Strings.Map3DFlightTrail, Checked = settings.ShowTrail };
                 addCheckbox(chkTrail);
-                var chkFpv = new CheckBox { Text = "FPV Mode (camera at aircraft)", Checked = settings.FpvMode };
+                var chkFpv = new CheckBox { Text = Strings.Map3DFpvMode, Checked = settings.FpvMode };
                 chkFpv.CheckedChanged += (s, e) =>
                 {
                     numDist.Enabled = !chkFpv.Checked;
@@ -129,7 +129,7 @@ namespace MissionPlanner.Controls
                 numDist.Enabled = !settings.FpvMode;
                 numHeight.Enabled = !settings.FpvMode;
                 addCheckbox(chkFpv);
-                var chkStats = new CheckBox { Text = "Stats for nerds", Checked = settings.StatsForNerds };
+                var chkStats = new CheckBox { Text = Strings.Map3DStatsForNerds, Checked = settings.StatsForNerds };
                 addCheckbox(chkStats);
 
                 var buttons = new FlowLayoutPanel
@@ -140,10 +140,10 @@ namespace MissionPlanner.Controls
                     Margin = new Padding(0, 10, 0, 0)
                 };
 
-                var saveButton = new MyButton { Text = "Save", Width = 75, Margin = new Padding(10, 0, 0, 0) };
+                var saveButton = new MyButton { Text = Strings.Save, Width = 75, Margin = new Padding(10, 0, 0, 0) };
                 saveButton.Click += (s, e) => dialog.Close();
 
-                var resetButton = new MyButton { Text = "Reset", Width = 75, Margin = new Padding(10, 0, 0, 0) };
+                var resetButton = new MyButton { Text = Strings.Reset, Width = 75, Margin = new Padding(10, 0, 0, 0) };
                 resetButton.Click += (s, e) =>
                 {
                     var defaults = new Map3DSettings();
