@@ -4678,4 +4678,37 @@ Please choose one by typing the associated number.</value>
 <data name="GpsCoursePlaceholder" xml:space="preserve">
     <value>航向：--</value>
 </data>
+<data name="MotorTestSpin" xml:space="preserve">
+    <value>转动</value>
+</data>
+<data name="MotorTestNotAssigned" xml:space="preserve">
+    <value>未分配</value>
+</data>
+<data name="MotorTestServoFmt" xml:space="preserve">
+    <value>舵机 {0}</value>
+</data>
+<data name="MotorTestNumberFmt" xml:space="preserve">
+    <value>电机 {0}</value>
+</data>
+<data name="MotorTestTitleFmt" xml:space="preserve">
+    <value>电机 {0}（{1}）</value>
+</data>
+<data name="MotorTestServoActivatedFmt" xml:space="preserve">
+    <value>舵机 {0} 已被激活。
+实际转动的是哪个电机？</value>
+</data>
+<data name="MotorTestNameFmt" xml:space="preserve">
+    <value>电机 {0}（电机 {1}）</value>
+</data>
+<data name="MotorTestFrameInfoFmt" xml:space="preserve">
+    <value>类别：{0}，类型：{1}</value>
+</data>
+<data name="RadioCalibrationSteps" xml:space="preserve">
+    <value>1. 确保遥控器已开启，接收机已通电并连接
+2. 确保电机未通电且未安装螺旋桨！！！
+
+点击“确定”后，将所有遥控摇杆和开关拨到极限位置，使红色条到达限位。
+
+拨动完摇杆后，点击“完成时点击”按钮。</value>
+</data>
 </root>

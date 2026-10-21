@@ -314,7 +314,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                         motorNumber = motor.Number;
                         if (motor.Rotation != "?")
                         {
-                            rotationInfo = motor.Rotation;
+                            rotationInfo = motor.Rotation == "CCW" ? "逆时针" : motor.Rotation == "CW" ? "顺时针" : motor.Rotation;
                         }
                         break;
                     }
@@ -322,8 +322,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
 
             string groupBoxTitle = string.IsNullOrEmpty(rotationInfo)
-                ? $"Motor {motorLetter}"
-                : $"Motor {motorLetter} ({rotationInfo})";
+                ? string.Format(Strings.MotorTestNumberFmt, motorLetter)
+                : string.Format(Strings.MotorTestTitleFmt, motorLetter, rotationInfo);
 
             var groupBox = new GroupBox
             {
@@ -350,7 +350,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // Motor number label
             var motorLabel = new Label
             {
-                Text = $"Motor {motorNumber}",
+                Text = string.Format(Strings.MotorTestNumberFmt, motorNumber),
                 Dock = DockStyle.Fill,
                 TextAlign = ContentAlignment.MiddleLeft
             };
@@ -367,10 +367,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             servoSelector.MouseWheel += (s, ev) => ((HandledMouseEventArgs)ev).Handled = true;
 
             // Populate servo selector with Servo 1-16 options
-            servoSelector.Items.Add(new ComboBoxItem { Text = "Not assigned", Value = 0 });
+            servoSelector.Items.Add(new ComboBoxItem { Text = Strings.MotorTestNotAssigned, Value = 0 });
             for (int i = 1; i <= MAX_SERVO_CHANNELS; i++)
             {
-                servoSelector.Items.Add(new ComboBoxItem { Text = $"Servo {i}", Value = i });
+                servoSelector.Items.Add(new ComboBoxItem { Text = string.Format(Strings.MotorTestServoFmt, i), Value = i });
             }
             servoSelector.DisplayMember = "Text";
 
@@ -392,7 +392,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // Spin button
             var spinButton = new MyButton
             {
-                Text = "Spin",
+                Text = Strings.MotorTestSpin,
                 Dock = DockStyle.Fill
             };
             spinButton.Tag = motorIdx;
@@ -714,7 +714,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
                 var label = new Label
                 {
-                    Text = $"Servo {currentServoChannel} was activated.\nWhich motor actually spun?",
+                    Text = string.Format(Strings.MotorTestServoActivatedFmt, currentServoChannel),
                     Location = new Point(20, 20),
                     Size = new Size(300, 40)
                 };
@@ -747,7 +747,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
                     comboBox.Items.Add(new ComboBoxItem
                     {
-                        Text = $"Motor {letter} (Motor {motorNumber})",
+                        Text = string.Format(Strings.MotorTestNameFmt, letter, motorNumber),
                         Value = i
                     });
                 }
@@ -756,7 +756,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
                 var okButton = new MyButton
                 {
-                    Text = "OK",
+                    Text = Strings.OK,
                     DialogResult = DialogResult.OK,
                     Location = new Point(130, 105),
                     Size = new Size(80, 30)
@@ -969,7 +969,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 }
             }
 
-            FrameClass.Text = $"Class: {className}, Type: {typeName}";
+            FrameClass.Text = string.Format(Strings.MotorTestFrameInfoFmt, className, typeName);
 
             lookup_frame_layout(frame_class, frame_type);
             UpdateFrameImage(frame_class, frame_type);
@@ -1108,7 +1108,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
             catch
             {
-                CustomMessageBox.Show(Strings.ErrorCommunicating + "\nMotor: " + motor, Strings.ERROR);
+                CustomMessageBox.Show(Strings.ErrorCommunicating + "\n电机: " + motor, Strings.ERROR);
             }
         }
 

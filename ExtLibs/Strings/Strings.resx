@@ -4756,4 +4756,37 @@ Yes frees the space; tiles shared with an overlapping area are deleted too.</val
 <data name="GpsCoursePlaceholder" xml:space="preserve">
     <value>Course: --</value>
 </data>
+<data name="MotorTestSpin" xml:space="preserve">
+    <value>Spin</value>
+</data>
+<data name="MotorTestNotAssigned" xml:space="preserve">
+    <value>Not assigned</value>
+</data>
+<data name="MotorTestServoFmt" xml:space="preserve">
+    <value>Servo {0}</value>
+</data>
+<data name="MotorTestNumberFmt" xml:space="preserve">
+    <value>Motor {0}</value>
+</data>
+<data name="MotorTestTitleFmt" xml:space="preserve">
+    <value>Motor {0} ({1})</value>
+</data>
+<data name="MotorTestServoActivatedFmt" xml:space="preserve">
+    <value>Servo {0} was activated.
+Which motor actually spun?</value>
+</data>
+<data name="MotorTestNameFmt" xml:space="preserve">
+    <value>Motor {0} (Motor {1})</value>
+</data>
+<data name="MotorTestFrameInfoFmt" xml:space="preserve">
+    <value>Class: {0}, Type: {1}</value>
+</data>
+<data name="RadioCalibrationSteps" xml:space="preserve">
+    <value>1. Ensure your transmitter is on and receiver is powered and connected
+2. Ensure your motor does not have power/no props!!!
+
+After clicking OK, move all RC sticks and switches to their extreme positions so the red bars hit the limits.
+
+Click 'Click when Done' button when finished moving sticks.</value>
+</data>
 </root>

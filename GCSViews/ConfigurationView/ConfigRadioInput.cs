@@ -310,10 +310,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // Combined dialog - merge the two calibration setup messages
             CustomMessageBox.Show(
                 Strings.RadioCalibrationSetup + "\n\n" +
-                "1. Ensure your transmitter is on and receiver is powered and connected\n" +
-                "2. Ensure your motor does not have power/no props!!!\n\n" +
-                "After clicking OK, move all RC sticks and switches to their\nextreme positions so the red bars hit the limits.\n\n" +
-                "Click 'Click when Done' button when finished moving sticks.");
+                Strings.RadioCalibrationSteps);
 
             var oldrc = MainV2.comPort.MAV.cs.raterc;
             var oldatt = MainV2.comPort.MAV.cs.rateattitude;

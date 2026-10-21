@@ -12974,5 +12974,41 @@ public static string compass_variance {
         {
             get { return ResourceManager.GetString("GpsCoursePlaceholder", resourceCulture); }
         }
+        public static string MotorTestSpin
+        {
+            get { return ResourceManager.GetString("MotorTestSpin", resourceCulture); }
+        }
+        public static string MotorTestNotAssigned
+        {
+            get { return ResourceManager.GetString("MotorTestNotAssigned", resourceCulture); }
+        }
+        public static string MotorTestServoFmt
+        {
+            get { return ResourceManager.GetString("MotorTestServoFmt", resourceCulture); }
+        }
+        public static string MotorTestNumberFmt
+        {
+            get { return ResourceManager.GetString("MotorTestNumberFmt", resourceCulture); }
+        }
+        public static string MotorTestTitleFmt
+        {
+            get { return ResourceManager.GetString("MotorTestTitleFmt", resourceCulture); }
+        }
+        public static string MotorTestServoActivatedFmt
+        {
+            get { return ResourceManager.GetString("MotorTestServoActivatedFmt", resourceCulture); }
+        }
+        public static string MotorTestNameFmt
+        {
+            get { return ResourceManager.GetString("MotorTestNameFmt", resourceCulture); }
+        }
+        public static string MotorTestFrameInfoFmt
+        {
+            get { return ResourceManager.GetString("MotorTestFrameInfoFmt", resourceCulture); }
+        }
+        public static string RadioCalibrationSteps
+        {
+            get { return ResourceManager.GetString("RadioCalibrationSteps", resourceCulture); }
+        }
     }
 }
