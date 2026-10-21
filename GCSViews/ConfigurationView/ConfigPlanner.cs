@@ -932,9 +932,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (((CheckBox)sender).Checked)
             {
-                var speechstring = "Heading to Waypoint {wpn}";
+                var speechstring = Strings.SpeechHeadingToWaypoint;
                 if (Settings.Instance["speechwaypoint"] != null)
+                {
                     speechstring = Settings.Instance["speechwaypoint"].ToString();
+                    if (speechstring == "Heading to Waypoint {wpn}")
+                        speechstring = Strings.SpeechHeadingToWaypoint;
+                }
                 if (DialogResult.Cancel ==
                     InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
@@ -950,9 +954,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (((CheckBox)sender).Checked)
             {
-                var speechstring = "Mode changed to {mode}";
+                var speechstring = Strings.SpeechModeChanged;
                 if (Settings.Instance["speechmode"] != null)
+                {
                     speechstring = Settings.Instance["speechmode"].ToString();
+                    if (speechstring == "Mode changed to {mode}")
+                        speechstring = Strings.SpeechModeChanged;
+                }
                 if (DialogResult.Cancel ==
                     InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
@@ -968,9 +976,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (((CheckBox)sender).Checked)
             {
-                var speechstring = "Heading to Waypoint {wpn}, altitude is {alt}, Ground speed is {gsp} ";
+                var speechstring = Strings.SpeechWaypointAltSpeed;
                 if (Settings.Instance["speechcustom"] != null)
+                {
                     speechstring = Settings.Instance["speechcustom"].ToString();
+                    if (speechstring == "Heading to Waypoint {wpn}, altitude is {alt}, Ground speed is {gsp} ")
+                        speechstring = Strings.SpeechWaypointAltSpeed;
+                }
                 if (DialogResult.Cancel ==
                     InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
@@ -1150,9 +1162,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (((CheckBox)sender).Checked)
             {
-                var speechstring = "WARNING, low altitude {alt}";
+                var speechstring = Strings.SpeechLowAltitude;
                 if (Settings.Instance["speechalt"] != null)
+                {
                     speechstring = Settings.Instance["speechalt"].ToString();
+                    if (speechstring == "WARNING, low altitude {alt}")
+                        speechstring = Strings.SpeechLowAltitude;
+                }
                 if (DialogResult.Cancel ==
                     InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
@@ -1301,16 +1317,24 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (((CheckBox)sender).Checked)
             {
-                var speechstring = "Armed";
+                var speechstring = Strings.SpeechArmed;
                 if (Settings.Instance["speecharm"] != null)
+                {
                     speechstring = Settings.Instance["speecharm"];
+                    if (speechstring == "Armed")
+                        speechstring = Strings.SpeechArmed;
+                }
                 if (DialogResult.Cancel == InputBox.Show(Strings.Arm, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speecharm"] = speechstring;
 
-                speechstring = "Disarmed";
+                speechstring = Strings.SpeechDisarmed;
                 if (Settings.Instance["speechdisarm"] != null)
+                {
                     speechstring = Settings.Instance["speechdisarm"];
+                    if (speechstring == "Disarmed")
+                        speechstring = Strings.SpeechDisarmed;
+                }
                 if (DialogResult.Cancel == InputBox.Show(Strings.Disarmed, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechdisarm"] = speechstring;
@@ -1374,9 +1398,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (((CheckBox)sender).Checked)
             {
-                var speechstring = "Low Ground Speed {gsp}";
+                var speechstring = Strings.SpeechLowGroundSpeed;
                 if (Settings.Instance["speechlowgroundspeed"] != null)
+                {
                     speechstring = Settings.Instance["speechlowgroundspeed"];
+                    if (speechstring == "Low Ground Speed {gsp}")
+                        speechstring = Strings.SpeechLowGroundSpeed;
+                }
                 if (DialogResult.Cancel ==
                     InputBox.Show(Strings.GroundSpeed, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;

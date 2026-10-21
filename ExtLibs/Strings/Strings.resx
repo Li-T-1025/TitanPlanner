@@ -4582,4 +4582,37 @@ Yes frees the space; tiles shared with an overlapping area are deleted too.</val
 <data name="Map3DStatsForNerds" xml:space="preserve">
     <value>Stats for nerds</value>
 </data>
+<data name="SpeechHeadingToWaypoint" xml:space="preserve">
+    <value>Heading to Waypoint {wpn}</value>
+</data>
+<data name="SpeechModeChanged" xml:space="preserve">
+    <value>Mode changed to {mode}</value>
+</data>
+<data name="SpeechWaypointAltSpeed" xml:space="preserve">
+    <value>Heading to Waypoint {wpn}, altitude is {alt}, Ground speed is {gsp} </value>
+</data>
+<data name="SpeechLowAltitude" xml:space="preserve">
+    <value>WARNING, low altitude {alt}</value>
+</data>
+<data name="SpeechArmed" xml:space="preserve">
+    <value>Armed</value>
+</data>
+<data name="SpeechDisarmed" xml:space="preserve">
+    <value>Disarmed</value>
+</data>
+<data name="SpeechLowGroundSpeed" xml:space="preserve">
+    <value>Low Ground Speed {gsp}</value>
+</data>
+<data name="SpeechBatteryWarning" xml:space="preserve">
+    <value>WARNING, Battery at {batv} Volt, {batp} percent</value>
+</data>
+<data name="MapTools" xml:space="preserve">
+    <value>Tools</value>
+</data>
+<data name="MapPropagation" xml:space="preserve">
+    <value>Propagation</value>
+</data>
+<data name="MapDoubleClickFlyToHere" xml:space="preserve">
+    <value>Double-click Fly to Here</value>
+</data>
 </root>

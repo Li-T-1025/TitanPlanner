@@ -740,7 +740,7 @@ namespace MissionPlanner.GCSViews
             // Add Tools button to top-right of map
             var btnTools = new Controls.MyButton
             {
-                Text = "Tools",
+                Text = Strings.MapTools,
                 Size = new Size(50, 23),
                 Anchor = AnchorStyles.Top | AnchorStyles.Right
             };
@@ -759,7 +759,7 @@ namespace MissionPlanner.GCSViews
             // Add Propagation button to the right of Tools
             var btnPropagation = new Controls.MyButton
             {
-                Text = "Propagation",
+                Text = Strings.MapPropagation,
                 Size = new Size(80, 23),
                 Anchor = AnchorStyles.Top | AnchorStyles.Left
             };
@@ -776,7 +776,7 @@ namespace MissionPlanner.GCSViews
             _doubleClickFlyToHereEnabled = Settings.Instance.GetBoolean("DoubleClickFlyToHere", true);
             var chkDoubleClickFlyToHere = new CheckBox
             {
-                Text = "Double-click Fly to Here",
+                Text = Strings.MapDoubleClickFlyToHere,
                 AutoSize = true,
                 Anchor = AnchorStyles.Top | AnchorStyles.Left,
                 BackColor = Color.Transparent,

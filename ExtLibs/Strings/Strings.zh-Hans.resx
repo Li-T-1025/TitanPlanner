@@ -4504,4 +4504,37 @@ Please choose one by typing the associated number.</value>
 <data name="Map3DStatsForNerds" xml:space="preserve">
     <value>极客统计</value>
 </data>
+<data name="SpeechHeadingToWaypoint" xml:space="preserve">
+    <value>前往航点 {wpn}</value>
+</data>
+<data name="SpeechModeChanged" xml:space="preserve">
+    <value>模式已更改为 {mode}</value>
+</data>
+<data name="SpeechWaypointAltSpeed" xml:space="preserve">
+    <value>前往航点 {wpn}，高度为 {alt}，地速为 {gsp}</value>
+</data>
+<data name="SpeechLowAltitude" xml:space="preserve">
+    <value>警告，高度过低 {alt}</value>
+</data>
+<data name="SpeechArmed" xml:space="preserve">
+    <value>已解锁</value>
+</data>
+<data name="SpeechDisarmed" xml:space="preserve">
+    <value>已上锁</value>
+</data>
+<data name="SpeechLowGroundSpeed" xml:space="preserve">
+    <value>低地速 {gsp}</value>
+</data>
+<data name="SpeechBatteryWarning" xml:space="preserve">
+    <value>警告，电池电压 {batv} 伏，电量 {batp}%</value>
+</data>
+<data name="MapTools" xml:space="preserve">
+    <value>工具</value>
+</data>
+<data name="MapPropagation" xml:space="preserve">
+    <value>传播</value>
+</data>
+<data name="MapDoubleClickFlyToHere" xml:space="preserve">
+    <value>双击飞到此处</value>
+</data>
 </root>

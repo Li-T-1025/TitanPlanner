@@ -12742,5 +12742,49 @@ public static string compass_variance {
         {
             get { return ResourceManager.GetString("Map3DStatsForNerds", resourceCulture); }
         }
+        public static string SpeechHeadingToWaypoint
+        {
+            get { return ResourceManager.GetString("SpeechHeadingToWaypoint", resourceCulture); }
+        }
+        public static string SpeechModeChanged
+        {
+            get { return ResourceManager.GetString("SpeechModeChanged", resourceCulture); }
+        }
+        public static string SpeechWaypointAltSpeed
+        {
+            get { return ResourceManager.GetString("SpeechWaypointAltSpeed", resourceCulture); }
+        }
+        public static string SpeechLowAltitude
+        {
+            get { return ResourceManager.GetString("SpeechLowAltitude", resourceCulture); }
+        }
+        public static string SpeechArmed
+        {
+            get { return ResourceManager.GetString("SpeechArmed", resourceCulture); }
+        }
+        public static string SpeechDisarmed
+        {
+            get { return ResourceManager.GetString("SpeechDisarmed", resourceCulture); }
+        }
+        public static string SpeechLowGroundSpeed
+        {
+            get { return ResourceManager.GetString("SpeechLowGroundSpeed", resourceCulture); }
+        }
+        public static string SpeechBatteryWarning
+        {
+            get { return ResourceManager.GetString("SpeechBatteryWarning", resourceCulture); }
+        }
+        public static string MapTools
+        {
+            get { return ResourceManager.GetString("MapTools", resourceCulture); }
+        }
+        public static string MapPropagation
+        {
+            get { return ResourceManager.GetString("MapPropagation", resourceCulture); }
+        }
+        public static string MapDoubleClickFlyToHere
+        {
+            get { return ResourceManager.GetString("MapDoubleClickFlyToHere", resourceCulture); }
+        }
     }
 }
