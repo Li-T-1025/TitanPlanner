@@ -63,7 +63,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 // Row 0: Flight Modes header
                 var flightModesHeader = new Label
                 {
-                    Text = "Flight Modes",
+                    Text = Strings.FlightModesTitle,
                     Font = new System.Drawing.Font(this.Font.FontFamily, 10, System.Drawing.FontStyle.Bold),
                     AutoSize = true
                 };
@@ -602,7 +602,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // Add header/separator
             var headerLabel = new Label
             {
-                Text = "RC Options",
+                Text = Strings.RcOptions,
                 Font = new System.Drawing.Font(this.Font.FontFamily, 10, System.Drawing.FontStyle.Bold),
                 AutoSize = true,
                 Padding = new System.Windows.Forms.Padding(0, 5, 0, 5)
@@ -612,7 +612,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             _userParamsPanel.SetColumnSpan(headerLabel, 2);
 
             // Add Modify button
-            var modifyButton = new MyButton { Text = "Modify", AutoSize = true };
+            var modifyButton = new MyButton { Text = Strings.Modify, AutoSize = true };
             modifyButton.Click += (o, e) =>
             {
                 var opts = UserParamOptions.Aggregate((a, b) => a + "\r\n" + b);

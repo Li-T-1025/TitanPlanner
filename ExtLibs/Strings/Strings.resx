@@ -4615,4 +4615,145 @@ Yes frees the space; tiles shared with an overlapping area are deleted too.</val
 <data name="MapDoubleClickFlyToHere" xml:space="preserve">
     <value>Double-click Fly to Here</value>
 </data>
+<data name="GpsFixNoGps" xml:space="preserve">
+    <value>No GPS</value>
+</data>
+<data name="GpsFixNoFix" xml:space="preserve">
+    <value>No Fix</value>
+</data>
+<data name="GpsFix2D" xml:space="preserve">
+    <value>2D Fix</value>
+</data>
+<data name="GpsFix3D" xml:space="preserve">
+    <value>3D Fix</value>
+</data>
+<data name="GpsFixDgps" xml:space="preserve">
+    <value>DGPS</value>
+</data>
+<data name="GpsFixRtkFloat" xml:space="preserve">
+    <value>RTK Float</value>
+</data>
+<data name="GpsFixRtkFixed" xml:space="preserve">
+    <value>RTK Fixed</value>
+</data>
+<data name="GpsSatsFmt" xml:space="preserve">
+    <value>Sats: {0:0}: {1}</value>
+</data>
+<data name="GpsDualSatsFmt" xml:space="preserve">
+    <value>1: {0:0} {1} | 2: {2:0} {3}</value>
+</data>
+<data name="GpsDopFmt" xml:space="preserve">
+    <value>H: {0:0.0} | V: {1:0.0}</value>
+</data>
+<data name="GpsHdVPlaceholder" xml:space="preserve">
+    <value>H: -- | V: --</value>
+</data>
+<data name="Gps1Fmt" xml:space="preserve">
+    <value>GPS1: {0} sats, {1}</value>
+</data>
+<data name="Gps2Fmt" xml:space="preserve">
+    <value>GPS2: {0} sats, {1}</value>
+</data>
+<data name="GpsHdopFmt" xml:space="preserve">
+    <value>HDOP: {0:0.00}</value>
+</data>
+<data name="GpsVdopFmt" xml:space="preserve">
+    <value>VDOP: {0:0.00}</value>
+</data>
+<data name="GpsCourseFmt" xml:space="preserve">
+    <value>Course: {0:0.0}°</value>
+</data>
+<data name="UsbNewDeviceDetected" xml:space="preserve">
+    <value>New device detected. Awaiting port enumeration...</value>
+</data>
+<data name="FlightModesTitle" xml:space="preserve">
+    <value>Flight Modes</value>
+</data>
+<data name="RcOptions" xml:space="preserve">
+    <value>RC Options</value>
+</data>
+<data name="Modify" xml:space="preserve">
+    <value>Modify</value>
+</data>
+<data name="InitParamPropSize" xml:space="preserve">
+    <value>Airscrew size in inch:</value>
+</data>
+<data name="InitParamCellCount" xml:space="preserve">
+    <value>Battery cellcount:</value>
+</data>
+<data name="InitParamCellMax" xml:space="preserve">
+    <value>Battery cell fully charged voltage:</value>
+</data>
+<data name="InitParamCellMin" xml:space="preserve">
+    <value>Battery cell fully discharged voltage:</value>
+</data>
+<data name="InitParamTmotorEsc" xml:space="preserve">
+    <value>Using T-Motor Flame ESC?</value>
+</data>
+<data name="InitParamChemistry" xml:space="preserve">
+    <value>Battery Chemistry</value>
+</data>
+<data name="InitParamCalc" xml:space="preserve">
+    <value>Calculate Initial Parameters</value>
+</data>
+<data name="InitParamSuggested" xml:space="preserve">
+    <value>Add suggested settings for 4.0 and up (Battery failsafe and Fence) ?</value>
+</data>
+<data name="InitParamDetailLink" xml:space="preserve">
+    <value>You can find a detailed description of initial parameter settings and tuning here.</value>
+</data>
+<data name="InitParamPleaseRead" xml:space="preserve">
+    <value>PLEASE READ IT !</value>
+</data>
+<data name="SetupAntennaTracker" xml:space="preserve">
+    <value>Antenna Tracker</value>
+</data>
+<data name="SetupFFT" xml:space="preserve">
+    <value>FFT Setup</value>
+</data>
+<data name="SetupTerminal" xml:space="preserve">
+    <value>Terminal</value>
+</data>
+<data name="SetupScriptRepl" xml:space="preserve">
+    <value>Script REPL</value>
+</data>
+<data name="FtpColName" xml:space="preserve">
+    <value>Name</value>
+</data>
+<data name="FtpColType" xml:space="preserve">
+    <value>Type</value>
+</data>
+<data name="FtpColSize" xml:space="preserve">
+    <value>Size</value>
+</data>
+<data name="FtpColModified" xml:space="preserve">
+    <value>Date modified</value>
+</data>
+<data name="FtpDownloadBurst" xml:space="preserve">
+    <value>Download Burst</value>
+</data>
+<data name="FtpDownload" xml:space="preserve">
+    <value>Download</value>
+</data>
+<data name="FtpUpload" xml:space="preserve">
+    <value>Upload</value>
+</data>
+<data name="FtpDelete" xml:space="preserve">
+    <value>&amp;Delete</value>
+</data>
+<data name="FtpRename" xml:space="preserve">
+    <value>&amp;Rename</value>
+</data>
+<data name="FtpNewFolder" xml:space="preserve">
+    <value>New Folder</value>
+</data>
+<data name="FtpCrc32" xml:space="preserve">
+    <value>GetCRC32</value>
+</data>
+<data name="FtpMountDrive" xml:space="preserve">
+    <value>Mount as Drive</value>
+</data>
+<data name="GpsCoursePlaceholder" xml:space="preserve">
+    <value>Course: --</value>
+</data>
 </root>

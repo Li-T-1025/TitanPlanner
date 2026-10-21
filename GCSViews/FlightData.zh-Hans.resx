@@ -828,4 +828,31 @@
 <data name="openScriptDialog.Filter" xml:space="preserve">
     <value>Python 文件|*.py|所有文件|*.*</value>
 </data>
+<data name="editQuickViewToolStripMenuItem.Text" xml:space="preserve">
+    <value>编辑</value>
+</data>
+<data name="moveLeftToolStripMenuItem.Text" xml:space="preserve">
+    <value>左移</value>
+</data>
+<data name="moveRightToolStripMenuItem.Text" xml:space="preserve">
+    <value>右移</value>
+</data>
+<data name="moveUpToolStripMenuItem.Text" xml:space="preserve">
+    <value>上移</value>
+</data>
+<data name="moveDownToolStripMenuItem.Text" xml:space="preserve">
+    <value>下移</value>
+</data>
+<data name="resetToolStripMenuItem.Text" xml:space="preserve">
+    <value>重置</value>
+</data>
+<data name="resetAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>全部重置</value>
+</data>
+<data name="grpDataflash.Text" xml:space="preserve">
+    <value>数据闪存日志</value>
+</data>
+<data name="grpTelemetry.Text" xml:space="preserve">
+    <value>遥测日志</value>
+</data>
 </root>

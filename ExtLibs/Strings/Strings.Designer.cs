@@ -12786,5 +12786,193 @@ public static string compass_variance {
         {
             get { return ResourceManager.GetString("MapDoubleClickFlyToHere", resourceCulture); }
         }
+        public static string GpsFixNoGps
+        {
+            get { return ResourceManager.GetString("GpsFixNoGps", resourceCulture); }
+        }
+        public static string GpsFixNoFix
+        {
+            get { return ResourceManager.GetString("GpsFixNoFix", resourceCulture); }
+        }
+        public static string GpsFix2D
+        {
+            get { return ResourceManager.GetString("GpsFix2D", resourceCulture); }
+        }
+        public static string GpsFix3D
+        {
+            get { return ResourceManager.GetString("GpsFix3D", resourceCulture); }
+        }
+        public static string GpsFixDgps
+        {
+            get { return ResourceManager.GetString("GpsFixDgps", resourceCulture); }
+        }
+        public static string GpsFixRtkFloat
+        {
+            get { return ResourceManager.GetString("GpsFixRtkFloat", resourceCulture); }
+        }
+        public static string GpsFixRtkFixed
+        {
+            get { return ResourceManager.GetString("GpsFixRtkFixed", resourceCulture); }
+        }
+        public static string GpsSatsFmt
+        {
+            get { return ResourceManager.GetString("GpsSatsFmt", resourceCulture); }
+        }
+        public static string GpsDualSatsFmt
+        {
+            get { return ResourceManager.GetString("GpsDualSatsFmt", resourceCulture); }
+        }
+        public static string GpsDopFmt
+        {
+            get { return ResourceManager.GetString("GpsDopFmt", resourceCulture); }
+        }
+        public static string GpsHdVPlaceholder
+        {
+            get { return ResourceManager.GetString("GpsHdVPlaceholder", resourceCulture); }
+        }
+        public static string Gps1Fmt
+        {
+            get { return ResourceManager.GetString("Gps1Fmt", resourceCulture); }
+        }
+        public static string Gps2Fmt
+        {
+            get { return ResourceManager.GetString("Gps2Fmt", resourceCulture); }
+        }
+        public static string GpsHdopFmt
+        {
+            get { return ResourceManager.GetString("GpsHdopFmt", resourceCulture); }
+        }
+        public static string GpsVdopFmt
+        {
+            get { return ResourceManager.GetString("GpsVdopFmt", resourceCulture); }
+        }
+        public static string GpsCourseFmt
+        {
+            get { return ResourceManager.GetString("GpsCourseFmt", resourceCulture); }
+        }
+        public static string UsbNewDeviceDetected
+        {
+            get { return ResourceManager.GetString("UsbNewDeviceDetected", resourceCulture); }
+        }
+        public static string FlightModesTitle
+        {
+            get { return ResourceManager.GetString("FlightModesTitle", resourceCulture); }
+        }
+        public static string RcOptions
+        {
+            get { return ResourceManager.GetString("RcOptions", resourceCulture); }
+        }
+        public static string Modify
+        {
+            get { return ResourceManager.GetString("Modify", resourceCulture); }
+        }
+        public static string InitParamPropSize
+        {
+            get { return ResourceManager.GetString("InitParamPropSize", resourceCulture); }
+        }
+        public static string InitParamCellCount
+        {
+            get { return ResourceManager.GetString("InitParamCellCount", resourceCulture); }
+        }
+        public static string InitParamCellMax
+        {
+            get { return ResourceManager.GetString("InitParamCellMax", resourceCulture); }
+        }
+        public static string InitParamCellMin
+        {
+            get { return ResourceManager.GetString("InitParamCellMin", resourceCulture); }
+        }
+        public static string InitParamTmotorEsc
+        {
+            get { return ResourceManager.GetString("InitParamTmotorEsc", resourceCulture); }
+        }
+        public static string InitParamChemistry
+        {
+            get { return ResourceManager.GetString("InitParamChemistry", resourceCulture); }
+        }
+        public static string InitParamCalc
+        {
+            get { return ResourceManager.GetString("InitParamCalc", resourceCulture); }
+        }
+        public static string InitParamSuggested
+        {
+            get { return ResourceManager.GetString("InitParamSuggested", resourceCulture); }
+        }
+        public static string InitParamDetailLink
+        {
+            get { return ResourceManager.GetString("InitParamDetailLink", resourceCulture); }
+        }
+        public static string InitParamPleaseRead
+        {
+            get { return ResourceManager.GetString("InitParamPleaseRead", resourceCulture); }
+        }
+        public static string SetupAntennaTracker
+        {
+            get { return ResourceManager.GetString("SetupAntennaTracker", resourceCulture); }
+        }
+        public static string SetupFFT
+        {
+            get { return ResourceManager.GetString("SetupFFT", resourceCulture); }
+        }
+        public static string SetupTerminal
+        {
+            get { return ResourceManager.GetString("SetupTerminal", resourceCulture); }
+        }
+        public static string SetupScriptRepl
+        {
+            get { return ResourceManager.GetString("SetupScriptRepl", resourceCulture); }
+        }
+        public static string FtpColName
+        {
+            get { return ResourceManager.GetString("FtpColName", resourceCulture); }
+        }
+        public static string FtpColType
+        {
+            get { return ResourceManager.GetString("FtpColType", resourceCulture); }
+        }
+        public static string FtpColSize
+        {
+            get { return ResourceManager.GetString("FtpColSize", resourceCulture); }
+        }
+        public static string FtpColModified
+        {
+            get { return ResourceManager.GetString("FtpColModified", resourceCulture); }
+        }
+        public static string FtpDownloadBurst
+        {
+            get { return ResourceManager.GetString("FtpDownloadBurst", resourceCulture); }
+        }
+        public static string FtpDownload
+        {
+            get { return ResourceManager.GetString("FtpDownload", resourceCulture); }
+        }
+        public static string FtpUpload
+        {
+            get { return ResourceManager.GetString("FtpUpload", resourceCulture); }
+        }
+        public static string FtpDelete
+        {
+            get { return ResourceManager.GetString("FtpDelete", resourceCulture); }
+        }
+        public static string FtpRename
+        {
+            get { return ResourceManager.GetString("FtpRename", resourceCulture); }
+        }
+        public static string FtpNewFolder
+        {
+            get { return ResourceManager.GetString("FtpNewFolder", resourceCulture); }
+        }
+        public static string FtpCrc32
+        {
+            get { return ResourceManager.GetString("FtpCrc32", resourceCulture); }
+        }
+        public static string FtpMountDrive
+        {
+            get { return ResourceManager.GetString("FtpMountDrive", resourceCulture); }
+        }
+        public static string GpsCoursePlaceholder
+        {
+            get { return ResourceManager.GetString("GpsCoursePlaceholder", resourceCulture); }
+        }
     }
 }

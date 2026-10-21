@@ -4537,4 +4537,145 @@ Please choose one by typing the associated number.</value>
 <data name="MapDoubleClickFlyToHere" xml:space="preserve">
     <value>双击飞到此处</value>
 </data>
+<data name="GpsFixNoGps" xml:space="preserve">
+    <value>无 GPS</value>
+</data>
+<data name="GpsFixNoFix" xml:space="preserve">
+    <value>无定位</value>
+</data>
+<data name="GpsFix2D" xml:space="preserve">
+    <value>2D 定位</value>
+</data>
+<data name="GpsFix3D" xml:space="preserve">
+    <value>3D 定位</value>
+</data>
+<data name="GpsFixDgps" xml:space="preserve">
+    <value>DGPS</value>
+</data>
+<data name="GpsFixRtkFloat" xml:space="preserve">
+    <value>RTK 浮动</value>
+</data>
+<data name="GpsFixRtkFixed" xml:space="preserve">
+    <value>RTK 固定</value>
+</data>
+<data name="GpsSatsFmt" xml:space="preserve">
+    <value>卫星：{0:0}：{1}</value>
+</data>
+<data name="GpsDualSatsFmt" xml:space="preserve">
+    <value>1：{0:0} {1} | 2：{2:0} {3}</value>
+</data>
+<data name="GpsDopFmt" xml:space="preserve">
+    <value>水平：{0:0.0} | 垂直：{1:0.0}</value>
+</data>
+<data name="GpsHdVPlaceholder" xml:space="preserve">
+    <value>水平：-- | 垂直：--</value>
+</data>
+<data name="Gps1Fmt" xml:space="preserve">
+    <value>GPS1：{0} 颗卫星，{1}</value>
+</data>
+<data name="Gps2Fmt" xml:space="preserve">
+    <value>GPS2：{0} 颗卫星，{1}</value>
+</data>
+<data name="GpsHdopFmt" xml:space="preserve">
+    <value>HDOP：{0:0.00}</value>
+</data>
+<data name="GpsVdopFmt" xml:space="preserve">
+    <value>VDOP：{0:0.00}</value>
+</data>
+<data name="GpsCourseFmt" xml:space="preserve">
+    <value>航向：{0:0.0}°</value>
+</data>
+<data name="UsbNewDeviceDetected" xml:space="preserve">
+    <value>检测到新设备，等待端口枚举…</value>
+</data>
+<data name="FlightModesTitle" xml:space="preserve">
+    <value>飞行模式</value>
+</data>
+<data name="RcOptions" xml:space="preserve">
+    <value>RC 选项</value>
+</data>
+<data name="Modify" xml:space="preserve">
+    <value>修改</value>
+</data>
+<data name="InitParamPropSize" xml:space="preserve">
+    <value>螺旋桨尺寸（英寸）：</value>
+</data>
+<data name="InitParamCellCount" xml:space="preserve">
+    <value>电池电芯数量：</value>
+</data>
+<data name="InitParamCellMax" xml:space="preserve">
+    <value>电芯满电电压：</value>
+</data>
+<data name="InitParamCellMin" xml:space="preserve">
+    <value>电芯放电截止电压：</value>
+</data>
+<data name="InitParamTmotorEsc" xml:space="preserve">
+    <value>是否使用 T-Motor Flame 电调？</value>
+</data>
+<data name="InitParamChemistry" xml:space="preserve">
+    <value>电池化学类型</value>
+</data>
+<data name="InitParamCalc" xml:space="preserve">
+    <value>计算初始参数</value>
+</data>
+<data name="InitParamSuggested" xml:space="preserve">
+    <value>添加 4.0 及以上版本的建议设置（电池失效保护与围栏）？</value>
+</data>
+<data name="InitParamDetailLink" xml:space="preserve">
+    <value>此处可找到初始参数设置与调优的详细说明。</value>
+</data>
+<data name="InitParamPleaseRead" xml:space="preserve">
+    <value>请务必阅读！</value>
+</data>
+<data name="SetupAntennaTracker" xml:space="preserve">
+    <value>天线跟踪器</value>
+</data>
+<data name="SetupFFT" xml:space="preserve">
+    <value>FFT 设置</value>
+</data>
+<data name="SetupTerminal" xml:space="preserve">
+    <value>终端</value>
+</data>
+<data name="SetupScriptRepl" xml:space="preserve">
+    <value>脚本 REPL</value>
+</data>
+<data name="FtpColName" xml:space="preserve">
+    <value>名称</value>
+</data>
+<data name="FtpColType" xml:space="preserve">
+    <value>类型</value>
+</data>
+<data name="FtpColSize" xml:space="preserve">
+    <value>大小</value>
+</data>
+<data name="FtpColModified" xml:space="preserve">
+    <value>修改日期</value>
+</data>
+<data name="FtpDownloadBurst" xml:space="preserve">
+    <value>批量下载</value>
+</data>
+<data name="FtpDownload" xml:space="preserve">
+    <value>下载</value>
+</data>
+<data name="FtpUpload" xml:space="preserve">
+    <value>上传</value>
+</data>
+<data name="FtpDelete" xml:space="preserve">
+    <value>删除</value>
+</data>
+<data name="FtpRename" xml:space="preserve">
+    <value>重命名</value>
+</data>
+<data name="FtpNewFolder" xml:space="preserve">
+    <value>新建文件夹</value>
+</data>
+<data name="FtpCrc32" xml:space="preserve">
+    <value>获取 CRC32</value>
+</data>
+<data name="FtpMountDrive" xml:space="preserve">
+    <value>挂载为驱动器</value>
+</data>
+<data name="GpsCoursePlaceholder" xml:space="preserve">
+    <value>航向：--</value>
+</data>
 </root>

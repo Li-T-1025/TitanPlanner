@@ -124,20 +124,20 @@
             // 
             // columnHeaderName
             // 
-            this.columnHeaderName.Text = "Name";
+            this.columnHeaderName.Text = Strings.FtpColName;
             this.columnHeaderName.Width = 83;
             // 
             // columnHeaderType
             // 
-            this.columnHeaderType.Text = "Type";
+            this.columnHeaderType.Text = Strings.FtpColType;
             // 
             // columnHeaderSize
             // 
-            this.columnHeaderSize.Text = "Size";
+            this.columnHeaderSize.Text = Strings.FtpColSize;
             // 
             // columnHeaderModified
             // 
-            this.columnHeaderModified.Text = "Date modified";
+            this.columnHeaderModified.Text = Strings.FtpColModified;
             this.columnHeaderModified.Width = 120;
             // 
             // contextMenuStrip1
@@ -158,49 +158,49 @@
             // 
             this.downloadBurstToolStripMenuItem.Name = "downloadBurstToolStripMenuItem";
             this.downloadBurstToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.downloadBurstToolStripMenuItem.Text = "Download Burst";
+            this.downloadBurstToolStripMenuItem.Text = Strings.FtpDownloadBurst;
             this.downloadBurstToolStripMenuItem.Click += new System.EventHandler(this.DownloadBurstToolStripMenuItem_Click);
             // 
             // downloadToolStripMenuItem
             // 
             this.downloadToolStripMenuItem.Name = "downloadToolStripMenuItem";
             this.downloadToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.downloadToolStripMenuItem.Text = "Download";
+            this.downloadToolStripMenuItem.Text = Strings.FtpDownload;
             this.downloadToolStripMenuItem.Click += new System.EventHandler(this.DownloadToolStripMenuItem_Click);
             // 
             // uploadToolStripMenuItem
             // 
             this.uploadToolStripMenuItem.Name = "uploadToolStripMenuItem";
             this.uploadToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.uploadToolStripMenuItem.Text = "Upload";
+            this.uploadToolStripMenuItem.Text = Strings.FtpUpload;
             this.uploadToolStripMenuItem.Click += new System.EventHandler(this.UploadToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.deleteToolStripMenuItem.Text = "&Delete";
+            this.deleteToolStripMenuItem.Text = Strings.FtpDelete;
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
             // renameToolStripMenuItem
             // 
             this.renameToolStripMenuItem.Name = "renameToolStripMenuItem";
             this.renameToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.renameToolStripMenuItem.Text = "&Rename";
+            this.renameToolStripMenuItem.Text = Strings.FtpRename;
             this.renameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
             // newFolderToolStripMenuItem
             // 
             this.newFolderToolStripMenuItem.Name = "newFolderToolStripMenuItem";
             this.newFolderToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.newFolderToolStripMenuItem.Text = "New Folder";
+            this.newFolderToolStripMenuItem.Text = Strings.FtpNewFolder;
             this.newFolderToolStripMenuItem.Click += new System.EventHandler(this.NewFolderToolStripMenuItem_Click);
             // 
             // getCRC32ToolStripMenuItem
             // 
             this.getCRC32ToolStripMenuItem.Name = "getCRC32ToolStripMenuItem";
             this.getCRC32ToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.getCRC32ToolStripMenuItem.Text = "GetCRC32";
+            this.getCRC32ToolStripMenuItem.Text = Strings.FtpCrc32;
             this.getCRC32ToolStripMenuItem.Click += new System.EventHandler(this.GetCRC32ToolStripMenuItem_Click);
             // 
             // statusStrip1
@@ -232,7 +232,7 @@
             this.btnMountFuse.Name = "btnMountFuse";
             this.btnMountFuse.Size = new System.Drawing.Size(125, 23);
             this.btnMountFuse.TabIndex = 3;
-            this.btnMountFuse.Text = "Mount as Drive";
+            this.btnMountFuse.Text = Strings.FtpMountDrive;
             this.btnMountFuse.UseVisualStyleBackColor = true;
             this.btnMountFuse.Click += new System.EventHandler(this.BtnMountFuse_Click);
             //

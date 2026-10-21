@@ -46,6 +46,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.btnTestAll = new MissionPlanner.Controls.MyButton();
             this.btnStopAll = new MissionPlanner.Controls.MyButton();
             this.btnTestSequence = new MissionPlanner.Controls.MyButton();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUM_duration)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,14 +58,19 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // NUM_thr_percent
             // 
             resources.ApplyResources(this.NUM_thr_percent, "NUM_thr_percent");
+            this.NUM_thr_percent.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.NUM_thr_percent.Minimum = new decimal(new int[] {
-            100,
+            30,
             0,
             0,
             -2147483648});
             this.NUM_thr_percent.Name = "NUM_thr_percent";
             this.NUM_thr_percent.Value = new decimal(new int[] {
-            5,
+            15,
             0,
             0,
             0});
@@ -90,13 +96,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             resources.ApplyResources(this.NUM_duration, "NUM_duration");
             this.NUM_duration.Maximum = new decimal(new int[] {
-            999,
+            9999,
             0,
             0,
             0});
             this.NUM_duration.Name = "NUM_duration";
             this.NUM_duration.Value = new decimal(new int[] {
-            2,
+            3,
             0,
             0,
             0});
@@ -109,6 +115,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // panel1
             // 
             resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tableLayoutPanelMotors);
             this.panel1.Controls.Add(this.webViewFrame);
             this.panel1.Controls.Add(this.FrameClass);
@@ -131,10 +138,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // webViewFrame
             // 
+            resources.ApplyResources(this.webViewFrame, "webViewFrame");
             this.webViewFrame.AllowExternalDrop = true;
             this.webViewFrame.CreationProperties = null;
             this.webViewFrame.DefaultBackgroundColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.webViewFrame, "webViewFrame");
             this.webViewFrame.Name = "webViewFrame";
             this.webViewFrame.TabStop = false;
             this.webViewFrame.ZoomFactor = 1D;
@@ -151,13 +158,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // NUM_mot_spin_min
             // 
+            resources.ApplyResources(this.NUM_mot_spin_min, "NUM_mot_spin_min");
             this.NUM_mot_spin_min.DecimalPlaces = 2;
             this.NUM_mot_spin_min.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            resources.ApplyResources(this.NUM_mot_spin_min, "NUM_mot_spin_min");
             this.NUM_mot_spin_min.Maximum = new decimal(new int[] {
             1,
             0,
@@ -173,13 +180,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // 
             // NUM_mot_spin_arm
             // 
+            resources.ApplyResources(this.NUM_mot_spin_arm, "NUM_mot_spin_arm");
             this.NUM_mot_spin_arm.DecimalPlaces = 2;
             this.NUM_mot_spin_arm.Increment = new decimal(new int[] {
             1,
             0,
             0,
             131072});
-            resources.ApplyResources(this.NUM_mot_spin_arm, "NUM_mot_spin_arm");
             this.NUM_mot_spin_arm.Maximum = new decimal(new int[] {
             1,
             0,
@@ -211,6 +218,12 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.btnTestSequence.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnTestSequence.UseVisualStyleBackColor = true;
             this.btnTestSequence.Click += new System.EventHandler(this.but_TestAllSeq);
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // ConfigMotorTest
             // 
@@ -249,5 +262,6 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private MissionPlanner.Controls.MyButton btnTestAll;
         private MissionPlanner.Controls.MyButton btnStopAll;
         private MissionPlanner.Controls.MyButton btnTestSequence;
+        private System.Windows.Forms.Label label6;
     }
 }

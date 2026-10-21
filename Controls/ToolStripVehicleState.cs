@@ -355,7 +355,7 @@ namespace MissionPlanner.Controls
                 Font = new Font("Segoe UI", 8F),
                 ForeColor = textColor,
                 BackColor = Color.Transparent,
-                Text = "Sats: --: ---",
+                Text = Strings.Sats,
                 Location = new Point(32, 0),
                 Margin = new Padding(0),
                 Padding = new Padding(0)
@@ -368,7 +368,7 @@ namespace MissionPlanner.Controls
                 Font = new Font("Segoe UI", 8F),
                 ForeColor = textColor,
                 BackColor = Color.Transparent,
-                Text = "H: -- | V: --",
+                Text = Strings.GpsHdVPlaceholder,
                 Location = new Point(32, 16),
                 Margin = new Padding(0),
                 Padding = new Padding(0)
@@ -1072,14 +1072,14 @@ namespace MissionPlanner.Controls
             if (hasGps2)
             {
                 string fixType2 = GetFixTypeString((int)gpsStatus2);
-                _gpsSatsLabel.Text = $"1: {satCount:0} {fixType} | 2: {satCount2:0} {fixType2}";
+                _gpsSatsLabel.Text = string.Format(Strings.GpsDualSatsFmt, satCount, fixType, satCount2, fixType2);
             }
             else
             {
-                _gpsSatsLabel.Text = $"Sats: {satCount:0}: {fixType}";
+                _gpsSatsLabel.Text = string.Format(Strings.GpsSatsFmt, satCount, fixType);
             }
 
-            _gpsDopLabel.Text = $"H: {hdop:0.0} | V: {vdop:0.0}";
+            _gpsDopLabel.Text = string.Format(Strings.GpsDopFmt, hdop, vdop);
 
             // Update label color based on best fix quality
             int bestFix = hasGps2 ? Math.Max((int)gpsStatus, (int)gpsStatus2) : (int)gpsStatus;
@@ -1092,13 +1092,13 @@ namespace MissionPlanner.Controls
         {
             switch (fixType)
             {
-                case 0: return "No GPS";
-                case 1: return "No Fix";
-                case 2: return "2D Fix";
-                case 3: return "3D Fix";
-                case 4: return "DGPS";
-                case 5: return "RTK Float";
-                case 6: return "RTK Fixed";
+                case 0: return Strings.GpsFixNoGps;
+                case 1: return Strings.GpsFixNoFix;
+                case 2: return Strings.GpsFix2D;
+                case 3: return Strings.GpsFix3D;
+                case 4: return Strings.GpsFixDgps;
+                case 5: return Strings.GpsFixRtkFloat;
+                case 6: return Strings.GpsFixRtkFixed;
                 default: return fixType.ToString();
             }
         }
@@ -1896,7 +1896,7 @@ namespace MissionPlanner.Controls
             // Course
             _courseLabel = new Label
             {
-                Text = "Course: --",
+                Text = Strings.GpsCoursePlaceholder,
                 Font = new Font("Segoe UI", 9F),
                 ForeColor = textColor,
                 AutoSize = true,
@@ -1949,25 +1949,25 @@ namespace MissionPlanner.Controls
         {
             switch (fixType)
             {
-                case 0: return "No GPS";
-                case 1: return "No Fix";
-                case 2: return "2D Fix";
-                case 3: return "3D Fix";
-                case 4: return "DGPS";
-                case 5: return "RTK Float";
-                case 6: return "RTK Fixed";
+                case 0: return Strings.GpsFixNoGps;
+                case 1: return Strings.GpsFixNoFix;
+                case 2: return Strings.GpsFix2D;
+                case 3: return Strings.GpsFix3D;
+                case 4: return Strings.GpsFixDgps;
+                case 5: return Strings.GpsFixRtkFloat;
+                case 6: return Strings.GpsFixRtkFixed;
                 default: return fixType.ToString();
             }
         }
 
         public void UpdateValues(int satCount, string gpsLock, int satCount2, string gpsLock2, float hdop, float vdop, float course)
         {
-            _gps1Label.Text = $"GPS1: {satCount} sats, {gpsLock}";
-            _gps2Label.Text = $"GPS2: {satCount2} sats, {gpsLock2}";
-            _gps2Label.Visible = satCount2 > 0 || gpsLock2 != "No GPS";
-            _hdopLabel.Text = $"HDOP: {hdop:0.00}";
-            _vdopLabel.Text = $"VDOP: {vdop:0.00}";
-            _courseLabel.Text = $"Course: {course:0.0}°";
+            _gps1Label.Text = string.Format(Strings.Gps1Fmt, satCount, gpsLock);
+            _gps2Label.Text = string.Format(Strings.Gps2Fmt, satCount2, gpsLock2);
+            _gps2Label.Visible = satCount2 > 0 || gpsLock2 != Strings.GpsFixNoGps;
+            _hdopLabel.Text = string.Format(Strings.GpsHdopFmt, hdop);
+            _vdopLabel.Text = string.Format(Strings.GpsVdopFmt, vdop);
+            _courseLabel.Text = string.Format(Strings.GpsCourseFmt, course);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

@@ -333,11 +333,11 @@ namespace MissionPlanner.GCSViews
             }
             if (MainV2.DisplayConfiguration.displayAntennaTracker)
             {
-                AddBackstageViewPage(typeof(Antenna.TrackerUI), "Antenna Tracker", true, opt);
+                AddBackstageViewPage(typeof(Antenna.TrackerUI), Strings.SetupAntennaTracker, true, opt);
             }
             if (MainV2.DisplayConfiguration.displayFFTSetup)
             {
-                AddBackstageViewPage(typeof(ConfigFFT), "FFT Setup", isConnected && gotAllParams, opt);
+                AddBackstageViewPage(typeof(ConfigFFT), Strings.SetupFFT, isConnected && gotAllParams, opt);
             }
 
             if (MainV2.DisplayConfiguration.isAdvancedMode)
@@ -346,12 +346,12 @@ namespace MissionPlanner.GCSViews
 
                 if (MainV2.DisplayConfiguration.displayTerminal)
                 {
-                    AddBackstageViewPage(typeof(ConfigTerminal), "Terminal", true, adv);
+                    AddBackstageViewPage(typeof(ConfigTerminal), Strings.SetupTerminal, true, adv);
                 }
 
                 if (MainV2.DisplayConfiguration.displayREPL)
                 {
-                    AddBackstageViewPage(typeof(ConfigREPL), "Script REPL", isConnected, adv);
+                    AddBackstageViewPage(typeof(ConfigREPL), Strings.SetupScriptRepl, isConnected, adv);
                 }
             }
 

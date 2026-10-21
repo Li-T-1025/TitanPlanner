@@ -1161,5 +1161,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 CustomMessageBox.Show(Strings.FailedSetMOTSPINMIN + " " + ex.Message, Strings.ERROR);
             }
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

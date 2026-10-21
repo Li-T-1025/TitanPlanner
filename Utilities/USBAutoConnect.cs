@@ -103,7 +103,7 @@ namespace MissionPlanner.Utilities
                 return;
             }
 
-            _showToast("New device detected. Awaiting port enumeration...");
+            _showToast(Strings.UsbNewDeviceDetected);
 
             System.Threading.ThreadPool.QueueUserWorkItem(_ =>
             {

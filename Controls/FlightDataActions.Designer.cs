@@ -338,7 +338,7 @@
             // modSetSpeed
             // 
             this.modSetSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.modSetSpeed.ButtonText = "Apply";
+            this.modSetSpeed.ButtonText = Strings.Apply;
             this.modSetSpeed.DecimalPlaces = 0;
             this.modSetSpeed.Increment = new decimal(new int[] {
             1,
@@ -380,7 +380,7 @@
             // modSetAlt
             // 
             this.modSetAlt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.modSetAlt.ButtonText = "Apply";
+            this.modSetAlt.ButtonText = Strings.Apply;
             this.modSetAlt.DecimalPlaces = 0;
             this.modSetAlt.Increment = new decimal(new int[] {
             1,
@@ -422,7 +422,7 @@
             // modSetLoiterRad
             // 
             this.modSetLoiterRad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.modSetLoiterRad.ButtonText = "Apply";
+            this.modSetLoiterRad.ButtonText = Strings.Apply;
             this.modSetLoiterRad.DecimalPlaces = 0;
             this.modSetLoiterRad.Increment = new decimal(new int[] {
             10,

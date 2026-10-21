@@ -6487,4 +6487,31 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.MyUserControl, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+<data name="editQuickViewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit</value>
+</data>
+<data name="moveLeftToolStripMenuItem.Text" xml:space="preserve">
+    <value>Move Left</value>
+</data>
+<data name="moveRightToolStripMenuItem.Text" xml:space="preserve">
+    <value>Move Right</value>
+</data>
+<data name="moveUpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Move Up</value>
+</data>
+<data name="moveDownToolStripMenuItem.Text" xml:space="preserve">
+    <value>Move Down</value>
+</data>
+<data name="resetToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reset</value>
+</data>
+<data name="resetAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reset All</value>
+</data>
+<data name="grpDataflash.Text" xml:space="preserve">
+    <value>Dataflash Logs</value>
+</data>
+<data name="grpTelemetry.Text" xml:space="preserve">
+    <value>Telemetry Logs</value>
+</data>
 </root>
