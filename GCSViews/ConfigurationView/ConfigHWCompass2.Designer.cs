@@ -39,10 +39,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.mavlinkComboBoxfitness = new MissionPlanner.Controls.MavlinkComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.horizontalProgressBar3 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar2 = new MissionPlanner.Controls.HorizontalProgressBar();
             this.horizontalProgressBar1 = new MissionPlanner.Controls.HorizontalProgressBar();
@@ -50,15 +46,21 @@
             this.BUT_OBmagcalaccept = new MissionPlanner.Controls.MyButton();
             this.BUT_OBmagcalcancel = new MissionPlanner.Controls.MyButton();
             this.BUT_OBmagcalstart = new MissionPlanner.Controls.MyButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.but_largemagcal = new MissionPlanner.Controls.MyButton();
             this.label4 = new System.Windows.Forms.Label();
             this.but_reboot = new MissionPlanner.Controls.MyButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.compassDeviceInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.but_missing = new MissionPlanner.Controls.MyButton();
             this.mavlinkCheckBoxUseCompass3 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.mavlinkCheckBoxUseCompass2 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.CHK_compass_learn = new MissionPlanner.Controls.MavlinkCheckBox();
+            this.mavlinkComboBoxfitness = new MissionPlanner.Controls.MavlinkComboBox();
             this.mavlinkCheckBoxUseCompass1 = new MissionPlanner.Controls.MavlinkCheckBox();
             this.myDataGridView1 = new MissionPlanner.Controls.MyDataGridView();
             this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,56 +74,39 @@
             this.Orientation = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Up = new System.Windows.Forms.DataGridViewImageColumn();
             this.Down = new System.Windows.Forms.DataGridViewImageColumn();
-            this.compassDeviceInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.but_missing = new MissionPlanner.Controls.MyButton();
             this.groupBoxonboardcalib.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.compassDeviceInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(438, 13);
-            this.label1.TabIndex = 1;
             resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(583, 22);
-            this.label6.TabIndex = 80;
             resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Location = new System.Drawing.Point(-1, 18);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1197, 10);
-            this.groupBox5.TabIndex = 79;
             this.groupBox5.TabStop = false;
             // 
             // groupBoxonboardcalib
             // 
+            resources.ApplyResources(this.groupBoxonboardcalib, "groupBoxonboardcalib");
             this.groupBoxonboardcalib.Controls.Add(this.pictureBox3);
             this.groupBoxonboardcalib.Controls.Add(this.pictureBox2);
             this.groupBoxonboardcalib.Controls.Add(this.pictureBox1);
             this.groupBoxonboardcalib.Controls.Add(this.label2);
             this.groupBoxonboardcalib.Controls.Add(this.label10);
             this.groupBoxonboardcalib.Controls.Add(this.mavlinkComboBoxfitness);
-            this.groupBoxonboardcalib.Controls.Add(this.label9);
-            this.groupBoxonboardcalib.Controls.Add(this.label8);
-            this.groupBoxonboardcalib.Controls.Add(this.label7);
             this.groupBoxonboardcalib.Controls.Add(this.horizontalProgressBar3);
             this.groupBoxonboardcalib.Controls.Add(this.horizontalProgressBar2);
             this.groupBoxonboardcalib.Controls.Add(this.horizontalProgressBar1);
@@ -129,182 +114,112 @@
             this.groupBoxonboardcalib.Controls.Add(this.BUT_OBmagcalaccept);
             this.groupBoxonboardcalib.Controls.Add(this.BUT_OBmagcalcancel);
             this.groupBoxonboardcalib.Controls.Add(this.BUT_OBmagcalstart);
-            this.groupBoxonboardcalib.Location = new System.Drawing.Point(3, 355);
+            this.groupBoxonboardcalib.Controls.Add(this.label7);
+            this.groupBoxonboardcalib.Controls.Add(this.label8);
+            this.groupBoxonboardcalib.Controls.Add(this.label9);
             this.groupBoxonboardcalib.Name = "groupBoxonboardcalib";
-            this.groupBoxonboardcalib.Size = new System.Drawing.Size(600, 162);
-            this.groupBoxonboardcalib.TabIndex = 81;
             this.groupBoxonboardcalib.TabStop = false;
-            resources.ApplyResources(this.groupBoxonboardcalib, "groupBoxonboardcalib");
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(321, 107);
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(321, 78);
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(321, 49);
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(203, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 13);
-            this.label2.TabIndex = 17;
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Name = "label2";
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(7, 139);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(40, 13);
-            this.label10.TabIndex = 16;
             resources.ApplyResources(this.label10, "label10");
-            // 
-            // mavlinkComboBoxfitness
-            // 
-            this.mavlinkComboBoxfitness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.mavlinkComboBoxfitness.Enabled = false;
-            this.mavlinkComboBoxfitness.FormattingEnabled = true;
-            this.mavlinkComboBoxfitness.Location = new System.Drawing.Point(57, 135);
-            this.mavlinkComboBoxfitness.Name = "mavlinkComboBoxfitness";
-            this.mavlinkComboBoxfitness.ParamName = null;
-            this.mavlinkComboBoxfitness.Size = new System.Drawing.Size(140, 21);
-            this.mavlinkComboBoxfitness.SubControl = null;
-            this.mavlinkComboBoxfitness.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(6, 117);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 14;
-            resources.ApplyResources(this.label9, "label9");
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(6, 88);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 13;
-            resources.ApplyResources(this.label8, "label8");
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(6, 59);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 12;
-            resources.ApplyResources(this.label7, "label7");
+            this.label10.Name = "label10";
             // 
             // horizontalProgressBar3
             // 
+            resources.ApplyResources(this.horizontalProgressBar3, "horizontalProgressBar3");
             this.horizontalProgressBar3.DrawLabel = true;
-            this.horizontalProgressBar3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.horizontalProgressBar3.Label = null;
-            this.horizontalProgressBar3.Location = new System.Drawing.Point(57, 107);
             this.horizontalProgressBar3.maxline = 0;
             this.horizontalProgressBar3.minline = 0;
             this.horizontalProgressBar3.Name = "horizontalProgressBar3";
-            this.horizontalProgressBar3.Size = new System.Drawing.Size(258, 23);
-            this.horizontalProgressBar3.TabIndex = 6;
             // 
             // horizontalProgressBar2
             // 
+            resources.ApplyResources(this.horizontalProgressBar2, "horizontalProgressBar2");
             this.horizontalProgressBar2.DrawLabel = true;
-            this.horizontalProgressBar2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.horizontalProgressBar2.Label = null;
-            this.horizontalProgressBar2.Location = new System.Drawing.Point(57, 78);
             this.horizontalProgressBar2.maxline = 0;
             this.horizontalProgressBar2.minline = 0;
             this.horizontalProgressBar2.Name = "horizontalProgressBar2";
-            this.horizontalProgressBar2.Size = new System.Drawing.Size(258, 23);
-            this.horizontalProgressBar2.TabIndex = 5;
             // 
             // horizontalProgressBar1
             // 
+            resources.ApplyResources(this.horizontalProgressBar1, "horizontalProgressBar1");
             this.horizontalProgressBar1.DrawLabel = true;
-            this.horizontalProgressBar1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.horizontalProgressBar1.Label = null;
-            this.horizontalProgressBar1.Location = new System.Drawing.Point(57, 49);
             this.horizontalProgressBar1.maxline = 0;
             this.horizontalProgressBar1.minline = 0;
             this.horizontalProgressBar1.Name = "horizontalProgressBar1";
-            this.horizontalProgressBar1.Size = new System.Drawing.Size(258, 23);
-            this.horizontalProgressBar1.TabIndex = 4;
             // 
             // lbl_obmagresult
             // 
-            this.lbl_obmagresult.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_obmagresult.Location = new System.Drawing.Point(350, 20);
-            this.lbl_obmagresult.Multiline = true;
+            resources.ApplyResources(this.lbl_obmagresult, "lbl_obmagresult");
             this.lbl_obmagresult.Name = "lbl_obmagresult";
             this.lbl_obmagresult.ReadOnly = true;
-            this.lbl_obmagresult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.lbl_obmagresult.Size = new System.Drawing.Size(244, 110);
-            this.lbl_obmagresult.TabIndex = 3;
             // 
             // BUT_OBmagcalaccept
             // 
-            this.BUT_OBmagcalaccept.Enabled = false;
-            this.BUT_OBmagcalaccept.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BUT_OBmagcalaccept.Location = new System.Drawing.Point(125, 20);
-            this.BUT_OBmagcalaccept.Name = "BUT_OBmagcalaccept";
-            this.BUT_OBmagcalaccept.Size = new System.Drawing.Size(75, 23);
-            this.BUT_OBmagcalaccept.TabIndex = 1;
             resources.ApplyResources(this.BUT_OBmagcalaccept, "BUT_OBmagcalaccept");
+            this.BUT_OBmagcalaccept.Name = "BUT_OBmagcalaccept";
+            this.BUT_OBmagcalaccept.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_OBmagcalaccept.UseVisualStyleBackColor = true;
             this.BUT_OBmagcalaccept.Click += new System.EventHandler(this.BUT_OBmagcalaccept_Click);
             // 
             // BUT_OBmagcalcancel
             // 
-            this.BUT_OBmagcalcancel.Enabled = false;
-            this.BUT_OBmagcalcancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BUT_OBmagcalcancel.Location = new System.Drawing.Point(206, 20);
-            this.BUT_OBmagcalcancel.Name = "BUT_OBmagcalcancel";
-            this.BUT_OBmagcalcancel.Size = new System.Drawing.Size(75, 23);
-            this.BUT_OBmagcalcancel.TabIndex = 2;
             resources.ApplyResources(this.BUT_OBmagcalcancel, "BUT_OBmagcalcancel");
+            this.BUT_OBmagcalcancel.Name = "BUT_OBmagcalcancel";
+            this.BUT_OBmagcalcancel.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_OBmagcalcancel.UseVisualStyleBackColor = true;
             this.BUT_OBmagcalcancel.Click += new System.EventHandler(this.BUT_OBmagcalcancel_Click);
             // 
             // BUT_OBmagcalstart
             // 
-            this.BUT_OBmagcalstart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BUT_OBmagcalstart.Location = new System.Drawing.Point(44, 20);
-            this.BUT_OBmagcalstart.Name = "BUT_OBmagcalstart";
-            this.BUT_OBmagcalstart.Size = new System.Drawing.Size(75, 23);
-            this.BUT_OBmagcalstart.TabIndex = 0;
             resources.ApplyResources(this.BUT_OBmagcalstart, "BUT_OBmagcalstart");
+            this.BUT_OBmagcalstart.Name = "BUT_OBmagcalstart";
+            this.BUT_OBmagcalstart.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.BUT_OBmagcalstart.UseVisualStyleBackColor = true;
             this.BUT_OBmagcalstart.Click += new System.EventHandler(this.BUT_OBmagcalstart_Click);
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
             // 
             // timer1
             // 
@@ -312,114 +227,98 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 261);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 13);
-            this.label3.TabIndex = 85;
             resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // but_largemagcal
             // 
-            this.but_largemagcal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.but_largemagcal.Location = new System.Drawing.Point(3, 523);
-            this.but_largemagcal.Name = "but_largemagcal";
-            this.but_largemagcal.Size = new System.Drawing.Size(135, 23);
-            this.but_largemagcal.TabIndex = 21;
             resources.ApplyResources(this.but_largemagcal, "but_largemagcal");
+            this.but_largemagcal.Name = "but_largemagcal";
+            this.but_largemagcal.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.but_largemagcal.UseVisualStyleBackColor = true;
             this.but_largemagcal.Click += new System.EventHandler(this.but_largemagcal_Click);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(0, 339);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(281, 13);
-            this.label4.TabIndex = 86;
             resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
             // 
             // but_reboot
             // 
-            this.but_reboot.Location = new System.Drawing.Point(3, 313);
-            this.but_reboot.Name = "but_reboot";
-            this.but_reboot.Size = new System.Drawing.Size(75, 23);
-            this.but_reboot.TabIndex = 88;
             resources.ApplyResources(this.but_reboot, "but_reboot");
+            this.but_reboot.Name = "but_reboot";
+            this.but_reboot.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.but_reboot.UseVisualStyleBackColor = true;
             this.but_reboot.Click += new System.EventHandler(this.but_reboot_Click);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(0, 297);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(203, 13);
-            this.label5.TabIndex = 89;
             resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // compassDeviceInfoBindingSource
+            // 
+            this.compassDeviceInfoBindingSource.DataSource = typeof(MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass2.CompassDeviceInfo);
+            this.compassDeviceInfoBindingSource.CurrentChanged += new System.EventHandler(this.compassDeviceInfoBindingSource_CurrentChanged);
+            // 
+            // but_missing
+            // 
+            resources.ApplyResources(this.but_missing, "but_missing");
+            this.but_missing.Name = "but_missing";
+            this.but_missing.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
+            this.but_missing.UseVisualStyleBackColor = true;
+            this.but_missing.Click += new System.EventHandler(this.but_missing_ClickAsync);
             // 
             // mavlinkCheckBoxUseCompass3
             // 
-            this.mavlinkCheckBoxUseCompass3.AutoSize = true;
-            this.mavlinkCheckBoxUseCompass3.Enabled = false;
-            this.mavlinkCheckBoxUseCompass3.Location = new System.Drawing.Point(215, 277);
+            resources.ApplyResources(this.mavlinkCheckBoxUseCompass3, "mavlinkCheckBoxUseCompass3");
             this.mavlinkCheckBoxUseCompass3.Name = "mavlinkCheckBoxUseCompass3";
             this.mavlinkCheckBoxUseCompass3.OffValue = 0D;
             this.mavlinkCheckBoxUseCompass3.OnValue = 1D;
             this.mavlinkCheckBoxUseCompass3.ParamName = null;
-            this.mavlinkCheckBoxUseCompass3.Size = new System.Drawing.Size(100, 17);
-            this.mavlinkCheckBoxUseCompass3.TabIndex = 83;
-            resources.ApplyResources(this.mavlinkCheckBoxUseCompass3, "mavlinkCheckBoxUseCompass3");
             this.mavlinkCheckBoxUseCompass3.UseVisualStyleBackColor = true;
             // 
             // mavlinkCheckBoxUseCompass2
             // 
-            this.mavlinkCheckBoxUseCompass2.AutoSize = true;
-            this.mavlinkCheckBoxUseCompass2.Enabled = false;
-            this.mavlinkCheckBoxUseCompass2.Location = new System.Drawing.Point(109, 277);
+            resources.ApplyResources(this.mavlinkCheckBoxUseCompass2, "mavlinkCheckBoxUseCompass2");
             this.mavlinkCheckBoxUseCompass2.Name = "mavlinkCheckBoxUseCompass2";
             this.mavlinkCheckBoxUseCompass2.OffValue = 0D;
             this.mavlinkCheckBoxUseCompass2.OnValue = 1D;
             this.mavlinkCheckBoxUseCompass2.ParamName = null;
-            this.mavlinkCheckBoxUseCompass2.Size = new System.Drawing.Size(100, 17);
-            this.mavlinkCheckBoxUseCompass2.TabIndex = 84;
-            resources.ApplyResources(this.mavlinkCheckBoxUseCompass2, "mavlinkCheckBoxUseCompass2");
             this.mavlinkCheckBoxUseCompass2.UseVisualStyleBackColor = true;
             // 
             // CHK_compass_learn
             // 
-            this.CHK_compass_learn.AutoSize = true;
-            this.CHK_compass_learn.Enabled = false;
-            this.CHK_compass_learn.Location = new System.Drawing.Point(454, 277);
+            resources.ApplyResources(this.CHK_compass_learn, "CHK_compass_learn");
             this.CHK_compass_learn.Name = "CHK_compass_learn";
             this.CHK_compass_learn.OffValue = 0D;
             this.CHK_compass_learn.OnValue = 1D;
             this.CHK_compass_learn.ParamName = null;
-            this.CHK_compass_learn.Size = new System.Drawing.Size(148, 17);
-            this.CHK_compass_learn.TabIndex = 87;
-            resources.ApplyResources(this.CHK_compass_learn, "CHK_compass_learn");
             this.CHK_compass_learn.UseVisualStyleBackColor = true;
+            // 
+            // mavlinkComboBoxfitness
+            // 
+            resources.ApplyResources(this.mavlinkComboBoxfitness, "mavlinkComboBoxfitness");
+            this.mavlinkComboBoxfitness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mavlinkComboBoxfitness.FormattingEnabled = true;
+            this.mavlinkComboBoxfitness.Name = "mavlinkComboBoxfitness";
+            this.mavlinkComboBoxfitness.ParamName = null;
+            this.mavlinkComboBoxfitness.SubControl = null;
             // 
             // mavlinkCheckBoxUseCompass1
             // 
-            this.mavlinkCheckBoxUseCompass1.AutoSize = true;
-            this.mavlinkCheckBoxUseCompass1.Enabled = false;
-            this.mavlinkCheckBoxUseCompass1.Location = new System.Drawing.Point(3, 277);
+            resources.ApplyResources(this.mavlinkCheckBoxUseCompass1, "mavlinkCheckBoxUseCompass1");
             this.mavlinkCheckBoxUseCompass1.Name = "mavlinkCheckBoxUseCompass1";
             this.mavlinkCheckBoxUseCompass1.OffValue = 0D;
             this.mavlinkCheckBoxUseCompass1.OnValue = 1D;
             this.mavlinkCheckBoxUseCompass1.ParamName = null;
-            this.mavlinkCheckBoxUseCompass1.Size = new System.Drawing.Size(100, 17);
-            this.mavlinkCheckBoxUseCompass1.TabIndex = 82;
-            resources.ApplyResources(this.mavlinkCheckBoxUseCompass1, "mavlinkCheckBoxUseCompass1");
             this.mavlinkCheckBoxUseCompass1.UseVisualStyleBackColor = true;
             // 
             // myDataGridView1
             // 
+            resources.ApplyResources(this.myDataGridView1, "myDataGridView1");
             this.myDataGridView1.AllowUserToAddRows = false;
             this.myDataGridView1.AllowUserToDeleteRows = false;
-            this.myDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.myDataGridView1.AutoGenerateColumns = false;
             this.myDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.myDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -435,14 +334,10 @@
             this.Up,
             this.Down});
             this.myDataGridView1.DataSource = this.compassDeviceInfoBindingSource;
-            this.myDataGridView1.Location = new System.Drawing.Point(3, 49);
             this.myDataGridView1.MultiSelect = false;
             this.myDataGridView1.Name = "myDataGridView1";
             this.myDataGridView1.ReadOnly = true;
-            this.myDataGridView1.RowHeadersWidth = 20;
             this.myDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.myDataGridView1.Size = new System.Drawing.Size(672, 209);
-            this.myDataGridView1.TabIndex = 0;
             this.myDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.myDataGridView1_CellContentClick);
             this.myDataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.myDataGridView1_DataError);
             this.myDataGridView1.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.myDataGridView1_RowPostPaint);
@@ -452,7 +347,6 @@
             resources.ApplyResources(this.Priority, "Priority");
             this.Priority.Name = "Priority";
             this.Priority.ReadOnly = true;
-            this.Priority.Width = 50;
             // 
             // devIDDataGridViewTextBoxColumn
             // 
@@ -460,7 +354,6 @@
             resources.ApplyResources(this.devIDDataGridViewTextBoxColumn, "devIDDataGridViewTextBoxColumn");
             this.devIDDataGridViewTextBoxColumn.Name = "devIDDataGridViewTextBoxColumn";
             this.devIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.devIDDataGridViewTextBoxColumn.Width = 50;
             // 
             // busTypeDataGridViewTextBoxColumn
             // 
@@ -468,7 +361,6 @@
             resources.ApplyResources(this.busTypeDataGridViewTextBoxColumn, "busTypeDataGridViewTextBoxColumn");
             this.busTypeDataGridViewTextBoxColumn.Name = "busTypeDataGridViewTextBoxColumn";
             this.busTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.busTypeDataGridViewTextBoxColumn.Width = 60;
             // 
             // busDataGridViewTextBoxColumn
             // 
@@ -476,7 +368,6 @@
             resources.ApplyResources(this.busDataGridViewTextBoxColumn, "busDataGridViewTextBoxColumn");
             this.busDataGridViewTextBoxColumn.Name = "busDataGridViewTextBoxColumn";
             this.busDataGridViewTextBoxColumn.ReadOnly = true;
-            this.busDataGridViewTextBoxColumn.Width = 50;
             // 
             // addressDataGridViewTextBoxColumn
             // 
@@ -484,7 +375,6 @@
             resources.ApplyResources(this.addressDataGridViewTextBoxColumn, "addressDataGridViewTextBoxColumn");
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            this.addressDataGridViewTextBoxColumn.Width = 50;
             // 
             // devTypeDataGridViewTextBoxColumn
             // 
@@ -492,7 +382,6 @@
             resources.ApplyResources(this.devTypeDataGridViewTextBoxColumn, "devTypeDataGridViewTextBoxColumn");
             this.devTypeDataGridViewTextBoxColumn.Name = "devTypeDataGridViewTextBoxColumn";
             this.devTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.devTypeDataGridViewTextBoxColumn.Width = 150;
             // 
             // Missing
             // 
@@ -500,7 +389,6 @@
             resources.ApplyResources(this.Missing, "Missing");
             this.Missing.Name = "Missing";
             this.Missing.ReadOnly = true;
-            this.Missing.Width = 50;
             // 
             // External
             // 
@@ -508,7 +396,6 @@
             resources.ApplyResources(this.External, "External");
             this.External.Name = "External";
             this.External.ReadOnly = true;
-            this.External.Width = 50;
             // 
             // Orientation
             // 
@@ -523,7 +410,6 @@
             this.Up.Image = global::MissionPlanner.Properties.Resources.up;
             this.Up.Name = "Up";
             this.Up.ReadOnly = true;
-            this.Up.Width = 40;
             // 
             // Down
             // 
@@ -531,26 +417,10 @@
             this.Down.Image = global::MissionPlanner.Properties.Resources.down;
             this.Down.Name = "Down";
             this.Down.ReadOnly = true;
-            this.Down.Width = 40;
-            // 
-            // compassDeviceInfoBindingSource
-            // 
-            this.compassDeviceInfoBindingSource.DataSource = typeof(MissionPlanner.GCSViews.ConfigurationView.ConfigHWCompass2.CompassDeviceInfo);
-            this.compassDeviceInfoBindingSource.CurrentChanged += new System.EventHandler(this.compassDeviceInfoBindingSource_CurrentChanged);
-            // 
-            // but_missing
-            // 
-            this.but_missing.Location = new System.Drawing.Point(321, 271);
-            this.but_missing.Name = "but_missing";
-            this.but_missing.Size = new System.Drawing.Size(115, 23);
-            this.but_missing.TabIndex = 90;
-            resources.ApplyResources(this.but_missing, "but_missing");
-            this.but_missing.UseVisualStyleBackColor = true;
-            this.but_missing.Click += new System.EventHandler(this.but_missing_ClickAsync);
             // 
             // ConfigHWCompass2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.but_missing);
             this.Controls.Add(this.label5);
@@ -568,14 +438,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.myDataGridView1);
             this.Name = "ConfigHWCompass2";
-            this.Size = new System.Drawing.Size(678, 582);
             this.groupBoxonboardcalib.ResumeLayout(false);
             this.groupBoxonboardcalib.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.compassDeviceInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -615,6 +484,7 @@
         private Controls.MyButton but_reboot;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.BindingSource compassDeviceInfoBindingSource;
+        private Controls.MyButton but_missing;
         private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
         private System.Windows.Forms.DataGridViewTextBoxColumn devIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn busTypeDataGridViewTextBoxColumn;
@@ -626,6 +496,5 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Orientation;
         private System.Windows.Forms.DataGridViewImageColumn Up;
         private System.Windows.Forms.DataGridViewImageColumn Down;
-        private Controls.MyButton but_missing;
     }
 }

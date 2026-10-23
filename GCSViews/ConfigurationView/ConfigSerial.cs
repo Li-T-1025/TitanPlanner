@@ -366,7 +366,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             //Add the message to the bottom of the table
             noteLabel = new Label()
             {
-                Text = "Note: Changes to the serial port settings will not take effect until the board is rebooted.",
+                Text = "注意：串口设置的修改需在开发板重启后才会生效.",
                 Anchor = AnchorStyles.None,
                 Dock = DockStyle.Fill,
                 AutoSize = true,

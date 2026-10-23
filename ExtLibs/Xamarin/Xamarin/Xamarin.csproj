@@ -84,21 +84,8 @@
   <ItemGroup>
     <EmbeddedResource Include="..\..\..\Controls\MavlinkCheckBoxBitMask.resx" Link="GCSViews\MavlinkCheckBoxBitMask.resx" />
     <EmbeddedResource Include="..\..\..\Controls\paramcompare.resx" Link="GCSViews\paramcompare.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.ar.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.ar.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.az-Latn-AZ.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.az-Latn-AZ.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.de-DE.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.de-DE.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.fr.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.fr.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.id-ID.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.id-ID.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.it-IT.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.it-IT.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.ja-JP.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.ja-JP.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.ko-KR.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.ko-KR.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.pt.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.pt.resx" />
     <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.ru-KZ.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.ru-KZ.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.tr.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.tr.resx" />
     <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.zh-Hans.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.zh-Hans.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.zh-Hant.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.zh-Hant.resx" />
-    <EmbeddedResource Include="..\..\..\GCSViews\ConfigurationView\ConfigRawParams.zh-TW.resx" Link="GCSViews\ConfigurationView\ConfigRawParams.zh-TW.resx" />
     <EmbeddedResource Include="..\..\..\test\FirmwareSelection.xaml" Link="Linked\FirmwareSelection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -97,18 +97,7 @@
     <Compile Update="Terminal.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="..\Radio\Sikradio.ar.resx" Link="Linked\Sikradio.ar.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.az-Latn-AZ.resx" Link="Linked\Sikradio.az-Latn-AZ.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.de-DE.resx" Link="Linked\Sikradio.de-DE.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.fr.resx" Link="Linked\Sikradio.fr.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.it-IT.resx" Link="Linked\Sikradio.it-IT.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.ko-KR.resx" Link="Linked\Sikradio.ko-KR.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.ru-KZ.resx" Link="Linked\Sikradio.ru-KZ.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.tr.resx" Link="Linked\Sikradio.tr.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.uk.resx" Link="Linked\Sikradio.uk.resx" />
     <EmbeddedResource Include="..\Radio\Sikradio.zh-Hans.resx" Link="Linked\Sikradio.zh-Hans.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.zh-Hant.resx" Link="Linked\Sikradio.zh-Hant.resx" />
-    <EmbeddedResource Include="..\Radio\Sikradio.zh-TW.resx" Link="Linked\Sikradio.zh-TW.resx" />
     <EmbeddedResource Include="Resources\RFDSiK V3.00 rfd900x.bin" />
     <EmbeddedResource Include="Resources\RFDSiK V3.01 rfd900x.bin" />
     <EmbeddedResource Include="Resources\RFDSiK V3.08 rfd900ux.bin" />

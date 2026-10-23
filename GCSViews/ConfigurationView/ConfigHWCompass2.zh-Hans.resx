@@ -117,100 +117,222 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<data name="label6.Text" xml:space="preserve">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>472, 15</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>通过在下表中重新排列指南针来设置优先级（优先级最高者在最上方）
+</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
     <value>指南针优先级</value>
-</data>
-<data name="label1.Text" xml:space="preserve">
-    <value>通过在下表中重新排列指南针来设置优先级（优先级最高者在最上方）&#xD;&#xA;</value>
-</data>
-<data name="groupBoxonboardcalib.Text" xml:space="preserve">
-    <value>板载磁校准</value>
-</data>
-<data name="label2.Text" xml:space="preserve">
+  </data>
+  <data name="pictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 17</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
     <value>校准失败时放宽拟合度要求</value>
-</data>
-<data name="label10.Text" xml:space="preserve">
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 15</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
     <value>拟合度</value>
-</data>
-<data name="label9.Text" xml:space="preserve">
-    <value>指南针 #3</value>
-</data>
-<data name="label8.Text" xml:space="preserve">
-    <value>指南针 #2</value>
-</data>
-<data name="label7.Text" xml:space="preserve">
-    <value>指南针 #1</value>
-</data>
-<data name="BUT_OBmagcalaccept.Text" xml:space="preserve">
+  </data>
+  <data name="horizontalProgressBar3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 123</value>
+  </data>
+  <data name="horizontalProgressBar2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 90</value>
+  </data>
+  <data name="horizontalProgressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 57</value>
+  </data>
+  <data name="BUT_OBmagcalaccept.Text" xml:space="preserve">
     <value>接受</value>
-</data>
-<data name="BUT_OBmagcalcancel.Text" xml:space="preserve">
+  </data>
+  <data name="BUT_OBmagcalcancel.Text" xml:space="preserve">
     <value>取消</value>
-</data>
-<data name="BUT_OBmagcalstart.Text" xml:space="preserve">
+  </data>
+  <data name="BUT_OBmagcalstart.Text" xml:space="preserve">
     <value>开始</value>
-</data>
-<data name="label3.Text" xml:space="preserve">
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 64</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 15</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>指南针 #1</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 96</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 15</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>指南针 #2</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 130</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 15</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>指南针 #3</value>
+  </data>
+  <data name="groupBoxonboardcalib.Text" xml:space="preserve">
+    <value>板载磁校准</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 15</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
     <value>是否需要禁用前 3 个指南针中的某些？</value>
-</data>
-<data name="but_largemagcal.Text" xml:space="preserve">
+  </data>
+  <data name="but_largemagcal.Text" xml:space="preserve">
     <value>大型载具磁校准</value>
-</data>
-<data name="label4.Text" xml:space="preserve">
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 15</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
     <value>需要重新进行磁校准以应用以上更改。</value>
-</data>
-<data name="but_reboot.Text" xml:space="preserve">
+  </data>
+  <data name="but_reboot.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="but_reboot.Text" xml:space="preserve">
     <value>重启</value>
-</data>
-<data name="label5.Text" xml:space="preserve">
-    <value>需要重启以调整顺序。&#xD;&#xA;</value>
-</data>
-<data name="mavlinkCheckBoxUseCompass3.Text" xml:space="preserve">
-    <value>使用指南针 3</value>
-</data>
-<data name="mavlinkCheckBoxUseCompass2.Text" xml:space="preserve">
-    <value>使用指南针 2</value>
-</data>
-<data name="CHK_compass_learn.Text" xml:space="preserve">
-    <value>自动学习偏移量</value>
-</data>
-<data name="mavlinkCheckBoxUseCompass1.Text" xml:space="preserve">
-    <value>使用指南针 1</value>
-</data>
-<data name="Priority.HeaderText" xml:space="preserve">
-    <value>优先级</value>
-</data>
-<data name="devIDDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>DevID</value>
-</data>
-<data name="busTypeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>总线类型</value>
-</data>
-<data name="busDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>总线</value>
-</data>
-<data name="addressDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>地址</value>
-</data>
-<data name="devTypeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>设备类型</value>
-</data>
-<data name="Missing.HeaderText" xml:space="preserve">
-    <value>缺失</value>
-</data>
-<data name="External.HeaderText" xml:space="preserve">
-    <value>外置</value>
-</data>
-<data name="Orientation.HeaderText" xml:space="preserve">
-    <value>方向</value>
-</data>
-<data name="Up.HeaderText" xml:space="preserve">
-    <value>向上</value>
-</data>
-<data name="Down.HeaderText" xml:space="preserve">
-    <value>向下</value>
-</data>
-<data name="but_missing.Text" xml:space="preserve">
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 15</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>需要重启以调整顺序。
+</value>
+  </data>
+  <data name="but_missing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="but_missing.Text" xml:space="preserve">
     <value>移除缺失项</value>
-</data>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 19</value>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass3.Text" xml:space="preserve">
+    <value>使用指南针 3</value>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 19</value>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass2.Text" xml:space="preserve">
+    <value>使用指南针 2</value>
+  </data>
+  <data name="CHK_compass_learn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CHK_compass_learn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 19</value>
+  </data>
+  <data name="CHK_compass_learn.Text" xml:space="preserve">
+    <value>自动学习偏移量</value>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 19</value>
+  </data>
+  <data name="mavlinkCheckBoxUseCompass1.Text" xml:space="preserve">
+    <value>使用指南针 1</value>
+  </data>
+  <data name="Priority.HeaderText" xml:space="preserve">
+    <value>优先级</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Priority.Width" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="busTypeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>总线类型</value>
+  </data>
+  <data name="busTypeDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="busDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>总线</value>
+  </data>
+  <data name="busDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="addressDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="addressDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="devTypeDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>设备类型</value>
+  </data>
+  <data name="devTypeDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="Missing.HeaderText" xml:space="preserve">
+    <value>缺失</value>
+  </data>
+  <data name="External.HeaderText" xml:space="preserve">
+    <value>外置</value>
+  </data>
+  <data name="Orientation.HeaderText" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="Orientation.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="Up.HeaderText" xml:space="preserve">
+    <value>向上</value>
+  </data>
+  <data name="Up.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="Down.HeaderText" xml:space="preserve">
+    <value>向下</value>
+  </data>
+  <data name="Down.Width" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
 </root>
