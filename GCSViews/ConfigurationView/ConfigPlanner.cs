@@ -25,6 +25,101 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private FlowLayoutPanel layoutRoot;
         private readonly CheckBox CHK_startFullscreen;
 
+
+        // ---- 下拉框中文显示映射（仅改变显示，存储值保持英文枚举名） ----
+        private static readonly Dictionary<string, string> UnitCnMap = new Dictionary<string, string>
+        {
+            {"Meters", "米"},
+            {"Feet", "英尺"},
+            {"meters_per_second", "米/秒"},
+            {"fps", "英尺/秒"},
+            {"kph", "公里/小时"},
+            {"mph", "英里/小时"},
+            {"knots", "节"},
+            {"Normal", "正常"},
+            {"Transparent", "半透明"},
+            {"Hidden", "隐藏"}
+        };
+
+        private static readonly Dictionary<string, string> SystemColorCnMap = new Dictionary<string, string>
+        {
+            {"ActiveBorder", "活动边框"},
+            {"ActiveCaption", "活动标题栏"},
+            {"ActiveCaptionText", "活动标题栏文本"},
+            {"AppWorkspace", "应用工作区"},
+            {"ButtonFace", "按钮表面"},
+            {"ButtonHighlight", "按钮高亮"},
+            {"ButtonShadow", "按钮阴影"},
+            {"Control", "控件背景"},
+            {"ControlDark", "控件深色"},
+            {"ControlDarkDark", "控件最深色"},
+            {"ControlLight", "控件浅色"},
+            {"ControlLightLight", "控件最浅色"},
+            {"ControlText", "控件文本"},
+            {"Desktop", "桌面"},
+            {"GradientActiveCaption", "渐变活动标题栏"},
+            {"GradientInactiveCaption", "渐变非活动标题栏"},
+            {"GrayText", "灰色文本"},
+            {"Highlight", "突出显示"},
+            {"HighlightText", "突出显示文本"},
+            {"HotTrack", "热跟踪"},
+            {"InactiveBorder", "非活动边框"},
+            {"InactiveCaption", "非活动标题栏"},
+            {"InactiveCaptionText", "非活动标题栏文本"},
+            {"Info", "提示"},
+            {"InfoText", "提示文本"},
+            {"Menu", "菜单背景"},
+            {"MenuBar", "菜单栏"},
+            {"MenuHighlight", "菜单突出显示"},
+            {"MenuText", "菜单文本"},
+            {"ScrollBar", "滚动条"},
+            {"Window", "窗口背景"},
+            {"WindowFrame", "窗口边框"},
+            {"WindowText", "窗口文本"}
+        };
+
+        private static string CnDisplayName(DisplayNames v)
+        {
+            switch (v)
+            {
+                case DisplayNames.Basic: return "基本";
+                case DisplayNames.Advanced: return "高级";
+                case DisplayNames.Custom: return "自定义";
+                default: return v.ToString();
+            }
+        }
+
+        private static string CnSeverity(SeverityLevel v)
+        {
+            switch (v)
+            {
+                case SeverityLevel.Emergency: return "紧急";
+                case SeverityLevel.Alert: return "警报";
+                case SeverityLevel.Critical: return "严重";
+                case SeverityLevel.Error: return "错误";
+                case SeverityLevel.Warning: return "警告";
+                case SeverityLevel.Notice: return "通知";
+                case SeverityLevel.Info: return "信息";
+                case SeverityLevel.Debug: return "调试";
+                default: return v.ToString();
+            }
+        }
+
+        private static void SetupCnCombo(ComboBox cb, Func<string, string> mapper)
+        {
+            cb.DrawMode = DrawMode.OwnerDrawFixed;
+            cb.DrawItem += (s, e) =>
+            {
+                e.DrawBackground();
+                string txt = e.Index >= 0 && e.Index < cb.Items.Count && cb.Items[e.Index] != null
+                    ? mapper(cb.Items[e.Index].ToString())
+                    : "";
+                TextRenderer.DrawText(e.Graphics, txt, e.Font, e.Bounds,
+                    e.ForeColor, TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
+                e.DrawFocusRectangle();
+            };
+        }
+
         public ConfigPlanner()
         {
             startup = true;
@@ -41,6 +136,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             CMB_Layout.Items.Add(DisplayNames.Basic);
             CMB_Layout.Items.Add(DisplayNames.Advanced);
             CMB_Layout.Items.Add(DisplayNames.Custom);
+            SetupCnCombo(CMB_Layout, s => CnDisplayName((DisplayNames)Enum.Parse(typeof(DisplayNames), s)));
 
             txt_log_dir.TextChanged += OnLogDirTextChanged;
 
@@ -52,12 +148,14 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             CMB_severity.Items.Add(SeverityLevel.Notice);
             CMB_severity.Items.Add(SeverityLevel.Info);
             CMB_severity.Items.Add(SeverityLevel.Debug);
+            SetupCnCombo(CMB_severity, s => CnSeverity((SeverityLevel)Enum.Parse(typeof(SeverityLevel), s)));
 
             cmb_secondarydisplaystyle.DataSource = Enum.GetNames(typeof(Maps.GMapMarkerBase.InactiveDisplayStyleEnum));
             cmb_secondarydisplaystyle.Text = Settings.Instance.GetString(
                 "GMapMarkerBase_InactiveDisplayStyle",
                 Maps.GMapMarkerBase.InactiveDisplayStyleEnum.Normal.ToString()
             );
+            SetupCnCombo(cmb_secondarydisplaystyle, s => UnitCnMap.ContainsKey(s) ? UnitCnMap[s] : s);
 
             BuildLayout();
         }
@@ -188,7 +286,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             table.Controls.Add(CMB_osdcolor, 1, 3);
             table.SetColumnSpan(CMB_osdcolor, 2);
 
-            var severityLabel = new Label { AutoSize = true, Text = "Severity" };
+            var severityLabel = new Label { AutoSize = true, Text = Strings.PlannerSeverity };
             table.Controls.Add(severityLabel, 0, 4);
             table.Controls.Add(CMB_severity, 1, 4);
             table.SetColumnSpan(CMB_severity, 2);
@@ -520,11 +618,15 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             }
 
             CMB_osdcolor.DataSource = Enum.GetNames(typeof(KnownColor));
+            SetupCnCombo(CMB_osdcolor, s => SystemColorCnMap.ContainsKey(s) ? SystemColorCnMap[s] : s);
 
             // set distance/speed unit states
             CMB_distunits.DataSource = Enum.GetNames(typeof(distances));
             CMB_speedunits.DataSource = Enum.GetNames(typeof(speeds));
             CMB_altunits.DataSource = Enum.GetNames(typeof(altitudes));
+            SetupCnCombo(CMB_distunits, s => UnitCnMap.ContainsKey(s) ? UnitCnMap[s] : s);
+            SetupCnCombo(CMB_speedunits, s => UnitCnMap.ContainsKey(s) ? UnitCnMap[s] : s);
+            SetupCnCombo(CMB_altunits, s => UnitCnMap.ContainsKey(s) ? UnitCnMap[s] : s);
 
             CMB_theme.DataSource = ThemeManager.ThemeNames;
 

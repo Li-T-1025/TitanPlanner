@@ -13010,5 +13010,9 @@ public static string compass_variance {
         {
             get { return ResourceManager.GetString("RadioCalibrationSteps", resourceCulture); }
         }
+        public static string PlannerSeverity
+        {
+            get { return ResourceManager.GetString("PlannerSeverity", resourceCulture); }
+        }
     }
 }

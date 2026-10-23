@@ -4711,4 +4711,7 @@ Please choose one by typing the associated number.</value>
 
 拨动完摇杆后，点击“完成时点击”按钮。</value>
 </data>
+<data name="PlannerSeverity" xml:space="preserve">
+    <value>严重级别</value>
+</data>
 </root>

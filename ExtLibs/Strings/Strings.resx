@@ -4789,4 +4789,7 @@ After clicking OK, move all RC sticks and switches to their extreme positions so
 
 Click 'Click when Done' button when finished moving sticks.</value>
 </data>
+<data name="PlannerSeverity" xml:space="preserve">
+    <value>Severity</value>
+</data>
 </root>
