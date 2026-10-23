@@ -357,7 +357,7 @@
     <value>仅在解锁时</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>注意：将 SEVERITY 级别调低后才会语音播报</value>
+    <value>注意：将严重级别调低后才会语音播报</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
     <value>非活动飞行器</value>

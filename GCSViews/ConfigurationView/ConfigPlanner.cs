@@ -38,7 +38,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {"knots", "节"},
             {"Normal", "正常"},
             {"Transparent", "半透明"},
-            {"Hidden", "隐藏"}
+            {"Hidden", "隐藏"},
+            {"ServerAndCache", "服务器与缓存"},
+            {"ServerOnly", "仅服务器"},
+            {"CacheOnly", "仅缓存"}
         };
 
         private static readonly Dictionary<string, string> SystemColorCnMap = new Dictionary<string, string>
@@ -793,6 +796,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             num_linelength.Value = Settings.Instance.GetInt32("GMapMarkerBase_Length", 500);
 
             CMB_mapCache.DataSource = Enum.GetNames(typeof(GMap.NET.AccessMode));
+            SetupCnCombo(CMB_mapCache, s => UnitCnMap.ContainsKey(s) ? UnitCnMap[s] : s);
             try
             {
                 CMB_mapCache.SelectedIndex = CMB_mapCache.Items.IndexOf(Settings.Instance["mapCache"] ?? GMap.NET.GMaps.Instance.Mode.ToString());
