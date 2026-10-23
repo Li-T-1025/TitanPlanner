@@ -6,6 +6,7 @@ using System;
 using System.CodeDom;
 using System.CodeDom.Compiler;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -74,15 +75,28 @@ namespace MissionPlanner
             }
             // netstandard facade is required so that plugins referencing netstandard-targeted
             // assemblies (e.g. DroneCAN) can resolve forwarded types (IEnumerable/Object etc.).
-            // It is not present in the app base directory - resolve it from the runtime/GAC.
-            try
+            // Prefer the pure reference-assembly facade: the .NET Framework reference-assembly
+            // facade only type-forwards into mscorlib/System. Assembly.Load("netstandard") on
+            // .NET Framework 4.7.1+ resolves the GAC contract assembly instead, which also
+            // DEFINES the netstandard2.0 surface - passing that alongside mscorlib breaks
+            // Roslyn's predefined-type resolution (CS0433/CS0518). Use the facade first, and
+            // only fall back to Assembly.Load when no facade is installed on the machine.
+            var netstandardFacades = FindNetStandardFacade().ToArray();
+            if (netstandardFacades.Length > 0)
             {
-                var nsasm = Assembly.Load("netstandard");
-                if (nsasm != null && !string.IsNullOrEmpty(nsasm.Location) && File.Exists(nsasm.Location))
-                    refFiles = refFiles.Concat(new[] {nsasm.Location}).Distinct();
+                refFiles = refFiles.Concat(netstandardFacades).Distinct();
             }
-            catch
+            else
             {
+                try
+                {
+                    var nsasm = Assembly.Load("netstandard");
+                    if (nsasm != null && !string.IsNullOrEmpty(nsasm.Location) && File.Exists(nsasm.Location))
+                        refFiles = refFiles.Concat(new[] {nsasm.Location}).Distinct();
+                }
+                catch
+                {
+                }
             }
             if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
                 refFiles = refs.Where(a => !a.IsDynamic).Select(a => a.Location);
@@ -92,6 +106,9 @@ namespace MissionPlanner
                 {
                     if (a == "" || !File.Exists(a))
                         return null;
+                    // skip non-managed (native) PEs - they have no CLR metadata and would
+                    // otherwise surface as CS0009 at emit time
+                    AssemblyName.GetAssemblyName(a);
                     return AssemblyMetadata.CreateFromFile(a).GetReference();
                 }
                 catch
@@ -131,6 +148,45 @@ namespace MissionPlanner
 
                 return null;
             }
+        }
+
+        private static IEnumerable<string> FindNetStandardFacade()
+        {
+            var candidates = new List<string>();
+            try
+            {
+                // Only the reference-assembly facades are pure type-forwarders (no type
+                // definitions). The GAC contract assembly and the NuGet NETStandard.Library
+                // ref assembly both define the netstandard2.0 surface and conflict with
+                // mscorlib when passed together, so they are intentionally not candidates.
+                foreach (var ver in new[] {"v4.8", "v4.7.2", "v4.7.1", "v4.7", "v4.6.2", "v4.6.1"})
+                {
+                    var facade = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86),
+                        "Reference Assemblies", "Microsoft", "Framework", ".NETFramework", ver, "Facades",
+                        "netstandard.dll");
+                    if (File.Exists(facade))
+                        candidates.Add(facade);
+                }
+
+                // 64-bit VS installs on 64-bit systems put Reference Assemblies under ProgramFiles
+                var progFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+                if (!string.Equals(progFiles, Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)))
+                {
+                    foreach (var ver in new[] {"v4.8", "v4.7.2", "v4.7.1", "v4.7", "v4.6.2", "v4.6.1"})
+                    {
+                        var facade = Path.Combine(progFiles,
+                            "Reference Assemblies", "Microsoft", "Framework", ".NETFramework", ver, "Facades",
+                            "netstandard.dll");
+                        if (File.Exists(facade))
+                            candidates.Add(facade);
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+            return candidates.Distinct();
         }
     }
 

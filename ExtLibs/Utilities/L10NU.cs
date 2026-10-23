@@ -16,7 +16,20 @@ namespace MissionPlanner.Utilities
             strings = new Dictionary<string, string>();
             string[] lines = null;
 
+            // Prefer the configured language (same source as Strings.Culture) over the
+            // thread UI culture: the app does not set CurrentUICulture at startup, so it
+            // would fall back to the OS language and L10NU lookups (DisplayTextAttribute)
+            // would silently return untranslated English text.
             string lang = System.Globalization.CultureInfo.CurrentUICulture.Name;
+            try
+            {
+                var cfgLang = Settings.Instance["language"];
+                if (!string.IsNullOrEmpty(cfgLang))
+                    lang = cfgLang;
+            }
+            catch
+            {
+            }
             switch (lang)
             {
                 case "zh-CN":

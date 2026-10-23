@@ -1042,7 +1042,13 @@ namespace MissionPlanner.GCSViews
                         }
 
                         qv.Tag = desc;
-                        qv.desc = !string.IsNullOrEmpty(label) ? label : MainV2.comPort.MAV.cs.GetNameandUnit(desc);
+                        // A persisted label that contains CJK characters is treated as a
+                        // user-customized name and kept verbatim; otherwise (plain-English
+                        // default label from an older saved layout) the translated
+                        // GetNameandUnit name is used so QuickView shows localized text.
+                        qv.desc = (!string.IsNullOrEmpty(label) && label.Any(c => c >= 0x2E80 && c <= 0x9FFF))
+                            ? label
+                            : MainV2.comPort.MAV.cs.GetNameandUnit(desc);
                         qv.numberformat = !string.IsNullOrEmpty(format) ? format : "0.00";
 
                         try
