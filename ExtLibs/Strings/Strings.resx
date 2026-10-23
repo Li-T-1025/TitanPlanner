@@ -4807,4 +4807,43 @@ Click 'Click when Done' button when finished moving sticks.</value>
   <data name="ScanNow" xml:space="preserve">
     <value>scan now</value>
   </data>
+  <data name="HUDItemHeading" xml:space="preserve">
+    <value>Heading</value>
+  </data>
+  <data name="HUDItemSpeed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="HUDItemAlt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="HUDItemConnection" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="HUDItemXTrack" xml:space="preserve">
+    <value>X-Track</value>
+  </data>
+  <data name="HUDItemRollPitch" xml:space="preserve">
+    <value>Roll/Pitch</value>
+  </data>
+  <data name="HUDItemGPS" xml:space="preserve">
+    <value>GPS</value>
+  </data>
+  <data name="HUDItemBattery" xml:space="preserve">
+    <value>Battery</value>
+  </data>
+  <data name="HUDItemBattery2" xml:space="preserve">
+    <value>Battery2</value>
+  </data>
+  <data name="HUDItemEKF" xml:space="preserve">
+    <value>EKF</value>
+  </data>
+  <data name="HUDItemVibe" xml:space="preserve">
+    <value>Vibe</value>
+  </data>
+  <data name="HUDItemPrearm" xml:space="preserve">
+    <value>Prearm Status</value>
+  </data>
+  <data name="HUDItemAOA" xml:space="preserve">
+    <value>AOA</value>
+  </data>
 </root>

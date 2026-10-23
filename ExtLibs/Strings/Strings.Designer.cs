@@ -13034,5 +13034,58 @@ public static string compass_variance {
         {
             get { return ResourceManager.GetString("ScanNow", resourceCulture); }
         }
+        public static string HUDItemHeading
+        {
+            get { return ResourceManager.GetString("HUDItemHeading", resourceCulture); }
+        }
+        public static string HUDItemSpeed
+        {
+            get { return ResourceManager.GetString("HUDItemSpeed", resourceCulture); }
+        }
+        public static string HUDItemAlt
+        {
+            get { return ResourceManager.GetString("HUDItemAlt", resourceCulture); }
+        }
+        public static string HUDItemConnection
+        {
+            get { return ResourceManager.GetString("HUDItemConnection", resourceCulture); }
+        }
+        public static string HUDItemXTrack
+        {
+            get { return ResourceManager.GetString("HUDItemXTrack", resourceCulture); }
+        }
+        public static string HUDItemRollPitch
+        {
+            get { return ResourceManager.GetString("HUDItemRollPitch", resourceCulture); }
+        }
+        public static string HUDItemGPS
+        {
+            get { return ResourceManager.GetString("HUDItemGPS", resourceCulture); }
+        }
+        public static string HUDItemBattery
+        {
+            get { return ResourceManager.GetString("HUDItemBattery", resourceCulture); }
+        }
+        public static string HUDItemBattery2
+        {
+            get { return ResourceManager.GetString("HUDItemBattery2", resourceCulture); }
+        }
+        public static string HUDItemEKF
+        {
+            get { return ResourceManager.GetString("HUDItemEKF", resourceCulture); }
+        }
+        public static string HUDItemVibe
+        {
+            get { return ResourceManager.GetString("HUDItemVibe", resourceCulture); }
+        }
+        public static string HUDItemPrearm
+        {
+            get { return ResourceManager.GetString("HUDItemPrearm", resourceCulture); }
+        }
+        public static string HUDItemAOA
+        {
+            get { return ResourceManager.GetString("HUDItemAOA", resourceCulture); }
+        }
+
     }
 }

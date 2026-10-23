@@ -47,6 +47,8 @@ namespace hudonoff
             ToolStripItemCollection col = Host.FDMenuHud.Items;
             col.Add(rootbut);
 
+            // key = HUD 属性名（存储/反射用），value = 存储于 config.xml 的英文标识
+            // （保持英文 key 存储，与工程"显示中文、存储英文 key"决策一致）
             var items = new Dictionary<string,string>()
             {
                 {"displayheading", "Heading"},
@@ -64,11 +66,29 @@ namespace hudonoff
                 {"displayAOASSA", "AOA"},
             };
 
+            // 菜单显示名称（中文化），仅用于界面展示
+            var displayNames = new Dictionary<string,string>()
+            {
+                {"displayheading", Strings.HUDItemHeading},
+                {"displayspeed", Strings.HUDItemSpeed},
+                {"displayalt", Strings.HUDItemAlt},
+                {"displayconninfo", Strings.HUDItemConnection},
+                {"displayxtrack", Strings.HUDItemXTrack},
+                {"displayrollpitch", Strings.HUDItemRollPitch},
+                {"displaygps", Strings.HUDItemGPS},
+                {"batteryon", Strings.HUDItemBattery},
+                {"batteryon2", Strings.HUDItemBattery2},
+                {"displayekf", Strings.HUDItemEKF},
+                {"displayvibe", Strings.HUDItemVibe},
+                {"displayprearm", Strings.HUDItemPrearm},
+                {"displayAOASSA", Strings.HUDItemAOA},
+            };
+
             var hide = Settings.Instance.GetList(configname);
 
             foreach (var item in items)
             {
-                var but = new ToolStripMenuItem(item.Value);
+                var but = new ToolStripMenuItem(displayNames[item.Key]);
                 but.CheckOnClick = true;
                 but.Checked = true;
                 but.Click += (s,e)=>

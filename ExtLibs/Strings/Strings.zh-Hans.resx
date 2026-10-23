@@ -4729,4 +4729,43 @@ Please choose one by typing the associated number.</value>
   <data name="ScanNow" xml:space="preserve">
     <value>立即扫描</value>
   </data>
+  <data name="HUDItemHeading" xml:space="preserve">
+    <value>航向</value>
+  </data>
+  <data name="HUDItemSpeed" xml:space="preserve">
+    <value>速度</value>
+  </data>
+  <data name="HUDItemAlt" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="HUDItemConnection" xml:space="preserve">
+    <value>连接信息</value>
+  </data>
+  <data name="HUDItemXTrack" xml:space="preserve">
+    <value>偏航距</value>
+  </data>
+  <data name="HUDItemRollPitch" xml:space="preserve">
+    <value>横滚/俯仰</value>
+  </data>
+  <data name="HUDItemGPS" xml:space="preserve">
+    <value>GPS</value>
+  </data>
+  <data name="HUDItemBattery" xml:space="preserve">
+    <value>电池</value>
+  </data>
+  <data name="HUDItemBattery2" xml:space="preserve">
+    <value>电池2</value>
+  </data>
+  <data name="HUDItemEKF" xml:space="preserve">
+    <value>EKF</value>
+  </data>
+  <data name="HUDItemVibe" xml:space="preserve">
+    <value>振动</value>
+  </data>
+  <data name="HUDItemPrearm" xml:space="preserve">
+    <value>预解锁状态</value>
+  </data>
+  <data name="HUDItemAOA" xml:space="preserve">
+    <value>迎角</value>
+  </data>
 </root>
