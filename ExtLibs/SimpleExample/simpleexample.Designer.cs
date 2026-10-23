@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.CMB_comport = new System.Windows.Forms.ComboBox();
             this.cmb_baudrate = new System.Windows.Forms.ComboBox();
+            this.but_connect = new System.Windows.Forms.Button();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(simpleexample));
 
             this.but_armdisarm = new System.Windows.Forms.Button();

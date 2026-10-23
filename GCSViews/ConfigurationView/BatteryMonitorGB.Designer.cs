@@ -21,6 +21,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BatteryMonitorGB));
 
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.contentHost = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();

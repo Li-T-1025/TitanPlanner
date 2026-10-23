@@ -29,6 +29,7 @@ namespace MissionPlanner.Controls
         private void InitializeComponent()
         {
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.myButton1 = new MissionPlanner.Controls.MyButton();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyandSet));
 
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();

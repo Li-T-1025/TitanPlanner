@@ -29,6 +29,7 @@ namespace MissionPlanner.Controls
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayThisForm));
+            this.SuspendLayout();
 
             //
             // DisplayThisForm
