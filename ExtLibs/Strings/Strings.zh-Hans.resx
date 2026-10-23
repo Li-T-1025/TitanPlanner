@@ -4553,10 +4553,10 @@ Please choose one by typing the associated number.</value>
     <value>DGPS</value>
 </data>
 <data name="GpsFixRtkFloat" xml:space="preserve">
-    <value>RTK 浮动</value>
+    <value>RTK 浮点解</value>
 </data>
 <data name="GpsFixRtkFixed" xml:space="preserve">
-    <value>RTK 固定</value>
+    <value>RTK 固定解</value>
 </data>
 <data name="GpsSatsFmt" xml:space="preserve">
     <value>卫星：{0:0}：{1}</value>
