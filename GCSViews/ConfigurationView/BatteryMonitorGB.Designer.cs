@@ -19,7 +19,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BatteryMonitorGB));
+
             this.contentHost = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -34,6 +35,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Battery";
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             // 
             // contentHost
             // 

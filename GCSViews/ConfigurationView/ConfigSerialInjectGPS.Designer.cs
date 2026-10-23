@@ -733,14 +733,12 @@
             resources.ApplyResources(this.Use, "Use");
             this.Use.Name = "Use";
             this.Use.ReadOnly = true;
-            this.Use.Text = "Use";
             // 
             // Delete
             // 
             resources.ApplyResources(this.Delete, "Delete");
             this.Delete.Name = "Delete";
             this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
             // 
             // ConfigSerialInjectGPS
             // 

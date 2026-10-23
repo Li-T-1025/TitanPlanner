@@ -168,4 +168,10 @@
 <data name="$this.Text" xml:space="preserve">
     <value>Altitude Angel Settings</value>
 </data>
+  <data name="trk_AltitudeFilter.Text" xml:space="preserve">
+    <value>Ground Data</value>
+  </data>
+  <data name="trk_OpacityAdjust.Text" xml:space="preserve">
+    <value>Ground Data</value>
+  </data>
 </root>

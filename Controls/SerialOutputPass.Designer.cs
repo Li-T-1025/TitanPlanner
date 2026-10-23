@@ -70,6 +70,7 @@ namespace MissionPlanner.Controls
             this.gbAddConnection.TabIndex = 0;
             this.gbAddConnection.TabStop = false;
             this.gbAddConnection.Text = "Add Connection";
+            resources.ApplyResources(this.gbAddConnection, "gbAddConnection");
             //
             // tableLayoutPanel1
             //
@@ -110,6 +111,7 @@ namespace MissionPlanner.Controls
             this.lblType.Size = new System.Drawing.Size(34, 13);
             this.lblType.TabIndex = 0;
             this.lblType.Text = "Type:";
+            resources.ApplyResources(this.lblType, "lblType");
             //
             // cmbType
             //
@@ -135,6 +137,7 @@ namespace MissionPlanner.Controls
             this.lblDirection.Size = new System.Drawing.Size(52, 13);
             this.lblDirection.TabIndex = 2;
             this.lblDirection.Text = "Direction:";
+            resources.ApplyResources(this.lblDirection, "lblDirection");
             //
             // cmbDirection
             //
@@ -159,6 +162,7 @@ namespace MissionPlanner.Controls
             this.lblPort.Size = new System.Drawing.Size(29, 13);
             this.lblPort.TabIndex = 4;
             this.lblPort.Text = "Port:";
+            resources.ApplyResources(this.lblPort, "lblPort");
             //
             // txtPort
             //
@@ -177,6 +181,7 @@ namespace MissionPlanner.Controls
             this.lblExtra.Size = new System.Drawing.Size(32, 13);
             this.lblExtra.TabIndex = 6;
             this.lblExtra.Text = "Host:";
+            resources.ApplyResources(this.lblExtra, "lblExtra");
             //
             // txtExtra
             //
@@ -195,6 +200,7 @@ namespace MissionPlanner.Controls
             this.chkWriteAccess.Size = new System.Drawing.Size(50, 17);
             this.chkWriteAccess.TabIndex = 8;
             this.chkWriteAccess.Text = "Write";
+            resources.ApplyResources(this.chkWriteAccess, "chkWriteAccess");
             this.chkWriteAccess.UseVisualStyleBackColor = true;
             //
             // btnAdd
@@ -206,6 +212,7 @@ namespace MissionPlanner.Controls
             this.btnAdd.Size = new System.Drawing.Size(98, 24);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add Connection";
+            resources.ApplyResources(this.btnAdd, "btnAdd");
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             //
@@ -220,6 +227,7 @@ namespace MissionPlanner.Controls
             this.gbConnections.TabIndex = 1;
             this.gbConnections.TabStop = false;
             this.gbConnections.Text = "Active Connections";
+            resources.ApplyResources(this.gbConnections, "gbConnections");
             //
             // dgvConnections
             //
@@ -248,6 +256,7 @@ namespace MissionPlanner.Controls
             // colType
             //
             this.colType.HeaderText = "Type";
+            resources.ApplyResources(this.colType, "colType");
             this.colType.Name = "colType";
             this.colType.ReadOnly = true;
             this.colType.Width = 60;
@@ -255,6 +264,7 @@ namespace MissionPlanner.Controls
             // colDirection
             //
             this.colDirection.HeaderText = "Direction";
+            resources.ApplyResources(this.colDirection, "colDirection");
             this.colDirection.Name = "colDirection";
             this.colDirection.ReadOnly = true;
             this.colDirection.Width = 70;
@@ -263,12 +273,14 @@ namespace MissionPlanner.Controls
             //
             this.colAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colAddress.HeaderText = "Address";
+            resources.ApplyResources(this.colAddress, "colAddress");
             this.colAddress.Name = "colAddress";
             this.colAddress.ReadOnly = true;
             //
             // colStatus
             //
             this.colStatus.HeaderText = "Status";
+            resources.ApplyResources(this.colStatus, "colStatus");
             this.colStatus.Name = "colStatus";
             this.colStatus.ReadOnly = true;
             this.colStatus.Width = 80;
@@ -276,6 +288,7 @@ namespace MissionPlanner.Controls
             // colWrite
             //
             this.colWrite.HeaderText = "Write";
+            resources.ApplyResources(this.colWrite, "colWrite");
             this.colWrite.Name = "colWrite";
             this.colWrite.ReadOnly = true;
             this.colWrite.Width = 45;
@@ -286,6 +299,7 @@ namespace MissionPlanner.Controls
             this.colStop.Name = "colStop";
             this.colStop.ReadOnly = true;
             this.colStop.Text = "Stop";
+            resources.ApplyResources(this.colStop, "colStop");
             this.colStop.UseColumnTextForButtonValue = true;
             this.colStop.Width = 60;
             //
@@ -302,6 +316,7 @@ namespace MissionPlanner.Controls
             this.gbLog.TabIndex = 2;
             this.gbLog.TabStop = false;
             this.gbLog.Text = "Output Log";
+            resources.ApplyResources(this.gbLog, "gbLog");
             //
             // btnClear
             //
@@ -311,6 +326,7 @@ namespace MissionPlanner.Controls
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear";
+            resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             //
@@ -339,6 +355,7 @@ namespace MissionPlanner.Controls
             this.MinimumSize = new System.Drawing.Size(500, 400);
             this.Name = "SerialOutputPass";
             this.Text = "MAVLink Output";
+            resources.ApplyResources(this, "$this");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SerialOutputPass_FormClosing);
             this.Load += new System.EventHandler(this.SerialOutputPass_Load);
             this.gbAddConnection.ResumeLayout(false);

@@ -168,4 +168,10 @@
 <data name="$this.Text" xml:space="preserve">
     <value>Altitude Angel 设置</value>
 </data>
+  <data name="trk_AltitudeFilter.Text" xml:space="preserve">
+    <value>地面数据</value>
+  </data>
+  <data name="trk_OpacityAdjust.Text" xml:space="preserve">
+    <value>地面数据</value>
+  </data>
 </root>

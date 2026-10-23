@@ -74,6 +74,7 @@
             this.label1.Size = new System.Drawing.Size(187, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Pick the Nmea gps port and baud rate\r\n";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // LBL_location
             // 
@@ -117,6 +118,7 @@
             this.label2.Size = new System.Drawing.Size(117, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Select your update rate\r\n";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // BUT_connect
             // 
@@ -144,6 +146,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FollowMe";
             this.Text = "Follow Me";
+            resources.ApplyResources(this, "$this");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SerialOutput_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

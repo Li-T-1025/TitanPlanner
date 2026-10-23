@@ -30,6 +30,8 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigPlannerAdv));
+
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Params = new MyDataGridView();
@@ -77,6 +79,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // Name
             // 
             this.Name1.HeaderText = "Name";
+            resources.ApplyResources(this.Name1, "Name1");
             this.Name1.Name = "Name";
             this.Name1.ReadOnly = true;
             this.Name1.Width = 150;
@@ -84,6 +87,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             // Value
             // 
             this.Value.HeaderText = "Value";
+            resources.ApplyResources(this.Value, "Value");
             this.Value.Name = "Value";
             this.Value.ReadOnly = true;
             this.Value.Width = 300;
@@ -96,6 +100,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             this.label1.Size = new System.Drawing.Size(251, 13);
             this.label1.TabIndex = 70;
             this.label1.Text = "NOTE: You can break the planner using this screen";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // ConfigPlannerAdv
             // 

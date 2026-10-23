@@ -354,4 +354,10 @@
 <data name="BUT_connect.Text" xml:space="preserve">
     <value>连接</value>
 </data>
+  <data name="Use.Text" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="Delete.Text" xml:space="preserve">
+    <value>删除</value>
+  </data>
 </root>

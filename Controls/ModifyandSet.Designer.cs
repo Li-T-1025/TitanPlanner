@@ -29,7 +29,8 @@ namespace MissionPlanner.Controls
         private void InitializeComponent()
         {
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.myButton1 = new MissionPlanner.Controls.MyButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyandSet));
+
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -82,6 +83,7 @@ namespace MissionPlanner.Controls
             this.myButton1.Size = new System.Drawing.Size(72, 34);
             this.myButton1.TabIndex = 1;
             this.myButton1.Text = "Set to This";
+            resources.ApplyResources(this.myButton1, "myButton1");
             this.myButton1.UseVisualStyleBackColor = true;
             this.myButton1.Click += new System.EventHandler(this.myButton1_Click);
             //

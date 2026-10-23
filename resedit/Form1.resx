@@ -139,4 +139,28 @@ Pick your language and click load.
 before you save ensure you pick your language and click save.
 </value>
   </data>
+  <data name="colFile.HeaderText" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="colInternal.HeaderText" xml:space="preserve">
+    <value>Internal</value>
+  </data>
+  <data name="colEnglish.HeaderText" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="colOtherLang.HeaderText" xml:space="preserve">
+    <value>Other Lang</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Extra</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Language Editor</value>
+  </data>
 </root>

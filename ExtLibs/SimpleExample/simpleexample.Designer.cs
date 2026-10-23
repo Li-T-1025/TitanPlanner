@@ -31,7 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.CMB_comport = new System.Windows.Forms.ComboBox();
             this.cmb_baudrate = new System.Windows.Forms.ComboBox();
-            this.but_connect = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(simpleexample));
+
             this.but_armdisarm = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.but_mission = new System.Windows.Forms.Button();
@@ -69,6 +70,7 @@
             this.but_connect.Size = new System.Drawing.Size(75, 23);
             this.but_connect.TabIndex = 2;
             this.but_connect.Text = "Connect";
+            resources.ApplyResources(this.but_connect, "but_connect");
             this.but_connect.UseVisualStyleBackColor = true;
             this.but_connect.Click += new System.EventHandler(this.but_connect_Click);
             // 
@@ -79,6 +81,7 @@
             this.but_armdisarm.Size = new System.Drawing.Size(75, 23);
             this.but_armdisarm.TabIndex = 3;
             this.but_armdisarm.Text = "Arm/Disarm";
+            resources.ApplyResources(this.but_armdisarm, "but_armdisarm");
             this.but_armdisarm.UseVisualStyleBackColor = true;
             this.but_armdisarm.Click += new System.EventHandler(this.but_armdisarm_Click);
             // 
@@ -89,6 +92,7 @@
             this.but_mission.Size = new System.Drawing.Size(97, 23);
             this.but_mission.TabIndex = 4;
             this.but_mission.Text = "Send Mission";
+            resources.ApplyResources(this.but_mission, "but_mission");
             this.but_mission.UseVisualStyleBackColor = true;
             this.but_mission.Click += new System.EventHandler(this.but_mission_Click);
             // 

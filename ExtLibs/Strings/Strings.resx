@@ -4792,4 +4792,19 @@ Click 'Click when Done' button when finished moving sticks.</value>
 <data name="PlannerSeverity" xml:space="preserve">
     <value>Severity</value>
 </data>
+  <data name="ChangeModeTo" xml:space="preserve">
+    <value>Change mode to {0}</value>
+  </data>
+  <data name="MavlinkTreeSystem" xml:space="preserve">
+    <value>System {0}</value>
+  </data>
+  <data name="MavlinkTreeVehicle" xml:space="preserve">
+    <value>Vehicle {0}</value>
+  </data>
+  <data name="MavlinkTreeComp" xml:space="preserve">
+    <value>Comp {0} {1}</value>
+  </data>
+  <data name="ScanNow" xml:space="preserve">
+    <value>scan now</value>
+  </data>
 </root>

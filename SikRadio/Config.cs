@@ -6,6 +6,7 @@ using MissionPlanner.Comms;
 using MissionPlanner.Radio;
 using MissionPlanner.Utilities;
 using Microsoft.VisualBasic;
+using Strings = MissionPlanner.Strings;
 
 namespace SikRadio
 {

@@ -204,4 +204,22 @@ How to use it
         AAf4AAAP/AAAH/4AAD//gAD//+AD//////8=
 </value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Pick the Nmea gps port and baud rate&#xD;&#xA;</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Select your update rate&#xD;&#xA;</value>
+  </data>
+  <data name="BUT_connect.Text" xml:space="preserve">
+    <value>Connect</value>
+  </data>
+  <data name="CHK_updateRallyPnt.Text" xml:space="preserve">
+    <value>Update Rally Point 0</value>
+  </data>
+  <data name="chk_relalt.Text" xml:space="preserve">
+    <value>RelativeAlt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MovingBase</value>
+  </data>
 </root>

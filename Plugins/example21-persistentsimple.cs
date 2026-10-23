@@ -36,21 +36,21 @@ namespace PersistentSimpleActions
             // 
             button1.Location = new System.Drawing.Point(4, 4);
             button1.Size = new System.Drawing.Size(75, 23);
-            toolTip1.SetToolTip(button1, "Change mode to " + button1.Text);
+            toolTip1.SetToolTip(button1, string.Format(Strings.ChangeModeTo, button1.Text));
             button1.Click += new EventHandler(but_mode_Click);
             // 
             // button2
             // 
             button2.Location = new System.Drawing.Point(85, 4);
             button2.Size = new System.Drawing.Size(75, 23);
-            toolTip1.SetToolTip(button2, "Change mode to " + button2.Text);
+            toolTip1.SetToolTip(button2, string.Format(Strings.ChangeModeTo, button2.Text));
             button2.Click += new EventHandler(but_mode_Click);
             // 
             // button3
             // 
             button3.Location = new System.Drawing.Point(166, 4);
             button3.Size = new System.Drawing.Size(75, 23);
-            toolTip1.SetToolTip(button3, "Change mode to " + button3.Text);
+            toolTip1.SetToolTip(button3, string.Format(Strings.ChangeModeTo, button3.Text));
             button3.Click += new EventHandler(but_mode_Click);
 
             // Increase the minimum size of the persistent panel. Not necessary, but adds a little

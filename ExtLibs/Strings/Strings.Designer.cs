@@ -13014,5 +13014,25 @@ public static string compass_variance {
         {
             get { return ResourceManager.GetString("PlannerSeverity", resourceCulture); }
         }
+        public static string ChangeModeTo
+        {
+            get { return ResourceManager.GetString("ChangeModeTo", resourceCulture); }
+        }
+        public static string MavlinkTreeSystem
+        {
+            get { return ResourceManager.GetString("MavlinkTreeSystem", resourceCulture); }
+        }
+        public static string MavlinkTreeVehicle
+        {
+            get { return ResourceManager.GetString("MavlinkTreeVehicle", resourceCulture); }
+        }
+        public static string MavlinkTreeComp
+        {
+            get { return ResourceManager.GetString("MavlinkTreeComp", resourceCulture); }
+        }
+        public static string ScanNow
+        {
+            get { return ResourceManager.GetString("ScanNow", resourceCulture); }
+        }
     }
 }

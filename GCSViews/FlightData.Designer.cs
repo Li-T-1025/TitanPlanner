@@ -664,6 +664,7 @@ namespace MissionPlanner.GCSViews
             //
             this.editQuickViewToolStripMenuItem.Name = "editQuickViewToolStripMenuItem";
             this.editQuickViewToolStripMenuItem.Text = "Edit";
+            resources.ApplyResources(this.editQuickViewToolStripMenuItem, "editQuickViewToolStripMenuItem");
             this.editQuickViewToolStripMenuItem.Click += new System.EventHandler(this.editQuickViewToolStripMenuItem_Click);
             //
             // setViewCountToolStripMenuItem
@@ -720,12 +721,14 @@ namespace MissionPlanner.GCSViews
             //
             this.resetToolStripMenuItem.Name = "resetQuickViewToolStripMenuItem";
             this.resetToolStripMenuItem.Text = "Reset";
+            resources.ApplyResources(this.resetToolStripMenuItem, "resetToolStripMenuItem");
             this.resetToolStripMenuItem.Click += new System.EventHandler(this.resetQuickViewToolStripMenuItem_Click);
             //
             // resetAllQuickViewToolStripMenuItem
             //
             this.resetAllToolStripMenuItem.Name = "resetAllQuickViewToolStripMenuItem";
             this.resetAllToolStripMenuItem.Text = "Reset All";
+            resources.ApplyResources(this.resetAllToolStripMenuItem, "resetAllToolStripMenuItem");
             this.resetAllToolStripMenuItem.Click += new System.EventHandler(this.resetAllQuickViewToolStripMenuItem_Click);
             //
             // bindingSourceQuickTab
@@ -2301,6 +2304,7 @@ namespace MissionPlanner.GCSViews
             this.grpDataflash.TabIndex = 0;
             this.grpDataflash.TabStop = false;
             this.grpDataflash.Text = "Dataflash Logs";
+            resources.ApplyResources(this.grpDataflash, "grpDataflash");
             //
             // grpTelemetry
             //
@@ -2313,6 +2317,7 @@ namespace MissionPlanner.GCSViews
             this.grpTelemetry.TabIndex = 1;
             this.grpTelemetry.TabStop = false;
             this.grpTelemetry.Text = "Telemetry Logs";
+            resources.ApplyResources(this.grpTelemetry, "grpTelemetry");
             //
             // tableLayoutPaneltlogs
             //

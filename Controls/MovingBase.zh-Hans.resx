@@ -120,4 +120,22 @@
   <data name="textBox1.Text" xml:space="preserve">
     <value>这是什么。 1. 从nmea gps中获取当前GPS记录。 2. 在地图上更新家的位置。（注意不要在MAV上更新家的位置） 如何使用 1. 连接到飞控。 2. 打开这个，为你的nmea gps选择COM口和波特率。 3. 现在已经更新家的位置了。</value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>选择 NMEA GPS 串口和波特率&#xD;&#xA;</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>选择更新速率&#xD;&#xA;</value>
+  </data>
+  <data name="BUT_connect.Text" xml:space="preserve">
+    <value>连接</value>
+  </data>
+  <data name="CHK_updateRallyPnt.Text" xml:space="preserve">
+    <value>更新集结点 0</value>
+  </data>
+  <data name="chk_relalt.Text" xml:space="preserve">
+    <value>相对高度</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>移动基准站</value>
+  </data>
 </root>

@@ -319,6 +319,7 @@ namespace AltitudeAngelWings.Plugin
             this.trk_AltitudeFilter.SmallChange = 10;
             this.trk_AltitudeFilter.TabIndex = 47;
             this.trk_AltitudeFilter.Text = "Ground Data";
+            resources.ApplyResources(this.trk_AltitudeFilter, "trk_AltitudeFilter");
             this.trk_AltitudeFilter.TickFrequency = 100;
             this.trk_AltitudeFilter.Value = 300;
             this.trk_AltitudeFilter.ValueChanged += new System.EventHandler(this.trk_AltitudeFilter_ValueChanged);
@@ -385,6 +386,7 @@ namespace AltitudeAngelWings.Plugin
             this.trk_OpacityAdjust.SmallChange = 20;
             this.trk_OpacityAdjust.TabIndex = 15;
             this.trk_OpacityAdjust.Text = "Ground Data";
+            resources.ApplyResources(this.trk_OpacityAdjust, "trk_OpacityAdjust");
             this.trk_OpacityAdjust.TickFrequency = 20;
             this.trk_OpacityAdjust.Value = 100;
             this.trk_OpacityAdjust.ValueChanged += new System.EventHandler(this.trk_OpacityAdjust_ValueChanged);

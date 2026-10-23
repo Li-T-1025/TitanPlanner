@@ -120,4 +120,28 @@
 <data name="richTextBox1.Text" xml:space="preserve">
     <value>使用方法：&#xD;&#xA;首次使用&#xD;&#xA;如果是首次加载，直接点击加载（确保旁边的框为空）&#xD;&#xA;保存前请确保已选择语言，然后点击保存。&#xD;&#xA;更多用法&#xD;&#xA;选择语言后点击加载。&#xD;&#xA;保存前请确保已选择语言，然后点击保存。</value>
 </data>
+  <data name="colFile.HeaderText" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="colInternal.HeaderText" xml:space="preserve">
+    <value>内部名</value>
+  </data>
+  <data name="colEnglish.HeaderText" xml:space="preserve">
+    <value>英文</value>
+  </data>
+  <data name="colOtherLang.HeaderText" xml:space="preserve">
+    <value>其他语言</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>加载</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>附加</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>语言编辑器</value>
+  </data>
 </root>

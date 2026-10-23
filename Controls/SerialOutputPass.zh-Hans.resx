@@ -200,4 +200,55 @@
   <data name="$this.Text" xml:space="preserve">
     <value>串口输出 - Mavlink</value>
   </data>
+  <data name="gbAddConnection.Text" xml:space="preserve">
+    <value>添加连接</value>
+  </data>
+  <data name="lblType.Text" xml:space="preserve">
+    <value>类型：</value>
+  </data>
+  <data name="lblDirection.Text" xml:space="preserve">
+    <value>方向：</value>
+  </data>
+  <data name="lblPort.Text" xml:space="preserve">
+    <value>端口：</value>
+  </data>
+  <data name="lblExtra.Text" xml:space="preserve">
+    <value>主机：</value>
+  </data>
+  <data name="chkWriteAccess.Text" xml:space="preserve">
+    <value>写入</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>添加连接</value>
+  </data>
+  <data name="gbConnections.Text" xml:space="preserve">
+    <value>活动连接</value>
+  </data>
+  <data name="colType.HeaderText" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="colDirection.HeaderText" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="colAddress.HeaderText" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="colStatus.HeaderText" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="colWrite.HeaderText" xml:space="preserve">
+    <value>写入</value>
+  </data>
+  <data name="colStop.HeaderText" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="colStop.Text" xml:space="preserve">
+    <value>停止</value>
+  </data>
+  <data name="gbLog.Text" xml:space="preserve">
+    <value>输出日志</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>清除</value>
+  </data>
 </root>

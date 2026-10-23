@@ -4714,4 +4714,19 @@ Please choose one by typing the associated number.</value>
 <data name="PlannerSeverity" xml:space="preserve">
     <value>严重级别</value>
 </data>
+  <data name="ChangeModeTo" xml:space="preserve">
+    <value>切换模式至{0}</value>
+  </data>
+  <data name="MavlinkTreeSystem" xml:space="preserve">
+    <value>系统 {0}</value>
+  </data>
+  <data name="MavlinkTreeVehicle" xml:space="preserve">
+    <value>载具 {0}</value>
+  </data>
+  <data name="MavlinkTreeComp" xml:space="preserve">
+    <value>组件 {0} {1}</value>
+  </data>
+  <data name="ScanNow" xml:space="preserve">
+    <value>立即扫描</value>
+  </data>
 </root>

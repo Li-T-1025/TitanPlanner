@@ -63,12 +63,14 @@
             // colFile
             // 
             this.colFile.HeaderText = "File";
+            resources.ApplyResources(this.colFile, "colFile");
             this.colFile.Name = "colFile";
             this.colFile.ReadOnly = true;
             // 
             // colInternal
             // 
             this.colInternal.HeaderText = "Internal";
+            resources.ApplyResources(this.colInternal, "colInternal");
             this.colInternal.Name = "colInternal";
             this.colInternal.ReadOnly = true;
             this.colInternal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -77,6 +79,7 @@
             // colEnglish
             // 
             this.colEnglish.HeaderText = "English";
+            resources.ApplyResources(this.colEnglish, "colEnglish");
             this.colEnglish.Name = "colEnglish";
             this.colEnglish.ReadOnly = true;
             this.colEnglish.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -85,6 +88,7 @@
             // colOtherLang
             // 
             this.colOtherLang.HeaderText = "Other Lang";
+            resources.ApplyResources(this.colOtherLang, "colOtherLang");
             this.colOtherLang.Name = "colOtherLang";
             this.colOtherLang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.colOtherLang.Width = 150;
@@ -97,6 +101,7 @@
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Load";
+            resources.ApplyResources(this.button1, "button1");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -108,6 +113,7 @@
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
             this.button2.Text = "Save";
+            resources.ApplyResources(this.button2, "button2");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -136,6 +142,7 @@
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
             this.button3.Text = "Extra";
+            resources.ApplyResources(this.button3, "button3");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -152,6 +159,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Language Editor";
+            resources.ApplyResources(this, "$this");
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -137,4 +137,76 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>104, 17</value>
   </metadata>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Line Seperation</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Lead</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>User Offline trig</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>alt seperation</value>
+  </data>
+  <data name="but_rth.Text" xml:space="preserve">
+    <value>set mode rth</value>
+  </data>
+  <data name="but_resetmode.Text" xml:space="preserve">
+    <value>Reset Mode</value>
+  </data>
+  <data name="but_airmaster.Text" xml:space="preserve">
+    <value>Set Air Master</value>
+  </data>
+  <data name="but_start.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="but_master.Text" xml:space="preserve">
+    <value>Set Ground Master</value>
+  </data>
+  <data name="but_setmoderltland.Text" xml:space="preserve">
+    <value>RTL (abandon mission)</value>
+  </data>
+  <data name="chk_alt_interleave.Text" xml:space="preserve">
+    <value>Alt Interleave</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>WPControl</value>
+  </data>
+  <data name="numericUpDown1.ToolTip" xml:space="preserve">
+    <value>the seperation between the drones in the air</value>
+  </data>
+  <data name="numericUpDown2.ToolTip" xml:space="preserve">
+    <value>the amount of lead the master air drone will be infront of the ground master</value>
+  </data>
+  <data name="PNL_status.ToolTip" xml:space="preserve">
+    <value>status of all the connected devices</value>
+  </data>
+  <data name="num_useroffline.ToolTip" xml:space="preserve">
+    <value>the distance the groundmaster can go over to trigger the drones to switch to return to home</value>
+  </data>
+  <data name="num_rtl_alt.ToolTip" xml:space="preserve">
+    <value>the distance the groundmaster can go over to trigger the drones to switch to return to home</value>
+  </data>
+  <data name="num_wpnav_accel.ToolTip" xml:space="preserve">
+    <value>the distance the groundmaster can go over to trigger the drones to switch to return to home</value>
+  </data>
+  <data name="but_rth.ToolTip" xml:space="preserve">
+    <value>set the mode to return to home</value>
+  </data>
+  <data name="but_resetmode.ToolTip" xml:space="preserve">
+    <value>Reset the internal state back so you can begin again</value>
+  </data>
+  <data name="but_airmaster.ToolTip" xml:space="preserve">
+    <value>set the air master drone</value>
+  </data>
+  <data name="but_start.ToolTip" xml:space="preserve">
+    <value>start/stop sending commands to the drones</value>
+  </data>
+  <data name="but_master.ToolTip" xml:space="preserve">
+    <value>set the ground master drone</value>
+  </data>
+  <data name="but_setmoderltland.ToolTip" xml:space="preserve">
+    <value>set the mode to return to home</value>
+  </data>
 </root>

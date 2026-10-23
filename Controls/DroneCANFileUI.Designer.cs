@@ -121,15 +121,18 @@
             // columnHeaderName
             // 
             this.columnHeaderName.Text = "Name";
+            resources.ApplyResources(this.columnHeaderName, "columnHeaderName");
             this.columnHeaderName.Width = 83;
             // 
             // columnHeaderType
             // 
             this.columnHeaderType.Text = "Type";
+            resources.ApplyResources(this.columnHeaderType, "columnHeaderType");
             // 
             // columnHeaderSize
             // 
             this.columnHeaderSize.Text = "Size";
+            resources.ApplyResources(this.columnHeaderSize, "columnHeaderSize");
             // 
             // contextMenuStrip1
             // 
@@ -149,6 +152,7 @@
             this.downloadToolStripMenuItem.Name = "downloadToolStripMenuItem";
             this.downloadToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.downloadToolStripMenuItem.Text = "Download";
+            resources.ApplyResources(this.downloadToolStripMenuItem, "downloadToolStripMenuItem");
             this.downloadToolStripMenuItem.Click += new System.EventHandler(this.DownloadToolStripMenuItem_Click);
             // 
             // uploadToolStripMenuItem
@@ -156,6 +160,7 @@
             this.uploadToolStripMenuItem.Name = "uploadToolStripMenuItem";
             this.uploadToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.uploadToolStripMenuItem.Text = "Upload";
+            resources.ApplyResources(this.uploadToolStripMenuItem, "uploadToolStripMenuItem");
             this.uploadToolStripMenuItem.Click += new System.EventHandler(this.UploadToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
@@ -163,6 +168,7 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.deleteToolStripMenuItem.Text = "&Delete";
+            resources.ApplyResources(this.deleteToolStripMenuItem, "deleteToolStripMenuItem");
             this.deleteToolStripMenuItem.Visible = false;
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
@@ -171,6 +177,7 @@
             this.renameToolStripMenuItem.Name = "renameToolStripMenuItem";
             this.renameToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.renameToolStripMenuItem.Text = "&Rename";
+            resources.ApplyResources(this.renameToolStripMenuItem, "renameToolStripMenuItem");
             this.renameToolStripMenuItem.Visible = false;
             this.renameToolStripMenuItem.Click += new System.EventHandler(this.RenameToolStripMenuItem_Click);
             // 
@@ -179,6 +186,7 @@
             this.newFolderToolStripMenuItem.Name = "newFolderToolStripMenuItem";
             this.newFolderToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.newFolderToolStripMenuItem.Text = "New Folder";
+            resources.ApplyResources(this.newFolderToolStripMenuItem, "newFolderToolStripMenuItem");
             this.newFolderToolStripMenuItem.Visible = false;
             this.newFolderToolStripMenuItem.Click += new System.EventHandler(this.NewFolderToolStripMenuItem_Click);
             // 
@@ -187,6 +195,7 @@
             this.getCRC32ToolStripMenuItem.Name = "getCRC32ToolStripMenuItem";
             this.getCRC32ToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.getCRC32ToolStripMenuItem.Text = "GetCRC32";
+            resources.ApplyResources(this.getCRC32ToolStripMenuItem, "getCRC32ToolStripMenuItem");
             this.getCRC32ToolStripMenuItem.Visible = false;
             this.getCRC32ToolStripMenuItem.Click += new System.EventHandler(this.GetCRC32ToolStripMenuItem_Click);
             // 

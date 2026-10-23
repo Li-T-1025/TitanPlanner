@@ -206,4 +206,13 @@ NOTE: you must put the ap into guided mode manually</value>
         AAf4AAAP/AAAH/4AAD//gAD//+AD//////8=
 </value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Pick the Nmea gps port and baud rate&#xD;&#xA;</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Select your update rate&#xD;&#xA;</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Follow Me</value>
+  </data>
 </root>

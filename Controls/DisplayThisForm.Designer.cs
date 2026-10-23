@@ -28,7 +28,8 @@ namespace MissionPlanner.Controls
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayThisForm));
+
             //
             // DisplayThisForm
             //
@@ -39,6 +40,7 @@ namespace MissionPlanner.Controls
             this.Name = "DisplayThisForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Display This";
+            resources.ApplyResources(this, "$this");
             this.Load += new System.EventHandler(this.DisplayThisForm_Load);
             this.ResumeLayout(false);
         }

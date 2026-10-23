@@ -93,7 +93,7 @@ namespace MissionPlanner.Controls
                 var sysidnodes = treeView1.Nodes.Find(mavLinkMessage.sysid.ToString(), false);
                 if (sysidnodes.Length == 0)
                 {
-                    sysidnode = new TreeNode("Vehicle " + mavLinkMessage.sysid)
+                    sysidnode = new TreeNode(string.Format(MissionPlanner.Strings.MavlinkTreeVehicle, mavLinkMessage.sysid))
                     {
                         Name = mavLinkMessage.sysid.ToString()
                     };
@@ -106,7 +106,7 @@ namespace MissionPlanner.Controls
                 var compidnodes = sysidnode.Nodes.Find(mavLinkMessage.compid.ToString(), false);
                 if (compidnodes.Length == 0)
                 {
-                    compidnode = new TreeNode("Comp " + mavLinkMessage.compid + " " + (MAVLink.MAV_COMPONENT)mavLinkMessage.compid)
+                    compidnode = new TreeNode(string.Format(MissionPlanner.Strings.MavlinkTreeComp, mavLinkMessage.compid, (MAVLink.MAV_COMPONENT)mavLinkMessage.compid))
                     {
                         Name = mavLinkMessage.compid.ToString()
                     };

@@ -67,6 +67,7 @@
     <EmbeddedResource Include="simpleexample.resx">
       <DependentUpon>simpleexample.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="simpleexample.zh-Hans.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

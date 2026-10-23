@@ -120,4 +120,13 @@
   <data name="textBox1.Text" xml:space="preserve">
     <value>这是什么。 1. 从nmea gps获得当前gps记录。 2. 以你选的频率发送引导模式航点至APM。 （记住这限制了你用什么gps) 如何使用 1. 连接APM。 2. 起飞，测试引导模式正常工作。 3. 打开这个然后为你的nmea gps选择COM口和波特率。 4. 它现在就回跟着你了</value>
   </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>选择 NMEA GPS 串口和波特率&#xD;&#xA;</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>选择更新速率&#xD;&#xA;</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>跟随我</value>
+  </data>
 </root>

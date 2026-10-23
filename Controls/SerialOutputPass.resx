@@ -135,4 +135,58 @@
         AAf4AAAP/AAAH/4AAD//gAD//+AD//////8=
 </value>
   </data>
+  <data name="gbAddConnection.Text" xml:space="preserve">
+    <value>Add Connection</value>
+  </data>
+  <data name="lblType.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="lblDirection.Text" xml:space="preserve">
+    <value>Direction:</value>
+  </data>
+  <data name="lblPort.Text" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="lblExtra.Text" xml:space="preserve">
+    <value>Host:</value>
+  </data>
+  <data name="chkWriteAccess.Text" xml:space="preserve">
+    <value>Write</value>
+  </data>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>Add Connection</value>
+  </data>
+  <data name="gbConnections.Text" xml:space="preserve">
+    <value>Active Connections</value>
+  </data>
+  <data name="colType.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="colDirection.HeaderText" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="colAddress.HeaderText" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="colStatus.HeaderText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="colWrite.HeaderText" xml:space="preserve">
+    <value>Write</value>
+  </data>
+  <data name="colStop.HeaderText" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="colStop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="gbLog.Text" xml:space="preserve">
+    <value>Output Log</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MAVLink Output</value>
+  </data>
 </root>

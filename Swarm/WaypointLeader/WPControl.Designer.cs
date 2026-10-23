@@ -68,7 +68,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(75, 20);
             this.numericUpDown1.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.numericUpDown1, "the seperation between the drones in the air");
+            this.toolTip1.SetToolTip(this.numericUpDown1, resources.GetString("numericUpDown1.ToolTip"));
             this.numericUpDown1.Value = new decimal(new int[] {
             5,
             0,
@@ -84,6 +84,7 @@
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Line Seperation";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // label2
             // 
@@ -93,6 +94,7 @@
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Lead";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // numericUpDown2
             // 
@@ -106,7 +108,7 @@
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(75, 20);
             this.numericUpDown2.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.numericUpDown2, "the amount of lead the master air drone will be infront of the ground master");
+            this.toolTip1.SetToolTip(this.numericUpDown2, resources.GetString("numericUpDown2.ToolTip"));
             this.numericUpDown2.Value = new decimal(new int[] {
             20,
             0,
@@ -127,7 +129,7 @@
             this.PNL_status.Name = "PNL_status";
             this.PNL_status.Size = new System.Drawing.Size(758, 173);
             this.PNL_status.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.PNL_status, "status of all the connected devices");
+            this.toolTip1.SetToolTip(this.PNL_status, resources.GetString("PNL_status.ToolTip"));
             // 
             // txt_mode
             // 
@@ -146,6 +148,7 @@
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "User Offline trig";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // num_useroffline
             // 
@@ -159,8 +162,7 @@
             this.num_useroffline.Name = "num_useroffline";
             this.num_useroffline.Size = new System.Drawing.Size(75, 20);
             this.num_useroffline.TabIndex = 18;
-            this.toolTip1.SetToolTip(this.num_useroffline, "the distance the groundmaster can go over to trigger the drones to switch to retu" +
-        "rn to home");
+            this.toolTip1.SetToolTip(this.num_useroffline, resources.GetString("num_useroffline.ToolTip"));
             this.num_useroffline.Value = new decimal(new int[] {
             10,
             0,
@@ -190,8 +192,7 @@
             this.num_rtl_alt.Name = "num_rtl_alt";
             this.num_rtl_alt.Size = new System.Drawing.Size(75, 20);
             this.num_rtl_alt.TabIndex = 22;
-            this.toolTip1.SetToolTip(this.num_rtl_alt, "the distance the groundmaster can go over to trigger the drones to switch to retu" +
-        "rn to home");
+            this.toolTip1.SetToolTip(this.num_rtl_alt, resources.GetString("num_rtl_alt.ToolTip"));
             this.num_rtl_alt.Value = new decimal(new int[] {
             2,
             0,
@@ -206,7 +207,8 @@
             this.but_rth.Size = new System.Drawing.Size(75, 23);
             this.but_rth.TabIndex = 17;
             this.but_rth.Text = "set mode rth";
-            this.toolTip1.SetToolTip(this.but_rth, "set the mode to return to home");
+            resources.ApplyResources(this.but_rth, "but_rth");
+            this.toolTip1.SetToolTip(this.but_rth, resources.GetString("but_rth.ToolTip"));
             this.but_rth.UseVisualStyleBackColor = true;
             this.but_rth.Click += new System.EventHandler(this.but_rth_Click);
             // 
@@ -217,7 +219,8 @@
             this.but_resetmode.Size = new System.Drawing.Size(75, 23);
             this.but_resetmode.TabIndex = 16;
             this.but_resetmode.Text = "Reset Mode";
-            this.toolTip1.SetToolTip(this.but_resetmode, "Reset the internal state back so you can begin again");
+            resources.ApplyResources(this.but_resetmode, "but_resetmode");
+            this.toolTip1.SetToolTip(this.but_resetmode, resources.GetString("but_resetmode.ToolTip"));
             this.but_resetmode.UseVisualStyleBackColor = true;
             this.but_resetmode.Click += new System.EventHandler(this.but_resetmode_Click);
             // 
@@ -228,7 +231,8 @@
             this.but_airmaster.Size = new System.Drawing.Size(75, 37);
             this.but_airmaster.TabIndex = 13;
             this.but_airmaster.Text = "Set Air Master";
-            this.toolTip1.SetToolTip(this.but_airmaster, "set the air master drone");
+            resources.ApplyResources(this.but_airmaster, "but_airmaster");
+            this.toolTip1.SetToolTip(this.but_airmaster, resources.GetString("but_airmaster.ToolTip"));
             this.but_airmaster.UseVisualStyleBackColor = true;
             this.but_airmaster.Click += new System.EventHandler(this.but_airmaster_Click);
             // 
@@ -239,7 +243,8 @@
             this.but_start.Size = new System.Drawing.Size(75, 23);
             this.but_start.TabIndex = 8;
             this.but_start.Text = "Start";
-            this.toolTip1.SetToolTip(this.but_start, "start/stop sending commands to the drones");
+            resources.ApplyResources(this.but_start, "but_start");
+            this.toolTip1.SetToolTip(this.but_start, resources.GetString("but_start.ToolTip"));
             this.but_start.UseVisualStyleBackColor = true;
             this.but_start.Click += new System.EventHandler(this.but_start_Click);
             // 
@@ -250,7 +255,8 @@
             this.but_master.Size = new System.Drawing.Size(75, 37);
             this.but_master.TabIndex = 3;
             this.but_master.Text = "Set Ground Master";
-            this.toolTip1.SetToolTip(this.but_master, "set the ground master drone");
+            resources.ApplyResources(this.but_master, "but_master");
+            this.toolTip1.SetToolTip(this.but_master, resources.GetString("but_master.ToolTip"));
             this.but_master.UseVisualStyleBackColor = true;
             this.but_master.Click += new System.EventHandler(this.but_master_Click);
             // 
@@ -261,7 +267,8 @@
             this.but_setmoderltland.Size = new System.Drawing.Size(75, 44);
             this.but_setmoderltland.TabIndex = 26;
             this.but_setmoderltland.Text = "RTL (abandon mission)";
-            this.toolTip1.SetToolTip(this.but_setmoderltland, "set the mode to return to home");
+            resources.ApplyResources(this.but_setmoderltland, "but_setmoderltland");
+            this.toolTip1.SetToolTip(this.but_setmoderltland, resources.GetString("but_setmoderltland.ToolTip"));
             this.but_setmoderltland.UseVisualStyleBackColor = true;
             this.but_setmoderltland.Click += new System.EventHandler(this.but_setmoderltland_Click);
             // 
@@ -277,8 +284,7 @@
             this.num_wpnav_accel.Name = "num_wpnav_accel";
             this.num_wpnav_accel.Size = new System.Drawing.Size(75, 20);
             this.num_wpnav_accel.TabIndex = 27;
-            this.toolTip1.SetToolTip(this.num_wpnav_accel, "the distance the groundmaster can go over to trigger the drones to switch to retu" +
-        "rn to home");
+            this.toolTip1.SetToolTip(this.num_wpnav_accel, resources.GetString("num_wpnav_accel.ToolTip"));
             this.num_wpnav_accel.Value = new decimal(new int[] {
             1,
             0,
@@ -305,6 +311,7 @@
             this.label4.Size = new System.Drawing.Size(70, 13);
             this.label4.TabIndex = 23;
             this.label4.Text = "alt seperation";
+            resources.ApplyResources(this.label4, "label4");
             // 
             // zedGraphControl1
             // 
@@ -331,6 +338,7 @@
             this.chk_alt_interleave.Size = new System.Drawing.Size(88, 17);
             this.chk_alt_interleave.TabIndex = 25;
             this.chk_alt_interleave.Text = "Alt Interleave";
+            resources.ApplyResources(this.chk_alt_interleave, "chk_alt_interleave");
             this.chk_alt_interleave.UseVisualStyleBackColor = true;
             this.chk_alt_interleave.CheckedChanged += new System.EventHandler(this.chk_alt_interleave_CheckedChanged);
             // 
@@ -371,6 +379,7 @@
             this.Controls.Add(this.but_master);
             this.Name = "WPControl";
             this.Text = "WPControl";
+            resources.ApplyResources(this, "$this");
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WPControl_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

@@ -120,4 +120,76 @@
 <data name="textBox1.Text" xml:space="preserve">
     <value>使用方法：&#xD;&#xA;1. 连接所有无人机，包括主机（右键点击顶部图标栏的“连接选项”）&#xD;&#xA;2. 选择正确的载具，然后点击“设置地面主机”&#xD;&#xA;3. 选择正确的载具，然后点击“设置空中主机”&#xD;&#xA;4. 将路径上传到空中主机无人机。&#xD;&#xA;5. 设置间距和领航选项&#xD;&#xA;6. 让所有无人机获得 GPS 锁定并完成校准。（不这样做可能导致解锁前检查失败，可事先测试以确保运行顺畅）&#xD;&#xA;7. 确认地面主机已就绪并在航线上等待&#xD;&#xA;8. 点击开始</value>
 </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>间距</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>领航</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>用户离线触发</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>高度间距</value>
+  </data>
+  <data name="but_rth.Text" xml:space="preserve">
+    <value>设置RTH模式</value>
+  </data>
+  <data name="but_resetmode.Text" xml:space="preserve">
+    <value>重置模式</value>
+  </data>
+  <data name="but_airmaster.Text" xml:space="preserve">
+    <value>设置空中主机</value>
+  </data>
+  <data name="but_start.Text" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="but_master.Text" xml:space="preserve">
+    <value>设置地面主机</value>
+  </data>
+  <data name="but_setmoderltland.Text" xml:space="preserve">
+    <value>RTL（放弃任务）</value>
+  </data>
+  <data name="chk_alt_interleave.Text" xml:space="preserve">
+    <value>高度交错</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>编队控制</value>
+  </data>
+  <data name="numericUpDown1.ToolTip" xml:space="preserve">
+    <value>空中无人机之间的间距</value>
+  </data>
+  <data name="numericUpDown2.ToolTip" xml:space="preserve">
+    <value>空中主机领先地面主机的距离</value>
+  </data>
+  <data name="PNL_status.ToolTip" xml:space="preserve">
+    <value>所有已连接设备的状态</value>
+  </data>
+  <data name="num_useroffline.ToolTip" xml:space="preserve">
+    <value>地面主机超出该距离时，无人机切换为返航</value>
+  </data>
+  <data name="num_rtl_alt.ToolTip" xml:space="preserve">
+    <value>地面主机超出该距离时，无人机切换为返航</value>
+  </data>
+  <data name="num_wpnav_accel.ToolTip" xml:space="preserve">
+    <value>地面主机超出该距离时，无人机切换为返航</value>
+  </data>
+  <data name="but_rth.ToolTip" xml:space="preserve">
+    <value>将模式设置为返航</value>
+  </data>
+  <data name="but_resetmode.ToolTip" xml:space="preserve">
+    <value>重置内部状态，以便重新开始</value>
+  </data>
+  <data name="but_airmaster.ToolTip" xml:space="preserve">
+    <value>设置空中主机无人机</value>
+  </data>
+  <data name="but_start.ToolTip" xml:space="preserve">
+    <value>开始/停止向无人机发送指令</value>
+  </data>
+  <data name="but_master.ToolTip" xml:space="preserve">
+    <value>设置地面主机无人机</value>
+  </data>
+  <data name="but_setmoderltland.ToolTip" xml:space="preserve">
+    <value>将模式设置为返航</value>
+  </data>
 </root>
