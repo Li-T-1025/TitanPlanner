@@ -161,6 +161,150 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             SetupCnCombo(cmb_secondarydisplaystyle, s => UnitCnMap.ContainsKey(s) ? UnitCnMap[s] : s);
 
             BuildLayout();
+            BuildAuthorizationPanel();
+        }
+
+        private System.Windows.Forms.GroupBox grpAuth;
+        private System.Windows.Forms.Label lblMachineCode;
+        private System.Windows.Forms.TextBox txtActivation;
+        private System.Windows.Forms.Button btnActivate;
+        private System.Windows.Forms.Button btnRevoke;
+        private System.Windows.Forms.Label lblAuthStatus;
+
+        private void BuildAuthorizationPanel()
+        {
+            // 外层 Panel 占右侧 460 宽（"布局/主题"面板右侧空白区）
+            var authPanel = new System.Windows.Forms.Panel
+            {
+                Dock = System.Windows.Forms.DockStyle.Right,
+                Width = 460,
+                Padding = new System.Windows.Forms.Padding(8, 0, 0, 0)
+            };
+            // 内层 GroupBox 只占顶部 130 高
+            grpAuth = new System.Windows.Forms.GroupBox
+            {
+                Text = "软件授权",
+                Dock = System.Windows.Forms.DockStyle.Top,
+                Height = 130,
+                Padding = new System.Windows.Forms.Padding(8)
+            };
+            authPanel.Controls.Add(grpAuth);
+            this.Controls.Add(authPanel);
+            authPanel.BringToFront();
+
+            var lblMachine = new System.Windows.Forms.Label
+            {
+                Text = "本机机器码：",
+                Location = new System.Drawing.Point(12, 25),
+                AutoSize = true
+            };
+            lblMachineCode = new System.Windows.Forms.Label
+            {
+                Text = MissionPlanner.Utilities.Authorization.GetMachineCode(),
+                Location = new System.Drawing.Point(100, 25),
+                AutoSize = true,
+                Font = new System.Drawing.Font(System.Drawing.FontFamily.GenericMonospace, 9F, System.Drawing.FontStyle.Bold)
+            };
+            var btnCopy = new System.Windows.Forms.Button
+            {
+                Text = "复制",
+                Location = new System.Drawing.Point(260, 20),
+                Width = 60, Height = 25
+            };
+            btnCopy.Click += (s, e) =>
+            {
+                System.Windows.Forms.Clipboard.SetText(lblMachineCode.Text);
+            };
+
+            var lblCode = new System.Windows.Forms.Label
+            {
+                Text = "激活码：",
+                Location = new System.Drawing.Point(12, 58),
+                AutoSize = true
+            };
+            txtActivation = new System.Windows.Forms.TextBox
+            {
+                Location = new System.Drawing.Point(100, 55),
+                Width = 290,
+                Multiline = true,
+                Height = 25
+            };
+            btnActivate = new System.Windows.Forms.Button
+            {
+                Text = "激活",
+                Location = new System.Drawing.Point(395, 54),
+                Width = 45, Height = 27
+            };
+            btnActivate.Click += (s, e) =>
+            {
+                var (ok, err) = MissionPlanner.Utilities.Authorization.Activate(txtActivation.Text.Trim());
+                System.Windows.Forms.MessageBox.Show(ok ? "激活成功" : ("激活失败：" + err),
+                    "授权", System.Windows.Forms.MessageBoxButtons.OK,
+                    ok ? System.Windows.Forms.MessageBoxIcon.Information : System.Windows.Forms.MessageBoxIcon.Error);
+                RefreshAuthStatus();
+            };
+
+            btnRevoke = new System.Windows.Forms.Button
+            {
+                Text = "撤销授权",
+                Location = new System.Drawing.Point(12, 90),
+                Width = 100, Height = 25
+            };
+            btnRevoke.Click += (s, e) =>
+            {
+                if (System.Windows.Forms.MessageBox.Show("确定撤销当前授权？撤销后软件将退出，该激活码永久作废。",
+                    "撤销授权", System.Windows.Forms.MessageBoxButtons.YesNo,
+                    System.Windows.Forms.MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    MissionPlanner.Utilities.Authorization.Revoke();
+                    System.Windows.Forms.MessageBox.Show("授权已撤销，软件将退出。", "授权",
+                        System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                    System.Windows.Forms.Application.Exit();
+                }
+            };
+
+            lblAuthStatus = new System.Windows.Forms.Label
+            {
+                Location = new System.Drawing.Point(130, 93),
+                AutoSize = true,
+                Font = new System.Drawing.Font(System.Drawing.FontFamily.GenericSansSerif, 9F, System.Drawing.FontStyle.Bold)
+            };
+            RefreshAuthStatus();
+
+            // 每秒刷新授权剩余时间
+            var authUiTimer = new System.Windows.Forms.Timer { Interval = 1000 };
+            authUiTimer.Tick += (s, e) => RefreshAuthStatus();
+            authUiTimer.Start();
+
+            grpAuth.Controls.Add(lblMachine);
+            grpAuth.Controls.Add(lblMachineCode);
+            grpAuth.Controls.Add(btnCopy);
+            grpAuth.Controls.Add(lblCode);
+            grpAuth.Controls.Add(txtActivation);
+            grpAuth.Controls.Add(btnActivate);
+            grpAuth.Controls.Add(btnRevoke);
+            grpAuth.Controls.Add(lblAuthStatus);
+        }
+
+        private void RefreshAuthStatus()
+        {
+            var st = MissionPlanner.Utilities.Authorization.GetStatus();
+            lblAuthStatus.Text = st.display;
+            switch (st.state)
+            {
+                case MissionPlanner.Utilities.Authorization.AuthState.Permanent:
+                case MissionPlanner.Utilities.Authorization.AuthState.Valid:
+                    if (st.remainingSeconds >= 259200) // >3天
+                        lblAuthStatus.ForeColor = System.Drawing.Color.Blue;
+                    else if (st.remainingSeconds >= 86400) // 1~3天
+                        lblAuthStatus.ForeColor = System.Drawing.Color.Goldenrod;
+                    else
+                        lblAuthStatus.ForeColor = System.Drawing.Color.Red;
+                    break;
+                default:
+                    lblAuthStatus.ForeColor = System.Drawing.Color.Red;
+                    break;
+            }
         }
 
         private void BuildLayout()

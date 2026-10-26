@@ -436,23 +436,23 @@ namespace MissionPlanner.Controls
             switch ((MAV_SEVERITY)severity)
             {
                 case MAV_SEVERITY.EMERGENCY:
-                    return "EMERG";
+                    return "紧急";
                 case MAV_SEVERITY.ALERT:
-                    return "ALERT";
+                    return "告警";
                 case MAV_SEVERITY.CRITICAL:
-                    return "CRIT";
+                    return "严重";
                 case MAV_SEVERITY.ERROR:
-                    return "ERROR";
+                    return "错误";
                 case MAV_SEVERITY.WARNING:
-                    return "WARN";
+                    return "警告";
                 case MAV_SEVERITY.NOTICE:
-                    return "NOTICE";
+                    return "通知";
                 case MAV_SEVERITY.INFO:
-                    return "INFO";
+                    return "信息";
                 case MAV_SEVERITY.DEBUG:
-                    return "DEBUG";
+                    return "调试";
                 default:
-                    return "INFO";
+                    return "信息";
             }
         }
 

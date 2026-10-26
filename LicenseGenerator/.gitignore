@@ -1,0 +1,4 @@
+# 私钥绝不入库（公钥 public_key.xml 可入库备份，但客户端公钥已硬编码进 Authorization.cs）
+private_key.xml
+# 注册机生成的激活码按机器码命名，不入库
+*.txt

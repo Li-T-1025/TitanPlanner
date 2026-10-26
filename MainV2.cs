@@ -744,6 +744,48 @@ namespace MissionPlanner
 
             InitializeComponent();
 
+            // 授权：首次启动未授权则弹窗要求激活
+            if (!MissionPlanner.Utilities.Authorization.IsAuthorized())
+            {
+                string machine = MissionPlanner.Utilities.Authorization.GetMachineCode();
+                string prompt = $"软件未授权。\n\n本机机器码：{machine}\n\n请将机器码发给开发者获取激活码，然后粘贴激活码：";
+                while (!MissionPlanner.Utilities.Authorization.IsAuthorized())
+                {
+                    string code = "";
+                    if (InputBox.Show("软件授权", prompt, ref code) != System.Windows.Forms.DialogResult.OK)
+                    {
+                        if (System.Windows.Forms.MessageBox.Show("未授权软件无法使用，是否退出？", "授权",
+                            System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            Application.Exit();
+                            return;
+                        }
+                        continue;
+                    }
+                    var (ok, err) = MissionPlanner.Utilities.Authorization.Activate(code.Trim());
+                    if (!ok)
+                    {
+                        System.Windows.Forms.MessageBox.Show("激活失败：" + err, "授权",
+                            System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            // 授权：每秒累计使用时长，用完自动退出
+            var authTimer = new System.Windows.Forms.Timer { Interval = 1000 };
+            authTimer.Tick += (s, e) =>
+            {
+                MissionPlanner.Utilities.Authorization.Tick();
+                if (!MissionPlanner.Utilities.Authorization.IsAuthorized())
+                {
+                    authTimer.Stop();
+                    System.Windows.Forms.MessageBox.Show("授权已用完，软件将退出。", "授权",
+                        System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Warning);
+                    Application.Exit();
+                }
+            };
+            authTimer.Start();
+
             //Init Theme table and load BurntKermit as a default
             ThemeManager.thmColor = new ThemeColorTable(); //Init colortable
             ThemeManager.thmColor.InitColors(); //This fills up the table with BurntKermit defaults.
