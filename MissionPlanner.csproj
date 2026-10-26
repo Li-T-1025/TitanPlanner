@@ -703,6 +703,48 @@
     <Content Include="aircraft.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="CustomParams\AntennaTracker.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\AP_Periph.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\ArduCopter.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\ArduPlane.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\ArduSub.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\Blimp.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\Copter4.4.4.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\Copter4.6.3.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\Copter4.7.1.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\Heli.apm.pdef.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\LogMessagesCopter.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\LogMessagesPlane.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\LogMessagesRover.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CustomParams\LogMessagesTracker.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Drivers\CubeOrangePlus.inf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1220,6 +1262,22 @@
     <Compile Remove="wix\Properties\AssemblyInfo.cs" />
     <Compile Remove="ZZZLibShims.cs" />
 
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="CustomParams\AntennaTracker.apm.pdef.xml" />
+    <None Remove="CustomParams\AP_Periph.apm.pdef.xml" />
+    <None Remove="CustomParams\ArduCopter.apm.pdef.xml" />
+    <None Remove="CustomParams\ArduPlane.apm.pdef.xml" />
+    <None Remove="CustomParams\ArduSub.apm.pdef.xml" />
+    <None Remove="CustomParams\Blimp.apm.pdef.xml" />
+    <None Remove="CustomParams\Copter4.4.4.apm.pdef.xml" />
+    <None Remove="CustomParams\Copter4.6.3.apm.pdef.xml" />
+    <None Remove="CustomParams\Copter4.7.1.apm.pdef.xml" />
+    <None Remove="CustomParams\Heli.apm.pdef.xml" />
+    <None Remove="CustomParams\LogMessagesCopter.xml" />
+    <None Remove="CustomParams\LogMessagesPlane.xml" />
+    <None Remove="CustomParams\LogMessagesRover.xml" />
+    <None Remove="CustomParams\LogMessagesTracker.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Plugins\AnonymizeBinlogPlugin.cs">

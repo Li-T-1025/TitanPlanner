@@ -328,6 +328,31 @@ namespace MissionPlanner.GCSViews
         }
 
         private BindingList<string> ActionList=new BindingList<string>(Enum.GetNames(typeof(actions)).ToList());
+
+        // 快捷命令下拉显示名（英文 enum 名 -> 中文；SelectedItem 仍保留英文 enum 名用于逻辑比较）
+        private static readonly Dictionary<string, string> ActionDisplayNames = new Dictionary<string, string>
+        {
+            {"Loiter_Unlim", "不限时盘旋"},
+            {"Return_To_Launch", "返航"},
+            {"Preflight_Calibration", "起飞前校准"},
+            {"Mission_Start", "任务开始"},
+            {"Preflight_Reboot_Shutdown", "起飞前重启/关机"},
+            {"Trigger_Camera", "触发相机"},
+            {"System_Time", "同步系统时间"},
+            {"Battery_Reset", "电池重置"},
+            {"ADSB_Out_Ident", "ADS-B 识别"},
+            {"Scripting_cmd_stop_and_restart", "脚本：停止并重启"},
+            {"Scripting_cmd_stop", "脚本：停止"},
+            {"HighLatency_Enable", "启用高延迟模式"},
+            {"HighLatency_Disable", "禁用高延迟模式"},
+            {"Toggle_Safety_Switch", "切换安全开关"},
+            {"Do_Parachute", "开伞"},
+            {"Engine_Start", "启动发动机"},
+            {"Engine_Stop", "停止发动机"},
+            {"Terminate_Flight", "终止飞行"},
+            {"Format_SD_Card", "格式化 SD 卡"},
+            {"Reboot_Mass_Storage", "重启大容量存储"},
+        };
          
         private Dictionary<string, Action<string>> CustomActions = new Dictionary<string, Action<string>>();
 
@@ -634,6 +659,11 @@ namespace MissionPlanner.GCSViews
 
             // Set up action combobox through FlightDataActions
             flightDataActions1.CMB_action.DataSource = ActionList;
+            flightDataActions1.CMB_action.Format += (s, args) =>
+            {
+                if (args.Value is string name && ActionDisplayNames.TryGetValue(name, out var zh))
+                    args.Value = zh;
+            };
 
             flightDataActions1.CMB_modes.DataSource = ArduPilot.Common.getModesList(MainV2.comPort.MAV.cs.firmware);
             flightDataActions1.CMB_modes.ValueMember = "Key";
@@ -1667,11 +1697,12 @@ namespace MissionPlanner.GCSViews
                 MainV2.comPort.UnSubscribeToPacketType(sub);
                 if (ans == false)
                 {
+                    string actionZh = action == "Disarm" ? "上锁" : "解锁";
                     if (CustomMessageBox.Show(
-                            action + " failed.\n" + sb.ToString() + "\nForce " + action +
-                            " can bypass safety checks,\nwhich can lead to the vehicle crashing\nand causing serious injuries.\n\nDo you wish to Force " +
-                            action + "?", Strings.ERROR, CustomMessageBox.MessageBoxButtons.YesNo,
-                            CustomMessageBox.MessageBoxIcon.Exclamation, "Force " + action, "Cancel") ==
+                            actionZh + "失败。\n" + sb.ToString() + "\n强制" + actionZh +
+                            "可绕过安全检查，\n可能导致飞行器坠毁\n并造成严重伤害。\n\n是否强制" +
+                            actionZh + "？", Strings.ERROR, CustomMessageBox.MessageBoxButtons.YesNo,
+                            CustomMessageBox.MessageBoxIcon.Exclamation, "强制" + actionZh, "取消") ==
                         CustomMessageBox.DialogResult.Yes)
                     {
                         ans = MainV2.comPort.doARM(!isitarmed, true);
@@ -2338,11 +2369,11 @@ namespace MissionPlanner.GCSViews
         {
             // Custom action handling. Only actions registered by a plugin are in the
             // dictionary, so an indexer lookup would throw for every built in action.
-            if (CustomActions.TryGetValue(flightDataActions1.CMB_action.Text, out var customAction) && customAction != null)
+            if (CustomActions.TryGetValue((string)flightDataActions1.CMB_action.SelectedItem, out var customAction) && customAction != null)
             {
                 try
                 {
-                    customAction.Invoke(flightDataActions1.CMB_action.Text);
+                    customAction.Invoke((string)flightDataActions1.CMB_action.SelectedItem);
                 }
                 catch (Exception ex)
                 {
@@ -2351,7 +2382,7 @@ namespace MissionPlanner.GCSViews
                 return;
             }
 
-            if (flightDataActions1.CMB_action.Text == actions.Format_SD_Card.ToString())
+            if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Format_SD_Card.ToString())
             {
                  try
                 {
@@ -2369,7 +2400,7 @@ namespace MissionPlanner.GCSViews
 
             try
             {
-                if (flightDataActions1.CMB_action.Text == actions.Trigger_Camera.ToString())
+                if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Trigger_Camera.ToString())
                 {
                     MainV2.comPort.setDigicamControl(true);
                     return;
@@ -2381,7 +2412,7 @@ namespace MissionPlanner.GCSViews
                 return;
             }
 
-            if (flightDataActions1.CMB_action.Text == actions.Scripting_cmd_stop_and_restart.ToString())
+            if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Scripting_cmd_stop_and_restart.ToString())
             {
                 try
                 {
@@ -2395,7 +2426,7 @@ namespace MissionPlanner.GCSViews
                 }
             }
 
-            if (flightDataActions1.CMB_action.Text == actions.Scripting_cmd_stop.ToString())
+            if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Scripting_cmd_stop.ToString())
             {
                 try
                 {
@@ -2409,7 +2440,7 @@ namespace MissionPlanner.GCSViews
                 }
             }
 
-            if (flightDataActions1.CMB_action.Text == actions.System_Time.ToString())
+            if ((string)flightDataActions1.CMB_action.SelectedItem == actions.System_Time.ToString())
             {
                 var now = DateTime.UtcNow;
                 var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
@@ -2441,27 +2472,27 @@ namespace MissionPlanner.GCSViews
                     int param3 = 1;
 
                     // request gyro
-                    if (flightDataActions1.CMB_action.Text == actions.Preflight_Calibration.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Preflight_Calibration.ToString())
                     {
                         if (MainV2.comPort.MAV.cs.firmware == Firmwares.ArduCopter2)
                             param1 = 1; // gyro
                         param3 = 1; // baro / airspeed
                     }
 
-                    if (flightDataActions1.CMB_action.Text == actions.Terminate_Flight.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Terminate_Flight.ToString())
                     {
                         MainV2.comPort.doCommand(MainV2.comPort.MAV.sysid, MainV2.comPort.MAV.compid, MAVLink.MAV_CMD.DO_FLIGHTTERMINATION, 1.0f, 0, 0, 0, 0, 0, 0);
                         ((Control)sender).Enabled = true;
                         return;
                     }
 
-                    if (flightDataActions1.CMB_action.Text == actions.Preflight_Reboot_Shutdown.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Preflight_Reboot_Shutdown.ToString())
                     {
                         MainV2.comPort.doReboot();
                         ((Control) sender).Enabled = true;
                         return;
                     }
-                    if (flightDataActions1.CMB_action.Text == actions.Reboot_Mass_Storage.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Reboot_Mass_Storage.ToString())
                     {
                         const float rebootToMassStorage = 5f; // ArduPilot REBOOT_TO_MASS_STORAGE action
                         MainV2.comPort.doCommand(MainV2.comPort.MAV.sysid, MainV2.comPort.MAV.compid,
@@ -2469,19 +2500,19 @@ namespace MissionPlanner.GCSViews
                         ((Control) sender).Enabled = true;
                         return;
                     }
-                    if (flightDataActions1.CMB_action.Text == actions.HighLatency_Enable.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.HighLatency_Enable.ToString())
                     {
                         MainV2.comPort.doHighLatency(true);
                         ((Control)sender).Enabled = true;
                         return;
                     }
-                    if (flightDataActions1.CMB_action.Text == actions.HighLatency_Disable.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.HighLatency_Disable.ToString())
                     {
                         MainV2.comPort.doHighLatency(false);
                         ((Control)sender).Enabled = true;
                         return;
                     }
-                    if (flightDataActions1.CMB_action.Text == actions.Toggle_Safety_Switch.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Toggle_Safety_Switch.ToString())
                     {
                         var target_system = MainV2.comPort.sysidcurrent;
                         if (target_system == 0) {
@@ -2494,20 +2525,20 @@ namespace MissionPlanner.GCSViews
                         ((Control)sender).Enabled = true;
                         return;
                     }
-                    if (flightDataActions1.CMB_action.Text == actions.Engine_Start.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Engine_Start.ToString())
                     {
                         MainV2.comPort.doEngineControl(MainV2.comPort.sysidcurrent, (byte)MainV2.comPort.compidcurrent, true);
                         ((Control)sender).Enabled = true;
                         return;
                     }
-                    if (flightDataActions1.CMB_action.Text == actions.Engine_Stop.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Engine_Stop.ToString())
                     {
                         MainV2.comPort.doEngineControl(MainV2.comPort.sysidcurrent, (byte)MainV2.comPort.compidcurrent, false);
                         ((Control)sender).Enabled = true;
                         return;
                     }
 
-                    if (flightDataActions1.CMB_action.Text == actions.Battery_Reset.ToString())
+                    if ((string)flightDataActions1.CMB_action.SelectedItem == actions.Battery_Reset.ToString())
                     {
                         param1 = 0xff; // batt 1
                         param2 = 100; // 100%
@@ -2517,12 +2548,12 @@ namespace MissionPlanner.GCSViews
                     MAVLink.MAV_CMD cmd;
                     try
                     {
-                        cmd = (MAVLink.MAV_CMD) Enum.Parse(typeof(MAVLink.MAV_CMD), flightDataActions1.CMB_action.Text.ToUpper(CultureInfo.InvariantCulture));
+                        cmd = (MAVLink.MAV_CMD) Enum.Parse(typeof(MAVLink.MAV_CMD), ((string)flightDataActions1.CMB_action.SelectedItem).ToUpper(CultureInfo.InvariantCulture));
                     }
                     catch (ArgumentException ex)
                     {
                         cmd = (MAVLink.MAV_CMD) Enum.Parse(typeof(MAVLink.MAV_CMD),
-                            "DO_START_" + flightDataActions1.CMB_action.Text.ToUpper(CultureInfo.InvariantCulture));
+                            "DO_START_" + ((string)flightDataActions1.CMB_action.SelectedItem).ToUpper(CultureInfo.InvariantCulture));
                     }
 
                     if (MainV2.comPort.doCommand(cmd, param1, param2, param3, 0, 0, 0, 0))
@@ -3674,6 +3705,22 @@ namespace MissionPlanner.GCSViews
                     flightDataActions1.CMB_mountmode.DataSource = item;
                     flightDataActions1.CMB_mountmode.DisplayMember = "Value";
                     flightDataActions1.CMB_mountmode.ValueMember = "Key";
+                    flightDataActions1.CMB_mountmode.Format += (s, args) =>
+                    {
+                        if (args.Value is string v)
+                        {
+                            switch (v)
+                            {
+                                case "Retracted": args.Value = "收起"; break;
+                                case "Neutral": args.Value = "中立"; break;
+                                case "MAVLink Targeting": args.Value = "MAVLink 目标"; break;
+                                case "RC Targeting": args.Value = "遥控目标"; break;
+                                case "GPS Point": args.Value = "GPS 指向点"; break;
+                                case "SysID Target": args.Value = "SysID 目标"; break;
+                                case "Home Location": args.Value = "home 位置"; break;
+                            }
+                        }
+                    };
                     break;
                 }
             }

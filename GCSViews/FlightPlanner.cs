@@ -236,7 +236,20 @@ namespace MissionPlanner.GCSViews
 
             CMB_altmode.DisplayMember = "Value";
             CMB_altmode.ValueMember = "Key";
+            CMB_altmode.FormattingEnabled = true;
             CMB_altmode.DataSource = EnumTranslator.EnumToList<altmode>();
+            CMB_altmode.Format += (s, e) =>
+            {
+                if (e.Value is string v)
+                {
+                    switch (v)
+                    {
+                        case "Relative": e.Value = "相对高度"; break;
+                        case "Absolute": e.Value = "绝对高度"; break;
+                        case "Terrain": e.Value = "地形高度"; break;
+                    }
+                }
+            };
 
             //set default
             CMB_altmode.SelectedItem = altmode.Relative;
@@ -2259,10 +2272,8 @@ namespace MissionPlanner.GCSViews
                 BUT_Add.Visible = false;
                 processToScreen(MainV2.comPort.MAV.fencepoints.Select(a => (Locationwp) a.Value).ToList());
 
-                Common.MessageShowAgain("FlightPlan Fence", "Please use the Polygon drawing tool to draw " +
-                                                            "Inclusion and Exclusion areas (round circle to the left)," +
-                                                            " once drawn use the same icon to convert it to a inclusion " +
-                                                            "or exclusion fence");
+                Common.MessageShowAgain("飞行计划电子围栏", "请使用多边形绘制工具在地图上绘制包含/排除区域（左侧的圆形图标）。" +
+                                                            "绘制完成后，再次点击同一图标即可将其转换为包含或排除围栏。");
             }
             else
             {

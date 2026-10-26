@@ -412,8 +412,8 @@ namespace MissionPlanner.Controls
                 if (!isArmed)
                 {
                     var confirmResult = Common.MessageShowAgain(
-                        "Arm Vehicle",
-                        "Please confirm you'd like to ARM the vehicle.",
+                        "解锁飞行器",
+                        "请确认要解锁（ARM）飞行器。",
                         true,
                         "ArmVehicleConfirmation");
 
@@ -433,11 +433,12 @@ namespace MissionPlanner.Controls
 
                 if (!result)
                 {
+                    string actionZh = action == "Disarm" ? "上锁" : "解锁";
                     if (CustomMessageBox.Show(
-                            action + " failed.\n" + sb.ToString() + "\nForce " + action +
-                            " can bypass safety checks,\nwhich can lead to the vehicle crashing\nand causing serious injuries.\n\nDo you wish to Force " +
-                            action + "?", Strings.ERROR, CustomMessageBox.MessageBoxButtons.YesNo,
-                            CustomMessageBox.MessageBoxIcon.Exclamation, "Force " + action, "Cancel") ==
+                            actionZh + "失败。\n" + sb.ToString() + "\n强制" + actionZh +
+                            "可绕过安全检查，\n可能导致飞行器坠毁\n并造成严重伤害。\n\n是否强制" +
+                            actionZh + "？", Strings.ERROR, CustomMessageBox.MessageBoxButtons.YesNo,
+                            CustomMessageBox.MessageBoxIcon.Exclamation, "强制" + actionZh, "取消") ==
                         CustomMessageBox.DialogResult.Yes)
                     {
                         result = MainV2.comPort.doARM(!isArmed, true);
@@ -1712,7 +1713,7 @@ namespace MissionPlanner.Controls
                 if (_isArmed != value)
                 {
                     _isArmed = value;
-                    Text = _isArmed ? "ARMED" : "DISARMED";
+                    Text = _isArmed ? "已解锁" : "未解锁";
                     Invalidate();
                 }
             }
@@ -1723,7 +1724,7 @@ namespace MissionPlanner.Controls
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
             Font = new Font("Segoe UI", 11F, FontStyle.Bold);
             Cursor = Cursors.Hand;
-            Text = "DISARMED";
+            Text = "未解锁";
         }
 
         public override string Text

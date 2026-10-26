@@ -281,6 +281,15 @@
   <data name="TXT_homelat.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="TXT_homelat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 18</value>
+  </data>
+  <data name="TXT_homelng.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 42</value>
+  </data>
+  <data name="TXT_homealt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 65</value>
+  </data>
   <data name="panel1.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -886,7 +895,7 @@
     <value>P4</value>
 </data>
 <data name="Frame.HeaderText" xml:space="preserve">
-    <value>框架</value>
+    <value>高度类型</value>
 </data>
 <data name="coordZone.HeaderText" xml:space="preserve">
     <value>带号</value>

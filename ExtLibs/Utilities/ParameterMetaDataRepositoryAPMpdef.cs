@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO.Compression;
+using System.Reflection;
 using System.Threading.Tasks;
 using log4net;
 using SharpCompress.Compressors.Xz;
@@ -34,12 +35,26 @@ namespace MissionPlanner.Utilities
             "Copter", "Plane", "Rover", "Sub", "Tracker"
         };
 
-        static string url = "https://autotest.ardupilot.org/Parameters/{0}/apm.pdef.xml.gz";
+        // 禁用官方服务器下载（TitanPlanner 使用本地 CustomParams 文件）
+        static string url = "";
+        static string urlversioned = "";
 
-        static string urlversioned = "https://autotest.ardupilot.org/Parameters/versioned/{0}/stable-{1}/apm.pdef.xml";
+        // 自定义参数目录：MissionPlanner.exe 同目录下的 CustomParams 文件夹
+        private static readonly string customPdefDir = Path.Combine(
+            Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ".",
+            "CustomParams");
 
         static ParameterMetaDataRepositoryAPMpdef()
         {
+            try
+            {
+                if (!Directory.Exists(customPdefDir))
+                {
+                    Directory.CreateDirectory(customPdefDir);
+                    log.Info("已创建自定义参数文件夹：" + customPdefDir);
+                }
+            }
+            catch (Exception ex) { log.Error(ex); }
             GetMetaData();
         }
 
@@ -60,13 +75,11 @@ namespace MissionPlanner.Utilities
             {
                 try
                 {
-                    var newurl = String.Format(urlversioned, a, version.ToString());
                     var file = Path.Combine(Settings.GetDataDirectory(), a + version.ToString() + ".apm.pdef.xml");
                     if (File.Exists(file))
                         if (new FileInfo(file).LastWriteTime.AddDays(7) > DateTime.Now)
                             return;
-                    var dltask = Download.getFilefromNetAsync(newurl, file);
-                    tlist.Add(dltask);
+                    // 已禁用服务器下载，仅加载本地文件
                 }
                 catch (Exception ex) { log.Error(ex); }
             });
@@ -100,7 +113,6 @@ namespace MissionPlanner.Utilities
             {
                 try
                 {
-                    var newurl = String.Format(url, a);
                     // try the gzipped version first
                     var file = Path.Combine(Settings.GetDataDirectory(), a + ".apm.pdef.xml.gz");
                     if(File.Exists(file))
@@ -111,8 +123,7 @@ namespace MissionPlanner.Utilities
                     if (File.Exists(file2))
                         if (new FileInfo(file2).LastWriteTime.AddDays(7) > DateTime.Now && !force)
                             return;
-                    var dltask = Download.getFilefromNetAsync(newurl, file);
-                    tlist.Add(dltask);
+                    // 已禁用服务器下载，仅加载本地 CustomParams / 缓存文件
                 }
                 catch (Exception ex) { log.Error(ex); }
             });
@@ -166,33 +177,43 @@ namespace MissionPlanner.Utilities
 
         public static void Reload(string vehicle = "")
         {
-            string paramMetaDataXMLFileName =
-                String.Format("{0}{1}", Settings.GetDataDirectory(), vehicle + ".apm.pdef.xml");
+            // 优先级1：exe 同目录 CustomParams 下的自定义文件
+            string customFile = Path.Combine(customPdefDir, vehicle + ".apm.pdef.xml");
+            // 优先级2：系统数据目录缓存
+            string systemFile = Path.Combine(Settings.GetDataDirectory(), vehicle + ".apm.pdef.xml");
+
+            string fileToLoad = File.Exists(customFile) ? customFile : systemFile;
 
             try
             {
-                if (File.Exists(paramMetaDataXMLFileName))
+                if (File.Exists(fileToLoad))
                 {
-                    var doc = XDocument.Load(paramMetaDataXMLFileName);
+                    var doc = XDocument.Load(fileToLoad);
                     _parameterMetaDataXML[vehicle] = doc;
                     _parameterIndex[vehicle] = BuildIndex(doc);
+                    log.Info((fileToLoad == customFile ? "加载自定义参数文件：" : "加载缓存参数文件：") + fileToLoad);
+                }
+                else
+                {
+                    log.Warn("未找到参数文件：" + vehicle + ".apm.pdef.xml（CustomParams 与系统缓存均无）");
                 }
 
             }
-            catch (System.Xml.XmlException ex) 
+            catch (System.Xml.XmlException ex)
             {
                 try
                 {
-                    if (File.Exists(paramMetaDataXMLFileName))
-                        File.Delete(paramMetaDataXMLFileName);
+                    // 解析错误时删除损坏文件，下次回退到另一路径
+                    if (File.Exists(fileToLoad))
+                        File.Delete(fileToLoad);
                 }
                 catch { }
-                log.Error(paramMetaDataXMLFileName);
+                log.Error(fileToLoad);
                 log.Error(ex);
             }
             catch (Exception ex)
             {
-                log.Error(paramMetaDataXMLFileName);
+                log.Error(fileToLoad);
                 log.Error(ex);
             }
         }

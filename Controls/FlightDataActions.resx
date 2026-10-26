@@ -117,82 +117,1321 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<data name="grpCommand.Text" xml:space="preserve">
-    <value>Control</value>
-</data>
-<data name="btnDoAction.Text" xml:space="preserve">
-    <value>Do Action</value>
-</data>
-<data name="btnSetWP.Text" xml:space="preserve">
-    <value>Set WP</value>
-</data>
-<data name="btnSetMode.Text" xml:space="preserve">
-    <value>Apply</value>
-</data>
-<data name="btnSetMount.Text" xml:space="preserve">
+  <data name="&gt;&gt;trackBarYaw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBoxRoll.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnSetMount.Text" xml:space="preserve">
     <value>Set Mount</value>
-</data>
-<data name="btnRestartMission.Text" xml:space="preserve">
-    <value>Restart Mission</value>
-</data>
-<data name="btnResumeMission.Text" xml:space="preserve">
-    <value>Resume Mission</value>
-</data>
-<data name="grpSetpoints.Text" xml:space="preserve">
-    <value>Setpoints</value>
-</data>
-<data name="lblHomeAlt.Text" xml:space="preserve">
-    <value>Home Alt (m):</value>
-</data>
-<data name="btnHomeAlt.Text" xml:space="preserve">
-    <value>Set Home Alt</value>
-</data>
-<data name="lblSpeed.Text" xml:space="preserve">
-    <value>Speed (m/s):</value>
-</data>
-<data name="lblAlt.Text" xml:space="preserve">
-    <value>Altitude (m):</value>
-</data>
-<data name="lblLoiterRad.Text" xml:space="preserve">
-    <value>Loiter Rad (m):</value>
-</data>
-<data name="grpTools.Text" xml:space="preserve">
-    <value>Tools</value>
-</data>
-<data name="btnRawSensor.Text" xml:space="preserve">
-    <value>Raw Sensor</value>
-</data>
-<data name="btnJoystick.Text" xml:space="preserve">
-    <value>Joystick</value>
-</data>
-<data name="btnMessage.Text" xml:space="preserve">
-    <value>Message</value>
-</data>
-<data name="btnClearTrack.Text" xml:space="preserve">
-    <value>Clear Track</value>
-</data>
-<data name="btnReboot.Text" xml:space="preserve">
-    <value>Reboot</value>
-</data>
-<data name="btnAbortLanding.Text" xml:space="preserve">
-    <value>Abort Land</value>
-</data>
-<data name="grpPayload.Text" xml:space="preserve">
-    <value>Payload</value>
-</data>
-<data name="groupBoxPitch.Text" xml:space="preserve">
-    <value>Tilt</value>
-</data>
-<data name="groupBoxYaw.Text" xml:space="preserve">
-    <value>Pan</value>
-</data>
-<data name="groupBoxRoll.Text" xml:space="preserve">
+  </data>
+  <data name="&gt;&gt;btnAbortLanding.Name" xml:space="preserve">
+    <value>btnAbortLanding</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSetMount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="groupBoxRoll.Text" xml:space="preserve">
     <value>Roll</value>
-</data>
-<data name="btnResetGimbal.Text" xml:space="preserve">
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="modSetLoiterRad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 114</value>
+  </data>
+  <data name="&gt;&gt;trackBarYaw.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;modSetSpeed.Parent" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="btnSetWP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="btnDoAction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="lblLoiterRad.Text" xml:space="preserve">
+    <value>Loiter Rad (m):</value>
+  </data>
+  <data name="trackBarPitch.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="btnRestartMission.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="tablePayload.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tableCommand.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnGimbalVideo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="modSetLoiterRad.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;scrollPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;modSetSpeed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnSetWP.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="btnResetGimbal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 32</value>
+  </data>
+  <data name="&gt;&gt;txtPitchPos.Name" xml:space="preserve">
+    <value>txtPitchPos</value>
+  </data>
+  <data name="btnHomeAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 32</value>
+  </data>
+  <data name="btnClearTrack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 41</value>
+  </data>
+  <data name="btnClearTrack.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lblSpeed.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbMount.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="btnSetMode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;scrollPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblHomeAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 15</value>
+  </data>
+  <data name="btnJoystick.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnSetMode.Name" xml:space="preserve">
+    <value>btnSetMode</value>
+  </data>
+  <data name="&gt;&gt;btnSetWP.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmbWaypoint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="groupBoxRoll.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;btnRestartMission.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnGimbalVideo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 153</value>
+  </data>
+  <data name="groupBoxYaw.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="cmbAction.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;btnSetMode.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnGimbalVideo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnSetMount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 79</value>
+  </data>
+  <data name="&gt;&gt;trackBarPitch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSpeed.Text" xml:space="preserve">
+    <value>Speed (m/s):</value>
+  </data>
+  <data name="trackBarRoll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 56</value>
+  </data>
+  <data name="btnSetMode.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBoxPitch.Text" xml:space="preserve">
+    <value>Tilt</value>
+  </data>
+  <data name="btnSetMode.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="modSetSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;txtYawPos.Parent" xml:space="preserve">
+    <value>groupBoxYaw</value>
+  </data>
+  <data name="trackBarRoll.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="&gt;&gt;modSetLoiterRad.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.3.9795.23980, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;grpPayload.Name" xml:space="preserve">
+    <value>grpPayload</value>
+  </data>
+  <data name="btnResumeMission.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 117</value>
+  </data>
+  <data name="txtYawPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 25</value>
+  </data>
+  <data name="cmbAction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="btnHomeAlt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="trackBarYaw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 56</value>
+  </data>
+  <data name="&gt;&gt;grpTools.Name" xml:space="preserve">
+    <value>grpTools</value>
+  </data>
+  <data name="tableTools.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnReboot.Text" xml:space="preserve">
+    <value>Reboot</value>
+  </data>
+  <data name="&gt;&gt;grpTools.Parent" xml:space="preserve">
+    <value>mainFlowLayout</value>
+  </data>
+  <data name="groupBoxPitch.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblAlt.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtPitchPos.Parent" xml:space="preserve">
+    <value>groupBoxPitch</value>
+  </data>
+  <data name="&gt;&gt;tableSetpoints.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 15</value>
+  </data>
+  <data name="&gt;&gt;tablePayload.Parent" xml:space="preserve">
+    <value>grpPayload</value>
+  </data>
+  <data name="groupBoxPitch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 144</value>
+  </data>
+  <data name="&gt;&gt;tableSetpoints.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tableCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 150</value>
+  </data>
+  <data name="cmbWaypoint.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 112</value>
+  </data>
+  <data name="&gt;&gt;btnGimbalVideo.Parent" xml:space="preserve">
+    <value>tablePayload</value>
+  </data>
+  <data name="&gt;&gt;txtPitchPos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtRollPos.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnMessage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblAlt.Parent" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="&gt;&gt;cmbWaypoint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnClearTrack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="tableSetpoints.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBoxYaw.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnRestartMission.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnSetMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 79</value>
+  </data>
+  <data name="&gt;&gt;btnHomeAlt.Name" xml:space="preserve">
+    <value>btnHomeAlt</value>
+  </data>
+  <data name="txtPitchPos.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnAbortLanding.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lblLoiterRad.Parent" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="&gt;&gt;cmbAction.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="trackBarRoll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="trackBarPitch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 122</value>
+  </data>
+  <data name="tableSetpoints.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnClearTrack.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;groupBoxYaw.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblHomeAlt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbModes.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btnDoAction.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="grpSetpoints.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblLoiterRad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 30</value>
+  </data>
+  <data name="btnReboot.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;trackBarYaw.Parent" xml:space="preserve">
+    <value>groupBoxYaw</value>
+  </data>
+  <data name="grpCommand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 169</value>
+  </data>
+  <data name="modSetLoiterRad.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>26, 38</value>
+  </data>
+  <data name="lblHomeAlt.Text" xml:space="preserve">
+    <value>Home Alt (m):</value>
+  </data>
+  <data name="&gt;&gt;btnResetGimbal.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="groupBoxPitch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;tableTools.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="mainFlowLayout.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="lblAlt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="modSetAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 38</value>
+  </data>
+  <data name="&gt;&gt;txtYawPos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grpCommand.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="&gt;&gt;btnReboot.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbMount.Name" xml:space="preserve">
+    <value>cmbMount</value>
+  </data>
+  <data name="&gt;&gt;btnRestartMission.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="lblHomeAlt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnReboot.Name" xml:space="preserve">
+    <value>btnReboot</value>
+  </data>
+  <data name="grpTools.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblSpeed.Parent" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="btnHomeAlt.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;grpCommand.Name" xml:space="preserve">
+    <value>grpCommand</value>
+  </data>
+  <data name="&gt;&gt;mainFlowLayout.Parent" xml:space="preserve">
+    <value>scrollPanel</value>
+  </data>
+  <data name="scrollPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 526</value>
+  </data>
+  <data name="btnMessage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnSetMode.Text" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="&gt;&gt;trackBarPitch.Name" xml:space="preserve">
+    <value>trackBarPitch</value>
+  </data>
+  <data name="&gt;&gt;trackBarRoll.Name" xml:space="preserve">
+    <value>trackBarRoll</value>
+  </data>
+  <data name="&gt;&gt;btnDoAction.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lblHomeAlt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 11</value>
+  </data>
+  <data name="&gt;&gt;cmbWaypoint.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="&gt;&gt;modSetLoiterRad.Parent" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="lblAlt.Text" xml:space="preserve">
+    <value>Altitude (m):</value>
+  </data>
+  <data name="trackBarPitch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>62, 10</value>
+  </data>
+  <data name="trackBarRoll.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="modSetAlt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="cmbAction.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btnSetMount.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;modSetSpeed.Name" xml:space="preserve">
+    <value>modSetSpeed</value>
+  </data>
+  <data name="btnMessage.Text" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="lblSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 49</value>
+  </data>
+  <data name="grpCommand.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>350, 0</value>
+  </data>
+  <data name="scrollPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRoll.Name" xml:space="preserve">
+    <value>groupBoxRoll</value>
+  </data>
+  <data name="trackBarYaw.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="cmbMount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 79</value>
+  </data>
+  <data name="modSetAlt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;btnRawSensor.Parent" xml:space="preserve">
+    <value>tableTools</value>
+  </data>
+  <data name="&gt;&gt;btnClearTrack.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblAlt.Name" xml:space="preserve">
+    <value>lblAlt</value>
+  </data>
+  <data name="txtYawPos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 17</value>
+  </data>
+  <data name="lblLoiterRad.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnGimbalVideo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 32</value>
+  </data>
+  <data name="&gt;&gt;trackBarYaw.Name" xml:space="preserve">
+    <value>trackBarYaw</value>
+  </data>
+  <data name="btnSetWP.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="grpCommand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 7</value>
+  </data>
+  <data name="&gt;&gt;cmbModes.Name" xml:space="preserve">
+    <value>cmbModes</value>
+  </data>
+  <data name="&gt;&gt;btnHomeAlt.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPitch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnMessage.Parent" xml:space="preserve">
+    <value>tableTools</value>
+  </data>
+  <data name="&gt;&gt;txtYawPos.Name" xml:space="preserve">
+    <value>txtYawPos</value>
+  </data>
+  <data name="&gt;&gt;tableTools.Parent" xml:space="preserve">
+    <value>grpTools</value>
+  </data>
+  <data name="&gt;&gt;tableSetpoints.Name" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="&gt;&gt;groupBoxYaw.Parent" xml:space="preserve">
+    <value>tablePayload</value>
+  </data>
+  <data name="btnMessage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="&gt;&gt;grpPayload.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 15</value>
+  </data>
+  <data name="&gt;&gt;btnRawSensor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnReboot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="scrollPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPitch.Name" xml:space="preserve">
+    <value>groupBoxPitch</value>
+  </data>
+  <data name="grpCommand.Text" xml:space="preserve">
+    <value>Control</value>
+  </data>
+  <data name="txtRollPos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 18</value>
+  </data>
+  <data name="btnSetWP.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lblSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRollPos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnSetWP.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblHomeAlt.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;modSetLoiterRad.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="grpPayload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 169</value>
+  </data>
+  <data name="&gt;&gt;tablePayload.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="modSetAlt.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnRawSensor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="cmbAction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 33</value>
+  </data>
+  <data name="&gt;&gt;btnDoAction.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblLoiterRad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="trackBarRoll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 18</value>
+  </data>
+  <data name="grpTools.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 182</value>
+  </data>
+  <data name="&gt;&gt;modSetAlt.Name" xml:space="preserve">
+    <value>modSetAlt</value>
+  </data>
+  <data name="&gt;&gt;grpCommand.Parent" xml:space="preserve">
+    <value>mainFlowLayout</value>
+  </data>
+  <data name="grpPayload.Text" xml:space="preserve">
+    <value>Payload</value>
+  </data>
+  <data name="btnHomeAlt.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 3, 0, 3</value>
+  </data>
+  <data name="grpCommand.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;btnReboot.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtRollPos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSetWP.Name" xml:space="preserve">
+    <value>btnSetWP</value>
+  </data>
+  <data name="&gt;&gt;tableCommand.Parent" xml:space="preserve">
+    <value>grpCommand</value>
+  </data>
+  <data name="&gt;&gt;btnSetMount.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lblAlt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
+  </data>
+  <data name="&gt;&gt;btnSetMode.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tablePayload.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnRawSensor.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="txtRollPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 25</value>
+  </data>
+  <data name="tableCommand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
+  </data>
+  <data name="cmbModes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btnResetGimbal.Parent" xml:space="preserve">
+    <value>tablePayload</value>
+  </data>
+  <data name="btnResetGimbal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 153</value>
+  </data>
+  <data name="modSetSpeed.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>26, 38</value>
+  </data>
+  <data name="btnHomeAlt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 3</value>
+  </data>
+  <data name="&gt;&gt;btnHomeAlt.Parent" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="&gt;&gt;btnClearTrack.Parent" xml:space="preserve">
+    <value>tableTools</value>
+  </data>
+  <data name="btnAbortLanding.Text" xml:space="preserve">
+    <value>Abort Land</value>
+  </data>
+  <data name="cmbMount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;grpSetpoints.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnResumeMission.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnDoAction.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="trackBarYaw.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtPitchPos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 17</value>
+  </data>
+  <data name="btnAbortLanding.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 79</value>
+  </data>
+  <data name="tablePayload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 188</value>
+  </data>
+  <data name="&gt;&gt;btnResetGimbal.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnResumeMission.Text" xml:space="preserve">
+    <value>Resume Mission</value>
+  </data>
+  <data name="tablePayload.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbMount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grpPayload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRollPos.Name" xml:space="preserve">
+    <value>txtRollPos</value>
+  </data>
+  <data name="lblSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnReboot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 79</value>
+  </data>
+  <data name="&gt;&gt;btnRestartMission.Name" xml:space="preserve">
+    <value>btnRestartMission</value>
+  </data>
+  <data name="&gt;&gt;grpPayload.Parent" xml:space="preserve">
+    <value>mainFlowLayout</value>
+  </data>
+  <data name="groupBoxRoll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 78</value>
+  </data>
+  <data name="&gt;&gt;btnMessage.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnHomeAlt.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="groupBoxYaw.Text" xml:space="preserve">
+    <value>Pan</value>
+  </data>
+  <data name="grpTools.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 169</value>
+  </data>
+  <data name="&gt;&gt;lblLoiterRad.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnGimbalVideo.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnResetGimbal.Name" xml:space="preserve">
+    <value>btnResetGimbal</value>
+  </data>
+  <data name="btnResetGimbal.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;trackBarRoll.Parent" xml:space="preserve">
+    <value>groupBoxRoll</value>
+  </data>
+  <data name="lblSpeed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;modSetAlt.Parent" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="grpCommand.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnRawSensor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;groupBoxYaw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPitch.Parent" xml:space="preserve">
+    <value>tablePayload</value>
+  </data>
+  <data name="grpSetpoints.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="btnResetGimbal.Text" xml:space="preserve">
     <value>Reset Position</value>
-</data>
-<data name="btnGimbalVideo.Text" xml:space="preserve">
+  </data>
+  <data name="&gt;&gt;txtPitchPos.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnGimbalVideo.Text" xml:space="preserve">
     <value>Video Control</value>
-</data>
+  </data>
+  <data name="lblLoiterRad.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;modSetSpeed.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.3.9795.23980, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="txtYawPos.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 15</value>
+  </data>
+  <data name="&gt;&gt;mainFlowLayout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tablePayload.Name" xml:space="preserve">
+    <value>tablePayload</value>
+  </data>
+  <data name="&gt;&gt;modSetAlt.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.ModifyandSet, MissionPlanner, Version=1.3.9795.23980, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmbMount.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;tableTools.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tableSetpoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
+  </data>
+  <data name="&gt;&gt;btnDoAction.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="&gt;&gt;btnDoAction.Name" xml:space="preserve">
+    <value>btnDoAction</value>
+  </data>
+  <data name="btnMessage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="&gt;&gt;lblLoiterRad.Name" xml:space="preserve">
+    <value>lblLoiterRad</value>
+  </data>
+  <data name="btnAbortLanding.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="lblLoiterRad.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbModes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="mainFlowLayout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="grpPayload.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 182</value>
+  </data>
+  <data name="cmbMount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 33</value>
+  </data>
+  <data name="&gt;&gt;scrollPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FlightDataActions</value>
+  </data>
+  <data name="&gt;&gt;cmbModes.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="btnResetGimbal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="btnDoAction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 3</value>
+  </data>
+  <data name="modSetAlt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 76</value>
+  </data>
+  <data name="grpPayload.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>350, 0</value>
+  </data>
+  <data name="modSetLoiterRad.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="grpSetpoints.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>350, 0</value>
+  </data>
+  <data name="&gt;&gt;grpTools.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRollPos.Parent" xml:space="preserve">
+    <value>groupBoxRoll</value>
+  </data>
+  <data name="grpPayload.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="tableTools.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnRawSensor" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnJoystick" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnMessage" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnClearTrack" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnReboot" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnAbortLanding" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Absolute,38,Absolute,38,Absolute,38" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="mainFlowLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnResumeMission.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;cmbMount.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblAlt.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnSetMount.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="modSetLoiterRad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 38</value>
+  </data>
+  <data name="&gt;&gt;mainFlowLayout.Name" xml:space="preserve">
+    <value>mainFlowLayout</value>
+  </data>
+  <data name="modSetSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="grpSetpoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 169</value>
+  </data>
+  <data name="&gt;&gt;btnAbortLanding.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtYawPos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnMessage.Name" xml:space="preserve">
+    <value>btnMessage</value>
+  </data>
+  <data name="btnRawSensor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="scrollPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;grpTools.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnJoystick.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="tableSetpoints.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="mainFlowLayout.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="modSetAlt.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>26, 38</value>
+  </data>
+  <data name="&gt;&gt;cmbAction.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="&gt;&gt;cmbAction.Name" xml:space="preserve">
+    <value>cmbAction</value>
+  </data>
+  <data name="trackBarYaw.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 17</value>
+  </data>
+  <data name="&gt;&gt;btnResumeMission.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="&gt;&gt;btnJoystick.Parent" xml:space="preserve">
+    <value>tableTools</value>
+  </data>
+  <data name="&gt;&gt;btnResumeMission.Name" xml:space="preserve">
+    <value>btnResumeMission</value>
+  </data>
+  <data name="&gt;&gt;tableCommand.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblHomeAlt.Name" xml:space="preserve">
+    <value>lblHomeAlt</value>
+  </data>
+  <data name="grpTools.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;btnGimbalVideo.Name" xml:space="preserve">
+    <value>btnGimbalVideo</value>
+  </data>
+  <data name="btnRestartMission.Text" xml:space="preserve">
+    <value>Restart Mission</value>
+  </data>
+  <data name="&gt;&gt;lblHomeAlt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbWaypoint.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblHomeAlt.Parent" xml:space="preserve">
+    <value>tableSetpoints</value>
+  </data>
+  <data name="modSetSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>218, 38</value>
+  </data>
+  <data name="cmbMount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lblSpeed.Name" xml:space="preserve">
+    <value>lblSpeed</value>
+  </data>
+  <data name="tableTools.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableTools.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
+  </data>
+  <data name="cmbModes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 79</value>
+  </data>
+  <data name="&gt;&gt;btnClearTrack.Name" xml:space="preserve">
+    <value>btnClearTrack</value>
+  </data>
+  <data name="&gt;&gt;modSetAlt.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSetMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 1</value>
+  </data>
+  <data name="grpSetpoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>363, 7</value>
+  </data>
+  <data name="btnSetWP.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 41</value>
+  </data>
+  <data name="grpTools.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="btnSetWP.Text" xml:space="preserve">
+    <value>Set WP</value>
+  </data>
+  <data name="btnJoystick.Location" type="System.Drawing.Point, System.Drawing">
+    <value>172, 3</value>
+  </data>
+  <data name="btnRestartMission.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;tableTools.Name" xml:space="preserve">
+    <value>tableTools</value>
+  </data>
+  <data name="cmbModes.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 262</value>
+  </data>
+  <data name="&gt;&gt;trackBarRoll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnRestartMission.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBoxPitch.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="btnJoystick.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="cmbAction.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="grpTools.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>350, 0</value>
+  </data>
+  <data name="tablePayload.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmbAction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSetMount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="&gt;&gt;groupBoxYaw.Name" xml:space="preserve">
+    <value>groupBoxYaw</value>
+  </data>
+  <data name="&gt;&gt;modSetLoiterRad.Name" xml:space="preserve">
+    <value>modSetLoiterRad</value>
+  </data>
+  <data name="&gt;&gt;btnJoystick.Name" xml:space="preserve">
+    <value>btnJoystick</value>
+  </data>
+  <data name="btnResumeMission.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="modSetLoiterRad.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnJoystick.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="modSetSpeed.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="groupBoxYaw.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 3</value>
+  </data>
+  <data name="grpTools.Text" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="cmbWaypoint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 33</value>
+  </data>
+  <data name="btnAbortLanding.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnMessage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="mainFlowLayout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 358</value>
+  </data>
+  <data name="&gt;&gt;grpSetpoints.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBoxYaw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 69</value>
+  </data>
+  <data name="&gt;&gt;btnSetMount.Name" xml:space="preserve">
+    <value>btnSetMount</value>
+  </data>
+  <data name="&gt;&gt;groupBoxPitch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblLoiterRad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 118</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRoll.Parent" xml:space="preserve">
+    <value>tablePayload</value>
+  </data>
+  <data name="&gt;&gt;tableSetpoints.Parent" xml:space="preserve">
+    <value>grpSetpoints</value>
+  </data>
+  <data name="&gt;&gt;tableCommand.Name" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="&gt;&gt;grpSetpoints.Name" xml:space="preserve">
+    <value>grpSetpoints</value>
+  </data>
+  <data name="cmbModes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 33</value>
+  </data>
+  <data name="&gt;&gt;btnResumeMission.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbModes.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnGimbalVideo.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="trackBarPitch.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnRestartMission.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 117</value>
+  </data>
+  <data name="grpPayload.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;trackBarPitch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableSetpoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>338, 150</value>
+  </data>
+  <data name="btnDoAction.Text" xml:space="preserve">
+    <value>Do Action</value>
+  </data>
+  <data name="scrollPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRoll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtPitchPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 25</value>
+  </data>
+  <data name="tableTools.RowCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tableCommand.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbModes.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tablePayload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tableCommand.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="cmbAction" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDoAction" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cmbWaypoint" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnSetWP" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cmbModes" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnSetMode" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cmbMount" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnSetMount" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnRestartMission" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnResumeMission" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Absolute,38,Absolute,38,Absolute,0,Absolute,38,Absolute,38" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tableCommand.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="btnJoystick.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="btnClearTrack.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;grpSetpoints.Parent" xml:space="preserve">
+    <value>mainFlowLayout</value>
+  </data>
+  <data name="&gt;&gt;lblAlt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnJoystick.Text" xml:space="preserve">
+    <value>Joystick</value>
+  </data>
+  <data name="cmbAction.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tableSetpoints.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="lblHomeAlt" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnHomeAlt" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblSpeed" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="modSetSpeed" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblAlt" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="modSetAlt" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="lblLoiterRad" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="modSetLoiterRad" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,120,Percent,100" /&gt;&lt;Rows Styles="Absolute,38,Absolute,38,Absolute,38,Absolute,38" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="lblHomeAlt.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1065, 526</value>
+  </data>
+  <data name="&gt;&gt;btnAbortLanding.Parent" xml:space="preserve">
+    <value>tableTools</value>
+  </data>
+  <data name="btnHomeAlt.Text" xml:space="preserve">
+    <value>Set Home Alt</value>
+  </data>
+  <data name="&gt;&gt;cmbModes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbWaypoint.ItemHeight" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;scrollPanel.Name" xml:space="preserve">
+    <value>scrollPanel</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSetMode.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="grpPayload.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="&gt;&gt;grpCommand.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSetMount.Parent" xml:space="preserve">
+    <value>tableCommand</value>
+  </data>
+  <data name="lblSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;groupBoxRoll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnReboot.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="tablePayload.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="groupBoxPitch" Row="0" RowSpan="2" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxYaw" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBoxRoll" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="btnResetGimbal" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnGimbalVideo" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,130,Percent,100" /&gt;&lt;Rows Styles="Absolute,75,Absolute,75,Absolute,38" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tableCommand.RowCount" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="modSetSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 38</value>
+  </data>
+  <data name="&gt;&gt;btnAbortLanding.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnReboot.Parent" xml:space="preserve">
+    <value>tableTools</value>
+  </data>
+  <data name="tablePayload.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
+  </data>
+  <data name="btnRawSensor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 32</value>
+  </data>
+  <data name="&gt;&gt;mainFlowLayout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grpSetpoints.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="btnClearTrack.Text" xml:space="preserve">
+    <value>Clear Track</value>
+  </data>
+  <data name="grpPayload.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;grpCommand.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableSetpoints.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tableTools.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblAlt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;trackBarPitch.Parent" xml:space="preserve">
+    <value>groupBoxPitch</value>
+  </data>
+  <data name="mainFlowLayout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="trackBarRoll.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnRawSensor.Text" xml:space="preserve">
+    <value>Raw Sensor</value>
+  </data>
+  <data name="&gt;&gt;trackBarRoll.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbWaypoint.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="&gt;&gt;cmbWaypoint.Name" xml:space="preserve">
+    <value>cmbWaypoint</value>
+  </data>
+  <data name="grpSetpoints.Text" xml:space="preserve">
+    <value>Setpoints</value>
+  </data>
+  <data name="groupBoxRoll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 69</value>
+  </data>
+  <data name="cmbWaypoint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 41</value>
+  </data>
+  <data name="tableCommand.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnResumeMission.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="mainFlowLayout.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="&gt;&gt;btnRawSensor.Name" xml:space="preserve">
+    <value>btnRawSensor</value>
+  </data>
+  <data name="cmbMount.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>zh-Hans</value>
+  </metadata>
 </root>

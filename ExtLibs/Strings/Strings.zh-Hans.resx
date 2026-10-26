@@ -4208,7 +4208,7 @@ Please choose one by typing the associated number.</value>
     <value>安全</value>
 </data>
 <data name="ServoOutput" xml:space="preserve">
-    <value>舵机输出</value>
+    <value>通道输出</value>
 </data>
 <data name="EscCalibration" xml:space="preserve">
     <value>电调校准</value>

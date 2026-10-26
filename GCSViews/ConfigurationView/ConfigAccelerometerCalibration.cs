@@ -195,7 +195,18 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 {
                     pos = (MAVLink.ACCELCAL_VEHICLE_POS)message.param1;
 
-                    UpdateUserMessage("Please place vehicle " + pos.ToString());
+                    string posText;
+                    switch (pos)
+                    {
+                        case MAVLink.ACCELCAL_VEHICLE_POS.LEVEL: posText = "水平放置"; break;
+                        case MAVLink.ACCELCAL_VEHICLE_POS.LEFT: posText = "左侧放置"; break;
+                        case MAVLink.ACCELCAL_VEHICLE_POS.RIGHT: posText = "右侧放置"; break;
+                        case MAVLink.ACCELCAL_VEHICLE_POS.NOSEDOWN: posText = "机头朝下放置"; break;
+                        case MAVLink.ACCELCAL_VEHICLE_POS.NOSEUP: posText = "机头朝上放置"; break;
+                        case MAVLink.ACCELCAL_VEHICLE_POS.BACK: posText = "机尾朝下放置"; break;
+                        default: posText = pos.ToString(); break;
+                    }
+                    UpdateUserMessage("请将飞行器" + posText);
 
                     Invoke((MethodInvoker)delegate
                     {
@@ -211,7 +222,16 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         {
             Invoke((MethodInvoker)delegate
            {
-               if (message.ToLower().Contains("place vehicle") || message.ToLower().Contains("calibration"))
+               bool show = false;
+               if (message.ToLower().Contains("calibration successful"))
+               { message = "校准成功"; show = true; }
+               else if (message.ToLower().Contains("calibration failed"))
+               { message = "校准失败"; show = true; }
+               else if (message.ToLower().Contains("place vehicle") ||
+                        message.Contains("请将飞行器") ||
+                        message.ToLower().Contains("calibration"))
+               { show = true; }
+               if (show)
                    lbl_Accel_user.Text = message;
            });
         }

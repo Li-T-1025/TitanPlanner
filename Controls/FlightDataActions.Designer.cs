@@ -83,47 +83,29 @@
             // 
             // scrollPanel
             // 
-            this.scrollPanel.AutoScroll = true;
+            resources.ApplyResources(this.scrollPanel, "scrollPanel");
             this.scrollPanel.Controls.Add(this.mainFlowLayout);
-            this.scrollPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scrollPanel.Location = new System.Drawing.Point(0, 0);
             this.scrollPanel.Name = "scrollPanel";
-            this.scrollPanel.Size = new System.Drawing.Size(1065, 561);
-            this.scrollPanel.TabIndex = 0;
             // 
             // mainFlowLayout
             // 
-            this.mainFlowLayout.AutoSize = true;
-            this.mainFlowLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            resources.ApplyResources(this.mainFlowLayout, "mainFlowLayout");
             this.mainFlowLayout.Controls.Add(this.grpCommand);
             this.mainFlowLayout.Controls.Add(this.grpSetpoints);
             this.mainFlowLayout.Controls.Add(this.grpTools);
             this.mainFlowLayout.Controls.Add(this.grpPayload);
-            this.mainFlowLayout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainFlowLayout.Location = new System.Drawing.Point(0, 0);
             this.mainFlowLayout.Name = "mainFlowLayout";
-            this.mainFlowLayout.Padding = new System.Windows.Forms.Padding(4);
-            this.mainFlowLayout.Size = new System.Drawing.Size(1065, 483);
-            this.mainFlowLayout.TabIndex = 0;
             // 
             // grpCommand
             // 
-            this.grpCommand.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grpCommand.Controls.Add(this.tableCommand);
-            this.grpCommand.Location = new System.Drawing.Point(7, 7);
-            this.grpCommand.MinimumSize = new System.Drawing.Size(350, 0);
-            this.grpCommand.Name = "grpCommand";
-            this.grpCommand.Padding = new System.Windows.Forms.Padding(6);
-            this.grpCommand.Size = new System.Drawing.Size(350, 180);
-            this.grpCommand.TabIndex = 0;
-            this.grpCommand.TabStop = false;
             resources.ApplyResources(this.grpCommand, "grpCommand");
+            this.grpCommand.Controls.Add(this.tableCommand);
+            this.grpCommand.Name = "grpCommand";
+            this.grpCommand.TabStop = false;
             // 
             // tableCommand
             // 
-            this.tableCommand.ColumnCount = 2;
-            this.tableCommand.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableCommand.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            resources.ApplyResources(this.tableCommand, "tableCommand");
             this.tableCommand.Controls.Add(this.cmbAction, 0, 0);
             this.tableCommand.Controls.Add(this.btnDoAction, 1, 0);
             this.tableCommand.Controls.Add(this.cmbWaypoint, 0, 1);
@@ -134,156 +116,92 @@
             this.tableCommand.Controls.Add(this.btnSetMount, 1, 3);
             this.tableCommand.Controls.Add(this.btnRestartMission, 0, 4);
             this.tableCommand.Controls.Add(this.btnResumeMission, 1, 4);
-            this.tableCommand.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableCommand.Location = new System.Drawing.Point(6, 21);
             this.tableCommand.Name = "tableCommand";
-            this.tableCommand.RowCount = 5;
-            this.tableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 0F));
-            this.tableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableCommand.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableCommand.Size = new System.Drawing.Size(338, 160);
-            this.tableCommand.TabIndex = 0;
             // 
             // cmbAction
             // 
-            this.cmbAction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbAction, "cmbAction");
             this.cmbAction.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAction.DropDownWidth = 250;
-            this.cmbAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAction.FormattingEnabled = true;
-            this.cmbAction.ItemHeight = 25;
-            this.cmbAction.Location = new System.Drawing.Point(3, 8);
             this.cmbAction.Name = "cmbAction";
-            this.cmbAction.Size = new System.Drawing.Size(163, 33);
-            this.cmbAction.TabIndex = 0;
             // 
             // btnDoAction
             // 
-            this.btnDoAction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDoAction.Location = new System.Drawing.Point(172, 3);
-            this.btnDoAction.Name = "btnDoAction";
-            this.btnDoAction.Size = new System.Drawing.Size(163, 34);
-            this.btnDoAction.TabIndex = 1;
             resources.ApplyResources(this.btnDoAction, "btnDoAction");
+            this.btnDoAction.Name = "btnDoAction";
             this.btnDoAction.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnDoAction.UseVisualStyleBackColor = true;
             // 
             // cmbWaypoint
             // 
-            this.cmbWaypoint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbWaypoint, "cmbWaypoint");
             this.cmbWaypoint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbWaypoint.DropDownWidth = 150;
-            this.cmbWaypoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbWaypoint.FormattingEnabled = true;
-            this.cmbWaypoint.ItemHeight = 25;
-            this.cmbWaypoint.Location = new System.Drawing.Point(3, 58);
             this.cmbWaypoint.Name = "cmbWaypoint";
-            this.cmbWaypoint.Size = new System.Drawing.Size(163, 33);
-            this.cmbWaypoint.TabIndex = 2;
             // 
             // btnSetWP
             // 
-            this.btnSetWP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSetWP.Location = new System.Drawing.Point(172, 53);
-            this.btnSetWP.Name = "btnSetWP";
-            this.btnSetWP.Size = new System.Drawing.Size(163, 34);
-            this.btnSetWP.TabIndex = 3;
             resources.ApplyResources(this.btnSetWP, "btnSetWP");
+            this.btnSetWP.Name = "btnSetWP";
             this.btnSetWP.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnSetWP.UseVisualStyleBackColor = true;
             // 
             // cmbModes
             // 
-            this.cmbModes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbModes, "cmbModes");
             this.cmbModes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModes.DropDownWidth = 150;
-            this.cmbModes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbModes.FormattingEnabled = true;
-            this.cmbModes.ItemHeight = 25;
-            this.cmbModes.Location = new System.Drawing.Point(3, 103);
             this.cmbModes.Name = "cmbModes";
-            this.cmbModes.Size = new System.Drawing.Size(163, 33);
-            this.cmbModes.TabIndex = 4;
-            this.cmbModes.Visible = false;
             // 
             // btnSetMode
             // 
-            this.btnSetMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSetMode.Location = new System.Drawing.Point(172, 103);
-            this.btnSetMode.Name = "btnSetMode";
-            this.btnSetMode.Size = new System.Drawing.Size(163, 1);
-            this.btnSetMode.TabIndex = 5;
             resources.ApplyResources(this.btnSetMode, "btnSetMode");
+            this.btnSetMode.Name = "btnSetMode";
             this.btnSetMode.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnSetMode.UseVisualStyleBackColor = true;
-            this.btnSetMode.Visible = false;
             // 
             // cmbMount
             // 
-            this.cmbMount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.cmbMount, "cmbMount");
             this.cmbMount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMount.DropDownWidth = 150;
-            this.cmbMount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMount.FormattingEnabled = true;
-            this.cmbMount.ItemHeight = 25;
-            this.cmbMount.Location = new System.Drawing.Point(3, 108);
             this.cmbMount.Name = "cmbMount";
-            this.cmbMount.Size = new System.Drawing.Size(163, 33);
-            this.cmbMount.TabIndex = 6;
             // 
             // btnSetMount
             // 
-            this.btnSetMount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSetMount.Location = new System.Drawing.Point(172, 103);
-            this.btnSetMount.Name = "btnSetMount";
-            this.btnSetMount.Size = new System.Drawing.Size(163, 34);
-            this.btnSetMount.TabIndex = 7;
             resources.ApplyResources(this.btnSetMount, "btnSetMount");
+            this.btnSetMount.Name = "btnSetMount";
             this.btnSetMount.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnSetMount.UseVisualStyleBackColor = true;
             // 
             // btnRestartMission
             // 
-            this.btnRestartMission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestartMission.Location = new System.Drawing.Point(3, 153);
-            this.btnRestartMission.Name = "btnRestartMission";
-            this.btnRestartMission.Size = new System.Drawing.Size(163, 34);
-            this.btnRestartMission.TabIndex = 8;
             resources.ApplyResources(this.btnRestartMission, "btnRestartMission");
+            this.btnRestartMission.Name = "btnRestartMission";
             this.btnRestartMission.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnRestartMission.UseVisualStyleBackColor = true;
             // 
             // btnResumeMission
             // 
-            this.btnResumeMission.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResumeMission.Location = new System.Drawing.Point(172, 153);
-            this.btnResumeMission.Name = "btnResumeMission";
-            this.btnResumeMission.Size = new System.Drawing.Size(163, 34);
-            this.btnResumeMission.TabIndex = 9;
             resources.ApplyResources(this.btnResumeMission, "btnResumeMission");
+            this.btnResumeMission.Name = "btnResumeMission";
             this.btnResumeMission.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnResumeMission.UseVisualStyleBackColor = true;
             // 
             // grpSetpoints
             // 
-            this.grpSetpoints.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grpSetpoints.Controls.Add(this.tableSetpoints);
-            this.grpSetpoints.Location = new System.Drawing.Point(363, 7);
-            this.grpSetpoints.MinimumSize = new System.Drawing.Size(350, 0);
-            this.grpSetpoints.Name = "grpSetpoints";
-            this.grpSetpoints.Padding = new System.Windows.Forms.Padding(6);
-            this.grpSetpoints.Size = new System.Drawing.Size(350, 180);
-            this.grpSetpoints.TabIndex = 1;
-            this.grpSetpoints.TabStop = false;
             resources.ApplyResources(this.grpSetpoints, "grpSetpoints");
+            this.grpSetpoints.Controls.Add(this.tableSetpoints);
+            this.grpSetpoints.Name = "grpSetpoints";
+            this.grpSetpoints.TabStop = false;
             // 
             // tableSetpoints
             // 
-            this.tableSetpoints.ColumnCount = 2;
-            this.tableSetpoints.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableSetpoints.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            resources.ApplyResources(this.tableSetpoints, "tableSetpoints");
             this.tableSetpoints.Controls.Add(this.lblHomeAlt, 0, 0);
             this.tableSetpoints.Controls.Add(this.btnHomeAlt, 1, 0);
             this.tableSetpoints.Controls.Add(this.lblSpeed, 0, 1);
@@ -292,61 +210,35 @@
             this.tableSetpoints.Controls.Add(this.modSetAlt, 1, 2);
             this.tableSetpoints.Controls.Add(this.lblLoiterRad, 0, 3);
             this.tableSetpoints.Controls.Add(this.modSetLoiterRad, 1, 3);
-            this.tableSetpoints.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableSetpoints.Location = new System.Drawing.Point(6, 21);
             this.tableSetpoints.Name = "tableSetpoints";
-            this.tableSetpoints.RowCount = 4;
-            this.tableSetpoints.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableSetpoints.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableSetpoints.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableSetpoints.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableSetpoints.Size = new System.Drawing.Size(338, 160);
-            this.tableSetpoints.TabIndex = 0;
             // 
             // lblHomeAlt
             // 
-            this.lblHomeAlt.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblHomeAlt.AutoSize = true;
-            this.lblHomeAlt.Location = new System.Drawing.Point(3, 9);
-            this.lblHomeAlt.Name = "lblHomeAlt";
-            this.lblHomeAlt.Size = new System.Drawing.Size(65, 32);
-            this.lblHomeAlt.TabIndex = 0;
             resources.ApplyResources(this.lblHomeAlt, "lblHomeAlt");
+            this.lblHomeAlt.Name = "lblHomeAlt";
             // 
             // btnHomeAlt
             // 
-            this.btnHomeAlt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHomeAlt.Location = new System.Drawing.Point(120, 3);
-            this.btnHomeAlt.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btnHomeAlt.Name = "btnHomeAlt";
-            this.btnHomeAlt.Size = new System.Drawing.Size(252, 34);
-            this.btnHomeAlt.TabIndex = 1;
             resources.ApplyResources(this.btnHomeAlt, "btnHomeAlt");
+            this.btnHomeAlt.Name = "btnHomeAlt";
             this.btnHomeAlt.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnHomeAlt.UseVisualStyleBackColor = true;
             // 
             // lblSpeed
             // 
-            this.lblSpeed.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSpeed.AutoSize = true;
-            this.lblSpeed.Location = new System.Drawing.Point(3, 59);
-            this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(51, 32);
-            this.lblSpeed.TabIndex = 2;
             resources.ApplyResources(this.lblSpeed, "lblSpeed");
+            this.lblSpeed.Name = "lblSpeed";
             // 
             // modSetSpeed
             // 
-            this.modSetSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.modSetSpeed.ButtonText = Strings.Apply;
+            resources.ApplyResources(this.modSetSpeed, "modSetSpeed");
+            this.modSetSpeed.ButtonText = "应用";
             this.modSetSpeed.DecimalPlaces = 0;
             this.modSetSpeed.Increment = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.modSetSpeed.Location = new System.Drawing.Point(80, 50);
-            this.modSetSpeed.Margin = new System.Windows.Forms.Padding(0);
             this.modSetSpeed.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -357,10 +249,7 @@
             0,
             0,
             0});
-            this.modSetSpeed.MinimumSize = new System.Drawing.Size(26, 40);
             this.modSetSpeed.Name = "modSetSpeed";
-            this.modSetSpeed.Size = new System.Drawing.Size(258, 40);
-            this.modSetSpeed.TabIndex = 3;
             this.modSetSpeed.Value = new decimal(new int[] {
             0,
             0,
@@ -369,26 +258,19 @@
             // 
             // lblAlt
             // 
-            this.lblAlt.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblAlt.AutoSize = true;
-            this.lblAlt.Location = new System.Drawing.Point(3, 109);
-            this.lblAlt.Name = "lblAlt";
-            this.lblAlt.Size = new System.Drawing.Size(54, 32);
-            this.lblAlt.TabIndex = 4;
             resources.ApplyResources(this.lblAlt, "lblAlt");
+            this.lblAlt.Name = "lblAlt";
             // 
             // modSetAlt
             // 
-            this.modSetAlt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.modSetAlt.ButtonText = Strings.Apply;
+            resources.ApplyResources(this.modSetAlt, "modSetAlt");
+            this.modSetAlt.ButtonText = "应用";
             this.modSetAlt.DecimalPlaces = 0;
             this.modSetAlt.Increment = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.modSetAlt.Location = new System.Drawing.Point(80, 100);
-            this.modSetAlt.Margin = new System.Windows.Forms.Padding(0);
             this.modSetAlt.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -399,10 +281,7 @@
             0,
             0,
             0});
-            this.modSetAlt.MinimumSize = new System.Drawing.Size(26, 40);
             this.modSetAlt.Name = "modSetAlt";
-            this.modSetAlt.Size = new System.Drawing.Size(258, 40);
-            this.modSetAlt.TabIndex = 5;
             this.modSetAlt.Value = new decimal(new int[] {
             100,
             0,
@@ -411,26 +290,19 @@
             // 
             // lblLoiterRad
             // 
-            this.lblLoiterRad.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblLoiterRad.AutoSize = true;
-            this.lblLoiterRad.Location = new System.Drawing.Point(3, 159);
-            this.lblLoiterRad.Name = "lblLoiterRad";
-            this.lblLoiterRad.Size = new System.Drawing.Size(72, 32);
-            this.lblLoiterRad.TabIndex = 6;
             resources.ApplyResources(this.lblLoiterRad, "lblLoiterRad");
+            this.lblLoiterRad.Name = "lblLoiterRad";
             // 
             // modSetLoiterRad
             // 
-            this.modSetLoiterRad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.modSetLoiterRad.ButtonText = Strings.Apply;
+            resources.ApplyResources(this.modSetLoiterRad, "modSetLoiterRad");
+            this.modSetLoiterRad.ButtonText = "应用";
             this.modSetLoiterRad.DecimalPlaces = 0;
             this.modSetLoiterRad.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.modSetLoiterRad.Location = new System.Drawing.Point(80, 150);
-            this.modSetLoiterRad.Margin = new System.Windows.Forms.Padding(0);
             this.modSetLoiterRad.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -441,10 +313,7 @@
             0,
             0,
             -2147483648});
-            this.modSetLoiterRad.MinimumSize = new System.Drawing.Size(26, 40);
             this.modSetLoiterRad.Name = "modSetLoiterRad";
-            this.modSetLoiterRad.Size = new System.Drawing.Size(258, 40);
-            this.modSetLoiterRad.TabIndex = 7;
             this.modSetLoiterRad.Value = new decimal(new int[] {
             100,
             0,
@@ -453,265 +322,169 @@
             // 
             // grpTools
             // 
-            this.grpTools.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grpTools.Controls.Add(this.tableTools);
-            this.grpTools.Location = new System.Drawing.Point(7, 240);
-            this.grpTools.MinimumSize = new System.Drawing.Size(350, 0);
-            this.grpTools.Name = "grpTools";
-            this.grpTools.Padding = new System.Windows.Forms.Padding(6);
-            this.grpTools.Size = new System.Drawing.Size(350, 180);
-            this.grpTools.TabIndex = 2;
-            this.grpTools.TabStop = false;
             resources.ApplyResources(this.grpTools, "grpTools");
+            this.grpTools.Controls.Add(this.tableTools);
+            this.grpTools.Name = "grpTools";
+            this.grpTools.TabStop = false;
             // 
             // tableTools
             // 
-            this.tableTools.ColumnCount = 2;
-            this.tableTools.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableTools.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            resources.ApplyResources(this.tableTools, "tableTools");
             this.tableTools.Controls.Add(this.btnRawSensor, 0, 0);
             this.tableTools.Controls.Add(this.btnJoystick, 1, 0);
             this.tableTools.Controls.Add(this.btnMessage, 0, 1);
             this.tableTools.Controls.Add(this.btnClearTrack, 1, 1);
             this.tableTools.Controls.Add(this.btnReboot, 0, 2);
             this.tableTools.Controls.Add(this.btnAbortLanding, 1, 2);
-            this.tableTools.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableTools.Location = new System.Drawing.Point(6, 21);
             this.tableTools.Name = "tableTools";
-            this.tableTools.RowCount = 3;
-            this.tableTools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableTools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableTools.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableTools.Size = new System.Drawing.Size(338, 120);
-            this.tableTools.TabIndex = 0;
             // 
             // btnRawSensor
             // 
-            this.btnRawSensor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRawSensor.Location = new System.Drawing.Point(3, 3);
-            this.btnRawSensor.Name = "btnRawSensor";
-            this.btnRawSensor.Size = new System.Drawing.Size(163, 34);
-            this.btnRawSensor.TabIndex = 0;
             resources.ApplyResources(this.btnRawSensor, "btnRawSensor");
+            this.btnRawSensor.Name = "btnRawSensor";
             this.btnRawSensor.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnRawSensor.UseVisualStyleBackColor = true;
             // 
             // btnJoystick
             // 
-            this.btnJoystick.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnJoystick.Location = new System.Drawing.Point(172, 3);
-            this.btnJoystick.Name = "btnJoystick";
-            this.btnJoystick.Size = new System.Drawing.Size(163, 34);
-            this.btnJoystick.TabIndex = 1;
             resources.ApplyResources(this.btnJoystick, "btnJoystick");
+            this.btnJoystick.Name = "btnJoystick";
             this.btnJoystick.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnJoystick.UseVisualStyleBackColor = true;
             // 
             // btnMessage
             // 
-            this.btnMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMessage.Location = new System.Drawing.Point(3, 53);
-            this.btnMessage.Name = "btnMessage";
-            this.btnMessage.Size = new System.Drawing.Size(163, 34);
-            this.btnMessage.TabIndex = 2;
             resources.ApplyResources(this.btnMessage, "btnMessage");
+            this.btnMessage.Name = "btnMessage";
             this.btnMessage.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnMessage.UseVisualStyleBackColor = true;
             // 
             // btnClearTrack
             // 
-            this.btnClearTrack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClearTrack.Location = new System.Drawing.Point(172, 53);
-            this.btnClearTrack.Name = "btnClearTrack";
-            this.btnClearTrack.Size = new System.Drawing.Size(163, 34);
-            this.btnClearTrack.TabIndex = 3;
             resources.ApplyResources(this.btnClearTrack, "btnClearTrack");
+            this.btnClearTrack.Name = "btnClearTrack";
             this.btnClearTrack.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnClearTrack.UseVisualStyleBackColor = true;
             // 
             // btnReboot
             // 
-            this.btnReboot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReboot.Location = new System.Drawing.Point(3, 103);
-            this.btnReboot.Name = "btnReboot";
-            this.btnReboot.Size = new System.Drawing.Size(163, 34);
-            this.btnReboot.TabIndex = 4;
             resources.ApplyResources(this.btnReboot, "btnReboot");
+            this.btnReboot.Name = "btnReboot";
             this.btnReboot.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnReboot.UseVisualStyleBackColor = true;
             // 
             // btnAbortLanding
             // 
-            this.btnAbortLanding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAbortLanding.Location = new System.Drawing.Point(172, 103);
-            this.btnAbortLanding.Name = "btnAbortLanding";
-            this.btnAbortLanding.Size = new System.Drawing.Size(163, 34);
-            this.btnAbortLanding.TabIndex = 5;
             resources.ApplyResources(this.btnAbortLanding, "btnAbortLanding");
+            this.btnAbortLanding.Name = "btnAbortLanding";
             this.btnAbortLanding.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnAbortLanding.UseVisualStyleBackColor = true;
             // 
             // grpPayload
             // 
-            this.grpPayload.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grpPayload.Controls.Add(this.tablePayload);
-            this.grpPayload.Location = new System.Drawing.Point(363, 240);
-            this.grpPayload.MinimumSize = new System.Drawing.Size(350, 0);
-            this.grpPayload.Name = "grpPayload";
-            this.grpPayload.Padding = new System.Windows.Forms.Padding(6);
-            this.grpPayload.Size = new System.Drawing.Size(350, 180);
-            this.grpPayload.TabIndex = 3;
-            this.grpPayload.TabStop = false;
             resources.ApplyResources(this.grpPayload, "grpPayload");
-            this.grpPayload.Visible = false;
+            this.grpPayload.Controls.Add(this.tablePayload);
+            this.grpPayload.Name = "grpPayload";
+            this.grpPayload.TabStop = false;
             // 
             // tablePayload
             // 
-            this.tablePayload.ColumnCount = 2;
-            this.tablePayload.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-            this.tablePayload.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            resources.ApplyResources(this.tablePayload, "tablePayload");
             this.tablePayload.Controls.Add(this.groupBoxPitch, 0, 0);
             this.tablePayload.Controls.Add(this.groupBoxYaw, 1, 0);
             this.tablePayload.Controls.Add(this.groupBoxRoll, 1, 1);
             this.tablePayload.Controls.Add(this.btnResetGimbal, 0, 2);
             this.tablePayload.Controls.Add(this.btnGimbalVideo, 1, 2);
-            this.tablePayload.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tablePayload.Location = new System.Drawing.Point(6, 21);
             this.tablePayload.Name = "tablePayload";
-            this.tablePayload.RowCount = 3;
-            this.tablePayload.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tablePayload.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tablePayload.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tablePayload.Size = new System.Drawing.Size(338, 200);
-            this.tablePayload.TabIndex = 0;
             // 
             // groupBoxPitch
             // 
+            resources.ApplyResources(this.groupBoxPitch, "groupBoxPitch");
             this.groupBoxPitch.Controls.Add(this.trackBarPitch);
             this.groupBoxPitch.Controls.Add(this.txtPitchPos);
-            this.groupBoxPitch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxPitch.Location = new System.Drawing.Point(3, 3);
             this.groupBoxPitch.Name = "groupBoxPitch";
             this.tablePayload.SetRowSpan(this.groupBoxPitch, 2);
-            this.groupBoxPitch.Size = new System.Drawing.Size(124, 154);
-            this.groupBoxPitch.TabIndex = 0;
             this.groupBoxPitch.TabStop = false;
-            resources.ApplyResources(this.groupBoxPitch, "groupBoxPitch");
             // 
             // trackBarPitch
             // 
+            resources.ApplyResources(this.trackBarPitch, "trackBarPitch");
             this.trackBarPitch.LargeChange = 10;
-            this.trackBarPitch.Location = new System.Drawing.Point(62, 11);
             this.trackBarPitch.Maximum = 90;
             this.trackBarPitch.Minimum = -90;
             this.trackBarPitch.Name = "trackBarPitch";
-            this.trackBarPitch.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBarPitch.Size = new System.Drawing.Size(56, 130);
             this.trackBarPitch.SmallChange = 5;
-            this.trackBarPitch.TabIndex = 1;
             this.trackBarPitch.TickFrequency = 10;
             // 
             // txtPitchPos
             // 
-            this.txtPitchPos.Location = new System.Drawing.Point(6, 18);
+            resources.ApplyResources(this.txtPitchPos, "txtPitchPos");
             this.txtPitchPos.Name = "txtPitchPos";
-            this.txtPitchPos.Size = new System.Drawing.Size(50, 22);
-            this.txtPitchPos.TabIndex = 0;
             // 
             // groupBoxYaw
             // 
+            resources.ApplyResources(this.groupBoxYaw, "groupBoxYaw");
             this.groupBoxYaw.Controls.Add(this.txtYawPos);
             this.groupBoxYaw.Controls.Add(this.trackBarYaw);
-            this.groupBoxYaw.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxYaw.Location = new System.Drawing.Point(133, 3);
             this.groupBoxYaw.Name = "groupBoxYaw";
-            this.groupBoxYaw.Size = new System.Drawing.Size(202, 74);
-            this.groupBoxYaw.TabIndex = 1;
             this.groupBoxYaw.TabStop = false;
-            resources.ApplyResources(this.groupBoxYaw, "groupBoxYaw");
             // 
             // txtYawPos
             // 
-            this.txtYawPos.Location = new System.Drawing.Point(6, 18);
+            resources.ApplyResources(this.txtYawPos, "txtYawPos");
             this.txtYawPos.Name = "txtYawPos";
-            this.txtYawPos.Size = new System.Drawing.Size(51, 22);
-            this.txtYawPos.TabIndex = 0;
             // 
             // trackBarYaw
             // 
-            this.trackBarYaw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.trackBarYaw, "trackBarYaw");
             this.trackBarYaw.LargeChange = 10;
-            this.trackBarYaw.Location = new System.Drawing.Point(63, 18);
             this.trackBarYaw.Maximum = 180;
             this.trackBarYaw.Minimum = -180;
             this.trackBarYaw.Name = "trackBarYaw";
-            this.trackBarYaw.Size = new System.Drawing.Size(133, 56);
-            this.trackBarYaw.TabIndex = 1;
             this.trackBarYaw.TickFrequency = 10;
             // 
             // groupBoxRoll
             // 
+            resources.ApplyResources(this.groupBoxRoll, "groupBoxRoll");
             this.groupBoxRoll.Controls.Add(this.txtRollPos);
             this.groupBoxRoll.Controls.Add(this.trackBarRoll);
-            this.groupBoxRoll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxRoll.Location = new System.Drawing.Point(133, 83);
             this.groupBoxRoll.Name = "groupBoxRoll";
-            this.groupBoxRoll.Size = new System.Drawing.Size(202, 74);
-            this.groupBoxRoll.TabIndex = 2;
             this.groupBoxRoll.TabStop = false;
-            resources.ApplyResources(this.groupBoxRoll, "groupBoxRoll");
             // 
             // txtRollPos
             // 
-            this.txtRollPos.Location = new System.Drawing.Point(6, 19);
+            resources.ApplyResources(this.txtRollPos, "txtRollPos");
             this.txtRollPos.Name = "txtRollPos";
-            this.txtRollPos.Size = new System.Drawing.Size(51, 22);
-            this.txtRollPos.TabIndex = 0;
             // 
             // trackBarRoll
             // 
-            this.trackBarRoll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.trackBarRoll, "trackBarRoll");
             this.trackBarRoll.LargeChange = 10;
-            this.trackBarRoll.Location = new System.Drawing.Point(63, 19);
             this.trackBarRoll.Maximum = 90;
             this.trackBarRoll.Minimum = -90;
             this.trackBarRoll.Name = "trackBarRoll";
-            this.trackBarRoll.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBarRoll.RightToLeftLayout = true;
-            this.trackBarRoll.Size = new System.Drawing.Size(133, 56);
-            this.trackBarRoll.TabIndex = 1;
             this.trackBarRoll.TickFrequency = 10;
             // 
             // btnResetGimbal
             // 
-            this.btnResetGimbal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResetGimbal.Location = new System.Drawing.Point(3, 163);
-            this.btnResetGimbal.Name = "btnResetGimbal";
-            this.btnResetGimbal.Size = new System.Drawing.Size(124, 34);
-            this.btnResetGimbal.TabIndex = 3;
             resources.ApplyResources(this.btnResetGimbal, "btnResetGimbal");
+            this.btnResetGimbal.Name = "btnResetGimbal";
             this.btnResetGimbal.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnResetGimbal.UseVisualStyleBackColor = true;
             // 
             // btnGimbalVideo
             // 
-            this.btnGimbalVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGimbalVideo.Location = new System.Drawing.Point(133, 163);
-            this.btnGimbalVideo.Name = "btnGimbalVideo";
-            this.btnGimbalVideo.Size = new System.Drawing.Size(202, 34);
-            this.btnGimbalVideo.TabIndex = 4;
             resources.ApplyResources(this.btnGimbalVideo, "btnGimbalVideo");
+            this.btnGimbalVideo.Name = "btnGimbalVideo";
             this.btnGimbalVideo.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.btnGimbalVideo.UseVisualStyleBackColor = true;
             // 
             // FlightDataActions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.scrollPanel);
-            this.MinimumSize = new System.Drawing.Size(0, 280);
             this.Name = "FlightDataActions";
-            this.Size = new System.Drawing.Size(1065, 561);
             this.scrollPanel.ResumeLayout(false);
             this.scrollPanel.PerformLayout();
             this.mainFlowLayout.ResumeLayout(false);

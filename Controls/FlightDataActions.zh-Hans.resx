@@ -117,82 +117,122 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-<data name="grpCommand.Text" xml:space="preserve">
-    <value>控制</value>
-</data>
-<data name="btnDoAction.Text" xml:space="preserve">
+  <data name="btnDoAction.Text" xml:space="preserve">
     <value>执行动作</value>
-</data>
-<data name="btnSetWP.Text" xml:space="preserve">
+  </data>
+  <data name="btnSetWP.Text" xml:space="preserve">
     <value>设置航点</value>
-</data>
-<data name="btnSetMode.Text" xml:space="preserve">
+  </data>
+  <data name="btnSetMode.Text" xml:space="preserve">
     <value>应用</value>
-</data>
-<data name="btnSetMount.Text" xml:space="preserve">
+  </data>
+  <data name="btnSetMount.Text" xml:space="preserve">
     <value>设置云台</value>
-</data>
-<data name="btnRestartMission.Text" xml:space="preserve">
+  </data>
+  <data name="btnRestartMission.Text" xml:space="preserve">
     <value>重新开始任务</value>
-</data>
-<data name="btnResumeMission.Text" xml:space="preserve">
+  </data>
+  <data name="btnResumeMission.Text" xml:space="preserve">
     <value>继续任务</value>
-</data>
-<data name="grpSetpoints.Text" xml:space="preserve">
-    <value>设定值</value>
-</data>
-<data name="lblHomeAlt.Text" xml:space="preserve">
+  </data>
+  <data name="grpCommand.Text" xml:space="preserve">
+    <value>控制</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblHomeAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 15</value>
+  </data>
+  <data name="lblHomeAlt.Text" xml:space="preserve">
     <value>返航点高度（m）：</value>
-</data>
-<data name="btnHomeAlt.Text" xml:space="preserve">
+  </data>
+  <data name="btnHomeAlt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 3</value>
+  </data>
+  <data name="btnHomeAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 32</value>
+  </data>
+  <data name="btnHomeAlt.Text" xml:space="preserve">
     <value>设置返航点高度</value>
-</data>
-<data name="lblSpeed.Text" xml:space="preserve">
+  </data>
+  <data name="lblSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 15</value>
+  </data>
+  <data name="lblSpeed.Text" xml:space="preserve">
     <value>速度（m/s）：</value>
-</data>
-<data name="lblAlt.Text" xml:space="preserve">
+  </data>
+  <data name="modSetSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 38</value>
+  </data>
+  <data name="modSetSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 38</value>
+  </data>
+  <data name="lblAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 15</value>
+  </data>
+  <data name="lblAlt.Text" xml:space="preserve">
     <value>高度（m）：</value>
-</data>
-<data name="lblLoiterRad.Text" xml:space="preserve">
+  </data>
+  <data name="modSetAlt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 76</value>
+  </data>
+  <data name="modSetAlt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 38</value>
+  </data>
+  <data name="lblLoiterRad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 125</value>
+  </data>
+  <data name="lblLoiterRad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 15</value>
+  </data>
+  <data name="lblLoiterRad.Text" xml:space="preserve">
     <value>盘旋半径（m）：</value>
-</data>
-<data name="grpTools.Text" xml:space="preserve">
-    <value>工具</value>
-</data>
-<data name="btnRawSensor.Text" xml:space="preserve">
+  </data>
+  <data name="modSetLoiterRad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 114</value>
+  </data>
+  <data name="modSetLoiterRad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 38</value>
+  </data>
+  <data name="grpSetpoints.Text" xml:space="preserve">
+    <value>设定值</value>
+  </data>
+  <data name="btnRawSensor.Text" xml:space="preserve">
     <value>原始传感器</value>
-</data>
-<data name="btnJoystick.Text" xml:space="preserve">
+  </data>
+  <data name="btnJoystick.Text" xml:space="preserve">
     <value>手柄</value>
-</data>
-<data name="btnMessage.Text" xml:space="preserve">
+  </data>
+  <data name="btnMessage.Text" xml:space="preserve">
     <value>消息</value>
-</data>
-<data name="btnClearTrack.Text" xml:space="preserve">
+  </data>
+  <data name="btnClearTrack.Text" xml:space="preserve">
     <value>清除轨迹</value>
-</data>
-<data name="btnReboot.Text" xml:space="preserve">
+  </data>
+  <data name="btnReboot.Text" xml:space="preserve">
     <value>重启</value>
-</data>
-<data name="btnAbortLanding.Text" xml:space="preserve">
+  </data>
+  <data name="btnAbortLanding.Text" xml:space="preserve">
     <value>中止降落</value>
-</data>
-<data name="grpPayload.Text" xml:space="preserve">
-    <value>挂载</value>
-</data>
-<data name="groupBoxPitch.Text" xml:space="preserve">
+  </data>
+  <data name="grpTools.Text" xml:space="preserve">
+    <value>工具</value>
+  </data>
+  <data name="groupBoxPitch.Text" xml:space="preserve">
     <value>俯仰</value>
-</data>
-<data name="groupBoxYaw.Text" xml:space="preserve">
+  </data>
+  <data name="groupBoxYaw.Text" xml:space="preserve">
     <value>偏航</value>
-</data>
-<data name="groupBoxRoll.Text" xml:space="preserve">
+  </data>
+  <data name="groupBoxRoll.Text" xml:space="preserve">
     <value>横滚</value>
-</data>
-<data name="btnResetGimbal.Text" xml:space="preserve">
+  </data>
+  <data name="btnResetGimbal.Text" xml:space="preserve">
     <value>复位位置</value>
-</data>
-<data name="btnGimbalVideo.Text" xml:space="preserve">
+  </data>
+  <data name="btnGimbalVideo.Text" xml:space="preserve">
     <value>视频控制</value>
-</data>
+  </data>
+  <data name="grpPayload.Text" xml:space="preserve">
+    <value>挂载</value>
+  </data>
 </root>
