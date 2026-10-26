@@ -4528,6 +4528,12 @@ Please choose one by typing the associated number.</value>
 <data name="SpeechBatteryWarning" xml:space="preserve">
     <value>警告，电池电压 {batv} 伏，电量 {batp}%</value>
 </data>
+<data name="SpeechLowAirSpeed" xml:space="preserve">
+    <value>低空速 {asp}</value>
+</data>
+<data name="MapIconDescDefault" xml:space="preserve">
+    <value>{alt}{altunit} {airspeed}{speedunit} ID:{sysid} 卫星:{satcount} HDOP:{gpshdop} 电压:{battery_voltage}</value>
+</data>
 <data name="MapTools" xml:space="preserve">
     <value>工具</value>
 </data>

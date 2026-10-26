@@ -4606,6 +4606,12 @@ Yes frees the space; tiles shared with an overlapping area are deleted too.</val
 <data name="SpeechBatteryWarning" xml:space="preserve">
     <value>WARNING, Battery at {batv} Volt, {batp} percent</value>
 </data>
+<data name="SpeechLowAirSpeed" xml:space="preserve">
+    <value>Low Air Speed {asp}</value>
+</data>
+<data name="MapIconDescDefault" xml:space="preserve">
+    <value>{alt}{altunit} {airspeed}{speedunit} id:{sysid} Sats:{satcount} HDOP:{gpshdop} Volts:{battery_voltage}</value>
+</data>
 <data name="MapTools" xml:space="preserve">
     <value>Tools</value>
 </data>

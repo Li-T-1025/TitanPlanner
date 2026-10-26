@@ -1126,9 +1126,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (((CheckBox)sender).Checked)
             {
-                var speechstring = "WARNING, Battery at {batv} Volt, {batp} percent";
+                var speechstring = Strings.SpeechBatteryWarning;
                 if (Settings.Instance["speechbattery"] != null)
+                {
                     speechstring = Settings.Instance["speechbattery"].ToString();
+                    if (speechstring == "WARNING, Battery at {batv} Volt, {batp} percent")
+                        speechstring = Strings.SpeechBatteryWarning;
+                }
                 if (DialogResult.Cancel ==
                     InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
@@ -1524,9 +1528,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     return;
                 Settings.Instance["speechlowgroundspeedtrigger"] = speechstring;
 
-                speechstring = "Low Air Speed {asp}";
+                speechstring = Strings.SpeechLowAirSpeed;
                 if (Settings.Instance["speechlowairspeed"] != null)
+                {
                     speechstring = Settings.Instance["speechlowairspeed"];
+                    if (speechstring == "Low Air Speed {asp}")
+                        speechstring = Strings.SpeechLowAirSpeed;
+                }
                 if (DialogResult.Cancel == InputBox.Show(Strings.AirSpeed, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
                 Settings.Instance["speechlowairspeed"] = speechstring;
@@ -1740,7 +1748,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 // Prompt user for text
                 var descstring = Settings.Instance["mapicondesc_default",
-                    "{alt}{altunit} {airspeed}{speedunit} id:{sysid} Sats:{satcount} HDOP:{gpshdop} Volts:{battery_voltage}"];
+                    Strings.MapIconDescDefault];
+                if (descstring == "{alt}{altunit} {airspeed}{speedunit} id:{sysid} Sats:{satcount} HDOP:{gpshdop} Volts:{battery_voltage}")
+                    descstring = Strings.MapIconDescDefault;
 
                 if (DialogResult.Cancel == InputBox.Show(Strings.Description, Strings.WhatDoYouWantItToShow, ref descstring))
                 {

@@ -39,11 +39,14 @@ namespace MapIconDesc
 
         private void but_Click(object sender, EventArgs e)
         {
-            var descstring =
-                "{alt}{altunit} {airspeed}{speedunit} id:{sysid} Sats:{satcount} HDOP:{gpshdop} Volts:{battery_voltage}";
+            var descstring = Strings.MapIconDescDefault;
 
             if (Settings.Instance["mapicondesc"] != null && Settings.Instance["mapicondesc"] != "")
-                    descstring = Settings.Instance["mapicondesc"].ToString();
+            {
+                descstring = Settings.Instance["mapicondesc"].ToString();
+                if (descstring == "{alt}{altunit} {airspeed}{speedunit} id:{sysid} Sats:{satcount} HDOP:{gpshdop} Volts:{battery_voltage}")
+                    descstring = Strings.MapIconDescDefault;
+            }
                 if (DialogResult.Cancel ==
                     InputBox.Show(Strings.Description, Strings.WhatDoYouWantItToShow, ref descstring))
                     return;

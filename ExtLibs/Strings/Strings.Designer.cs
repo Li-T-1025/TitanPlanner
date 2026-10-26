@@ -12774,6 +12774,14 @@ public static string compass_variance {
         {
             get { return ResourceManager.GetString("SpeechBatteryWarning", resourceCulture); }
         }
+        public static string SpeechLowAirSpeed
+        {
+            get { return ResourceManager.GetString("SpeechLowAirSpeed", resourceCulture); }
+        }
+        public static string MapIconDescDefault
+        {
+            get { return ResourceManager.GetString("MapIconDescDefault", resourceCulture); }
+        }
         public static string MapTools
         {
             get { return ResourceManager.GetString("MapTools", resourceCulture); }

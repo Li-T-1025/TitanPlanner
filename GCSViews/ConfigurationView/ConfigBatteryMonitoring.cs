@@ -463,9 +463,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             if (((CheckBox)sender).Checked)
             {
-                var speechstring = "WARNING, Battery at {batv} Volt, {batp} percent";
+                var speechstring = Strings.SpeechBatteryWarning;
                 if (Settings.Instance["speechbattery"] != null)
+                {
                     speechstring = Settings.Instance["speechbattery"].ToString();
+                    if (speechstring == "WARNING, Battery at {batv} Volt, {batp} percent")
+                        speechstring = Strings.SpeechBatteryWarning;
+                }
                 if (DialogResult.Cancel ==
                     InputBox.Show(Strings.Notification, Strings.WhatDoYouWantItToSay, ref speechstring))
                     return;
