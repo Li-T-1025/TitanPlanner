@@ -225,6 +225,13 @@ The WPOverlay2 rendering pipeline with its MissionStyleEditor, `MissionSegmentiz
 - Clean pixel-perfect bottom-bar layout
 - Auto-pan on parameter button swap
 
+## 地图图层精简（第18批）
+- 下拉列表只保留国内可用图层：Google中国（地图/卫星/混合）、必应（地图/卫星/混合）、高德（地图/卫星/混合）、天地图（矢量/卫星影像/卫星混合）、ArcGIS卫星地图
+- 天地图支持自定义 tk 密钥，在设置 → 配置/调试页面填写，密码模式存储，支持删除
+- 瓦片加载失败自动重试 3 次，修复地图加载不完全问题
+- 统一缩放范围 1~24 级，解除原来 12~17 级限制
+- 航点动作下拉列表中文化（如 "WAYPOINT:航点"）
+
 ---
 
 # Offline Maps
