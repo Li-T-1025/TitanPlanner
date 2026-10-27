@@ -28,7 +28,7 @@ namespace MissionPlanner.Controls
             ekfterrain.Value = (int)(MainV2.comPort.MAV.cs.ekfteralt * 100);
 
             // restore colours
-            Utilities.ThemeManager.ApplyThemeTo(this);
+            // Utilities.ThemeManager.ApplyThemeTo(this); // 每秒调用导致 GDI+ 错误
 
             foreach (var item in new VerticalProgressBar2[] { ekfvel, ekfposh, ekfposv, ekfcompass, ekfterrain })
             {
@@ -51,8 +51,8 @@ namespace MissionPlanner.Controls
                     flowLayoutPanel1.Controls.Add(new Label() { Height = 13, Width = flowLayoutPanel1.Width });
                 }
 
-                flowLayoutPanel1.Controls[idx].Text = currentflag.ToString().Replace("EKF_", "").ToLower() + " " +
-                                                         (currentbit > 0 ? "On " : "Off") + "\r\n";
+                flowLayoutPanel1.Controls[idx].Text = EkfFlagToCn(currentflag) + " " +
+                                                         (currentbit > 0 ? "正常" : "异常") + "\r\n";
 
                 flowLayoutPanel1.Controls[idx].ForeColor = ForeColor;
 
@@ -64,6 +64,25 @@ namespace MissionPlanner.Controls
                 }
 
                 idx++;
+            }
+        }
+
+        private static string EkfFlagToCn(MAVLink.EKF_STATUS_FLAGS flag)
+        {
+            switch (flag)
+            {
+                case MAVLink.EKF_STATUS_FLAGS.EKF_ATTITUDE: return "姿态";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_VELOCITY_HORIZ: return "水平速度";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_VELOCITY_VERT: return "垂直速度";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_POS_HORIZ_REL: return "水平位置(相对)";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_POS_HORIZ_ABS: return "水平位置(绝对)";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_POS_VERT_ABS: return "垂直位置(绝对)";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_POS_VERT_AGL: return "垂直位置(相对地面)";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_CONST_POS_MODE: return "固定位置模式";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_PRED_POS_HORIZ_REL: return "预测水平位置(相对)";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_PRED_POS_HORIZ_ABS: return "预测水平位置(绝对)";
+                case MAVLink.EKF_STATUS_FLAGS.EKF_UNINITIALIZED: return "未初始化";
+                default: return flag.ToString().Replace("EKF_", "").ToLower();
             }
         }
     }

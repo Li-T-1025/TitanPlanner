@@ -25,20 +25,29 @@ namespace GMap.NET.MapProviders
         {
             list = new List<GMapProvider>();
 
-            Type type = typeof(GMapProviders);
-            foreach (var p in type.GetFields())
-            {
-                var v = p.GetValue(null) as GMapProvider; // static classes cannot be instanced, so use null...
-                if (v != null)
-                {
-                    list.Add(v);
-                }
-            }
+            // 精简地图列表：Google(国内镜像)、Bing、天地图矢量
+            list.Add(GoogleChinaMapProvider.Instance);
+            list.Add(GoogleChinaSatelliteMapProvider.Instance);
+            list.Add(GoogleChinaHybridMapProvider.Instance);
+            list.Add(BingMap);
+            list.Add(BingSatelliteMap);
+            list.Add(BingHybridMap);
+            list.Add(TianDiTuVectorMapProvider.Instance);
+            list.Add(TianDiTuSatelliteMapProvider.Instance);
+            list.Add(TianDiTuHybridMapProvider.Instance);
+            list.Add(OpenStreetMap);
+            list.Add(AMap);
+            list.Add(AMapStatelite);
+            list.Add(AMapHybridProvider.Instance);
+            list.Add(ArcGISSatelliteProvider.Instance);
 
             Hash = new Dictionary<Guid, GMapProvider>();
             foreach (var p in list)
             {
                 Hash.Add(p.Id, p);
+                // 统一设置缩放范围
+                p.MinZoom = 1;
+                p.MaxZoom = 24;
             }
 
             DbHash = new Dictionary<int, GMapProvider>();

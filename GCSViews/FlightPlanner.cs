@@ -2117,6 +2117,10 @@ namespace MissionPlanner.GCSViews
         {
             try
             {
+                // 提取冒号前的英文部分（支持显示格式 "TAKEOFF:起飞"）
+                if (command.Contains(':'))
+                    command = command.Split(':')[0];
+
                 if (cmdParamNames.ContainsKey(command))
                     for (int i = 1; i <= 7; i++)
                         Commands.Columns[i].HeaderText = cmdParamNames[command][i - 1];
@@ -5923,6 +5927,10 @@ namespace MissionPlanner.GCSViews
         //Get back MAvlink command ID based on the command name. Use this instead of Enum.Parse of MAV_CMD, because this inclues ID's of non Mavlink dictionary commands
         public ushort getCmdID(string cmdName)
         {
+            // 提取冒号前的英文部分（支持显示格式 "WAYPOINT:航点"）
+            if (cmdName.Contains(':'))
+                cmdName = cmdName.Split(':')[0];
+
             if (Enum.IsDefined(typeof(MAVLink.MAV_CMD),cmdName))
             {
                 return (ushort) Enum.Parse(typeof(MAVLink.MAV_CMD), cmdName, false);
@@ -7287,12 +7295,47 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             List<string> cmds = new List<string>();
 
+            // 命令名中文翻译
+            var cmdZh = new Dictionary<string, string>
+            {
+                {"WAYPOINT", "航点"}, {"SPLINE_WAYPOINT", "样条航点"}, {"TAKEOFF", "起飞"},
+                {"RETURN_TO_LAUNCH", "返航"}, {"LAND", "降落"}, {"DO_SET_HOME", "设置返航点"},
+                {"DELAY", "延时"}, {"ATTITUDE_TIME", "姿态保持"}, {"GUIDED_ENABLE", "引导模式"},
+                {"LOITER_TIME", "悬停时间"}, {"LOITER_TURNS", "悬停转圈"}, {"LOITER_UNLIM", "无限悬停"},
+                {"PAYLOAD_PLACE", "释放载荷"}, {"SCRIPT_TIME", "脚本延时"},
+                {"DO_SEND_SCRIPT_MESSAGE", "发送脚本消息"}, {"IMAGE_START_CAPTURE", "开始拍照"},
+                {"IMAGE_STOP_CAPTURE", "停止拍照"}, {"SET_CAMERA_ZOOM", "相机变焦"},
+                {"SET_CAMERA_FOCUS", "相机对焦"}, {"SET_CAMERA_SOURCE", "相机源切换"},
+                {"VIDEO_START_CAPTURE", "开始录像"}, {"VIDEO_STOP_CAPTURE", "停止录像"},
+                {"DO_AUX_FUNCTION", "辅助功能"}, {"DO_CHANGE_SPEED", "改变速度"},
+                {"DO_DIGICAM_CONFIGURE", "相机配置"}, {"DO_DIGICAM_CONTROL", "相机控制"},
+                {"DO_ENGINE_CONTROL", "引擎控制"}, {"DO_GIMBAL_MANAGER_PITCHYAW", "云台俯仰偏航"},
+                {"DO_GRIPPER", "机械爪"}, {"DO_GUIDED_LIMITS", "引导限制"},
+                {"RALLY_POINT", "集结点"}, {"CONDITION_DELAY", "条件延时"},
+                {"CONDITION_DISTANCE", "条件距离"}, {"CONDITION_CHANGE_ALT", "条件变高"},
+                {"DO_SET_ROI", "设置兴趣点"}, {"DO_REPOSITION", "重新定位"},
+                {"DO_FENCE_RETURN_POINT", "围栏返航点"}, {"DO_FENCE_ENABLE", "启用围栏"},
+                {"PARACHUTE", "降落伞"}, {"DO_PARACHUTE", "降落伞控制"},
+                {"DO_MOUNT_CONTROL", "云台控制"}, {"DO_MOUNT_CONFIGURE", "云台配置"},
+                {"DO_LAND_START", "降落开始"}, {"DO_VTOL_TRANSITION", "垂直起降转换"},
+                {"DO_JUMP", "跳转"}, {"DO_JUMP_TAG", "标签跳转"},
+                {"DO_SET_MISSION_CURRENT", "设置当前任务"}, {"DO_SET_CAMERA_TRIGGER_DISTANCE", "设置相机触发距离"},
+                {"DO_RELAY", "继电器"}, {"DO_SET_RELAY", "设置继电器"},
+                {"DO_SERVO", "舵机"}, {"DO_SET_SERVO", "设置舵机"},
+                {"DO_REPEAT_SERVO", "重复舵机"}, {"DO_SPRAYER", "喷洒器"},
+                {"DO_WINCH", "绞盘"}, {"DO_WINCH_RESUMB", "绞盘恢复"},
+                {"DO_SET_ROI_LOCATION", "设置兴趣点位置"}, {"DO_SET_ROI_NONE", "清除兴趣点"},
+            };
+
             foreach (string item in cmdParamNames.Keys)
             {
-                cmds.Add(item);
+                if (cmdZh.ContainsKey(item))
+                    cmds.Add(item + ":" + cmdZh[item]);
+                else
+                    cmds.Add(item);
             }
 
-            cmds.Add("UNKNOWN");
+            cmds.Add("UNKNOWN:未知");
 
             Command.DataSource = cmds;
 

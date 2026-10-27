@@ -311,9 +311,9 @@ namespace GMap.NET.Internals
       /// retry count to get tile 
       /// </summary>
 #if !PocketPC
-      public int RetryLoadTile = 0;
+      public int RetryLoadTile = 3;
 #else
-      public int RetryLoadTile = 1;
+      public int RetryLoadTile = 3;
 #endif
 
       /// <summary>

@@ -185,7 +185,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             {
                 Text = "软件授权",
                 Dock = System.Windows.Forms.DockStyle.Top,
-                Height = 130,
+                Height = 160,
                 Padding = new System.Windows.Forms.Padding(8)
             };
             authPanel.Controls.Add(grpAuth);
@@ -284,6 +284,50 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             grpAuth.Controls.Add(btnActivate);
             grpAuth.Controls.Add(btnRevoke);
             grpAuth.Controls.Add(lblAuthStatus);
+
+            // 天地图 tk 设置
+            var lblTk = new System.Windows.Forms.Label
+            {
+                Text = "天地图 tk：",
+                Location = new System.Drawing.Point(12, 125),
+                AutoSize = true
+            };
+            var txtTk = new System.Windows.Forms.TextBox
+            {
+                Location = new System.Drawing.Point(100, 122),
+                Width = 250,
+                Text = Settings.Instance["TianDiTuKey", ""],
+                PasswordChar = '*'
+            };
+            var btnSaveTk = new System.Windows.Forms.Button
+            {
+                Text = "保存",
+                Location = new System.Drawing.Point(355, 120),
+                Width = 40, Height = 25
+            };
+            btnSaveTk.Click += (s, e) =>
+            {
+                Settings.Instance["TianDiTuKey"] = txtTk.Text.Trim();
+                System.Windows.Forms.MessageBox.Show("天地图 tk 已保存", "设置",
+                    System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+            };
+            var btnDelTk = new System.Windows.Forms.Button
+            {
+                Text = "删除",
+                Location = new System.Drawing.Point(400, 120),
+                Width = 40, Height = 25
+            };
+            btnDelTk.Click += (s, e) =>
+            {
+                Settings.Instance["TianDiTuKey"] = "";
+                txtTk.Text = "";
+                System.Windows.Forms.MessageBox.Show("天地图 tk 已删除", "设置",
+                    System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+            };
+            grpAuth.Controls.Add(lblTk);
+            grpAuth.Controls.Add(txtTk);
+            grpAuth.Controls.Add(btnSaveTk);
+            grpAuth.Controls.Add(btnDelTk);
         }
 
         private void RefreshAuthStatus()
@@ -293,11 +337,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             switch (st.state)
             {
                 case MissionPlanner.Utilities.Authorization.AuthState.Permanent:
+                    lblAuthStatus.ForeColor = System.Drawing.Color.Goldenrod;
+                    break;
                 case MissionPlanner.Utilities.Authorization.AuthState.Valid:
                     if (st.remainingSeconds >= 259200) // >3天
                         lblAuthStatus.ForeColor = System.Drawing.Color.Blue;
                     else if (st.remainingSeconds >= 86400) // 1~3天
-                        lblAuthStatus.ForeColor = System.Drawing.Color.Goldenrod;
+                        lblAuthStatus.ForeColor = System.Drawing.Color.Pink;
                     else
                         lblAuthStatus.ForeColor = System.Drawing.Color.Red;
                     break;

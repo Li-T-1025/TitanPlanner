@@ -102,7 +102,8 @@ namespace MissionPlanner.Controls
                 {
                     CheckBox chk = new CheckBox();
                     chk.AutoSize = true;
-                    chk.Text = list[a].Value.ToString();
+                    string bitName = list[a].Value.ToString();
+                    chk.Text = TranslateBitName(bitName);
                     chk.Location = new System.Drawing.Point(leftside, top);
 
                     bottom = chk.Bottom;
@@ -138,6 +139,41 @@ namespace MissionPlanner.Controls
             {
                 this.Enabled = false;
             }
+        }
+
+        private static readonly System.Collections.Generic.Dictionary<string, string> BitNameMap =
+            new System.Collections.Generic.Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+        {
+            {"attitude", "姿态"},
+            {"velocity_horiz", "水平速度"},
+            {"velocity_vert", "垂直速度"},
+            {"pos_horiz_rel", "水平位置(相对)"},
+            {"pos_horiz_abs", "水平位置(绝对)"},
+            {"pos_vert_abs", "垂直位置(绝对)"},
+            {"pos_vert_agl", "垂直位置(相对地面)"},
+            {"const_pos_agl", "恒定高度(相对地面)"},
+            {"pred_pos_horiz_rel", "预测水平位置(相对)"},
+            {"pred_pos_horiz_abs", "预测水平位置(绝对)"},
+            {"gps", "GPS"},
+            {"rcin", "遥控输入"},
+            {"imu", "IMU"},
+            {"rccout", "输出"},
+            {"compass", "指南针"},
+            {"battery", "电池"},
+        };
+
+        private static string TranslateBitName(string name)
+        {
+            if (string.IsNullOrEmpty(name)) return name;
+            // 去掉 " Off"/" On" 后缀再匹配
+            string key = name.TrimEnd();
+            if (key.EndsWith(" Off", StringComparison.OrdinalIgnoreCase))
+                key = key.Substring(0, key.Length - 4);
+            else if (key.EndsWith(" On", StringComparison.OrdinalIgnoreCase))
+                key = key.Substring(0, key.Length - 3);
+            if (BitNameMap.TryGetValue(key, out string cn))
+                return name.Replace(key, cn);
+            return name;
         }
 
         void MavlinkCheckBoxBitMask_CheckedChanged(object sender, EventArgs e)

@@ -748,21 +748,76 @@ namespace MissionPlanner
             if (!MissionPlanner.Utilities.Authorization.IsAuthorized())
             {
                 string machine = MissionPlanner.Utilities.Authorization.GetMachineCode();
-                string prompt = $"软件未授权。\n\n本机机器码：{machine}\n\n请将机器码发给开发者获取激活码，然后粘贴激活码：";
                 while (!MissionPlanner.Utilities.Authorization.IsAuthorized())
                 {
-                    string code = "";
-                    if (InputBox.Show("软件授权", prompt, ref code) != System.Windows.Forms.DialogResult.OK)
+                    // 自定义授权对话框
+                    var dlg = new System.Windows.Forms.Form
                     {
-                        if (System.Windows.Forms.MessageBox.Show("未授权软件无法使用，是否退出？", "授权",
-                            System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
-                        {
-                            Application.Exit();
-                            return;
-                        }
-                        continue;
+                        Text = "软件授权",
+                        FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog,
+                        StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen,
+                        Width = 520,
+                        Height = 260,
+                        MaximizeBox = false,
+                        MinimizeBox = false
+                    };
+                    var lblTip = new System.Windows.Forms.Label
+                    {
+                        Text = "软件未授权，请将机器码发给开发者获取激活码：",
+                        Location = new System.Drawing.Point(15, 15),
+                        AutoSize = true
+                    };
+                    var lblMachine = new System.Windows.Forms.Label
+                    {
+                        Text = "机器码：" + machine,
+                        Location = new System.Drawing.Point(15, 50),
+                        AutoSize = true,
+                        Font = new System.Drawing.Font(System.Drawing.FontFamily.GenericMonospace, 10F, System.Drawing.FontStyle.Bold)
+                    };
+                    var btnCopy = new System.Windows.Forms.Button
+                    {
+                        Text = "复制机器码",
+                        Location = new System.Drawing.Point(350, 45),
+                        Width = 120, Height = 28
+                    };
+                    btnCopy.Click += (s, e) => System.Windows.Forms.Clipboard.SetText(machine);
+                    var lblCode = new System.Windows.Forms.Label
+                    {
+                        Text = "激活码：",
+                        Location = new System.Drawing.Point(15, 95),
+                        AutoSize = true
+                    };
+                    var txtCode = new System.Windows.Forms.TextBox
+                    {
+                        Location = new System.Drawing.Point(80, 92),
+                        Width = 410,
+                        Multiline = true,
+                        Height = 50
+                    };
+                    var btnOK = new System.Windows.Forms.Button
+                    {
+                        Text = "激活",
+                        Location = new System.Drawing.Point(330, 160),
+                        Width = 80, Height = 30,
+                        DialogResult = System.Windows.Forms.DialogResult.OK
+                    };
+                    var btnCancel = new System.Windows.Forms.Button
+                    {
+                        Text = "退出",
+                        Location = new System.Drawing.Point(420, 160),
+                        Width = 80, Height = 30,
+                        DialogResult = System.Windows.Forms.DialogResult.Cancel
+                    };
+                    dlg.Controls.AddRange(new System.Windows.Forms.Control[] { lblTip, lblMachine, btnCopy, lblCode, txtCode, btnOK, btnCancel });
+                    dlg.AcceptButton = btnOK;
+                    dlg.CancelButton = btnCancel;
+
+                    if (dlg.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                    {
+                        Application.Exit();
+                        return;
                     }
-                    var (ok, err) = MissionPlanner.Utilities.Authorization.Activate(code.Trim());
+                    var (ok, err) = MissionPlanner.Utilities.Authorization.Activate(txtCode.Text.Trim());
                     if (!ok)
                     {
                         System.Windows.Forms.MessageBox.Show("激活失败：" + err, "授权",

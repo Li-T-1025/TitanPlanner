@@ -51,7 +51,7 @@
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 0;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "取消";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // trackBarMaxZoom
@@ -86,7 +86,7 @@
             this.labelMaxZoom.Name = "labelMaxZoom";
             this.labelMaxZoom.Size = new System.Drawing.Size(64, 13);
             this.labelMaxZoom.TabIndex = 2;
-            this.labelMaxZoom.Text = "Max zoom : ";
+            this.labelMaxZoom.Text = "最大缩放级别：";
             // 
             // labelMinZoom
             // 
@@ -95,7 +95,7 @@
             this.labelMinZoom.Name = "labelMinZoom";
             this.labelMinZoom.Size = new System.Drawing.Size(61, 13);
             this.labelMinZoom.TabIndex = 2;
-            this.labelMinZoom.Text = "Min zoom : ";
+            this.labelMinZoom.Text = "最小缩放级别：";
             // 
             // buttonOK
             // 
@@ -104,7 +104,7 @@
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 0;
-            this.buttonOK.Text = "OK";
+            this.buttonOK.Text = "确定";
             this.buttonOK.UseVisualStyleBackColor = true;
             // 
             // textBoxTile
@@ -123,7 +123,7 @@
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(132, 13);
             this.labelTotal.TabIndex = 4;
-            this.labelTotal.Text = "Estimated : 0 tiles for 0 MB";
+            this.labelTotal.Text = "预计：0 个瓦片，0 MB";
             // 
             // numericUpDownMinZoom
             // 
@@ -196,7 +196,7 @@
             this.Name = "TilePrefetcherMenu";
             this.Padding = new System.Windows.Forms.Padding(4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Tile Prefetcher Menu";
+            this.Text = "瓦片预取菜单";
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMaxZoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMinZoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinZoom)).EndInit();

@@ -3132,7 +3132,7 @@ namespace MissionPlanner.Controls
                         //If displayicons is true then we display image icons instead of text on GPS staus
                         if (displayicons)
                         {
-                            var width = (int)(fontsize * 2.5);
+                            var width = (int)(fontsize * 4.0);
                             var gap = 5;
                             var rightMargin = 3;
                             // GPS2 is slot 1 (rightmost), GPS1 is slot 2 when dual or slot 1 when single
@@ -3143,7 +3143,7 @@ namespace MissionPlanner.Controls
                                 slot = 1; // Single GPS at slot 1
 
                             var hor_pos = this.Width - rightMargin - slot * width - (slot - 1) * gap;
-                            DrawImage(icon, hor_pos, this.Height - (fontsize + 5), width, fontsize);
+                            DrawImage(icon, hor_pos, this.Height - (int)(fontsize * 1.5) - 5, width, (int)(fontsize * 1.5));
                         }
                         else
                         {
@@ -3268,12 +3268,12 @@ namespace MissionPlanner.Controls
                 {
                     if (displayicons)
                     {
-                        var width = (int) (fontsize * 2.5);
+                        var width = (int)(fontsize * 4.0);
                         var gap = 5;
                         var rightMargin = 3;
                         int gpsCount = (_gpsfix2 > 0) ? 2 : 1;
                         int slot = displaygps ? gpsCount + 1 : 1; // Vibe is after GPS icons (if GPS shown)
-                        vibehitzone = new Rectangle(this.Width - rightMargin - slot * width - (slot - 1) * gap, this.Height - (fontsize + 5), width, fontsize);
+                        vibehitzone = new Rectangle(this.Width - rightMargin - slot * width - (slot - 1) * gap, this.Height - (int)(fontsize * 1.5) - 5, width, (int)(fontsize * 1.5));
                     }
                     else
                     {
@@ -3332,12 +3332,12 @@ namespace MissionPlanner.Controls
                 {
                     if (displayicons)
                     {
-                        var width = (int)(fontsize * 2.5);
+                        var width = (int)(fontsize * 4.0);
                         var gap = 5;
                         var rightMargin = 3;
                         int gpsCount = (_gpsfix2 > 0) ? 2 : 1;
                         int slot = (displaygps ? gpsCount : 0) + (displayvibe ? 1 : 0) + 1; // EKF is after GPS and Vibe (if shown)
-                        ekfhitzone = new Rectangle(this.Width - rightMargin - slot * width - (slot - 1) * gap, this.Height - (fontsize + 5), width, fontsize);
+                        ekfhitzone = new Rectangle(this.Width - rightMargin - slot * width - (slot - 1) * gap, this.Height - (int)(fontsize * 1.5) - 5, width, (int)(fontsize * 1.5));
                     }
                     else
                     {

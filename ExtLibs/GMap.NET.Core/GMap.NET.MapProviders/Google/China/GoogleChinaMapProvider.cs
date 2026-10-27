@@ -5,7 +5,7 @@ namespace GMap.NET.MapProviders
     using System;
 
    /// <summary>
-   /// GoogleChinaMap provider
+   /// GoogleChinaMap provider - 国内镜像 ggmap01.bosim.top:8880
    /// </summary>
    public class GoogleChinaMapProvider : GoogleMapProviderBase
    {
@@ -13,7 +13,7 @@ namespace GMap.NET.MapProviders
 
       GoogleChinaMapProvider()
       {
-         RefererUrl = string.Format("http://ditu.{0}/", ServerChina);
+         RefererUrl = "http://ggmap01.bosim.top:8880/";
       }
 
       static GoogleChinaMapProvider()
@@ -42,7 +42,7 @@ namespace GMap.NET.MapProviders
          }
       }
 
-      readonly string name = Resources.Strings.GoogleChinaMap;
+      readonly string name = "Google 地图";
       public override string Name
       {
          get
@@ -53,25 +53,20 @@ namespace GMap.NET.MapProviders
 
       public override PureImage GetTileImage(GPoint pos, int zoom)
       {
-         string url = MakeTileImageUrl(pos, zoom, LanguageStr);
-
-         return GetTileImageUsingHttp(url);
+         string url = string.Format("http://ggmap01.bosim.top:8880/vt/lyrs=m&hl=zh-CN&gl=CN&src=app&x={0}&y={1}&z={2}", pos.X, pos.Y, zoom);
+         try
+         {
+             using (var wc = new System.Net.WebClient())
+             {
+                 wc.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+                 wc.Headers.Add("Referer", "http://ggmap01.bosim.top:8880/");
+                 byte[] data = wc.DownloadData(url);
+                 return TileImageProxy.FromArray(data);
+             }
+         }
+         catch { return null; }
       }
 
       #endregion
-
-      string MakeTileImageUrl(GPoint pos, int zoom, string language)
-      {
-         string sec1 = string.Empty; // after &x=...
-         string sec2 = string.Empty; // after &zoom=...
-         GetSecureWords(pos, out sec1, out sec2);
-
-         return string.Format(UrlFormat, UrlFormatServer, GetServerNum(pos, 4), UrlFormatRequest, Version, ChinaLanguage, pos.X, sec1, pos.Y, zoom, sec2, ServerChina);
-      }
-
-      static readonly string ChinaLanguage = "zh-CN";
-      static readonly string UrlFormatServer = "mt";
-      static readonly string UrlFormatRequest = "vt";
-      static readonly string UrlFormat = "http://{0}{1}.{10}/{2}/lyrs={3}&hl={4}&gl=cn&x={5}{6}&y={7}&z={8}&s={9}";
    }
 }
