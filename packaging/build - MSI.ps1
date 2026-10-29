@@ -82,12 +82,30 @@ if ($needRebuild) {
         Write-Err "wix\wix.csproj 编译失败（退出码 $LASTEXITCODE）"
         exit 1
     }
-    if (-not (Test-Path -LiteralPath $wixexe)) {
-        Write-Err "编译完成但未生成 Msi\net472\wix.exe，请检查 wix\wix.csproj 的 OutputPath（应输出到 Msi\）"
+    # 编译产物可能输出到 wix\bin\...（MSBuild 默认）或 Msi\（csproj OutputPath=..\Msi\），统一复制到 Msi\net472\wix.exe（覆盖旧产物）
+    $newWixCands = @(
+        (Join-Path $root 'wix\bin\Any CPU\Release\net472\wix.exe'),
+        (Join-Path $root 'wix\bin\Release\net472\wix.exe'),
+        (Join-Path $root 'wix\bin\Debug\net472\wix.exe'),
+        (Join-Path $root 'Msi\Release\net472\wix.exe')
+    )
+    $copied = $false
+    foreach ($c2 in $newWixCands) {
+        if (Test-Path -LiteralPath $c2) {
+            Copy-Item -LiteralPath $c2 -Destination $wixexe -Force
+            $copied = $true
+            Write-Ok "已复制新编译产物到：$wixexe"
+            break
+        }
+    }
+    if (-not $copied) {
+        Write-Err "编译完成但未找到新产物 wix.exe，请检查 wix\wix.csproj 的编译输出目录"
         exit 1
     }
+    Write-Ok "已重新编译 wix.exe（含最新源码）：$wixexe"
+} else {
+    Write-Ok "已就绪（检测到已有 wix.exe 且源码无更新，跳过编译）：$wixexe"
 }
-Write-Ok "已就绪（检测到已有 wix.exe 且源码无更新，跳过编译）：$wixexe"
 
 # ------------------------------------------------------------
 # [4/5] 定位 / 自动下载 WiX Toolset
