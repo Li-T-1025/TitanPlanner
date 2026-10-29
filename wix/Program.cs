@@ -193,6 +193,8 @@ namespace wix
 
     <Binary Id=""AppIcon"" SourceFile=""..\mpdesktop.ico"" />
 
+    <Icon Id=""AppIcon"" SourceFile=""..\mpdesktop.ico"" />
+
     <Upgrade Id=""{DBDDCF07-1D02-4891-93DB-58B79CB92799}"">
         <UpgradeVersion OnlyDetect=""yes"" Minimum=""" + version + @""" Property=""NEWERVERSIONDETECTED"" IncludeMinimum=""no"" />
         <UpgradeVersion OnlyDetect=""no"" Minimum=""0.0.0"" Maximum=""" + version + @""" Property=""OLDERVERSIONBEINGUPGRADED"" IncludeMinimum=""yes"" IncludeMaximum=""yes"" />
@@ -238,6 +240,8 @@ namespace wix
 
             string data = @"
         </Directory>
+
+        <Directory Id=""DesktopFolder"" Name=""Desktop"" />
 
         <Directory Id=""ProgramMenuFolder"">
             <Directory Id=""ApplicationProgramsFolder"" Name=""TitanPlanner"" />
