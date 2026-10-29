@@ -79,7 +79,7 @@ if (-not (Test-Path -LiteralPath $wixexe)) {
         exit 1
     }
 }
-Write-Ok "已就绪：$wixexe"
+Write-Ok "已就绪（检测到已有 wix.exe，跳过编译）：$wixexe"
 
 # ------------------------------------------------------------
 # [4/5] 定位 / 自动下载 WiX Toolset
@@ -95,49 +95,61 @@ $wixDir = $null
 foreach ($c in $wixCandidates) {
     if ((Test-Path -LiteralPath (Join-Path $c 'candle.exe')) -and (Test-Path -LiteralPath (Join-Path $c 'light.exe'))) {
         $wixDir = $c
+        Write-Ok "检测到已有打包环境（WiX Toolset），跳过下载：$c"
         break
     }
 }
 if (-not $wixDir) {
-    Write-Host "    本机未找到 WiX Toolset，开始自动下载（约 41 MB）..."
     $dlDir = Join-Path $env:LOCALAPPDATA 'wix314'
     if (-not (Test-Path -LiteralPath $dlDir)) { New-Item -ItemType Directory -Path $dlDir | Out-Null }
     $zip = Join-Path $dlDir 'wix314-binaries.zip'
-    $urls = @(
-        'https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip',
-        'https://ghfast.top/https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip',
-        'https://gh-proxy.com/https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip'
-    )
-    $downloaded = $false
-    foreach ($u in $urls) {
-        try {
-            Write-Host "    尝试下载：$u"
-            if (Get-Command curl.exe -ErrorAction SilentlyContinue) {
-                & curl.exe -L --connect-timeout 15 --max-time 300 -o $zip $u
-                if ($LASTEXITCODE -eq 0) { $downloaded = $true; break }
-            } else {
-                Invoke-WebRequest -Uri $u -OutFile $zip -UseBasicParsing -TimeoutSec 300
-                $downloaded = $true; break
-            }
-        } catch {
-            Write-Host "    该源失败：$($_.Exception.Message)"
+    # 已有下载好的 zip 时直接解压复用，不再重复下载
+    if (Test-Path -LiteralPath $zip) {
+        Write-Host "    检测到已下载的 WiX 压缩包，直接解压（跳过下载）..."
+        Expand-Archive -LiteralPath $zip -DestinationPath $dlDir -Force
+        if (Test-Path -LiteralPath (Join-Path $dlDir 'candle.exe')) {
+            $wixDir = $dlDir
+        } else {
+            Write-Err "已存在的 $zip 解压后缺少 candle.exe，将重新下载"
+            Remove-Item -LiteralPath $zip -Force
         }
     }
-    if (-not $downloaded) {
-        Write-Err "WiX 下载失败（GitHub 及国内加速源均不可达）"
-        Write-Err "请手动下载 wix314-binaries.zip 解压到 $dlDir（需包含 candle.exe / light.exe / difxapp_x86.wixlib）后重试"
-        Write-Host "      下载地址：https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip" -ForegroundColor Yellow
-        exit 1
-    }
-    Write-Ok "下载完成：$zip"
-    if (-not (Test-Path -LiteralPath (Join-Path $dlDir 'candle.exe'))) {
+    if (-not $wixDir) {
+        Write-Host "    本机未找到 WiX Toolset，开始自动下载（约 41 MB）..."
+        $urls = @(
+            'https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip',
+            'https://ghfast.top/https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip',
+            'https://gh-proxy.com/https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip'
+        )
+        $downloaded = $false
+        foreach ($u in $urls) {
+            try {
+                Write-Host "    尝试下载：$u"
+                if (Get-Command curl.exe -ErrorAction SilentlyContinue) {
+                    & curl.exe -L --connect-timeout 15 --max-time 300 -o $zip $u
+                    if ($LASTEXITCODE -eq 0) { $downloaded = $true; break }
+                } else {
+                    Invoke-WebRequest -Uri $u -OutFile $zip -UseBasicParsing -TimeoutSec 300
+                    $downloaded = $true; break
+                }
+            } catch {
+                Write-Host "    该源失败：$($_.Exception.Message)"
+            }
+        }
+        if (-not $downloaded) {
+            Write-Err "WiX 下载失败（GitHub 及国内加速源均不可达）"
+            Write-Err "请手动下载 wix314-binaries.zip 解压到 $dlDir（需包含 candle.exe / light.exe / difxapp_x86.wixlib）后重试"
+            Write-Host "      下载地址：https://github.com/wixtoolset/wix3/releases/download/wix3141rtm/wix314-binaries.zip" -ForegroundColor Yellow
+            exit 1
+        }
+        Write-Ok "下载完成：$zip"
         Expand-Archive -LiteralPath $zip -DestinationPath $dlDir -Force
+        if (-not (Test-Path -LiteralPath (Join-Path $dlDir 'candle.exe'))) {
+            Write-Err "解压后仍找不到 candle.exe，请手动解压 $zip 到 $dlDir"
+            exit 1
+        }
+        $wixDir = $dlDir
     }
-    if (-not (Test-Path -LiteralPath (Join-Path $dlDir 'candle.exe'))) {
-        Write-Err "解压后仍找不到 candle.exe，请手动解压 $zip 到 $dlDir"
-        exit 1
-    }
-    $wixDir = $dlDir
 }
 $candle = Join-Path $wixDir 'candle.exe'
 $light  = Join-Path $wixDir 'light.exe'
