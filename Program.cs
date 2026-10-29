@@ -395,30 +395,32 @@ namespace MissionPlanner
             }
             Console.WriteLine("Setup GMaps 2");
             // add my custom map providers
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.WMSProvider.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.WMTSProvider.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Custom.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.NoMap.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Earthbuilder.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Statkart_Topo2.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Eniro_Topo.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.MapBox.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.MapboxNoFly.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.MapboxUser.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_Lake.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_1974.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_1979.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_1984.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_1988.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_Relief.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_Slopezone.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_Sea.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.GIBSArctic.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.GIBSAntarctic.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.ArcGISArcticBathymetry.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.EsriArcticImagery.Instance);
-            GMap.NET.MapProviders.GMapProviders.List.Add(Maps.EsriArcticOceanBase.Instance);
+            // LAI GCS 中文化精简：以下 Maps 系列 provider（英文名、需海外账号/特定区域）不再加入图层下拉列表。
+            // 功能代码全部保留（DbHash 自注册不受影响），如需恢复某项，取消对应行注释即可。
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.WMSProvider.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.WMTSProvider.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Custom.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.NoMap.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Earthbuilder.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Statkart_Topo2.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Eniro_Topo.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.MapBox.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.MapboxNoFly.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.MapboxUser.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_Lake.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_1974.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_1979.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_1984.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_1988.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_Relief.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_Slopezone.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.Japan_Sea.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.GIBSArctic.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.GIBSAntarctic.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.ArcGISArcticBathymetry.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.EsriArcticImagery.Instance);
+            //GMap.NET.MapProviders.GMapProviders.List.Add(Maps.EsriArcticOceanBase.Instance);
 
 
             if(Xamarin.Essentials.DeviceInfo.Idiom == Xamarin.Essentials.DeviceIdiom.Desktop || Xamarin.Essentials.DeviceInfo.Idiom == Xamarin.Essentials.DeviceIdiom.Unknown)
