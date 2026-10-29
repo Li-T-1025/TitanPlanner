@@ -25,10 +25,13 @@ namespace GMap.NET.MapProviders
         {
             list = new List<GMapProvider>();
 
-            // 精简地图列表：Google(国内镜像)、天地图、高德、ArcGIS 卫星
+            // 精简地图列表：Google(国内镜像)、Bing、天地图、高德、ArcGIS 卫星
             list.Add(GoogleChinaMapProvider.Instance);
             list.Add(GoogleChinaSatelliteMapProvider.Instance);
             list.Add(GoogleChinaHybridMapProvider.Instance);
+            list.Add(BingMap);
+            list.Add(BingSatelliteMap);
+            list.Add(BingHybridMap);
             list.Add(TianDiTuVectorMapProvider.Instance);
             list.Add(TianDiTuSatelliteMapProvider.Instance);
             list.Add(TianDiTuHybridMapProvider.Instance);
