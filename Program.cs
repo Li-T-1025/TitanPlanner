@@ -261,7 +261,7 @@ namespace MissionPlanner
                 return;
             }
 
-            name = "TitanPlanner";
+            name = "LAI GCS";
 
             try
             {
@@ -286,6 +286,14 @@ namespace MissionPlanner
             {
                 // 128*128
                 IconFile = new Bitmap(Settings.GetRunningDirectory() + "icon.png");
+            }
+            else if (File.Exists(Settings.GetRunningDirectory() + "mpdesktop.ico"))
+            {
+                // LAI GCS - use the branded application icon (.ico, multi-size)
+                using (var ico = new Icon(Settings.GetRunningDirectory() + "mpdesktop.ico"))
+                {
+                    IconFile = ico.ToBitmap();
+                }
             }
             else
             {

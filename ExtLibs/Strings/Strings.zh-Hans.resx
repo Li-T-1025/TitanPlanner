@@ -2625,7 +2625,7 @@ Mission Planner将会在30秒内寻找控制板。</value>
     <value>已验证！</value>
   </data>
   <data name="VersionTitan" xml:space="preserve">
-    <value>版本：Titan</value>
+    <value>LAI GCS</value>
   </data>
   <data name="VideoDevice" xml:space="preserve">
     <value>视频设备</value>

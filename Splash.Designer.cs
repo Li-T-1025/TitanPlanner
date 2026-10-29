@@ -48,11 +48,12 @@
             this.label1.Tag = "custom";
             this.label1.Text = "by Michael Oborne | Modified by Mohammad Adib";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
+            //
             // TXT_version
-            // 
+            //
             this.TXT_version.BackColor = System.Drawing.Color.Transparent;
             this.TXT_version.ForeColor = System.Drawing.Color.White;
+            this.TXT_version.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.TXT_version.Location = new System.Drawing.Point(22, 333);
             this.TXT_version.Name = "TXT_version";
             this.TXT_version.Size = new System.Drawing.Size(155, 25);
@@ -68,7 +69,7 @@
             this.titanLogo.Location = new System.Drawing.Point(0, 0);
             this.titanLogo.Name = "titanLogo";
             this.titanLogo.Size = new System.Drawing.Size(660, 400);
-            this.titanLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.titanLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.titanLogo.TabIndex = 2;
             this.titanLogo.TabStop = false;
             // 
@@ -78,9 +79,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(660, 400);
             this.ControlBox = false;
+            this.Controls.Add(this.titanLogo);
             this.Controls.Add(this.TXT_version);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.titanLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

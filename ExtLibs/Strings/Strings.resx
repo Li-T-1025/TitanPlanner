@@ -2684,7 +2684,7 @@ red LED solid - in firmware update mode</value>
     <value>Verified!</value>
   </data>
   <data name="VersionTitan" xml:space="preserve">
-    <value>Version: Titan</value>
+    <value>LAI GCS</value>
   </data>
   <data name="VideoDevice" xml:space="preserve">
     <value>Video Device</value>

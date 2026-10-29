@@ -14,6 +14,14 @@ namespace MissionPlanner
         {
             InitializeComponent();
 
+            // Make the text labels children of the background PictureBox so that
+            // BackColor=Transparent shows the splash image instead of the form's
+            // black background.
+            this.titanLogo.Controls.Add(this.TXT_version);
+            this.titanLogo.Controls.Add(this.label1);
+            this.TXT_version.BringToFront();
+            this.label1.BringToFront();
+
             string strVersion = File.Exists("version.txt")
                 ? File.ReadAllText("version.txt").Trim()
                 : Assembly.GetExecutingAssembly().GetName().Version.ToString();

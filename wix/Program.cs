@@ -187,9 +187,11 @@ namespace wix
 <Wix xmlns=""http://schemas.microsoft.com/wix/2006/wi"" xmlns:netfx=""http://schemas.microsoft.com/wix/NetFxExtension"" xmlns:difx=""http://schemas.microsoft.com/wix/DifxAppExtension"" xmlns:iis='http://schemas.microsoft.com/wix/IIsExtension' >
 
 
-    <Product Id=""" + newid + @""" Name=""TitanPlanner"" Language=""1033"" Version=""" + version + @""" Manufacturer=""Michael Oborne"" UpgradeCode=""{DBDDCF07-1D02-4891-93DB-58B79CB92799}"">
+    <Product Id=""" + newid + @""" Name=""LAI GCS"" Language=""1033"" Version=""" + version + @""" Manufacturer=""Michael Oborne"" UpgradeCode=""{DBDDCF07-1D02-4891-93DB-58B79CB92799}"">
 
-    <Package Description=""TitanPlanner Installer"" Comments=""TitanPlanner Installer"" Manufacturer=""Michael Oborne"" InstallerVersion=""200"" Compressed=""yes"" />
+    <Package Description=""LAI GCS Installer"" Comments=""LAI GCS Installer"" Manufacturer=""Michael Oborne"" InstallerVersion=""200"" Compressed=""yes"" />
+
+    <Binary Id=""AppIcon"" SourceFile=""..\mpdesktop.ico"" />
 
     <Upgrade Id=""{DBDDCF07-1D02-4891-93DB-58B79CB92799}"">
         <UpgradeVersion OnlyDetect=""yes"" Minimum=""" + version + @""" Property=""NEWERVERSIONDETECTED"" IncludeMinimum=""no"" />
@@ -293,8 +295,8 @@ namespace wix
 
     <DirectoryRef Id=""ApplicationProgramsFolder"">
         <Component Id=""ApplicationShortcut"" Guid=""*"">
-            <Shortcut Id=""ApplicationStartMenuShortcut10"" Name=""TitanPlanner"" Description=""TitanPlanner"" Target=""[INSTALLDIR]MissionPlanner.exe"" WorkingDirectory=""INSTALLDIR"" />
-            <Shortcut Id=""UninstallProduct"" Name=""Uninstall TitanPlanner"" Description=""Uninstalls TitanPlanner"" Target=""[System64Folder]msiexec.exe"" Arguments=""/x [ProductCode]"" />
+            <Shortcut Id=""ApplicationStartMenuShortcut10"" Name=""LAI GCS"" Description=""LAI GCS"" Target=""[INSTALLDIR]MissionPlanner.exe"" WorkingDirectory=""INSTALLDIR"" Icon=""AppIcon"" IconIndex=""0"" />
+            <Shortcut Id=""UninstallProduct"" Name=""Uninstall LAI GCS"" Description=""Uninstalls LAI GCS"" Target=""[System64Folder]msiexec.exe"" Arguments=""/x [ProductCode]"" />
             <RegistryValue Root=""HKCU"" Key=""Software\MichaelOborne\TitanPlanner"" Name=""installed"" Type=""integer"" Value=""1"" KeyPath=""yes"" />
 
             <RemoveFolder Id=""dltApplicationProgramsFolder"" Directory=""ApplicationProgramsFolder"" On=""uninstall"" />
@@ -304,7 +306,7 @@ namespace wix
     </DirectoryRef>
 
 
-    <Feature Id=""Complete"" Title=""TitanPlanner"" Level=""1"">
+    <Feature Id=""Complete"" Title=""LAI GCS"" Level=""1"">
         <ComponentRef Id=""InstallDirPermissions"" />
 ";
             sw.WriteLine(data);
