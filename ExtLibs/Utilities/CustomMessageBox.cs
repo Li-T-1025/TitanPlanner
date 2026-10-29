@@ -9,7 +9,7 @@ namespace System
     public static class CustomMessageBox
     {
         public delegate DialogResult ShowDelegate(string text, string caption = "",
-            MessageBoxButtons buttons = MessageBoxButtons.OK, MessageBoxIcon icon = MessageBoxIcon.None, string YesText = "Yes", string NoText = "No");
+            MessageBoxButtons buttons = MessageBoxButtons.OK, MessageBoxIcon icon = MessageBoxIcon.None, string YesText = "是", string NoText = "否");
 
         public static event ShowDelegate ShowEvent;
 
@@ -34,7 +34,7 @@ namespace System
             return (int)Show(text, caption, (MessageBoxButtons)(int)MessageBoxButtons, (MessageBoxIcon)(int)MessageBoxIcon);
         }
 
-        public static DialogResult Show(string text, string caption = "", MessageBoxButtons MessageBoxButtons = MessageBoxButtons.OK, MessageBoxIcon MessageBoxIcon = MessageBoxIcon.None, string YesText = "Yes", string NoText = "No")
+        public static DialogResult Show(string text, string caption = "", MessageBoxButtons MessageBoxButtons = MessageBoxButtons.OK, MessageBoxIcon MessageBoxIcon = MessageBoxIcon.None, string YesText = "是", string NoText = "否")
         {
             Console.WriteLine("CustomMessageBox.Show");
 

@@ -35,7 +35,7 @@ namespace MissionPlanner.MsgBox
             return Show(text, caption, buttons, MessageBoxIcon.None);
         }
 
-        public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, string YesText = "Yes", string NoText = "No")
+        public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, string YesText = "是", string NoText = "否")
         {
             DialogResult answer = DialogResult.Cancel;
 
@@ -70,7 +70,7 @@ namespace MissionPlanner.MsgBox
             return answer;
         }
 
-        static DialogResult ShowUI(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, string YesText = "Yes", string NoText = "No", bool label = true)
+        static DialogResult ShowUI(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, string YesText = "是", string NoText = "否", bool label = true)
         {
             DialogResult answer = DialogResult.Abort;
 
@@ -274,7 +274,7 @@ namespace MissionPlanner.MsgBox
             return sb.ToString();
         }
 
-        private static void AddButtonsToForm(Form msgBoxFrm, MessageBoxButtons buttons, string YesText = "Yes", string NoText = "No")
+        private static void AddButtonsToForm(Form msgBoxFrm, MessageBoxButtons buttons, string YesText = "是", string NoText = "否")
         {
             Rectangle screenRectangle = msgBoxFrm.RectangleToScreen(msgBoxFrm.ClientRectangle);
             int titleHeight = screenRectangle.Top - msgBoxFrm.Top;
@@ -289,7 +289,7 @@ namespace MissionPlanner.MsgBox
                     var but = new MyButton
                                   {
                                       Size = new Size(75, 23),
-                                      Text = "OK",
+                                      Text = "确定",
                                       Left = msgBoxFrm.Width - 100 - FORM_X_MARGIN,
                                       Top = msgBoxFrm.Height - 40 - FORM_Y_MARGIN - titleHeight
                                   };
@@ -337,7 +337,7 @@ namespace MissionPlanner.MsgBox
                     var butok = new MyButton
                     {
                         Size = new Size(75, 23),
-                        Text = "OK",
+                        Text = "确定",
                         Left = msgBoxFrm.Width - 75 * 2 - FORM_X_MARGIN * 2,
                         Top = msgBoxFrm.Height - 23 - FORM_Y_MARGIN - titleHeight
                     };
@@ -349,7 +349,7 @@ namespace MissionPlanner.MsgBox
                     var butcancel = new MyButton
                     {
                         Size = new Size(75, 23),
-                        Text = "Cancel",
+                        Text = "取消",
                         Left = msgBoxFrm.Width - 75 - FORM_X_MARGIN,
                         Top = msgBoxFrm.Height - 23 - FORM_Y_MARGIN - titleHeight
                     };
@@ -386,7 +386,7 @@ namespace MissionPlanner.MsgBox
             }
         }
 
-        public static DialogResult ShowTextBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, string YesText = "Yes", string NoText = "No")
+        public static DialogResult ShowTextBox(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, string YesText = "是", string NoText = "否")
         {
             DialogResult answer = DialogResult.Cancel;
 

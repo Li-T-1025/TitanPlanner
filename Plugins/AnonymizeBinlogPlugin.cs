@@ -110,8 +110,8 @@ namespace AnonymizeBinlog
             var form = new Form { Text = Strings.AnonymizationCompleteOutputLatOffsetLonTitle, Width = 360, Height = 140, FormBorderStyle = FormBorderStyle.FixedDialog, StartPosition = FormStartPosition.CenterParent, MaximizeBox = false, MinimizeBox = false };
             var label = new Label { Left = 10, Top = 10, Width = 330, Text = prompt };
             var textBox = new TextBox { Left = 10, Top = 35, Width = 330, Text = value };
-            var ok = new Button { Text = "OK", Left = 170, Top = 65, Width = 80, DialogResult = DialogResult.OK };
-            var cancel = new Button { Text = "Cancel", Left = 260, Top = 65, Width = 80, DialogResult = DialogResult.Cancel };
+            var ok = new Button { Text = "确定", Left = 170, Top = 65, Width = 80, DialogResult = DialogResult.OK };
+            var cancel = new Button { Text = "取消", Left = 260, Top = 65, Width = 80, DialogResult = DialogResult.Cancel };
             form.Controls.AddRange(new Control[] { label, textBox, ok, cancel });
             form.AcceptButton = ok;
             form.CancelButton = cancel;
