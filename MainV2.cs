@@ -747,6 +747,9 @@ namespace MissionPlanner
             // 授权：首次启动未授权则弹窗要求激活
             if (!MissionPlanner.Utilities.Authorization.IsAuthorized())
             {
+                // 先关闭启动画面：Splash 为 TopMost，若晚于授权弹窗关闭会常驻桌面并遮挡授权页
+                Program.Splash?.Close();
+
                 string machine = MissionPlanner.Utilities.Authorization.GetMachineCode();
                 while (!MissionPlanner.Utilities.Authorization.IsAuthorized())
                 {
