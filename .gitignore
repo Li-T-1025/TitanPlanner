@@ -1,4 +1,4 @@
-*.pfx
+﻿*.pfx
 *.suo
 *.user
 bin/
@@ -50,3 +50,6 @@ obj3/
 /.claude
 Msi/drivers.wxs
 /CLAUDE.md
+
+# MSI 打包产物（不入库）
+*.msi
