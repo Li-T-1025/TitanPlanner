@@ -51,12 +51,20 @@ if (Test-Path -LiteralPath $pluginsDir) {
 }
 
 # ------------------------------------------------------------
-# [3/5] 编译 wix.exe（Msi\net472\wix.exe 不存在时自动编译）
+# [3/5] 编译 wix.exe（Msi\net472\wix.exe 不存在或源码更新时自动编译）
 # ------------------------------------------------------------
 Write-Step "3/5 准备 wix.exe（installer.wxs 生成工具）"
 $wixexe = Join-Path $root 'Msi\net472\wix.exe'
+$wixsrc = Join-Path $root 'wix\Program.cs'
+$needRebuild = $false
 if (-not (Test-Path -LiteralPath $wixexe)) {
-    Write-Host "    Msi\net472\wix.exe 不存在，开始编译 wix\wix.csproj ..."
+    $needRebuild = $true
+} elseif ((Get-Item -LiteralPath $wixsrc).LastWriteTime -gt (Get-Item -LiteralPath $wixexe).LastWriteTime) {
+    Write-Host "    检测到 wix\Program.cs 比 wix.exe 新（源码有更新），重新编译 wix.exe ..."
+    $needRebuild = $true
+}
+if ($needRebuild) {
+    Write-Host "    开始编译 wix\wix.csproj ..."
     $vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio\Installer\vswhere.exe'
     if (-not (Test-Path -LiteralPath $vswhere)) {
         Write-Err "未找到 vswhere.exe（${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe），无法定位 MSBuild"
@@ -79,7 +87,7 @@ if (-not (Test-Path -LiteralPath $wixexe)) {
         exit 1
     }
 }
-Write-Ok "已就绪（检测到已有 wix.exe，跳过编译）：$wixexe"
+Write-Ok "已就绪（检测到已有 wix.exe 且源码无更新，跳过编译）：$wixexe"
 
 # ------------------------------------------------------------
 # [4/5] 定位 / 自动下载 WiX Toolset

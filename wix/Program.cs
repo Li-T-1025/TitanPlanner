@@ -305,6 +305,14 @@ namespace wix
         </Component>
     </DirectoryRef>
 
+    <DirectoryRef Id=""DesktopFolder"">
+        <Component Id=""DesktopShortcut"" Guid=""*"">
+            <Shortcut Id=""DesktopShortcut"" Name=""LAI GCS"" Description=""LAI GCS"" Target=""[INSTALLDIR]MissionPlanner.exe"" WorkingDirectory=""INSTALLDIR"" Icon=""AppIcon"" IconIndex=""0"" />
+            <RegistryValue Root=""HKCU"" Key=""Software\LAI GCS\DesktopShortcut"" Name=""installed"" Type=""integer"" Value=""1"" KeyPath=""yes"" />
+            <RemoveFolder Id=""dltDesktopFolder"" Directory=""DesktopFolder"" On=""uninstall"" />
+        </Component>
+    </DirectoryRef>
+
 
     <Feature Id=""Complete"" Title=""LAI GCS"" Level=""1"">
         <ComponentRef Id=""InstallDirPermissions"" />
@@ -319,6 +327,7 @@ namespace wix
             data = @"
             
         <ComponentRef Id=""ApplicationShortcut"" />
+        <ComponentRef Id=""DesktopShortcut"" />
     </Feature>
         
     <!-- Step 2: Add UI to your installer / Step 4: Trigger the custom action -->
