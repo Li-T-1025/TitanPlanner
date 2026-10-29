@@ -73,7 +73,7 @@ namespace wix
             //Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar+ 
             string file = "installer.wxs";
 
-            string outputfilename = "LAI GCS";
+            string outputfilename = "MissionPlanner";
 
             if (args.Length > 1)
                 outputfilename = args[1];
@@ -187,7 +187,7 @@ namespace wix
 <Wix xmlns=""http://schemas.microsoft.com/wix/2006/wi"" xmlns:netfx=""http://schemas.microsoft.com/wix/NetFxExtension"" xmlns:difx=""http://schemas.microsoft.com/wix/DifxAppExtension"" xmlns:iis='http://schemas.microsoft.com/wix/IIsExtension' >
 
 
-    <Product Id=""" + newid + @""" Name=""LAI GCS"" Language=""2052"" Codepage=""936"" Version=""" + version + @""" Manufacturer=""Michael Oborne"" UpgradeCode=""{DBDDCF07-1D02-4891-93DB-58B79CB92799}"">
+    <Product Id=""" + newid + @""" Name=""LAI GCS"" Language=""1033"" Version=""" + version + @""" Manufacturer=""Michael Oborne"" UpgradeCode=""{DBDDCF07-1D02-4891-93DB-58B79CB92799}"">
 
     <Package Description=""LAI GCS Installer"" Comments=""LAI GCS Installer"" Manufacturer=""Michael Oborne"" InstallerVersion=""200"" Compressed=""yes"" />
 
@@ -346,7 +346,7 @@ namespace wix
             Event=""DoAction"" 
             Value=""LaunchApplication"">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
     </UI>
-    <Property Id=""WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"" Value=""启动 LAI GCS"" />
+    <Property Id=""WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT"" Value=""Launch TitanPlanner"" />
 
     <!-- Step 3: Include the custom action -->
     <Property Id=""WixShellExecTarget"" Value=""[#" + mainexeid + @"]"" />
