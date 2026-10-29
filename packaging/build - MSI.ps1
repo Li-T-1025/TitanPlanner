@@ -10,7 +10,7 @@
 #   方式A（推荐）：双击同目录下的「打包.bat」
 #   方式B：powershell -NoProfile -ExecutionPolicy Bypass -File "packaging\build - MSI.ps1"
 # 前置条件：已用 Visual Studio 构建 Release（bin\Release\net461\MissionPlanner.exe 存在）
-# 产物：packaging\TitanPlanner-Installer.msi
+# 产物：packaging\LAI GCS-Installer.msi
 # 说明：WiX 下载到 %LOCALAPPDATA%\wix314，一次下载后本机复用
 # ============================================================
 $ErrorActionPreference = 'Stop'
@@ -199,12 +199,12 @@ if ($LASTEXITCODE -ne 0) { Write-Err "wix.exe 生成 installer.wxs 失败（退�
 & $candle 'installer.wxs' -ext WiXNetFxExtension -ext WixDifxAppExtension -ext WixUIExtension.dll -ext WixUtilExtension -ext WixIisExtension
 if ($LASTEXITCODE -ne 0) { Write-Err "candle.exe 编译 installer.wxs 失败（退出码 $LASTEXITCODE）"; exit 1 }
 
-& $light 'installer.wixobj' $difx -sval -o 'TitanPlanner-Installer.msi' -ext WiXNetFxExtension -ext WixDifxAppExtension -ext WixUIExtension.dll -ext WixUtilExtension -ext WixIisExtension
+& $light 'installer.wixobj' $difx -sval -o 'LAI GCS-Installer.msi' -ext WiXNetFxExtension -ext WixDifxAppExtension -ext WixUIExtension.dll -ext WixUtilExtension -ext WixIisExtension
 if ($LASTEXITCODE -ne 0) { Write-Err "light.exe 链接 MSI 失败（退出码 $LASTEXITCODE）"; exit 1 }
 
-$msiOut = Join-Path $scriptDir 'TitanPlanner-Installer.msi'
+$msiOut = Join-Path $scriptDir 'LAI GCS-Installer.msi'
 if (Test-Path -LiteralPath $msiOut) { Remove-Item -LiteralPath $msiOut -Force }
-Move-Item -LiteralPath (Join-Path $msiDir 'TitanPlanner-Installer.msi') -Destination $msiOut
+Move-Item -LiteralPath (Join-Path $msiDir 'LAI GCS-Installer.msi') -Destination $msiOut
 
 Write-Host ""
 Write-Ok "打包完成！MSI 已生成：$msiOut"
